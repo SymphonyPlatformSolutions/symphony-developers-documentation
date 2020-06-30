@@ -54,12 +54,12 @@
 
 ## Building Extension Applications on Symphony
 
-* [Overview of Extension Applications](building-extension-applications-on-symphony/untitled/README.md)
-  * [Extension Application Structure](building-extension-applications-on-symphony/untitled/extension-application-structure/README.md)
-    * [bundle.json](building-extension-applications-on-symphony/untitled/extension-application-structure/bundle.json.md)
-    * [config.json](building-extension-applications-on-symphony/untitled/extension-application-structure/config.json.md)
-    * [controller.js](building-extension-applications-on-symphony/untitled/extension-application-structure/controller.js.md)
-    * [controller.html](building-extension-applications-on-symphony/untitled/extension-application-structure/controller.html.md)
+* [Overview of Extension Applications](building-extension-applications-on-symphony/overview-of-extension-applications/README.md)
+  * [Extension Application Structure](building-extension-applications-on-symphony/overview-of-extension-applications/extension-application-structure/README.md)
+    * [bundle.json](building-extension-applications-on-symphony/overview-of-extension-applications/extension-application-structure/bundle.json.md)
+    * [config.json](building-extension-applications-on-symphony/overview-of-extension-applications/extension-application-structure/config.json.md)
+    * [controller.js](building-extension-applications-on-symphony/overview-of-extension-applications/extension-application-structure/controller.js.md)
+    * [controller.html](building-extension-applications-on-symphony/overview-of-extension-applications/extension-application-structure/controller.html.md)
 * [Developing an Extension Application](building-extension-applications-on-symphony/developing-an-extension-application/README.md)
   * [Overview of Extension API](building-extension-applications-on-symphony/developing-an-extension-application/overview-of-extension-api.md)
   * [App Controller and Views](building-extension-applications-on-symphony/developing-an-extension-application/app-controller-and-views/README.md)
@@ -99,7 +99,7 @@
 
 ## Developer Certification
 
-* [Untitled](developer-certification/untitled.md)
+* [Overview of Developer Certification](developer-certification/untitled.md)
 
 ## Symphony 2.0 \(BETA\)
 
@@ -107,9 +107,21 @@
 
 ## Tools
 
-* [Untitled](tools/untitled.md)
+* [SDKs](tools/untitled/README.md)
+  * [Java](tools/untitled/java.md)
+  * [Python](tools/untitled/python.md)
+  * [Node.js](tools/untitled/node.js.md)
+  * [.NET](tools/untitled/.net.md)
+* [BDK](tools/bdk/README.md)
+  * [CLI Tool](tools/bdk/cli-tool.md)
+  * [Bot SDK](tools/bdk/bot-sdk.md)
+  * [UI Toolkit](tools/bdk/ui-toolkit.md)
+* [MessageML Renderer App](tools/messageml-renderer-app.md)
+* [Postman](tools/postman.md)
 
-## Embedded Chat Module
+## Embedded Modules
 
-* [Untitled](embedded-chat-module/untitled.md)
+* [Chat Module](embedded-modules/untitled.md)
+* [Symphony URI](embedded-modules/symphony-uri.md)
+* [Symphony URI for Mobile](embedded-modules/symphony-uri-for-mobile.md)
 

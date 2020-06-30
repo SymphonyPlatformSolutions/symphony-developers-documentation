@@ -1,0 +1,2 @@
+# Symphony URI for Mobile
+
