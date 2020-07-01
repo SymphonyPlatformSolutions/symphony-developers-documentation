@@ -6,6 +6,7 @@
 
 * [Building Bots on Symphony](building-bots-on-symphony/building-bots-on-symphony/README.md)
   * [Overview of Symphony Bots](building-bots-on-symphony/building-bots-on-symphony/overview-of-symphony-bots.md)
+  * [Anatomy of a Symphony Bot](building-bots-on-symphony/building-bots-on-symphony/anatomy-of-a-symphony-bot.md)
   * [Creating a Bot User](building-bots-on-symphony/building-bots-on-symphony/creating-a-bot-user.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
