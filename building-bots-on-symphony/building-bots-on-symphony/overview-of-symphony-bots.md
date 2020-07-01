@@ -6,7 +6,7 @@ A Symphony bot can be thought of as an automated version of a human performing s
 
 Each bot has a unique identity represented by a service account that has similar features to an end-user account such as a name and avatar.
 
-Symphony Bots enable end users to benefit from innovative **workflows** and timesaving **automations** built on top of the Symphony platform.   
+Symphony Bots enable end users to benefit from innovative **workflows** and timesaving **automations** built on top of the Symphony platform.  
 
 ## How do Bots create enhanced workflows and automations?
 
@@ -16,7 +16,7 @@ The answer lies in Symphony's open REST API.  Once authenticated, Symphony Bots 
 Navigate to [REST API Architecture](../overview-of-rest-api/rest-api-architecture.md) to begin learning about Symphony's REST API
 {% endhint %}
 
-## Where is a Symphony Bot?
+## Where does a Symphony Bot live?
 
 In practice, a Symphony Bot is a server-side or backend application that is packaged and deployed on your company's infrastructure.  
 
