@@ -1,15 +1,16 @@
 # Table of contents
 
-* [Symphony Developers Documentation](README.md)
+* [🚀  Start Your Development Journey 🚀](README.md)
 
 ## Building Bots on Symphony
 
+* [Building Bots on Symphony](building-bots-on-symphony/building-bots-on-symphony/README.md)
+  * [Anatomy of a Bot](building-bots-on-symphony/building-bots-on-symphony/anatomy-of-a-bot.md)
+  * [Creating a Bot User](building-bots-on-symphony/building-bots-on-symphony/creating-a-bot-user.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
   * [Agent Endpoints](building-bots-on-symphony/overview-of-rest-api/agent-endpoints.md)
   * [Pod Endpoints](building-bots-on-symphony/overview-of-rest-api/pod-endpoints.md)
-* [Anatomy of a Bot](building-bots-on-symphony/anatomy-of-a-bot/README.md)
-  * [Creating a Bot User](building-bots-on-symphony/anatomy-of-a-bot/creating-a-bot-user.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication](building-bots-on-symphony/authentication/certificate-authentication.md)
@@ -99,6 +100,7 @@
     * [Building an Extension App using the BDK](building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/README.md)
       * [UI Toolkit](building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/ui-toolkit.md)
     * [Building an Extension App using the Generator](building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-generator.md)
+* [OBO Applications](building-extension-applications-on-symphony/obo-applications.md)
 * [Managing Your Application](building-extension-applications-on-symphony/managing-your-application/README.md)
   * [Deploying and Distributing Applications](building-extension-applications-on-symphony/managing-your-application/deploying-and-distributing-applications.md)
 
