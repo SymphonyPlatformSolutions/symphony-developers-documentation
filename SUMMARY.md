@@ -104,35 +104,27 @@
 * [Managing Your Application](building-extension-applications-on-symphony/managing-your-application/README.md)
   * [Deploying and Distributing Applications](building-extension-applications-on-symphony/managing-your-application/deploying-and-distributing-applications.md)
 
-## REST API
-
-* [Untitled](rest-api/untitled.md)
-
-## Extension API
-
-* [Untitled](extension-api/untitled.md)
-
 ## Developer Certification
 
-* [Overview of Developer Certification](developer-certification/untitled.md)
+* [Developer Certification](developer-certification/untitled.md)
 
 ## Symphony 2.0 \(BETA\)
 
-* [Untitled](symphony-2.0-beta/untitled.md)
+* [Symphony 2.0 \(BETA\)](symphony-2.0-beta/untitled.md)
 
-## Tools
+## Developer Tools
 
-* [SDKs](tools/untitled/README.md)
-  * [Java](tools/untitled/java.md)
-  * [Python](tools/untitled/python.md)
-  * [Node.js](tools/untitled/node.js.md)
-  * [.NET](tools/untitled/.net.md)
-* [BDK](tools/bdk/README.md)
-  * [CLI Tool](tools/bdk/cli-tool.md)
-  * [Bot SDK](tools/bdk/bot-sdk.md)
-  * [UI Toolkit](tools/bdk/ui-toolkit.md)
-* [MessageML Renderer App](tools/messageml-renderer-app.md)
-* [Postman](tools/postman.md)
+* [SDKs](developer-tools/untitled/README.md)
+  * [Java](developer-tools/untitled/java.md)
+  * [Python](developer-tools/untitled/python.md)
+  * [Node.js](developer-tools/untitled/node.js.md)
+  * [.NET](developer-tools/untitled/.net.md)
+* [BDK](developer-tools/bdk/README.md)
+  * [CLI Tool](developer-tools/bdk/cli-tool.md)
+  * [Bot SDK](developer-tools/bdk/bot-sdk.md)
+  * [UI Toolkit](developer-tools/bdk/ui-toolkit.md)
+* [MessageML Renderer App](developer-tools/messageml-renderer-app.md)
+* [Postman](developer-tools/postman.md)
 
 ## Embedded Modules
 
@@ -143,4 +135,8 @@
 ## Symphony REST API
 
 * [Symphony REST API](symphony-rest-api/symphony-rest-api.md)
+
+## Symphony Extension API
+
+* [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
 

@@ -1,2 +1,2 @@
-# Overview of Developer Certification
+# Developer Certification
 
