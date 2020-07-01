@@ -106,6 +106,7 @@
 
 ## Developer Certification
 
+* [Developer Training Center](https://learn.symphony.com)
 * [Developer Certification](developer-certification/untitled.md)
 
 ## Symphony 2.0 \(BETA\)
