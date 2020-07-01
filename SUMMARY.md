@@ -5,7 +5,7 @@
 ## Building Bots on Symphony
 
 * [Building Bots on Symphony](building-bots-on-symphony/building-bots-on-symphony/README.md)
-  * [Anatomy of a Bot](building-bots-on-symphony/building-bots-on-symphony/anatomy-of-a-bot.md)
+  * [Overview of Symphony Bots](building-bots-on-symphony/building-bots-on-symphony/overview-of-symphony-bots.md)
   * [Creating a Bot User](building-bots-on-symphony/building-bots-on-symphony/creating-a-bot-user.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
@@ -106,8 +106,8 @@
 
 ## Developer Certification
 
-* [Developer Training Center](https://learn.symphony.com)
 * [Developer Certification](developer-certification/untitled.md)
+* [Developer Training Center](https://learn.symphony.com)
 
 ## Symphony 2.0 \(BETA\)
 
