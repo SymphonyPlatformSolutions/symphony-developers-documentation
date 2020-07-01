@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Symphony Developers  Documentation](README.md)
+* [Symphony Developers Documentation](README.md)
 
 ## Building Bots on Symphony
 

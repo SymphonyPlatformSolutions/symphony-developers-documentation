@@ -1,2 +1,2 @@
-# Symphony Developers  Documentation
+# Symphony Developers Documentation
 
