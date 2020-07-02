@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🚀  Start Your Development Journey 🚀](README.md)
+* [Start Your Developer Journey](README.md)
 
 ## Building Bots on Symphony
 
