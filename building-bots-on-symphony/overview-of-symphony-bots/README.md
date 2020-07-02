@@ -8,6 +8,10 @@ Each bot has a unique identity represented by a service account that has similar
 
 Symphony Bots enable end users to benefit from innovative **workflows** and timesaving **automations** built on top of the Symphony platform.
 
+{% hint style="info" %}
+Navigate to [Anatomy of a Symphony Bot](anatomy-of-a-symphony-bot.md) to learn more about a Bot's components
+{% endhint %}
+
 ## How do Bots create enhanced workflows and automations?
 
 The answer lies in Symphony's open REST API.  Once authenticated, Symphony Bots can leverage the Symphony REST API that enables bots to execute administrative functions such as creating chatrooms, managing users, and facilitating cross-pod connections.  In addition, Symphony's REST API allows bots to perform messaging functions such as sending and receiving messages and signals.

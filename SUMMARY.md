@@ -4,11 +4,10 @@
 
 ## Building Bots on Symphony
 
-* [Building Bots on Symphony](building-bots-on-symphony/building-bots-on-symphony/README.md)
-  * [Overview of Symphony Bots](building-bots-on-symphony/building-bots-on-symphony/overview-of-symphony-bots.md)
-  * [Anatomy of a Symphony Bot](building-bots-on-symphony/building-bots-on-symphony/anatomy-of-a-symphony-bot.md)
-  * [Creating a Bot User](building-bots-on-symphony/building-bots-on-symphony/creating-a-bot-user.md)
-  * [Bot Permissions](building-bots-on-symphony/building-bots-on-symphony/bot-permissions.md)
+* [Overview of Symphony Bots](building-bots-on-symphony/overview-of-symphony-bots/README.md)
+  * [Anatomy of a Symphony Bot](building-bots-on-symphony/overview-of-symphony-bots/anatomy-of-a-symphony-bot.md)
+  * [Creating a Bot User](building-bots-on-symphony/overview-of-symphony-bots/creating-a-bot-user.md)
+  * [Bot Permissions](building-bots-on-symphony/overview-of-symphony-bots/bot-permissions.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
   * [Agent Endpoints](building-bots-on-symphony/overview-of-rest-api/agent-endpoints.md)
