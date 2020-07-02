@@ -2,7 +2,7 @@
 
 **Welcome Symphony Developer!**
 
-Here you will learn about all the ways to streamline work using integrated bots and apps.  By leveraging Symphony's open APIs, developers can create innovative Bots and workflows , save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
+Here you will learn about all the ways to streamline work using integrated bots and apps. By leveraging Symphony's open APIs, developers can create innovative Bots and workflows , save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
 
 Keep reading to learn about core Symphony concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
 
