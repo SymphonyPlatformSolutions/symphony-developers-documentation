@@ -434,3 +434,56 @@ This page lists the available roles and their associated privileges that may be 
   </tbody>
 </table>
 
+## Role: User Provisioning
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Privileges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p>ACCESS_ADMIN_API</p>
+        <p>ACCESS_CERT_PROVISIONING_API</p>
+        <p>ACCESS_USER_PROVISIONING_API</p>
+        <p>ACTIVATE_AND_DEACTIVATE_ANY_ROOM</p>
+        <p>ACTIVATE_SERVICE_ACCOUNT</p>
+        <p>ADD_AND_REMOVE_USERS_IN_ANY_ROOM</p>
+        <p>ADMIN_PRESENCE_UPDATE</p>
+        <p>ADMIN_RESET_USER_PASSWORD</p>
+        <p>BULK_MANAGE_USERS</p>
+        <p>CREATE_APPS</p>
+        <p>CREATE_END_USER_ACCOUNT</p>
+        <p>CREATE_SERVICE_ACCOUNT</p>
+        <p>DEACTIVATE_END_USER_ACCOUNT</p>
+        <p>DEACTIVATE_SERVICE_ACCOUNT</p>
+        <p>LOGIN_WITH_SHARED_SECRET</p>
+        <p>MODIFY_APPS MODIFY_APPS_ENTITLEMENTS</p>
+        <p>MODIFY_END_USER_ACCOUNT</p>
+        <p>MANAGE_BLACKLIST</p>
+        <p>MANAGE_USER_DELEGATES</p>
+        <p>MANAGE_INFO_BARRIERS</p>
+        <p>MODIFY_END_USER_ENTITLEMENTS</p>
+        <p>MODIFY_USER_APPS_ENTITLEMENTS</p>
+        <p>MODIFY_USER_DISCLAIMERS</p>
+        <p>MODIFY_SERVICE_ACCOUNT</p>
+        <p>MODIFY_SERVICE_USER_ENTITLEMENTS</p>
+        <p>PROMOTE_AND_DEMOTE_OWNERS_IN_ANY_ROOM</p>
+        <p>VIEW_ANY_STREAM_DETAILS</p>
+        <p>VIEW_ANY_STREAM_MEMBERSHIP</p>
+        <p>VIEW_APPS VIEW_APPS_ENTITLEMENTS</p>
+        <p>VIEW_BLACKLIST VIEW_DISCLAIMER_AUDIT_TRAIL</p>
+        <p>VIEW_INFO_BARRIERS</p>
+        <p>VIEW_PAST_STREAM_MEMBERS</p>
+        <p>VIEW_POD_DISCLAIMERS</p>
+        <p>VIEW_PROFANITY_ENFORCEMENT_AUDIT_TRAIL</p>
+        <p>VIEW_USAGE_POLICY_DETAILS</p>
+        <p>VIEW_USER_APPS_ENTITLEMENTS</p>
+        <p>VIEW_USER_AUDIT_TRAIL VIEW_USER_DETAIL</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
