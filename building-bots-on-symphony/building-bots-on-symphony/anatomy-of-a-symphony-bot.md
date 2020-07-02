@@ -16,5 +16,23 @@ We understand that each firm in the Symphony community has unique infrastructure
 
 {% page-ref page="../authentication/bot-configuration.md" %}
 
+### 2. Symphony Datafeed
 
+![](../../.gitbook/assets/screen-shot-2020-07-02-at-12.02.55-pm.png)
+
+The Symphony Datafeed is a real-time message and event stream that can be created via the REST API.  This datafeed provides messages and event from all conversations that the bot is in.  In order for your bot to process incoming events on Symphony, your bot will need to create and maintain a singular datafeed. Read more about creating and managing datafeeds below:
+
+{% page-ref page="../datafeed/" %}
+
+### 3.  Business Logic
+
+![](../../.gitbook/assets/screen-shot-2020-07-02-at-12.31.41-pm.png)
+
+The functionality of your Bot is its business logic.  For Conversational and Interactive Bots,  your business logic is stored in datafeed event handlers or datafeed listeners.  In these event handler or listener files, your bot will process incoming events from the Symphony Datafeed and react accordingly by calling the REST API.  You can learn for about processing datafeed events and introducing your own business logic below:
+
+{% page-ref page="../datafeed/handling-datafeed-events.md" %}
+
+
+
+     
 
