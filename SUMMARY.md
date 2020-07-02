@@ -14,6 +14,7 @@
   * [Key Manager API](building-bots-on-symphony/overview-of-rest-api/key-manager-api.md)
   * [Agent API](building-bots-on-symphony/overview-of-rest-api/agent-api.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
+  * [Sequence of Authentication](building-bots-on-symphony/authentication/sequence-of-authentication.md)
   * [Authentication](building-bots-on-symphony/authentication/authentication.md)
   * [Certificate Authentication](building-bots-on-symphony/authentication/certificate-authentication.md)
   * [Bot Configuration](building-bots-on-symphony/authentication/bot-configuration.md)
