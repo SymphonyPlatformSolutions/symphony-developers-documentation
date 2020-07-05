@@ -30,7 +30,9 @@ Read more about the Key Manager API here:
 
 {% page-ref page="key-manager-api.md" %}
 
-## Putting It All Together
+## Interacting with the Components
+
+![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.32.58-pm%20%281%29.png)
 
 The above three components all interact with each other in order to create Symphony's secure messaging service.  Let's take a closer look at the sequence of API calls a Bot must make in order to send and receive encrypted messages on Symphony.
 
@@ -39,7 +41,9 @@ The above three components all interact with each other in order to create Symph
 3. If a Bot is conversational or interactive,  the next step is to create a Datafeed by calling the Agent API.  You can learn more about the different types of Bots here: [Different Types of Bots](../planning-your-bot/different-types-of-bots.md).  The Datafeed provides an encrypted stream of all Symphony events within the bot's scope.  You can read more about Symphony Datafeeds here: [Overview of Datafeed](../datafeed/overview-of-datafeed.md).
 4. In order to create a Datafeed, Bots must make an API call to the following Agent endpoint: [https://developers.symphony.com/restapi/reference\#create-messagesevents-stream-v4](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4).  Since, this API endpoint exists on the Agent server, the Bot will pass both its Session Token and Key Manager token as apart of its request.
 5.  At this point, the Agent server calls the Key Manager and requests the Bot's encryption keys.  After the Key Manager returns the Bot's encryption keys, the Agent confirms the Key Manager token sent and Bot encryption keys are valid and proceeds to create the Datafeed.  
-6. If, for example, a Bot wants to send a message, the Bot will call the following Agent API endpoint: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4) and pass both its Session Token and Key Manager Token as a part of the request.  The sequence presented in Step 5 will take place, and the Agent will encrypt the payload/message sent by the Bot.  Next the Agent will forward the encrypted message up to the Pod where it will be routed to its appropriate IM or chatroom.  The message will remain encrypted until it reaches its destination.     
+6. If, for example, a Bot wants to send a message, the Bot will call the following Agent API endpoint: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4) and pass both its Session Token and Key Manager Token as a part of the request.  The sequence presented in Step 5 will take place, and the Agent will encrypt the payload/message sent by the Bot.  Next the Agent will forward the encrypted message up to the Pod where it will be routed to its appropriate IM or chatroom.  The message will remain encrypted until it reaches its destination.
+
+For more an even more detailed explanation, enroll in our Developer Certification Program:
 
 ## On-Premise Deployment
 
@@ -56,12 +60,6 @@ For some of our smaller customers, the Agent server and Key Manager may be deplo
 A visual representation showing an in-cloud deployment of Symphony components is shown below:    
 
 ![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.40.33-pm.png)
-
-## Interacting with the Components:
-
-Symphony Bots can interface with each of these three components via the REST API.  Symphony's REST API is spread out across these three components.  
-
-![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.32.58-pm%20%281%29.png)
 
 
 
