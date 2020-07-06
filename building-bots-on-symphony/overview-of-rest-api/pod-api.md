@@ -32,7 +32,7 @@ The full list of Users API endpoints and their corresponding reference guide can
 The Streams API is used to create and de-activate IMs, MIMs, chatrooms, and also manage room membership.  The Streams API can be leveraged to do the following:
 
 * Create IM or MIM
-* Create chatroom
+* Create chatrooms
 * Search for rooms
 * Get room info
 * Deactivate room
