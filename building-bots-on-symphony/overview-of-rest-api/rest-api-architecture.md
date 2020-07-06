@@ -37,13 +37,21 @@ Read more about the Key Manager API here:
 The above three components all interact with each other in order to create Symphony's secure messaging service.  Let's take a closer look at the sequence of API calls a Bot must make in order to send and receive encrypted messages on Symphony.
 
 1. First a Bot must authenticate on the Pod.  It does so by calling the Session Auth endpoint found here: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).  If successful, the Bot will receive a valid Session Token.  This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.  
-2. Next, a Bot must authenticate on the Key Manager.  It does so by calling the Key Manager Auth endpoint found here: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate).  If successful, the Bot will receive a valid Key Manager Token.  This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.   
-3. If a Bot is conversational or interactive,  the next step is to create a Datafeed by calling the Agent API.  You can learn more about the different types of Bots here: [Different Types of Bots](../planning-your-bot/different-types-of-bots.md).  The Datafeed provides an encrypted stream of all Symphony events within the bot's scope.  You can read more about Symphony Datafeeds here: [Overview of Datafeed](../datafeed/overview-of-datafeed.md).
-4. In order to create a Datafeed, Bots must make an API call to the following Agent endpoint: [https://developers.symphony.com/restapi/reference\#create-messagesevents-stream-v4](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4).  Since, this API endpoint exists on the Agent server, the Bot will pass both its Session Token and Key Manager token as apart of its request.
-5.  At this point, the Agent server calls the Key Manager and requests the Bot's encryption keys.  After the Key Manager returns the Bot's encryption keys, the Agent confirms the Key Manager token sent and Bot encryption keys are valid and proceeds to create the Datafeed.  
-6. If, for example, a Bot wants to send a message, the Bot will call the following Agent API endpoint: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4) and pass both its Session Token and Key Manager Token as a part of the request.  The sequence presented in Step 5 will take place, and the Agent will encrypt the payload/message sent by the Bot.  Next the Agent will forward the encrypted message up to the Pod where it will be routed to its appropriate IM or chatroom.  The message will remain encrypted until it reaches its destination.
+2. Next, a Bot must authenticate on the Key Manager.  It does so by calling the Key Manager Auth endpoint found here: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate).  If successful, the Bot will receive a valid Key Manager Token.  This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.    
+3. If the Bot wants to send a message, the Bot will call the following Agent API endpoint: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4) and pass both its Session Token and Key Manager Token as a part of the request.
+4. At this point, the Agent Server calls the Key Manager and requests the Bot's encryption keys.  
+5. Next, Agent server validates the Bot's Key Manager Token.
+6. If successful, the Agent will encrypt the payload/message sent by the Bot and will forward the encrypted message up to the Pod where it will be routed to the intended user or chatroom.  The message will remain encrypted until it reaches its destination.
+
+The sequence of API calls and component interaction is illustrated below:
+
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow.png)
 
 For more an even more detailed explanation, enroll in our Developer Certification Program:
+
+{% hint style="info" %}
+Navigate to [Overview of Datafeed](../datafeed/overview-of-datafeed.md) to learn more about how Bots process messages and events from conversations your bot is in.  
+{% endhint %}
 
 ## On-Premise Deployment
 
