@@ -12,7 +12,7 @@ The Authentication process requires the following steps:
 1. The user creates a public/private RSA key pair.
 2. The admin imports the public key into the pod using the **Admin Console** or public APIs.
 3. The user creates a short-lived JWT \(JSON Web Token\) and signs it with their private key.
-4. On a call to an authentication endpoint, the server checks the signature of the JWT against the public key and returns an authentication token.
+4. The Bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
 
 ## 1.  Create an RSA Key Pair
 
