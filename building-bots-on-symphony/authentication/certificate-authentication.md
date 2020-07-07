@@ -1,2 +1,2 @@
-# Certificate Authentication
+# Certificate-Based Authentication Workflow
 
