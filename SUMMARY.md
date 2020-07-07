@@ -12,7 +12,7 @@
   * [Agent Endpoints](building-bots-on-symphony/overview-of-rest-api/agent-endpoints.md)
   * [Pod Endpoints](building-bots-on-symphony/overview-of-rest-api/pod-endpoints.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
-  * [RSA Authentication](building-bots-on-symphony/authentication/rsa-authentication.md)
+  * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication](building-bots-on-symphony/authentication/certificate-authentication.md)
   * [Configuration](building-bots-on-symphony/authentication/configuration.md)
 * [Datafeed](building-bots-on-symphony/datafeed/README.md)
