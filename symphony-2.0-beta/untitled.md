@@ -1,2 +1,2 @@
-# Symphony 2.0 \(BETA\)
+# Symphony 2.0 Extensions \(BETA\)
 
