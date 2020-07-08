@@ -41,6 +41,7 @@
     * [Person Selector](building-bots-on-symphony/symphony-elements/available-elements/person-selector.md)
     * [Table Select](building-bots-on-symphony/symphony-elements/available-elements/table-select.md)
     * [Alignment of input texts](building-bots-on-symphony/symphony-elements/available-elements/alignment-of-input-texts.md)
+* [Bot SDKs](building-bots-on-symphony/bot-sdks.md)
 * [Planning Your Bot](building-bots-on-symphony/planning-your-bot/README.md)
   * [Different Types of Bots](building-bots-on-symphony/planning-your-bot/different-types-of-bots.md)
   * [Chatbot](building-bots-on-symphony/planning-your-bot/chatbot/README.md)
@@ -67,6 +68,7 @@
       * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk/README.md)
         * [Handling Notifications using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk/handling-notifications-using-the-bdk.md)
       * [Building a Headless Bot using the SDKs](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-sdks.md)
+* [Deploying Your Bot](building-bots-on-symphony/deploying-your-bot.md)
 * [Bots Best Practices](building-bots-on-symphony/bots-best-practices.md)
 
 ## Building Extension Applications on Symphony
