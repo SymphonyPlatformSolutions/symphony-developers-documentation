@@ -79,7 +79,7 @@ If you have obtained a copy of your Root Certificate Authorities \(CA\) Public "
 
 ## 3. Authenticate
 
-To authenticate on the Pod the Bot must call the Session Auth endpoint, passing along the client certificate provided in the TLS session, returning a Session Token:
+To authenticate on the Pod the Bot must call the Session Auth endpoint: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate). Pass along the client certificate provided in the TLS session, returning a Session Token:
 
 ```bash
 $ curl --cert bot.user1.p12:mypassword 
@@ -102,7 +102,7 @@ A successful response:
 {% endtab %}
 {% endtabs %}
 
-To authenticate on the Key Manager, the Bot must call the Key Manager Auth endpoint, passing along the client certificate provided in the TLS session, returning a Key Manager Token:
+To authenticate on the Key Manager, the Bot must call the Key Manager Auth endpoint: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate).  Pass along the client certificate provided in the TLS session, returning a Key Manager Token:
 
 ```bash
 $ curl --cert bot.user1.p12:mypassword 
