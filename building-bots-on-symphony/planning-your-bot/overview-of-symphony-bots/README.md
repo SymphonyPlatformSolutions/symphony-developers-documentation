@@ -17,7 +17,7 @@ Navigate to [Anatomy of a Symphony Bot](anatomy-of-a-symphony-bot.md) to learn m
 The answer lies in Symphony's open REST API.  Once authenticated, Symphony Bots can leverage the Symphony REST API that enables bots to execute administrative functions such as creating chatrooms, managing users, and facilitating cross-pod connections.  In addition, Symphony's REST API allows bots to perform messaging functions such as sending and receiving messages and signals.
 
 {% hint style="info" %}
-Navigate to [REST API Architecture](../overview-of-rest-api/rest-api-architecture.md) to begin learning about Symphony's REST API
+Navigate to [REST API Architecture](../../overview-of-rest-api/rest-api-architecture.md) to begin learning about Symphony's REST API
 {% endhint %}
 
 ## Where does a Symphony Bot live?

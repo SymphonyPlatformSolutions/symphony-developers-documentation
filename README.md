@@ -8,8 +8,6 @@
 
 Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
-{% page-ref page="building-bots-on-symphony/overview-of-symphony-bots/" %}
-
 {% hint style="success" %}
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
 {% endhint %}
@@ -22,7 +20,7 @@ Bring customized and extensible workflows into Symphony through Extension Apps. 
 
 ## Symphony REST API ![](.gitbook/assets/symphony-api-large.png)
 
-In depth documentation and reference guide for the Symphony REST API
+In depth documentation and reference guide for the Symphony REST API:
 
 ## Symphony Extension API ![](.gitbook/assets/symphony-api-large.png)
 
@@ -38,11 +36,13 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
+{% page-ref page="building-bots-on-symphony/development-tools.md" %}
+
 ## Symphony 2.0 \(BETA\)
 
 Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development experience!
 
 ## Embedded Modules
 
-Securely embed stand-alone Symphony chat modules inside other websites and applications
+Securely embed stand-alone Symphony chat modules inside other websites and applications:
 
