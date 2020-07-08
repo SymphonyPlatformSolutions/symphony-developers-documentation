@@ -4,6 +4,7 @@
 
 ## Building Bots on Symphony
 
+* [Building Bots on Symphony](building-bots-on-symphony/building-bots-on-symphony.md)
 * [Overview of Symphony Bots](building-bots-on-symphony/overview-of-symphony-bots/README.md)
   * [Anatomy of a Symphony Bot](building-bots-on-symphony/overview-of-symphony-bots/anatomy-of-a-symphony-bot.md)
   * [Creating a Bot User](building-bots-on-symphony/overview-of-symphony-bots/creating-a-bot-user.md)
@@ -13,7 +14,7 @@
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
   * [Overview of Key Manager API](building-bots-on-symphony/overview-of-rest-api/key-manager-api.md)
   * [Overview of Agent API](building-bots-on-symphony/overview-of-rest-api/agent-api.md)
-* [Overview of Authentication](building-bots-on-symphony/authentication/README.md)
+* [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate-Based Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
   * [Authenticating using SDKs](building-bots-on-symphony/authentication/bot-configuration.md)

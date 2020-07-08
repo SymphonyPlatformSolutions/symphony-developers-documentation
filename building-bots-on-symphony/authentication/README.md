@@ -1,4 +1,4 @@
-# Overview of Authentication
+# Authentication
 
 In order for Bots to access the Symphony REST API and other Symphony resources, Bots must first authenticate themselves.  
 
