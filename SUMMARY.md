@@ -16,7 +16,7 @@
 * [Overview of Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate-Based Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
-  * [Bot Configuration](building-bots-on-symphony/authentication/bot-configuration.md)
+  * [Authenticating using SDKs](building-bots-on-symphony/authentication/bot-configuration.md)
 * [Datafeed](building-bots-on-symphony/datafeed/README.md)
   * [Overview of Datafeed](building-bots-on-symphony/datafeed/overview-of-datafeed.md)
   * [Handling Datafeed Events](building-bots-on-symphony/datafeed/handling-datafeed-events.md)

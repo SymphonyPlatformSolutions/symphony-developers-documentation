@@ -1,2 +1,2 @@
-# Bot Configuration
+# Authenticating using SDKs
 
