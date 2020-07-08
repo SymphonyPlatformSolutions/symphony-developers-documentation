@@ -118,7 +118,7 @@ A successful response:
 ```bash
 {
   "name":"keyManagerToken",
- "token":"KEY_MANAGER_TOKEN"
+  "token":"KEY_MANAGER_TOKEN"
 }
 
 ```
