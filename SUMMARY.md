@@ -6,11 +6,6 @@
 
 * [Building Bots on Symphony](building-bots-on-symphony/building-bots-on-symphony.md)
 * [Planning Your Bot](building-bots-on-symphony/planning-your-bot/README.md)
-  * [Overview of Symphony Bots](building-bots-on-symphony/planning-your-bot/overview-of-symphony-bots/README.md)
-    * [Anatomy of a Symphony Bot](building-bots-on-symphony/planning-your-bot/overview-of-symphony-bots/anatomy-of-a-symphony-bot.md)
-    * [Creating a Bot User](building-bots-on-symphony/planning-your-bot/overview-of-symphony-bots/creating-a-bot-user.md)
-    * [Bot Permissions](building-bots-on-symphony/planning-your-bot/overview-of-symphony-bots/bot-permissions.md)
-  * [Different Types of Bots](building-bots-on-symphony/planning-your-bot/different-types-of-bots.md)
   * [Chatbot](building-bots-on-symphony/planning-your-bot/chatbot/README.md)
     * [Sending and Receiving Messages](building-bots-on-symphony/planning-your-bot/chatbot/sending-and-receiving-messages.md)
     * [Getting Started](building-bots-on-symphony/planning-your-bot/chatbot/getting-started/README.md)
@@ -35,6 +30,9 @@
       * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk/README.md)
         * [Handling Notifications using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk/handling-notifications-using-the-bdk.md)
       * [Building a Headless Bot using the SDKs](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-sdks.md)
+  * [Creating a Bot User](building-bots-on-symphony/planning-your-bot/creating-a-bot-user.md)
+  * [Bot Permissions](building-bots-on-symphony/planning-your-bot/bot-permissions.md)
+  * [Bots Best Practices](building-bots-on-symphony/planning-your-bot/bots-best-practices.md)
 * [Development Tools](building-bots-on-symphony/development-tools.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
@@ -69,7 +67,6 @@
     * [Person Selector](building-bots-on-symphony/symphony-elements/available-elements/person-selector.md)
     * [Table Select](building-bots-on-symphony/symphony-elements/available-elements/table-select.md)
     * [Alignment of input texts](building-bots-on-symphony/symphony-elements/available-elements/alignment-of-input-texts.md)
-* [Bots Best Practices](building-bots-on-symphony/bots-best-practices.md)
 
 ## Building Extension Applications on Symphony
 
