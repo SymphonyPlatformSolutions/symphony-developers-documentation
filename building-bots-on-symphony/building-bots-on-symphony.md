@@ -26,7 +26,7 @@ The last step is to deploy your Symphony Bot on your company's infrastructure. O
 
 ## 5.  Become a Certified Developer
 
-Symphony offers a free course and certification program for Developers wishing to improve their Symphony skills, technical knowledge, and expertise.  Learn more about how you can become a Certified Developer today!
+Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony skills, technical knowledge, and expertise.  Learn more about how you can become a Certified Developer today!
 
 
 
