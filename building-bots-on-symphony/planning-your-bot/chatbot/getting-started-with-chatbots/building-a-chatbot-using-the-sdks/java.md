@@ -2,5 +2,5 @@
 description: Building a Chatbot using Symphony Generator + Java SDK
 ---
 
-# Java
+# Building a Chatbot using the Java SDK
 
