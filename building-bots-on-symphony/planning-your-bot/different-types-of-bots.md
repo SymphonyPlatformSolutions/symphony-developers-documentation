@@ -1,2 +1,0 @@
-# Different Types of Bots
-
