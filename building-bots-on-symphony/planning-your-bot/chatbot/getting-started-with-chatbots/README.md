@@ -16,25 +16,25 @@ For a deeper dive into Symphony SDKs and their offerings continue here:
 
 Get started building your first chatbot using the Java SDK:
 
-{% page-ref page="building-a-chatbot-using-the-sdks/java.md" %}
+{% page-ref page="java.md" %}
 
 ### Python SDK
 
 Get started building your first chatbot using the Python SDK:
 
-{% page-ref page="building-a-chatbot-using-the-sdks/python.md" %}
+{% page-ref page="python.md" %}
 
 ### Node.js SDK
 
 Get started building your first chatbot using the Node.js SDK:
 
-{% page-ref page="building-a-chatbot-using-the-sdks/node.js.md" %}
+{% page-ref page="node.js.md" %}
 
 ### .NET SDK
 
 Get started building your first chatbot using the .NET SDK:
 
-{% page-ref page="building-a-chatbot-using-the-sdks/.net.md" %}
+{% page-ref page=".net.md" %}
 
 ## Bot Developer Kit
 
