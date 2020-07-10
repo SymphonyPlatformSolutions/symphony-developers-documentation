@@ -8,7 +8,7 @@ Keep reading to learn about core Symphony concepts in order to ensure a smooth d
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
 
-Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Symphony Bot up and running!
+Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
 {% hint style="success" %}
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
