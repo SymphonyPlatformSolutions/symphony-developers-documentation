@@ -1,4 +1,4 @@
-# Symphony 2.0 \(BETA\)
+# Symphony 2.0 Extensions \(BETA\)
 
 ## 15.0.0 - 2042-12-03
 
