@@ -1,2 +1,0 @@
-# Sending and Receiving Webhooks
-
