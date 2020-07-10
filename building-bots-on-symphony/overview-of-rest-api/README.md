@@ -1,6 +1,6 @@
 # Overview of REST API
 
-The Symphony REST API acts as a secure interface between your Symphony Bot and the Symphony Platform.  Symphony's architecture is comprised of three components: the Symphony Pod, the Symphony Agent, and the Symphony Key Manager.  
+The Symphony REST API acts as a secure interface between your Symphony Bot and the Symphony Platform. Symphony's architecture is comprised of three components: the Symphony Pod, the Symphony Agent, and the Symphony Key Manager.
 
 The Symphony REST API is spread out across these components according to the type of API being called
 
@@ -27,12 +27,4 @@ To learn more about how Bots can authenticate and encrypt messages on Symphony, 
 To learn more about how Bots can send and receive encrypted messages on Symphony, continue onto the Agent API guide below:
 
 {% page-ref page="agent-api.md" %}
-
-
-
-  
-
-
-
-## 
 

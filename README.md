@@ -10,9 +10,6 @@ Keep reading to learn about core Symphony concepts in order to ensure a smooth d
 
 Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
-{% page-ref page="building-bots-on-symphony/building-bots-on-symphony/" %}
-
-
 {% hint style="success" %}
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
 {% endhint %}
@@ -33,7 +30,6 @@ In depth documentation and reference guides for the Symphony Extension API
 
 {% page-ref page="symphony-extension-api/symphony-extension-api.md" %}
 
-
 ## Developer Certification
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
@@ -51,5 +47,4 @@ Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development e
 ## Embedded Modules
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications
-
 

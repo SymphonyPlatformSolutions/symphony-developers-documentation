@@ -2,11 +2,11 @@
 
 ## Build Your First Bot
 
-Symphony provides a number of tools to help streamline Bot development: 
+Symphony provides a number of tools to help streamline Bot development:
 
 ## Symphony SDKs
 
-Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, convenient error handling, as well as baked in best practices.  Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events.  Lastly, our SDKs provide language-specific API bindings.  Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
+Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, convenient error handling, as well as baked in best practices. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
@@ -38,11 +38,11 @@ Get started building your first chatbot using the .NET SDK:
 
 ## Bot Developer Kit
 
-The next tool in Symphony's suite of development tools is the BDK, or Bot Developer Kit.  The Bot Developer Kit comprises of three development tools for more advanced Symphony Bot and Extension App development.
+The next tool in Symphony's suite of development tools is the BDK, or Bot Developer Kit. The Bot Developer Kit comprises of three development tools for more advanced Symphony Bot and Extension App development.
 
 ### Bot SDK
 
-The Bot SDK is a Java specific SDK that provides all the basic support as our other SDKs including authentication handlers, centralized configuration, convenient error handling, Datafeed management, and API bindings.  In addition, the Bot SDK provides development best practices for building enterprise grade, financial applications.
+The Bot SDK is a Java specific SDK that provides all the basic support as our other SDKs including authentication handlers, centralized configuration, convenient error handling, Datafeed management, and API bindings. In addition, the Bot SDK provides development best practices for building enterprise grade, financial applications.
 
 Learn more about the Bot SDK here:
 
@@ -50,7 +50,7 @@ Learn more about the Bot SDK here:
 
 ### CLI Tool
 
-The CLI tool allows you to generate code scaffolds for Symphony Bots and Applications.  Through the command line tool, developers can bootstrap their projects, adds command handlers and message templates,  and manage project dependencies.
+The CLI tool allows you to generate code scaffolds for Symphony Bots and Applications. Through the command line tool, developers can bootstrap their projects, adds command handlers and message templates, and manage project dependencies.
 
 Learn more about the CLI Tool here:
 
@@ -58,16 +58,13 @@ Learn more about the CLI Tool here:
 
 ### UI Toolkit
 
-The UI Toolkit is a library of react components that helps you build complex frontend applications quickly.  The library contains layout guides, forms, input fields, complex financial charts, and is already compatible with Symphony's UI theme.
+The UI Toolkit is a library of react components that helps you build complex frontend applications quickly. The library contains layout guides, forms, input fields, complex financial charts, and is already compatible with Symphony's UI theme.
 
 {% hint style="info" %}
-Note: The UI Toolkit is designed to help build Extension Applications and is not relevant for Bot development.  
+Note: The UI Toolkit is designed to help build Extension Applications and is not relevant for Bot development.
 {% endhint %}
 
-  You can learn more about the UI Toolkit here:
+You can learn more about the UI Toolkit here:
 
 {% page-ref page="../../../../building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/ui-toolkit.md" %}
-
-  
-
 

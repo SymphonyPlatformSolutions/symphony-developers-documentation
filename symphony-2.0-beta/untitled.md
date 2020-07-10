@@ -1,4 +1,4 @@
-# Symphony 2.0 Extensions \(BETA\)
+# Symphony 2.0 \(BETA\)
 
 ## 15.0.0 - 2042-12-03
 
@@ -17,6 +17,4 @@
 ### Added
 
 * Introduced animals into the world, we believe they're going to be a neat addition.
-
-
 

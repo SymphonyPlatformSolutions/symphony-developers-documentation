@@ -4,19 +4,19 @@ description: Overview of Symphony REST API Architecture
 
 # REST API Architecture
 
-As stated before, Symphony's REST API is spread out over Symphony's three main components: the Pod, Agent server, and Key Manager. Let's take a closer look at these components below: 
+As stated before, Symphony's REST API is spread out over Symphony's three main components: the Pod, Agent server, and Key Manager. Let's take a closer look at these components below:
 
 ## Symphony Pod
 
-The Symphony Pod is your dedicated Symphony instance.  The Symphony Pod is a cloud hosted component that handles all administrative functions as well as passing encrypted messages from user to user.  Since Symphony provides end-to-end encrypted messaging, all messages passed from user to user are fully encrypted from the time of sending, so that the Symphony Pod never has access to the contents of messages being sent.  
+The Symphony Pod is your dedicated Symphony instance. The Symphony Pod is a cloud hosted component that handles all administrative functions as well as passing encrypted messages from user to user. Since Symphony provides end-to-end encrypted messaging, all messages passed from user to user are fully encrypted from the time of sending, so that the Symphony Pod never has access to the contents of messages being sent.
 
-In addition, the Symphony Pod provides REST API endpoints in order for your Bot to  authenticate itself on the Symphony Pod.  You can read more about the Pod API here:
+In addition, the Symphony Pod provides REST API endpoints in order for your Bot to authenticate itself on the Symphony Pod. You can read more about the Pod API here:
 
 {% page-ref page="pod-api.md" %}
 
 ## Agent Server
 
-The Agent Server is the Symphony component responsible for encrypting and decrypting payloads of messages and files sent from a Bot.  The Agent server provides REST API endpoints that allow a bot to send and receive encrypted messages, acting as the intermediary between a Bot and the Symphony Pod.  In order to safely encrypt and decrypt these messages, the Agent server interacts the Key Manager which provides encryption keys for encrypting messages.
+The Agent Server is the Symphony component responsible for encrypting and decrypting payloads of messages and files sent from a Bot. The Agent server provides REST API endpoints that allow a bot to send and receive encrypted messages, acting as the intermediary between a Bot and the Symphony Pod. In order to safely encrypt and decrypt these messages, the Agent server interacts the Key Manager which provides encryption keys for encrypting messages.
 
 Read more about the Agent API here:
 
@@ -24,7 +24,7 @@ Read more about the Agent API here:
 
 ## Key Manager
 
-The Key Manager generates and stores encryption keys which are used to encrypt and decrypt messages by the Agent Server.  The Key Manager provides an authentication API that provides a unique Key Manager Token to a calling Bot.  This token is used to encrypt/decrypt messages on the Agent Server.
+The Key Manager generates and stores encryption keys which are used to encrypt and decrypt messages by the Agent Server. The Key Manager provides an authentication API that provides a unique Key Manager Token to a calling Bot. This token is used to encrypt/decrypt messages on the Agent Server.
 
 Read more about the Key Manager API here:
 
@@ -34,7 +34,7 @@ Read more about the Key Manager API here:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.32.58-pm%20%281%29.png)
 
-The above three components all interact with each other in order to create Symphony's secure messaging service.  Let's take a closer look at the sequence of API calls a Bot must make in order to send and receive encrypted messages on Symphony.
+The above three components all interact with each other in order to create Symphony's secure messaging service. Let's take a closer look at the sequence of API calls a Bot must make in order to send and receive encrypted messages on Symphony.
 
 1. First a Bot must authenticate on the Pod.  It does so by calling the Session Auth endpoint found here: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).  If successful, the Bot will receive a valid Session Token.  This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.  
 2. Next, a Bot must authenticate on the Key Manager.  It does so by calling the Key Manager Auth endpoint found here: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate).  If successful, the Bot will receive a valid Key Manager Token.  This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.    
@@ -50,24 +50,22 @@ The sequence of API calls and component interaction is illustrated below:
 For more an even more detailed explanation, enroll in our Developer Certification Program:
 
 {% hint style="info" %}
-Navigate to [Overview of Datafeed](../datafeed/overview-of-datafeed.md) to learn more about how Bots process messages and events from conversations your bot is in.  
+Navigate to [Overview of Datafeed](../datafeed/overview-of-datafeed.md) to learn more about how Bots process messages and events from conversations your bot is in.
 {% endhint %}
 
 ## On-Premise Deployment
 
-For our larger customers, the Agent server and Key Manager components are deployed on premise, whereas the Pod is always deployed in the cloud.  Your Bot or REST API caller, is an application that can be deployed on-premise or in the cloud.  
+For our larger customers, the Agent server and Key Manager components are deployed on premise, whereas the Pod is always deployed in the cloud. Your Bot or REST API caller, is an application that can be deployed on-premise or in the cloud.
 
-An visual representation showing an on-premise deployment of Symphony components is shown below:  
+An visual representation showing an on-premise deployment of Symphony components is shown below:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.25.55-pm.png)
 
 ## In-Cloud Deployment
 
-For some of our smaller customers, the Agent server and Key Manager may be deployed alongside the Pod in the cloud.  Your Bot or REST API caller, is an application that can be deployed on-premise or in the cloud.
+For some of our smaller customers, the Agent server and Key Manager may be deployed alongside the Pod in the cloud. Your Bot or REST API caller, is an application that can be deployed on-premise or in the cloud.
 
-A visual representation showing an in-cloud deployment of Symphony components is shown below:    
+A visual representation showing an in-cloud deployment of Symphony components is shown below:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.40.33-pm.png)
-
-
 
