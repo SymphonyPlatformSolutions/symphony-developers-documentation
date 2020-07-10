@@ -1,12 +1,17 @@
-# 🚀  Start Your Development Journey 🚀
+# Start Your Developer Journey
 
-### Welcome Symphony Developer!  Here you will learn about all the ways to streamline work using integrated bots and apps.  By leveraging Symphony's open APIs, developers can create innovative Bots and workflows , save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
+**Welcome Symphony Developer!**
 
-### Keep reading to learn about core Symphony concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
+Here you will learn about all the ways to streamline work using integrated bots and apps. By leveraging Symphony's open APIs, developers can create innovative Bots and workflows , save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
+
+Keep reading to learn about core Symphony concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
 
 Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
+
+{% page-ref page="building-bots-on-symphony/building-bots-on-symphony/" %}
+
 
 {% hint style="success" %}
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
@@ -28,11 +33,12 @@ In depth documentation and reference guides for the Symphony Extension API
 
 {% page-ref page="symphony-extension-api/symphony-extension-api.md" %}
 
-## Developer Certification 🎓
+
+## Developer Certification
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
-## Developer Tools 🛠
+## Developer Tools
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
@@ -44,5 +50,6 @@ Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development e
 
 ## Embedded Modules
 
-Securely embed stand-alone Symphony chat modules inside other websites and applications:
+Securely embed stand-alone Symphony chat modules inside other websites and applications
+
 
