@@ -385,3 +385,5 @@ Next, start up your bot by running **python3 main.py** and test in a 1-1 chatroo
 
 ![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
 
+**For an in depth video series that walks through the same process please visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
+
