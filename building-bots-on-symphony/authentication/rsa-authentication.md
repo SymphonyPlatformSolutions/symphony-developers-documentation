@@ -1,6 +1,6 @@
 # RSA Authentication Workflow
 
-This pages describes the implementation of RSA Authentication. For the API reference of RSA Session Authenticate and Key Manager Authenticate, see the following API endpoints: 
+This pages describes the implementation of RSA Authentication. For the API reference of RSA Session Authenticate and Key Manager Authenticate, see the following API endpoints:
 
 * Session Auth: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference\#rsa-key-manager-authenticate](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate)
@@ -44,15 +44,15 @@ $ openssl x509 -pubkey -noout -in publickey.cer > publickey.pem
 
 Sign the authentication request using either `privatekey.pkcs8` or `privatekey.pem`, depending on the support available in the JWT library.
 
-The file publickey.pem is the public key.  This is the key you will import into the pod in step 2.
+The file publickey.pem is the public key. This is the key you will import into the pod in step 2.
 
 ## 2. Import Public Key into the Pod
 
-Navigate to the Admin Console and create a new Service Account.  Copy the contents of the pubkey.pem file you just created and paste into the textbox under the Authentication section:
+Navigate to the Admin Console and create a new Service Account. Copy the contents of the pubkey.pem file you just created and paste into the textbox under the Authentication section:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-1.28.22-pm.png)
 
-Add your Bot's basic information: 
+Add your Bot's basic information:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-1.29.20-pm.png)
 
@@ -62,7 +62,7 @@ If successful, you should see the following:
 
 ## 3. Generate a signed JWT Token
 
-To authenticate on the Pod and the Key Manager, the Bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request.  The JWT token must contain the following:
+To authenticate on the Pod and the Key Manager, the Bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request. The JWT token must contain the following:
 
 * a _subject_ matching the username of the user to authenticate
 * an _expiration time_ of no more than 5 minutes from the current timestamp \(needed to prevent replay attacks\)
@@ -245,7 +245,7 @@ public class JwtHelper {
 
 5) Generate jwt token simply by:
     python create_jwt.py
-    
+
 6) You will see the jwt token in terminal output.
 """
 
@@ -482,13 +482,12 @@ The authentication token can be inspected on [https://jwt.io/](https://jwt.io/) 
 
 ## 4. Authenticate
 
-Obtain a valid Session Token by making a POST request to your company's Session Auth endpoint: 
+Obtain a valid Session Token by making a POST request to your company's Session Auth endpoint:
 
 {% tabs %}
 {% tab title="Session Auth" %}
 ```bash
 $ curl -d '{"token":"eyJhbGciOiJSUzUxMiJ9...ik0iV6K9FrEhTAf71cFs"}' https://${symphony.url}:443/login/pubkey/authenticate
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -499,7 +498,6 @@ A successful response:
 {% tab title="200" %}
 ```bash
 {"token":"eyJhbGciOiJSUzUxMiJ9...7oqG1Kd28l1FpQ","name":"sessionToken"}
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -510,7 +508,6 @@ Obtain a valid Key Manager Token by making a POST request to your company's Key 
 {% tab title="Key Manager Auth" %}
 ```bash
 $ curl -d '{"token":"eyJhbGciOiJSUzUxMiJ9...ik0iV6K9FrEhTAf71cFs"}' https://${symphony.url}:443/relay/pubkey/authenticate
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -521,7 +518,6 @@ A successful response:
 {% tab title="200" %}
 ```bash
 {"token":"0100e4fe...REDACTED...f729d1866f","name":"keyManagerToken"}
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -593,7 +589,7 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
 {% endtab %}
 {% endtabs %}
 
-Additionally you can programmatically revoke a public key using either **currentKey** or **previousKey.**  Use the following REST request to programmatically revoke a public key using **currentKey**:
+Additionally you can programmatically revoke a public key using either **currentKey** or **previousKey.** Use the following REST request to programmatically revoke a public key using **currentKey**:
 
 ```bash
 curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
@@ -601,7 +597,6 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
     "currentKey": {"action":"REVOKE"}
   }
 }' https://localhost.symphony.com:443/pod/v2/admin/user/68719476742/update
-
 ```
 
 {% tabs %}
@@ -639,13 +634,11 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
     "previousKey": {"action":"REVOKE"} 
   }
 }' https://localhost.symphony.com:443/pod/v2/admin/user/68719476742/update
-
 ```
 
 {% tabs %}
 {% tab title="200" %}
 ```bash
-
 {
   "userAttributes": {
     "emailAddress": "demo-bot1@symphony.com",
@@ -669,7 +662,6 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
     "INDIVIDUAL"
   ]
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -684,7 +676,6 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
     "previousKey": { "action": "EXTEND" } 
   }
 }' https://localhost.symphony.com:443/pod/v2/admin/user/68719476742/update
-
 ```
 
 {% tabs %}
@@ -722,7 +713,7 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
 {% endtabs %}
 
 {% hint style="info" %}
-#### Restricted Key Operations:
+### Restricted Key Operations:
 
 You CANNOT perform the following actions:
 
@@ -737,8 +728,4 @@ You CANNOT perform the following actions:
 
 **Note:** When performing a SAVE, the key must be different from your current key.
 {% endhint %}
-
-
-
- 
 
