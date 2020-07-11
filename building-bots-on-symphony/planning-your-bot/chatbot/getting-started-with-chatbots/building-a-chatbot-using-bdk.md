@@ -133,7 +133,7 @@ Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct
 
 ## 3. Dive into the Code
 
-The Bot SDK The BDK CLI tool and Bot SDK is baked in with Bot's best practices.  As a result, a lot of useful boilerplate code is written for you.  Navigate to HelpCommandHandler.java to see more:
+The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code.  The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events.  The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly.  To illustrate these best practices and convenient boilerplate code, navigate to HelpCommandHandler.java inside your project directory:
 
 {% tabs %}
 {% tab title="command/HelpCommandHandler.java" %}
@@ -208,4 +208,10 @@ So for example when a user prompts the Bot with "@demobot2 /hello", the handle\(
 {% endtabs %}
 
 ## 4.  Run your Bot
+
+Lastly, start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM:
+
+![](../../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm.png)
+
+To learn more about how your can add your own commands and business logic, navigate to our Developer Certification where we show you how to build a real-world FX Trading Bot using the Bot SDK and CLI tool:
 

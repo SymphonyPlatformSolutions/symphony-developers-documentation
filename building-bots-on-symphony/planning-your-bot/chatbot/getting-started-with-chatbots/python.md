@@ -373,7 +373,7 @@ class IMListenerImpl(IMListener):
 {% endtab %}
 {% endtabs %}
 
-Next, start up your bot by running **python3 main.py** and test in a 1-1 chatroom:
+Next, start up your bot by running **python3 main.py** and test in a 1-1 IM:
 
 ![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
 
