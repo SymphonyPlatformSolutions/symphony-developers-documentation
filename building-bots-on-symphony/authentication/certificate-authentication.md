@@ -1,13 +1,13 @@
-# Certificate-Based Authentication Workflow
+# Certificate Authentication Workflow
 
 This pages describes the implementation of certificate-based Authentication. For the API reference of Certificate Session Authenticate and Certificate Key Manager Authenticate, see the following API endpoints:
 
 * Session Auth: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate)
 
-## Overview of Certificate-Based Authentication 
+## Overview of Certificate-Based Authentication
 
-Symphony allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate.  When a Bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the Bot user and return a Session Token.  The same process occurs when a Bot authenticates on the Key Manager.
+Symphony allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate. When a Bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the Bot user and return a Session Token. The same process occurs when a Bot authenticates on the Key Manager.
 
 All Symphony network communications take place over TLS-protected HTTP. The network uses authentication methods that require a client-authenticated TLS connection.
 
@@ -29,7 +29,7 @@ You can use the following commands to generate the service account certificate. 
 $ openssl genrsa -aes256 -passout pass:$PASSWORD -out admin-key.pem 4096
 $ openssl req -new -key admin-key.pem -passin pass:$PASSWORD -subj "/CN=$USERNAME/O=Symphony Communications LLC/OU=NOT FOR PRODUCTION USE/C=US" -out admin-req.pem 
 $ openssl x509 -req -sha256 -days 2922 -in admin-req.pem -CA $CA_CERT -CAkey $CA_KEY -passin pass:$CA_PASSWORD -out admin-cert.pem -set_serial 0x1
-$ openssl pkcs12 -export -out admin.p12 -aes256 -in admin-cert.pem -inkey admin-key.pem -passin pass:$PASSWORD -passout pass:$OUTPUT_PASSWORD 
+$ openssl pkcs12 -export -out admin.p12 -aes256 -in admin-cert.pem -inkey admin-key.pem -passin pass:$PASSWORD -passout pass:$OUTPUT_PASSWORD
 ```
 
 * USERNAME = Service account username 
@@ -39,7 +39,7 @@ $ openssl pkcs12 -export -out admin.p12 -aes256 -in admin-cert.pem -inkey admin-
 * CA\_PASSWORD = CA key password 
 * OUTPUT\_PASSWORD = PKCS12 file password
 
-#### Creating a Certificate Signing Request \(CSR\):
+### Creating a Certificate Signing Request \(CSR\):
 
 The following table shows the information you will need to provide to your PKI team:
 
@@ -75,7 +75,7 @@ If you have obtained a copy of your Root Certificate Authorities \(CA\) Public "
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-4.21.52-pm.png)
 
-   4. Once you have uploaded the certificate file, click _Import._  If successful you will receive a confirmation message saying that the certificate has been uploaded successfully.
+1. Once you have uploaded the certificate file, click _Import._  If successful you will receive a confirmation message saying that the certificate has been uploaded successfully.
 
 ## 3. Authenticate
 
@@ -85,10 +85,9 @@ To authenticate on the Pod the Bot must call the Session Auth endpoint: [https:/
 $ curl --cert bot.user1.p12:mypassword 
 https://${symphony.url}/sessionauth/v1/authenticate 
 -X POST
-
 ```
 
-A successful response: 
+A successful response:
 
 {% tabs %}
 {% tab title="200" %}
@@ -97,21 +96,19 @@ A successful response:
   "name":"sessionToken",  
   "token":"SESSION_TOKEN"
 }
-
 ```
 {% endtab %}
 {% endtabs %}
 
-To authenticate on the Key Manager, the Bot must call the Key Manager Auth endpoint: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate).  Pass along the client certificate provided in the TLS session, returning a Key Manager Token:
+To authenticate on the Key Manager, the Bot must call the Key Manager Auth endpoint: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate). Pass along the client certificate provided in the TLS session, returning a Key Manager Token:
 
 ```bash
 $ curl --cert bot.user1.p12:mypassword 
 https://${symphony.url}/keyauth/v1/authenticate 
 -X POST
-
 ```
 
-A successful response: 
+A successful response:
 
 {% tabs %}
 {% tab title="200" %}
@@ -120,12 +117,9 @@ A successful response:
   "name":"keyManagerToken",
   "token":"KEY_MANAGER_TOKEN"
 }
-
 ```
 {% endtab %}
 {% endtabs %}
 
-Pass the Session Token and Key Manager Token as headers for all subsequent API requests. 
-
-
+Pass the Session Token and Key Manager Token as headers for all subsequent API requests.
 
