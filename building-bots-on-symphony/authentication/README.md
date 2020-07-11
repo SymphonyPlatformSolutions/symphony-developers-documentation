@@ -22,8 +22,6 @@ In order to obtain a valid Session Token and Key Manager Token, Bots must call t
 
 We recommend that Bots follow the RSA Bot authentication workflow in order to obtain valid Session and Key Manager Tokens:
 
-{% page-ref page="rsa-authentication.md" %}
-
 ## Certificate-Based Authentication Workflow
 
 For users that do not want to use RSA Authentication, Bots can perform certificate-based authentication in order to obtain valid Session and Key Manager Tokens:
