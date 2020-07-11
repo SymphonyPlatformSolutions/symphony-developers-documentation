@@ -46,5 +46,5 @@ Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development e
 
 ## Embedded Modules
 
-Securely embed stand-alone Symphony chat modules inside other websites and applications
+Securely embed stand-alone Symphony chat modules inside other websites and applications.
 
