@@ -36,7 +36,7 @@
   * [Overview of Agent API](building-bots-on-symphony/overview-of-rest-api/agent-api.md)
 * [Development Tools](building-bots-on-symphony/development-tools.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
-  * [RSA Authentication](building-extension-applications-on-symphony/developing-an-extension-application/application-authentication/rsa-authentication.md)
+  * [RSA Authentication](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication](building-bots-on-symphony/authentication/certificate-authentication.md)
   * [Authenticating using SDKs](building-bots-on-symphony/authentication/bot-configuration.md)
 * [Deploying Your Bot](building-bots-on-symphony/deploying-your-bot.md)
