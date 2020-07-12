@@ -61,7 +61,7 @@ Learn more about the CLI Tool here:
 The UI Toolkit is a library of react components that helps you build complex frontend applications quickly. The library contains layout guides, forms, input fields, complex financial charts, and is already compatible with Symphony's UI theme.
 
 {% hint style="info" %}
-Note: The UI Toolkit is designed to help build Extension Applications and is not relevant for Bot development.
+Note: In the current version of the BDK, the UI Toolkit is designed to help build Extension Applications only and is not relevant for Bot development.
 {% endhint %}
 
 You can learn more about the UI Toolkit here:
