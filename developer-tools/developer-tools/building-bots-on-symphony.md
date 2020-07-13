@@ -1,2 +1,2 @@
-# Building Bots on Symphony
+# Building Bots on Symphony 🤖
 
