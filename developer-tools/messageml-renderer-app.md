@@ -1,2 +1,0 @@
-# MessageML Renderer App
-
