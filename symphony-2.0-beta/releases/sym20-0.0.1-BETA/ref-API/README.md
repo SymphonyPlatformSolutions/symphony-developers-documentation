@@ -43,10 +43,10 @@ There are some key concepts for writing Symphony 2.0 Extensions:
  
 Initial Symphony 2.0 Extensions API contains of the following packages:
  
-* @mana/core ([README.md](../core/README.md))
-* @mana/core-ui ([README.md](../core-ui/README.md))
-* @mana/core-conversations ([README.md](../core-conversations/README.md))
-* @mana/core-chat ([README.md](../core-chat/README.md))
+* @mana/core ([README.md](./doc/README.md))
+* @mana/core-ui ([README.md](./doc/README.md))
+* @mana/core-conversations ([README.md](./doc/README.md))
+* @mana/core-chat ([README.md](./doc/README.md))
  
 ## Symphony 2.0 API Reference (BETA)
  
@@ -58,7 +58,7 @@ API documentation for this package can be found [here](doc/index.md)
 The Symphony 2.0 Extension API is written in TypeScript.
 The easiest way to get started is to use the example provided in the sample code referenced below. The package. json specifies the dependencies you need and sets up the example.
  
-Sample code for building a hello_world example can be found [here](../../client/extensionLib/examples/hello-world/README.md)
+Sample code for building a hello_world example can be found [here](../examples/hello-world/README.md)
  
 ## Disclaimer
 The documentation, APIs and behavior of Symphony 2.0 Extension API is currently under development and might be subject to changes. No backwards compatibility is in any way guaranteed.
