@@ -44,15 +44,11 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
-{% page-ref page="../../../../developer-tools/bdk/bot-sdk.md" %}
-
 ### CLI Tool
 
 The CLI tool allows you to generate code scaffolds for Symphony Bots and Applications. Through the command line tool, developers can bootstrap their projects, adds command handlers and message templates, and manage project dependencies.
 
 Learn more about the CLI Tool here:
-
-{% page-ref page="../../../../developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
