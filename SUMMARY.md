@@ -116,6 +116,7 @@
   * [Releases](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/README.md)
     * [0.0.1 Beta](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/README.md)
       * [core-chat package](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/README.md)
+        * [IChatService interface](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/ichatservice-interface.md)
         * [DockingMode enum](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/dockingmode-enum.md)
     * [index](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled-1.md)
 
