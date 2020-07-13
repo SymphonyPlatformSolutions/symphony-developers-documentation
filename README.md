@@ -14,6 +14,8 @@ Begin your development journey by taking an in depth look at Symphony Bots. Unde
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
 {% endhint %}
 
+{% page-ref page="building-bots-on-symphony/building-bots-on-symphony.md" %}
+
 ## Building Extension Applications on Symphony ![](.gitbook/assets/extension-app-large.png)
 
 Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
