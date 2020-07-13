@@ -6,4 +6,4 @@
 * [UI](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a9748bf302eee43ff612748a8ff14a1ab19804c6/symphony-2.0-beta/untitled/core_ui.md)
 
 
-
+* [BETA](./releases/sym20-0.0.1-BETA/index.html)
