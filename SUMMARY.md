@@ -119,18 +119,20 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
-  * [5th tools](developer-tools/developer-tools/5th-tools.md)
-  * [Postman](developer-tools/developer-tools/postman.md)
-  * [MessageML Renderer App](developer-tools/developer-tools/messageml-renderer-app.md)
-  * [BDK](developer-tools/developer-tools/bdk/README.md)
+  * [Building Bots on Symphony](developer-tools/developer-tools/building-bots-on-symphony.md)
+  * [Building Extension Applications](developer-tools/developer-tools/5th-tools.md)
+  * [Developer Certification 🎓](developer-tools/developer-tools/postman.md)
+  * [Symphony 2.0 \(Beta\)](developer-tools/developer-tools/messageml-renderer-app.md)
+  * [Developer Tools 🛠](developer-tools/developer-tools/bdk/README.md)
     * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
     * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
-  * [SDKs](developer-tools/developer-tools/untitled/README.md)
+  * [API Reference ⚙️](developer-tools/developer-tools/untitled/README.md)
     * [Java](developer-tools/developer-tools/untitled/java.md)
     * [Python](developer-tools/developer-tools/untitled/python.md)
     * [Node.js](developer-tools/developer-tools/untitled/node.js.md)
     * [.NET](developer-tools/developer-tools/untitled/.net.md)
+  * [Embedded Modules](developer-tools/developer-tools/embedded-modules-1.md)
 
 ## Embedded Modules
 
