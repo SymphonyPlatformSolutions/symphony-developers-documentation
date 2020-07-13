@@ -10,8 +10,6 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
-{% page-ref page="../../../../developer-tools/untitled/" %}
-
 ### Java SDK
 
 Get started building your first chatbot using the Java SDK:
