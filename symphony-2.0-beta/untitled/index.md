@@ -8,5 +8,5 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [@sym20/core](./core.md) |  |
+|  [@sym20/core-conversations](./core-conversations.md) |  |
 
