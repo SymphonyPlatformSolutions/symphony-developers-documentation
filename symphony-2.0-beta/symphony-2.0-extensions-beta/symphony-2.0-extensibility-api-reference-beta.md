@@ -2,7 +2,7 @@
 
 | Release | Comment |
 | :--- | :--- |
-| sym20 BETA |  |
+| [sym20 BETA](../releases/sym20-0.0.1-BETA) |  |
 
 
 
