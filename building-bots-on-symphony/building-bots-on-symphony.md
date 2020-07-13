@@ -22,7 +22,7 @@ At Symphony, security is always first. In order to leverage Symphony's robust se
 
 ## 4.  Add Custom Business Logic
 
-The last step is to add custom business logic to your Bot.  Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
+The last step is to add custom business logic to your Bot. Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
 
 {% page-ref page="overview-of-rest-api/" %}
 

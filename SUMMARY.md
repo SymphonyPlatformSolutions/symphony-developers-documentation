@@ -43,7 +43,7 @@
     * [.NET](building-bots-on-symphony/developer-tools/sdks/.net.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
-  * [Certificate Authentication](building-extension-applications-on-symphony/developing-an-extension-application/application-authentication/certificate-authentication.md)
+  * [Certificate Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
   * [Authenticating using SDKs](building-bots-on-symphony/authentication/bot-configuration.md)
 * [Datafeed](building-bots-on-symphony/datafeed/README.md)
   * [Overview of Datafeed](building-bots-on-symphony/datafeed/overview-of-datafeed.md)
