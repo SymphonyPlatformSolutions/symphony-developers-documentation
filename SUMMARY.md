@@ -112,7 +112,7 @@
 ## Symphony 2.0 \(BETA\)
 
 * [Symphony 2.0 Extensions \(BETA\)](symphony-2.0-beta/untitled/README.md)
-  * [Untitled1](symphony-2.0-beta/untitled/untitled1.md)
+  * [Symphony 2.0 Extensibility API Reference \(BETA\)](symphony-2.0-beta/untitled/untitled1.md)
   * [Untitled2](symphony-2.0-beta/untitled/untitled/README.md)
     * [Untitled3](symphony-2.0-beta/untitled/untitled/untitled3.md)
 
