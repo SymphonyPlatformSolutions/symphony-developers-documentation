@@ -10,8 +10,6 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/untitled/" %}
-
 ### Java SDK
 
 Get started building your first chatbot using the Java SDK:
@@ -46,15 +44,11 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
-
 ### CLI Tool
 
 The CLI tool allows you to generate code scaffolds for Symphony Bots and Applications. Through the command line tool, developers can bootstrap their projects, adds command handlers and message templates, and manage project dependencies.
 
 Learn more about the CLI Tool here:
-
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
