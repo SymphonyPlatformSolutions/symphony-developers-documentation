@@ -6,9 +6,11 @@ Symphony provides a number of tools to help streamline Bot development:
 
 ## Symphony SDKs
 
-Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
+Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling.  Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
+
+{% page-ref page="../../../../developer-tools/developer-tools/untitled/" %}
 
 ### Java SDK
 
@@ -44,7 +46,7 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
-{% page-ref page="../../../../developer-tools/bdk/bot-sdk.md" %}
+{% page-ref page="../../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
 
 ### CLI Tool
 
@@ -52,7 +54,7 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
-{% page-ref page="../../../../developer-tools/bdk/cli-tool.md" %}
+{% page-ref page="../../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
