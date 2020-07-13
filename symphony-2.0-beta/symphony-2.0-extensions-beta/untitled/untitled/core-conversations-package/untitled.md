@@ -1,4 +1,4 @@
-# index
+# ISentJoinRequestStore.sendRequestToJoinConversation\(\) method
 
 [Home]() &gt; [@sym20/core-conversations](core-conversations.md) &gt; [ISentJoinRequestStore](core-conversations.isentjoinrequeststore.md) &gt; [sendRequestToJoinConversation](core-conversations.isentjoinrequeststore.sendrequesttojoinconversation.md)
 
