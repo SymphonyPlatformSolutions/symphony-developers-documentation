@@ -1,2 +1,0 @@
-# Bot Developer Kit
-
