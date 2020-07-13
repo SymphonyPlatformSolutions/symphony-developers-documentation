@@ -113,8 +113,11 @@
 
 * [Symphony 2.0 Extensions \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/README.md)
   * [Symphony 2.0 Extensibility API Reference & Example \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/symphony-2.0-extensibility-api-reference-beta.md)
-  * [index](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/README.md)
-    * [Untitled](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled.md)
+  * [Releases](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/README.md)
+    * [0.0.1 Beta](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/README.md)
+      * [core-chat package](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/README.md)
+        * [DockingMode enum](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/dockingmode-enum.md)
+    * [index](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled-1.md)
 
 ## Developer Tools
 

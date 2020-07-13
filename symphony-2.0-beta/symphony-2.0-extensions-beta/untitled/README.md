@@ -1,4 +1,4 @@
-# index
+# Releases
 
 This package is part of the Symphony 2.0 Client Extension API.
 
