@@ -337,7 +337,13 @@ class IMProcessor:
 {% endtab %}
 {% endtabs %}
 
-You'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
+
+
+{% hint style="info" %}
+Check out our [Overview of MessageML](../../../messages/overview-of-messageml.md) guide for more information on message formatting and styling.  
+{% endhint %}
+
+On line 10, you'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
 
 ![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-1.13.03-pm.png)
 
