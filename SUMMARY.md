@@ -116,6 +116,21 @@
 
 * [Symphony 2.0 \(BETA\)](symphony-2.0-beta/untitled.md)
 
+## Developer Tools
+
+* [Developer Tools](developer-tools/developer-tools/README.md)
+  * [SDKs](developer-tools/developer-tools/sdks/README.md)
+    * [Python](developer-tools/developer-tools/sdks/python.md)
+    * [Java](developer-tools/developer-tools/sdks/java.md)
+    * [Node.js](developer-tools/developer-tools/sdks/node.js.md)
+    * [.NET](developer-tools/developer-tools/sdks/.net.md)
+  * [BDK](developer-tools/developer-tools/bdk/README.md)
+    * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
+    * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
+    * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
+  * [Postman](developer-tools/developer-tools/postman.md)
+  * [MessageML Renderer App](developer-tools/developer-tools/messageml-renderer-app.md)
+
 ## Embedded Modules
 
 * [Chat Module](embedded-modules/untitled.md)
