@@ -38,7 +38,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
-{% page-ref page="building-bots-on-symphony/development-tools.md" %}
+{% page-ref page="building-bots-on-symphony/developer-tools/" %}
 
 ## Symphony 2.0 \(BETA\)
 

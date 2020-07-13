@@ -12,17 +12,19 @@ Symphony Bots can leverage the Symphony REST API to create innovative workflows 
 
 Symphony has built numerous tools in order to streamline Symphony Bot Development. Our rich suite of developer tools offers centralized configuration and authentication protocols, provides out of the box API bindings, convenient error handling, datafeed management, and ensures that your Bot is built using Symphony's best practices. Learn more about how you can get started with our developer tools here:
 
+{% page-ref page="developer-tools/" %}
+
 ## 3.  Authenticate Your Bot
 
 At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
 
 {% page-ref page="authentication/" %}
 
-## 4.  Deploy Your Bot
+## 4.  Add Custom Business Logic
 
-The last step is to deploy your Symphony Bot on your company's infrastructure. Once deployed, Symphony users can begin to interact with your leverage your Bot to enrich day-to-day work. Follow our deployment guide here to understand more the steps needed to take your Bot into production:
+The last step is to add custom business logic to your Bot.  Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
 
-{% page-ref page="deploying-your-bot.md" %}
+{% page-ref page="overview-of-rest-api/" %}
 
 ## 5.  Become a Certified Developer
 

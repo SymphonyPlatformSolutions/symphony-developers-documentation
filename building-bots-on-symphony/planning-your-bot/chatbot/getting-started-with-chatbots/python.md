@@ -337,7 +337,13 @@ class IMProcessor:
 {% endtab %}
 {% endtabs %}
 
-You'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
+
+
+{% hint style="info" %}
+Check out our [Overview of MessageML](../../../messages/overview-of-messageml.md) guide for more information on message formatting and styling.  
+{% endhint %}
+
+On line 10, you'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
 
 ![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-1.13.03-pm.png)
 
@@ -373,9 +379,9 @@ class IMListenerImpl(IMListener):
 {% endtab %}
 {% endtabs %}
 
-Next, start up your bot by running **python3 main.py** and test in a 1-1 chatroom:
+Next, start up your bot by running **python3 main.py** and test in a 1-1 IM:
 
 ![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
 
-**For an in depth video series that walks through the same process please visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
+**For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 

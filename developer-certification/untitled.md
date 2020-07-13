@@ -4,9 +4,9 @@
 
 ## Become a Certified Symphony Developer
 
-Earning a Symphony Certification is a significant way to validate your Symphony skills. When you become certified, you join an elite group of developers, and boost your career as demand for Symphony experts continues to grow.
+Earning a Symphony Certification is a significant way to validate your Symphony skills. When you become certified, you join an elite group of developers, and boost your career as demand for Symphony experts continues to grow!
 
-## **\*\*\[**Sign Up Now_\*\]\(_[https://learn.symphony.com\)\](https://learn.symphony.com%29\)\*\*\*
+Check out our training center here:
 
 ## **Module 1: Symphony Development Fundamentals**
 

@@ -6,7 +6,7 @@ Symphony provides a number of tools to help streamline Bot development:
 
 ## Symphony SDKs
 
-Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, convenient error handling, as well as baked in best practices. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
+Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling.  Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
@@ -61,7 +61,7 @@ Learn more about the CLI Tool here:
 The UI Toolkit is a library of react components that helps you build complex frontend applications quickly. The library contains layout guides, forms, input fields, complex financial charts, and is already compatible with Symphony's UI theme.
 
 {% hint style="info" %}
-Note: The UI Toolkit is designed to help build Extension Applications and is not relevant for Bot development.
+Note: In the current version of the BDK, the UI Toolkit is designed to help build Extension Applications only and is not relevant for Bot development.
 {% endhint %}
 
 You can learn more about the UI Toolkit here:
