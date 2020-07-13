@@ -40,11 +40,9 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 
 {% page-ref page="building-bots-on-symphony/developer-tools/" %}
 
-## Symphony 2.0 \(BETA\)
+## Symphony 2.0
 
 Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development experience!
-
-{% page-ref page="symphony-2.0-beta/untitled.md" %}
 
 ## Embedded Modules
 
