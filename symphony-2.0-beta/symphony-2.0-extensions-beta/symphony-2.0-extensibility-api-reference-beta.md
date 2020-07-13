@@ -2,5 +2,5 @@
 
 | Release | Date | Version |
 | :--- | :--- | :--- |
-| Symphony 2.0 Extension |  | BETA 1 |
+| Symphony 2.0 Extension |  | [BETA 1](../releases/sym20-2.0-BETA/README.md) |
 
