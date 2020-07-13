@@ -111,7 +111,8 @@
 
 ## Symphony 2.0 \(BETA\)
 
-* [Symphony 2.0 Extensions \(BETA\)](symphony-2.0-beta/untitled.md)
+* [Symphony 2.0 Extensions \(BETA\)](symphony-2.0-beta/untitled/README.md)
+  * [Untitled](symphony-2.0-beta/untitled/untitled.md)
 
 ## Developer Tools
 
