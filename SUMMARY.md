@@ -35,6 +35,7 @@
   * [Overview of Key Manager API](building-bots-on-symphony/overview-of-rest-api/key-manager-api.md)
   * [Overview of Agent API](building-bots-on-symphony/overview-of-rest-api/agent-api.md)
 * [Developer Tools](building-bots-on-symphony/developer-tools/README.md)
+  * [Renderer Tool](building-bots-on-symphony/developer-tools/renderer-tool.md)
   * [Bot Developer Kit](building-bots-on-symphony/developer-tools/bot-developer-kit.md)
   * [SDKs](building-bots-on-symphony/developer-tools/sdks/README.md)
     * [Python](building-bots-on-symphony/developer-tools/sdks/python.md)
