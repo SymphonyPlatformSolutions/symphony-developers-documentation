@@ -1,0 +1,32 @@
+{
+  "name": "hello-world",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Example Symphony Client 2.0 Hello World Extension",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "test": "echo \"No tests yet provided\""
+  },
+  "author": "Symphony",
+  "license": "ISC",
+  "devDependencies": {
+    "@mana/extension-webpack-plugin": "~1.0.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.8.3",
+    "webpack": "~4.36.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@mana/core": "~1.0.0",
+    "@mana/core-chat": "~1.0.0",
+    "@mana/core-conversations": "~1.0.0",
+    "@mana/core-ui": "~1.0.0",
+    "@mana/extension-lib": "~1.0.0",
+    "@material-ui/core": "^3.9.4",
+    "react": "16.9.0"
+  }
+}
