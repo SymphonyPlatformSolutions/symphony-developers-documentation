@@ -112,7 +112,7 @@
 ## Symphony 2.0 \(BETA\)
 
 * [Symphony 2.0 Extensions \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/README.md)
-  * [Symphony 2.0 Extensibility API Reference \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/symphony-2.0-extensibility-api-reference-beta.md)
+  * [Symphony 2.0 Extensibility API Reference & Example \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/symphony-2.0-extensibility-api-reference-beta.md)
 
 ## Developer Tools
 
