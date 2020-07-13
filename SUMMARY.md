@@ -118,7 +118,7 @@
 
 ## Developer Tools
 
-* [Developer Tools](developer-tools/developer-tools/README.md)
+* [Start Your Development Journey](developer-tools/developer-tools/README.md)
   * [Building Bots on Symphony 🤖](developer-tools/developer-tools/building-bots-on-symphony.md)
   * [Building Extension Applications](developer-tools/developer-tools/5th-tools.md)
   * [Developer Certification 🎓](developer-tools/developer-tools/postman.md)
