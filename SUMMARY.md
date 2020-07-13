@@ -118,6 +118,18 @@
 
 ## Developer Tools
 
+* [SDKs](developer-tools/sdks/README.md)
+  * [Python](developer-tools/sdks/python.md)
+  * [Java](developer-tools/sdks/java.md)
+  * [Node.js](developer-tools/sdks/node.js.md)
+  * [.NET](developer-tools/sdks/.net.md)
+* [BDK](developer-tools/bdk/README.md)
+  * [Bot SDK](developer-tools/bdk/bot-sdk.md)
+  * [CLI Tool](developer-tools/bdk/cli-tool.md)
+  * [UI Toolkit](developer-tools/bdk/ui-toolkit.md)
+* [Postman](developer-tools/postman.md)
+* [MessageML Renderer App](developer-tools/messageml-renderer-app.md)
+
 ## Embedded Modules
 
 * [Chat Module](embedded-modules/untitled.md)
