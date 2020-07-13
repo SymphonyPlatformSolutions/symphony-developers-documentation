@@ -122,10 +122,10 @@
         * [IChatService interface](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/ichatservice-interface.md)
         * [DockingMode enum](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-chat-package/dockingmode-enum.md)
     * [index](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled-1.md)
-    * [core](symphony-2.0-beta/releases/releasetest/core.md)
-    * [core-chat](symphony-2.0-beta/releases/releasetest/core-chat.md)
-    * [core-conversations](symphony-2.0-beta/releases/releasetest/core-conversations.md)
-    * [core-ui](symphony-2.0-beta/releases/releasetest/core-ui.md)    
+    * [core](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/core.md)
+    * [core-chat](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/core-chat.md)
+    * [core-conversations](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/core-conversations.md)
+    * [core-ui](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/core-ui.md)
 
 ## Developer Tools
 
