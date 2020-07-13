@@ -1,6 +1,6 @@
 # Building a Chatbot using BDK
 
-The following is a step-by-step guide for building a Chatbot using the dedicated Bot SDK and CLI tool that are both apart of the Bot Developer Kit.  
+The following is a step-by-step guide for building a Chatbot using the dedicated Bot SDK and CLI tool that are both apart of the Bot Developer Kit.
 
 ## Prerequisites
 
@@ -10,21 +10,19 @@ The following is a step-by-step guide for building a Chatbot using the dedicated
 * Maven 3
 * Git
 
-#### Install Yarn:
+### Install Yarn:
 
 ```text
 $ npm i -g yarn
-
 ```
 
-#### Install the BDK:
+### Install the BDK:
 
 ```text
 $ npm i -g symphony-bdk-cli
-
 ```
 
-#### Confirm all the dependencies are met:
+### Confirm all the dependencies are met:
 
 ```text
 $ symphony-bdk-cli --check-dependencies
@@ -35,8 +33,7 @@ $ symphony-bdk-cli --check-dependencies
 To generate a new Bot project, enter the following:
 
 ```text
-$ symphony-bdk-cli --bot 
-
+$ symphony-bdk-cli --bot
 ```
 
 This will prompt with you a number of questions about your Bot and Pod configuration. Type in your bots metadata, use arrows to scroll, and press enter to move onto the next prompt:
@@ -79,21 +76,19 @@ xJ77TIQnl3SvmSeLqJSH65d76hf1f4Ld07cgGXZTVW+1LeDi2dIS01n40aAfyKNx
 OZrGTfbHusNQFjy3UBmu8r2EaETbyCfUUmcye6Hqy3jKZ13ylvXr1AH4kRVG4TGs
 cYtyBTslVQ5nUvIYPqPfrKECAwEAAQ==
 -----END PUBLIC KEY-----
-
-
 ```
 
 {% hint style="info" %}
 Leave the second to last question blank and press enter to skip.
 {% endhint %}
 
-Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.  
+Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.
 
 ## 2.  Configure your Bot
 
 Once you have your generated Bot scaffold, the next step is to configure your Bot user:
 
-Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated public key onto the service account created.  
+Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated public key onto the service account created.
 
 Copy the entire contents of this public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click save:
 
@@ -133,7 +128,7 @@ Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct
 
 ## 3. Dive into the Code
 
-The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code.  The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events.  The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly.  To illustrate these best practices and convenient boilerplate code, navigate to HelpCommandHandler.java inside your project directory:
+The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly. To illustrate these best practices and convenient boilerplate code, navigate to HelpCommandHandler.java inside your project directory:
 
 {% tabs %}
 {% tab title="command/HelpCommandHandler.java" %}
@@ -185,12 +180,11 @@ public class HelpCommandHandler extends CommandHandler {
   }
 
 }
-
 ```
 {% endtab %}
 {% endtabs %}
 
-The DESCRIPTIONS dictionary defined on line 17 defines a help menu or list of commands that the bot understands out of the box.  The Bot automatically follows our best practice naming convention of "@botusername /command" which is defined on line 32.  Each of these commands listed in the help menu have their own corresponding command handler inside of the commands folder.  
+The DESCRIPTIONS dictionary defined on line 17 defines a help menu or list of commands that the bot understands out of the box. The Bot automatically follows our best practice naming convention of "@botusername /command" which is defined on line 32. Each of these commands listed in the help menu have their own corresponding command handler inside of the commands folder.
 
 So for example when a user prompts the Bot with "@demobot2 /hello", the handle\(\) function inside HelpCommandHandler.java will be called:
 

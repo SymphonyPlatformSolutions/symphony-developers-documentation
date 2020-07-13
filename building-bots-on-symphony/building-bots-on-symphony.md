@@ -22,13 +22,11 @@ At Symphony, security is always first. In order to leverage Symphony's robust se
 
 ## 4.  Add Custom Business Logic
 
-The last step is to add custom business logic to your Bot.  Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
+The last step is to add custom business logic to your Bot. Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
 
 {% page-ref page="overview-of-rest-api/" %}
 
 ## 5.  Become a Certified Developer
 
 Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony skills, technical knowledge, and expertise. Learn more about how you can become a Certified Developer today!
-
-
 

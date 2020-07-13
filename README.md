@@ -44,6 +44,8 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 
 Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development experience!
 
+{% page-ref page="symphony-2.0-beta/untitled.md" %}
+
 ## Embedded Modules
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications.
