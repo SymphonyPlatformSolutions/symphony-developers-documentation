@@ -112,7 +112,8 @@
 ## Symphony 2.0 \(BETA\)
 
 * [Symphony 2.0 Extensions \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/README.md)
-  * [Symphony 2.0 Extensibility API Reference & Example \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/symphony-2.0-extensibility-api-reference-beta.md)
+  * [Symphony 2.0 Extensibility API Reference & Example \(BETA\)](symphony-2.0-beta/symphony-2.0-extensions-beta/symphony-2.0-extensibility-api-reference-beta/README.md)
+    * [mdtree](symphony-2.0-beta/symphony-2.0-extensions-beta/symphony-2.0-extensibility-api-reference-beta/mdtree.md)
   * [Releases](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/README.md)
     * [0.0.1 Beta](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/README.md)
       * [core-conversations package](symphony-2.0-beta/symphony-2.0-extensions-beta/untitled/untitled/core-conversations-package/README.md)
