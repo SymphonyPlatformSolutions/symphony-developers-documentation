@@ -14,7 +14,7 @@ It is common for Bots to contain multiple commands or sub workflows that it can 
 
 ## 2.  Listen for Events
 
-A core aspect of all chatbots and conversations Bots is the ability to 'listen' to different types of commands and events and reply to them accordingly. The mechanism that enables Symphony Bots to listen to events in chatrooms, MIMs, and IMs is the **Symphony Datafeed**.
+A core aspect of all chatbots and conversational Bots is the ability to 'listen' to different types of commands and events and reply to them accordingly. The mechanism that enables Symphony Bots to listen to events in chatrooms, MIMs, and IMs is the **Symphony Datafeed**.
 
 The **Symphony Datafeed** is a real-time message and event stream that can be created using the REST API. The datafeed provides a secure stream of messages and events from all conversations that a Bot is in.
 
@@ -34,7 +34,7 @@ You can learn more about parsing events and introducing custom business logic he
 
 ## Next Steps:
 
-Continue on to our [Getting Started With Chatbots](getting-started-with-chatbots/) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a chatbot workflow:
+Continue on to our [Getting Started With Chatbots](getting-started-with-chatbots/) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
 
 {% page-ref page="getting-started-with-chatbots/" %}
 

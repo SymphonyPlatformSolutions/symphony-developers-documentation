@@ -4,147 +4,25 @@ description: Building a Chatbot using Symphony Generator + Python SDK
 
 # Build a Chatbot using the Python SDK
 
-The following is a step-by-step guide for building a Chatbot using the Python SDK and Symphony Bot Generator. The Symphony Bot Generator is a Yeoman-based code generator that generates a project scaffold for the Symphony SDKs. You can use the Symphony Bot Generator for the following:
-
-* RSA Key/Certificate creation
-* Bot configuration
-* Generate project structure
-* Build of example projects
-
 ## Prerequisites
 
-### Install Symphony Bot Generator:
+### Complete the Bot Configuration guide:
 
-```text
-$ npm install -g yo generator-symphony
-```
+{% page-ref page="../../../configuration/configure-your-bot.md" %}
 
-## 1.  Generate Your Bot
-
-To activate the Symphony Bot Generator:
-
-```text
-$ yo symphony
-```
-
-This will prompt you with a number of questions that you need to fill out according to your chatbots metadata. Type in your bots metadata, use arrows to scroll, and press enter to move onto the next prompt.
-
-```aspnet
-/------------------------------------------/
-/        SYMPHONY GENERATOR  1.1.1         /
-/    by platformsolutions@symphony.com     /
-/ (c) 2020 Symphony Communication Services /
-/------------------------------------------/
-? What do you want to create bot
-? What is the name of your project demo-bot1
-? What is your POD subdomain develop2
-? What is your preferred programming language Python
-? What is the BOT username demo-bot1
-? What is the BOT email address demo-bot1@symphony.com
-? What is your preferred encryption technology RSA - Generate New Keys
-? Which template do you want to start with Request/Reply
-* Generating bot Python code from Request/Reply template...
-RSA - Generate New Keys
-* Generating RSA public/private keys for BOT demo-bot1...
-* BOT generated successfully!!
-   create requirements.txt
-   create python/main.py
-   create python/listeners/connection_listener_impl.py
-   create python/listeners/elements_listener_impl.py
-   create python/listeners/im_listener_impl.py
-   create python/listeners/room_listener_impl.py
-   create resources/config.json
-   create .env
-```
-
-{% hint style="info" %}
-Note: In this guide, we will select 'RSA - Generate New Keys'. If you have preexisting RSA keys or wish to use certificates, select the other options.
-{% endhint %}
-
-Upon completion, the Symphony Bot Generator has created a public/private RSA key pair, a configuration and requirements file, and also datafeed event listeners.
-
-## 2. Configure your Bot
-
-Once you have your generated Bot scaffold, the next step is to configure your Bot user:
-
-Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated public key onto the service account created:
-
-```aspnet
-$ cd demo-bot1
-demo-bot1 $ ls
-python            resources
-requirements.txt    rsa
-
-demo-bot1 $ cd rsa
-rsa $ more rsa-public-demo-bot1.pem 
------BEGIN RSA PUBLIC KEY-----
-MIICCgKCAgEA3/d4wAdNIribQqvxdNw5XGBEiAaOsEoUd2HZBId82G2YJYX2H4TCA+GgSBau
-Y4Y4XYdOyglKxsZtB8Ngv7Du7nt85TRXXFiW7mzRMSBTTb6n5wzXWDqs/gei6WIBOlBSCLeT
-4lDOwIjN5WQYP13qS09hrG+Rob/NZoYtCTtnAjIIaPDY2kxRIpmQOEL9fG+4+PdbpjqhaJFg
-PWe+ws3/bSK3QOt0yhFoND9bw+CUmhdV9/7q0H3s8Qnu5Lc/QDA8kok1yhFvGMtk/8jpnw2S
-UAY6rnAv7rTDvK8l45phqw7FC4aul0r2CUnjZlVmN7WuMvTVeqxf9QdhosqDmP7BW9BaYnOP
-ihq4xCLzCfiAqg36NhCXHW21taxQRLXu93+j3ZHGVTh1p0Tkz1Vb925W6c1THlehJDomzfDX
-qCxV1pD3EW8R8osEbNUfuQ6K0Cdmi2f5T9cqRrAs0V8qZFrpYRUCtAWNiJoVK/BYtZoezt8M
-VrEm80J2eQG6sGtgIMAycSXVzmOwNOHYejOgnDKkcHEYwgZ29wwBAAj9XavQ+2dy8GnAeYGL
-QBzPToo620mTrP4kUQalqoWypDS3B8jzsh8YNRpUw2Jsd2wYgvwU1XmN5ZzSgCl68QGRgb9W
-eIMZdsgrlDgVk6LSVGZbNu2aEDMbkI7DrR4UsOEr86XI4kkCAwEAAQ==
------END RSA PUBLIC KEY-----
-```
-
-Copy the entire contents of this public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click save:
-
-![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-11.51.43-am.png)
-
-{% hint style="info" %}
-Note: The Bot username and Bot email address entered to the Symphony Bot Generator must match exactly the Basic Information shown in the Pod above.
-{% endhint %}
-
-Open your generated Bot code in your favorite IDE and navigate to the config.json file:
-
-```javascript
-{
-    "sessionAuthHost": "develop2.symphony.com",
-    "sessionAuthPort": 443,
-    "keyAuthHost": "develop2.symphony.com",
-    "keyAuthPort": 443,
-    "podHost": "develop2.symphony.com",
-    "podPort": 443,
-    "agentHost": "develop2.symphony.com",
-    "agentPort": 443,
-    "authType": "rsa",
-    "botCertPath": "",
-    "botCertName": "",
-    "botCertPassword": "",
-    "botPrivateKeyPath": "../rsa/",
-    "botPrivateKeyName": "rsa-private-demo-bot1.pem",
-    "botUsername": "demo-bot1",
-    "botEmailAddress": "demo-bot1@symphony.com",
-    "appCertPath": "",
-    "appCertName": "",
-    "appCertPassword": "",
-    "proxyURL": "",
-    "proxyUsername": "",
-    "proxyPassword": "",
-    "authTokenRefreshPeriod": "30",
-    "truststorePath": ""
-}
-```
-
-Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Again, confirm that the botUsername, and botEmailAddress matches the information entered in the admin portal on the Pod.
-
-## 3. Install Dependencies
+## 1. Install Dependencies
 
 First setup a Python virtual environment:
 
 ```aspnet
-demo-bot1 $ python3 -m venv demoEnv
-demo-bot1 $ source demoEnv/bin/activate
+demoBot1 $ python3 -m venv demoEnv
+demoBot1 $ source demoEnv/bin/activate
 ```
 
 Install SDK and its child dependencies:
 
 ```aspnet
-(demoEnv) demo-bot1 $ pip install -r requirements.txt
+(demoEnv) demoBot1 $ pip install -r requirements.txt
 ```
 
 ## 4.  Dive into the code
@@ -281,7 +159,7 @@ self.bot_client.get_message_client().send_msg()
 Now that you have a firm grasp on the datafeed event handling process implemented by the Bot and Symphony SDK, lets start up our bot to see it in action:
 
 ```aspnet
-(demoEnv) dmeo-bot1 $ python3 main.py
+(demoEnv) demoBot1 $ python3 main.py
 ```
 
 Navigate to Symphony and create an IM with your Bot:
@@ -343,7 +221,7 @@ Check out our [Overview of MessageML](../../../messages/overview-of-messageml.md
 
 On line 10, you'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-1.13.03-pm.png)
+![](../../../../.gitbook/assets/screen-shot-2020-07-13-at-10.15.25-pm.png)
 
 Import the IMProcessor class into your IMListener and add the process\(\) function to your on\_im\_message\(\) function:
 
