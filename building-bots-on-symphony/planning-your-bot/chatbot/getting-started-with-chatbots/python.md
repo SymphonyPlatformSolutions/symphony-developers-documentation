@@ -27,7 +27,7 @@ Install SDK and its child dependencies:
 
 ## 4.  Dive into the code
 
-Let's take a look at the main\(\) function inside or python/main.py file:
+Let's take a look at the main\(\) function inside our python/main.py file:
 
 Running this file accomplishes four things:
 

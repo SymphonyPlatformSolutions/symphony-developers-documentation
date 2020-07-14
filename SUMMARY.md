@@ -30,10 +30,12 @@
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
   * [Overview of Key Manager API](building-bots-on-symphony/overview-of-rest-api/key-manager-api.md)
   * [Overview of Agent API](building-bots-on-symphony/overview-of-rest-api/agent-api.md)
+
 * [Configuration](building-bots-on-symphony/configuration/README.md)
   * [Configure your Bot](building-bots-on-symphony/configuration/configure-your-bot.md)
   * [Creating a Bot User](building-bots-on-symphony/configuration/creating-a-bot-user.md)
   * [Bot Permissions](building-bots-on-symphony/configuration/bot-permissions.md)
+
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)

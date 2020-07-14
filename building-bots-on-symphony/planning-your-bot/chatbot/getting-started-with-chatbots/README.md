@@ -6,7 +6,7 @@ Symphony provides a number of tools to help streamline Bot development:
 
 ## Symphony SDKs
 
-Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling.  Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
+Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 

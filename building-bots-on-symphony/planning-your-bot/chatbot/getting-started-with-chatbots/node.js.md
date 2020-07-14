@@ -8,6 +8,7 @@ description: Building a Chatbot using Symphony Generator + Node.js SDK
 
 ### Complete the Bot Configuration guide:
 
+
 {% page-ref page="../../../configuration/configure-your-bot.md" %}
 
 ## 1.  Install Dependencies 
@@ -16,6 +17,8 @@ Navigate to your project folder:
 
 ```text
 $ cd demoBot1
+
+
 ```
 
 You can view the package dependencies in the package.json file:
@@ -48,9 +51,11 @@ $ npm install
 added 31 packages from 30 contributors in 3.258s
 ```
 
+
 ## 2. Dive into the code 
 
 Let's take a look at the bots application logic inside the demoBot1/index.js file:
+
 
 Running this file accomplishes four things:
 
@@ -60,7 +65,9 @@ Running this file accomplishes four things:
 * Adds custom event listeners/handlers to the Bot's datafeed event service \(below line 4\)
 
 {% tabs %}
+
 {% tab title="demoBot1/index.js" %}
+
 ```javascript
 const Symphony = require('symphony-api-client-node')
 Symphony.setDebugMode(true)
@@ -76,7 +83,7 @@ Symphony.initBot(__dirname + '/config.json')
   .then((symAuth) => {
     Symphony.getDatafeedEventsService(botHearsSomething)
   })
-  
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -90,6 +97,7 @@ In this generated example, when an IM is sent to your Bot, it will be captured a
 The sendMessage  reply to the user is calling the following function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
+
 {% tab title="demoBot1/index.js" %}
 ```javascript
 Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESSAGEML_FORMAT)
@@ -102,5 +110,6 @@ Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESS
 
 Now that you have a firm grasp on the datafeed event handling process implemented by the Bot and Symphony SDK, lets start up our bot to see it in action:
 
-\(vinay continue here\)
+(vinay continue here\)
+
 
