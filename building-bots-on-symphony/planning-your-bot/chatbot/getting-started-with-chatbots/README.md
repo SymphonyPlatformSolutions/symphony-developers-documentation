@@ -10,6 +10,14 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
+{% page-ref page="../../../../developer-tools/developer-tools/sdks/" %}
+
+## Configure your Bot
+
+Symphony provides SDKs in Java, Python, Node.js, and .NET.  Whatever your development language of choice, configuring and bootstrapping your Bot is the same across all Symphony supported SDKs.  Before moving onto the following language specific getting started guides, first configure your bot here:
+
+{% page-ref page="../../../configuration/configure-your-bot.md" %}
+
 ### Java SDK
 
 Get started building your first chatbot using the Java SDK:
@@ -44,11 +52,15 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
+{% page-ref page="../../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
+
 ### CLI Tool
 
 The CLI tool allows you to generate code scaffolds for Symphony Bots and Applications. Through the command line tool, developers can bootstrap their projects, adds command handlers and message templates, and manage project dependencies.
 
 Learn more about the CLI Tool here:
+
+{% page-ref page="../../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
@@ -60,5 +72,5 @@ Note: In the current version of the BDK, the UI Toolkit is designed to help buil
 
 You can learn more about the UI Toolkit here:
 
-{% page-ref page="../../../../building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/ui-toolkit.md" %}
+{% page-ref page="../../../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
 

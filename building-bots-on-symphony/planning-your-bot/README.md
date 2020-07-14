@@ -78,5 +78,5 @@ Lastly, it's important to clearly define the lifecycle of the Bots workflow as w
 
 Continue here for a full list of Bot's best practices to establish Bot parameters, scope, and protocol:
 
-{% page-ref page="bots-best-practices.md" %}
+{% page-ref page="../bots-best-practices.md" %}
 
