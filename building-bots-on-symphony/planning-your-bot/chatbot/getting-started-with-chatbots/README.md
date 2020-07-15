@@ -14,7 +14,7 @@ For a deeper dive into Symphony SDKs and their offerings continue here:
 
 ## Configure your Bot
 
-Symphony provides SDKs in Java, Python, Node.js, and .NET.  Whatever your development language of choice, configuring and bootstrapping your Bot is the same across all Symphony supported SDKs.  Before moving onto the following language specific getting started guides, first configure your bot here:
+Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your development language of choice, configuring and bootstrapping your Bot is the same across all Symphony supported SDKs. Before moving onto the following language specific getting started guides, first configure your bot here:
 
 {% page-ref page="../../../configuration/configure-your-bot.md" %}
 
