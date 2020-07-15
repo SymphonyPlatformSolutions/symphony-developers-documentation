@@ -17,16 +17,15 @@ The Symphony Bot Generator is a Yeoman-based code generator that generates a pro
 * Generate project structure
 * Build of example projects
 
-### Prerequisites
+## Prerequisites
 
-#### Install Symphony Bot Generator:
+### Install Symphony Bot Generator:
 
 ```text
 $ $ npm install -g yo generator-symphony
-
 ```
 
-### 1.  Generate Your Bot
+## 1.  Generate Your Bot
 
 To activate the Symphony Bot Generator:
 
@@ -34,7 +33,7 @@ To activate the Symphony Bot Generator:
 $ yo symphony
 ```
 
-This will prompt you with a number of questions about your Symphony environment and Bot metadata. Type in your Bot's basic information metadata, and press enter to move onto the next prompt.  If questions give you multiple options, use the keyboard arrows to scroll.  
+This will prompt you with a number of questions about your Symphony environment and Bot metadata. Type in your Bot's basic information metadata, and press enter to move onto the next prompt. If questions give you multiple options, use the keyboard arrows to scroll.
 
 ```text
 /------------------------------------------/
@@ -62,7 +61,6 @@ generating from template Request/Reply
    create src/main/java/RoomListenerImpl.java
    create src/main/resources/config.json
    create certificates/all_symphony_certs_truststore
-   
 ```
 
 {% hint style="info" %}
@@ -71,7 +69,7 @@ Note: In this guide, we will select 'RSA - Generate New Keys'. If you have preex
 
 Upon completion, the Symphony Bot Generator has created a public/private RSA key pair, a configuration and requirements file, and also datafeed event listeners.
 
-### 2. Configure your Bot
+## 2. Configure your Bot
 
 Once you have your generated Bot scaffold, the next step is to configure your Bot user:
 
@@ -80,7 +78,7 @@ Ensure that you or your admin has created a corresponding service account on the
 ```text
 $ cd demoBot1
 demoBot1 $ ls
-certificates	pom.xml		rsa		src
+certificates    pom.xml        rsa        src
 
 demo-bot1 $ cd rsa
 rsa $ more rsa-public-demo-bot1.pem 
@@ -151,9 +149,9 @@ Open your generated Bot code in your favorite IDE and navigate to the config.jso
 
 Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Additionally, confirm that the botUsername, and botEmailAddress match the information entered in the admin portal on the Pod.
 
-The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports.  If these don't apply to your Bot or environment, leave them blank.  For more information on advanced configurations continue here: [SDK Configuration](../../developer-tools/developer-tools/sdks/sdk-configuration.md).
+The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank. For more information on advanced configurations continue here: [SDK Configuration](../../developer-tools/developer-tools/sdks/sdk-configuration.md).
 
-### 3.  Build Your Bot
+## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one of the language-specific [Chatbot](../planning-your-bot/chatbot/),  [Interactive Bot](../planning-your-bot/interactive-bot/), or [Headless Bot](../planning-your-bot/headless-bot/) getting started guides.
+Now that you have generated and configured your Bot, move onto one of the language-specific [Chatbot](../planning-your-bot/chatbot/), [Interactive Bot](../planning-your-bot/interactive-bot/), or [Headless Bot](../planning-your-bot/headless-bot/) getting started guides.
 
