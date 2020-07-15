@@ -60,7 +60,9 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
+{% page-ref page="../../../../building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/ui-toolkit.md" %}
+
+
 
 ### UI Toolkit
 
@@ -71,4 +73,16 @@ Note: In the current version of the BDK, the UI Toolkit is designed to help buil
 {% endhint %}
 
 You can learn more about the UI Toolkit here:
+
+{% page-ref page="../../../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
+
+## Configure your Bot for BDK Development
+
+The next step is to build a Bot using the BDK is to configure your Bot:
+
+{% page-ref page="../../../configuration/configure-your-bot-for-bdk.md" %}
+
+Afterwards, continue building and running your Interactive Bot here:
+
+{% page-ref page="building-an-interactive-bot-using-bdk.md" %}
 
