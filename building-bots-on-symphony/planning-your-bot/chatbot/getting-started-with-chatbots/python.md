@@ -8,7 +8,7 @@ description: Building a Chatbot using Symphony Generator + Python SDK
 
 ### Complete the Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../../configuration/configure-your-bot.md" %}
 
 ## 1. Install Dependencies
 
@@ -25,7 +25,7 @@ Install SDK and its child dependencies:
 (demoEnv) demoBot1 $ pip install -r requirements.txt
 ```
 
-## 2.  Dive into the code
+## 4.  Dive into the code
 
 Let's take a look at the main\(\) function inside our python/main.py file:
 
@@ -154,7 +154,7 @@ self.bot_client.get_message_client().send_msg()
 {% endtab %}
 {% endtabs %}
 
-## 3.  Run your Bot
+## 5.  Run your Bot
 
 Now that you have a firm grasp on the datafeed event handling process implemented by the Bot and Symphony SDK, lets start up our bot to see it in action:
 
@@ -168,7 +168,7 @@ Navigate to Symphony and create an IM with your Bot:
 
 As you can see, your Bot replied with the message shown in the IM Listener class.
 
-## 4.  Implementing your own Functionality
+## 6.  Implementing your own Functionality
 
 Lets create help menu as a best practice shown in step 1 of the chatbot workflow: [Chatbot](../#1-kick-off-your-workflow)
 

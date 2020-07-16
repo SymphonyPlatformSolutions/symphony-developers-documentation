@@ -8,7 +8,7 @@ description: Building a Chatbot using Symphony Generator + Node.js SDK
 
 ### Complete the Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../../configuration/configure-your-bot.md" %}
 
 ## 1.  Install Dependencies
 
