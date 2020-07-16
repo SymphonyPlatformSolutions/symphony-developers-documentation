@@ -76,7 +76,7 @@ The messageML is sent by your Bot and rendered as a form or Symphony Element:[
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-14-at-12.18.49-pm.png)
 
-After the user fills out their information and clicks the 'Submit' button, the following payload is captured by the Datafeed and delivered to the Bot: 
+After the user fills out their information and clicks the 'Submit' button, the following payload is captured by the Datafeed and delivered to the Bot.
 
 ```markup
 {

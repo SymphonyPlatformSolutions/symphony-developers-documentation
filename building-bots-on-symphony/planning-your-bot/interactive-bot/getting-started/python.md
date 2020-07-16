@@ -6,7 +6,7 @@ description: Building an Interactive Bot using the Symphony Generator + Python S
 
 ## Prerequisites
 
-### Complete the SDK Bot Configuration guide:\
+### Complete the SDK Bot Configuration guide:
 
 {% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
 
@@ -144,7 +144,7 @@ class IMListenerImpl(IMListener):
 
 Any events that happen within your Bot's scope will be read and captured by the Bot's datafeed. Any events that happen inside of an IM with the Bot will be parsed and directed to its IM Listener. Depending on the type of event, the corresponding IM Listener function will be called. So if for example, you send a message to your Bot 1-1, that event will be captured and as a result the on\_im\_message\(\) will be executed.
 
-In this generated example, when an IM is sent to your Bot, it will capture the event, and reply to the user by calling the following function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
+In this generated example, when an IM is sent to your Bot, it will capture the event, and reply to the user by calling the following SDK function, which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
 {% tab title="python/listeners/im\_listener\_impl.py" %}
@@ -157,10 +157,10 @@ self.bot_client.get_message_client().send_msg()
 
 ## 3.  Adding our own functionality
 
-Since we are building an Interactive Bot, instead of sending only text, our Bot will also send Symphony Elements.  An interactive bot can send Symphony elements by calling the method used above, as Symphony Elements just messageML with designated messageML tags.  Let's construct a form in order to capture user name, country, and type of bot being built.  
+Since we are building an Interactive Bot, instead of sending only text, our Bot will also send Symphony Elements.  An interactive bot can send Symphony elements by calling the method used above since Symphony Elements are just messageML.  Let's construct a form in order to capture user name, country, and type of bot being built.  
 
 {% hint style="info" %}
-Note:  In order to for a Symphony element to be considered valid, it must contain opening and closing &lt;form&gt; tags and also a &lt;button&gt; with type="action"
+Note:  In order to for a Symphony Element to be considered valid, it must contain opening and closing &lt;form&gt; tags and also a &lt;button&gt; with type="action"
 {% endhint %}
 
 ```markup
@@ -250,7 +250,13 @@ class IMListenerImpl(IMListener):
         logging.debug('IM created', im_created)
 ```
 
-Next, you have to add the Elements Listener to your datafeed listeners in order to handle datafeed events from Symphony Elements on line 54 of main.py:
+{% hint style="warning" %}
+Note: Elements can be sent and received in chatrooms, MIMs, and IMs.  However, Symphony Elements are handled separately than other Symphony events.  
+
+The Symphony SDKs have dedicated **Elements Listeners** to listen for and handle Symphony Elements submitted to your bot.  Even though and end user submits and elements or form inside of an IM, the event **will not** be captured by the IM Listener class.   
+{% endhint %}
+
+In order to handle datafeed events from Symphony Elements you have to add the Elements Listener to your datafeed listeners on line 54 of main.py:
 
 {% tabs %}
 {% tab title="python/main.py" %}
@@ -272,7 +278,7 @@ Navigate to Symphony, create an IM with your Bot, and type any message to see th
 
 ![](../../../../.gitbook/assets/screen-shot-2020-07-15-at-7.14.53-pm.png)
 
-When you fill out the form and click submit, the bot handles the event and dispatches it to your elements\_listener\_impl.py:
+When you fill out the form and click submit, the datafeed handles the event and dispatches it to your ElementsListenerImpl class:
 
 {% tabs %}
 {% tab title="listeners/elements\_listener\_impl.py" %}
@@ -287,7 +293,8 @@ class ElementsListenerImpl(ElementsActionListener):
         self.bot_client = sym_bot_client
 
     async def on_elements_action(self, action):
-        logging.info('element submitted: {}'.format(action))
+        logging.debug('Elements Action Recieved: {}'.format(json.dumps(action, indent=4)))
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -297,17 +304,38 @@ To see the contents of the form, check the logs:
 {% tabs %}
 {% tab title="bot.log" %}
 ```python
-{'id': 'OAMmz6', 'messageId': 'zx12eWEALW8wucLYLWC0X3___oyrKuiEbQ', 'timestamp': 1594856118139, 'type': 'SYMPHONYELEMENTSACTION', 
-    'initiator': {'user': {'userId': 349026222344902, 'firstName': 'Reed', 'lastName': 'Feldman', 'displayName': 'Reed Feldman (Develop 2)', 'email': 'reed.feldman@symphony.com', 'username': 'reed.feldman@symphony.com'}}, 
-        'payload': 
-            {'symphonyElementsAction': 
-                {'stream': 
-                    {'streamId': 'RUkxW4x40aB74g0UWpaMw3___ozLPsapdA', 'streamType': 'IM'}, 
-                    'formMessageId': 'bFwH9P22mk1C3GHpRJ0GSn___oyrKwFWbQ', 'formId': 'form_id', 
-                    'formValues':     
-                        {'action': 'submit_button', 'name_01': 'Bot Developer', 'Country': 'opt1', 'interactive bot': 'interactive bot'}}}}
-        
-        
+Elements Action Recieved: {
+    "id": "AZMiKp",
+    "messageId": "FzrzYWA-U_12AaqQfLuY_n___oyn4HF9bQ",
+    "timestamp": 1594911329922,
+    "type": "SYMPHONYELEMENTSACTION",
+    "initiator": {
+        "user": {
+            "userId": 349026222344902,
+            "firstName": "Reed",
+            "lastName": "Feldman",
+            "displayName": "Reed Feldman (Develop 2)",
+            "email": "reed.feldman@symphony.com",
+            "username": "reed.feldman@symphony.com"
+        }
+    },
+    "payload": {
+        "symphonyElementsAction": {
+            "stream": {
+                "streamId": "RUkxW4x40aB74g0UWpaMw3___ozLPsapdA",
+                "streamType": "IM"
+            },
+            "formMessageId": "DRlrBfa6m5g7BeFP7xH48H___oyn4IdWbQ",
+            "formId": "form_id",
+            "formValues": {
+                "action": "submit_button",
+                "name_01": "asdf",
+                "Country": "opt2",
+                "interactive bot": "interactive bot"
+            }
+        }
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
