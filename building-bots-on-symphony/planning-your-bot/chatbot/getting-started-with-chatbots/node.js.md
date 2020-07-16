@@ -8,7 +8,7 @@ description: Building a Chatbot using Symphony Generator + Node.js SDK
 
 ### Complete the Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot.md" %}
+{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
 
 ## 1.  Install Dependencies
 
@@ -101,3 +101,4 @@ Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESS
 Now that you have a firm grasp on the datafeed event handling process implemented by the Bot and Symphony SDK, lets start up our bot to see it in action:
 
 \(vinay continue here\)
+
