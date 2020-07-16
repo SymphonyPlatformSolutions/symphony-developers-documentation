@@ -12,7 +12,7 @@
       * [Build a Chatbot using the Python SDK](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/python.md)
       * [Build a Chatbot using the Node.js SDK](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/node.js.md)
       * [Build a Chatbot using the .NET SDK](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/.net.md)
-      * [Building a Chatbot using BDK](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/building-a-chatbot-using-bdk.md)
+      * [Build a Chatbot using the BDK](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/building-a-chatbot-using-bdk.md)
   * [Interactive Bot](building-bots-on-symphony/planning-your-bot/interactive-bot/README.md)
     * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/README.md)
       * [Build an Interactive Bot using the Java SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/java.md)
