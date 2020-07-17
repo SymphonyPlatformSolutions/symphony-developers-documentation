@@ -29,3 +29,5 @@ In order to create a bot and begin your development journey, you must first crea
 Navigate to [Bot Permissions](bot-permissions.md) for a full list of bot roles and privileges.
 {% endhint %}
 
+
+

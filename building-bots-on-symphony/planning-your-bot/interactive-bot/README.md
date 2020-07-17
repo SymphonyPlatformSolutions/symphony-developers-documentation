@@ -76,7 +76,7 @@ The messageML is sent by your Bot and rendered as a form or Symphony Element:[
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-14-at-12.18.49-pm.png)
 
-After the user fills out their information and clicks the 'Submit' button, the following payload is captured by the Datafeed and delivered to the Bot:
+After the user fills out their information and clicks the 'Submit' button, the following payload is captured by the Datafeed and delivered to the Bot.
 
 ```markup
 {
@@ -125,6 +125,7 @@ You can learn more about parsing events and introducing custom business logic he
 {% page-ref page="../../datafeed/handling-datafeed-events.md" %}
 
 ## Next Steps:
-
 Continue on to our [Getting Started With Interactive Bots](getting-started/) guide. Here you will learn how to get your own Interactive Bot up and running and take a closer look at the APIs used to create a simple Interactive Bot workflow.
+
+
 
