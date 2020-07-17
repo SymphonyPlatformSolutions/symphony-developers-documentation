@@ -18,7 +18,6 @@ The following is a language-agnostic Bot configuration guide for building Bots u
 
 ```text
 $ npm i -g yarn
-
 ```
 
 ### Install the BDK
@@ -133,5 +132,5 @@ Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct
 
 ## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](../planning-your-bot/chatbot/getting-started-with-chatbots/building-a-chatbot-using-bdk.md), [Building an Interactive Bot using BDK](../planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](../planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md).  
+Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](../planning-your-bot/chatbot/getting-started-with-chatbots/building-a-chatbot-using-bdk.md), [Building an Interactive Bot using BDK](../planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](../planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md).
 

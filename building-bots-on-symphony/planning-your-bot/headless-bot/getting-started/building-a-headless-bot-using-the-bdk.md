@@ -8,7 +8,7 @@
 
 ## 1.  Dive into the Code
 
-The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code including a built in notification handler that exposes a local endpoint to receive incoming notifications or webhooks.  To illustrate these best practices and convenient boilerplate code, navigate to CreateNotificationCommandHandler.java inside your project directory:
+The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code including a built in notification handler that exposes a local endpoint to receive incoming notifications or webhooks. To illustrate these best practices and convenient boilerplate code, navigate to CreateNotificationCommandHandler.java inside your project directory:
 
 {% tabs %}
 {% tab title="command/CreateNotificationCommandHandler.java" %}
@@ -51,7 +51,7 @@ public class CreateNotificationCommandHandler extends CommandHandler {
   @Override
   public void handle(BotCommand command, SymphonyMessage commandResponse) {
     String notificationUrl = NOTIFICATION_BASE_URL + servletContext
-    		+ NOTIFICATION_PATH + "/" + command.getMessageEvent().getStreamId();
+            + NOTIFICATION_PATH + "/" + command.getMessageEvent().getStreamId();
 
     Map<String, String> data = new HashMap<>();
     data.put("notification_url", notificationUrl);
@@ -60,7 +60,6 @@ public class CreateNotificationCommandHandler extends CommandHandler {
   }
 
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -71,7 +70,7 @@ Here we define a local endpoint for incoming webhooks or notifications:
 private static final String NOTIFICATION_BASE_URL = "http://localhost:8080";
 ```
 
-When this endpoint is hit, the bot is able to process the incoming JSON as apart of this request.  This functionality lives inside the process\(\) function in the SimpleNotificationInterceptor.java file:
+When this endpoint is hit, the bot is able to process the incoming JSON as apart of this request. This functionality lives inside the process\(\) function in the SimpleNotificationInterceptor.java file:
 
 {% tabs %}
 {% tab title="notification/SimpleNotificationInterceptor.java" %}
@@ -100,11 +99,7 @@ public boolean process(NotificationRequest notificationRequest,
 {% endtab %}
 {% endtabs %}
 
-  In this case, the JSON sent as apart of that notification payload is sent back to the user.  This is where you would add your own custom business logic or notification handler:
+In this case, the JSON sent as apart of that notification payload is sent back to the user. This is where you would add your own custom business logic or notification handler:
 
-
-
-## 2.  Run your Bot 
-
-
+## 2.  Run your Bot
 

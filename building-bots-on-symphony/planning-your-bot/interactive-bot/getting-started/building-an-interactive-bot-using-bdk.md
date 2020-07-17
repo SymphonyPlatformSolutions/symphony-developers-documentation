@@ -4,7 +4,7 @@ description: Building an Interactive Bot using BDK
 
 # Building an Interactive Bot using BDK
 
-## Prerequisites 
+## Prerequisites
 
 Complete the BDK Bot Configuration guide:
 
