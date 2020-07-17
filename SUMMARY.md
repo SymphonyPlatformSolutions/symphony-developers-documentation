@@ -41,11 +41,10 @@
   * [Overview of Datafeed](building-bots-on-symphony/datafeed/overview-of-datafeed.md)
   * [Handling Datafeed Events](building-bots-on-symphony/datafeed/handling-datafeed-events.md)
 * [Messages](building-bots-on-symphony/messages/README.md)
-  * [Overview of MessageML](building-bots-on-symphony/messages/overview-of-messageml.md)
-  * [Message Format - MessageML](building-bots-on-symphony/messages/message-format-messageml.md)
-  * [Overview of PresentationML](building-bots-on-symphony/messages/overview-of-presentationml.md)
-  * [Message Format - PresentationML](building-bots-on-symphony/messages/message-format-presentationml.md)
-  * [Renderer Tool](building-bots-on-symphony/messages/renderer-tool.md)
+  * [MessageML](building-bots-on-symphony/messages/overview-of-messageml/README.md)
+    * [Message Format - MessageML](building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md)
+  * [PresentationML](building-bots-on-symphony/messages/overview-of-presentationml/README.md)
+    * [Message Format - PresentationML](building-bots-on-symphony/messages/overview-of-presentationml/message-format-presentationml.md)
   * [Structured Objects](building-bots-on-symphony/messages/structured-objects.md)
   * [Emojis](building-bots-on-symphony/messages/emojis.md)
 * [Symphony Elements](building-bots-on-symphony/symphony-elements/README.md)
@@ -113,6 +112,7 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
+  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [SDKs](developer-tools/developer-tools/sdks/README.md)
     * [SDK Configuration](developer-tools/developer-tools/sdks/sdk-configuration.md)
     * [Python](developer-tools/developer-tools/sdks/python.md)
@@ -124,7 +124,6 @@
     * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
   * [Postman](developer-tools/developer-tools/postman.md)
-  * [MessageML Renderer App](developer-tools/developer-tools/messageml-renderer-app.md)
 
 ## Embedded Modules
 
