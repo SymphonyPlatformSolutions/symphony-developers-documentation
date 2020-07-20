@@ -34,7 +34,7 @@ You can learn more about parsing events and introducing custom business logic he
 
 ## Next Steps:
 
-Continue on to our [Getting Started With Chatbots](getting-started-with-chatbots/) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
+Continue on to our [Getting Started With Chatbots](getting-started-with-chatbots.md) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
 
-{% page-ref page="getting-started-with-chatbots/" %}
+{% page-ref page="getting-started-with-chatbots.md" %}
 

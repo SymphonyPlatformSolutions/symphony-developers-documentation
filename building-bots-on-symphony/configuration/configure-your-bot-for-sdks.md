@@ -153,5 +153,5 @@ The config.json file has other fields that offers advanced configurations for pr
 
 ## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one of the language-specific [Getting Started With Chatbots](../planning-your-bot/chatbot/getting-started-with-chatbots/#java-sdk), [Getting Started With Interactive Bots](../planning-your-bot/interactive-bot/getting-started/#java-sdk), or [Getting Started With Headless Bots](../planning-your-bot/headless-bot/getting-started/) guides.
+Now that you have generated and configured your Bot, move onto one of the language-specific [Getting Started With Chatbots](../planning-your-bot/chatbot/getting-started-with-chatbots.md#java-sdk), [Getting Started With Interactive Bots](../planning-your-bot/interactive-bot/getting-started/#java-sdk), or [Getting Started With Headless Bots](../planning-your-bot/headless-bot/getting-started/) guides.
 

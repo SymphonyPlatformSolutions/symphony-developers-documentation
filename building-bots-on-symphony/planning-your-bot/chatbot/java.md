@@ -2,7 +2,7 @@
 description: Building a Chatbot using the Symphony Generator + SDK
 ---
 
-# Building a Chatbot using the SDKs
+# Build a Chatbot using the SDKs
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ description: Building a Chatbot using the Symphony Generator + SDK
 
 We will be using the **Request/Reply** example from the Bot Generator.
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
 ## 1. Install Dependencies
 
@@ -198,13 +198,13 @@ Now that you have a firm grasp on the datafeed event handling process implemente
 
 Navigate to Symphony and create an IM with your Bot:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%281%29.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%281%29.png)
 
 As you can see, your Bot replied with the message shown in the IM Listener class.
 
 ## 4.  Implementing your own Functionality
 
-Lets create help menu as a best practice shown in step 1 of the chatbot workflow: [Chatbot](../#1-kick-off-your-workflow)
+Lets create help menu as a best practice shown in step 1 of the chatbot workflow: [Chatbot](./#1-kick-off-your-workflow)
 
 First create a a processors folder inside your listeners folder and add the following to a new file called im\_processor.py:
 
@@ -250,12 +250,12 @@ class IMProcessor:
 {% endtabs %}
 
 {% hint style="info" %}
-Check out our [Overview of MessageML](../../../messages/overview-of-messageml.md) guide for more information on message formatting and styling.
+Check out our [Overview of MessageML](../../messages/overview-of-messageml.md) guide for more information on message formatting and styling.
 {% endhint %}
 
 On line 10, you'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-13-at-10.15.25-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-13-at-10.15.25-pm.png)
 
 Import the IMProcessor class into your IMListener and add the process\(\) function to your on\_im\_message\(\) function:
 
@@ -291,7 +291,7 @@ class IMListenerImpl(IMListener):
 
 Next, start up your bot by running **python3 main.py** and test in a 1-1 IM:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
 
 **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
