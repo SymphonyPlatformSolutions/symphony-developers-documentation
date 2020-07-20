@@ -109,13 +109,6 @@ def main():
 {% tab title="Node.JS" %}
 {% code title="index.js" %}
 ```javascript
-const botHearsSomething = (event, messages) => {
-  messages.forEach((message, index) => {
-    let reply_message = 'Hello ' + message.user.firstName + ', hope you are doing well!!'
-    Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESSAGEML_FORMAT)
-  })
-}
-
 Symphony.initBot(__dirname + '/config.json')
   .then((symAuth) => {
     Symphony.getDatafeedEventsService(botHearsSomething)
@@ -144,35 +137,91 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-As shown on lines 52-53, any event that occurs inside an IM or chatroom with the Bot will be passed as JSON objects to the event listeners. The generated IMListenerImpl class is as follows:
+Events that occur inside an IM or room containing the bot will be passed as JSON objects to the event listeners. The sample Room Listener implementation for this Request/Reply example are as follows:
 
 {% tabs %}
-{% tab title="python/listeners/im\_listener\_impl.py" %}
+{% tab title="Java" %}
+{% code title="src/main/java/RoomListenerImpl.java" %}
+```java
+public class RoomListenerImpl implements RoomListener {
+    private SymBotClient botClient;
+
+    public RoomListenerImpl(SymBotClient botClient) {
+        this.botClient = botClient;
+    }
+
+    public void onRoomMessage(InboundMessage msg) {
+        OutboundMessage msgOut = new OutboundMessage("Hi " + msg.getUser().getFirstName() + "!");
+        botClient.getMessagesClient().sendMessage(msg.getStream().getStreamId(), msgOut);
+    }
+
+    public void onUserJoinedRoom(UserJoinedRoom userJoinedRoom) {
+        OutboundMessage msgOut = new OutboundMessage("Welcome " + userJoinedRoom.getAffectedUser().getFirstName() + "!");
+        botClient.getMessagesClient().sendMessage(userJoinedRoom.getStream().getStreamId(), msgOut);
+    }
+    
+    // ...
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+{% code title="python/listeners/room\_listener\_impl.py" %}
 ```python
-import logging
-from sym_api_client_python.clients.sym_bot_client import SymBotClient
-from sym_api_client_python.listeners.im_listener import IMListener
-from sym_api_client_python.processors.sym_message_parser import SymMessageParser
-
-
-class IMListenerImpl(IMListener):
+class RoomListenerImpl(RoomListener):
     def __init__(self, sym_bot_client):
         self.bot_client = sym_bot_client
         self.message_parser = SymMessageParser()
 
-    async def on_im_message(self, im_message):
-        logging.debug('IM Message Received')
+    async def on_room_msg(self, room_message):
+        logging.debug('Room Message Received')
 
-        msg_text = self.message_parser.get_text(im_message)
-        first_name = self.message_parser.get_im_first_name(im_message)
-        stream_id = self.message_parser.get_stream_id(im_message)
+        msg_text = self.message_parser.get_text(room_message)
+        first_name = self.message_parser.get_im_first_name(room_message)
+        stream_id = self.message_parser.get_stream_id(room_message)
 
         message = f'<messageML>Hello {first_name}, hope you are doing well!</messageML>'
         self.bot_client.get_message_client().send_msg(stream_id, dict(message=message))
-
-    async def on_im_created(self, im_created):
-        logging.debug('IM created', im_created)
+    
+    # ...
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Node.JS" %}
+{% code title="index.js" %}
+```javascript
+const botHearsSomething = (event, messages) => {
+  messages.forEach((message, index) => {
+    let reply_message = 'Hello ' + message.user.firstName + ', hope you are doing well!!'
+    Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESSAGEML_FORMAT)
+  })
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% code title="Program.cs" %}
+```csharp
+public class BotLogic : RoomListener
+{
+    public void onRoomMessage(Message inboundMessage)
+    {
+        string filePath = Path.GetFullPath("config.json");
+        SymBotClient symBotClient = new SymBotClient();
+        SymConfig symConfig = symBotClient.initBot(filePath);
+        Message message2 = new Message();
+        message2.message = "<messageML> Hi "+inboundMessage.user.firstName+"!</messageML>";
+        MessageClient messageClient = new apiClientDotNet.MessageClient();
+        messageClient.sendMessage(symConfig, message2, inboundMessage.stream);
+
+    }
+    // ...
+}
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
