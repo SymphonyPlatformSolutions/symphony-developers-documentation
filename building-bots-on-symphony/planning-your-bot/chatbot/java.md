@@ -227,29 +227,73 @@ public class BotLogic : RoomListener
 
 Any events that happen within your Bot's scope will be read and captured by the Bot's datafeed. Any events that happen inside of an IM with the Bot will be parsed and directed to its IM Listener. Depending on the type of event, the corresponding IM Listener function will be called. So if for example, you send a message to your Bot 1-1, that event will be captured and as a result the on\_im\_message\(\) will be executed.
 
-In this generated example, when an IM is sent to your Bot, it will capture the event, and reply to the user by calling the following function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
+In this generated example, when an message is sent in a room containing your Bot, it will capture the event, and reply to the user by calling the following function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
-{% tab title="python/listeners/im\_listener\_impl.py" %}
+{% tab title="Java" %}
+```java
+OutboundMessage msg = new OutboundMessage("Hello")
+botClient.getMessagesClient().sendMessage("streamId", msg);
+```
+{% endtab %}
+
+{% tab title="Python" %}
 ```python
-self.bot_client.get_message_client().send_msg()
+self.bot_client.get_message_client().send_msg('streamId', dict(message='Hello'))
+```
+{% endtab %}
+
+{% tab title="Node.JS" %}
+```javascript
+Symphony.sendMessage('streamId', 'Hello', null, Symphony.MESSAGEML_FORMAT)
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```csharp
+Message msg = new Message();
+msg.message = "<messageML>Hello</messageML>";
+new apiClientDotNet.MessageClient().sendMessage(symConfig, msg, stream);
 ```
 {% endtab %}
 {% endtabs %}
 
 ## 3.  Run your Bot
 
-Now that you have a firm grasp on the datafeed event handling process implemented by the Bot and Symphony SDK, lets start up our bot to see it in action:
+Now that you have a firm grasp on the datafeed event handling process implemented by the bot and Symphony SDK, lets start up our bot to see it in action:
 
-```aspnet
-(demoEnv) demoBot1 $ python3 main.py
+{% tabs %}
+{% tab title="Java" %}
 ```
+mvn compile exec:java -Dexec.mainClass=RequestReplyBot
+```
+{% endtab %}
 
-Navigate to Symphony and create an IM with your Bot:
+{% tab title="Python" %}
+```bash
+python3 main.py
+```
+{% endtab %}
+
+{% tab title="Node.JS" %}
+```
+npm start
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```
+dotnet build
+dotnet run
+```
+{% endtab %}
+{% endtabs %}
+
+Navigate to Symphony, create a room and add your bot into that room. Then try sending a message into the room.
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%281%29.png)
 
-As you can see, your Bot replied with the message shown in the IM Listener class.
+As you can see, your Bot replied with the message shown in the Room Listener implementation.
 
 ## 4.  Implementing your own Functionality
 
