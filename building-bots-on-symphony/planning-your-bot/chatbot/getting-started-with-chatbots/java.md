@@ -1,78 +1,85 @@
 ---
-description: Building a Chatbot using Symphony Generator + Java SDK
+description: Building a Chatbot using the Symphony Generator + SDK
 ---
 
-# Build a Chatbot using the Java SDK
+# Building a Chatbot using the SDKs
 
 ## Prerequisites
 
-### Complete the Bot Configuration guide:
+### Complete the Bot Configuration guide
+
+We will be using the **Request/Reply** example from the Bot Generator.
 
 {% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
 
 ## 1. Install Dependencies
 
-First setup a Python virtual environment:
-
-```aspnet
-demoBot1 $ python3 -m venv demoEnv
-demoBot1 $ source demoEnv/bin/activate
+{% tabs %}
+{% tab title="Java" %}
 ```
-
-Install SDK and its child dependencies:
-
-```aspnet
-(demoEnv) demoBot1 $ pip install -r requirements.txt
+mvn dependency:resolve
 ```
+{% endtab %}
+
+{% tab title="Python" %}
+```bash
+python3 -m venv ./venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+```
+{% endtab %}
+
+{% tab title="Node.JS" %}
+```
+npm install
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```
+dotnet restore
+```
+{% endtab %}
+{% endtabs %}
 
 ## 2.  Dive into the code
 
-Let's take a look at the main\(\) function inside our python/main.py file:
+Let's take a look at the logic inside the main file.
 
 Running this file accomplishes four things:
 
-* Configures your Bot
-* Authenticates your Bot
-* Starts up the Bot's datafeed event service
-* Adds custom event listeners/handlers to the Bot's datafeed event service
+* Configures your bot
+* Authenticates your bot
+* Starts up the bot's datafeed event service
+* Adds custom event listeners to the bot's datafeed event service
 
 {% tabs %}
-{% tab title="python/main.py" %}
+{% tab title="Java" %}
+{% code title="src/main/java/RequestReplyBot.java" %}
+```java
+try {
+    SymBotClient botClient = SymBotClient.initBotRsa("config.json");
+
+    botClient.getDatafeedEventsService().addListeners(
+        new IMListenerImpl(botClient),
+        new RoomListenerImpl(botClient)
+    );
+} catch (Exception e) {
+    log.error("Error", e);
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+{% code title="python/main.py" %}
 ```python
-import os
-import sys
-import asyncio
-import logging
-from pathlib import Path
-from sym_api_client_python.configure.configure import SymConfig
-from sym_api_client_python.auth.auth import Auth
-from sym_api_client_python.auth.rsa_auth import SymBotRSAAuth
-from sym_api_client_python.clients.sym_bot_client import SymBotClient
-from listeners.im_listener_impl import IMListenerImpl
-from listeners.room_listener_impl import RoomListenerImpl
-from listeners.elements_listener_impl import ElementsListenerImpl
-
-
-def configure_logging():
-    log_dir = os.path.join(os.path.dirname(__file__), "logs")
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir, exist_ok=True)
-    logging.basicConfig(
-        filename=os.path.join(log_dir, 'bot.log'),
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        filemode='w', level=logging.DEBUG
-    )
-    logging.getLogger("urllib3").setLevel(logging.WARNING)
-
 def main():
-    # Configure log
     configure_logging()
 
-    # Load configuration
     configure = SymConfig('../resources/config.json')
     configure.load_config()
 
-    # Authenticate based on authType in config
     if ('authType' not in configure.data or configure.data['authType'] == 'rsa'):
         print('Python Client runs using RSA authentication')
         auth = SymBotRSAAuth(configure)
@@ -81,19 +88,12 @@ def main():
         auth = Auth(configure)
     auth.authenticate()
 
-    # Initialize SymBotClient with auth and configure objects
     bot_client = SymBotClient(auth, configure)
-
-    # Initialize datafeed service
     datafeed_event_service = bot_client.get_async_datafeed_event_service()
 
-    # Initialize listener objects and append them to datafeed_event_service
-    # Datafeed_event_service polls the datafeed and the event listeners
-    # respond to the respective types of events
     datafeed_event_service.add_im_listener(IMListenerImpl(bot_client))
     datafeed_event_service.add_room_listener(RoomListenerImpl(bot_client))
 
-    # Create and read the datafeed
     print('Starting datafeed')
     try:
         loop = asyncio.get_event_loop()
@@ -102,11 +102,45 @@ def main():
         None
     except:
         raise
-
-
-if __name__ == "__main__":
-    main()
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Node.JS" %}
+{% code title="index.js" %}
+```javascript
+const botHearsSomething = (event, messages) => {
+  messages.forEach((message, index) => {
+    let reply_message = 'Hello ' + message.user.firstName + ', hope you are doing well!!'
+    Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESSAGEML_FORMAT)
+  })
+}
+
+Symphony.initBot(__dirname + '/config.json')
+  .then((symAuth) => {
+    Symphony.getDatafeedEventsService(botHearsSomething)
+  })
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% code title="Program.cs" %}
+```csharp
+static void Main(string[] args)
+{
+    string filePath = Path.GetFullPath("config.json");
+    SymBotClient symBotClient = new SymBotClient();
+    DatafeedEventsService datafeedEventsService = new DatafeedEventsService();
+    SymConfig symConfig = symBotClient.initBot(filePath);
+    RoomListener botLogic = new BotLogic();
+    DatafeedClient datafeedClient = datafeedEventsService.init(symConfig);
+    Datafeed datafeed = datafeedEventsService.createDatafeed(symConfig, datafeedClient);
+    datafeedEventsService.addRoomListener(botLogic);
+    datafeedEventsService.getEventsFromDatafeed(symConfig, datafeed, datafeedClient);
+}
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
