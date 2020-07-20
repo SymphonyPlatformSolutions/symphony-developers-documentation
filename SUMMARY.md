@@ -47,7 +47,6 @@
   * [Structured Objects](building-bots-on-symphony/messages/structured-objects.md)
   * [Emojis](building-bots-on-symphony/messages/emojis.md)
 * [Symphony Elements](building-bots-on-symphony/symphony-elements/README.md)
-  * [Overview of Symphony Elements](building-bots-on-symphony/symphony-elements/overview-of-symphony-elements.md)
   * [Available Elements](building-bots-on-symphony/symphony-elements/available-elements/README.md)
     * [Form](building-bots-on-symphony/symphony-elements/available-elements/form.md)
     * [Buttons](building-bots-on-symphony/symphony-elements/available-elements/buttons.md)

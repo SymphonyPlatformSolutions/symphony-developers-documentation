@@ -82,15 +82,98 @@ MessageML supports the following tags for grouping information within a message:
 
 MessageML supports the following tags for formatting content within a message:
 
-| Tag | Description | Optional attributes |
-| :--- | :--- | :--- |
-| `<br/>` | Insert a line break. | None. |
-| `<a href="url">` `Link Text` `</a>` | Insert a hyperlink that will be displayed in the message. | _`href`: the URL of the link_ `class`: [color options](https://extension-api.symphony.com/docs/colors). |
-| `<b>text</b>` | Bold formatting.  **Note**: when receiving a message from an Agent that contains whitespace between the last character in a bolded section and the closing `</b>` tag, the bold section will be returned in Markdown \(i.e. surrounded by double '\*' characters\) instead of XHTML tags. | \* `class`: [color options](https://extension-api.symphony.com/docs/colors). |
-| 1.53 version onwards `<code>text</code>`   1.52 and prior versions: `<code>text` `</code>` | Fixed-character formatting for code samples.  **Note:** 1.52 and prior versions require a line break before the closing `</code>` tag, otherwise, the content will not be rendered. Also note that only up to 100 lines of code will be highlighted. |  |
-| `<i>text</i>` | Italics formatting.  **Note**: when receiving a message from an Agent that contains whitespace between the last character in an italics-formatted section and the closing `</i>` tag, the italics section will be returned in Markdown \(i.e. surrounded by single '\*' characters\) instead of XHTML tags. | \* `class`: [color options](https://extension-api.symphony.com/docs/colors). |
-| `<pre>` `preformatted text` `</pre>` | Preformatted text. | _`class`:_ [_color options_](https://extension-api.symphony.com/docs/colors)_._ Non-HTML MessageML [shorthand tags](https://developers.symphony.com/symphony-developer/docs/messagemlv2#shorthand-tags) are not supported inside `<pre>`. |
-| `<span>text</span>` | No formatting. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](https://developers.symphony.com/symphony-developer/docs/objects). | _`class`:_ [_color options_](https://extension-api.symphony.com/docs/colors)_._ `data-entity-id` \* See below for list of translated PresentationML attributes. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Tag</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Optional attributes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>&lt;br/&gt;</code>
+      </td>
+      <td style="text-align:left">Insert a line break.</td>
+      <td style="text-align:left">None.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;a href=&quot;url&quot;&gt;</code>
+        <br /><code>Link Text</code>
+        <br /><code>&lt;/a&gt;</code>
+      </td>
+      <td style="text-align:left">Insert a hyperlink that will be displayed in the message.</td>
+      <td style="text-align:left"><em><code>href</code>: the URL of the link<br /></em><code>class</code>:
+        <a
+        href="https://extension-api.symphony.com/docs/colors">color options</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;b&gt;text&lt;/b&gt;</code>
+      </td>
+      <td style="text-align:left">Bold formatting.
+        <br />
+        <br /><b>Note</b>: when receiving a message from an Agent that contains whitespace
+        between the last character in a bolded section and the closing <code>&lt;/b&gt;</code> tag,
+        the bold section will be returned in Markdown (i.e. surrounded by double
+        &apos;*&apos; characters) instead of XHTML tags.</td>
+      <td style="text-align:left">* <code>class</code>: <a href="https://extension-api.symphony.com/docs/colors">color options</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">1.53 version onwards
+        <br /><code>&lt;code&gt;text&lt;/code&gt;</code>
+        <br />
+        <br />
+        <br />1.52 and prior versions:
+        <br /><code>&lt;code&gt;text</code>
+        <br /><code>&lt;/code&gt;</code>
+      </td>
+      <td style="text-align:left">
+        <p>Fixed-character formatting for code samples.
+          <br />
+          <br />
+        </p>
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <p><b>Note:</b> 1.52 and prior versions require a line break before the closing <code>&lt;/code&gt;</code> tag,
+          otherwise, the content will not be rendered.
+          <br />Also note that only up to 100 lines of code will be highlighted.</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;i&gt;text&lt;/i&gt;</code>
+      </td>
+      <td style="text-align:left">Italics formatting.
+        <br />
+        <br /><b>Note</b>: when receiving a message from an Agent that contains whitespace
+        between the last character in an italics-formatted section and the closing <code>&lt;/i&gt;</code> tag,
+        the italics section will be returned in Markdown (i.e. surrounded by single
+        &apos;*&apos; characters) instead of XHTML tags.</td>
+      <td style="text-align:left">* <code>class</code>: <a href="https://extension-api.symphony.com/docs/colors">color options</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;pre&gt;</code>
+        <br /><code>preformatted text</code>
+        <br /><code>&lt;/pre&gt;</code>
+      </td>
+      <td style="text-align:left">Preformatted text.</td>
+      <td style="text-align:left"><em><code>class</code>: </em><a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em>Non-HTML
+        MessageML <a href="https://developers.symphony.com/symphony-developer/docs/messagemlv2#shorthand-tags">shorthand tags</a> are
+        not supported inside <code>&lt;pre&gt;</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;span&gt;text&lt;/span&gt;</code>
+      </td>
+      <td style="text-align:left">No formatting.
+        <br /><em>This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<br /></em>This
+        tag is used to create <a href="https://developers.symphony.com/symphony-developer/docs/objects">Structured objects</a>.</td>
+      <td
+      style="text-align:left"><em><code>class</code>: </em><a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em><code>data-entity-id</code>
+        <br
+        />* See below for list of translated PresentationML attributes.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Tables
 
@@ -177,8 +260,7 @@ This MessageML markup is then passed into the endpoint via the `message` paramet
 ```
 
 ```markup
-<div class="entity" data-entity-id="entityIdentifier">An object</div>
-
+<span class="entity" data-entity-id="entityIdentifier">An inline object</span>
 ```
 
 The examples above reference an [entity object](https://developers.symphony.com/symphony-developer/docs/messagemlv2#standard-entities) called `entityIdentifier`. The JSON corresponding to this object is passed to the create message endpoint via the `data` parameter. For example:
