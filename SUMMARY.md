@@ -8,7 +8,7 @@
 * [Planning Your Bot](building-bots-on-symphony/planning-your-bot/README.md)
   * [Chatbot](building-bots-on-symphony/planning-your-bot/chatbot/README.md)
     * [Getting Started With Chatbots](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md)
-    * [Build a Chatbot using the SDKs](building-bots-on-symphony/planning-your-bot/chatbot/java.md)
+    * [Build a Chatbot using the SDKs](building-bots-on-symphony/planning-your-bot/chatbot/sdk.md)
     * [Build a Chatbot using the BDK](building-bots-on-symphony/planning-your-bot/chatbot/building-a-chatbot-using-bdk.md)
   * [Interactive Bot](building-bots-on-symphony/planning-your-bot/interactive-bot/README.md)
     * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/README.md)

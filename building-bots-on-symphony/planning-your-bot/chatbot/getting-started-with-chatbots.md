@@ -18,23 +18,11 @@ Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your develop
 
 {% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
-### Java SDK
+### Using the SDKs
 
-Get started building your first chatbot using the Java SDK:
+Get started building your first chatbot using the SDKs:
 
-{% page-ref page="java.md" %}
-
-### Python SDK
-
-Get started building your first chatbot using the Python SDK:
-
-### Node.js SDK
-
-Get started building your first chatbot using the Node.js SDK:
-
-### .NET SDK
-
-Get started building your first chatbot using the .NET SDK:
+{% page-ref page="sdk.md" %}
 
 ## Bot Developer Kit
 
