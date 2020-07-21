@@ -137,7 +137,7 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-Events that occur inside an IM or room containing the bot will be passed as JSON objects to the event listeners. The sample Room Listener implementation for this Request/Reply example are as follows:
+Any events that happen within IMs or rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in a room, you would implement the respective Room Listener class with the `onRoomMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -225,8 +225,6 @@ public class BotLogic : RoomListener
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within your Bot's scope will be read and captured by the Bot's datafeed. Any events that happen inside of an IM with the Bot will be parsed and directed to its IM Listener. Depending on the type of event, the corresponding IM Listener function will be called. So if for example, you send a message to your Bot 1-1, that event will be captured and as a result the on\_im\_message\(\) will be executed.
-
 In this generated example, when an message is sent in a room containing your Bot, it will capture the event, and reply to the user by calling the following function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
@@ -260,7 +258,7 @@ new apiClientDotNet.MessageClient().sendMessage(symConfig, msg, stream);
 
 ## Run your Bot
 
-Now that you have a firm grasp on the datafeed event handling process implemented by the bot and Symphony SDK, lets start up our bot to see it in action:
+Now that you understand the datafeed event handling process implemented by the bot using the Symphony SDKs, let's launch our bot to see it in action:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -293,11 +291,11 @@ Navigate to Symphony, create a room and add your bot into that room. Then try se
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%281%29.png)
 
-As you can see, your Bot replied with the message shown in the Room Listener implementation.
+As you can see, your bot replied with the message shown in the Room Listener implementation.
 
 ## Implementing your own Functionality
 
-Lets create help menu as a best practice shown in step 1 of the chatbot workflow: [Chatbot](./#1-kick-off-your-workflow)
+Lets create a help menu, following the best practice shown in step 1 of the chatbot workflow: [Chatbot](./#1-kick-off-your-workflow)
 
 First create a a processors folder inside your listeners folder and add the following to a new file called im\_processor.py:
 
