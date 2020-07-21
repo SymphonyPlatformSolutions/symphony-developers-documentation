@@ -303,7 +303,46 @@ Modify the example room listener code to respond only to messages containing an 
 {% tab title="Java" %}
 {% code title="src/main/java/RoomListenerImpl.java" %}
 ```java
+public class RoomListenerImpl implements RoomListener {
+    private SymBotClient botClient;
+    private String defaultMessage = "Sorry, I didn't quite catch that.";
+    private String selfMention = "<mention uid=\"%d\" />";
+    private String helpMessage =
+        "<h4>Hi! I accept these commands:</h4>"
+        + "<ul>"
+        + "    <li>@mention /help</li>"
+        + "    <li>@mention /onboard</li>"
+        + "    <li>@mention /documentation</li>"
+        + "    <li>@mention /clear</li>"
+        + "    <li>@mention /finish</li>"
+        + "</ul>";
+    private int prefix;
 
+    public RoomListenerImpl(SymBotClient botClient) {
+        this.botClient = botClient;
+        this.selfMention = String.format(selfMention, botClient.getBotUserId());
+        this.helpMessage = helpMessage.replaceAll("@mention", selfMention);
+        this.prefix = botClient.getBotUserInfo().getDisplayName().length() + 1;
+    }
+
+    public void onRoomMessage(InboundMessage msg) {
+        List<Long> mentions = msg.getMentions();
+        if (!mentions.isEmpty() && mentions.get(0) == botClient.getBotUserId()) {
+            String command = msg.getMessageText().substring(prefix).trim();
+            
+            String message = defaultMessage;
+            if (command.equalsIgnoreCase("/help")) {
+                message = helpMessage;
+            }
+
+            String streamId = msg.getStream().getStreamId();
+            OutboundMessage msgOut = new OutboundMessage(message);
+            botClient.getMessagesClient().sendMessage(streamId, msgOut);
+        }
+    }
+    
+    // ...
+}
 ```
 {% endcode %}
 {% endtab %}
