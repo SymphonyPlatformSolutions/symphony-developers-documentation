@@ -295,48 +295,118 @@ As you can see, your bot replied with the message shown in the Room Listener imp
 
 ## Implementing your own Functionality
 
-Lets create a help menu, following the best practice shown in step 1 of the chatbot workflow: [Chatbot](./#1-kick-off-your-workflow)
+Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](./#1-kick-off-your-workflow).
 
-First create a a processors folder inside your listeners folder and add the following to a new file called im\_processor.py:
+Modify the example room listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
 
 {% tabs %}
-{% tab title="python/listeners/processors/im\_processor.py" %}
+{% tab title="Java" %}
+{% code title="src/main/java/RoomListenerImpl.java" %}
+```java
+
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+{% code title="python/listeners/room\_listener\_impl.py" %}
 ```python
-from sym_api_client_python.processors.message_formatter import MessageFormatter
+import logging
+from sym_api_client_python.clients.sym_bot_client import SymBotClient
+from sym_api_client_python.listeners.room_listener import RoomListener
 from sym_api_client_python.processors.sym_message_parser import SymMessageParser
 
-class IMProcessor:
-    def __init__(self, bot_client):
-        self.bot_client = bot_client
-        self.message_formatter = MessageFormatter()
-        self.sym_message_parser = SymMessageParser()
-        #enter your bot's ID here:
-        self.bot_id = "349026222350822"
 
-    async def process(self, msg):
-        msg_text = self.sym_message_parser.get_text(msg)
-        mentions = self.sym_message_parser.get_mention_ids(msg)
+class RoomListenerImpl(RoomListener):
+    def __init__(self, sym_bot_client):
+        self.bot_client = sym_bot_client
+        self.message_parser = SymMessageParser()
+        self.bot_id = self.bot_client.bot_user_info["id"]
+        self.bot_name = self.bot_client.bot_user_info['displayName']
+        self.prefix = len(self.bot_name.split(' '))
+    
+        self_mention = f'<mention uid="{self.bot_id}" />'
+        self.default_message = "Sorry, I didn't quite catch that."
+        self.help_message = f"""
+            <h4>Hi! I accept these commands:</h4>
+            <ul>
+                <li>{self_mention} /help</li>
+                <li>{self_mention} /onboard</li>
+                <li>{self_mention} /documentation</li>
+                <li>{self_mention} /clear</li>
+                <li>{self_mention} /finish</li>
+            </ul>
+        """
 
-        self.default_message = dict(message= """<messageML> Sorry, I didn't quite catch that. </messageML>""")
-        self.help_message = dict(message= """<messageML>
-                                        <h3>Hi! Use Demo Bot to assist with all your onboarding needs! You can try:</h3>
-                                            <ul>
-                                                <li><mention uid="{0}"/> /help</li>
-                                                <li><mention uid="{0}"/> /onboard</li>
-                                                <li><mention uid="{0}"/>/documentation</li>
-                                                <li><mention uid="{0}"/> /clear</li>
-                                                <li><mention uid="{0}"/> /finish</li>
-                                            </ul>
-                                </messageML>""".format(self.bot_id))
-        if mentions and mentions[0] == self.bot_id:
-            if msg_text[1] == "/help":
-                await self.bot_client.get_message_client().send_msg_async(msg['stream']['streamId'], self.help_message)
-            else:
-                await self.bot_client.get_message_client().send_msg_async(msg['stream']['streamId'], self.default_message)
+async def on_room_msg(self, room_message):
+    msg_text = self.message_parser.get_text(room_message)
+    mentions = self.message_parser.get_mention_ids(room_message)
+    
+    if mentions and int(mentions[0]) == self.bot_id:
+        message = default_message
+        if msg_text[self.prefix] == "/help":
+            message = help_message
 
-        else:
-            await self.bot_client.get_message_client().send_msg_async(msg['stream']['streamId'], self.default_message)
+        stream_id = room_message['stream']['streamId']
+        response = dict(message = f"<messageML>{message}</messageML>")
+        await self.bot_client.get_message_client().send_msg_async(stream_id, response)
+
+# ...
 ```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Node.JS" %}
+{% code title="index.js" %}
+```javascript
+const Symphony = require('symphony-api-client-node')
+Symphony.setDebugMode(true)
+
+const defaultMsg = "Sorry, I didn't quite catch that."
+const selfMention = () => `<mention uid="${Symphony.getBotUser().id}" />`
+const helpMsg = () => `
+<h4>Hi! I accept these commands:</h4>
+<ul>
+  <li>${selfMention()} /help</li>
+  <li>${selfMention()} /onboard</li>
+  <li>${selfMention()} /documentation</li>
+  <li>${selfMention()} /clear</li>
+  <li>${selfMention()} /finish</li>
+</ul>
+`;
+
+const botHearsSomething = (event, messages) => {
+  const botId = Symphony.getBotUser().id;
+  const botName = Symphony.getBotUser().displayName;
+
+  messages.forEach((message) => {
+    const mentions = Symphony.getMentions(message);
+    if (mentions.length > 0 && parseInt(mentions[0]) === botId) {
+      const prefix = message.messageText.indexOf(`@${botName}`) + botName.length + 1
+      const command = message.messageText.substr(prefix).trim()
+      
+      let msg = defaultMsg
+      if (command === '/help') {
+        msg = helpMsg();
+      }
+      
+      const streamId = message.stream.streamId
+      Symphony.sendMessage(streamId, msg, null, Symphony.MESSAGEML_FORMAT)
+    }
+  })
+}
+
+// ...
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title=".NET" %}
+{% code title="Program.cs" %}
+```csharp
+
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -344,43 +414,7 @@ class IMProcessor:
 Check out our [Overview of MessageML](../../messages/overview-of-messageml.md) guide for more information on message formatting and styling.
 {% endhint %}
 
-On line 10, you'll need to replace self.bot\_id with your Bot's User ID which can be found in the admin portal:
-
-![](../../../.gitbook/assets/screen-shot-2020-07-13-at-10.15.25-pm.png)
-
-Import the IMProcessor class into your IMListener and add the process\(\) function to your on\_im\_message\(\) function:
-
-{% tabs %}
-{% tab title="python/listeners/im\_listener\_impl.py" %}
-```python
-import logging
-from sym_api_client_python.clients.sym_bot_client import SymBotClient
-from sym_api_client_python.listeners.im_listener import IMListener
-from sym_api_client_python.processors.sym_message_parser import SymMessageParser
-from .processors.im_processor import IMProcessor
-
-class IMListenerImpl(IMListener):
-    def __init__(self, sym_bot_client):
-        self.bot_client = sym_bot_client
-        self.message_parser = SymMessageParser()
-        self.im_processor = IMProcessor(self.bot_client)
-
-    async def on_im_message(self, im_message):
-        logging.debug('IM Message Received')
-
-        msg_text = self.message_parser.get_text(im_message)
-        first_name = self.message_parser.get_im_first_name(im_message)
-        stream_id = self.message_parser.get_stream_id(im_message)
-
-        await self.im_processor.process(im_message)
-
-    async def on_im_created(self, im_created):
-        logging.debug('IM created', im_created)
-```
-{% endtab %}
-{% endtabs %}
-
-Next, start up your bot by running **python3 main.py** and test in a 1-1 IM:
+Next, [launch your bot](sdk.md#run-your-bot) again and test the new behaviour:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
 
