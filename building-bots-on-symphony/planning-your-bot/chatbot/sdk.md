@@ -365,14 +365,14 @@ Symphony.setDebugMode(true)
 const defaultMsg = "Sorry, I didn't quite catch that."
 const selfMention = () => `<mention uid="${Symphony.getBotUser().id}" />`
 const helpMsg = () => `
-<h4>Hi! I accept these commands:</h4>
-<ul>
-  <li>${selfMention()} /help</li>
-  <li>${selfMention()} /onboard</li>
-  <li>${selfMention()} /documentation</li>
-  <li>${selfMention()} /clear</li>
-  <li>${selfMention()} /finish</li>
-</ul>
+  <h4>Hi! I accept these commands:</h4>
+  <ul>
+    <li>${selfMention()} /help</li>
+    <li>${selfMention()} /onboard</li>
+    <li>${selfMention()} /documentation</li>
+    <li>${selfMention()} /clear</li>
+    <li>${selfMention()} /finish</li>
+  </ul>
 `;
 
 const botHearsSomething = (event, messages) => {
