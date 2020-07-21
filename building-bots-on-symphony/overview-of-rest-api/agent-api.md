@@ -29,8 +29,6 @@ The Datafeed API is used to create and manage a real-time message and event stre
 
 For more information on how Symphony Datafeeds allow your Bot to create rich, interactive workflows navigate here:
 
-{% page-ref page="../datafeed/overview-of-datafeed.md" %}
-
 The full list of Datafeed API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
 
 ## Signals API ![](../../.gitbook/assets/api_bg.png)

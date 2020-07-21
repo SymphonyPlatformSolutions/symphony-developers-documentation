@@ -1,4 +1,0 @@
-# Overview of Datafeed
-
-If a Bot is conversational or interactive, the next step is to create a Datafeed by calling the Agent API. You can learn more about the different types of Bots here: [Different Types of Bots](overview-of-datafeed.md). The Datafeed provides an encrypted stream of all Symphony events within the bot's scope. You can read more about Symphony Datafeeds here: [Overview of Datafeed](overview-of-datafeed.md). In order to create a Datafeed, Bots must make an API call to the following Agent endpoint: [https://developers.symphony.com/restapi/reference\#create-messagesevents-stream-v4](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4). Since, this API endpoint exists on the Agent server, the Bot will pass both its Session Token and Key Manager token as apart of its request.
-
