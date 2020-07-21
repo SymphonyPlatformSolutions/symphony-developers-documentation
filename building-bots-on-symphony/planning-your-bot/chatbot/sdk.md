@@ -138,7 +138,7 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within IMs or rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an 1-to-1 Instant Message \(IM\), you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
+Any events that happen within 1-to-1 Instant Messages \(IMs\) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
