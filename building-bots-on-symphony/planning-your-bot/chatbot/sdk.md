@@ -443,7 +443,86 @@ const botHearsSomething = (event, messages) => {
 {% tab title=".NET" %}
 {% code title="Program.cs" %}
 ```csharp
+using apiClientDotNet.Models;
+using apiClientDotNet;
+using apiClientDotNet.Listeners;
+using apiClientDotNet.Services;
+using apiClientDotNet.Authentication;
+using System.Xml;
+using System.Text.Json;
+using System;
 
+namespace RequestResponse
+{
+    public class BotLogic : IIMListener
+    {
+        private SymBotClient symBotClient;
+        private string defaultMsg = "Sorry, I didn't quite catch that.";
+        private string helpMsg = @"
+            <h4>Hi! I accept these commands:</h4>
+            <ul>
+                <li>@mention /help</li>
+                <li>@mention /onboard</li>
+                <li>@mention /documentation</li>
+                <li>@mention /clear</li>
+                <li>@mention /finish</li>
+            </ul>
+        ";
+
+        private Int64 botId;
+        private int prefix;
+
+        public BotLogic(SymBotClient symBotClient)
+        {
+            this.symBotClient = symBotClient;
+            this.botId = this.symBotClient.getBotUserInfo().id;
+            this.prefix = this.symBotClient.getBotUserInfo().displayName.Length + 2;
+            string selfMention = $"<mention uid=\"{this.botId}\" />";
+            this.helpMsg = this.helpMsg.Replace("@mention", selfMention);
+        }
+
+        public void onIMMessage(Message message)
+        {
+            JsonElement data = JsonDocument.Parse(message.data).RootElement;
+            JsonElement mention;
+            if (data.TryGetProperty("0", out mention)) {
+                JsonElement firstMention = mention.GetProperty("id")[0];
+                if (firstMention.GetProperty("type").GetString() == "com.symphony.user.userId"
+                    && Int64.Parse(firstMention.GetProperty("value").GetString()) == this.botId)
+                {
+                    string command = getText(message.message).Substring(prefix).Trim();
+
+                    OutboundMessage outMessage = new OutboundMessage();
+                    if (command == "/help") {
+                        outMessage.message = helpMsg;
+                    } else {
+                        outMessage.message = defaultMsg;
+                    }
+
+                    string streamId = message.stream.streamId;
+                    this.symBotClient.getMessagesClient().sendMessage(streamId, outMessage, true);
+                }
+            }
+        }
+
+        public string getText(string presentationMl) {
+            string contents = string.Empty;
+            XmlDocument document = new XmlDocument();
+            document.LoadXml(presentationMl);
+
+            foreach(XmlNode child in document.DocumentElement.ChildNodes) {
+                if (child.NodeType == XmlNodeType.Element) {
+                    contents += child.InnerText;
+                }
+            }
+            return contents;
+        }
+
+        public void onIMCreated(Stream stream) {}
+    }
+    
+    // ...    
+}
 ```
 {% endcode %}
 {% endtab %}
