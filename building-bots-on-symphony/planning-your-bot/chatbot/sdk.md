@@ -122,69 +122,79 @@ Symphony.initBot(__dirname + '/config.json')
 ```csharp
 static void Main(string[] args)
 {
-    string filePath = Path.GetFullPath("config.json");
-    SymBotClient symBotClient = new SymBotClient();
-    DatafeedEventsService datafeedEventsService = new DatafeedEventsService();
-    SymConfig symConfig = symBotClient.initBot(filePath);
-    RoomListener botLogic = new BotLogic();
-    DatafeedClient datafeedClient = datafeedEventsService.init(symConfig);
-    Datafeed datafeed = datafeedEventsService.createDatafeed(symConfig, datafeedClient);
-    datafeedEventsService.addRoomListener(botLogic);
-    datafeedEventsService.getEventsFromDatafeed(symConfig, datafeed, datafeedClient);
+    SymConfig symConfig = new SymConfigLoader().loadFromFile("config.json");
+    SymBotRSAAuth botAuth = new SymBotRSAAuth(symConfig);
+    botAuth.authenticate();
+    SymBotClient botClient = SymBotClient.initBot(symConfig, botAuth);
+    
+    DatafeedEventsService dataFeedService = botClient.getDatafeedEventsService();
+    BotLogic listener = new BotLogic(botClient);
+
+    dataFeedService.addIMListener(listener);
+    dataFeedService.getEventsFromDatafeed();
 }
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within IMs or rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in a room, you would implement the respective Room Listener class with the `onRoomMessage` function. The generated Request/Reply project has an example implementation as follows:
+Any events that happen within IMs or rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an 1-to-1 Instant Message \(IM\), you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
-{% code title="src/main/java/RoomListenerImpl.java" %}
+{% code title="src/main/java/IMListenerImpl.java" %}
 ```java
-public class RoomListenerImpl implements RoomListener {
+import clients.SymBotClient;
+import listeners.IMListener;
+import model.InboundMessage;
+import model.OutboundMessage;
+import model.Stream;
+
+public class IMListenerImpl implements IMListener {
     private SymBotClient botClient;
 
-    public RoomListenerImpl(SymBotClient botClient) {
+    public IMListenerImpl(SymBotClient botClient) {
         this.botClient = botClient;
     }
 
-    public void onRoomMessage(InboundMessage msg) {
-        OutboundMessage msgOut = new OutboundMessage("Hi " + msg.getUser().getFirstName() + "!");
-        botClient.getMessagesClient().sendMessage(msg.getStream().getStreamId(), msgOut);
+    public void onIMMessage(InboundMessage msg) {
+        OutboundMessage msgOut = new OutboundMessage("Hello " + msg.getUser().getFirstName() + "!");
+        this.botClient.getMessagesClient().sendMessage(msg.getStream().getStreamId(), msgOut);
     }
 
-    public void onUserJoinedRoom(UserJoinedRoom userJoinedRoom) {
-        OutboundMessage msgOut = new OutboundMessage("Welcome " + userJoinedRoom.getAffectedUser().getFirstName() + "!");
-        botClient.getMessagesClient().sendMessage(userJoinedRoom.getStream().getStreamId(), msgOut);
-    }
-    
-    // ...
+    public void onIMCreated(Stream stream) {}
 }
 ```
 {% endcode %}
 {% endtab %}
 
 {% tab title="Python" %}
-{% code title="python/listeners/room\_listener\_impl.py" %}
+{% code title="python/listeners/im\_listener\_impl.py" %}
 ```python
-class RoomListenerImpl(RoomListener):
+import logging
+from sym_api_client_python.clients.sym_bot_client import SymBotClient
+from sym_api_client_python.listeners.im_listener import IMListener
+from sym_api_client_python.processors.sym_message_parser import SymMessageParser
+
+
+class IMListenerImpl(IMListener):
     def __init__(self, sym_bot_client):
         self.bot_client = sym_bot_client
         self.message_parser = SymMessageParser()
 
-    async def on_room_msg(self, room_message):
-        logging.debug('Room Message Received')
+    async def on_im_message(self, im_message):
+        logging.debug('IM Message Received')
 
-        msg_text = self.message_parser.get_text(room_message)
-        first_name = self.message_parser.get_im_first_name(room_message)
-        stream_id = self.message_parser.get_stream_id(room_message)
+        msg_text = self.message_parser.get_text(im_message)
+        first_name = self.message_parser.get_im_first_name(im_message)
+        stream_id = self.message_parser.get_stream_id(im_message)
 
         message = f'<messageML>Hello {first_name}, hope you are doing well!</messageML>'
         self.bot_client.get_message_client().send_msg(stream_id, dict(message=message))
-    
-    # ...
+
+    async def on_im_created(self, im_created):
+        logging.debug('IM created', im_created)
+
 ```
 {% endcode %}
 {% endtab %}
@@ -205,19 +215,34 @@ const botHearsSomething = (event, messages) => {
 {% tab title=".NET" %}
 {% code title="Program.cs" %}
 ```csharp
-public class BotLogic : RoomListener
-{
-    public void onRoomMessage(Message inboundMessage)
-    {
-        string filePath = Path.GetFullPath("config.json");
-        SymBotClient symBotClient = new SymBotClient();
-        SymConfig symConfig = symBotClient.initBot(filePath);
-        Message message2 = new Message();
-        message2.message = "<messageML> Hi "+inboundMessage.user.firstName+"!</messageML>";
-        MessageClient messageClient = new apiClientDotNet.MessageClient();
-        messageClient.sendMessage(symConfig, message2, inboundMessage.stream);
+using apiClientDotNet.Models;
+using apiClientDotNet;
+using apiClientDotNet.Listeners;
+using apiClientDotNet.Services;
+using apiClientDotNet.Authentication;
 
+
+namespace RequestResponse
+{
+    public class BotLogic : IIMListener
+    {
+        private SymBotClient symBotClient;
+
+        public BotLogic(SymBotClient symBotClient)
+        {
+            this.symBotClient = symBotClient;
+        }
+
+        public void onIMMessage(Message message)
+        {
+            OutboundMessage outMessage = new OutboundMessage();
+            outMessage.message = "Hello " + message.user.displayName + "!";
+            this.symBotClient.getMessagesClient().sendMessage(message.stream.streamId, outMessage, true);
+        }
+
+        public void onIMCreated(Stream stream) { }
     }
+    
     // ...
 }
 ```
@@ -225,7 +250,7 @@ public class BotLogic : RoomListener
 {% endtab %}
 {% endtabs %}
 
-In this generated example, when an message is sent in a room containing your Bot, it will capture the event, and reply to the user by calling the following function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
+In this generated example, when an message is sent in an IM with your Bot, it will capture the event, and reply to the user by calling the `sendMessage` function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
 {% tab title="Java" %}
@@ -287,23 +312,29 @@ dotnet run
 {% endtab %}
 {% endtabs %}
 
-Navigate to Symphony, create a room and add your bot into that room. Then try sending a message into the room.
+Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%281%29.png)
 
-As you can see, your bot replied with the message shown in the Room Listener implementation.
+As you can see, your bot replied with the message shown in the IM Listener implementation.
 
 ## Implementing your own Functionality
 
 Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](./#1-kick-off-your-workflow).
 
-Modify the example room listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
+Modify the example IM listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
 
 {% tabs %}
 {% tab title="Java" %}
-{% code title="src/main/java/RoomListenerImpl.java" %}
+{% code title="src/main/java/IMListenerImpl.java" %}
 ```java
-public class RoomListenerImpl implements RoomListener {
+import clients.SymBotClient;
+import listeners.IMListener;
+import model.InboundMessage;
+import model.OutboundMessage;
+import model.Stream;
+
+public class IMListenerImpl implements IMListener {
     private SymBotClient botClient;
     private String defaultMessage = "Sorry, I didn't quite catch that.";
     private String selfMention = "<mention uid=\"%d\" />";
@@ -318,14 +349,14 @@ public class RoomListenerImpl implements RoomListener {
         + "</ul>";
     private int prefix;
 
-    public RoomListenerImpl(SymBotClient botClient) {
+    public IMListenerImpl(SymBotClient botClient) {
         this.botClient = botClient;
         this.selfMention = String.format(selfMention, botClient.getBotUserId());
         this.helpMessage = helpMessage.replaceAll("@mention", selfMention);
         this.prefix = botClient.getBotUserInfo().getDisplayName().length() + 1;
     }
 
-    public void onRoomMessage(InboundMessage msg) {
+    public void onIMMessage(InboundMessage msg) {
         List<Long> mentions = msg.getMentions();
         if (!mentions.isEmpty() && mentions.get(0) == botClient.getBotUserId()) {
             String command = msg.getMessageText().substring(prefix).trim();
@@ -341,7 +372,7 @@ public class RoomListenerImpl implements RoomListener {
         }
     }
     
-    // ...
+    public void onIMCreated(Stream stream) {}
 }
 ```
 {% endcode %}
@@ -352,11 +383,11 @@ public class RoomListenerImpl implements RoomListener {
 ```python
 import logging
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
-from sym_api_client_python.listeners.room_listener import RoomListener
+from sym_api_client_python.listeners.im_listener import IMListener
 from sym_api_client_python.processors.sym_message_parser import SymMessageParser
 
 
-class RoomListenerImpl(RoomListener):
+class IMListenerImpl(IMListener):
     def __init__(self, sym_bot_client):
         self.bot_client = sym_bot_client
         self.message_parser = SymMessageParser()
@@ -377,20 +408,22 @@ class RoomListenerImpl(RoomListener):
             </ul>
         """
 
-async def on_room_msg(self, room_message):
-    msg_text = self.message_parser.get_text(room_message)
-    mentions = self.message_parser.get_mention_ids(room_message)
+    async def on_im_message(self, im_message):
+        msg_text = self.message_parser.get_text(im_message)
+        mentions = self.message_parser.get_mention_ids(im_message)
+        
+        if mentions and int(mentions[0]) == self.bot_id:
+            message = default_message
+            if msg_text[self.prefix] == "/help":
+                message = help_message
     
-    if mentions and int(mentions[0]) == self.bot_id:
-        message = default_message
-        if msg_text[self.prefix] == "/help":
-            message = help_message
-
-        stream_id = room_message['stream']['streamId']
-        response = dict(message = f"<messageML>{message}</messageML>")
-        await self.bot_client.get_message_client().send_msg_async(stream_id, response)
-
-# ...
+            stream_id = im_message['stream']['streamId']
+            response = dict(message = f"<messageML>{message}</messageML>")
+            await self.bot_client.get_message_client().send_msg_async(stream_id, response)
+    
+    
+    async def on_im_created(self, im_created):
+        logging.debug('IM created', im_created)
 ```
 {% endcode %}
 {% endtab %}
