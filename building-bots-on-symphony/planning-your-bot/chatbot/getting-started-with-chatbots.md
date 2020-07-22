@@ -10,37 +10,19 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/sdks/" %}
+{% page-ref page="../../../developer-tools/developer-tools/sdks/" %}
 
 ## Configure your Bot for SDK Development
 
 Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your development language of choice, configuring and bootstrapping your Bot is the same across all Symphony supported SDKs. Before moving onto the following language specific getting started guides, first configure your bot here:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
-### Java SDK
+### Using the SDKs
 
-Get started building your first chatbot using the Java SDK:
+Get started building your first chatbot using the SDKs:
 
-{% page-ref page="java.md" %}
-
-### Python SDK
-
-Get started building your first chatbot using the Python SDK:
-
-{% page-ref page="python.md" %}
-
-### Node.js SDK
-
-Get started building your first chatbot using the Node.js SDK:
-
-{% page-ref page="node.js.md" %}
-
-### .NET SDK
-
-Get started building your first chatbot using the .NET SDK:
-
-{% page-ref page=".net.md" %}
+{% page-ref page="sdk.md" %}
 
 ## Bot Developer Kit
 
@@ -52,7 +34,7 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
+{% page-ref page="../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
 
 ### CLI Tool
 
@@ -60,7 +42,7 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
+{% page-ref page="../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
@@ -76,7 +58,7 @@ You can learn more about the UI Toolkit here:
 
 The next step to build a Bot using the BDK is to configure your Bot:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-bdk.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
 Afterwards, continue building and running your Chatbot here:
 
