@@ -150,17 +150,16 @@ In this generated example, when an IM is sent to your Bot, it will capture the e
 {% tab title="python/listeners/im\_listener\_impl.py" %}
 ```python
 self.bot_client.get_message_client().send_msg()
-
 ```
 {% endtab %}
 {% endtabs %}
 
 ## 3.  Adding our own functionality
 
-Since we are building an Interactive Bot, instead of sending only text, our Bot will also send Symphony Elements.  An interactive bot can send Symphony elements by calling the method used above since Symphony Elements are just messageML.  Let's construct a form in order to capture user name, country, and type of bot being built.  
+Since we are building an Interactive Bot, instead of sending only text, our Bot will also send Symphony Elements. An interactive bot can send Symphony elements by calling the method used above since Symphony Elements are just messageML. Let's construct a form in order to capture user name, country, and type of bot being built.
 
 {% hint style="info" %}
-Note:  In order to for a Symphony Element to be considered valid, it must contain opening and closing &lt;form&gt; tags and also a &lt;button&gt; with type="action"
+Note: In order to for a Symphony Element to be considered valid, it must contain opening and closing &lt;form&gt; tags and also a &lt;button&gt; with type="action"
 {% endhint %}
 
 ```markup
@@ -168,7 +167,7 @@ Note:  In order to for a Symphony Element to be considered valid, it must contai
     <form id="form_id"> 
         <h2>Full name</h2>
         <text-field name="name_01" required="true" />
-        
+
         <h4>Select your country</h4>
         <select name="Country">
             <option value="opt1">Australia</option>
@@ -187,15 +186,15 @@ Note:  In order to for a Symphony Element to be considered valid, it must contai
         <radio name="interactive bot" value="interactive bot" checked="true">interactive bot</radio>
         <radio name="headless bot" value="headless bot" checked="false">headless bot</radio>
 
-        
+
         <button type="reset">Reset</button>
         <button name="submit_button" type="action">Submit</button>
-                  
+
     </form>
 </messageML>
 ```
 
-Replace line 19 in your im\_listener\_impl.py with your newly constructed messageML form.  Your listener should look like the following:
+Replace line 19 in your im\_listener\_impl.py with your newly constructed messageML form. Your listener should look like the following:
 
 ```python
 import logging
@@ -220,7 +219,7 @@ class IMListenerImpl(IMListener):
                         <form id="form_id"> 
                             <h2>Full name</h2>
                             <text-field name="name_01" required="true" />
-                            
+
                             <h4>Select your country</h4>
                             <select name="Country">
                                 <option value="opt1">Australia</option>
@@ -233,15 +232,15 @@ class IMListenerImpl(IMListener):
                                 <option value="opt8">Italy</option>
                                 <option value="opt9">Japan</option>
                             </select>
-                    
+
                             <h4>Choose your option</h4>            
                             <radio name="chatbot" value="chatbot" checked="false">Marked</radio>
                             <radio name="interactive bot" value="interactive bot" checked="true">Unmarked</radio>
                             <radio name="headless bot" value="headless bot" checked="false">Unmarked</radio>
-                            
+
                             <button type="reset">Reset</button>
                             <button name="submit_button" type="action">Submit</button>
-                                      
+
                         </form>
                     </messageML>"""
         self.bot_client.get_message_client().send_msg(stream_id, dict(message=message))
@@ -251,9 +250,9 @@ class IMListenerImpl(IMListener):
 ```
 
 {% hint style="warning" %}
-Note: Elements can be sent and received in chatrooms, MIMs, and IMs.  However, Symphony Elements are handled separately than other Symphony events.  
+Note: Elements can be sent and received in chatrooms, MIMs, and IMs. However, Symphony Elements are handled separately than other Symphony events.
 
-The Symphony SDKs have dedicated **Elements Listeners** to listen for and handle Symphony Elements submitted to your bot.  Even though and end user submits and elements or form inside of an IM, the event **will not** be captured by the IM Listener class.   
+The Symphony SDKs have dedicated **Elements Listeners** to listen for and handle Symphony Elements submitted to your bot. Even though and end user submits and elements or form inside of an IM, the event **will not** be captured by the IM Listener class.
 {% endhint %}
 
 In order to handle datafeed events from Symphony Elements you have to add the Elements Listener to your datafeed listeners on line 54 of main.py:
@@ -294,7 +293,6 @@ class ElementsListenerImpl(ElementsActionListener):
 
     async def on_elements_action(self, action):
         logging.debug('Elements Action Recieved: {}'.format(json.dumps(action, indent=4)))
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -340,7 +338,7 @@ Elements Action Recieved: {
 {% endtab %}
 {% endtabs %}
 
-As you can see, the datafeed captures metadata about the form, the stream in which the form was submitted, the user who submitted it, and also the form values themselves. 
+As you can see, the datafeed captures metadata about the form, the stream in which the form was submitted, the user who submitted it, and also the form values themselves.
 
 **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 

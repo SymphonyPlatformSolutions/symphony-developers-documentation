@@ -1,6 +1,6 @@
 # Table Select
 
-The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](buttons.md) Element.
+The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/symphony-elements/available-elements/buttons.md) Element.
 
 The following image shows three different tables. The first table shows the use of checkboxes to select rows, positioned to the right side of the table. The second example also shows checkboxes, but they are positioned to the left side. The last table shows buttons positioned to the right.
 
@@ -118,7 +118,7 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 {% endtab %}
 
 {% tab title="JSON" %}
-```
+```text
 {
   "select": {
     "position": "left",
@@ -140,7 +140,7 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 {% endtab %}
 
 {% tab title="Generated messageML" %}
-```
+```text
 <messageML>
     <form id="example">
         <table>
@@ -195,7 +195,7 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```
+```text
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

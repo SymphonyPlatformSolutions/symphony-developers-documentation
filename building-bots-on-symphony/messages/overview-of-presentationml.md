@@ -26,7 +26,6 @@ The following table lists XHTML tags for MessageML on the left, and the correspo
 | `<chime />` | `<audio src="https://asset.symphony.com/symphony/audio/chime.mp3" autoplay="true" />` |
 | `<card>` | `<div class="card barStyle" data-icon-src="url" data-accent-color="blue">` `<div class="cardHeader">PresentationML</div>` `<div class="cardBody">PresentationML</div> </div>` |
 
-  
 **Root `<div>` tag**  
 When retrieving a message using the API, the message is always encapsulated in a root `<div>` tag, for easy parsing.
 

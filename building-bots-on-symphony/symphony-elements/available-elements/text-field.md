@@ -42,7 +42,7 @@ The following examples show text fields being used as follows:
     <text-field name="id2" placeholder="Only placeholder" required="true"/>
     <text-field name="id3" placeholder="Not required"/>
     <text-field name="id4" required="true"/>        
-         
+
     <button type="reset">Reset</button> 
     <button name="example-button" type="action">Submit</button> 
   </form>
@@ -51,7 +51,7 @@ The following examples show text fields being used as follows:
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```
+```text
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

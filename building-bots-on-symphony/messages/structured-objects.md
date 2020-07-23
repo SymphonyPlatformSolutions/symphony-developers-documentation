@@ -7,7 +7,7 @@ Structured Objects are rich, inline, interactive components for Symphony message
 
 Structured Objects can be "injected" into Symphony by sending messages using Symphony's [REST API](https://rest-api.symphony.com/docs/rest-api-introduction). Structured Objects can be rendered richly using Symphony's [Extension API](https://extension-api.symphony.com/).
 
-### Prerequisites
+## Prerequisites
 
 To inject messages containing structured objects:
 
@@ -19,7 +19,7 @@ To build renderer applications for displaying your structured object:
 
 * You need to have an [Extension application](https://extension-api.symphony.com/) created and enabled on your pod.
 
-### Sending Structured Objects in Messages
+## Sending Structured Objects in Messages
 
 Structured Objects are placed into Symphony messages and have two components:
 
@@ -38,7 +38,7 @@ You can create an object by invoking the [Create Message](https://rest-api.symph
 
 These parameters also support using [Apache FreeMarker templates](http://freemarker.org/) with Structured Objects. See [Use Apache FreeMarker Templates](https://rest-api.symphony.com/v1.47/docs/create-message-v4#use-apache-freemarker-templates).
 
-### Message and Object Presentation
+## Message and Object Presentation
 
 Message presentation is represented in [messageML](https://developers.symphony.com/symphony-developer/docs/messagemlv2) format. For example:HTML
 
@@ -100,7 +100,7 @@ This data can be used by applications in the web client to provide a rich displa
 </messageML>
 ```
 
-### Reading objects
+## Reading objects
 
 You can read objects using any of the endpoints that can read messages, for example the [Read Message](https://rest-api.symphony.com/docs/messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
 
@@ -110,7 +110,7 @@ Note:
 As described in [Message Format - MessageML v2](https://developers.symphony.com/symphony-developer/docs/messagemlv2), messages with Structured Objects can be created using the shorthand tags or the full tags. When they are read, the message presentation always contain the full tags, which are a subset of HTML tags.
 {% endhint %}
 
-### Renderer Applications
+## Renderer Applications
 
 Renderer Applications use the [Extension API](https://extension-api.symphony.com/docs) to dynamically replace the presentation of a structured object.  
 To create a renderer application:
@@ -120,6 +120,5 @@ To create a renderer application:
 * Register your application as being able to render a specific type, using the [`registerRenderer` function](https://extension-api.symphony.com/docs/entity-service#section-registerrenderer)
 * Render the object itself, by implementing the [`render`function](https://extension-api.symphony.com/docs/entity-service#section-render).
 
-To deploy this application into your organization, refer to the [Application Management](https://extension-api.symphony.com/docs/application-management) documentation.  
-
+To deploy this application into your organization, refer to the [Application Management](https://extension-api.symphony.com/docs/application-management) documentation.
 

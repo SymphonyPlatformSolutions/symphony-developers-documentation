@@ -50,7 +50,7 @@ The sequence of API calls and component interaction is illustrated below:
 For more an even more detailed explanation, enroll in our Developer Certification Program:
 
 {% hint style="info" %}
-Navigate to [Overview of Datafeed]() to learn more about how Bots process messages and events from conversations your bot is in.
+Navigate to [Overview of Datafeed](rest-api-architecture.md) to learn more about how Bots process messages and events from conversations your bot is in.
 {% endhint %}
 
 ## On-Premise Deployment

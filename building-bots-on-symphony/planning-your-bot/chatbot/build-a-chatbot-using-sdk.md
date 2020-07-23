@@ -6,7 +6,7 @@ description: Building a Chatbot using the Symphony Generator + SDK
 
 ## Prerequisites
 
-#### Complete the Bot Configuration guide
+### Complete the Bot Configuration guide
 
 We will be using the **Request/Reply** example from the Bot Generator.
 
@@ -16,7 +16,7 @@ We will be using the **Request/Reply** example from the Bot Generator.
 
 {% tabs %}
 {% tab title="Java" %}
-```
+```text
 mvn dependency:resolve
 ```
 {% endtab %}
@@ -30,13 +30,13 @@ pip install -r requirements.txt
 {% endtab %}
 
 {% tab title="Node.JS" %}
-```
+```text
 npm install
 ```
 {% endtab %}
 
 {% tab title=".NET" %}
-```
+```text
 dotnet restore
 ```
 {% endtab %}
@@ -126,7 +126,7 @@ static void Main(string[] args)
     SymBotRSAAuth botAuth = new SymBotRSAAuth(symConfig);
     botAuth.authenticate();
     SymBotClient botClient = SymBotClient.initBot(symConfig, botAuth);
-    
+
     DatafeedEventsService dataFeedService = botClient.getDatafeedEventsService();
     BotLogic listener = new BotLogic(botClient);
 
@@ -194,7 +194,6 @@ class IMListenerImpl(IMListener):
 
     async def on_im_created(self, im_created):
         logging.debug('IM created', im_created)
-
 ```
 {% endcode %}
 {% endtab %}
@@ -242,7 +241,7 @@ namespace RequestResponse
 
         public void onIMCreated(Stream stream) { }
     }
-    
+
     // ...
 }
 ```
@@ -287,7 +286,7 @@ Now that you understand the datafeed event handling process implemented by the b
 
 {% tabs %}
 {% tab title="Java" %}
-```
+```text
 mvn compile exec:java -Dexec.mainClass=RequestReplyBot
 ```
 {% endtab %}
@@ -299,13 +298,13 @@ python3 main.py
 {% endtab %}
 
 {% tab title="Node.JS" %}
-```
+```text
 npm start
 ```
 {% endtab %}
 
 {% tab title=".NET" %}
-```
+```text
 dotnet build
 dotnet run
 ```
@@ -360,7 +359,7 @@ public class IMListenerImpl implements IMListener {
         List<Long> mentions = msg.getMentions();
         if (!mentions.isEmpty() && mentions.get(0) == botClient.getBotUserId()) {
             String command = msg.getMessageText().substring(prefix).trim();
-            
+
             String message = defaultMessage;
             if (command.equalsIgnoreCase("/help")) {
                 message = helpMessage;
@@ -371,7 +370,7 @@ public class IMListenerImpl implements IMListener {
             botClient.getMessagesClient().sendMessage(streamId, msgOut);
         }
     }
-    
+
     public void onIMCreated(Stream stream) {}
 }
 ```
@@ -394,7 +393,7 @@ class IMListenerImpl(IMListener):
         self.bot_id = self.bot_client.bot_user_info["id"]
         self.bot_name = self.bot_client.bot_user_info['displayName']
         self.prefix = len(self.bot_name.split(' '))
-    
+
         self_mention = f'<mention uid="{self.bot_id}" />'
         self.default_message = "Sorry, I didn't quite catch that."
         self.help_message = f"""
@@ -411,17 +410,17 @@ class IMListenerImpl(IMListener):
     async def on_im_message(self, im_message):
         msg_text = self.message_parser.get_text(im_message)
         mentions = self.message_parser.get_mention_ids(im_message)
-        
+
         if mentions and int(mentions[0]) == self.bot_id:
             message = default_message
             if msg_text[self.prefix] == "/help":
                 message = help_message
-    
+
             stream_id = im_message['stream']['streamId']
             response = dict(message = f"<messageML>{message}</messageML>")
             await self.bot_client.get_message_client().send_msg_async(stream_id, response)
-    
-    
+
+
     async def on_im_created(self, im_created):
         logging.debug('IM created', im_created)
 ```
@@ -456,12 +455,12 @@ const botHearsSomething = (event, messages) => {
     if (mentions.length > 0 && parseInt(mentions[0]) === botId) {
       const prefix = message.messageText.indexOf(`@${botName}`) + botName.length + 1
       const command = message.messageText.substr(prefix).trim()
-      
+
       let msg = defaultMsg
       if (command === '/help') {
         msg = helpMsg();
       }
-      
+
       const streamId = message.stream.streamId
       Symphony.sendMessage(streamId, msg, null, Symphony.MESSAGEML_FORMAT)
     }
@@ -553,7 +552,7 @@ namespace RequestResponse
 
         public void onIMCreated(Stream stream) {}
     }
-    
+
     // ...    
 }
 ```
@@ -562,10 +561,10 @@ namespace RequestResponse
 {% endtabs %}
 
 {% hint style="info" %}
-Check out our [Overview of MessageML](../../messages/overview-of-messageml.md) guide for more information on message formatting and styling.
+Check out our [Overview of MessageML](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/messages/overview-of-messageml.md) guide for more information on message formatting and styling.
 {% endhint %}
 
-Next, [launch your bot](sdk.md#run-your-bot) again and test the new behaviour:
+Next, [launch your bot](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/planning-your-bot/chatbot/sdk.md#run-your-bot) again and test the new behaviour:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-10-at-2.16.34-pm.png)
 
