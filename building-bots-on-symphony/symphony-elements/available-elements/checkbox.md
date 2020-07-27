@@ -4,15 +4,13 @@ The checkbox is an interactive box that can be toggled by the user to indicate a
 
 When clicked, a checkmark \(✓\) appears inside the box, to indicate an affirmative choice \(yes\). When clicked again, the checkmark disappears, indicating a negative choice \(no\).
 
-Checkboxes are used to let a user select one or more options from a limited number of choices.  Frequently, a set of checkboxes represents a single question which the user can answer by selecting any number of possible answers.
+Checkboxes are used to let a user select one or more options from a limited number of choices. Frequently, a set of checkboxes represents a single question which the user can answer by selecting any number of possible answers.
 
 Note: If you want the user to only be able to pick a single option, use the [Radio Button](radio-button.md) or the [Dropdown Menu](dropdown-menu.md) element.
 
 ![](../../../.gitbook/assets/956dd82-check-box.jpg)
 
-
-
-##  Attributes
+## Attributes
 
 | Attribute | Type | Required? | Description |
 | :--- | :--- | :--- | :--- |
@@ -48,7 +46,7 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```
+```text
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

@@ -38,7 +38,7 @@ If neither the `selected` or `data-placeholder` attributes are set, the default 
 {% hint style="info" %}
 Message Size Limit:
 
-When designing forms with dropdowns within it be aware that there is a chance of reach the characters limit if too many dropdown options are included in the message.  For more information about message size limits, refer to [messageML](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits)
+When designing forms with dropdowns within it be aware that there is a chance of reach the characters limit if too many dropdown options are included in the message. For more information about message size limits, refer to [messageML](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits)
 {% endhint %}
 
 ## Examples
@@ -68,7 +68,7 @@ When designing forms with dropdowns within it be aware that there is a chance of
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```
+```text
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

@@ -1,24 +1,24 @@
 # Handling Datafeed Events
 
-The Symphony Datafeed is the foundation for all conversational bot workflows.  By creating and reading the datafeed via the REST API, symphony bots gain access to all events and messages within its scope.
+The Symphony Datafeed is the foundation for all conversational bot workflows. By creating and reading the datafeed via the REST API, symphony bots gain access to all events and messages within its scope.
 
 ## Datafeed Event Service
 
-Symphony SDKs provide an out-of-the-box datafeed event service that makes it easy to manage datafeeds, handle events, and introduce your bot's custom business logic. Bot's built on-top of our designated SDKs do not have to worry about creating, managing or reading datafeeds as all of that logic is built for you.  
+Symphony SDKs provide an out-of-the-box datafeed event service that makes it easy to manage datafeeds, handle events, and introduce your bot's custom business logic. Bot's built on-top of our designated SDKs do not have to worry about creating, managing or reading datafeeds as all of that logic is built for you.
 
 The datafeed event service provided by our SDKs is outlined as such:
 
-#### 1.  Create the Datafeed
+### 1.  Create the Datafeed
 
-Upon startup, the bots built on-top of our SDKs load in your configuration file, [authenticate](../authentication/) to the main components and proceed to [create a datafeed](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4).  If successful, the API returns a unique datafeed ID.
+Upon startup, the bots built on-top of our SDKs load in your configuration file, [authenticate](../authentication/) to the main components and proceed to [create a datafeed](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4). If successful, the API returns a unique datafeed ID.
 
-#### 2.  Read the Datafeed
+### 2.  Read the Datafeed
 
-After the unique datafeed ID is returned, the bot  then [reads the datafeed](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4), passing in the datafeed ID as a parameter.  If an event is present, the datafeed delivers a JSON object to the bot to be handled.  
+After the unique datafeed ID is returned, the bot then [reads the datafeed](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4), passing in the datafeed ID as a parameter. If an event is present, the datafeed delivers a JSON object to the bot to be handled.
 
-#### 3.  Handle Events
+### 3.  Handle Events
 
-The datafeed event service parses each incoming event and check for its event type.  Each event type has a unique handler function that is to be called everytime an event of its type is delivered to the bot.  The datafeed event service calls the corresponding event type function, and passes the event JSON payload along as a parameter.  
+The datafeed event service parses each incoming event and check for its event type. Each event type has a unique handler function that is to be called everytime an event of its type is delivered to the bot. The datafeed event service calls the corresponding event type function, and passes the event JSON payload along as a parameter.
 
 The following sequence illustrates the event handling workflow provided:
 
@@ -121,13 +121,14 @@ switch (eventv4.type)
 {% endtab %}
 {% endtabs %}
 
-As you can see, the above message handler function further parses the incoming JSON payload, checking for its stream\_type.  The datafeed event service will then further pass along this JSON payload to the corresponding listener, depending on what type of stream the message was sent in.
+As you can see, the above message handler function further parses the incoming JSON payload, checking for its stream\_type. The datafeed event service will then further pass along this JSON payload to the corresponding listener, depending on what type of stream the message was sent in.
 
-#### 4.  Event Listeners
+### 4.  Event Listeners
 
-As shown above, events are further sent along to their corresponding listener.  Inside of these listeners is where the bulk of your bot's business logic will live.  
+As shown above, events are futher sent along to their corresponding listener. Inside of these listeners is where the bulk of your bot's business logic will live.
 
-Event Listeners are interfaces containing abstract methods for your bot to implement.  These interfaces contain abstract event handler methods that correspond to event types as shown above:
+Event Listeners are interfaces containing abstract methods for your bot to implement. These interfaces contiain abstract event handler methods that correspond to event types as shown above.
+
 
 {% tabs %}
 {% tab title="Java" %}
@@ -214,7 +215,6 @@ class IMListenerTestImp(IMListener):
     def on_im_created(self, im_created):
         logging.debug('IM created!', im_created)
         # do something with im_created payload
-        
 ```
 {% endtab %}
 
@@ -275,9 +275,10 @@ public class MyIMListener : IMListener
 {% endtab %}
 {% endtabs %}
 
-Inside your implementation of this listener is where you write your custom business logic.  Inside these functions you can easily leverage Symphony's REST API, make requests to external services, connect to a database etc.  
+Inside your implementation of this listener is where you write your custom business logic. Inside these functions you can easily leverage Symphony's REST API, make requests to external services, connect to a database etc.
 
 As you can see, the SDKs make it easy to handle different types of events and introduce custom business logic.
+
 
 For more information on our SDKs:
 

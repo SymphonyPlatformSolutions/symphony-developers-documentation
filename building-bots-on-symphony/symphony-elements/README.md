@@ -1,8 +1,8 @@
 # Symphony Elements
 
-Symphony Elements enable Bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more.  
+Symphony Elements enable Bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more.
 
-By reusing our standard UX component libraries, elements provides developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony. 
+By reusing our standard UX component libraries, elements provides developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony.
 
 ![](../../.gitbook/assets/e75bdfa-overview_form.png)
 
@@ -13,7 +13,7 @@ Symphony Elements are a library of pre-designed reusable UX components \(text fi
 ![](../../.gitbook/assets/dde53e7-form.gif)
 
 {% hint style="danger" %}
-## Availability 
+## Availability
 
 * It is only available on pods that have been updated to 20.3.1 and running an Agent 20.3.1 \(2.57.0\) or above.
 * It is allowed to be displayed in cross-pod rooms.

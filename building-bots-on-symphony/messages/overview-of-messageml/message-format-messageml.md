@@ -10,7 +10,7 @@ When [creating](https://rest-api.symphony.com/docs/create-message-v4) or [retrie
 
 Symphony created the [Presentation ML Live Renderer Tool](https://renderer-tool.app.symphony.com/) that you can use to see your MessageML rendered in PresentationML or markdown \(mobile\) without coding:
 
-## Message Size Limits 
+## Message Size Limits
 
 Messages may include:
 
@@ -35,8 +35,8 @@ For string attributes, standard rules for escaping XML special characters apply,
 
 Keywords may only contain alphanumeric characters, underscore, dot and dash.
 
-Important: when sending numeric cashtags as signals, add an `*` after the $ sign, for example, $_122450.  
-&lt;cash tag="$_122450"/&gt;
+Important: when sending numeric cashtags as signals, add an `*` after the $ sign, for example, $\_122450.  
+&lt;cash tag="$\_122450"/&gt;
 {% endhint %}
 
 ## Root Tag:
@@ -78,7 +78,7 @@ MessageML supports the following tags for grouping information within a message:
 | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | \* `class` |
 | `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](https://developers.symphony.com/symphony-developer/docs/objects). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](https://extension-api.symphony.com/docs/colors)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
 
-##  Text-level formatting and semantics
+## Text-level formatting and semantics
 
 MessageML supports the following tags for formatting content within a message:
 
@@ -157,7 +157,7 @@ MessageML supports the following tags for formatting content within a message:
         <br /><code>&lt;/pre&gt;</code>
       </td>
       <td style="text-align:left">Preformatted text.</td>
-      <td style="text-align:left"><em><code>class</code>: </em><a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em>Non-HTML
+      <td style="text-align:left"><em><code>class</code>:</em>  <a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em>Non-HTML
         MessageML <a href="https://developers.symphony.com/symphony-developer/docs/messagemlv2#shorthand-tags">shorthand tags</a> are
         not supported inside <code>&lt;pre&gt;</code>.</td>
     </tr>
@@ -168,7 +168,7 @@ MessageML supports the following tags for formatting content within a message:
         <br /><em>This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<br /></em>This
         tag is used to create <a href="https://developers.symphony.com/symphony-developer/docs/objects">Structured objects</a>.</td>
       <td
-      style="text-align:left"><em><code>class</code>: </em><a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em><code>data-entity-id</code>
+      style="text-align:left"><em><code>class</code>:</em>  <a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em><code>data-entity-id</code>
         <br
         />* See below for list of translated PresentationML attributes.</td>
     </tr>
@@ -229,7 +229,7 @@ MessageML supports the following tags to embed additional information into messa
 | `<mention uid="123456789"/>` | Insert a mention for the user whose Symphony userid is `123456789`. |  |
 | `<mention email="user@music.org"/>` | Insert a mention for the user whose email address is `user@music.org`. | _`strict`=`true`, the API will throw an error if no user of that email address exists. \(default\)_ `strict`=`false` . Message is accepted even if the user cannot be resolved. |
 | `<hash tag="label"/>` | Insert "label" as a hashtag. |  |
-| `<cash tag="ticker"/>` | Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a `*` after the $ sign, for example, $_122450.  `<messageML>` \`&lt;cash tag="$_122450"/&gt; ``\` |  |
+| `<cash tag="ticker"/>` | Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a `*` after the $ sign, for example, $\_122450.  `<messageML>` \`&lt;cash tag="$\_122450"/&gt; ```\`` |  |
 | `<chime />` | Send a chime message. No other content is permitted with a `<chime/>` tag. |  |
 | `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](https://extension-api.symphony.com/docs/colors) to select the accent color of the card. |
 | `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](https://developers.symphony.com/symphony-developer/docs/emojis). |
@@ -256,7 +256,6 @@ This MessageML markup is then passed into the endpoint via the `message` paramet
 
 ```markup
 <div class="entity" data-entity-id="entityIdentifier">An object</div>
-
 ```
 
 ```markup
@@ -438,35 +437,35 @@ This section lists the [Structured Objects](https://developers.symphony.com/symp
 
 ## Financial Objects
 
-#### org.symphonyoss.fin.security
+### org.symphonyoss.fin.security
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |
 | type | Yes | String | The type of object. Must be set to `org.symphonyoss.fin.security`. |
 | id | Yes | Array of Objects | An array of one or more of the following objects: _org.symphonyoss.fin.security.id.ticker_ org.symphonyoss.fin.security.id.isin _org.symphonyoss.fin.security.id.cusip_ org.symphonyoss.fin.security.id.openfigi  More information about these objects is provided below. |
 
-#### org.symphonyoss.fin.security.id.ticker
+### org.symphonyoss.fin.security.id.ticker
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |
 | type | Yes | String | The type of object. Must be set to `org.symphonyoss.fin.security.id.ticker`. |
 | value | Yes | String | The name/ID of a ticker. |
 
-#### org.symphonyoss.fin.security.id.isin
+### org.symphonyoss.fin.security.id.isin
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |
 | type | Yes | String | The type of object. Must be set to `org.symphonyoss.fin.security.id.isin`. |
 | value | Yes | String | The entity's ID. |
 
-#### org.symphonyoss.fin.security.id.cusip
+### org.symphonyoss.fin.security.id.cusip
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |
 | type | Yes | String | The type of object. Must be set to `org.symphonyoss.fin.security.id.cusip`. |
 | value | Yes | String | The entity's ID. |
 
-#### org.symphonyoss.fin.security.id.openfigi
+### org.symphonyoss.fin.security.id.openfigi
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |
@@ -490,14 +489,14 @@ This section lists the [Structured Objects](https://developers.symphony.com/symp
 | version | Yes | String | The object's version. |
 | id | Yes | Array of objects | An array of one or more of the following objects: \* com.symphony.user.userId  More information about these objects is provided below. |
 
-#### com.symphony.user.userId
+### com.symphony.user.userId
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |
 | type | Yes | String | The type of object. Must be set to `com.symphony.user.userId`. |
 | value | Yes | String | The ID of a user. |
 
-## Video 
+## Video
 
 | Field | Required | Format | Description |
 | :--- | :--- | :--- | :--- |

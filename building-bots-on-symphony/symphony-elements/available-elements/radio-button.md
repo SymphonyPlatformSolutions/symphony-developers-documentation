@@ -8,8 +8,6 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 ![](../../../.gitbook/assets/97fab2f-radio-button.jpg)
 
-
-
 ## Attributes
 
 | Attribute | Type | Required? | Description |
@@ -45,7 +43,7 @@ Note: If you want the user to be able to select more than one option, use the [C
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```
+```text
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

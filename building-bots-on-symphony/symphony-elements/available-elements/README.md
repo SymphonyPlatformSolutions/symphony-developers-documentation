@@ -6,7 +6,7 @@ The Available Elements pages describe each UX component, how to use them, and pr
 
 ## Sending Elements
 
-Like any other message, Symphony Elements are sent by a Bot as MessageML.  To start using Symphony Elements, you first need to create a form element using the `<form>` messageML tag. The form element can be considered the "frame" of a message, containing Elements that will be sent by the bot and subsequently read by the datafeed.
+Like any other message, Symphony Elements are sent by a Bot as MessageML. To start using Symphony Elements, you first need to create a form element using the `<form>` messageML tag. The form element can be considered the "frame" of a message, containing Elements that will be sent by the bot and subsequently read by the datafeed.
 
 Currently, all the available elements use a specific structure to render messages based on MessageML:
 
@@ -15,7 +15,7 @@ Currently, all the available elements use a specific structure to render message
     <form id="form_id"> 
         <h2>Full name</h2>
         <text-field name="name_01" required="true" />
-        
+
         <h4>Select your country</h4>
         <select name="Country">
             <option value="opt1">Australia</option>
@@ -39,10 +39,10 @@ Currently, all the available elements use a specific structure to render message
 
         <h4>Send a comment</h4> 
         <textarea name="comment" placeholder="In my opnion..." required="true">In my opnion...</textarea>
-        
+
         <button type="reset">Reset</button>
         <button name="submit_button" type="action">Submit</button>
-                  
+
     </form>
 </messageML>
 ```
@@ -92,11 +92,9 @@ After completing the form and clicking the submit form, the following elements p
 
 **The following list shows the currently available Symphony Elements. Click on the element to learn more about its implementation, limitations, and examples:**
 
-| [Form](form.md) | [Buttons](buttons.md) | [Checkbox](checkbox.md) |
+| [Form](form.md) | [Buttons](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/symphony-elements/available-elements/buttons.md) | [Checkbox](checkbox.md) |
 | :--- | :--- | :--- |
 | [Dropdown Menu](dropdown-menu.md) | [Text Area](https://developers.symphony.com/symphony-developer/docs/text-area) | [Radio Button](radio-button.md) |
 | [Person Selector](person-selector.md) | [Text Field](text-field.md) | [Tables](table-select.md) |
 | [Masked Text Field](masked-text-field.md) |  |  |
-
-
 

@@ -22,7 +22,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 ## Rules and Limitations
 
-* To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons.md).
+* To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/symphony-elements/available-elements/buttons.md).
 * When a form is submitted, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, you can fill out the form again and submit it as a new form.
 * When designing forms, it is important to consider the message size limit. For more information refer to [messageML - Message size limits](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits).
 
@@ -63,7 +63,7 @@ The following example shows a form being presented in MessageML. Also, you can s
 
     <h4>Send a comment</h4> 
     <textarea name="comment" placeholder="Add your comment here" required="true"></textarea>
-    
+
     <button type="reset">Reset</button>
     <button name="submit_button" type="action">Submit</button>
 
@@ -73,7 +73,7 @@ The following example shows a form being presented in MessageML. Also, you can s
 {% endtab %}
 
 {% tab title="Datafeed - Payload" %}
-```
+```text
 {
     "id": "ElnHWy",
     "messageId": "tVtMTHSFowQCRJSXwKQQVX___oyR8e6LbQ",
