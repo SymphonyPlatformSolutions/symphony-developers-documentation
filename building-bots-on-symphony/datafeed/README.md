@@ -1,6 +1,6 @@
 # Datafeed
 
-In order to create conversational or interactive bots on Symphony, bots must leverage the Symphony Datafeed. The Symphony Datafeed is a real-time message and event stream that can be created using the REST API. The datafeed provides messages and events from all conversations that the bot is in.
+In order to create conversational or interactive bots on Symphony, bots must leverage the Symphony Datafeed. The Symphony Datafeed is a real-time message and event stream that can be created using the REST API. The datafeed provides messages and events from all conversations that a bot is in.
 
 ## 1.  Create a Datafeed
 
