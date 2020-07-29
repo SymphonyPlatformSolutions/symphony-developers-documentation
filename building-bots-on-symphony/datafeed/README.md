@@ -1,37 +1,28 @@
+---
+description: Overview of Symphony Datafeed
+---
+
 # Datafeed
 
-In order to create conversational or interactive bots on Symphony, bots must leverage the Symphony Datafeed. The Symphony Datafeed is a real-time message and event stream that can be created using the REST API. The datafeed provides messages and events from all conversations that a bot is in.
+## Overview of Datafeed
 
-## 1.  Create a Datafeed
+The Symphony datafeed is a real-time messages and events stream that provides messages and events from all conversations that a bot is in.  Any event that occurs within a bot's scope will be captured and delivered to the bot by the datafeed.  The datafeed forms the basis of all interactive and conversational bot workflows as it allows bots to directly respond to Symphony messages and events.  
 
-In order to 'listen' to events happening within your bot's scope, your bot must first create a datafeed via the [REST API endpoint](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4).
+## Datafeed Architecture
 
-If successful, the API returns a unique ID for the datafeed just created. This ID will be used to listen for all subsequent events on this datafeed.
+Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.    
 
-{% hint style="info" %}
-Note: It is considered best practice that each bot only creates and listens to one datafeed.
-{% endhint %}
+Once a bot has created a datafeed, it has access all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as an interface between a Bot and all activity happening in the Symphony Pod.  Additionally, all messages and events within a Bot's scope are encrypted by the Agent before reaching your bot.  That way only the Bot is the only one who can access the contents of these events and messages being delivered to your bot.     
 
-## 2. Read the Datafeed
+The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
-Once the datafeed is created, bots can begin listening to events within their scope by passing the unique datafeed ID as a parameter to the Read Messages/Events Stream [REST API endpoint](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4).
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow%20%281%29.png)
 
-Calling this API endpoint reads messages from a given datafeed and provides messages and events from all conversations your bot is in.
+## Real Time Events
 
-If events occur within your bot's scope, calling this endpoint will return an array of JSON objects representing different messages/events. A full list of the different types of events and the returned JSON can be found [here](https://developers.symphony.com/restapi/docs/real-time-events).
+Events are delivered to your Bot via the datafeed as JSON objects.  Each type of Symphony event corresponds to a different JSON payload.  
 
-{% hint style="info" %}
-## Note:
-
-* If no messages or events are available, this method will be blocked for 30 seconds and return an HTTP 204 response \(No Content\) after. 
-* If many messages are sent to your bot in a short period of time, the array return may have more than 1 event to handle in the array returned by the API.
-* A datafeed will expire if its unread capacity is reached. For a standard datafeed, this will be 250 queued messages, and for firehose 500 messages.
-* A datafeed can only be consumed by one client thread at a time. For example, polling the datafeed by two threads may lead to messages being delivered out of order.
-{% endhint %}
-
-## Examples:
-
-For example, imagine a user sends a 1-1 IM message to your bot. Assuming your bot is continuously reading it's datafeed, the following event will be returned:
+For example, if a user sends your Bot a message, an event of type 'MESSAGESENT' will be delivered to your bot through the datafeed.
 
 ```text
 {
@@ -78,7 +69,19 @@ For example, imagine a user sends a 1-1 IM message to your bot. Assuming your bo
 }
 ```
 
-Notice how each event returned by the datafeed has important metadata and attributes such as messageId, timestamp, \(event\) type, initiator, as well as the contents of the message itself inside of the payload object. Here you can find the corresponding streamID as well as information regarding externalRecipients.
+Notice how each event returned by the datafeed has important metadata and attributes such as messageId, timestamp, \(event\) type, initiator, as well as the contents of the message itself inside of the payload object. Additionally, you can find the streamID corresponding to the message and also information regarding externalRecipients.
+
+## Handling Datafeed Events
+
+Now that your bot has created a datafeed and has access to a real-time message and event stream, the bot must handle events and introduce its own business logic.  
+
+To do so, bots can implement event event listener/handler classes provided by Symphony SDKs and BDKs.  Symphony SDKs and BDK provide an out-of-the-box event handling architecture, making it easy to introduce your custom business logic and orchestrate complex workflows:
+
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy.png)
+
+## Handling Events using the SDK
+
+## Handling Events using the BDK
 
 ## Conversational Workflow
 
@@ -86,7 +89,7 @@ As you can see, the datafeed acts as the backbone of your Bot. In many cases you
 
 While you can write all of this datafeed logic yourself, our dedicated SDKs provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot.
 
-To learn more about handling datafeed events, continue onto our next guide:
+To learn more about how to handle datafeed events, continue here:
 
 {% page-ref page="handling-datafeed-events.md" %}
 
