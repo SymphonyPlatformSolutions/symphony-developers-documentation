@@ -20,7 +20,7 @@ The following illustrates the relationship between your bot, datafeed, and Symph
 
 ## Real Time Events
 
-Events are delivered to your Bot via the datafeed as JSON objects.  Each type of Symphony event corresponds to a different JSON payload.  
+Events are delivered to your Bot via the datafeed as JSON objects.  Each type of Symphony event corresponds to a different JSON payload.   
 
 For example, if a user sends your Bot a message, an event of type 'MESSAGESENT' will be delivered to your bot through the datafeed.
 
@@ -70,6 +70,142 @@ For example, if a user sends your Bot a message, an event of type 'MESSAGESENT' 
 ```
 
 Notice how each event returned by the datafeed has important metadata and attributes such as messageId, timestamp, \(event\) type, initiator, as well as the contents of the message itself inside of the payload object. Additionally, you can find the streamID corresponding to the message and also information regarding externalRecipients.
+
+### Here is the full list of different real-time datafeed events:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Event Type</b>
+      </th>
+      <th style="text-align:left"><b>Description</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>Message Sent</b>
+      </td>
+      <td style="text-align:left">Generated when a message is sent in an IM, MIM, or chatroom of which the
+        user in context is a member, including messages sent by the user themselves.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Messages Suppressed</b>
+      </td>
+      <td style="text-align:left">Generated when messages are suppressed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Symphony Elements Action</b>
+      </td>
+      <td style="text-align:left">Generated when a user replies to a bot message that contains an interactive
+        form with UX components such as text fields, radio buttons, checkboxes,
+        person selectors and more.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Shared Wall Post</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <p>Generated when either:</p>
+        <ul>
+          <li>The user in context shares a wall post written by another user.</li>
+          <li>Another user shares a wall post written by the user in context.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>IM/MIM Created</b>
+      </td>
+      <td style="text-align:left">Generated when an IM or MIM is created with the user in context as a member,
+        initiated either by the user in context or another user.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Room Created</b>
+      </td>
+      <td style="text-align:left">Generated when a room is created by the user in context.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Room Updated Message</b>
+      </td>
+      <td style="text-align:left">Generated when a room of which the user in context is a member is updated,
+        including rooms updated by the user himself.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Room Deactivated Message</b>
+      </td>
+      <td style="text-align:left">Generated when a room of which the user in context is a member is deactivated,
+        including rooms deactivated by the user himself.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Room Reactivated Message</b>
+      </td>
+      <td style="text-align:left">Generated when a room of which the user in context is a member is reactivated,
+        including rooms reactivated by the user himself.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>User Requested to Join Room</b>
+      </td>
+      <td style="text-align:left">Generated when a user requests to join a room. Only the user who requested
+        to join the room and the owners of that room will receive this event on
+        their datafeeds.
+        <br />The <code>affectedUsers</code> attribute represents the owners of the room.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>User Joined Room</b>
+      </td>
+      <td style="text-align:left">Generated when a new user joins or is added to a room of which the user
+        in context is a member, including when the user himself joins or is added
+        to a room.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>User Left Room</b>
+      </td>
+      <td style="text-align:left">Generated when a user leaves or is removed from a room of which the user
+        in context is a member, including when the user himself leaves or is removed
+        from a room.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Room Member Promoted To Owner</b>
+      </td>
+      <td style="text-align:left">Generated when a user is promoted from a participant to an owner of a
+        room of which the user in context is a member, including when the user
+        himself is promoted to an owner or promotes another user.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Room Member Demoted From Owner</b>
+      </td>
+      <td style="text-align:left">Generated when a user is demoted from an owner to a participant of a room
+        of which the user in context is a member, including when the user himself
+        is demoted to a participant or demotes another user.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Connection Requested</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <p>Generated when a connection request is sent, either:</p>
+        <ul>
+          <li>Sent by the user in context to another user.</li>
+          <li>Sent to the user in context by another user.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Connection Accepted</b>
+      </td>
+      <td style="text-align:left">
+        <p>&lt;b&gt;&lt;/b&gt;</p>
+        <p>Generated when a connection request is accepted, either:</p>
+        <ul>
+          <li>Sent by the user in context and accepted by another user.</li>
+          <li>Sent by another user and accepted by the user in context.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) for the expanded JSON payload corresponding to each event type:
 
 ## Handling Datafeed Events
 
