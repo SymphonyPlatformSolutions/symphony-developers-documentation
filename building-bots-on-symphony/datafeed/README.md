@@ -205,27 +205,174 @@ Notice how each event returned by the datafeed has important metadata and attrib
   </tbody>
 </table>
 
-Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) for the expanded JSON payload corresponding to each event type:
+Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) for the expanded JSON payload corresponding to each event type.
 
-## Handling Datafeed Events
+## Handling Datafeed Events with SDKs
 
-Now that your bot has created a datafeed and has access to a real-time message and event stream, the bot must handle events and introduce its own business logic.  
+Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.  
 
-To do so, bots can implement event event listener/handler classes provided by Symphony SDKs and BDKs.  Symphony SDKs and BDK provide an out-of-the-box event handling architecture, making it easy to introduce your custom business logic and orchestrate complex workflows:
+As a bot developer all you have to do is to implement event listener interfaces that are provided out-of-the-box by Symphony's SDKs.  The `DatafeedEventService` event service does all of the heavy lifting and acts as the backbone of your bot or workflow.   
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy.png)
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](./#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
 
-## Handling Events using the SDK
+The following diagram shows the event handling workflow:
+
+   
+
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
+
+Inside of onRoomMessage\(\) is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
+
+{% tabs %}
+{% tab title="Java" %}
+{% code title="RoomListenerImpl.java" %}
+```java
+import clients.SymBotClient;
+import listeners.IMListener;
+import model.InboundMessage;
+import model.OutboundMessage;
+import model.Stream;
+
+public class RoomListenerImpl implements RoomListener {
+    public void onRoomMessage(InboundMessage message); {
+        OutboundMessage msgOut = new OutboundMessage("Hello " + msg.getUser().getFirstName() + "!");
+        this.botClient.getMessagesClient().sendMessage(msg.getStream().getStreamId(), msgOut);
+    }
+
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Python" %}
+{% code title="room\_listener\_impl.py" %}
+```python
+import logging
+from sym_api_client_python.clients.sym_bot_client import SymBotClient
+from sym_api_client_python.listeners.room_listener import RoomListener
+from sym_api_client_python.processors.sym_message_parser import SymMessageParser
+
+
+class RoomListenerImpl(RoomListener):
+    def __init__(self, sym_bot_client):
+        self.bot_client = sym_bot_client
+        self.message_parser = SymMessageParser()
+
+    def on_room_msg(self, room_message):
+        logging.debug('Room Message Received')
+
+        first_name = self.message_parser.get_im_first_name(room_message)
+        stream_id = self.message_parser.get_stream_id(room_message)
+
+        message = f'<messageML>Hello {first_name}, hope you are doing well!</messageML>'
+        self.bot_client.get_message_client().send_msg(stream_id, dict(message=message))
+
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+  messages.forEach((message, index) => {
+    let reply_message = 'Hello ' + message.user.firstName + ', hope you are doing well!!'
+    Symphony.sendMessage(message.stream.streamId, reply_message, null, Symphony.MESSAGEML_FORMAT)
+  })
+}
+```
+{% endtab %}
+
+{% tab title=".NET" %}
+```aspnet
+public class MyRoomListener : RoomListener
+    {
+        private SymConfig symConfig;
+
+
+        public void init(SymConfig symConfig)
+        {
+            this.symConfig = symConfig;
+        }
+
+        override public void onRoomMessage(Message message)
+        {
+            string FirstCommand = "";
+            string SearchTerm = null;
+            string SearchStatus = null;
+
+            if (message.message.Contains("/form"))
+            {
+                    string fresponse = "";
+                    fresponse += "<form id=\"form_id\">";
+                    fresponse += "<text-field name=\"Question_Subject\" required=\"true\" placeholder=\"Ask a Question\" />";
+                    fresponse += "<textarea name=\"comment\" placeholder=\"Add details (optional)\" required=\"false\"></textarea>";
+                    fresponse += "<button type=\"reset\">Reset</button>";
+                    fresponse += "<button name=\"submit_button\" type=\"action\">Submit</button>";
+                    fresponse += "</form>";
+                    sendMessage(message.stream.streamId, fresponse);
+            }
+        }
+
+        private void sendMessage(String streamId, String messageText)
+        {
+            Console.WriteLine("streamId:" + streamId);
+            OutboundMessage message = new OutboundMessage();
+            message.message = "<messageML>"+messageText+"</messageML>";                
+            RestRequestHandler restRequestHandler = new RestRequestHandler();
+            string url = "https://" + this.symConfig.agentHost + "/agent/v4/stream/" + streamId + "/message/create";
+            HttpWebResponse resp = restRequestHandler.executeRequest(message, url, false, WebRequestMethods.Http.Post, symConfig, true);
+
+        }
+    }
+```
+{% endtab %}
+{% endtabs %}
 
 ## Handling Events using the BDK
+
+Similar to the SDKs, the BDK \(Bot Developer Kit\) comes bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.  
+
+As a bot developer all you have to do is to implement generic `EventHandler` classes, passing in a given event type as the type parameter for that class.  
+
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](./#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter.  Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed. 
+
+The following diagram shows the event handling workflow:
+
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-4.png)
+
+Inside of handle\(\) is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
+
+{% tabs %}
+{% tab title="Java" %}
+{% code title="RoomMessageEventHandler.java" %}
+```java
+import com.symphony.bdk.bot.sdk.event.EventHandler;
+import com.symphony.bdk.bot.sdk.event.model.MessageEvent;
+import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
+
+/**
+ * Sample code. Implementation of {@link EventHandler} to send greeting message
+ * to users joining a room with the bot.
+ *
+ */
+public class RoomMessageEventHandler extends EventHandler<MessageEvent> {
+
+  /**
+   * Invoked when event is triggered in Symphony
+   */
+  @Override
+  public void handle(MessagEvent event, SymphonyMessage response) {
+    response.setMessage("Hey, <mention uid=\"" + event.getUserId() +
+        "\"/>. It is good to have you here!");
+  }
+
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ## Conversational Workflow
 
 As you can see, the datafeed acts as the backbone of your Bot. In many cases your Bot will be waiting for events to come in through the datafeed, which it constantly 'reads'. When an event or message comes through the datafeed, your bot will 'listen' for the event, extract the relevant data from the JSON payload and kick off its intented workflow.
 
-While you can write all of this datafeed logic yourself, our dedicated SDKs provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot.
-
-To learn more about how to handle datafeed events, continue here:
-
-{% page-ref page="handling-datafeed-events.md" %}
+While you can write all of this datafeed logic yourself, our dedicated SDKs and BDK provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot and add custom business logic.
 
