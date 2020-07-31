@@ -34,13 +34,9 @@ Get started building your first Interactive Bot using the Python SDK:
 
 Get started building your first Interactive Bot using the Node.js SDK:
 
-{% page-ref page="node.js.md" %}
-
 ### .NET SDK
 
 Get started building your first Interactive Bot using the .NET SDK:
-
-{% page-ref page=".net.md" %}
 
 ## Bot Developer Kit
 

@@ -22,7 +22,7 @@ In order to 'listen' and respond to user events, Bots need to create a single da
 
 To learn more about the Symphony Datafeed continue here:
 
-{% page-ref page="../../datafeed/" %}
+{% page-ref page="../../datafeed.md" %}
 
 ## 3.  Handle Events with Custom Business Logic
 
@@ -30,11 +30,7 @@ The next step of your chatbot workflow is to introduce your custom business logi
 
 You can learn more about parsing events and introducing custom business logic here:
 
-{% page-ref page="../../datafeed/handling-datafeed-events.md" %}
-
 ## Next Steps:
 
-Continue on to our [Getting Started With Chatbots](getting-started-with-chatbots/) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
-
-{% page-ref page="getting-started-with-chatbots/" %}
+Continue on to our [Getting Started With Chatbots](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d667d3b0e9641b76d700a5152c2b0c7e3d8b4b40/building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/README.md) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
 

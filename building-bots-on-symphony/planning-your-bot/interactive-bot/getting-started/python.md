@@ -182,9 +182,9 @@ Note: In order to for a Symphony Element to be considered valid, it must contain
         </select>
 
         <h4>Choose your option</h4>            
-        <radio name="chatbot" value="chatbot" checked="false">Marked</radio>
-        <radio name="interactive bot" value="interactive bot" checked="true">Unmarked</radio>
-        <radio name="headless bot" value="headless bot" checked="false">Unmarked</radio>
+        <radio name="chatbot" value="chatbot" checked="false">chatbot</radio>
+        <radio name="interactive bot" value="interactive bot" checked="true">interactive bot</radio>
+        <radio name="headless bot" value="headless bot" checked="false">headless bot</radio>
 
 
         <button type="reset">Reset</button>

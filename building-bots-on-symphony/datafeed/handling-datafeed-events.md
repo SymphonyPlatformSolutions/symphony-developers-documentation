@@ -1,2 +1,0 @@
-# Handling Datafeed Events
-
