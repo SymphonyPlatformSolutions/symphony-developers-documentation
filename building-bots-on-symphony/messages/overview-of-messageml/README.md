@@ -26,7 +26,7 @@ The above diagram shows the following:
 
 1. Your bot uses the [Agent API](../../overview-of-rest-api/agent-api.md) to send messages in MessageML.
 2. The Agent API encrypts the messages, and converts them to PresentationML where they are stored in Symphony's data store.   
-3. The [Symphony Datafeed](../../datafeed/) delivers messages to end users or to the Desktop Application as PresentationML.
+3. The [Symphony Datafeed](../../datafeed.md) delivers messages to end users or to the Desktop Application as PresentationML.
 4. When Bot's retrieve messages via the API, the messages are delivered as PresentationML.   
 
 ## Message Identifiers:

@@ -16,7 +16,7 @@ Once a bot has created a datafeed, it has access all of the [events](https://dev
 
 The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow%20%281%29.png)
+![](../.gitbook/assets/copy-of-on-prem-bot-auth_workflow%20%281%29.png)
 
 ## Real Time Events
 
@@ -213,13 +213,13 @@ Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles
 
 As a bot developer all you have to do is to implement event listener interfaces that are provided out-of-the-box by Symphony's SDKs.  The `DatafeedEventService` event service does all of the heavy lifting and acts as the backbone of your bot or workflow.   
 
-After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](./#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](datafeed.md#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
 
 The following diagram shows the event handling workflow:
 
    
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
+![](../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
 
 Inside of onRoomMessage\(\) is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
@@ -332,11 +332,11 @@ Similar to the SDKs, the BDK \(Bot Developer Kit\) comes bootstrapped with a `Da
 
 As a bot developer all you have to do is to implement generic `EventHandler` classes, passing in a given event type as the type parameter for that class.  
 
-After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](./#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter.  Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed. 
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](datafeed.md#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter.  Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed. 
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-4.png)
+![](../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-4.png)
 
 Inside of handle\(\) is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 

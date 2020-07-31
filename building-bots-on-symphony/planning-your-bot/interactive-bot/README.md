@@ -28,7 +28,7 @@ In order to 'listen' and respond to user events, Bots need to create a single da
 
 To learn more about the Symphony Datafeed continue here:
 
-{% page-ref page="../../datafeed/" %}
+{% page-ref page="../../datafeed.md" %}
 
 When an end-user submits a Symphony Element, the Interactive Bot is able to access the contents of that form or elements through the Symphony Datafeed. The Elements form lifecycle is illustrated below:
 
@@ -121,8 +121,6 @@ After the user fills out their information and clicks the 'Submit' button, the f
 The next step of your chatbot workflow is to introduce your Bot's custom business logic. Now that you have access to the Bot's events, messages, and elements payloads through the Symphony Datafeed, the next step is to create dedicated event listeners. Inside these listeners is where you parse messages and datafeed payloads, fetch data from external sources, manage conversation state, and make requests to Symphony's REST API in order to reply to users directly or performs administrative functions such as creating chatrooms.
 
 You can learn more about parsing events and introducing custom business logic here:
-
-{% page-ref page="../../datafeed/handling-datafeed-events.md" %}
 
 ## Next Steps:
 
