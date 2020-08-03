@@ -22,8 +22,6 @@ Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your develop
 
 Get started building your first Interactive Bot using the Java SDK:
 
-{% page-ref page="java.md" %}
-
 ### Python SDK
 
 Get started building your first Interactive Bot using the Python SDK:

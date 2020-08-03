@@ -105,7 +105,6 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
-  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [SDKs](developer-tools/developer-tools/sdks/README.md)
     * [SDK Configuration](developer-tools/developer-tools/sdks/sdk-configuration.md)
     * [Python](developer-tools/developer-tools/sdks/python.md)
@@ -116,6 +115,7 @@
     * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
+  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [Postman](developer-tools/developer-tools/postman.md)
 
 ## Embedded Modules
