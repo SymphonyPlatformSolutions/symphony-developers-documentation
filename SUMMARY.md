@@ -44,7 +44,7 @@
 * [Symphony Elements](building-bots-on-symphony/symphony-elements/README.md)
   * [Available Elements](building-bots-on-symphony/symphony-elements/available-elements/README.md)
     * [Form](building-bots-on-symphony/symphony-elements/available-elements/form.md)
-    * [Buttons](building-bots-on-symphony/symphony-elements/available-elements/buttons.md)
+    * [Buttons](building-extension-applications-on-symphony/developing-an-extension-application/styling/buttons.md)
     * [Text Field](building-bots-on-symphony/symphony-elements/available-elements/text-field.md)
     * [Masked Text Field](building-bots-on-symphony/symphony-elements/available-elements/masked-text-field.md)
     * [Text Area](building-bots-on-symphony/symphony-elements/available-elements/text-area.md)
