@@ -30,7 +30,6 @@
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
-  * [Authenticating using SDKs](building-bots-on-symphony/authentication/bot-configuration.md)
 * [Datafeed](building-bots-on-symphony/datafeed.md)
 * [Messages](building-bots-on-symphony/messages/README.md)
   * [MessageML](building-bots-on-symphony/messages/overview-of-messageml/README.md)
