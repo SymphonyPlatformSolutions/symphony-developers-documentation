@@ -26,7 +26,7 @@ Get started building your first Interactive Bot using the Java SDK:
 
 Get started building your first Interactive Bot using the Python SDK:
 
-{% page-ref page="python.md" %}
+{% page-ref page="build-interactive-bot-sdk.md" %}
 
 ### Node.js SDK
 
