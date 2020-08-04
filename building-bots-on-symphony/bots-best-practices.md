@@ -28,7 +28,11 @@ It important that users understand exactly what your bot is capable of and what 
 
 ## Datafeed
 
-It is considered best practice that bot's only create and read from one datafeed.  If your bot goes down, it should re-authenticate, create a new datafeed, and begin reading from this one.
+It is considered best practice that bot's only create and read from one datafeed.  If your bot goes down, it should re-authenticate, create a new datafeed, and begin reading from this one.  
+
+{% hint style="info" %}
+Note: The SDK and BDK handles all of the datafeed retry and reauthentication logic for you.
+{% endhint %}
 
 Creating and reading from multiple datafeeds concurrently can result in your bot processing duplicate messages and subsequently sending duplicate or out of order messages back to the user.  
 
