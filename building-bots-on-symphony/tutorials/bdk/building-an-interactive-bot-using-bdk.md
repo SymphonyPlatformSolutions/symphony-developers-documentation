@@ -8,7 +8,7 @@ description: Building an Interactive Bot using BDK
 
 Complete the BDK Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-bdk.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
 ## 1. Dive into the Code
 
@@ -134,7 +134,7 @@ Afterwards the bot replies with the contents of the message. This illustrates ho
 
 Start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM by prompting and submitting a "simple" form:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-17-at-12.11.25-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-17-at-12.11.25-pm.png)
 
 Feel free to play around with the other commands to see how Symphony Elements can be useful to your workflow. To learn more about how your can add your own Symphony Elements and business logic to your workflow, navigate to our Developer Certification program:
 

@@ -124,5 +124,5 @@ You can learn more about parsing events and introducing custom business logic he
 
 ## Next Steps:
 
-Continue on to our [Getting Started With Interactive Bots](getting-started/) guide. Here you will learn how to get your own Interactive Bot up and running and take a closer look at the APIs used to create a simple Interactive Bot workflow.
+Continue on to our [Getting Started With Interactive Bots](getting-started.md) guide. Here you will learn how to get your own Interactive Bot up and running and take a closer look at the APIs used to create a simple Interactive Bot workflow.
 

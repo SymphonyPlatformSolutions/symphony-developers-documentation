@@ -14,7 +14,7 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
+{% page-ref page="../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
 
 ### CLI Tool
 
@@ -22,7 +22,7 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
+{% page-ref page="../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
@@ -38,9 +38,9 @@ You can learn more about the UI Toolkit here:
 
 The next step to building a Bot using the BDK is to configure your Bot:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-bdk.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
 Afterwards, continue building and running your Headless Bot here:
 
-{% page-ref page="building-a-headless-bot-using-the-bdk.md" %}
+{% page-ref page="../../tutorials/bdk/building-a-headless-bot-using-the-bdk.md" %}
 

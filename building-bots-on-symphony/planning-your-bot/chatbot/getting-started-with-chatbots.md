@@ -1,4 +1,4 @@
-# Getting Started With Interactive Bots
+# Getting Started With Chatbots
 
 ## Build Your First Bot
 
@@ -6,35 +6,23 @@ Symphony provides a number of tools to help streamline Bot development:
 
 ## Symphony SDKs
 
-Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events including Symphony Elements. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
+Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/sdks/" %}
+{% page-ref page="../../../developer-tools/developer-tools/sdks/" %}
 
-## Configure your Bot
+## Configure your Bot for SDK Development
 
 Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your development language of choice, configuring and bootstrapping your Bot is the same across all Symphony supported SDKs. Before moving onto the following language specific getting started guides, first configure your bot here:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
-### Java SDK
+## Building Your Bot
 
-Get started building your first Interactive Bot using the Java SDK:
+Once your Bot is configured for SDK development head over to our step-by- step chatbot tutorial:
 
-### Python SDK
-
-Get started building your first Interactive Bot using the Python SDK:
-
-{% page-ref page="build-interactive-bot-sdk.md" %}
-
-### Node.js SDK
-
-Get started building your first Interactive Bot using the Node.js SDK:
-
-### .NET SDK
-
-Get started building your first Interactive Bot using the .NET SDK:
+{% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
 
 ## Bot Developer Kit
 
@@ -46,7 +34,7 @@ The Bot SDK is a Java specific SDK that provides all the basic support as our ot
 
 Learn more about the Bot SDK here:
 
-{% page-ref page="../../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
+{% page-ref page="../../../developer-tools/developer-tools/bdk/bot-sdk.md" %}
 
 ### CLI Tool
 
@@ -54,7 +42,7 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
-{% page-ref page="../../../../building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/ui-toolkit.md" %}
+{% page-ref page="../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
@@ -66,13 +54,15 @@ Note: In the current version of the BDK, the UI Toolkit is designed to help buil
 
 You can learn more about the UI Toolkit here:
 
+{% page-ref page="../../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
+
 ## Configure your Bot for BDK Development
 
-The next step is to build a Bot using the BDK is to configure your Bot:
+The next step to build a Bot using the BDK is to configure your Bot:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-bdk.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
-Afterwards, continue building and running your Interactive Bot here:
+Once your Bot is configured for BDK development head over to our step-by- step chatbot tutorial:
 
-{% page-ref page="building-an-interactive-bot-using-bdk.md" %}
+{% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
 

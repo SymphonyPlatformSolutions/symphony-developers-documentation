@@ -2,13 +2,13 @@
 description: Building a Chatbot using the Symphony Generator + SDK
 ---
 
-# Build an Interactive Bot using the SDK
+# Build a Chatbot using the SDK
 
 ## Prerequisites
 
 ### Complete the Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
 We will be using the **Request/Reply** example from the Bot Generator.
 
@@ -138,7 +138,7 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within 1-to-1 Instant Messages \(IMs\) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs dispatch to listener functions for event handling. For example, when a user submits a Symphony Element, the `onElementsAction()` function will be called inside of the `ElementsListener`.  The generated Request/Reply project has an example implementation as follows:
+Any events that happen within 1-to-1 Instant Messages \(IMs\) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -169,19 +169,31 @@ public class IMListenerImpl implements IMListener {
 {% endtab %}
 
 {% tab title="Python" %}
-{% code title="python/listeners/elements\_listener\_impl.py" %}
+{% code title="python/listeners/im\_listener\_impl.py" %}
 ```python
 import logging
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
-from sym_api_client_python.listeners.elements_listener import ElementsActionListener
+from sym_api_client_python.listeners.im_listener import IMListener
+from sym_api_client_python.processors.sym_message_parser import SymMessageParser
 
 
-class ElementsListenerImpl(ElementsActionListener):
+class IMListenerImpl(IMListener):
     def __init__(self, sym_bot_client):
         self.bot_client = sym_bot_client
+        self.message_parser = SymMessageParser()
 
-    async def on_elements_action(self, action):
-        logging.debug('Elements Action Received', action)
+    async def on_im_message(self, im_message):
+        logging.debug('IM Message Received')
+
+        msg_text = self.message_parser.get_text(im_message)
+        first_name = self.message_parser.get_im_first_name(im_message)
+        stream_id = self.message_parser.get_stream_id(im_message)
+
+        message = f'<messageML>Hello {first_name}, hope you are doing well!</messageML>'
+        self.bot_client.get_message_client().send_msg(stream_id, dict(message=message))
+
+    async def on_im_created(self, im_created):
+        logging.debug('IM created', im_created)
 ```
 {% endcode %}
 {% endtab %}
@@ -301,11 +313,13 @@ dotnet run
 
 Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
+![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
+
 As you can see, your bot replied with the message shown in the IM Listener implementation.
 
 ## Implementing your own Functionality
 
-Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](/#1-kick-off-your-workflow).
+Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../../planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
 
 Modify the example IM listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
 
@@ -551,6 +565,8 @@ Check out our [Overview of MessageML](https://github.com/SymphonyPlatformSolutio
 {% endhint %}
 
 Next, [launch your bot](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/planning-your-bot/chatbot/sdk.md#run-your-bot) again and test the new behaviour:
+
+![](../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
 
 **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
