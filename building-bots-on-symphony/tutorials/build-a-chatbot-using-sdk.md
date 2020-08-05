@@ -8,7 +8,7 @@ description: Building a Chatbot using the Symphony Generator + SDK
 
 ### Complete the Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../configuration/configure-your-bot-for-sdks.md" %}
 
 We will be using the **Request/Reply** example from the Bot Generator.
 
@@ -313,13 +313,13 @@ dotnet run
 
 Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
+![](../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
 
 As you can see, your bot replied with the message shown in the IM Listener implementation.
 
 ## Implementing your own Functionality
 
-Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](./#1-kick-off-your-workflow).
+Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
 
 Modify the example IM listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
 
@@ -566,7 +566,7 @@ Check out our [Overview of MessageML](https://github.com/SymphonyPlatformSolutio
 
 Next, [launch your bot](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/planning-your-bot/chatbot/sdk.md#run-your-bot) again and test the new behaviour:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
 
 **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
