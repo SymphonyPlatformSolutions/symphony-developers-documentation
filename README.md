@@ -10,13 +10,13 @@ Keep reading to learn about core Symphony concepts in order to ensure a smooth d
 
 It's time to get started.  Navigate to one of the following guides to kick off your developer journey today!
 
-* \*\*\*\*[**Building Bots on Symphony**](./#building-bots-on-symphony)\*\*\*\*
+* [**Building Bots on Symphony**](./#building-bots-on-symphony)
 * [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)\*\*\*\*
-* \*\*\*\*[**Become a Certified Developer**](./#developer-certification)\*\*\*\*
-* \*\*\*\*[**Symphony REST API**](./#symphony-rest-api)\*\*\*\*
-* \*\*\*\*[**Symphony Extension API**](./#symphony-extension-api)\*\*\*\*
-* \*\*\*\*[**Developer Tools**](./#developer-tools)\*\*\*\*
-* \*\*\*\*[**Embedded Modules**](./#embedded-modules)\*\*\*\*
+* [**Become a Certified Developer**](./#developer-certification)
+* [**Symphony REST API**](./#symphony-rest-api)
+* [**Symphony Extension API**](./#symphony-extension-api)
+* [**Developer Tools**](./#developer-tools)
+* [**Embedded Modules**](./#embedded-modules)
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
 
