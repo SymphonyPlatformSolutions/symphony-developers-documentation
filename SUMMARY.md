@@ -131,11 +131,3 @@
 * [Symphony URI](embedded-modules/symphony-uri.md)
 * [Symphony URI for Mobile](embedded-modules/symphony-uri-for-mobile.md)
 
-## Symphony REST API
-
-* [Symphony REST API](symphony-rest-api/symphony-rest-api.md)
-
-## Symphony Extension API
-
-* [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
-
