@@ -4,17 +4,19 @@ description: Building a Chatbot using the BDK and CLI Tool
 
 # Build a Chatbot using the BDK
 
-## Prerequisites
+## Build a Chatbot using the BDK
 
-### Complete the BDK Bot Configuration guide:
+### Prerequisites
 
-<<<<<<< HEAD:building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md
-{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
-=======
-{% page-ref page="../configuration/configure-your-bot-for-bdk.md" %}
->>>>>>> master:building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md
+#### Complete the BDK Bot Configuration guide:
 
-## 1. Dive into the Code
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md
+
+## {% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
+
+> > > > > > > master:building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md
+
+### 1. Dive into the Code
 
 The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly. To illustrate these best practices and convenient boilerplate code, navigate to HelpCommandHandler.java inside your project directory:
 
@@ -89,15 +91,17 @@ So for example when a user prompts the Bot with "@demobot2 /hello", the handle\(
 {% endtab %}
 {% endtabs %}
 
-## 2.  Run your Bot
+### 2.  Run your Bot
 
 Lastly, start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM:
 
-<<<<<<< HEAD:building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md
-![](../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
-=======
-![](../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
->>>>>>> master:building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md
+
+## ![](../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
+
+![](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
+
+> > > > > > > master:building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md
 
 To learn more about how your can add your own commands and business logic, navigate to our Developer Certification where we show you how to build a real-world FX Trading Bot using the Bot SDK and CLI tool:
 

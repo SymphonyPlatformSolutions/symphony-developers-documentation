@@ -20,11 +20,6 @@
     * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md)
     * [Building an Interactive Bot using BDK](building-bots-on-symphony/tutorials/bdk/building-an-interactive-bot-using-bdk.md)
     * [Build a Headless Bot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md)
-    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/README.md)
-      * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md)
-* [Tutorials](building-bots-on-symphony/tutorials/README.md)
-  * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md)
-  * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
@@ -48,7 +43,7 @@
 * [Symphony Elements](building-bots-on-symphony/symphony-elements/README.md)
   * [Available Elements](building-bots-on-symphony/symphony-elements/available-elements/README.md)
     * [Form](building-bots-on-symphony/symphony-elements/available-elements/form.md)
-    * [Buttons](building-extension-applications-on-symphony/developing-an-extension-application/styling/buttons.md)
+    * [Buttons](building-bots-on-symphony/symphony-elements/available-elements/buttons.md)
     * [Text Field](building-bots-on-symphony/symphony-elements/available-elements/text-field.md)
     * [Masked Text Field](building-bots-on-symphony/symphony-elements/available-elements/masked-text-field.md)
     * [Text Area](building-bots-on-symphony/symphony-elements/available-elements/text-area.md)
@@ -131,12 +126,4 @@
 * [Chat Module](embedded-modules/untitled.md)
 * [Symphony URI](embedded-modules/symphony-uri.md)
 * [Symphony URI for Mobile](embedded-modules/symphony-uri-for-mobile.md)
-
-## Symphony REST API
-
-* [Symphony REST API](symphony-rest-api/symphony-rest-api.md)
-
-## Symphony Extension API
-
-* [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
 

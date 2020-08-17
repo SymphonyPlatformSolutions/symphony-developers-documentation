@@ -4,19 +4,21 @@ description: Building a Chatbot using the Symphony Generator + SDK
 
 # Build a Chatbot using the SDK
 
-## Prerequisites
+## Build a Chatbot using the SDK
 
-### Complete the Bot Configuration guide:
+### Prerequisites
 
-<<<<<<< HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
-{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
-=======
-{% page-ref page="../configuration/configure-your-bot-for-sdks.md" %}
->>>>>>> master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
+#### Complete the Bot Configuration guide:
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
+
+## {% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
+
+> > > > > > > master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
 
 We will be using the **Request/Reply** example from the Bot Generator.
 
-## Install Dependencies
+### Install Dependencies
 
 {% tabs %}
 {% tab title="Java" %}
@@ -46,7 +48,7 @@ dotnet restore
 {% endtab %}
 {% endtabs %}
 
-## Dive into the code
+### Dive into the code
 
 Let's take a look at the logic inside the main file.
 
@@ -284,7 +286,7 @@ new apiClientDotNet.MessageClient().sendMessage(symConfig, msg, stream);
 {% endtab %}
 {% endtabs %}
 
-## Run your Bot
+### Run your Bot
 
 Now that you understand the datafeed event handling process implemented by the bot using the Symphony SDKs, let's launch our bot to see it in action:
 
@@ -317,21 +319,25 @@ dotnet run
 
 Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
-<<<<<<< HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
-![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
-=======
-![](../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
->>>>>>> master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
+
+## ![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
+
+![](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29.png)
+
+> > > > > > > master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
 
 As you can see, your bot replied with the message shown in the IM Listener implementation.
 
-## Implementing your own Functionality
+### Implementing your own Functionality
 
-<<<<<<< HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
-Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../../planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
-=======
-Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
->>>>>>> master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
+
+## Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../../planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
+
+Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/tutorials/planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
+
+> > > > > > > master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
 
 Modify the example IM listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
 
@@ -578,11 +584,13 @@ Check out our [Overview of MessageML](https://github.com/SymphonyPlatformSolutio
 
 Next, [launch your bot](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/planning-your-bot/chatbot/sdk.md#run-your-bot) again and test the new behaviour:
 
-<<<<<<< HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
-![](../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
-=======
-![](../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
->>>>>>> master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md
+
+## ![](../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
+
+![](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
+
+> > > > > > > master:building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md
 
 **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
