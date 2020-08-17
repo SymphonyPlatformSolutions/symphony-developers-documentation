@@ -1,2 +1,0 @@
-# App Controller and Views
-

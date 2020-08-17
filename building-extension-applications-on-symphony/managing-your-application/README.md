@@ -1,2 +1,0 @@
-# Managing Your Application
-
