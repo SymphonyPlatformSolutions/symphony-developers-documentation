@@ -6,13 +6,13 @@ description: Overview of Symphony Datafeed
 
 ## Overview of Datafeed
 
-The Symphony datafeed is a real-time messages and events stream that provides messages and events from all conversations that a bot is in.  Any event that occurs within a bot's scope will be captured and delivered to the bot by the datafeed.  The datafeed forms the basis of all interactive and conversational bot workflows as it allows bots to directly respond to Symphony messages and events.  
+The Symphony datafeed is a real-time messages and events stream that provides messages and events from all conversations that a bot is in. Any event that occurs within a bot's scope will be captured and delivered to the bot by the datafeed. The datafeed forms the basis of all interactive and conversational bot workflows as it allows bots to directly respond to Symphony messages and events.
 
 ## Datafeed Architecture
 
-Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.    
+Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.
 
-Once a bot has created a datafeed, it has access all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as an interface between a Bot and all activity happening in the Symphony Pod.  Additionally, all messages and events within a Bot's scope are encrypted by the Agent before reaching your bot.  That way only the Bot is the only one who can access the contents of these events and messages being delivered to your bot.     
+Once a bot has created a datafeed, it has access all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as an interface between a Bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a Bot's scope are encrypted by the Agent before reaching your bot. That way only the Bot is the only one who can access the contents of these events and messages being delivered to your bot.
 
 The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
@@ -20,7 +20,7 @@ The following illustrates the relationship between your bot, datafeed, and Symph
 
 ## Real Time Events
 
-Events are delivered to your Bot via the datafeed as JSON objects.  Each type of Symphony event corresponds to a different JSON payload.   
+Events are delivered to your Bot via the datafeed as JSON objects. Each type of Symphony event corresponds to a different JSON payload.
 
 For example, if a user sends your Bot a message, an event of type 'MESSAGESENT' will be delivered to your bot through the datafeed.
 
@@ -209,15 +209,13 @@ Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) f
 
 ## Handling Datafeed Events with SDKs
 
-Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.  
+Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
 
-As a bot developer all you have to do is to implement event listener interfaces that are provided out-of-the-box by Symphony's SDKs.  The `DatafeedEventService` event service does all of the heavy lifting and acts as the backbone of your bot or workflow.   
+As a bot developer all you have to do is to implement event listener interfaces that are provided out-of-the-box by Symphony's SDKs. The `DatafeedEventService` event service does all of the heavy lifting and acts as the backbone of your bot or workflow.
 
-After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](datafeed.md#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](datafeed.md#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function. For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
 
 The following diagram shows the event handling workflow:
-
-   
 
 ![](../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
 
@@ -238,7 +236,6 @@ public class RoomListenerImpl implements RoomListener {
         OutboundMessage msgOut = new OutboundMessage("Hello " + msg.getUser().getFirstName() + "!");
         this.botClient.getMessagesClient().sendMessage(msg.getStream().getStreamId(), msgOut);
     }
-
 ```
 {% endcode %}
 {% endtab %}
@@ -265,7 +262,6 @@ class RoomListenerImpl(RoomListener):
 
         message = f'<messageML>Hello {first_name}, hope you are doing well!</messageML>'
         self.bot_client.get_message_client().send_msg(stream_id, dict(message=message))
-
 ```
 {% endcode %}
 {% endtab %}
@@ -328,11 +324,11 @@ public class MyRoomListener : RoomListener
 
 ## Handling Events using the BDK
 
-Similar to the SDKs, the BDK \(Bot Developer Kit\) comes bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.  
+Similar to the SDKs, the BDK \(Bot Developer Kit\) comes bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
 
-As a bot developer all you have to do is to implement generic `EventHandler` classes, passing in a given event type as the type parameter for that class.  
+As a bot developer all you have to do is to implement generic `EventHandler` classes, passing in a given event type as the type parameter for that class.
 
-After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](datafeed.md#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class.  For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter.  Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed. 
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](datafeed.md#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class. For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter. Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed.
 
 The following diagram shows the event handling workflow:
 

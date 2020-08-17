@@ -18,11 +18,19 @@ Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your develop
 
 {% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
+<<<<<<< HEAD:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
 ## Building Your Bot
 
 Once your Bot is configured for SDK development head over to our step-by- step chatbot tutorial:
 
 {% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
+=======
+### Build a Chatbot with the SDK
+
+Get started building your first chatbot:
+
+{% page-ref page="../../tutorials/build-a-chatbot-using-sdk.md" %}
+>>>>>>> master:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
 
 ## Bot Developer Kit
 
@@ -64,5 +72,9 @@ The next step to build a Bot using the BDK is to configure your Bot:
 
 Once your Bot is configured for BDK development head over to our step-by- step chatbot tutorial:
 
+<<<<<<< HEAD:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
 {% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
+=======
+{% page-ref page="../../tutorials/building-a-chatbot-using-bdk.md" %}
+>>>>>>> master:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
 
