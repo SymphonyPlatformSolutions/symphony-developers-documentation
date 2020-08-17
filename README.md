@@ -40,7 +40,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 In depth documentation and reference guide for the Symphony REST API: \(insert link to rest api docs\)
 
-## Symphony Extension API
+## Symphony Extension API ![](.gitbook/assets/extension-app-large.png) 
 
 In depth documentation and reference guide for the Symphony Extension API \(Insert link to extension API docs\)
 
