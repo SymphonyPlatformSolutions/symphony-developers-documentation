@@ -54,8 +54,6 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
-{% page-ref page="../../../building-extension-applications-on-symphony/developing-an-extension-application/building-your-first-extension-application/building-an-extension-app-using-the-bdk/ui-toolkit.md" %}
-
 ### UI Toolkit
 
 The UI Toolkit is a library of react components that helps you build complex frontend applications quickly. The library contains layout guides, forms, input fields, complex financial charts, and is already compatible with Symphony's UI theme.

@@ -32,8 +32,6 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 
 Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
-{% page-ref page="building-extension-applications-on-symphony/overview-of-extension-applications/" %}
-
 ## Become a Certified Developer
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
