@@ -4,9 +4,11 @@ description: Bot Configuration guide for using the BDK and CLI Tool
 
 # Configure your Bot for BDK
 
+## Configure your Bot for BDK
+
 The following is a language-agnostic Bot configuration guide for building Bots using the Symphony BDK and the CLI Tool.
 
-## Prerequisites
+### Prerequisites
 
 * Node
 * Yarn
@@ -14,25 +16,25 @@ The following is a language-agnostic Bot configuration guide for building Bots u
 * Maven 3
 * Git
 
-### Install Yarn:
+#### Install Yarn:
 
 ```text
 $ npm i -g yarn
 ```
 
-### Install the BDK
+#### Install the BDK
 
 ```text
 $ npm i -g symphony-bdk-cli
 ```
 
-### Confirm all the dependencies are met:
+#### Confirm all the dependencies are met:
 
 ```text
 $ symphony-bdk-cli --check-dependencies
 ```
 
-## 1.  Generate your Bot
+### 1.  Generate your Bot
 
 To generate a new Bot project, enter the following:
 
@@ -88,7 +90,7 @@ Leave the second to last question blank and press enter to skip.
 
 Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.
 
-## 2. Configure your Bot
+### 2. Configure your Bot
 
 Once you have your generated Bot scaffold, the next step is to configure your Bot user:
 
@@ -130,11 +132,13 @@ Open your generated Bot code in your favorite Java IDE and navigate to the bot-c
 
 Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Again, confirm that the botUsername, and botEmailAddress matches the information entered in the admin portal on the Pod.
 
-## 3.  Build Your Bot
+### 3.  Build Your Bot
 
-<<<<<<< HEAD
-Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](../tutorials/bdk/building-a-chatbot-using-bdk.md), [Building an Interactive Bot using BDK](../tutorials/bdk/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](../tutorials/bdk/building-a-headless-bot-using-the-bdk.md).
-=======
-Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](../tutorials/building-a-chatbot-using-bdk.md), [Building an Interactive Bot using BDK](../planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](../planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md).
->>>>>>> master
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
+## Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](../tutorials/bdk/building-a-chatbot-using-bdk.md), [Building an Interactive Bot using BDK](../tutorials/bdk/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md).
+
+Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](), [Building an Interactive Bot using BDK](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](../tutorials/bdk/getting-started-with-headless-bots/building-a-headless-bot-using-the-bdk.md).
+
+> > > > > > > master
 
