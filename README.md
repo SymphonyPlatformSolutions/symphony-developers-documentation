@@ -14,6 +14,8 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 * [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
 * [**Become a Certified Developer**](./#developer-certification)
 * [**Developer Tools**](./#developer-tools)
+* \*\*\*\*[**REST API Reference**](symphony-rest-api/symphony-rest-api.md)\*\*\*\*
+* \*\*\*\*[**Extension API Reference**](symphony-extension-api/symphony-extension-api.md)\*\*\*\*
 * [**Embedded Modules**](./#embedded-modules)
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
