@@ -11,7 +11,6 @@ Keep reading to learn about core Symphony concepts in order to ensure a smooth d
 It's time to get started. Navigate to one of the following guides to kick off your developer journey today!
 
 * [**Building Bots on Symphony**](./#building-bots-on-symphony)
-
 * [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
 * [**Become a Certified Developer**](./#developer-certification)
 * [**Developer Tools**](./#developer-tools)
@@ -41,7 +40,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 In depth documentation and reference guide for the Symphony REST API: \(insert link to rest api docs\)
 
-## Symphony Extension API ![](.gitbook/assets/extension-app-large.png) 
+## Symphony Extension API ![](.gitbook/assets/extension-app-large.png)
 
 In depth documentation and reference guide for the Symphony Extension API \(Insert link to extension API docs\)
 

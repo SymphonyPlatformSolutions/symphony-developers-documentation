@@ -89,10 +89,9 @@ So for example when a user prompts the Bot with "@demobot2 /hello", the handle\(
 
 Lastly, start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM:
 
-
 ## ![](../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
 
 ![](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
 
-
 To learn more about how your can add your own commands and business logic, navigate to our Developer Certification where we show you how to build a real-world FX Trading Bot using the Bot SDK and CLI tool:
+
