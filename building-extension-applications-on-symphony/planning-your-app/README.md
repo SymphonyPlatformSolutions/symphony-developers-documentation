@@ -16,7 +16,7 @@ The answer lies in Symphony's Extension API.  The Extension API is a JavaScript 
 * Add modules, or windows bringing your app's content into the Symphony canvas
 * Add entry points for your app, such as navigation items on the left hand nav or hashtags and cashtags.
 * Add interactive buttons to chat and user profile module headers
-* enable users to share content from your app into Symphony chats
+* Enable users to share content from your app into Symphony chats
 
 For a full overview of Symphony's Extension API continue here:
 
@@ -67,21 +67,19 @@ Some extension applications will need to perform actions on behalf of an authori
 
 ### Will your application customize modules by adding buttons to IMs, MIMs, chatrooms, or user profiles?
 
-Another common use case for extension applications is to extend various party of the Symphony UI by adding buttons to IM, MIM or chatroom, or profile modules.  In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication.  You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
+Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IM, MIM or chatroom, or profile modules.  In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication.  You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
 
 {% page-ref page="extension-applications-+-ui-buttons.md" %}
 
-  
+### Will your application customize add links to the hashtag and cashtag hovercards?
 
-   
+Another way extension applications can extend Symphony's UI is to override links associated with hashtag \(e.g. \#symphony\) and cashtag \(e.g. $GOOG\) hover cards.  By attaching your extension app to hashtag or cashtag contexts, you can show content in your app that is relevant to the context clicked by the user.  You can learn more about how build extension apps that extend these hashtag and cashtag entities here:
 
-###  
+{% page-ref page="extension-applications-+-hashtags-and-usdcashtags.md" %}
 
+### Will your application perform custom rendering?
 
+Lastly, extension apps can extend Symphony's UI by acting as a custom renderer for structured objects created by the REST API.  Structured objects are rich, inline, and interactive components embedded in a Symphony message.  These structured objects can be rendered and injected into Symphony by creating a custom renderer as a part of an extension application.  You can learn more about how to create a custom renderer and render structured objects here:
 
-
-
-
-
-   
+{% page-ref page="extension-applications-+-structured-objects.md" %}
 
