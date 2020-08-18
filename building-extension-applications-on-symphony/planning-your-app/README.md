@@ -51,6 +51,32 @@ The more you understand your app's audience, the more you can understand their b
 
 ## 3.  What sort of interactions will your App have?
 
+Users can interact with extension applications in a number of different ways.  Specifically, users can launch a standalone extension app from the left hand nav, invoke the app by clicking on custom UI buttons on a users profile, launch the app by clicking on attached contexts such as hashtags or cashtags, and even allow authenticated apps to make actions on-behalf-of an authorized user.  Before building your extension app, its important to identify the types of interactions between users and your app:
+
+### Will your application need to receive conversation or user data?
+
+Many extension applications built on top of Symphony need to receive conversation or user data.  For example, if you wanted to build an extension app that extends the Symphony UI to add buttons to the IM, MIM, profile, or chatroom modules, it is likely that you would need access to conversation or user data.  In order to do so your application will need perform app authentication.  You can learn more about performing app authentication here:
+
+{% page-ref page="../app-authentication/" %}
+
+### Will your application need to perform actions on behalf of a Symphony user?
+
+Some extension applications will need to perform actions on behalf of an authorized user.  Certain actions such as initiating connection requests, creating IMs and MIMs with other users, sending messages, and getting the presence state of connected users can all be performed by an extension app on behalf of a user \(OBO\).  App workflows that follow this OBO pattern also need to perform app authentication in order to be considered trusted and subsequently receive user/conversation data.  You can learn more about building OBO extension applications here:
+
+{% page-ref page="obo-extension-applications.md" %}
+
+### Will your application customize modules by adding buttons to IMs, MIMs, chatrooms, or user profiles?
+
+Another common use case for extension applications is to extend various party of the Symphony UI by adding buttons to IM, MIM or chatroom, or profile modules.  In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication.  You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
+
+{% page-ref page="extension-applications-+-ui-buttons.md" %}
+
+  
+
+   
+
+###  
+
 
 
 

@@ -61,7 +61,7 @@
 * [Planning Your App](building-extension-applications-on-symphony/planning-your-app/README.md)
   * [Extension Applications + App Authentication](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-app-authentication.md)
   * [OBO Extension Applications](building-extension-applications-on-symphony/planning-your-app/obo-extension-applications.md)
-  * [Extension Applications + UI Extensions](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-ui-extensions.md)
+  * [Extension Applications + UI Buttons](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-ui-buttons.md)
   * [Extension Applications + Structured Objects](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md)
 * [Tutorials](building-extension-applications-on-symphony/tutorials/README.md)
   * [Building an Extension App with App Authentication](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-app-authentication.md)
