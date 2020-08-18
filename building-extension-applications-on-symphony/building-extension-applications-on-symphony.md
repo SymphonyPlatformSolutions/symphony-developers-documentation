@@ -14,7 +14,7 @@ Symphony has built numerous tools in order to streamline Extension App developme
 
 ## 3. Tutorials
 
-Go through our dedicated step by step Extension App tutorials to learn how to start building Extension Applications today!
+Go through our dedicated step by step Extension App tutorials to learn how to leverage our development tools and start building Extension Applications today!
 
 {% page-ref page="tutorials/" %}
 
