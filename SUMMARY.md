@@ -63,6 +63,7 @@
   * [Extension Applications + UI Buttons](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-ui-buttons.md)
   * [Extension Applications + \#hashtags and $cashtags](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md)
   * [Extension Applications + Structured Objects](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md)
+  * [Extension Applications + UI Toolkit](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-ui-toolkit.md)
 * [Tutorials](building-extension-applications-on-symphony/tutorials/README.md)
   * [Building an Extension App with App Authentication](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-app-authentication.md)
   * [Building an Extension App with UI Buttons](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-buttons.md)
