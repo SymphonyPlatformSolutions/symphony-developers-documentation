@@ -65,7 +65,7 @@ Another common use case for extension applications is to extend various parts of
 
 {% page-ref page="extension-applications-+-ui-buttons.md" %}
 
-### Will your application customize add links to the hashtag and cashtag hovercards?
+### Will your application customize links added to the hashtag and cashtag hovercards?
 
 Another way extension applications can extend Symphony's UI is to override links associated with hashtag \(e.g. \#symphony\) and cashtag \(e.g. $GOOG\) hover cards.  By attaching your extension app to hashtag or cashtag contexts, you can show content in your app that is relevant to the context clicked by the user.  You can learn more about how build extension apps that extend these hashtag and cashtag entities here:
 
@@ -73,7 +73,15 @@ Another way extension applications can extend Symphony's UI is to override links
 
 ### Will your application perform custom rendering?
 
-Lastly, extension apps can extend Symphony's UI by acting as a custom renderer for structured objects created by the REST API.  Structured objects are rich, inline, and interactive components embedded in a Symphony message.  These structured objects can be rendered and injected into Symphony by creating a custom renderer as a part of an extension application.  You can learn more about how to create a custom renderer and render structured objects here:
+Extension apps can extend Symphony's UI by acting as a custom renderer for structured objects created by the REST API.  Structured objects are rich, inline, and interactive components embedded in a Symphony message.  These structured objects can be rendered and injected into Symphony by creating a custom renderer as a part of an extension application.  You can learn more about how to create a custom renderer and render structured objects here:
 
 {% page-ref page="extension-applications-+-structured-objects.md" %}
+
+### Will your application contain a standalone frontend?
+
+Lastly, some extension apps do not extend Symphony's UI, but rather require a dedicated  frontend that will be embedded on top of Symphony.  For example, it's possible that your extension app will need to present complex financial data and charts to an end user.  Obviously, this functionality is not provided by Symphony out of the box, but you can bring it into Symphony through an extension application.  Luckily, Symphony provides a UI toolkit containing a library of react components in order to help build complex frontend applications rapidly.  This UI toolkit contains layout guides, forms, and even complex financial charts, to allow you get the best out of your workflow, or business requirements.
+
+To learn more about leveraging the UI Toolkit to build complex frontend applications continue here:
+
+{% page-ref page="extension-applications-+-ui-toolkit.md" %}
 
