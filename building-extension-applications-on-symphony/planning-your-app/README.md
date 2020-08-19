@@ -59,12 +59,6 @@ Many extension applications built on top of Symphony need to receive conversatio
 
 {% page-ref page="../app-authentication/" %}
 
-### Will your application need to perform actions on behalf of a Symphony user?
-
-Some extension applications will need to perform actions on behalf of an authorized user.  Certain actions such as initiating connection requests, creating IMs and MIMs with other users, sending messages, and getting the presence state of connected users can all be performed by an extension app on behalf of a user \(OBO\).  App workflows that follow this OBO pattern also need to perform app authentication in order to be considered trusted and subsequently receive user/conversation data.  You can learn more about building OBO extension applications here:
-
-{% page-ref page="obo-extension-applications.md" %}
-
 ### Will your application customize modules by adding buttons to IMs, MIMs, chatrooms, or user profiles?
 
 Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IM, MIM or chatroom, or profile modules.  In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication.  You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
