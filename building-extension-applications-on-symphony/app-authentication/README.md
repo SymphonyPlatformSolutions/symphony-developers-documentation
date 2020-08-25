@@ -1,5 +1,9 @@
 # App Authentication
 
+{% hint style="info" %}
+Note: This guide is a conceptual overview of how Symphony performs secure app authentication.  While you can implement the following workflow on your own, the BDK \(Bot Developer Kit\) provides an out of the box implementation of app authentication making it easy to get started building authenticated apps.   
+{% endhint %}
+
 In order to create a secure connection between your app and the Symphony client, apps need to perform app authentication.  Upon successful authentication, Symphony extension apps establish a bidirectional trust, allowing for secure and authorized access to user data by leveraging the Symphony Extension API.     
 
 In order to perform app authentication, your app must perform a combination of frontend and backend authentication calls to the Symphony client and pod respectively.  The following steps provide an overview of the frontend and backend calls your App needs to make:
