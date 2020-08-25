@@ -1,2 +1,0 @@
-# Extension Applications + App Authentication
-
