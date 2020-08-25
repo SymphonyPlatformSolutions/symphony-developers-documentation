@@ -89,14 +89,67 @@ Response:
 
 ## 4.  Validate Tokens returned by Symphony Frontend 
 
-The next step in the authentication workflow is to both:
+The next step in the authentication workflow is to:
 
 * validate the App Token JWT returned from the backend API call in step 2
 * validate the Symphony JWT Token that was passed to you through the frontend against the JWT Symphony JWT Token previously attained from executing the backend API call shown in step 2.
 
-While the implementation of this token validation is up to the developer,  a sample implementation of both app token and symphony token validation is provided out of the box by the BDK.
+While the implementation of this token validation is up to the developer,  a sample implementation of both app token and symphony token validation is provided out of the box by the BDK.  In this sample implementation, the app frontend sends both the App Token and Symphony Token to the backend where it verifies that the token pair exists in the token cache.
+
+At this point, your app is fully authenticated and has established a bi-directional trust between itself and the Symphony client.
 
 ## 5.  Obtain User Identity
 
+Once you have successfully authenticated and validated your tokens, you can obtain user data through the Extension API:
 
+The Extension API provides an `extended-user-info` service that contains a `getJwt()` method.  In order to leverage this method, your app must first subscribe to the `extended-user-info` service:
+
+```javascript
+const extendedUserInfoService = SYMPHONY.services.subscribe(
+    'extended-user-info',
+  );
+```
+
+Once subscribed, you app can leverage the `getJwt()` method as follows:
+
+```javascript
+extendedUserInfoService.getJwt()
+```
+
+This method returns a base-64 encoded JWT token for the user in context, containing the following data when decoded:
+
+{% tabs %}
+{% tab title="JSON" %}
+```javascript
+{
+    "aud" : "<id of app>",
+    "iss" : "Symphony Communication Services LLC.",
+    "sub" : "<Symphony user ID>",
+    "exp" : "<expiration date in millis>",
+    "user" : {
+        "id" : "<Symphony user ID>",
+        "emailAddress" : "<email address>",
+        "username" : "<email address>",
+        "firstName" : "<first name>",
+        "lastName" : "<last name>",
+        "displayName" : "<display name>",
+        "title" : "<title>",
+        "company" : "<company>",
+        "companyId" : "<company (pod) ID>",
+        "location" : "<location>",
+        "avatarUrl" : "<URL for user's avatar>",
+        "avatarSmallUrl" : "<URL for user's small avatar>"
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+At this point, your authenticated app has access to sensitive user data such as the Symphony user ID, username, email address, displayName, company, location, etc.  Extension apps can leverage this user data in order to create user-specific workflows and automations.  
+
+## 6.  OBO Authentication
+
+If you wish to take this a step further, your app can take the JWT returned in the last step and perform authentication on behalf of \(OBO\) the user in context.  If you wish you learn more about OBO authentication and OBO enabled workflows, continue here:
+
+{% page-ref page="obo-authentication.md" %}
 
