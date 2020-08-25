@@ -1,2 +1,0 @@
-# RSA App Authentication Workflow
-

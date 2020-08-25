@@ -157,3 +157,9 @@ If you wish to take this a step further, your app can take the JWT returned in t
 
 {% page-ref page="obo-authentication.md" %}
 
+## Next Steps
+
+To learn how to properly configure and authenticate your extension app using the BDK, complete the following configuration tutorial:
+
+{% page-ref page="../app-configuration/configure-your-app-for-bdk-development.md" %}
+

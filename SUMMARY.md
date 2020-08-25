@@ -88,7 +88,6 @@
   * [Configure your App for BDK Development](building-extension-applications-on-symphony/app-configuration/configure-your-app-for-bdk-development.md)
   * [Manage Your Application](building-extension-applications-on-symphony/app-configuration/manage-your-application.md)
 * [App Authentication](building-extension-applications-on-symphony/app-authentication/README.md)
-  * [RSA App Authentication Workflow](building-extension-applications-on-symphony/app-authentication/rsa-app-authentication-workflow.md)
   * [OBO Authentication](building-extension-applications-on-symphony/app-authentication/obo-authentication.md)
 * [Development Tools](building-extension-applications-on-symphony/development-tools/README.md)
   * [UI Style Guide](building-extension-applications-on-symphony/development-tools/ui-style-guide/README.md)
