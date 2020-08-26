@@ -247,5 +247,58 @@ After configuring your backend, start up your Bot by running your BotApplication
 2020-08-25 23:51:03,704 INFO [main] com.symphony.demobot3.BotApplication: Started BotApplication in 7.382 seconds (JVM running for 7.909)
 ```
 
-## 
+## 7.  Prepare and Launch the App Frontend \(App\)
+
+The generated BDK app template comes out of the box with some mock features that are useful for development.  In order to give our app a production feel, we need to clean up and comment some of the scaffold code.  In your generated app project, navigate to your controller.js file, and uncomment lines 55 - 60:
+
+{% tabs %}
+{% tab title="controller.js" %}
+```javascript
+extendedUserInfoService.getJwt().then((jwt) => {
+    RestClient.setJwt(jwt);
+    // RestClient.get('/v1/sym/rooms').then((response) => {
+    //   window.botRooms = response.data;
+    // });
+    // RestClient.get('/v1/sym/bot-info').then((response) => {
+    //   window.botUsername = response.data.username;
+    // });
+  });
+```
+{% endtab %}
+{% endtabs %}
+
+Next, navigate to your app.js file and comment the develblock:
+
+{% tabs %}
+{% tab title="app.js" %}
+```javascript
+ // These next lines will be removed on production
+  /* develblock:start */
+  // function sleep(ms) {
+  //   return new Promise(resolve => setTimeout(resolve, ms));
+  // }
+  // MOCK_USER_SERVICE = {
+  //   getJwt: () => new Promise(Resolve => Resolve('NO JWT')),
+  // };
+  // for (let i = 0; i < 10; i++) {
+  //   console.log('Waiting for Symphony Mock...', i);
+  //   if (window.SYMPHONY.remote.isMock) {
+  //     console.log('Appjs Found it!');
+  //     break;
+  //   }
+  //   await sleep(15);
+  // }
+  // console.log('APPJS GOT', window.SYMPHONY);
+  /* develblock:end */
+```
+{% endtab %}
+{% endtabs %}
+
+Once you've prepared your app project, it's time to run our app.  You can do so by running the following command in your console:
+
+```text
+$ yarn start:dev
+```
+
+This command compiles the project and exposes the main files under port `:4000` - similar to `yarn start:mock`, but does not copy the Symphony Mock Client code to overwrite the Frontend APIs. It also does not boot up the mock JSON server. This is used for when you would like to open the frontend application through Symphony.  
 
