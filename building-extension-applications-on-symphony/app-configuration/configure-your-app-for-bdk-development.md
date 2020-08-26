@@ -302,3 +302,20 @@ $ yarn start:dev
 
 This command compiles the project and exposes the main files under port `:4000` - similar to `yarn start:mock`, but does not copy the Symphony Mock Client code to overwrite the Frontend APIs. It also does not boot up the mock JSON server. This is used for when you would like to open the frontend application through Symphony.  
 
+## 8.  Open your App
+
+Navigate to your Symphony client, and click on 'Symphony Market' in the lefthand navigation.  Locate your newly created app, 'demoapp3' and select 'ADD'.  If successful, you will see your 'demoapp3' app and icon appear under the Applications tab in the lefthand nav.  
+
+To confirm that your app successfully authenticated, navigate to the console of your app backend \(running bot\) and check the logs.  If you see the following, you app's backend has successfully authenticated:
+
+```text
+com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=b4cc827f-424f-41a0-93de-04f2aa355615}: App auth step 1: Initializing extension app authentication
+authentication.SymExtensionAppRSAAuth {transactionId=416f676c-ecfc-4fa7-a148-d25785e195e2}: RSA extension app auth
+com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=3ebae202-a6bf-4822-9363-3d6b0f0f140f}: App auth step 2: Validating tokens
+com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=b2224c9d-9cac-4d3d-82ef-b4d886d2e98a}: App auth step 3: Validating JWT
+```
+
+Now that you have sucessfully authenticated and configured your extension app, navigate to one of the extension app tutorials to add custom business logic to your app:
+
+{% page-ref page="../tutorials/" %}
+
