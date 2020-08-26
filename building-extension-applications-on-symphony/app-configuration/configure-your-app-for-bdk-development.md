@@ -92,7 +92,7 @@ B0njI4/rnJLLoTZUJNTs6a0CAwEAAQ==
 
 Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.  
 
-## 2.  Configure your Bot
+## 2.  Configure your Bot on the Pod
 
 Once you have your generated Bot scaffold, the next step is to configure your Bot user:
 
@@ -106,7 +106,7 @@ Note: The Bot username and Bot email address entered to the CLI tool must match 
 
 ![](../../.gitbook/assets/screen-shot-2020-08-25-at-3.42.24-pm%20%281%29.png)
 
-Open your generated Bot code in your favorite Java IDE and navigate to the bot-config.json file:
+Click 'Create' and open your generated Bot code in your favorite Java IDE and navigate to the bot-config.json file:
 
 ```text
 {
@@ -136,7 +136,116 @@ Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct
 
 ## 3.  Generate you App \(App Frontend\)
 
+To generate a new App project, enter the following:
 
+```text
+$ symphony-bdk-cli --app
+```
 
- 
+This will prompt with you a number of questions about your app and Pod configuration. Type in your app's metadata, use arrows to scroll, and press enter to move onto the next prompt.
+
+{% hint style="info" %}
+Note: You will need to enter the unique app ID entered before.  In this case, our appID is demobot3
+{% endhint %}
+
+```text
+✔ All Dependencies are met!
+This tool will guide you through the process to create an extension app template
+Please answer the following questions
+? What's the project name? (required) demoapp3
+? What's the app Id? (required) demobot3
+? What's your company name? (required) Symphony
+? For running the app connected to the Backend, what's the backend ID? demobot3
+? Please give a brief description of this extension app A sample extension app b
+uilt on top of the BDK
+✔ Boilerplate accessed
+  ✔ Installing dependencies
+Project ready DONE
+```
+
+Open your generated App project in your favorite IDE and navigate to the generated bundle.json file:
+
+{% tabs %}
+{% tab title="extension-app/public/bundle.json" %}
+```javascript
+{
+  "applications": [
+    {
+      "type": "sandbox",
+      "id": "demobot3",
+      "name": "demoapp3",
+      "blurb": "This is template integration app, using React Lib!",
+      "publisher": "Symphony",
+      "url": "https://localhost:4000/controller.html",
+      "domain": "localhost",
+      "iconUrl": "https://localhost:4000/assets/favicon.png"
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## 4.  Configure your App on the Pod
+
+Once you have your generated App scaffold, the next step is to configure your Application on the Pod. Either you or your system administrator should navigate to the admin portal on the Pod and navigate to App Management -&gt; Add Custom App.
+
+Next, fill in the App Metadata in your Pod as seen in your generated bundle.json file:
+
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-4.15.03-pm.png)
+
+Next, paste the RSA public key from your generated bot project in the Authentication section:
+
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-4.16.54-pm.png)
+
+Finally, populate the Configuration section and click 'Create'.  
+
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-11.31.06-pm.png)
+
+## 5.  Enable your App
+
+Once you've configured and created your app on the Symphony Pod, the next step is to enable your app for a given set of users.  In the admin portal of your Symphony Pod, navigate to 'App Settings' in the lefthand navigation bar.  Find your newly created extension app, in this case 'demoapp3' and set the Global Status, Visibility, and installation fields as shown below:  
+
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-11.58.02-pm%20%282%29.png)
+
+Lastly, save your changes.  
+
+## 6.  Prepare and Launch the App Backend \(Bot\)
+
+Open up your generated Bot code in your favorite Java IDE and navigate to the application.yaml file. Add the following `cors` attribute on line 18:
+
+{% tabs %}
+{% tab title="application.yaml" %}
+```text
+server:
+    port: 8080
+    servlet:
+        display-name: demobot3
+        context-path: /demobot3
+resources: src/main/resources
+certs: certs
+bot-config: '${resources}/bot-config.json'
+logging:
+    file: '${resources}/logs/demobot3.log'
+    level:
+        ROOT: INFO
+        com.symphony.bdk.bot.sdk: DEBUG
+        com.symphony.demobot3: DEBUG
+samples:
+    quote-command:
+        api-key: your-key-here
+cors:
+    allowed-origin: https://localhost:4000
+    url-mapping: /**
+```
+{% endtab %}
+{% endtabs %}
+
+After configuring your backend, start up your Bot by running your BotApplication.java file.  You will know your Bot has successfully started and authenticated if you see the following line in your console logs:
+
+```text
+2020-08-25 23:51:03,704 INFO [main] com.symphony.demobot3.BotApplication: Started BotApplication in 7.382 seconds (JVM running for 7.909)
+```
+
+## 
 
