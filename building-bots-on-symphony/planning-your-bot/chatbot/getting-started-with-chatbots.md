@@ -20,21 +20,13 @@ Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your develop
 
 {% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
-
 ### Building Your Bot
 
 Once your Bot is configured for SDK development head over to our step-by- step chatbot tutorial:
 
-## {% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
+{% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
 
-#### Build a Chatbot with the SDK
-
-Get started building your first chatbot:
-
-> > > > > > > master:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
-
-### Bot Developer Kit
+### Bot Developer Kit \(BDK\)
 
 The next tool in Symphony's suite of development tools is the BDK, or Bot Developer Kit. The Bot Developer Kit comprises of three development tools for more advanced Symphony Bot and Extension App development.
 
@@ -64,6 +56,8 @@ Note: In the current version of the BDK, the UI Toolkit is designed to help buil
 
 You can learn more about the UI Toolkit here:
 
+{% page-ref page="../../../building-extension-applications-on-symphony/development-tools/bdk/ui-toolkit.md" %}
+
 ### Configure your Bot for BDK Development
 
 The next step to build a Bot using the BDK is to configure your Bot:
@@ -72,9 +66,5 @@ The next step to build a Bot using the BDK is to configure your Bot:
 
 Once your Bot is configured for BDK development head over to our step-by- step chatbot tutorial:
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
-
-## {% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
-
-> > > > > > > master:building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md
+{% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
 
