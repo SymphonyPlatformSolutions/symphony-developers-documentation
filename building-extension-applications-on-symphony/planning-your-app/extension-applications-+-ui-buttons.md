@@ -94,7 +94,7 @@ If your app is authenticated, you can also receive conversation and user data.  
 }
 ```
 
-If the button is registered in a.chatroom or MIM, the `trigger()` method will receive the following object:
+If the button is registered in a chatroom or MIM, the `trigger()` method will receive the following object:
 
 ```javascript
 {
