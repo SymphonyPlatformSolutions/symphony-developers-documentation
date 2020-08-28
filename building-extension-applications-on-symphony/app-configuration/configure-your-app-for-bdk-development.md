@@ -249,7 +249,7 @@ After configuring your backend, start up your Bot by running your BotApplication
 
 ## 7.  Prepare and Launch the App Frontend \(App\)
 
-The generated BDK app template comes out of the box with some mock features that are useful for development.  In order to give our app a production feel, we need to clean up and comment some of the scaffold code.  In your generated app project, navigate to your controller.js file, and uncomment lines 55 - 60:
+The generated BDK app template comes out of the box with some mock features that are useful for development.  In order to give our app a production feel, we need to clean up and comment some of the scaffold code.  In your generated app project, navigate to your controller.js file, and comment lines 55 - 60:
 
 {% tabs %}
 {% tab title="controller.js" %}
