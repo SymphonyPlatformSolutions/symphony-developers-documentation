@@ -3,7 +3,7 @@
 Symphony Extension Apps have the ability to extend various parts of the Symphony client user interface or UI.  One common implementation is to add buttons to IMs, MIMs, and chatroom modules.
 
 {% hint style="info" %}
-Note this guide is an overview of how to leverage the Extension API to build UI Extensions such as buttons.  For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).  
+Note this guide is an overview of how to leverage the Extension API to build UI Extensions as buttons.  For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).  
 {% endhint %}
 
 ## 1.  Subscribe and Register your Extension
@@ -20,16 +20,13 @@ After subscribing to this service you must register your extension in order to a
 function registerExtension(uiClass, id, serviceName, options)
 ```
 
-The `uiClass` registered is the location within the Symphony application where the UI extension will appear.  The following are the possible values for the `uiClass` parameter:
+The `uiClass` registered is the location within the Symphony application where the UI extension \(button\) will appear.  The following are the possible values for the `uiClass` parameter:
 
 | uiClass | Description |
 | :--- | :--- |
 | single-user-im | Button added to 1-1 instant message module header |
 | multi-user-im | Button added to multi-party instant message module header |
 | room | Button added to chatroom module header |
-| hashtag | Link added to hovercard that appears when hovering over a hashtag \(e.g. \#symphony\) |
-| cashtag | Link added to hovercard that appears when hovering over a cashtag \(e.g. $GOOG |
-| settings | Link added to footer of Application Preferences |
 
 To customize the look and feel of your button, you can pass in an object containing an icon, label, and data to the options parameter:
 
@@ -50,6 +47,8 @@ Once you have registered your UI extension on the appropriate UI class, you can 
 var helloControllerService = SYMPHONY.services.register("hello:controller");
 // The application service that will handle the filter on UI extensions
 var helloFilterService = SYMPHONY.services.register("hello:filter");
+// subscribe to ui service
+var uiService = SYMPHONY.services.subscribe("ui");
 
 // Displays a button on 1-1 instant messages
 uiService.registerExtension(

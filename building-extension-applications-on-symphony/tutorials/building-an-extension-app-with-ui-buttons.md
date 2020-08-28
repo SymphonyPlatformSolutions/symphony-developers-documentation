@@ -178,5 +178,21 @@ Open your pod \(in our case develop2\) and make sure your app is installed.  Ope
 
 ## 5.  Adding our own Business Logic
 
-In the provided implementation of the `trigger()` function, the `openModal()` function is called when our 'Example' button is clicked.  This function leverages the dialog service, another service provided by the Extension API that enables apps to open modal windows from a registered button.      
+In the provided implementation of the `trigger()` function, the `openModal()` function is called when our 'Example' button is clicked.  This function leverages the dialog service, another service provided by the Extension API that enables apps to open modal windows from a registered button. 
+
+Lets update the provided implementation of the trigger\(\) method to open the Symphony Platform Solutions Github page when the button is clicked:
+
+```javascript
+trigger(uiClass, id, payload, data) {
+      switch (id) {
+        case 'buy-im':
+          window.open('https://github.com/SymphonyPlatformSolutions');
+          break;
+        default:
+          break;
+      }
+    }
+```
+
+The bulk of your custom business logic for UI buttons and extensions will exist inside this `trigger()` method.  This is just one possible example of what you can build.  Other possible workflows could leverage buttons to create phone integrations, create redirect workflows, or create meeting/reminder workflows by leveraging third party services and APIs. 
 
