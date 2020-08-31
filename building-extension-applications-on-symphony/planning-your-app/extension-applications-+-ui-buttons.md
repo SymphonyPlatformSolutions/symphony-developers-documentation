@@ -72,7 +72,9 @@ helloControllerService.implement({
   })
 ```
 
-If your app is authenticated, you can also receive conversation and user data.  Each time your extended `uiClass` button is.pushed inside the Symphony client, the `trigger()` method will receive the following user object for a.button registered inside of an IM or user profile: 
+### Receiving Conversation and User Data
+
+If your app is authenticated, you can also receive conversation and user data.  Each time your extended `uiClass` button is pushed inside the Symphony client, the `trigger()` method will receive the following user object for a button registered inside of an IM or user profile: 
 
 ```javascript
 //the following object is recieved if a button is pressed inside an IM or user profile
