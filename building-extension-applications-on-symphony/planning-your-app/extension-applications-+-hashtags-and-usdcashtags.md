@@ -72,8 +72,31 @@ helloControllerService.implement({
 ```
 
 {% hint style="info" %}
-Note:  Extensions created on \#hashtag and $cashtag modules do not have access to user data.  To learn more about building extension apps that are able to access user and conversation data check out our guide on [Building an Extension App with UI Buttons](extension-applications-+-ui-buttons.md).
+Note:  Extensions created on \#hashtag and $cashtag modules do not have access to user data.  To learn more about building extension apps that are able to access user and conversation data check out our guide on [Extension Apps with UI Buttons](extension-applications-+-ui-buttons.md#receiving-conversation-and-user-data).
 {% endhint %}
 
+## 3.  Filter Events
 
+Additionally, the UI Service provides a filter\(\) function that allows you to control if/when your UI Extension is displayed.  The `filter()` function is called each time your custom extension is invoked from a user click.  In this case, each time a \#hashtag or $cashtag link is clicked, the filter\(\) function will be called in order to determine if the custom button should be rendered on the \#hashtag or $cashtag hover card. 
+
+The filter\(\) function receives the `uiClass`,  `id`, and `payload` parameters passed to the `trigger()` function.  Based of the information returned, you can selectively display a button on a \#hashtag or $cashtag hovercard:
+
+```javascript
+// Implement the filter function on your application service
+   helloFilterService.implement({
+   filter: function (type, id, payload) {
+		return payload.name == "#symphony"
+		}
+});
+```
+
+{% hint style="info" %}
+Note: If the `filter()` function on this particular service returns False, the button will not be rendered.
+{% endhint %}
+
+## 4.  Add custom Business Logic
+
+Now that you've register your UI extension, the next step is to add custom business logic.  The bulk of your business logic will exist in your trigger\(\) method as it gets called each time your extension/button is clicked.  Continue her to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK \(Bot Developer Kit\):
+
+{% page-ref page="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
 
