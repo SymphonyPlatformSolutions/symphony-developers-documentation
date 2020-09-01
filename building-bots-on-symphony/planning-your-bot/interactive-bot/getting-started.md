@@ -18,23 +18,9 @@ Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your develop
 
 {% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
-### Java SDK
-
-Get started building your first Interactive Bot using the Java SDK:
-
-### Python SDK
-
-Get started building your first Interactive Bot using the Python SDK:
+Once you have configured your bot, head over to our step by step interactive bots tutorial:
 
 {% page-ref page="../../tutorials/sdk/build-interactive-bot-sdk.md" %}
-
-### Node.js SDK
-
-Get started building your first Interactive Bot using the Node.js SDK:
-
-### .NET SDK
-
-Get started building your first Interactive Bot using the .NET SDK:
 
 ## Bot Developer Kit
 
@@ -54,6 +40,8 @@ The CLI tool allows you to generate code scaffolds for Symphony Bots and Applica
 
 Learn more about the CLI Tool here:
 
+{% page-ref page="../../../developer-tools/developer-tools/bdk/cli-tool.md" %}
+
 ### UI Toolkit
 
 The UI Toolkit is a library of react components that helps you build complex frontend applications quickly. The library contains layout guides, forms, input fields, complex financial charts, and is already compatible with Symphony's UI theme.
@@ -63,6 +51,8 @@ Note: In the current version of the BDK, the UI Toolkit is designed to help buil
 {% endhint %}
 
 You can learn more about the UI Toolkit here:
+
+{% page-ref page="../../../building-extension-applications-on-symphony/development-tools/bdk/ui-toolkit.md" %}
 
 ## Configure your Bot for BDK Development
 

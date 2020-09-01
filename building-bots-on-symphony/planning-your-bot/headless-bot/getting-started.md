@@ -42,3 +42,5 @@ The next step to building a Bot using the BDK is to configure your Bot:
 
 Afterwards, continue building and running your Headless Bot here:
 
+{% page-ref page="../../tutorials/bdk/building-a-headless-bot-using-the-bdk.md" %}
+
