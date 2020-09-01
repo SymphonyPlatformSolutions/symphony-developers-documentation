@@ -9,17 +9,18 @@
   * [Chatbot](building-bots-on-symphony/planning-your-bot/chatbot/README.md)
     * [Getting Started With Chatbots](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md)
   * [Interactive Bot](building-bots-on-symphony/planning-your-bot/interactive-bot/README.md)
-    * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started.md)
+    * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/README.md)
+      * [Build an Interactive Bot using the Java SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-java-sdk.md)
+      * [Build an Interactive Bot using the Python SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/python.md)
+      * [Build an Interactive Bot using the Node.js SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-node.js-sdk.md)
+      * [Build an Interactive Bot using the .NET SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-.net-sdk.md)
+      * [Building an Interactive Bot using BDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md)
   * [Headless Bot](building-bots-on-symphony/planning-your-bot/headless-bot/README.md)
-    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started.md)
+    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/README.md)
+      * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md)
 * [Tutorials](building-bots-on-symphony/tutorials/README.md)
-  * [SDK](building-bots-on-symphony/tutorials/sdk/README.md)
-    * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md)
-    * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-interactive-bot-sdk.md)
-  * [BDK](building-bots-on-symphony/tutorials/bdk/README.md)
-    * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md)
-    * [Building an Interactive Bot using BDK](building-bots-on-symphony/tutorials/bdk/building-an-interactive-bot-using-bdk.md)
-    * [Build a Headless Bot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md)
+  * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md)
+  * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
@@ -33,6 +34,7 @@
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
+  * [Authenticating using SDKs](building-bots-on-symphony/authentication/bot-configuration.md)
 * [Datafeed](building-bots-on-symphony/datafeed.md)
 * [Messages](building-bots-on-symphony/messages/README.md)
   * [MessageML](building-bots-on-symphony/messages/overview-of-messageml/README.md)
@@ -43,7 +45,7 @@
 * [Symphony Elements](building-bots-on-symphony/symphony-elements/README.md)
   * [Available Elements](building-bots-on-symphony/symphony-elements/available-elements/README.md)
     * [Form](building-bots-on-symphony/symphony-elements/available-elements/form.md)
-    * [Buttons](building-bots-on-symphony/symphony-elements/available-elements/buttons.md)
+    * [Buttons](building-extension-applications-on-symphony/developing-an-extension-application/styling/buttons.md)
     * [Text Field](building-bots-on-symphony/symphony-elements/available-elements/text-field.md)
     * [Masked Text Field](building-bots-on-symphony/symphony-elements/available-elements/masked-text-field.md)
     * [Text Area](building-bots-on-symphony/symphony-elements/available-elements/text-area.md)
@@ -111,6 +113,7 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
+  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [SDKs](developer-tools/developer-tools/sdks/README.md)
     * [SDK Configuration](developer-tools/developer-tools/sdks/sdk-configuration.md)
     * [Python](developer-tools/developer-tools/sdks/python.md)
@@ -121,7 +124,6 @@
     * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
-  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [Postman](developer-tools/developer-tools/postman.md)
 
 ## Embedded Modules
@@ -129,4 +131,12 @@
 * [Chat Module](embedded-modules/untitled.md)
 * [Symphony URI](embedded-modules/symphony-uri.md)
 * [Symphony URI for Mobile](embedded-modules/symphony-uri-for-mobile.md)
+
+## Symphony REST API
+
+* [Symphony REST API](symphony-rest-api/symphony-rest-api.md)
+
+## Symphony Extension API
+
+* [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
 
