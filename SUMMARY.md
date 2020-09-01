@@ -68,6 +68,7 @@
   * [Building an Extension App with \#hashtags + $cashtags](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
   * [Building an Extension App with Structured Objects](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-structured-objects.md)
   * [Building an Extension App with UI Toolkit](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md)
+  * [Test Tutorial](building-extension-applications-on-symphony/tutorials/test-tutorial.md)
 * [Overview of Extension API](building-extension-applications-on-symphony/overview-of-extension-api/README.md)
   * [Extension API Architecture](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-architecture.md)
   * [Extension API Services](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/README.md)
