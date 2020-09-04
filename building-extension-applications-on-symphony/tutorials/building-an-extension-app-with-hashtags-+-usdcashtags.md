@@ -162,7 +162,7 @@ filter(type, id, data) {
     }
 ```
 
-## 4. Run the code \(Part 1\)
+## 4. Run the code
 
 The next step is to run the code and launch your app.  First run your bot \(app backend\) by running the BotApplication.java file.  Once your bot has successfully run, launch your app:
 
