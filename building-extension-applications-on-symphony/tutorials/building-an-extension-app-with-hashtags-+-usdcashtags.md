@@ -176,5 +176,73 @@ Open your Symphony Client \(in our case develop2\) and make sure your app is ins
 
 ## 5.  Adding our own Business Logic
 
+### Grabbing the Ticker Symbol:
 
+The next step in building this extension app is to add our own custom business logic, specifically the business logic that captures the stock ticker in context when the $cashtag hovercard is brought into view.  To do so update the provided implementation of the trigger\(\) method to the following:
+
+```javascript
+trigger(uiClass, id, payload, data) {
+          showExtensionApp({ ticker: payload.entity.name.substring(1) });
+          modulesService.focus(APP_ID);
+        }
+```
+
+Here we are calling a the provided `showExtensionApp()` method provided out of the box by the BDK.  This method is defined in `services/controller/extension-app/index.js` and provides a sample implementation of the Extension API's `moduleService` in order to bring your application into view.   The `showExtensionApp()` function allows you to pass along a queryObject as a parameter.  In our case, we are grabbing the ticker name from the payload received in the `trigger()` method and passing that along as an argument to be used in our view.
+
+### Creating the View:
+
+The next step in building our extension app is to create our view.  Inside of the pages folder, create a subfolder called stock-chart.  Inside of this folder, create a new file called `index.js`.  Populate your file with the following: 
+
+{% tabs %}
+{% tab title="index.js" %}
+```javascript
+import React from 'react';
+
+const StockChart = ({ ticker }) => <h1>Hello</h1>
+
+StockChart.defaultProps = {
+  ticker: null,
+}
+
+StockChart.propTypes = {
+  ticker: PropTypes.string
+}
+
+export default StockChart;
+```
+{% endtab %}
+{% endtabs %}
+
+Next, update the route\(\) function inside of location-router.js to return your newly created react component, passing along the ticker symbol as a prop:
+
+```javascript
+import StockChart from './stock-chart';
+
+//Boiler plate code//
+
+function route() {
+  const currentQuery = window.location.href.split('?')[1];
+  const queryObj = getInnerQuery(currentQuery);
+  console.log(queryObj);
+  return <StockChart ticker={queryObj.ticker} />;
+
+  }
+
+```
+
+Run your Bot + Extension Application and click on your custom button added to the $cashtag hovercard.  You should see the StockChart react component come into focus:  
+
+![](../../.gitbook/assets/screen-shot-2020-09-04-at-1.34.47-pm.png)
+
+### Rendering Financial Charts using the UI Toolkit
+
+The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly.  Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications.  In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit.
+
+To learn more about the UI Toolkit continue here:
+
+{% page-ref page="../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
+
+
+
+   
 
