@@ -481,5 +481,15 @@ export default StockChart;
 
 ```
 
+Before this component is rendered, we make a `fetch()` call to the backend where the `DataService` class obtains the data from the API and performs its data cleaning.  Next we update or `chartData` to contain this data using react hooks.  Lastly, we pass our `chartData`  object to our `CandleStickChart` react component where it renders once the data is made available.  
+
+Rerun your app backend \(bot\) and frontend applications.  Submit another message containing a stock $cashtag of your choosing and hover over it.  Select the button and notice a CandleStickChart containing realtime stock data brought into view:
+
+![](../../.gitbook/assets/screen-shot-2020-09-04-at-2.31.27-pm.png)
+
+For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
+
+{% page-ref page="../development-tools/bdk/ui-toolkit.md" %}
+
 
 
