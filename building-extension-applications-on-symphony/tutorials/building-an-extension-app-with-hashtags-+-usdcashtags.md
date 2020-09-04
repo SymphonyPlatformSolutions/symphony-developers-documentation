@@ -236,13 +236,250 @@ Run your Bot + Extension Application and click on your custom button added to th
 
 ### Rendering Financial Charts using the UI Toolkit
 
-The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly.  Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications.  In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit.
+The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly.  Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications.  In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit.  The `CandleStickChart` component takes in the following data format in order to render the data:
 
-To learn more about the UI Toolkit continue here:
+```javascript
+[
+  {
+    "date": "2010-01-04",
+    "open": 25.436282332605284,
+    "high": 25.835021381744056,
+    "low": 25.411360259406774,
+    "close": 25.710416,
+    "volume": 38409100,
+    "split": "",
+    "dividend": ""
+  },
+....
+```
 
-{% page-ref page="../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
+### Setting up the Backend:
+
+Since our extension app is going to render a candlestick stock chart in real time, we need to fetch and clean data from a third party API.  In this tutorial, we will be using [alphavantage](https://www.alphavantage.co/) as our data provider.  
+
+Once you have received your free API Token, you can leverage the API.  Specifically, we will be using data provided from the [Time Series Daily API](https://www.alphavantage.co/documentation/#daily) call.
+
+Since we want to keep our data and our view separate, all of the interaction with AlphaVantage API, including the data cleaning will occur on our app's backend or running bot.  In your bot project, create a new `services` folder and add a class `DataService`.  Add the following to your `DataService` class:
+
+{% tabs %}
+{% tab title="services/DataService.java" %}
+```java
+package com.symphony.demobot3.services;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.symphony.bdk.bot.sdk.lib.restclient.RestClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+@RestController
+public class DataService {
+
+    private static final String dailyTickerUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=%s&apikey=%s";
+    private static final String apiKey = "TLQ8D4O5EZGG4NO7";
+    private RestClient restClient;
+
+    public DataService(RestClient restClient){
+        this.restClient = restClient;
+    }
+
+    @GetMapping("/stocks/{ticker}")
+    public List<ChartData> getStockChartData(@PathVariable String ticker){
+        String requestUrl = String.format(dailyTickerUrl, ticker, apiKey);
+        StockDailyResult result = restClient.getRequest(requestUrl, StockDailyResult.class).getBody();
+        Map<String, StockDailyEntry> timeSeries = result.getTimeSeries();
+
+        return timeSeries.keySet().stream().map(date -> new ChartData(
+                date,
+                timeSeries.get(date).getOpen(),
+                timeSeries.get(date).getHigh(),
+                timeSeries.get(date).getLow(),
+                timeSeries.get(date).getClose(),
+                timeSeries.get(date).getVolume()
+        ))
+                .sorted(Comparator.comparing(ChartData::getDate))
+                .collect(Collectors.toList());
+    }
+}
+
+@JsonIgnoreProperties
+class StockDailyResult {
+    @JsonProperty("Time Series (Daily)")
+    Map<String, StockDailyEntry> timeSeries;
+
+    public Map<String, StockDailyEntry> getTimeSeries() {
+        return timeSeries;
+    }
+}
+
+class StockDailyEntry {
+    @JsonProperty("1. open")
+    String open;
+    @JsonProperty("2. high")
+    String high;
+    @JsonProperty("3. low")
+    String low;
+    @JsonProperty("4. close")
+    String close;
+    @JsonProperty("5. volume")
+    String volume;
+
+    public float getOpen() {
+        return Float.parseFloat(open);
+    }
+
+    public float getHigh() {
+        return Float.parseFloat(high);
+    }
+
+    public float getLow() {
+        return Float.parseFloat(low);
+    }
+
+    public float getClose() {
+        return Float.parseFloat(close);
+    }
+
+    public float getVolume() {
+        return Float.parseFloat(volume);
+    }
+
+    public void setOpen(String open) {
+        this.open = open;
+    }
+
+    public void setHigh(String high) {
+        this.high = high;
+    }
+
+    public void setLow(String low) {
+        this.low = low;
+    }
+
+    public void setClose(String close) {
+        this.close = close;
+    }
+
+    public void setVolume(String volume) {
+        this.volume = volume;
+    }
+}
+
+class ChartData {
+    String date;
+    float open;
+    float high;
+    float low;
+    float close;
+    float volume;
 
 
+    public ChartData(String date, float open, float high, float low, float close, float volume) {
+        this.date = date;
+        this.open = open;
+        this.high = high;
+        this.low = low;
+        this.close = close;
+        this.volume = volume;
 
-   
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public float getOpen() {
+        return open;
+    }
+
+    public float getHigh() {
+        return high;
+    }
+
+    public float getLow() {
+        return low;
+    }
+
+    public float getClose() {
+        return close;
+    }
+
+    public float getVolume() {
+        return volume;
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+In this class, we are passing along the stock symbol received from the frontend as captured in our $cashtag button, sending to the backend, and calling the API using the symbol as a query parameter.  The data returned is the format required in our `CandleStickChart` react component referenced above.
+
+### Rendering the Data
+
+Now that our backend `DataService` is setup, the next step is to render the data on the frontend.  Let's update or `StockChart` component to the following:
+
+```javascript
+import React from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import {CandleStickChart, Box, useAutoFetch, CheckBox, Car, buildDateParser} from 'symphony-bdk-ui-toolkit';
+
+const StockChart = ({ ticker }) => {
+  const [ chartData, setChartData ] = useState({ loading: false });
+  const apiUrl = `http://localhost:8080/demobot3/stocks/${ticker}`;
+
+  useEffect(() => {
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(json => {
+        const formatteddata = json.map(entry => ({
+          ...entry,
+          date: new Date(entry.date)
+        }));
+        setChartData({
+          loading: false,
+          title: `${ticker}`,
+          data: formatteddata
+        });
+      });
+  }, []);
+
+  return !chartData.data ? 'loading' : (
+
+    <Box style={{ width: '100%', height: '500px', marginTop: '50px' }}>
+      <CandleStickChart
+        tickSizeX={10}
+        loading={chartData.loading}
+        data={chartData.data}
+        title={chartData.title}
+        hasGrid
+        hasCrossHair
+        hasOHLCTooltip
+        hasTooltip
+        hasZoom
+        hasEdgeIndicator
+      />
+    </Box>
+  );
+}
+
+StockChart.defaultProps = {
+  ticker: null,
+}
+
+StockChart.propTypes = {
+  ticker: PropTypes.string
+}
+
+export default StockChart;
+
+```
+
+
 
