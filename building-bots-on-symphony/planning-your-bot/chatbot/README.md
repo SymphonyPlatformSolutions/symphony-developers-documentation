@@ -36,7 +36,3 @@ You can learn more about parsing events and introducing custom business logic he
 
 Continue on to our tutorial on building chatbots. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
 
-{% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
-
-{% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
-

@@ -134,5 +134,5 @@ Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct
 
 ### 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](../tutorials/bdk/building-a-chatbot-using-bdk.md), [Building an Interactive Bot using BDK](../tutorials/bdk/building-an-interactive-bot-using-bdk.md), or [Building a Headless Bot using the BDK](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md).
+Now that you have generated and configured your Bot, move onto one our guides on [Building a Chatbot using BDK](), [Building an Interactive Bot using BDK](), or [Building a Headless Bot using the BDK](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d53a0d96da58bb092bb4a07bf812b569cd918e6c/building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md).
 
