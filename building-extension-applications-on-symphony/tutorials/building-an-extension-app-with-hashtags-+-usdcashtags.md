@@ -487,9 +487,7 @@ Rerun your app backend \(bot\) and frontend applications.  Submit another messag
 
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-2.31.27-pm.png)
 
-For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
+If you see this view, then you have successfully completed the tutorial!  For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
 
 {% page-ref page="../development-tools/bdk/ui-toolkit.md" %}
-
-
 
