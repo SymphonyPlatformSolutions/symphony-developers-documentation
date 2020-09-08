@@ -20,7 +20,7 @@
       * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md)
 * [Tutorials](building-bots-on-symphony/tutorials/README.md)
   * [SDK](building-bots-on-symphony/tutorials/sdk/README.md)
-    * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md)
+    * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md)
     * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-interactive-bot-sdk.md)
   * [BDK](building-bots-on-symphony/tutorials/bdk/README.md)
     * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md)
