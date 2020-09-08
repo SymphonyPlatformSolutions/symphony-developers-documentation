@@ -19,8 +19,13 @@
     * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/README.md)
       * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md)
 * [Tutorials](building-bots-on-symphony/tutorials/README.md)
-  * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/building-a-chatbot-using-bdk.md)
-  * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md)
+  * [SDK](building-bots-on-symphony/tutorials/bdk/README.md)
+    * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/build-a-chatbot-using-sdk.md)
+    * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-interactive-bot-sdk.md)
+  * [BDK](building-bots-on-symphony/tutorials/bdk/README.md)
+    * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md)
+    * [Build an Interactive Bot using the BDK](building-bots-on-symphony/tutorials/bdk/building-an-interactive-bot-using-bdk.md)
+    * [Build a Headless Bot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
@@ -138,4 +143,3 @@
 ## Symphony Extension API
 
 * [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
-
