@@ -56,11 +56,13 @@ Note: In the current version of the BDK, the UI Toolkit is designed to help buil
 
 You can learn more about the UI Toolkit here:
 
+{% page-ref page="../../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
+
 ### Configure your Bot for BDK Development
 
-The next step to build a Bot using the BDK is to configure your Bot:
+The next step to building a Bot using the BDK is to configure your Bot:
 
 {% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
-Once your Bot is configured for BDK development head over to our step-by- step chatbot tutorial:
+Once your Bot is configured for BDK development, head over to our step-by- step chatbot tutorial:
 
