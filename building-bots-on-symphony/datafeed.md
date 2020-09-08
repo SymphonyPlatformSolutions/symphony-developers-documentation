@@ -207,6 +207,8 @@ Notice how each event returned by the datafeed has important metadata and attrib
 
 Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) for the expanded JSON payload corresponding to each event type.
 
+## Handling Events:
+
 ## Handling Datafeed Events with SDKs
 
 Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
