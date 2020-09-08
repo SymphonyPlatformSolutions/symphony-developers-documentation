@@ -12,7 +12,7 @@ The Symphony datafeed is a real-time messages and events stream that provides me
 
 Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.
 
-Once a bot has created a datafeed, it has access all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as an interface between a Bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a Bot's scope are encrypted by the Agent before reaching your bot. That way only the Bot is the only one who can access the contents of these events and messages being delivered to your bot.
+Once a bot has created a datafeed, it has access all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a Bot's scope are encrypted by the Agent before reaching your bot. That way the Bot is the only one who can access the contents of these events and messages being delivered to your bot.
 
 The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
@@ -20,9 +20,9 @@ The following illustrates the relationship between your bot, datafeed, and Symph
 
 ## Real Time Events
 
-Events are delivered to your Bot via the datafeed as JSON objects. Each type of Symphony event corresponds to a different JSON payload.
+Events are delivered to your bot via the datafeed as JSON objects. Each type of Symphony event corresponds to a different JSON payload.
 
-For example, if a user sends your Bot a message, an event of type 'MESSAGESENT' will be delivered to your bot through the datafeed.
+For example, if a user sends your bot a message, an event of type 'MESSAGESENT' will be delivered to your bot through the datafeed.
 
 ```text
 {
@@ -370,7 +370,7 @@ public class RoomMessageEventHandler extends EventHandler<MessageEvent> {
 
 ## Conversational Workflow
 
-As you can see, the datafeed acts as the backbone of your Bot. In many cases your Bot will be waiting for events to come in through the datafeed, which it constantly 'reads'. When an event or message comes through the datafeed, your bot will 'listen' for the event, extract the relevant data from the JSON payload and kick off its intented workflow.
+As you can see, the datafeed acts as the backbone of your Bot. In many cases your Bot will be waiting for events to come in through the datafeed, which it constantly 'reads'. When an event or message comes through the datafeed, your bot will 'listen' for the event, extract the relevant data from the JSON payload and kick off its intended workflow.
 
 While you can write all of this datafeed logic yourself, our dedicated SDKs and BDK provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot and add custom business logic.
 
