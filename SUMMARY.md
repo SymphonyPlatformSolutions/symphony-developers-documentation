@@ -9,19 +9,13 @@
   * [Chatbot](building-bots-on-symphony/planning-your-bot/chatbot/README.md)
     * [Getting Started With Chatbots](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md)
   * [Interactive Bot](building-bots-on-symphony/planning-your-bot/interactive-bot/README.md)
-    * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/README.md)
-      * [Build an Interactive Bot using the Java SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-java-sdk.md)
-      * [Build an Interactive Bot using the Python SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/python.md)
-      * [Build an Interactive Bot using the Node.js SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-node.js-sdk.md)
-      * [Build an Interactive Bot using the .NET SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-.net-sdk.md)
-      * [Building an Interactive Bot using BDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md)
+    * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started.md)
   * [Headless Bot](building-bots-on-symphony/planning-your-bot/headless-bot/README.md)
-    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/README.md)
-      * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md)
+    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started.md)
 * [Tutorials](building-bots-on-symphony/tutorials/README.md)
   * [SDK](building-bots-on-symphony/tutorials/sdk/README.md)
     * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md)
-    * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-interactive-bot-sdk.md)
+    * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-an-interactive-bot-using-the-sdk.md)
   * [BDK](building-bots-on-symphony/tutorials/bdk/README.md)
     * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md)
     * [Build an Interactive Bot using the BDK](building-bots-on-symphony/tutorials/bdk/building-an-interactive-bot-using-bdk.md)
@@ -143,3 +137,4 @@
 ## Symphony Extension API
 
 * [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
+

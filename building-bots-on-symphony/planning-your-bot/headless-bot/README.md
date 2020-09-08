@@ -26,7 +26,7 @@ In practice, a Headless Bot needs to expose an endpoint in order to listen and h
 
 ## Next Steps:
 
-Continue on to our [Getting Started With Headless Bots](getting-started/) guide. Here you will learn how to get your own Headless Bot up and running and take a closer look at the APIs used to create a simple Headless Bot workflow:
+Continue on to our [Getting Started With Headless Bots](getting-started.md) guide. Here you will learn how to get your own Headless Bot up and running and take a closer look at the APIs used to create a simple Headless Bot workflow:
 
-{% page-ref page="getting-started/" %}
+{% page-ref page="getting-started.md" %}
 

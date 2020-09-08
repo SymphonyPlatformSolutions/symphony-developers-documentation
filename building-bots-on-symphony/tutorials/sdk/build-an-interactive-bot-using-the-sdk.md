@@ -2,13 +2,13 @@
 description: Building an Interactive Bot using the Symphony Generator + Python SDK
 ---
 
-# Build an Interactive Bot using the Python SDK
+# Build an Interactive Bot using the SDK
 
 ## Prerequisites
 
 ### Complete the SDK Bot Configuration guide:
 
-{% page-ref page="../../../configuration/configure-your-bot-for-sdks.md" %}
+{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
 
 ## 1.  Install Dependencies
 
@@ -275,7 +275,7 @@ To see your Symphony Element or form rendered, run your Bot.
 
 Navigate to Symphony, create an IM with your Bot, and type any message to see the form rendered:
 
-![](../../../../.gitbook/assets/screen-shot-2020-07-15-at-7.14.53-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-15-at-7.14.53-pm.png)
 
 When you fill out the form and click submit, the datafeed handles the event and dispatches it to your ElementsListenerImpl class:
 
