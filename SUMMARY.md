@@ -90,14 +90,6 @@
   * [Manage Your Application](building-extension-applications-on-symphony/app-configuration/manage-your-application.md)
 * [App Authentication](building-extension-applications-on-symphony/app-authentication/README.md)
   * [OBO Authentication](building-extension-applications-on-symphony/app-authentication/obo-authentication.md)
-* [Development Tools](building-extension-applications-on-symphony/development-tools/README.md)
-  * [UI Style Guide](building-extension-applications-on-symphony/development-tools/ui-style-guide/README.md)
-    * [Colors](building-extension-applications-on-symphony/development-tools/ui-style-guide/colors.md)
-    * [Forms](building-extension-applications-on-symphony/development-tools/ui-style-guide/forms.md)
-    * [Buttons](building-extension-applications-on-symphony/development-tools/ui-style-guide/buttons.md)
-  * [BDK](building-extension-applications-on-symphony/development-tools/bdk/README.md)
-    * [UI Toolkit](building-extension-applications-on-symphony/development-tools/bdk/ui-toolkit.md)
-    * [Mock Server](building-extension-applications-on-symphony/development-tools/bdk/mock-server.md)
 
 ## Developer Certification
 
@@ -119,10 +111,15 @@
     * [Node.js](developer-tools/developer-tools/sdks/node.js.md)
     * [.NET](developer-tools/developer-tools/sdks/.net.md)
   * [BDK](developer-tools/developer-tools/bdk/README.md)
-    * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
+    * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
+    * [Mock Server](developer-tools/developer-tools/bdk/mock-server.md)
   * [Postman](developer-tools/developer-tools/postman.md)
+  * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
+    * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
+    * [Forms](developer-tools/developer-tools/ui-style-guide/forms.md)
+    * [Buttons](developer-tools/developer-tools/ui-style-guide/buttons.md)
 
 ## Embedded Modules
 
