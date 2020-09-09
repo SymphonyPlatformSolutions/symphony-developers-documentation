@@ -66,3 +66,7 @@ The next step to building a Bot using the BDK is to configure your Bot:
 
 Once your Bot is configured for BDK development, head over to our step-by- step chatbot tutorial:
 
+{% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
+
+
+
