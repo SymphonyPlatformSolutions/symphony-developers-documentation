@@ -4,13 +4,13 @@ description: Building a Chatbot using the BDK and CLI Tool
 
 # Build a Chatbot using the BDK
 
-### Prerequisites
+## Prerequisites
 
-#### Complete the BDK Bot Configuration guide:
+### Complete the BDK Bot Configuration guide:
 
 {% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
-### 1. Dive into the Code
+## 1. Dive into the Code
 
 The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly. To illustrate these best practices and convenient boilerplate code, navigate to HelpCommandHandler.java inside your project directory:
 
@@ -85,7 +85,7 @@ So for example when a user prompts the Bot with "@demobot2 /hello", the handle\(
 {% endtab %}
 {% endtabs %}
 
-### 2.  Run your Bot
+## 2.  Run your Bot
 
 Lastly, start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM:
 

@@ -153,5 +153,9 @@ The config.json file has other fields that offers advanced configurations for pr
 
 ## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one of the language-specific [Getting Started With Chatbots](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/README.md#java-sdk), [Getting Started With Interactive Bots](../planning-your-bot/interactive-bot/getting-started/#java-sdk), or [Getting Started With Headless Bots](../planning-your-bot/headless-bot/getting-started/) guides.
+Now that you have generated and configured your Bot, move onto one of the language-specific bot tutorials:
+
+{% page-ref page="../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
+
+{% page-ref page="../tutorials/sdk/build-an-interactive-bot-using-the-sdk.md" %}
 

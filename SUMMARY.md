@@ -9,19 +9,13 @@
   * [Chatbot](building-bots-on-symphony/planning-your-bot/chatbot/README.md)
     * [Getting Started With Chatbots](building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md)
   * [Interactive Bot](building-bots-on-symphony/planning-your-bot/interactive-bot/README.md)
-    * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/README.md)
-      * [Build an Interactive Bot using the Java SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-java-sdk.md)
-      * [Build an Interactive Bot using the Python SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/python.md)
-      * [Build an Interactive Bot using the Node.js SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-node.js-sdk.md)
-      * [Build an Interactive Bot using the .NET SDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/build-an-interactive-bot-using-the-.net-sdk.md)
-      * [Building an Interactive Bot using BDK](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started/building-an-interactive-bot-using-bdk.md)
+    * [Getting Started With Interactive Bots](building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started.md)
   * [Headless Bot](building-bots-on-symphony/planning-your-bot/headless-bot/README.md)
-    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/README.md)
-      * [Building a Headless Bot using the BDK](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started/building-a-headless-bot-using-the-bdk.md)
+    * [Getting Started With Headless Bots](building-bots-on-symphony/planning-your-bot/headless-bot/getting-started.md)
 * [Tutorials](building-bots-on-symphony/tutorials/README.md)
   * [SDK](building-bots-on-symphony/tutorials/sdk/README.md)
     * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md)
-    * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-interactive-bot-sdk.md)
+    * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-an-interactive-bot-using-the-sdk.md)
   * [BDK](building-bots-on-symphony/tutorials/bdk/README.md)
     * [Build a Chatbot using the BDK](building-bots-on-symphony/tutorials/bdk/building-a-chatbot-using-bdk.md)
     * [Build an Interactive Bot using the BDK](building-bots-on-symphony/tutorials/bdk/building-an-interactive-bot-using-bdk.md)
@@ -96,14 +90,6 @@
   * [Manage Your Application](building-extension-applications-on-symphony/app-configuration/manage-your-application.md)
 * [App Authentication](building-extension-applications-on-symphony/app-authentication/README.md)
   * [OBO Authentication](building-extension-applications-on-symphony/app-authentication/obo-authentication.md)
-* [Development Tools](building-extension-applications-on-symphony/development-tools/README.md)
-  * [UI Style Guide](building-extension-applications-on-symphony/development-tools/ui-style-guide/README.md)
-    * [Colors](building-extension-applications-on-symphony/development-tools/ui-style-guide/colors.md)
-    * [Forms](building-extension-applications-on-symphony/development-tools/ui-style-guide/forms.md)
-    * [Buttons](building-extension-applications-on-symphony/development-tools/ui-style-guide/buttons.md)
-  * [BDK](building-extension-applications-on-symphony/development-tools/bdk/README.md)
-    * [UI Toolkit](building-extension-applications-on-symphony/development-tools/bdk/ui-toolkit.md)
-    * [Mock Server](building-extension-applications-on-symphony/development-tools/bdk/mock-server.md)
 
 ## Developer Certification
 
@@ -125,10 +111,15 @@
     * [Node.js](developer-tools/developer-tools/sdks/node.js.md)
     * [.NET](developer-tools/developer-tools/sdks/.net.md)
   * [BDK](developer-tools/developer-tools/bdk/README.md)
-    * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [CLI Tool](developer-tools/developer-tools/bdk/cli-tool.md)
+    * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
+    * [Mock Server](developer-tools/developer-tools/bdk/mock-server.md)
   * [Postman](developer-tools/developer-tools/postman.md)
+  * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
+    * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
+    * [Forms](developer-tools/developer-tools/ui-style-guide/forms.md)
+    * [Buttons](developer-tools/developer-tools/ui-style-guide/buttons.md)
 
 ## Embedded Modules
 
@@ -143,3 +134,4 @@
 ## Symphony Extension API
 
 * [Symphony Extension API](symphony-extension-api/symphony-extension-api.md)
+

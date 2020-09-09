@@ -489,5 +489,3 @@ Rerun your app backend \(bot\) and frontend applications.  Submit another messag
 
 If you see this view, then you have successfully completed the tutorial!  For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
 
-{% page-ref page="../development-tools/bdk/ui-toolkit.md" %}
-
