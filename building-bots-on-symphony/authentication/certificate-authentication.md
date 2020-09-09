@@ -53,7 +53,7 @@ The Common Name \(CN\) value must match the name of the Symphony Service Account
 
 | Details | Example Values |
 | :--- | :--- |
-| Certificate Type | Sigle Domain Certificate |
+| Certificate Type | Single Domain Certificate |
 | Common Name \(CN\) | demo-bot1 |
 | Organization | Excelsior Bank |
 | Department | Collaboration Services |
