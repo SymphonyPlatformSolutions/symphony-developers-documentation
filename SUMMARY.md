@@ -25,6 +25,7 @@
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
   * [Overview of Key Manager API](building-bots-on-symphony/overview-of-rest-api/key-manager-api.md)
   * [Overview of Agent API](building-bots-on-symphony/overview-of-rest-api/agent-api.md)
+  * [REST API Reference](https://developers.symphony.com/restapi/reference)
 * [Configuration](building-bots-on-symphony/configuration/README.md)
   * [Configure your Bot for SDKs](building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
   * [Configure your Bot for BDK](building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md)
