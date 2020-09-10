@@ -1,2 +1,0 @@
-# Authenticating using SDKs
-

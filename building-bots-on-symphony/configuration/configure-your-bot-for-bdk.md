@@ -136,9 +136,5 @@ Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct
 
 Now that you have generated and configured your Bot, move onto one our BDK tutorials:
 
-{% page-ref page="../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
-
-{% page-ref page="../tutorials/bdk/building-an-interactive-bot-using-bdk.md" %}
-
-{% page-ref page="../tutorials/bdk/building-a-headless-bot-using-the-bdk.md" %}
+{% page-ref page="../tutorials/bdk/" %}
 

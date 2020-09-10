@@ -22,7 +22,7 @@ The Symphony Bot Generator is a Yeoman-based code generator that generates a pro
 ### Install Symphony Bot Generator:
 
 ```text
-$ $ npm install -g yo generator-symphony
+$ npm install -g yo generator-symphony
 ```
 
 ## 1.  Generate Your Bot
@@ -153,9 +153,7 @@ The config.json file has other fields that offers advanced configurations for pr
 
 ## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one of the language-specific bot tutorials:
+Now that you have generated and configured your Bot, move onto one of the SDK bot tutorials:
 
-{% page-ref page="../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
-
-{% page-ref page="../tutorials/sdk/build-an-interactive-bot-using-the-sdk.md" %}
+{% page-ref page="../tutorials/sdk/" %}
 
