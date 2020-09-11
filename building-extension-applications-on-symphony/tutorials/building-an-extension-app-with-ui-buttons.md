@@ -174,7 +174,7 @@ Open your pod \(in our case develop2\) and make sure your app is installed.  Ope
 
  
 
-![](../../.gitbook/assets/screen-shot-2020-08-26-at-1.16.12-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-09-11-at-3.28.23-pm.png)
 
 ## 5.  Adding our own Business Logic
 
