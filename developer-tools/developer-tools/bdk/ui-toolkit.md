@@ -2,11 +2,11 @@
 
 ## Summary
 
-* Prerequisites
-* Installation
-* Usage
-* Dependencies
-* Next Steps
+* [Prerequisites](ui-toolkit.md#prerequisites)
+* [Installation](ui-toolkit.md#installation)
+* [Usage](ui-toolkit.md#usage)
+* [Peer Dependencies](ui-toolkit.md#peer-dependencies)
+* [Next Steps](ui-toolkit.md#next-steps)
 
 ## Description
 
@@ -73,4 +73,10 @@ There's a few components that require a peer dependency installation, that means
   }
 }
 ```
+
+## Next Steps
+
+For an step by step tutorial on how to leverage the UI Toolkit to create complex frontend applications, continue here:
+
+{% page-ref page="../../../building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md" %}
 
