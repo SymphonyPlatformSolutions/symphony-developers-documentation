@@ -26,7 +26,9 @@ Continue here for an installation/usage guide:
 
 ## UI Toolkit
 
-The UI Toolkit is a library of react components that helps developers build complex frontend applications quickly.  The library contains layout guides, forms, input fields, complex financial charts, and is compatible with Symphony's UI theme.  
+The UI Toolkit is a library of react components that helps developers build complex frontend applications quickly.  The library contains layout guides, forms, input fields, complex financial charts, and is compatible with Symphony's UI theme. 
 
+Continue here for an installation/usage guide: 
 
+{% page-ref page="ui-toolkit.md" %}
 
