@@ -15,7 +15,7 @@ Symphony has built numerous tools in order to streamline Symphony Bot Developmen
 {% hint style="success" %}
 ### New Bot Developer Kit 2.0 for Java \(Beta\)
 
-To do intro. Kick off your new bot developer journey [here](../developer-tools/developer-tools/bdk-2.0.md)
+Get started building bots using our new Bot Developer Kit 2.0! With an ultra simplified configuration and authentication setup, intuitive message and room management, message template and a new activities APIs, developing bots on Symphony has never been easier. Continue here to learn how the BDK 2.0 can help power your Symphony Bots, integrations and workflow automations today.
 {% endhint %}
 
 ## 3.  Tutorials
