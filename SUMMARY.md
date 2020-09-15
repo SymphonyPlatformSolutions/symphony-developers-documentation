@@ -103,7 +103,6 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
-  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [SDKs](developer-tools/developer-tools/sdks/README.md)
     * [SDK Configuration](developer-tools/developer-tools/sdks/sdk-configuration.md)
     * [Python](developer-tools/developer-tools/sdks/python.md)
@@ -116,6 +115,7 @@
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
   * [BDK 2.0](developer-tools/developer-tools/bdk-2.0.md)
   * [Postman](developer-tools/developer-tools/postman.md)
+  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
     * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
     * [Forms](developer-tools/developer-tools/ui-style-guide/forms.md)
