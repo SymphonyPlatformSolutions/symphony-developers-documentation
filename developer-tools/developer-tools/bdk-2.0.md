@@ -7,6 +7,7 @@
 * Configuration
 * Authentication
 * Datafeed Management
+* Managing Multiple Bots
 * Activities API
 * Message + Room Management
 * Messages Templating
@@ -208,6 +209,18 @@ When a user sends a bot a message, the Bot will pick up the event from the dataf
  For more information on the Symphony datafeed continue here:
 
 {% page-ref page="../../building-bots-on-symphony/datafeed.md" %}
+
+## Managing Multiple Bots
+
+The BDK 2.0 makes it easy to manage multiple bot instances within a single project.  As long as you have unique configuration files that correspond to different service accounts, you can manage multiple bot instances from a centralized source.  To do so, simply instantiate multiple bot instances of the `SymphonyBDK` class within your bot project:
+
+```java
+// Bot #1
+final SymphonyBdk bot1 = new SymphonyBdk(loadFromClasspath("/config_1.yaml"));
+
+//Bot #2
+final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
+```
 
 
 
