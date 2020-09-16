@@ -2,13 +2,13 @@
 
 ## Summary
 
-* Description
-* Installation
-* Configuration
-* Authentication
-* Datafeed Management
-* Managing Multiple Bots
-* Activities API
+* [Description](bdk-2.0.md#description)
+* [Installation](bdk-2.0.md#installation)
+* [Configuration](bdk-2.0.md#configuration)
+* [Authentication](bdk-2.0.md#authentication)
+* [Datafeed Management](bdk-2.0.md#datafeed-management)
+* [Managing Multiple Bots](bdk-2.0.md#managing-multiple-bots)
+* [Activities API](bdk-2.0.md#activities-api)
 * Message + Room Management
 * Messages Templating
 
