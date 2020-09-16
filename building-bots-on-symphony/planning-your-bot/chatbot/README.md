@@ -8,7 +8,7 @@ Chatbots or conversational Bots, are the most common Bots in the Symphony ecosys
 
 As stated before, users can interact with chatbots in chatrooms, MIMs and IMs. In order to initiate your chatbot's workflow we recommend that users @mention the Bot's username in order to get the Bot's attention and signal to the Bot to begin its intended function. That way, chatbots can be active members of chatrooms or MIMs, but eliminate noise that is outside the scope of its intended workflow.
 
-It is common for Bots to contain multiple commands or sub workflows that it can action upon. It is best practice to list these commands in a help menu. Additionally, it is best practice for all commands to follow a "/" so that its clear what text is meant to be processed as a command. The following illustrates these best practices:
+It is common for Bots to contain multiple commands or sub workflows that it can action upon. It is best practice to list these commands in a help menu. Additionally, it is best practice for all commands to follow a "/" so that its clear what text is meant to be processed as a command. the following illustrates these best practices:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-09-at-2.31.12-pm.png)
 
@@ -28,11 +28,9 @@ To learn more about the Symphony Datafeed continue here:
 
 The next step of your chatbot workflow is to introduce your custom business logic. Once you have access to the Bot's events and messages through the Symphony Datafeed, the next step is to create dedicated event listeners. Inside these listeners is where you parse messages, fetch data from external sources, manage conversation state, and make requests to Symphony's REST API in order to reply to users directly or performs administrative functions such as creating chatrooms.
 
-You can learn more about parsing events and introducing custom business logic [here](../../datafeed.md#handling-events).
+You can learn more about parsing events and introducing custom business logic here:
 
 ## Next Steps:
 
-Continue on to our [Getting Started with Chatbots](getting-started-with-chatbots.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Chatbot.  
-
-{% page-ref page="getting-started-with-chatbots.md" %}
+Continue on to our [Getting Started With Chatbots](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/d667d3b0e9641b76d700a5152c2b0c7e3d8b4b40/building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/README.md) guide. Here you will learn how to get your own chatbot up and running and take a closer at the APIs used to create a simple chatbot workflow:
 
