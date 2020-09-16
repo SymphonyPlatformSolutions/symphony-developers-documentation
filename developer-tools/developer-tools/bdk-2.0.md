@@ -222,5 +222,176 @@ final SymphonyBdk bot1 = new SymphonyBdk(loadFromClasspath("/config_1.yaml"));
 final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
 ```
 
+## Activities API
 
+The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage user-to-bot interactions or activities within a Symphony chat.  There are two different types of activities supported by the BDK:
+
+* **Command Activity**: an activity triggered when a message is sent in an IM, MIM, or Chatroom.
+* **Form Activity**: an activity triggered when a user replies to an Elements form message.  
+
+### Registering Activities
+
+In order to register activities with your bot instance, you must leverage the `ActivityRegistry` class:
+
+```java
+public static void main(String[] args) throws Exception {
+    // Create BDK entry point
+    final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
+    // Access to the registry for activities
+    final ActivityRegistry registry = bdk.activities();
+  }
+```
+
+### Command Activities
+
+A command-based activity is triggered when a message is sent in an IM, MIM, or Chatroom.  Using the Activities API allows developers to register commands in the following formats:
+
+1.  `@bdk-bot /buy`
+
+{% tabs %}
+{% tab title="@bdk-bot /buy" %}
+```java
+final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
+
+    bdk.activities().register(new SlashCommand("/buy",    // (1)
+                                               true,        // (2)
+                                               context -> { // (3)
+
+      log.info("Hello slash command triggered by user {}", context.getInitiator().getUser().getDisplayName());
+    }));
+```
+{% endtab %}
+{% endtabs %}
+
+   2.  `/buy 1000 goog`
+
+{% tabs %}
+{% tab title="/buy" %}
+```java
+final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
+
+    bdk.activities().register(new SlashCommand("/buy",    // (1)
+                                               false,        // (2)
+                                               context -> { // (3)
+
+      log.info("Hello slash command triggered by user {}", context.getInitiator().getUser().getDisplayName());
+    }));
+```
+{% endtab %}
+{% endtabs %}
+
+  3.  Listen for the word `'hello'`
+
+{% tabs %}
+{% tab title="\'hello\'" %}
+```java
+public class BotApplication {
+
+  public static void main(String[] args) throws Exception {
+    // setup SymphonyBdk facade object
+    final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
+    // register Hello Command within the registry
+    bdk.activities().register(new HelloCommandActivity());
+    // finally, start the datafeed loop
+    bdk.datafeed().start();
+  }
+}
+
+class HelloCommandActivity extends CommandActivity<CommandContext> {
+
+  @Override
+  protected ActivityMatcher<CommandContext> matcher() {
+    return c -> c.getTextContent().contains("hello"); // (1)
+  }
+
+  @Override
+  protected void onActivity(CommandContext context) {
+    log.info("Hello command triggered by user {}", context.getInitiator().getUser().getDisplayName()); // (2)
+  }
+
+  @Override
+  protected ActivityInfo info() {
+    final ActivityInfo info = ActivityInfo.of(ActivityType.COMMAND); // (3)
+    info.setName("Hello Command");
+    return info;
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+Note: If you choose to create your own `CommandActivity` class, you must implement the `matcher()` and `onActivity()` methods provided by the `AbstractActivity` class.  For more information on the implementation of the `CommandActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/tree/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/command).
+{% endhint %}
+
+### Form Activities
+
+The Activities API also makes it easy for Bots to listen for elements form submissions.  Assume the following elements form has been posted into a room with the following attributes:
+
+* formId = "hello-form"
+* &lt;text-field&gt; name = "name"
+* form contains an action button
+
+```markup
+<messageML>
+    <h2>Hello Form</h2>
+    <form id="hello-form"> <!-- (1) -->
+
+        <text-field name="name" placeholder="Enter a name here..."/> <!-- (2) -->
+
+        <button name="submit" type="action">Submit</button> <!-- (3) -->
+        <button type="reset">Reset Data</button>
+
+    </form>
+</messageML>
+```
+
+In order to register a form activity or listen for an incoming elements form submission, Bots must register a class that extends the `FormReplyActivity` class:
+
+```java
+public class Example {
+
+  public static void main(String[] args) throws Exception {
+    // setup SymphonyBdk facade object
+    final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
+    // register Hello FormReply Activity within the registry
+    bdk.activities().register(new HelloFormReplyActivity(bdk.messages()));
+    // finally, start the datafeed loop
+    bdk.datafeed().start();
+  }
+}
+
+class HelloFormReplyActivity extends FormReplyActivity<FormReplyContext> {
+
+  private final MessageService messageService;
+
+  public HelloFormReplyActivity(MessageService messageService) {
+    this.messageService = messageService;
+  }
+
+  @Override
+  protected ActivityMatcher<FormReplyContext> matcher() {
+    return c -> "hello-form".equals(c.getFormId()) && "submit".equals(c.getFormValue("action")); // (1)
+  }
+
+  @Override
+  protected void onActivity(FormReplyContext context) {
+    final String message = "Hello, " + context.getFormValue("name") + "!"; // (2)
+    this.messageService.send(context.getSourceEvent().getStream(), "<messageML>" + message + "</messageML>");
+  }
+
+  @Override
+  protected ActivityInfo info() {
+    final ActivityInfo info = ActivityInfo.of(ActivityType.FORM);
+    info.setName("Hello Form Reply Activity");
+    return info;
+  }
+}
+```
+
+{% hint style="info" %}
+Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and i`nfo()` methods provided by the `AbstractActivity` class.  For more information on the implementation fo the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
+{% endhint %}
+
+As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.    
 
