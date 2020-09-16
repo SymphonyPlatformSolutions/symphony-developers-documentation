@@ -156,3 +156,58 @@ retry:
 {% endtab %}
 {% endtabs %}
 
+## Authentication
+
+Authenticating your Bot is made simple when using the BDK 2.0.  Once you have your Bot and Symphony environment properly configured, the generated code provides an out of the box implementation for authenticating your Bot:
+
+{% tabs %}
+{% tab title="BotApplication.java" %}
+```java
+final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
+```
+{% endtab %}
+{% endtabs %}
+
+ By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot.  Once authenticated, your bot is ready to leverage the REST API to create rich automations and workflows on Symphony. 
+
+{% hint style="info" %}
+Note:  You must have a corresponding service or Bot account setup on your Symphony instance before authenticating.  For more information navigate to the [Creating a Bot User](../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
+{% endhint %}
+
+## Datafeed Management
+
+The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events.  The `DatafeedService` interface provides the following methods for your bot to use: 
+
+| Method | Descriptions |
+| :--- | :--- |
+| `start()` | Start the bot's datafeed |
+| `stop()` | Stop the bot's datafeed |
+| `subscribe(RealTimeEventListener)` | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes.   |
+| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class. |
+
+In order for bots to listen for incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`.  This `RealTimeEventListener` class implements eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.  
+
+When a user sends a bot a message, the Bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event.  If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method.  Otherwise the Bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK 2.0:
+
+{% tabs %}
+{% tab title="BotApplication.java" %}
+```java
+ // subscribe to "onMessageSent" real-time event
+    bdk.datafeed().subscribe(new RealTimeEventListener() {
+
+      @Override
+      public void onMessageSent(V4Initiator initiator, V4MessageSent event) {
+        // on a message sent, the bot replies with "Hello, {User Display Name}!"
+        bdk.messages().send(event.getMessage().getStream(), "<messageML>Hello, " + initiator.getUser().getDisplayName() + "!</messageML>");
+      }
+    });
+```
+{% endtab %}
+{% endtabs %}
+
+ For more information on the Symphony datafeed continue here:
+
+{% page-ref page="../../building-bots-on-symphony/datafeed.md" %}
+
+
+
