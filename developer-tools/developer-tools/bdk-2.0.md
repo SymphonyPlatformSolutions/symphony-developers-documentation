@@ -186,7 +186,7 @@ The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ev
 | `subscribe(RealTimeEventListener)` | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes.   |
 | `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class. |
 
-In order for bots to listen for incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`.  This `RealTimeEventListener` class implements eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.  
+For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`.  This `RealTimeEventListener` class must implement eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.  
 
 When a user sends a bot a message, the Bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event.  If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method.  Otherwise the Bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK 2.0:
 
@@ -206,7 +206,28 @@ When a user sends a bot a message, the Bot will pick up the event from the dataf
 {% endtab %}
 {% endtabs %}
 
- For more information on the Symphony datafeed continue here:
+Below is a full list of eventTypes and their corresponding eventType methods provided by the RealTimeEventListener class.  Implement the following to listen for a given Symphony event:
+
+| Event Type | Method |
+| :--- | :--- |
+| MESSAGESENT | onMessageSent\(\) |
+| SHAREDPOST | onSharedPost\(\) |
+| INSTANTMESSAGECREATED | onInstantMessageCreated\(\) |
+| ROOMCREATE | onRoomCreated\(\) |
+| ROOMUPDATED | onRoomUpdated\(\) |
+| ROOMDEACTIVATED | onRoomDeactivated\(\) |
+| ROOMACTIVATED | onRoomReactivated\(\) |
+| USERREQUESTEDTOJOINROOM | onUserRequestedToJoinRoom\(\) |
+| USERJOINEDROOM | onUserJoinedRoom\(\) |
+| USERLEFTROOM | onUserLeftRoom\(\) |
+| ROOMMEMBERPROMOTEDTOOWNER | onRoomMemberPromotedToOwner\(\) |
+| ROOMMEMBERDEMOTEDFROMOWNER | onRoomMemberDemotedFromOwner\(\) |
+| CONNECTIONREQUESTED | onConnectionRequested\(\) |
+| CONNECTIONACCEPTED | onConnectionAccepted\(\) |
+| MESSAGESUPPRESSED | onMessageSuppressed\(\) |
+| SYMPHONYELEMENTSACTION | onSymphonyElementsAction    |
+
+For more information on the Symphony datafeed continue here:
 
 {% page-ref page="../../building-bots-on-symphony/datafeed.md" %}
 
