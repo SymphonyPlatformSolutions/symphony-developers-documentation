@@ -461,5 +461,31 @@ Use the `V4MessageSent` class methods to access stream data in context:
 | event.getMessage\(\).getStream\(\).getExternal\(\) | External |
 | event.getMessage\(\).getStream\(\).getCrossPod\(\) | Cross Pod |
 
+### Managing Context through Activities API
 
+The Activities API also makes it easy to access relevant user, message, and stream data in context.  `CommandActivity` classes have access to to this data through the `CommandContext` class.  This class is instantiated with instances of `V4Initiator` and `V4MessageSent` objects.  Bots are able access to the user, message, and stream data in context through the same methods shown above.  Leverage these methods within the `onActivity()` method shown below: 
+
+```java
+@Override
+  protected void onActivity(CommandContext context) {
+    log.info("Hello command triggered by user {}", context.getInitiator().getUser().getDisplayName()); // (2)
+  }
+```
+
+FormActivity classes have access to relevant user, form, and stream data through the `FormReplyContext` class.  This class is instantiated with instances of the `V4Initiator` and `V4SymphonyElementsAction` class. The `V4SymphonyElementsAction` class provides the following methods to access form data in context:
+
+| Method | Attribute |
+| :--- | :--- |
+| context.getSourceEvent\(\).getStream\(\) | Elements Stream ID |
+| context.getSourceEvent\(\).getFormMessageId\(\) | Elements Message ID |
+| context.getSourceEvent\(\).getFormId\(\) | Elements Form ID |
+| context.getSourceEvent\(\).getFormValues\(\) | Elements Form Values |
+
+```java
+@Override
+  protected void onActivity(FormReplyContext context) {
+    final String message = "You entered " + context.SourceEvnent().getFormValues() + ".";
+    this.messageService.send(context.getSourceEvent().getStream(), "<messageML>" + message + "</messageML>");
+  }
+```
 
