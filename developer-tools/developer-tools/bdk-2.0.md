@@ -245,10 +245,7 @@ final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
 
 ## Activities API
 
-The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage user-to-bot interactions or activities within a Symphony chat.  There are two different types of activities supported by the BDK:
-
-* **Command Activity**: an activity triggered when a message is sent in an IM, MIM, or Chatroom.
-* **Form Activity**: an activity triggered when a user replies to an Elements form message.  
+The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage bot-to-user activities or interactions.  Specifically, the Activity API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events.  With complete control over the bot-to-user activity interaction, the Activities API makes it easy to string together a sequence of actives, which will act as the building blocks for powerful Symphony workflows and automations.  
 
 ### Registering Activities
 
@@ -262,6 +259,11 @@ public static void main(String[] args) throws Exception {
     final ActivityRegistry registry = bdk.activities();
   }
 ```
+
+ There are two different types of activities supported by the BDK:
+
+* **Command Activity**: an activity triggered when a message is sent in an IM, MIM, or Chatroom.
+* **Form Activity**: an activity triggered when a user replies to an Elements form message.  
 
 ### Command Activities
 
@@ -411,7 +413,7 @@ class HelloFormReplyActivity extends FormReplyActivity<FormReplyContext> {
 ```
 
 {% hint style="info" %}
-Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and i`nfo()` methods provided by the `AbstractActivity` class.  For more information on the implementation fo the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
+Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class.  For more information on the implementation fo the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
 {% endhint %}
 
 As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.    
