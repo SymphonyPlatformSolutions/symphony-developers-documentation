@@ -9,8 +9,8 @@
 * [Datafeed Management](bdk-2.0.md#datafeed-management)
 * [Managing Multiple Bots](bdk-2.0.md#managing-multiple-bots)
 * [Activities API](bdk-2.0.md#activities-api)
-* Message & Room Management
-* Messages Templating
+* [User, Message, & Room Management](bdk-2.0.md#user-message-and-room-management)
+* [Messages Templating](bdk-2.0.md#message-templating)
 
 ## Description
 
@@ -488,4 +488,6 @@ FormActivity classes have access to relevant user, form, and stream data through
     this.messageService.send(context.getSourceEvent().getStream(), "<messageML>" + message + "</messageML>");
   }
 ```
+
+## Message Templating
 
