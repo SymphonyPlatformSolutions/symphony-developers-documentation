@@ -206,26 +206,26 @@ When a user sends a bot a message, the Bot will pick up the event from the dataf
 {% endtab %}
 {% endtabs %}
 
-Below is a full list of eventTypes and their corresponding eventType methods provided by the RealTimeEventListener class.  Implement the following to listen for a given Symphony event:
+Below is a full list of methods provided by the `RealTimeEventListener` class and their corresponding eventTypes.  Implement the following methods in order to listen for a given Symphony event:
 
-| Event Type | Method |
+| Method | Event Type |
 | :--- | :--- |
-| MESSAGESENT | onMessageSent\(\) |
-| SHAREDPOST | onSharedPost\(\) |
-| INSTANTMESSAGECREATED | onInstantMessageCreated\(\) |
-| ROOMCREATE | onRoomCreated\(\) |
-| ROOMUPDATED | onRoomUpdated\(\) |
-| ROOMDEACTIVATED | onRoomDeactivated\(\) |
-| ROOMACTIVATED | onRoomReactivated\(\) |
-| USERREQUESTEDTOJOINROOM | onUserRequestedToJoinRoom\(\) |
-| USERJOINEDROOM | onUserJoinedRoom\(\) |
-| USERLEFTROOM | onUserLeftRoom\(\) |
-| ROOMMEMBERPROMOTEDTOOWNER | onRoomMemberPromotedToOwner\(\) |
-| ROOMMEMBERDEMOTEDFROMOWNER | onRoomMemberDemotedFromOwner\(\) |
-| CONNECTIONREQUESTED | onConnectionRequested\(\) |
-| CONNECTIONACCEPTED | onConnectionAccepted\(\) |
-| MESSAGESUPPRESSED | onMessageSuppressed\(\) |
-| SYMPHONYELEMENTSACTION | onSymphonyElementsAction    |
+| onMessageSent\(\) | MESSAGESENT |
+| onInstantMessageCreated\(\) | INSTANTMESSAGECREATED |
+| onMessageSuppressed\(\) | MESSAGESUPPRESSED |
+| onRoomCreated\(\) | ROOMCREATED |
+| onRoomUpdated\(\) | ROOMUPDATED |
+| onRoomDeactivated\(\) | ROOMDEACTIVATED |
+| onRoomReactivated\(\) | ROOMACTIVATED |
+| onUserRequestedToJoinRoom\(\) | USERREQUESTEDTOJOINROOM |
+| onUserJoinedRoom\(\) | USERJOINEDROOM |
+| onUserLeftRoom\(\) | USERLEFTROOM |
+| onRoomMemberPromotedToOwner\(\) | ROOMMEMBERPROMOTEDTOOWNER |
+| onRoomMemberDemotedFromOwner\(\) | ROOMMEMBERDEMOTEDFROMOWNER |
+| onConnectionRequested\(\) | CONNECTIONREQUESTED |
+| onConnectionAccepted\(\) | CONNECTIONACCEPTED |
+| onSymphonyElementsAction\(\) | SYMPHONYELEMENTSACTION |
+| onSharedPost\(\) | SHAREDPOST |
 
 For more information on the Symphony datafeed continue here:
 
