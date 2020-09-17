@@ -9,7 +9,7 @@
 * [Datafeed Management](bdk-2.0.md#datafeed-management)
 * [Managing Multiple Bots](bdk-2.0.md#managing-multiple-bots)
 * [Activities API](bdk-2.0.md#activities-api)
-* Message + Room Management
+* Message & Room Management
 * Messages Templating
 
 ## Description
@@ -417,4 +417,49 @@ Note: If you wish to create your own `FormReplyActivity` class, you must impleme
 {% endhint %}
 
 As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.    
+
+## User, Message, & Room Management
+
+The BDK 2.0 provides easy access to message, room, and user context.  
+
+As shown above, the BDK 2.0 makes it easy to create a datafeed and listen for events through the `RealTimeEventListener` class.  In addition, this class makes it easy to access user, message, and room data in context.  Each eventType method is implemented with instances of `V4Initiator` and `V4MessageSent` objects:
+
+```java
+public void onMessageSent(V4Initiator initiator, V4MessageSent event)
+```
+
+Use the `V4Initiator` class methods to access the the user data in context:
+
+| Method | User Attribute |
+| :--- | :--- |
+| initiator.getUser\(\).getUserId\(\) | User ID |
+| initiator.getUser\(\).getFirstName\(\) | First Name |
+| initiator.getUser\(\).getLastName\(\) | Last Name |
+| initiator.getUser\(\).getDisplayName\(\) | Display Name |
+| initiator.getUser\(\).getEmail\(\) | Email |
+| initiator.getUser\(\).getUsername\(\) | Username |
+
+Use the `V4MessageSent` class methods to access message data in context:
+
+| Method | Attribute |
+| :--- | :--- |
+| event.getMessage\(\).getMessageId | Message ID |
+| event.getMessage\(\).getTimestamp\(\) | Message Timestamp |
+| event.getMessage\(\).getMessage\(\) | Message Text |
+| event.getMessage\(\).getSharedMessage\(\) | Shared Message |
+| event.getMessage\(\).getData\(\) | Message Data |
+| event.getMessage\(\).getAttachments\(\) | Message Attachments |
+
+Use the `V4MessageSent` class methods to access stream data in context:
+
+| Method | Attribute |
+| :--- | :--- |
+| event.getMessage\(\).getStream\(\).getStreamId\(\) | Stream ID |
+| event.getMessage\(\).getStream\(\).getStreamType\(\) | Stream Type |
+| event.getMessage\(\).getStream\(\).getRoomName\(\) | Room Name |
+| event.getMessage\(\).getStream\(\).getMembers\(\) | Room Members |
+| event.getMessage\(\).getStream\(\).getExternal\(\) | External |
+| event.getMessage\(\).getStream\(\).getCrossPod\(\) | Cross Pod |
+
+
 
