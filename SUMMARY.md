@@ -104,7 +104,6 @@
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
   * [SDKs](developer-tools/developer-tools/sdks/README.md)
-    * [SDK Configuration](developer-tools/developer-tools/sdks/sdk-configuration.md)
     * [Python](developer-tools/developer-tools/sdks/python.md)
     * [Java](developer-tools/developer-tools/sdks/java.md)
     * [Node.js](developer-tools/developer-tools/sdks/node.js.md)

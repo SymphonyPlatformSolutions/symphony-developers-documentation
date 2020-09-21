@@ -149,7 +149,7 @@ Open your generated Bot code in your favorite IDE and navigate to the config.jso
 
 Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Additionally, confirm that the botUsername, and botEmailAddress match the information entered in the admin portal on the Pod.
 
-The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank. For more information on advanced configurations continue here: [SDK Configuration](../../developer-tools/developer-tools/sdks/sdk-configuration.md).
+The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank. For more information on advanced configurations continue here: [SDK Configuration]().
 
 ## 3.  Build Your Bot
 
