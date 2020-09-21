@@ -50,7 +50,7 @@ You should see the following:
 
 Once installed, the next step is to configure your new Symphony Bot using the Yeoman Generator.  In the command line, enter the information for your Symphony environment and Bot metadata.  For example:
 
-![](../../.gitbook/assets/screen-shot-2020-09-15-at-1.51.24-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
 
 After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold.  Open your generated project in your Java IDE of choice and navigate to your generated `config.yaml` file: 
 
@@ -64,7 +64,7 @@ Note: In the generated config.yaml file, the BDK assumes your Symphony Pod, Agen
 host: develop2.symphony.com
 
 bot:
-  username: bot-sdk-bot
+  username: bdk2-bot
   privateKeyPath: /Users/reed.feldman/bdk-bot/src/main/resources/rsa/privatekey.pem
 ```
 {% endtab %}
