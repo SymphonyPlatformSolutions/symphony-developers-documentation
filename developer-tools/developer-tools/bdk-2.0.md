@@ -491,5 +491,61 @@ FormActivity classes have access to relevant user, form, and stream data through
 
 ## Message Templating
 
+The BDK 2.0 also supports custom and built in message templating.  The BDK 2.0 is agnostic to what templating library developers choose, with support for Freemarker templates, handlebars, and more.  In order to use message templating, you must leverage the `TemplateEngine` class provided by the BDK.  Implement the `newBuiltInTemplate()` method to reuse an simple messageML template:
+
+```java
+protected void onActivity(CommandContext context) {
+    try {
+        if (context.getTextContent().equals("template")) {
+            Template template = TemplateEngine.getDefaultImplementation().newBuiltInTemplate("simpleMML");
+            final String templateMessage = template.process(new HashMap<String, String>() {{
+                put("message", "This is a simple templated message");
+            }});
+            messageService.send(context.getStreamId(), templateMessage);
+        }
+    }
+    
+    catch (TemplateException te) {
+                log.error(te.getMessage());
+        }
+}
+```
+
+If you wish to build your own custom message template, you must implement one of the `newTemplate()` methods provided by the `TemplateEngine` class: 
+
+* `newBuiltInTemplate()`
+* `newTemplateFromFile()`
+* `newTemplateFromClasspath()`
+* `newTemplateFromUrl()`
+
+The following shows an implementation of the `newTemplateFromClasspath()` method: 
+
+```java
+protected void onActivity(CommandContext context) {
+    try {
+        if (context.getTextContent().equals("template2")){
+            Template template2 = TemplateEngine.getDefaultImplementation().newTemplateFromClasspath("/templates/customTemplate.ftl");
+            final String templateMessage2 = template2.process(new HashMap<String, String>(){{
+                put("message", "Hello World");
+            }});
+            messageService.send(context.getStreamId(), templateMessage2);
+        }
+    }
+    catch (TemplateException te) {
+        log.error(te.getMessage());
+    }
+}
+```
+
+The corresponding freemarker template is shown below:
+
+{% tabs %}
+{% tab title="customTemplate.ftl" %}
+```markup
+<messageML>${message} from custom template !</messageML>
+```
+{% endtab %}
+{% endtabs %}
+
 
 
