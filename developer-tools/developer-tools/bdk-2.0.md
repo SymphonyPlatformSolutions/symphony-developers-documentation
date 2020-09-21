@@ -175,6 +175,18 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
 Note:  You must have a corresponding service or Bot account setup on your Symphony instance before authenticating.  For more information navigate to the [Creating a Bot User](../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
 {% endhint %}
 
+## Managing Multiple Bots
+
+The BDK 2.0 makes it easy to manage multiple bot instances within a single project.  As long as you have unique configuration files that correspond to different service accounts, you can manage multiple bot instances from a centralized source.  To do so, simply instantiate multiple bot instances of the `SymphonyBDK` class within your bot project:
+
+```java
+// Bot #1
+final SymphonyBdk bot1 = new SymphonyBdk(loadFromClasspath("/config_1.yaml"));
+
+//Bot #2
+final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
+```
+
 ## Datafeed Management
 
 The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events.  The `DatafeedService` interface provides the following methods for your bot to use: 
@@ -231,18 +243,6 @@ For more information on the Symphony datafeed continue here:
 
 {% page-ref page="../../building-bots-on-symphony/datafeed.md" %}
 
-## Managing Multiple Bots
-
-The BDK 2.0 makes it easy to manage multiple bot instances within a single project.  As long as you have unique configuration files that correspond to different service accounts, you can manage multiple bot instances from a centralized source.  To do so, simply instantiate multiple bot instances of the `SymphonyBDK` class within your bot project:
-
-```java
-// Bot #1
-final SymphonyBdk bot1 = new SymphonyBdk(loadFromClasspath("/config_1.yaml"));
-
-//Bot #2
-final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
-```
-
 ## Activities API
 
 The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage bot-to-user activities or interactions.  Specifically, the Activity API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events.  With complete control over the bot-to-user activity interaction, the Activities API makes it easy to string together a sequence of actives, which will act as the building blocks for powerful Symphony workflows and automations.  
@@ -269,7 +269,7 @@ public static void main(String[] args) throws Exception {
 
 A command-based activity is triggered when a message is sent in an IM, MIM, or Chatroom.  Using the Activities API allows developers to register commands in the following formats:
 
-1.  `@bdk-bot /buy`
+1.  `@bdk2-bot /buy` \(Slash command with a bot @mention\)
 
 {% tabs %}
 {% tab title="@bdk-bot /buy" %}
@@ -286,24 +286,25 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 {% endtab %}
 {% endtabs %}
 
-   2.  `/buy 1000 goog`
+   2.  `/buy 1000 goog` \(Slash command without a bot @mention\)
 
 {% tabs %}
 {% tab title="/buy" %}
 ```java
 final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 
-    bdk.activities().register(new SlashCommand("/buy",    // (1)
+    bdk.activities().register(new SlashCommand("/buy" + " (.+)",    // (1)
                                                false,        // (2)
                                                context -> { // (3)
 
-      log.info("Hello slash command triggered by user {}", context.getInitiator().getUser().getDisplayName());
+      //log the ticker symbol entered by the user
+      log.info(context.getTextContent().split(" ")[2]);
     }));
 ```
 {% endtab %}
 {% endtabs %}
 
-  3.  Listen for the word `'hello'`
+  3.  Listen for the word `'hello'` \(Not a Slash command  - Listen for a specific word\)
 
 {% tabs %}
 {% tab title="\'hello\'" %}
@@ -322,6 +323,8 @@ public class BotApplication {
 
 class HelloCommandActivity extends CommandActivity<CommandContext> {
 
+  private final MessageService messageService;
+
   @Override
   protected ActivityMatcher<CommandContext> matcher() {
     return c -> c.getTextContent().contains("hello"); // (1)
@@ -330,6 +333,8 @@ class HelloCommandActivity extends CommandActivity<CommandContext> {
   @Override
   protected void onActivity(CommandContext context) {
     log.info("Hello command triggered by user {}", context.getInitiator().getUser().getDisplayName()); // (2)
+    this.messageService.send(context.getSourceEvent().getStream(), "<messageML> Hello " + context.getInitiator().getUser().getDisplayName()) + "</messageML>");
+
   }
 
   @Override
@@ -491,7 +496,7 @@ FormActivity classes have access to relevant user, form, and stream data through
 
 ## Message Templating
 
-The BDK 2.0 also supports custom and built in message templating.  The BDK 2.0 is agnostic to what templating library developers choose, with support for Freemarker templates, handlebars, and more.  In order to use message templating, you must leverage the `TemplateEngine` class provided by the BDK.  Implement the `newBuiltInTemplate()` method to reuse an simple messageML template:
+The BDK 2.0 also supports custom and built in message templating.  The BDK 2.0 is agnostic to what templating library developers choose, with support for FreeMarker templates, handlebars, and more.  In order to use message templating, you must leverage the `TemplateEngine` class provided by the BDK.  Implement the `newBuiltInTemplate()` method to reuse an simple messageML template:
 
 ```java
 protected void onActivity(CommandContext context) {
@@ -537,7 +542,7 @@ protected void onActivity(CommandContext context) {
 }
 ```
 
-The corresponding freemarker template is shown below:
+The corresponding FreeMarker template is shown below:
 
 {% tabs %}
 {% tab title="customTemplate.ftl" %}
@@ -546,6 +551,4 @@ The corresponding freemarker template is shown below:
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
