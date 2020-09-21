@@ -10,7 +10,7 @@
 * [Managing Multiple Bots](bdk-2.0.md#managing-multiple-bots)
 * [Activities API](bdk-2.0.md#activities-api)
 * [User, Message, & Room Management](bdk-2.0.md#user-message-and-room-management)
-* [Messages Templating](bdk-2.0.md#message-templating)
+* [Message Templating](bdk-2.0.md#message-templating)
 
 ## Description
 
@@ -490,4 +490,6 @@ FormActivity classes have access to relevant user, form, and stream data through
 ```
 
 ## Message Templating
+
+
 
