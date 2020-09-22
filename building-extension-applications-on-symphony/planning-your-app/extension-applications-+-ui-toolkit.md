@@ -67,7 +67,7 @@ modulesService.show(
   );
 ```
 
-The show\(\) method takes in the following parameters:
+The `show()` method takes in the following parameters:
 
 <table>
   <thead>
@@ -115,7 +115,7 @@ The show\(\) method takes in the following parameters:
   </tbody>
 </table>
 
-As shown above, the iframe of the module being rendered points to an app.html file.  Inside this file is where you can include your app's custom javascript.  A sample implementation of the app.html file provided by the BDK is shown below: 
+As shown above, the iframe of the module being rendered points to an `app.html` file.  Inside this file is where you can include your app's custom javascript.  A sample implementation of the app.html file provided by the BDK is shown below: 
 
 ```markup
 <!DOCTYPE html>
@@ -140,11 +140,71 @@ See app.js for how the user's theme (light or dark) and font size (large, normal
 </html>
 ```
 
-## UI Toolkit
+## 3.  UI Toolkit
 
-## 3.  Creating Custom Views
+Now that we know how to bring our app view into focus, let's take a look at the library of react components provided by the UI Toolkit.  First lets install the library:
 
-The app.html iframe is linked to a custom javascript file, app.js.  This file is where you could implement your own custom rendering logic.  In the case of the BDK, this file will act as the entry point into the react system: 
+1. To gain access to the UI Toolkit, navigate to the dedicated Github repository: [https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit](https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit)
+
+2. Install the repository locally:
+
+```text
+$ git clone https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit.git
+```
+
+3.  To access a live version of this library, run the following from inside your project:
+
+```text
+$ yarn storybook
+```
+
+This will launch a live version of the UI Toolkit library reference in your default browser.  In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.
+
+The UI Toolkit contains a number of different component groups including layouts, inputs, tables, and dedicated financial components.  To use these components in your extension app, add the following to your `package.json`: 
+
+```markup
+"symphony-bdk-ui-toolkit": "git+ssh://git@github.com:SymphonyPlatformSolutions/symphony-bdk-ui-toolkit.git#stage"
+
+```
+
+Once installed, you can import the library and begin creating custom views.  For example, see how easy it is to leverage the UI toolkit to create an RFQ Quote Card component view:
+
+{% tabs %}
+{% tab title="index.js" %}
+```javascript
+import React from 'react';
+import QuoteCard from 'symphony-bdk-ui-toolkit';
+
+const Quote = () => {
+    return (
+    <>
+        <QuoteCard quoteShortCode="A5" colorIndex={1} panelData={{
+            dealerName: 'Dealer two',
+            dealerPayedValue: 1.75,
+            clientName: 'Client one',
+            clientPayedValue: 3
+            }} productData={null} 
+        />
+    </>
+    );
+};
+
+export default Quote;
+```
+{% endtab %}
+{% endtabs %}
+
+The following component will be rendered based on the above code:
+
+![](../../.gitbook/assets/screen-shot-2020-09-21-at-10.33.47-pm.png)
+
+## 4.  Creating Custom Views with the BDK
+
+{% hint style="info" %}
+Note:  The following React implementation is consistent with the Extension App implementation provided by the BDK.  However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation.  Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.  
+{% endhint %}
+
+The `app.html` iframe is linked to a custom javascript file, `app.js`.  This file is where you could implement your own custom rendering logic.  In the case of the BDK, this file will act as the entry point into the react system: 
 
 {% tabs %}
 {% tab title="app.js" %}
@@ -161,7 +221,7 @@ ReactDOM.render(
 {% endtab %}
 {% endtabs %}
 
-This is linked to a routes.js file:
+This is linked to a `routes.js` file:
 
 {% tabs %}
 {% tab title="routes.js" %}
@@ -196,6 +256,4 @@ Whatever is returned by the `route()` function provided by the BDK will be rende
 Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app.  Continue to the following tutorials where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK and react:
 
 {% page-ref page="../tutorials/building-an-extension-app-with-ui-toolkit.md" %}
-
- 
 
