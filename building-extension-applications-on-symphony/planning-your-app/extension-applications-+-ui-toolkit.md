@@ -1,20 +1,20 @@
 # Extension Applications + UI Toolkit
 
-Some Extension applications contain a standalone frontend that is embedded within the Symphony client.  While the Symphony client is agnostic to the implementation of your app's frontend, Symphony provides a UI toolkit containing a library of react components that help build complex frontend applications rapidly.  The UI Toolkit contains layout guides, forms, dropdown menus, and complex financial charts, and more.
+Some Extension applications contain a standalone frontend that is embedded within the Symphony client.  While the Symphony client is agnostic to the implementation of your app's frontend, Symphony provides a UI toolkit containing a library of react components that help to build complex frontend applications rapidly.  The UI Toolkit contains layout guides, forms, dropdown menus, complex financial charts, and more.
 
 {% hint style="info" %}
-Note: This guide is an overview of how to leverage the Extension API and UI Toolkit in order to render custom frontend applications in Symphony.  For an in depth reference of the Modules Service and Nav Service refer to the [Modules Service guide](../overview-of-extension-api/extension-api-services/modules-service.md) and [Applications-Nav Service guide](../overview-of-extension-api/extension-api-services/applications-nav-service.md) respectively.  
+Note: This guide is an overview of how to leverage the Extension API and UI Toolkit in order to render custom frontend applications within the Symphony client.  For an in depth reference of the Modules Service and Nav Service refer to the [Modules Service guide](../overview-of-extension-api/extension-api-services/modules-service.md) and [Applications-Nav Service guide](../overview-of-extension-api/extension-api-services/applications-nav-service.md) respectively.  
 {% endhint %}
 
 ## 1.  Subscribe and Add your App to the Left-Hand Navigation
 
-In order to to add your Extension App to the left-hand navigation, Extension Apps must first subscribe to applications-nav the Extension API:
+In order to to add your Extension App to the left-hand navigation, Extension Apps must first subscribe to `applications-nav` service provided by the Extension API:
 
 ```javascript
 const navService = SYMPHONY.services.subscribe('applications-nav');
 ```
 
-After subscribing to this service, apps must then implement the `add()` method which adds a new navigation item to the Applications section of the left-hand sidebar:
+After subscribing to this service, apps must then implement the `add()` method which adds a new navigation item to the Applications section of the left-hand navigation:
 
 ```javascript
 const navSettings = {
@@ -33,7 +33,7 @@ The `add()` method takes in the following parameters:
 | {title, icon} Object | **Either** the title of the left navigation item as a string **or** an object with the keys title and icon where the value of title is a string and the value of icon is the url of a 32x16 pixel sprite sheet |
 | serviceName | The name of a local service implemented by your application that will be invoked when a user action is performed relating to the application navigation |
 
-Next, you must implement the `select()` method on your application service in order to handle clicks on the created left navigation items and subsequently the `focus()` have your navigation item \(application\) appear selected:
+Next, you must implement the `select()` method on your application service in order to handle clicks on your application and subsequently the `focus()` method in order to have your application appear selected in the left-hand navigation:
 
 ```javascript
 controllerService.implement({
@@ -46,17 +46,17 @@ controllerService.implement({
 
 ## 2.  Bring your Extension Application into View
 
-In order to bring your Extension Application into view, you must leverage the Modules Service.  A module is a new window inside the Symphony client workspace, such as a chatroom or an instant message.  In order for applications to occupy these UI spaces, applications must first subscribe to the module service:
+In order to bring your Extension Application into view, you must leverage the `modules` service.  A module is a new window inside the Symphony client workspace, such as a chatroom or an instant message.  In order for applications to occupy these UI spaces, applications must first subscribe to the `module` service:
 
 ```javascript
 const modulesService = SYMPHONY.services.subscribe('modules');
 ```
 
-After subscribing to this service, apps must then implement the show\(\) method provided in order to bring an application into view:
+After subscribing to this service, apps must then implement the `show()` method provided the `modules` service in order to bring an application into view:
 
 ```javascript
 //url pointing to our iframe --> app.html
-configUrl = "https://localhost:4000/demobot3/app/app.html"
+configUrl = "https://localhost:4000/path/to/your/app.html"
 
 modulesService.show(
     APP_ID,
@@ -115,7 +115,7 @@ The `show()` method takes in the following parameters:
   </tbody>
 </table>
 
-As shown above, the iframe of the module being rendered points to an `app.html` file.  Inside this file is where you can include your app's custom javascript.  A sample implementation of the app.html file provided by the BDK is shown below: 
+As shown above, the iframe of the module being rendered points to an `app.html` file.  Inside this file is where you can include your app's custom javascript.  A sample implementation of the `app.htm`l file provided by the BDK is shown below: 
 
 ```markup
 <!DOCTYPE html>
