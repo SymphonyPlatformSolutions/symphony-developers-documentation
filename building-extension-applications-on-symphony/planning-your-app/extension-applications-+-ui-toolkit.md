@@ -142,21 +142,15 @@ See app.js for how the user's theme (light or dark) and font size (large, normal
 
 ## 3.  UI Toolkit
 
-Now that we know how to bring our app view into focus, let's take a look at the library of react components provided by the UI Toolkit.  First lets install the library:
-
-1. To gain access to the UI Toolkit, navigate to the dedicated Github repository: [https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit](https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit)
-
-2. Install the repository locally:
+Now that we know how to bring our app view into focus, let's take a look at the library of react components provided by the UI Toolkit.  To access a live version of this library, leverage the `symphony-bdk-cli` tool:
 
 ```text
-$ git clone https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit.git
+$ symphony-bdk-cli --toolkit 
 ```
 
-3.  To access a live version of this library, run the following from inside your project:
-
-```text
-$ yarn storybook
-```
+{% hint style="info" %}
+Note: If you don't have the `symphony-bdk-cli` installed, continue to the [cli-tool](../../developer-tools/developer-tools/bdk/#cli-tool) guide.   
+{% endhint %}
 
 This will launch a live version of the UI Toolkit library reference in your default browser.  In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.
 
