@@ -315,5 +315,7 @@ com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=
 com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=b2224c9d-9cac-4d3d-82ef-b4d886d2e98a}: App auth step 3: Validating JWT
 ```
 
-Now that you have sucessfully authenticated and configured your extension app, navigate to one of the extension app tutorials to add custom business logic to your app:
+Now that you have successfully authenticated and configured your extension app, navigate to one of the extension app tutorials to add custom business logic to your app:
+
+{% page-ref page="../tutorials/" %}
 
