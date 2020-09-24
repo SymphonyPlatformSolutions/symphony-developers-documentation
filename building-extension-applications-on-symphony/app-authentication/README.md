@@ -1,7 +1,7 @@
 # App Authentication
 
 {% hint style="info" %}
-Note: This guide is a conceptual overview of how Symphony performs secure app authentication.  While you can implement the following workflow on your own, the BDK \(Bot Developer Kit\) provides an out of the box implementation of app authentication making it easy to get started building authenticated apps.   
+**Note: This guide is a conceptual overview of how Symphony performs secure app authentication.  While you can implement the following workflow on your own, the BDK \(Bot Developer Kit\) provides an out of the box implementation of app authentication making it easy to get started building authenticated apps.**   
 {% endhint %}
 
 In order to create a secure connection between your app and the Symphony client, apps need to perform app authentication.  Upon successful authentication, Symphony extension apps establish a bidirectional trust, allowing for secure and authorized access to user data by leveraging the Symphony Extension API.     
@@ -69,7 +69,7 @@ A signed JWT token containing the App ID
 {% endapi-method-spec %}
 {% endapi-method %}
 
- Your backend should store this token pair as they will be used for subsequent validation steps in the following authentication process.
+Your backend should store this token pair as they will be used for subsequent validation steps in the following authentication process.
 
 ## 3.  Register your App
 
