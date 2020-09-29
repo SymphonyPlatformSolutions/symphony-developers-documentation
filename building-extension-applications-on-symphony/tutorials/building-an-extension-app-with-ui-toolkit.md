@@ -364,7 +364,7 @@ If you reload your app, and add an FX pair to you watchlist, you will be able to
 
 ### Adding Real Data to the UI
 
-To get some real data into our FxWatchlist app, lets use the FX\_DAILY endpoint provided by the Alphavantage API.  Specifically, lets render some times series data for a specific currency pair.  To do so, we need to create a data service on our app's backend \(bot\) in order to handle and process incoming data.  
+To get some real data into our FxWatchlist app, let's use the FX\_DAILY endpoint provided by the Alphavantage API.  Specifically, let's render some times series data for a specific currency pair.  To do so, we need to create a data service on our app's backend \(bot\) in order to handle and process incoming data.  
 
 Navigate to your bot project and terminate your bot process for now.  Next add a services package and new DataService class, which will act as our RestController:
 
