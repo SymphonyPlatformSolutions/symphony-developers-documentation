@@ -228,10 +228,24 @@ Now that we understand the BDK's implementation of the `GeneralEnricher` class a
 ```java
 public void handle(BotCommand command, SymphonyMessage response) {
 
-    SampleObject sample = new SampleObject("Enriched Title", "Enriched Content");
-    response.setEnrichedTemplateFile("list-template", sample, "com.symphony.ms.template.helpCommand", sample, "1.0");
+    List<String> messages = Arrays.asList("Option 1", "Option 2", "Option 3");
+    SampleObject sample = new SampleObject("Enriched Title", messages);
+    response.setEnrichedTemplateFile("help-template", sample, "com.symphony.ms.template.helpCommand", sample, "1.0");
     
   }
+```
+{% endtab %}
+{% endtabs %}
+
+We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method.  The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client.  A default template can be as simple as the following `help-template.hbs` :
+
+{% tabs %}
+{% tab title="templates/help-template.hbs" %}
+```markup
+<div style="border-left:3px solid blue;">
+  <p>Default Template</p>
+</div>
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -255,7 +269,11 @@ public class SampleObject {
     }
 ```
 
-Now start up your app and bot back end and type into an IM with the bot, @YOUR\_BOTS\_USERNAME /hello:
+Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` .  The bot will render your message + structured object accordingly:
+
+![](../../.gitbook/assets/screen-shot-2020-10-01-at-1.00.37-pm.png)
+
+## 6.  Create a Custom Renderer
 
 
 
