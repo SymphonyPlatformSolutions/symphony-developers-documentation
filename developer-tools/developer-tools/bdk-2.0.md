@@ -270,7 +270,11 @@ For more information on the Symphony datafeed continue here:
 
 ## Activities API
 
-The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage bot-to-user activities or interactions.  Specifically, the Activity API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events.  With complete control over the bot-to-user activity interaction, the Activities API makes it easy to string together a sequence of actives, which will act as the building blocks for powerful Symphony workflows and automations.  
+The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage bot-to-user activities or interactions.  Specifically, the Activity API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events.  This makes it super simple to control the bot-to-user interaction within Symphony.
+
+### Workflow API
+
+While the Activities API gives developers complete control over the bot-to-user interaction, the Workflow API makes it easy to string together this sequence of activities, forming the building blocks of powerful Symphony workflows and automations.  Put more simply, the Activities API enables granular control over a bot's interactions or activities, whereas the Workflow API gives developers complete control over how these activities fit together.  With both tools in hand, building powerful enterprise grade workflows has never been easier.       
 
 ### Registering Activities
 
