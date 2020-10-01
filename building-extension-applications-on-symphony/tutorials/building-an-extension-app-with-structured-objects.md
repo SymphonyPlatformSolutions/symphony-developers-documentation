@@ -111,5 +111,115 @@ Upon completion of the above function, your extension application will be succes
 
 {% page-ref page="../app-authentication/" %}
 
+## 3.  Setup the Enricher Service
 
+In addition to the boilerplate code and implementation of app authentication, the BDK also provides an implementation of the methods described in our guide on [Extension Applications + Structured Objects](../planning-your-app/extension-applications-+-structured-objects.md).
+
+As a part of the boilerplate code, the BDK provides a `GeneralEnricher` class which handles service subscription, renderer registration, rendering logic, as well as any custom business logic you would like to introduce.  This class is instantiated in the `controller.js` file:
+
+{% tabs %}
+{% tab title="controller.js" %}
+```javascript
+//enricher section
+const enricher = new GeneralEnricher(`${APP_ID}:enricher`);
+enricher.init();
+enricher.register();
+```
+{% endtab %}
+{% endtabs %}
+
+Upon instantiating this class, we do a few things:
+
+{% tabs %}
+{% tab title="services/enricher/general-enricher.js" %}
+```javascript
+constructor(name) {
+    this.name = name;
+    this.messageEvents = Object.keys(ENRICHER_EVENTS).map(
+      key => ENRICHER_EVENTS[key].type,
+    );
+    this.implements = ['render', 'action'];
+    SmsRenderer.register(partials, customTemplates);
+  }
+  
+  init() {
+    SYMPHONY.services.make(this.name, this, this.implements, true);
+  }
+```
+{% endtab %}
+{% endtabs %}
+
+1.  Specify the service name: `'${APP_ID}:enricher'`
+2. Load in a dictionary of predefined structured objects, storing the entity id or entity `types` in an array, `messageEvents`.
+3.  Specify which methods of the class will be available in the service by adding them to the `implements` array.  
+4. Lastly, register your `customTemplates` with the `SmsRenderer`.  This customTemplates dictionary is where we are going to add our own custom templates as shown in Step 6.  
+
+{% hint style="info" %}
+Note:  The SmsRenderer is a handlebars templating library provided by the BDK.  This library already has predefined template values including: SIMPLE, ALERT, INFORMATION, NOTIFICATION, TABLE, LIST, BADGE, and a series of complex RFQ templates.   
+{% endhint %}
+
+In order to render a message template using the `SmsRenderer` templating engine, implement the `SmsRenderer.renderAppMessage()` method:
+
+```javascript
+SmsRenderer.renderAppMessage(messageData, messageType)
+```
+
+Each template has a specific `messageType` and corresponding JSON schema \(`messageData`\).  The templates and their corresponding schemas can be found [here.](https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-node#common-elements)
+
+Next, we subscribe to the `entity` service and register our list of structured object IDs or entity `types` :
+
+{% tabs %}
+{% tab title="services/enricher/general-enricher.js" %}
+```javascript
+register() {
+    const entity = SYMPHONY.services.subscribe('entity');
+    this.messageEvents.forEach((element) => {
+      entity.registerRenderer(element, {}, this.name);
+    });
+  }
+```
+{% endtab %}
+{% endtabs %}
+
+## 4. Built in Renderer
+
+Now that our list of entities or structured objects is registered, it's time to define our `render()` method provided by the `entity` service.  The render method is called each time a Structured Object ID or `type` matches the type specified in your `registerRenderer` function.  The implementation of the `render()` function provided by the BDK, performs some data validation, as well as creates a switch statement in which its cases correspond to the possible entity `types` .  For example, let's take a look at the `HELP_COMMAND` statement:
+
+{% tabs %}
+{% tab title="services/enricher/general-encicher.js" %}
+```javascript
+case ENRICHER_EVENTS.HELP_COMMAND.type:
+      template = SmsRenderer.renderAppMessage(
+        {
+          title: data.title,
+          content: data.content,
+        },
+        SmsRenderer.smsTypes.LIST,
+      );
+      break;
+```
+{% endtab %}
+{% endtabs %}
+
+This statement checks to see if the incoming structured object ID or entity `type` matches the HELP\_COMMAND.type defined in `entities.js`:
+
+{% tabs %}
+{% tab title="services/enrichers/entities.js" %}
+```javascript
+HELP_COMMAND: {
+    type: 'com.symphony.ms.template.helpCommand',
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+Note: The rest of the JSON schemas defined in the entity type dictionaries defined in the `ENRICHER_EVENTS` dictionary are sample data used for the mock server and is outside the scope of this tutorial.  
+{% endhint %}
+
+If there is in fact a match, calls the renderAppMessage\(\) method, passing along the correct JSON schema and templateType \(`SmsRenderer.smsTypes.LIST`\) as parameters:
+
+## 5.  Rendering the Structured Objects
+
+Now that we understand the BDK's implementation of the `GeneralEnricher` class as well as the `render()` method, let's test it out for ourselves.  
 
