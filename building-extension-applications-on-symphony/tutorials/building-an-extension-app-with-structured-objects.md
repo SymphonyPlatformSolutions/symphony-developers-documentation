@@ -221,5 +221,41 @@ If there is in fact a match, calls the renderAppMessage\(\) method, passing alon
 
 ## 5.  Rendering the Structured Objects
 
-Now that we understand the BDK's implementation of the `GeneralEnricher` class as well as the `render()` method, let's test it out for ourselves.  
+Now that we understand the BDK's implementation of the `GeneralEnricher` class as well as the `render()` method, let's test it out for ourselves.  Open up your app backend \(bot\) and navigate to the `HelloCommandHandler` class.  Update your `handle()` method to the following:
+
+{% tabs %}
+{% tab title="command/HelloCommandHandler.java" %}
+```java
+public void handle(BotCommand command, SymphonyMessage response) {
+
+    SampleObject sample = new SampleObject("Enriched Title", "Enriched Content");
+    response.setEnrichedTemplateFile("list-template", sample, "com.symphony.ms.template.helpCommand", sample, "1.0");
+    
+  }
+```
+{% endtab %}
+{% endtabs %}
+
+In addition, create a SampleObject class to pass along as a structured object, the object must match the JSON schema provided in the `render()` method:
+
+```java
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Data
+public class SampleObject {
+
+    private String title;
+    private String content;
+
+    public SampleObject(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+```
+
+Now start up your app and bot back end and type into an IM with the bot, @YOUR\_BOTS\_USERNAME /hello:
+
+
 
