@@ -16,6 +16,8 @@ In this tutorial we will be building off the generated app + bot scaffolds provi
 
 In order to use the Client Extension API services, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK:
 
+{% tabs %}
+{% tab title="controller.html" %}
 ```markup
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +35,8 @@ In order to use the Client Extension API services, your app must include the `sy
 </body>
 </html>
 ```
+{% endtab %}
+{% endtabs %}
 
 In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method.  This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules.  This method is located in the the `app.js` file provided out of the box by the BDK: 
 
@@ -91,7 +95,7 @@ init() {
   }
 ```
 
-To learn more about App Authentication please continue here:
+Upon completion of the above function, your extension application will be successfully authenticated.  For more information about app authentication, please continue here:
 
 {% page-ref page="../app-authentication/" %}
 
