@@ -111,6 +111,10 @@ Upon completion of the above function, your extension application will be succes
 
 {% page-ref page="../app-authentication/" %}
 
+### OBO Authentication:
+
+The BDK 2.0 also supports the OBO \(On Behalf Of\) pattern of authentication allowing authenticated bots and apps to perform operations on behalf of a given user.  With   
+
 ## 3.  Setup the Enricher Service
 
 In addition to the boilerplate code and implementation of app authentication, the BDK also provides an implementation of the methods described in our guide on [Extension Applications + Structured Objects](../planning-your-app/extension-applications-+-structured-objects.md).

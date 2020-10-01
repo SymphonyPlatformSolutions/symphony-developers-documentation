@@ -175,6 +175,19 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
 Note:  You must have a corresponding service or Bot account setup on your Symphony instance before authenticating.  For more information navigate to the [Creating a Bot User](../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
 {% endhint %}
 
+### OBO Authentication
+
+The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user.  The BDK's implementation makes it easy to perform the following operations on behalf of a given user:
+
+* List the streams of a given user
+* Initiate connection requests to and determine connection status with other users
+* Get the presence state of other connected users
+* Initiate IMs and MIMs with other users
+* Send messages and attachments
+* Set the context user's own presence
+
+
+
 ## Managing Multiple Bots
 
 The BDK 2.0 makes it easy to manage multiple bot instances within a single project.  As long as you have unique configuration files that correspond to different service accounts, you can manage multiple bot instances from a centralized source.  To do so, simply instantiate multiple bot instances of the `SymphonyBDK` class within your bot project:
