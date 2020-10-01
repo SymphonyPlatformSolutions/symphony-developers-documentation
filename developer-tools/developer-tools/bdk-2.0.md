@@ -186,7 +186,19 @@ The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowi
 * Send messages and attachments
 * Set the context user's own presence
 
+To leverage an OBO based workflow, simply instantiate an OBO Session in your Bot project.  The BDK 2.0 allows you to instantiate your OBO session from a username or user ID.  Once authenticated bots can perform any of the OBO workflows listed above:
 
+```java
+ // setup SymphonyBdk facade object
+ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
+ 
+ //authenticate on-behalf-of a given user
+ final AuthSession oboSessionUsername = bdk.obo("user.name");
+ final AuthSession oboSessionUserId = bdk.obo(123456789L);
+ 
+ // list streams OBO user "user.name"
+ bdk.streams().listStreams(oboSessionUsername, new StreamFilter());
+```
 
 ## Managing Multiple Bots
 
