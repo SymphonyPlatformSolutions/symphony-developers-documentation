@@ -275,5 +275,73 @@ Now start up your app and bot back end and type into an IM with the bot, `'@YOUR
 
 ## 6.  Create a Custom Renderer
 
+To create a custom renderer, we first need to create a handlebars template within our app frontend.  For this example lets create a template called `sample-template.hbs` :
 
+```markup
+<div style="border-left:3px solid blue;">
+    <p>Stock Price: {{message.text}}</p>
+</div>
+
+```
+
+Import this template and add it to the `CUSTOM_TEMPLATE_NAMES` and `customTemplates` dictionaries:
+
+{% tabs %}
+{% tab title="services/enrichers/general-enricher.js" %}
+```javascript
+import SampleTemplate from './templates/base/sample-template.hbs';
+
+const CUSTOM_TEMPLATE_NAMES = {
+  MY_TEMPLATE: 'my-template',
+  CURRENCY_QUOTE: 'currency-quote',
+  SAMPLE_TEMPLATE: 'sample-template'
+};
+
+const customTemplates = {
+  [CUSTOM_TEMPLATE_NAMES.MY_TEMPLATE]: MyTemplate,
+  [CUSTOM_TEMPLATE_NAMES.CURRENCY_QUOTE]: CurrencyQuote,
+  [CUSTOM_TEMPLATE_NAMES.SAMPLE_TEMPLATE]: SampleTemplate,
+};
+```
+{% endtab %}
+{% endtabs %}
+
+Next, add the `SAMPLE` entity and `type` to the `ENRICHER_EVENTS` in `entities.js` :
+
+```javascript
+SAMPLE: {
+    type: 'com.symphony.ms.template.sample',
+  }
+```
+
+Add to the switch statement inside the `render()` function and define the JSON schema to be injected into our `sample-template.hbs` message template:
+
+```javascript
+case ENRICHER_EVENTS.SAMPLE.type:
+    console.log('inside of sample');
+    template = SmsRenderer.renderAppMessage(
+      {
+        text: data.message
+      },
+      CUSTOM_TEMPLATE_NAMES.SAMPLE_TEMPLATE,
+    );
+    break;
+```
+
+### Update your Bot Code:
+
+To see your newly created structured object richly displayed, let's update our bot's code to send a structured object that matches the entity `type` registered with the app.  Update the `handle()` function inside the `HelloCommandHandler` class to the following:
+
+```julia
+public void handle(BotCommand command, SymphonyMessage response) {
+    List<String> messages = Arrays.asList("Option 1", "Option 2", "Option 3");
+    SampleObject sample = new SampleObject("AAPL = $112.56", messages);
+    response.setEnrichedTemplateFile("sample-template", sample,
+            "com.symphony.ms.template.sample", sample, "1.0");
+  }
+```
+
+Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` .  The bot will render your message + structured object accordingly:
+
+![](../../.gitbook/assets/screen-shot-2020-10-01-at-1.30.46-pm.png)
 
