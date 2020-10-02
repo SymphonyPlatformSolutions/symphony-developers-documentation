@@ -282,8 +282,16 @@ Now start up your app and bot back end and type into an IM with the bot, `'@YOUR
 To create a custom renderer, we first need to create a handlebars template within our app frontend.  For this example lets create a template called `sample-template.hbs` :
 
 ```markup
-<div style="border-left:3px solid blue;">
-    <p>Stock Price: {{message.text}}</p>
+<div>
+  <p>Stock Price:   
+  <span style="
+  font-size:34px;
+  font-weight:bold;
+  background-color:powderblue;"
+  >
+  {{message.text}}
+  </span>
+  </p>
 </div>
 
 ```
@@ -347,5 +355,5 @@ public void handle(BotCommand command, SymphonyMessage response) {
 
 Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` .  The bot will render your message + structured object accordingly:
 
-![](../../.gitbook/assets/screen-shot-2020-10-01-at-1.30.46-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-10-02-at-12.21.57-pm.png)
 
