@@ -80,3 +80,11 @@ The following steps show examples on how to use actions.
               }
 ```
 
+    3.  Implement an action method for the service of the entity renderer. This method will be called once the `<action>` tag is clicked.
+
+```javascript
+action: function(data){
+    console.log(data);
+		}
+```
+
