@@ -9,14 +9,14 @@ var modulesService = SYMPHONY.services.subscribe("modules");
 
 The following methods are available on the `modules` service:
 
-* [show](https://developers.symphony.com/extension/docs/modules-service#section-show)
-* [hide](https://developers.symphony.com/extension/docs/modules-service#section-hide)
-* [setTitle](https://developers.symphony.com/extension/docs/modules-service#section-settitle)
-* [focus](https://developers.symphony.com/extension/docs/modules-service#section-focus)
-* [addMenuItem](https://developers.symphony.com/extension/docs/modules-service#section-addmenuitem)
-* [setHandler](https://developers.symphony.com/extension/docs/modules-service#section-sethandler)
-* [openLink](https://developers.symphony.com/extension/docs/modules-service#section-openlink)
-* [redirect](https://developers.symphony.com/extension/docs/modules-service#section-redirect)
+* [show](modules-service.md#show)
+* [hide](modules-service.md#hide)
+* [setTitle](modules-service.md#settitle)
+* [focus](modules-service.md#focus)
+* [addMenuItem](modules-service.md#addmenuitem)
+* [setHandler](modules-service.md#sethandler)
+* [openLink](modules-service.md#openlink)
+* [redirect](modules-service.md#redirect)
 
 ## show\(\)
 

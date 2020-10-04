@@ -2,11 +2,11 @@
 
 Both the Client Extensions API services and your application services use the same interface. The service interface consists of the following methods:
 
-* implement
-* invoke
-* fire
-* listen
-* remove
+* [implement](service-interface.md#implement)
+* [invoke](service-interface.md#invoke)
+* [fire](service-interface.md#fire)
+* [listen](service-interface.md#listen)
+* [remove](service-interface.md#remove)
 
 ## implement\(\)
 

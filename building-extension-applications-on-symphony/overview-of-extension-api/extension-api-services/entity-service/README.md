@@ -10,10 +10,10 @@ var entityService = SYMPHONY.services.subscribe("entity");
 
 The following methods are available on the `entity` service:
 
-* [registerRenderer](https://developers.symphony.com/extension/docs/entity-service#registerrenderer)
-* [render](https://developers.symphony.com/extension/docs/entity-service#section-render)
-* [update](https://developers.symphony.com/extension/docs/entity-service#section-update)
-* [pause and resume](https://developers.symphony.com/extension/docs/entity-service#section-pause-and-resume)
+* [registerRenderer](./#registerrenderer)
+* [render](./#render)
+* [update](./#update)
+* [pause and resume](./#pause-and-resume)
 
 ## registerRenderer\(\)
 
