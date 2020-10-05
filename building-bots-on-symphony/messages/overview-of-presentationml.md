@@ -11,7 +11,7 @@ Messages in PresentationML markup are enclosed in a `<div>` tag with the followi
 <div data-format=\"PresentationML\" data-version=\"2.0\"> content here... </div>
 ```
 
-Since PresentationML was included as part of the MessageML format design, you can create messages by passing the message content in MessageML or in PresentationML. Note that PresentationML uses [Structured Objects](https://developers.symphony.com/symphony-developer/docs/objects) rather than shorthand tags. Therefore, when you send a message using [Create Message v4](https://rest-api.symphony.com/docs/create-message-v4), the `message` parameter must contain the message content in PresentationML XHTML markup, and the `data` parameter must contain the XML markup for the [standard entities](https://developers.symphony.com/symphony-developer/docs/messagemlv2#standard-entities) referenced in the message.
+Since PresentationML was included as part of the MessageML format design, you can create messages by passing the message content in MessageML or in PresentationML. Note that PresentationML uses [Structured Objects](structured-objects.md) rather than shorthand tags. Therefore, when you send a message using [Create Message v4](https://rest-api.symphony.com/docs/create-message-v4), the `message` parameter must contain the message content in PresentationML XHTML markup, and the `data` parameter must contain the XML markup for the [standard entities](overview-of-messageml/message-format-messageml.md#standard-entities) referenced in the message.
 
 **Shorthand tags translations:**
 
