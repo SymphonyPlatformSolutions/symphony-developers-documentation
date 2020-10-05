@@ -93,10 +93,6 @@
 * [Developer Certification](developer-certification/untitled.md)
 * [Developer Training Center](https://learn.symphony.com)
 
-## Symphony 2.0 \(BETA\)
-
-* [Symphony 2.0 \(BETA\)](symphony-2.0-beta/untitled.md)
-
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
