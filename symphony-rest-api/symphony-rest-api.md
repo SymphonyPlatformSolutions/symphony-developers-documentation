@@ -1,2 +1,0 @@
-# Symphony REST API
-
