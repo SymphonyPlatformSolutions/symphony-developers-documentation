@@ -581,3 +581,104 @@ The corresponding FreeMarker template is shown below:
 {% endtab %}
 {% endtabs %}
 
+## SpringBoot Integration
+
+The BDK 2.0's SpringBoot integration provides a few out of the box class annotations, making it easy to configure your bot's datafeed listeners, and also register command activities.
+
+### @EventListener
+
+To create a simple datafeed listener, simply annotate the eventTypes that you want to capture with the `@EventListener` annotation:
+
+```java
+@Slf4j
+@Component
+public class RealTimeEventsDemo {
+
+  @EventListener
+  public void onMessageSent(RealTimeEvent<V4MessageSent> event) {
+    log.info(event.toString());
+  }
+
+  @EventListener
+  public void onUserJoined(RealTimeEvent<V4UserJoinedRoom> event) {
+    log.info(event.toString());
+  }
+
+  @EventListener
+  public void onUserLeft(RealTimeEvent<V4UserLeftRoom> event) {
+    log.info(event.toString());
+  }
+}
+```
+
+### @Slash
+
+To register and listen for a Slash command, simple annotate a CommandActivity class method with the `@Slash` annotation:
+
+```java
+class HelloCommandActivity extends CommandActivity<CommandContext> {
+
+  private final MessageService messageService;
+  
+  @Slash("/gif")
+  public void displayGifForm(CommandContext context) throws TemplateException {
+    this.messageService.send(context.getStreamId(), "/templates/gif.ftl", emptyMap());
+  }
+
+  @Override
+  protected ActivityMatcher<CommandContext> matcher() {
+    return c -> c.getTextContent().contains("hello"); // (1)
+  }
+
+  @Override
+  protected void onActivity(CommandContext context) {
+    log.info("Hello command triggered by user {}", context.getInitiator().getUser().getDisplayName()); // (2)
+    this.messageService.send(context.getSourceEvent().getStream(), "<messageML> Hello " + context.getInitiator().getUser().getDisplayName()) + "</messageML>");
+
+  }
+
+  @Override
+  protected ActivityInfo info() {
+    final ActivityInfo info = ActivityInfo.of(ActivityType.COMMAND); // (3)
+    info.setName("Hello Command");
+    return info;
+  }
+}
+```
+
+Similarly, you can register Slash commands for Form Activities:
+
+```java
+@Slf4j
+@Component
+public class GifFormActivity extends FormReplyActivity<FormReplyContext> {
+
+  @Autowired
+  private MessageService messageService;
+
+  @Slash("/gif")
+  public void displayGifForm(CommandContext context) throws TemplateException {
+    this.messageService.send(context.getStreamId(), "/templates/gif.ftl", emptyMap());
+  }
+
+  @Override
+  public ActivityMatcher<FormReplyContext> matcher() {
+    return context -> "gif-category-form".equals(context.getFormId())
+        && "submit".equals(context.getFormValue("action"))
+        && StringUtils.isNotEmpty(context.getFormValue("category"));
+  }
+
+  @Override
+  public void onActivity(FormReplyContext context) {
+    log.info("Gif category is \"{}\"", context.getFormValue("category"));
+  }
+
+  @Override
+  protected ActivityInfo info() {
+    return new ActivityInfo().type(ActivityType.FORM)
+        .name("Gif Display category form command")
+        .description("\"Form handler for the Gif Category form\"");
+  }
+}
+```
+
