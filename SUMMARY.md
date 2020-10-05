@@ -115,7 +115,7 @@
   * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
     * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
-    * [Forms](developer-tools/developer-tools/ui-style-guide/forms.md)
+    * [Form Elements](developer-tools/developer-tools/ui-style-guide/forms.md)
     * [Buttons](developer-tools/developer-tools/ui-style-guide/buttons.md)
 
 ## Embedded Modules
