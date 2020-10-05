@@ -100,6 +100,8 @@ Extensions can be registered on various parts of the Symphony user interface by 
 | `cashtag` | Link added to hovercard that appears when hovering over a cashtag \(e.g. $GOOG\) |
 | `settings` | Link added to footer of Application Preferences |
 
+### trigger\(\)
+
 You must implement the `trigger` method on your application service in order to handle clicks on the registered extensions:
 
 ```javascript
