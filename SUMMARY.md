@@ -110,7 +110,7 @@
     * [Bot SDK](developer-tools/developer-tools/bdk/bot-sdk.md)
     * [UI Toolkit](developer-tools/developer-tools/bdk/ui-toolkit.md)
   * [BDK 2.0](developer-tools/developer-tools/bdk-2.0.md)
-  * [Yeoman Generator](developer-tools/developer-tools/yeoman-generator.md)
+  * [Symphony BDK Generator](developer-tools/developer-tools/yeoman-generator.md)
   * [Postman](developer-tools/developer-tools/postman.md)
   * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
