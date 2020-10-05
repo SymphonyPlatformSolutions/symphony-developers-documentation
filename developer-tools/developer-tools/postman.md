@@ -16,7 +16,7 @@ Before continuing, you will need the following:
   * Session Auth URL
   * Key Manager Auth URL
   * API Agent URL
-* A generated [RSA key pair](https://rest-api.symphony.com/docs/rsa-bot-authentication-workflow#section-create-an-rsa-key-pair)
+* A generated [RSA key pair](../../building-bots-on-symphony/authentication/rsa-authentication.md)
 * A service account created on your pod with the public key from above loaded
 
 ## Symphony Postman Collection
