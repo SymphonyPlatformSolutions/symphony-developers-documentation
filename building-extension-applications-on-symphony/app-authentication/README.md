@@ -44,7 +44,7 @@ Authenticate your Extension App with an App Token
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="appToken" type="string" required=false %}
+{% api-method-parameter name="appToken" type="string" required=true %}
 A signed JWT token containing the App ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
