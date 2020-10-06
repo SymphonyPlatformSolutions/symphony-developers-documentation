@@ -583,11 +583,42 @@ The corresponding FreeMarker template is shown below:
 
 ## SpringBoot Integration
 
-The BDK 2.0's SpringBoot integration provides a few out of the box class annotations, making it easy to configure your bot's datafeed listeners, and also register command activities.
+The BDK 2.0's SpringBoot integration provides a few out of the box class annotations, making it easy to configure your bot's datafeed listeners, and also register command activities.  To do so, you must create an entry point for your Bot by creating a  `BotApplication.java` class:
+
+```java
+@SpringBootApplication
+public class BotApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+```
+
+Now you can create a component for a simple bot applications through the `@Component` annotation:
+
+```java
+@Component
+public class HelloBot {
+
+  @Autowired
+  private MessageService messageService;
+
+  @EventListener
+  public void onMessageSent(RealTimeEvent<V4MessageSent> event) {
+    this.messageService.send(event.getSource().getMessage().getStream(), "<messageML>Hello!</messageML>");
+  }
+}
+```
 
 ### @EventListener
 
-To create a simple datafeed listener, simply annotate the eventTypes that you want to capture with the `@EventListener` annotation:
+The Core Starter uses [Spring Events](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEventPublisher.html) to deliver Real Time Events.
+
+You can subscribe to any Real Time Event from anywhere in your application by creating a handler method that has to respect two conditions:
+
+* Be annotated with [@EventListener](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/event/EventListener.html)
+* Have a `com.symphony.bdk.spring.events.RealTimeEvent<T>` parameter
 
 ```java
 @Slf4j
@@ -613,40 +644,27 @@ public class RealTimeEventsDemo {
 
 ### @Slash
 
-To register and listen for a Slash command, simple annotate a CommandActivity class method with the `@Slash` annotation:
+You can easily register a slash command using the `@Slash` annotation. Note that the `CommandContext` is mandatory to successfully register your command. If not defined, a `warn` message will appear in your application log:
 
 ```java
-class HelloCommandActivity extends CommandActivity<CommandContext> {
+@Component
+public class SlashHello {
 
-  private final MessageService messageService;
-  
-  @Slash("/gif")
-  public void displayGifForm(CommandContext context) throws TemplateException {
-    this.messageService.send(context.getStreamId(), "/templates/gif.ftl", emptyMap());
+  @Slash("/hello")
+  public void onHello(CommandContext commandContext) {
+    log.info("On /hello command");
   }
 
-  @Override
-  protected ActivityMatcher<CommandContext> matcher() {
-    return c -> c.getTextContent().contains("hello"); // (1)
-  }
-
-  @Override
-  protected void onActivity(CommandContext context) {
-    log.info("Hello command triggered by user {}", context.getInitiator().getUser().getDisplayName()); // (2)
-    this.messageService.send(context.getSourceEvent().getStream(), "<messageML> Hello " + context.getInitiator().getUser().getDisplayName()) + "</messageML>");
-
-  }
-
-  @Override
-  protected ActivityInfo info() {
-    final ActivityInfo info = ActivityInfo.of(ActivityType.COMMAND); // (3)
-    info.setName("Hello Command");
-    return info;
+  @Slash(value = "/hello", mentionBot = false)
+  public void onHelloNoMention(CommandContext commandContext) {
+    log.info("On /hello command (bot has not been mentioned)");
   }
 }
 ```
 
-Similarly, you can register Slash commands for Form Activities:
+### Activities
+
+Any service or component class that extends `FormReplyActivity` or `CommandActivity` will be automatically registered with thin the `ActivityRegistry`
 
 ```java
 @Slf4j
