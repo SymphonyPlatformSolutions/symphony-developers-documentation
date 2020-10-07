@@ -11,6 +11,7 @@
 * [Activities API](bdk-2.0.md#activities-api)
 * [User, Message, & Room Management](bdk-2.0.md#user-message-and-room-management)
 * [Message Templating](bdk-2.0.md#message-templating)
+* [SpringBoot Integration](bdk-2.0.md#springboot-integration)
 
 ## Description
 
