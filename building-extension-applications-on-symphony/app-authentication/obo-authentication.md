@@ -9,9 +9,18 @@ OBO or On-Behalf-Of authentication allows an authenticated bot + extension app t
 * Send messages and attachments
 * Set the context user's own presence
 
+For a full list of OBO-Enabled endpoints, click [here](https://developers.symphony.com/restapi/reference#obo-enabled-endpoints).
+
 {% hint style="info" %}
 OBO use cases differ from bot use cases in that activities are performed as if end users had initiated actions directly from within Symphony themselves.
 {% endhint %}
+
+For OBO apps, authentication is a two-fold process:
+
+1. The app itself must be authenticated using its RSA public Key or certificate. The app authenticates only if it is enabled for the pod and its key/certificate is trusted. Upon successful OBO app authentication, the app receives an app `sessionToken`.
+2. The app must request to authenticate on behalf of a particular user, using its app `sessionToken`. The app authenticates only if it is installed for the user and its app `sessionToken` is valid. Upon successful OBO user authentication, the app receives the user's `sessionToken`.
+
+Once the app has obtained the user's `sessionToken`, it can make REST API calls with this `sessionToken` to perform activities on behalf of the session user.
 
 ## Getting Started
 
