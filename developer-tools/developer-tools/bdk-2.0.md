@@ -275,7 +275,9 @@ The BDK 2.0 provides a new Activities API, an interface that makes it easy to ma
 
 ### Workflow API
 
-While the Activities API gives developers granular control over the user-to-bot interaction, the Workflow API makes it easy to string together this sequence of activities in order to create a complete Symphony workflow automation.  The Workflow API gives developers developers control over how these activities fit together in a context-based way that is easy monitored.  With both tools in hand, building powerful, enterprise grade workflows has never been easier.       
+While the Activities API gives developers granular control over the user-to-bot interaction, the Workflow API makes it easy to string together this sequence of activities in order to create a complete Symphony workflow automation.  The Workflow API gives developers developers control over how these activities fit together in a context-based way that is easy monitored.  With both tools in hand, building powerful, enterprise grade workflows has never been easier.      
+
+worfklow = sequence of activities , worfklow is above activities not within  - introducte workflow not workflow api -&gt; explain conceepts of actors and actors making activiites, bots, users, exterenal system.   
 
 ### Registering Activities
 
