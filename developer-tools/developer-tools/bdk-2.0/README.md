@@ -2,16 +2,16 @@
 
 ## Summary
 
-* [Description](bdk-2.0.md#description)
-* [Installation](bdk-2.0.md#installation)
-* [Configuration](bdk-2.0.md#configuration)
-* [Authentication](bdk-2.0.md#authentication)
-* [Datafeed Management](bdk-2.0.md#datafeed-management)
-* [Managing Multiple Bots](bdk-2.0.md#managing-multiple-bots)
-* [Activities API](bdk-2.0.md#activities-api)
-* [User, Message, & Room Management](bdk-2.0.md#user-message-and-room-management)
-* [Message Templating](bdk-2.0.md#message-templating)
-* [SpringBoot Integration](bdk-2.0.md#springboot-integration)
+* [Description](./#description)
+* [Installation](./#installation)
+* [Configuration](./#configuration)
+* [Authentication](./#authentication)
+* [Datafeed Management](./#datafeed-management)
+* [Managing Multiple Bots](./#managing-multiple-bots)
+* [Activities API](./#activities-api)
+* [User, Message, & Room Management](./#user-message-and-room-management)
+* [Message Templating](./#message-templating)
+* [SpringBoot Integration](./#springboot-integration)
 
 ## Description
 
@@ -45,13 +45,13 @@ $ yo symphony 2.0
 
 You should see the following:
 
-![](../../.gitbook/assets/screen-shot-2020-09-15-at-12.48.13-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-09-15-at-12.48.13-pm.png)
 
 ## Configuration
 
 Once installed, the next step is to configure your new Symphony Bot using the Yeoman Generator. In the command line, enter the information for your Symphony environment and Bot metadata. For example:
 
-![](../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
 
 After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to your generated `config.yaml` file:
 
@@ -173,7 +173,11 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
 By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot. Once authenticated, your bot is ready to leverage the REST API to create rich automations and workflows on Symphony.
 
 {% hint style="info" %}
+<<<<<<< HEAD:developer-tools/developer-tools/bdk-2.0/README.md
+Note:  You must have a corresponding service or Bot account setup on your Symphony instance before authenticating.  For more information navigate to the [Creating a Bot User](../../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
+=======
 Note: You must have a corresponding service or Bot account setup on your Symphony instance before authenticating. For more information navigate to the [Creating a Bot User](../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
+>>>>>>> master:developer-tools/developer-tools/bdk-2.0.md
 {% endhint %}
 
 ### OBO Authentication
@@ -267,7 +271,7 @@ Below is a full list of methods provided by the `RealTimeEventListener` class an
 
 For more information on the Symphony datafeed continue here:
 
-{% page-ref page="../../building-bots-on-symphony/datafeed.md" %}
+{% page-ref page="../../../building-bots-on-symphony/datafeed.md" %}
 
 ## Activities API
 

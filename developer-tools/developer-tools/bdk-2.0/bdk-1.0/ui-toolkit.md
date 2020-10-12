@@ -78,5 +78,5 @@ There's a few components that require a peer dependency installation, that means
 
 For an step by step tutorial on how to leverage the UI Toolkit to create complex frontend applications, continue here:
 
-{% page-ref page="../../../building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md" %}
+{% page-ref page="../../../../building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md" %}
 

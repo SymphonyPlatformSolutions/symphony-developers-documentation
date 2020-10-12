@@ -2,7 +2,7 @@
 description: Bot Developer Kit
 ---
 
-# BDK
+# BDK 1.0
 
 ## Bot Developer Kit \(BDK\)
 
