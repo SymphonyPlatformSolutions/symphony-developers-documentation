@@ -18,7 +18,9 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 * [**Extension API Reference**](./#symphony-extension-api)
 * [**Embedded Modules**](./#embedded-modules)
 
-note on bdk 2.0 \(check box note\)
+{% hint style="success" %}
+ Checkout the latest release of the Bot Developer Kit, [BDK 2.0](developer-tools/developer-tools/bdk-2.0.md).  BDK 2.0 is a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Get started building with BDK 2.0 today: [BDK 2.0](developer-tools/developer-tools/bdk-2.0.md)
+{% endhint %}
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
 
