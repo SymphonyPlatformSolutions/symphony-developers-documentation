@@ -1,10 +1,24 @@
 # Start Your Developer Journey
 
-**Welcome Symphony Developer!**
+## **Welcome Symphony Developer!**
 
 Here you will learn about all the ways to streamline work using integrated bots and apps. By leveraging Symphony's open APIs, developers can create innovative Bots and workflows, save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
 
 Keep reading to learn about core Symphony concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
+
+## Getting Started
+
+It's time to get started. Navigate to one of the following guides to kick off your developer journey today!
+
+* [**Building Bots on Symphony**](./#building-bots-on-symphony)
+* [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
+* [**Become a Certified Developer**](./#developer-certification)
+* [**Developer Tools**](./#developer-tools)
+* [**REST API Reference**](./#symphony-rest-api)
+* [**Extension API Reference**](./#symphony-extension-api)
+* [**Embedded Modules**](./#embedded-modules)
+
+note on bdk 2.0 \(check box note\)
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
 
@@ -20,31 +34,25 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 
 Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
-{% page-ref page="building-extension-applications-on-symphony/overview-of-extension-applications/" %}
+## Become a Certified Developer
+
+Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
 ## Symphony REST API ![](.gitbook/assets/symphony-api-large.png)
 
 In depth documentation and reference guide for the Symphony REST API:
 
-## Symphony Extension API ![](.gitbook/assets/symphony-api-large.png)
+## Symphony Extension API ![](.gitbook/assets/extension-app-large.png)
 
 In depth documentation and reference guide for the Symphony Extension API:
 
 {% page-ref page="building-extension-applications-on-symphony/overview-of-extension-api/" %}
 
-## Developer Certification
-
-Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
-
 ## Developer Tools
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
-## Symphony 2.0
-
-Get a sneak peak at our new Symphony 2.0 APIs and new Symphony 2.0 development experience!
-
 ## Embedded Modules
 
-Securely embed stand-alone Symphony chat modules inside other websites and applications.
+Securely embed stand-alone Symphony chat modules inside other websites and applications:
 
