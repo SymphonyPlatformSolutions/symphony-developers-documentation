@@ -22,7 +22,11 @@ Get started building bots using our new [Bot Developer Kit 2.0!](../developer-to
 
 Go through our dedicated step by step bot building tutorials to learn how to leverage our development tools and start building bots today!
 
-{% page-ref page="tutorials/" %}
+{% page-ref page="building-bots-on-symphony/tutorials/" %}
+
+At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
+
+{% page-ref page="authentication/" %}
 
 ## 4.  Add Custom Business Logic
 

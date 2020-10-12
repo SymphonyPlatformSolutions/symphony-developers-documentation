@@ -112,7 +112,7 @@ As described in [Message Format - MessageML v2](overview-of-messageml/message-fo
 
 ## Renderer Applications
 
-Renderer Applications leverage the Extension API to dynamically replace the presentation of a structured object.  
+Renderer Applications use the [Extension API](https://extension-api.symphony.com/docs) to dynamically replace the presentation of a structured object.  
 To create a renderer application:
 
 * Create an [Extension application](../../building-extension-applications-on-symphony/building-extension-applications-on-symphony.md)
@@ -120,7 +120,5 @@ To create a renderer application:
   * Register your application as being able to render a specific type, using the [`registerRenderer` function](../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/#registerrenderer).
   * Render the object itself, by implementing the [`render` function](../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/#render).
 
-To learn more about building Extension Applications that leverage structured objects, continue here:
-
-{% page-ref page="../../building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md" %}
+To deploy this application into your organization, refer to the [Application Management](https://extension-api.symphony.com/docs/application-management) documentation.
 
