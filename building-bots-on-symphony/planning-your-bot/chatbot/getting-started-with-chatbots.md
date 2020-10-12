@@ -64,3 +64,7 @@ Afterwards, continue building and running your Chatbot here:
 
 {% page-ref page="../../tutorials/building-a-chatbot-using-bdk.md" %}
 
+{% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
+
+
+

@@ -16,6 +16,8 @@ In this tutorial we will be building off the generated app + bot scaffolds provi
 
 In order to use the Client Extension API services, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK:
 
+{% tabs %}
+{% tab title="controller.html" %}
 ```markup
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +35,8 @@ In order to use the Client Extension API services, your app must include the `sy
 </body>
 </html>
 ```
+{% endtab %}
+{% endtabs %}
 
 In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method.  This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules.  This method is located in the the `app.js` file provided out of the box by the BDK: 
 
@@ -91,7 +95,7 @@ init() {
   }
 ```
 
-To learn more about App Authentication please continue here:
+Upon completion of the above function, your extension application will be successfully authenticated.  For more information about app authentication, please continue here:
 
 {% page-ref page="../app-authentication/" %}
 
@@ -235,6 +239,10 @@ Run your Bot + Extension Application and click on your custom button added to th
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-1.34.47-pm.png)
 
 ### Rendering Financial Charts using the UI Toolkit
+
+{% hint style="info" %}
+To learn more about the UI Toolkit and how to access it, continue [here](../../developer-tools/developer-tools/bdk/ui-toolkit.md).
+{% endhint %}
 
 The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly.  Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications.  In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit.  The `CandleStickChart` component takes in the following data format in order to render the data:
 
@@ -488,4 +496,6 @@ Rerun your app backend \(bot\) and frontend applications.  Submit another messag
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-2.31.27-pm.png)
 
 If you see this view, then you have successfully completed the tutorial!  For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
+
+{% page-ref page="../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
 

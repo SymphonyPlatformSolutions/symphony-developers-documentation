@@ -5,6 +5,13 @@ This pages describes the implementation of certificate-based Authentication. For
 * Session Auth: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate)
 
+{% hint style="danger" %}
+#### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
+
+* [Configure your Bot for SDKs](../configuration/configure-your-bot-for-sdks.md)
+* [Configure your Bot for BDK](../configuration/configure-your-bot-for-bdk.md)
+{% endhint %}
+
 ## Overview of Certificate-Based Authentication
 
 Symphony allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate. When a Bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the Bot user and return a Session Token. The same process occurs when a Bot authenticates on the Key Manager.
@@ -49,7 +56,7 @@ The Common Name \(CN\) value must match the name of the Symphony Service Account
 
 | Details | Example Values |
 | :--- | :--- |
-| Certificate Type | Sigle Domain Certificate |
+| Certificate Type | Single Domain Certificate |
 | Common Name \(CN\) | demo-bot1 |
 | Organization | Excelsior Bank |
 | Department | Collaboration Services |
@@ -123,5 +130,5 @@ A successful response:
 
 Pass the Session Token and Key Manager Token as headers for all subsequent API requests.
 
-## Test github pr
+
 

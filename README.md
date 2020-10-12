@@ -28,9 +28,9 @@ In depth documentation and reference guide for the Symphony REST API:
 
 ## Symphony Extension API ![](.gitbook/assets/symphony-api-large.png)
 
-In depth documentation and reference guides for the Symphony Extension API
+In depth documentation and reference guide for the Symphony Extension API:
 
-{% page-ref page="symphony-extension-api/symphony-extension-api.md" %}
+{% page-ref page="building-extension-applications-on-symphony/overview-of-extension-api/" %}
 
 ## Developer Certification
 

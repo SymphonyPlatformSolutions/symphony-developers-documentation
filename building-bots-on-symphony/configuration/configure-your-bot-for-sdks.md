@@ -22,7 +22,7 @@ The Symphony Bot Generator is a Yeoman-based code generator that generates a pro
 ### Install Symphony Bot Generator:
 
 ```text
-$ $ npm install -g yo generator-symphony
+$ npm install -g yo generator-symphony
 ```
 
 ## 1.  Generate Your Bot
@@ -149,9 +149,12 @@ Open your generated Bot code in your favorite IDE and navigate to the config.jso
 
 Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Additionally, confirm that the botUsername, and botEmailAddress match the information entered in the admin portal on the Pod.
 
-The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank. For more information on advanced configurations continue here: [SDK Configuration](../../developer-tools/developer-tools/sdks/sdk-configuration.md).
+The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank. For more information on advanced configurations continue here: [SDK Configuration]().
 
 ## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one of the language-specific [Getting Started With Chatbots](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots/README.md#java-sdk), [Getting Started With Interactive Bots](../planning-your-bot/interactive-bot/getting-started/#java-sdk), or [Getting Started With Headless Bots](../planning-your-bot/headless-bot/getting-started/) guides.
+Now that you have generated and configured your Bot, move onto one of the SDK bot tutorials:
+
+{% page-ref page="../tutorials/sdk/" %}
+
 
