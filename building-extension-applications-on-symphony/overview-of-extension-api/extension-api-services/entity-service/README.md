@@ -6,8 +6,6 @@ Use the `entity` service to allow your app to render a Structured Object created
 var entityService = SYMPHONY.services.subscribe("entity");
 ```
 
-
-
 The following methods are available on the `entity` service:
 
 * [registerRenderer](./#registerrenderer)
@@ -26,7 +24,7 @@ function registerRenderer(type, options, serviceName)
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | type | String | The type of entity that will be rendered by your application. Entities are namespaced using reverse domain name notation, e.g. `com.symphony.address`. |
-| options | Array  | Reserved for future use. |
+| options | Array | Reserved for future use. |
 | serviceName | String | The name of the application service that will be used to render this entity. |
 
 You must implement the `render()` method on the specified application service. This method will be invoked when the associated entity is rendered in the Symphony client.
@@ -110,14 +108,14 @@ helloControllerService.implement({
   render: (type, data) => {
     const template = "<entity><span>Street Address: <text id='address'/></span><br/><span>City: Palo Alto</span><br/><span>State: California</span><br/><span>Zip Code: 94304</span></entity>"
     entityInstanceId = "0";
-    
+
     if (type == "com.symphony.address") {
       const newTemplate = "<entity><span>The message is updated</span></entity>";
       // Update the entity after 5 seconds with a new template
       setTimeout(() => {
         entityService.update(entityInstanceId, newTemplate, {});
       }, 5000);
-      
+
       return {
         template,
         data,

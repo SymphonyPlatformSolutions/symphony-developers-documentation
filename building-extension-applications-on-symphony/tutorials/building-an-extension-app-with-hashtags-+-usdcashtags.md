@@ -1,6 +1,6 @@
 # Building an Extension App with \#hashtags & $cashtags
 
-In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker or Symphony $cashtag.  We will also demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to render a stock chart for that given stock symbol or ticker.  
+In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker or Symphony $cashtag. We will also demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to render a stock chart for that given stock symbol or ticker.
 
 ## Prerequisites:
 
@@ -10,7 +10,7 @@ Complete the BDK App configuration guide:
 
 ## 1.  Dive into the Code
 
-In this tutorial we will be building off the generated app + bot scaffolds provided by the BDK.  The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development.  The following demonstrates the BDK's implementation for bootstrapping your extension app:
+In this tutorial we will be building off the generated app + bot scaffolds provided by the BDK. The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
 
 ### Initialization:
 
@@ -38,7 +38,7 @@ In order to use the Client Extension API services, your app must include the `sy
 {% endtab %}
 {% endtabs %}
 
-In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method.  This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules.  This method is located in the the `app.js` file provided out of the box by the BDK: 
+In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK:
 
 ```javascript
 SYMPHONY.remote.hello().then((data) => {
@@ -57,7 +57,7 @@ SYMPHONY.remote.hello().then((data) => {
 
 ### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony.  Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely.  In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file: 
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
 
 ```javascript
 SYMPHONY.application.connect(
@@ -69,13 +69,13 @@ SYMPHONY.application.connect(
 
 ## 2.  Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication.  App authentication is required for apps that wish to receive sensitive conversation and user data.  Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK.  The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture.  The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
   .init()
   .then(() => bootstrap())
-  .catch(e => console.error(e));  
+  .catch(e => console.error(e));
 ```
 
 And subsequently inside the `authentication/index.js` file:
@@ -95,7 +95,7 @@ init() {
   }
 ```
 
-Upon completion of the above function, your extension application will be successfully authenticated.  For more information about app authentication, please continue here:
+Upon completion of the above function, your extension application will be successfully authenticated. For more information about app authentication, please continue here:
 
 {% page-ref page="../app-authentication/" %}
 
@@ -109,7 +109,7 @@ The first step of creating an extension app that add a button to the \#hashtag o
 const uiService = SYMPHONY.services.subscribe('ui');
 ```
 
- Once your app has subscribe to the UI Service, your app must register its UI extension by calling the `registerExtension()` function as shown on line 76 of the controller.js file:
+Once your app has subscribe to the UI Service, your app must register its UI extension by calling the `registerExtension()` function as shown on line 76 of the controller.js file:
 
 ```javascript
 // UI extensions, for buttons EXAMPLE
@@ -152,7 +152,7 @@ In this implementation, the following extension is being registered:
   </tbody>
 </table>
 
-As we learned about in the [Extension Applications + \#hashtags & $cashtags](../planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md) guide, the UI extension is first passed to the `filter()` function.  If this function evaluates as true, the UI extension will appear on the specified class. To make sure of this lets update the `filter()` function implemented to the following in your controller.js file:
+As we learned about in the [Extension Applications + \#hashtags & $cashtags](../planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md) guide, the UI extension is first passed to the `filter()` function. If this function evaluates as true, the UI extension will appear on the specified class. To make sure of this lets update the `filter()` function implemented to the following in your controller.js file:
 
 ```javascript
 filter(type, id, data) {
@@ -168,13 +168,13 @@ filter(type, id, data) {
 
 ## 4. Run the code
 
-The next step is to run the code and launch your app.  First run your bot \(app backend\) by running the BotApplication.java file.  Once your bot has successfully run, launch your app:
+The next step is to run the code and launch your app. First run your bot \(app backend\) by running the BotApplication.java file. Once your bot has successfully run, launch your app:
 
 ```javascript
 $ yarn start:dev
 ```
 
-Open your Symphony Client \(in our case develop2\) and make sure your app is installed.  Open a 1-1 IM with a Symphony user and type a '$' followed by any stock symbol \(e.g. $aapl\).  If successful, you should see the following when you hover over the $cashtag in the message:
+Open your Symphony Client \(in our case develop2\) and make sure your app is installed. Open a 1-1 IM with a Symphony user and type a '$' followed by any stock symbol \(e.g. $aapl\). If successful, you should see the following when you hover over the $cashtag in the message:
 
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-12.54.57-pm.png)
 
@@ -182,7 +182,7 @@ Open your Symphony Client \(in our case develop2\) and make sure your app is ins
 
 ### Grabbing the Ticker Symbol:
 
-The next step in building this extension app is to add our own custom business logic, specifically the business logic that captures the stock ticker in context when the $cashtag hovercard is brought into view.  To do so update the provided implementation of the trigger\(\) method to the following:
+The next step in building this extension app is to add our own custom business logic, specifically the business logic that captures the stock ticker in context when the $cashtag hovercard is brought into view. To do so update the provided implementation of the trigger\(\) method to the following:
 
 ```javascript
 trigger(uiClass, id, payload, data) {
@@ -191,11 +191,11 @@ trigger(uiClass, id, payload, data) {
         }
 ```
 
-Here we are calling a the provided `showExtensionApp()` method provided out of the box by the BDK.  This method is defined in `services/controller/extension-app/index.js` and provides a sample implementation of the Extension API's `moduleService` in order to bring your application into view.   The `showExtensionApp()` function allows you to pass along a queryObject as a parameter.  In our case, we are grabbing the ticker name from the payload received in the `trigger()` method and passing that along as an argument to be used in our view.
+Here we are calling a the provided `showExtensionApp()` method provided out of the box by the BDK. This method is defined in `services/controller/extension-app/index.js` and provides a sample implementation of the Extension API's `moduleService` in order to bring your application into view. The `showExtensionApp()` function allows you to pass along a queryObject as a parameter. In our case, we are grabbing the ticker name from the payload received in the `trigger()` method and passing that along as an argument to be used in our view.
 
 ### Creating the View:
 
-The next step in building our extension app is to create our view.  Inside of the pages folder, create a subfolder called stock-chart.  Inside of this folder, create a new file called `index.js`.  Populate your file with the following: 
+The next step in building our extension app is to create our view. Inside of the pages folder, create a subfolder called stock-chart. Inside of this folder, create a new file called `index.js`. Populate your file with the following:
 
 {% tabs %}
 {% tab title="index.js" %}
@@ -231,10 +231,9 @@ function route() {
   return <StockChart ticker={queryObj.ticker} />;
 
   }
-
 ```
 
-Run your Bot + Extension Application and click on your custom button added to the $cashtag hovercard.  You should see the StockChart react component come into focus:  
+Run your Bot + Extension Application and click on your custom button added to the $cashtag hovercard. You should see the StockChart react component come into focus:
 
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-1.34.47-pm.png)
 
@@ -244,7 +243,7 @@ Run your Bot + Extension Application and click on your custom button added to th
 To learn more about the UI Toolkit and how to access it, continue [here](../../developer-tools/developer-tools/bdk/ui-toolkit.md).
 {% endhint %}
 
-The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly.  Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications.  In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit.  The `CandleStickChart` component takes in the following data format in order to render the data:
+The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly. Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications. In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit. The `CandleStickChart` component takes in the following data format in order to render the data:
 
 ```javascript
 [
@@ -263,11 +262,11 @@ The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that
 
 ### Setting up the Backend:
 
-Since our extension app is going to render a candlestick stock chart in real time, we need to fetch and clean data from a third party API.  In this tutorial, we will be using [alphavantage](https://www.alphavantage.co/) as our data provider.  
+Since our extension app is going to render a candlestick stock chart in real time, we need to fetch and clean data from a third party API. In this tutorial, we will be using [alphavantage](https://www.alphavantage.co/) as our data provider.
 
-Once you have received your free API Token, you can leverage the API.  Specifically, we will be using data provided from the [Time Series Daily API](https://www.alphavantage.co/documentation/#daily) call.
+Once you have received your free API Token, you can leverage the API. Specifically, we will be using data provided from the [Time Series Daily API](https://www.alphavantage.co/documentation/#daily) call.
 
-Since we want to keep our data and our view separate, all of the interaction with AlphaVantage API, including the data cleaning will occur on our app's backend or running bot.  In your bot project, create a new `services` folder and add a class `DataService`.  Add the following to your `DataService` class:
+Since we want to keep our data and our view separate, all of the interaction with AlphaVantage API, including the data cleaning will occur on our app's backend or running bot. In your bot project, create a new `services` folder and add a class `DataService`. Add the following to your `DataService` class:
 
 {% tabs %}
 {% tab title="services/DataService.java" %}
@@ -426,11 +425,11 @@ class ChartData {
 {% endtab %}
 {% endtabs %}
 
-In this class, we are passing along the stock symbol received from the frontend as captured in our $cashtag button, sending to the backend, and calling the API using the symbol as a query parameter.  The data returned is the format required in our `CandleStickChart` react component referenced above.
+In this class, we are passing along the stock symbol received from the frontend as captured in our $cashtag button, sending to the backend, and calling the API using the symbol as a query parameter. The data returned is the format required in our `CandleStickChart` react component referenced above.
 
 ### Rendering the Data
 
-Now that our backend `DataService` is setup, the next step is to render the data on the frontend.  Let's update or `StockChart` component to the following:
+Now that our backend `DataService` is setup, the next step is to render the data on the frontend. Let's update or `StockChart` component to the following:
 
 ```javascript
 import React from 'react';
@@ -486,16 +485,15 @@ StockChart.propTypes = {
 }
 
 export default StockChart;
-
 ```
 
-Before this component is rendered, we make a `fetch()` call to the backend where the `DataService` class obtains the data from the API and performs its data cleaning.  Next we update or `chartData` to contain this data using react hooks.  Lastly, we pass our `chartData`  object to our `CandleStickChart` react component where it renders once the data is made available.  
+Before this component is rendered, we make a `fetch()` call to the backend where the `DataService` class obtains the data from the API and performs its data cleaning. Next we update or `chartData` to contain this data using react hooks. Lastly, we pass our `chartData` object to our `CandleStickChart` react component where it renders once the data is made available.
 
-Rerun your app backend \(bot\) and frontend applications.  Submit another message containing a stock $cashtag of your choosing and hover over it.  Select the button and notice a CandleStickChart containing realtime stock data brought into view:
+Rerun your app backend \(bot\) and frontend applications. Submit another message containing a stock $cashtag of your choosing and hover over it. Select the button and notice a CandleStickChart containing realtime stock data brought into view:
 
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-2.31.27-pm.png)
 
-If you see this view, then you have successfully completed the tutorial!  For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
+If you see this view, then you have successfully completed the tutorial! For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
 
 {% page-ref page="../../developer-tools/developer-tools/bdk/ui-toolkit.md" %}
 

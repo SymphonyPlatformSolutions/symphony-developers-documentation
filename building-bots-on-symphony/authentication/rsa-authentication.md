@@ -5,7 +5,6 @@ This pages describes the implementation of RSA Authentication. For the API refer
 * Session Auth: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference\#rsa-key-manager-authenticate](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate)
 
-
 {% hint style="danger" %}
 #### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 

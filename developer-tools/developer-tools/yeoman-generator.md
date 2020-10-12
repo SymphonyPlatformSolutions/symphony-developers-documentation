@@ -1,6 +1,6 @@
 # Symphony BDK Generator
 
-The Symphony BDK Generator is a yeoman based CLI tool that can be used to quickly generate Symphony bot and app project scaffolds.  The Symphony BDK Generator is supported across 4 different languages:
+The Symphony BDK Generator is a yeoman based CLI tool that can be used to quickly generate Symphony bot and app project scaffolds. The Symphony BDK Generator is supported across 4 different languages:
 
 * Java
 * Python
@@ -33,13 +33,13 @@ Configure your Bot and environment accordingly:
 
 ## BDK Generator 2.0 \(Beta\)
 
-It is now possible to create BDK 2.0 projects through the BDK Generator.  To do so and access the new menu simply run the following:
+It is now possible to create BDK 2.0 projects through the BDK Generator. To do so and access the new menu simply run the following:
 
 ```text
 $ yo symphony 2.0
 ```
 
 {% hint style="info" %}
-Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are only available in Java.  Support for Python, Node.js and .NET are coming soon.  
+Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are only available in Java. Support for Python, Node.js and .NET are coming soon.
 {% endhint %}
 

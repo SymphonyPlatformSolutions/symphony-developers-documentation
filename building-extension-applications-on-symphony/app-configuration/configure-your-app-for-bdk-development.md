@@ -34,7 +34,7 @@ $ symphony-bdk-cli --check-dependencies
 
 ### 1.  Generate your Bot \(App Backend\)
 
-Since we are configuring our app to be able to perform app authentication, our app must have a dedicated backend.  Bots generated from the BDK are configured to easy act as your app's backend with minimal setup.  As the developer all you have to do is share a unique appID and RSA private key across both your app's frontend and your app's backend \(generated bot\).  Luckily the BDK CLI tool takes care of all of this setup:
+Since we are configuring our app to be able to perform app authentication, our app must have a dedicated backend. Bots generated from the BDK are configured to easy act as your app's backend with minimal setup. As the developer all you have to do is share a unique appID and RSA private key across both your app's frontend and your app's backend \(generated bot\). Luckily the BDK CLI tool takes care of all of this setup:
 
 To generate a new Bot project, enter the following:
 
@@ -45,7 +45,7 @@ $ symphony-bdk-cli --bot
 This will prompt with you a number of questions about your Bot and Pod configuration. Type in your bots metadata, use arrows to scroll, and press enter to move onto the next prompt.
 
 {% hint style="info" %}
-Note: You will need to enter and record a unique app ID.  This appID will be shared across your app's backend, frontend and will be registered on the pod itself.  In this case, our appID is demobot3
+Note: You will need to enter and record a unique app ID. This appID will be shared across your app's backend, frontend and will be registered on the pod itself. In this case, our appID is demobot3
 {% endhint %}
 
 ```text
@@ -90,7 +90,7 @@ B0njI4/rnJLLoTZUJNTs6a0CAwEAAQ==
 -----END PUBLIC KEY-----
 ```
 
-Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.  
+Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.
 
 ## 2.  Configure your Bot on the Pod
 
@@ -132,7 +132,7 @@ Click 'Create' and open your generated Bot code in your favorite Java IDE and na
 }
 ```
 
-Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully.  Additionally, confirm that the botUsername, and botEmailAddress matches the information entered in the admin portal on the Pod.
+Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Additionally, confirm that the botUsername, and botEmailAddress matches the information entered in the admin portal on the Pod.
 
 ## 3.  Generate you App \(App Frontend\)
 
@@ -145,7 +145,7 @@ $ symphony-bdk-cli --app
 This will prompt with you a number of questions about your app and Pod configuration. Type in your app's metadata, use arrows to scroll, and press enter to move onto the next prompt.
 
 {% hint style="info" %}
-Note: You will need to enter the unique app ID entered before.  In this case, our appID is demobot3
+Note: You will need to enter the unique app ID entered before. In this case, our appID is demobot3
 {% endhint %}
 
 ```text
@@ -198,17 +198,17 @@ Next, paste the RSA public key from your generated bot project in the Authentica
 
 ![](../../.gitbook/assets/screen-shot-2020-08-25-at-4.16.54-pm.png)
 
-Finally, populate the Configuration section and click 'Create'.  
+Finally, populate the Configuration section and click 'Create'.
 
 ![](../../.gitbook/assets/screen-shot-2020-08-25-at-11.31.06-pm.png)
 
 ## 5.  Enable your App
 
-Once you've configured and created your app on the Symphony Pod, the next step is to enable your app for a given set of users.  In the admin portal of your Symphony Pod, navigate to 'App Settings' in the lefthand navigation bar.  Find your newly created extension app, in this case 'demoapp3' and set the Global Status, Visibility, and installation fields as shown below:  
+Once you've configured and created your app on the Symphony Pod, the next step is to enable your app for a given set of users. In the admin portal of your Symphony Pod, navigate to 'App Settings' in the lefthand navigation bar. Find your newly created extension app, in this case 'demoapp3' and set the Global Status, Visibility, and installation fields as shown below:
 
 ![](../../.gitbook/assets/screen-shot-2020-08-25-at-11.58.02-pm%20%282%29.png)
 
-Lastly, save your changes.  
+Lastly, save your changes.
 
 ## 6.  Prepare and Launch the App Backend \(Bot\)
 
@@ -241,7 +241,7 @@ cors:
 {% endtab %}
 {% endtabs %}
 
-After configuring your backend, start up your Bot by running your BotApplication.java file.  You will know your Bot has successfully started and authenticated if you see the following line in your console logs:
+After configuring your backend, start up your Bot by running your BotApplication.java file. You will know your Bot has successfully started and authenticated if you see the following line in your console logs:
 
 ```text
 2020-08-25 23:51:03,704 INFO [main] com.symphony.demobot3.BotApplication: Started BotApplication in 7.382 seconds (JVM running for 7.909)
@@ -249,7 +249,7 @@ After configuring your backend, start up your Bot by running your BotApplication
 
 ## 7.  Prepare and Launch the App Frontend \(App\)
 
-The generated BDK app template comes out of the box with some mock features that are useful for development.  In order to give our app a production feel, we need to clean up and comment some of the scaffold code.  In your generated app project, navigate to your controller.js file, and comment lines 55 - 60:
+The generated BDK app template comes out of the box with some mock features that are useful for development. In order to give our app a production feel, we need to clean up and comment some of the scaffold code. In your generated app project, navigate to your controller.js file, and comment lines 55 - 60:
 
 {% tabs %}
 {% tab title="controller.js" %}
@@ -294,19 +294,19 @@ Next, navigate to your app.js file and comment the develblock:
 {% endtab %}
 {% endtabs %}
 
-Once you've prepared your app project, it's time to run our app.  You can do so by running the following command in your console:
+Once you've prepared your app project, it's time to run our app. You can do so by running the following command in your console:
 
 ```text
 $ yarn start:dev
 ```
 
-This command compiles the project and exposes the main files under port `:4000` - similar to `yarn start:mock`, but does not copy the Symphony Mock Client code to overwrite the Frontend APIs. It also does not boot up the mock JSON server. This is used for when you would like to open the frontend application through Symphony.  
+This command compiles the project and exposes the main files under port `:4000` - similar to `yarn start:mock`, but does not copy the Symphony Mock Client code to overwrite the Frontend APIs. It also does not boot up the mock JSON server. This is used for when you would like to open the frontend application through Symphony.
 
 ## 8.  Open your App
 
-Navigate to your Symphony client, and click on 'Symphony Market' in the lefthand navigation.  Locate your newly created app, 'demoapp3' and select 'ADD'.  If successful, you will see your 'demoapp3' app and icon appear under the Applications tab in the lefthand nav.  
+Navigate to your Symphony client, and click on 'Symphony Market' in the lefthand navigation. Locate your newly created app, 'demoapp3' and select 'ADD'. If successful, you will see your 'demoapp3' app and icon appear under the Applications tab in the lefthand nav.
 
-To confirm that your app successfully authenticated, navigate to the console of your app backend \(running bot\) and check the logs.  If you see the following, you app's backend has successfully authenticated:
+To confirm that your app successfully authenticated, navigate to the console of your app backend \(running bot\) and check the logs. If you see the following, you app's backend has successfully authenticated:
 
 ```text
 com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=b4cc827f-424f-41a0-93de-04f2aa355615}: App auth step 1: Initializing extension app authentication

@@ -20,20 +20,20 @@ The UI Toolkit is a library of react components that helps you build complex fro
 
 ## Installation
 
-1.  To gain access to the UI Toolkit, navigate to the dedicated Github repository: [https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit](https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit)
+1. To gain access to the UI Toolkit, navigate to the dedicated Github repository: [https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit](https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit)
 2. Clone the repository locally:
 
 ```text
 $ git clone https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit.git
 ```
 
-   3.  To access a live version of this library, run the following from inside your project:
+1. To access a live version of this library, run the following from inside your project:
 
 ```text
 $ yarn storybook
 ```
 
-This will launch a live version of the UI Toolkit library reference in your default browser.  In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.
+This will launch a live version of the UI Toolkit library reference in your default browser. In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.
 
 ## Usage
 
@@ -44,7 +44,7 @@ $ npm install symphony-bdk-ui-toolkit
 ```
 
 {% hint style="info" %}
-Note:  This is automatically installed when generating applications using the BDK CLI tool.
+Note: This is automatically installed when generating applications using the BDK CLI tool.
 {% endhint %}
 
 Import the components you want to use:

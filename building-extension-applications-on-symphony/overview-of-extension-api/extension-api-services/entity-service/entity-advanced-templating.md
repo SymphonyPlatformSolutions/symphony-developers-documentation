@@ -1,6 +1,6 @@
 # Entity Advanced Templating
 
-The `template`parameter in the `render()` function of the [entity Service](./) is an [ExtensionML](https://developers.symphony.com/symphony-developer/docs/extensionml) string used to render entities.  To render a static object or an iFrame, you can use advanced templating:
+The `template`parameter in the `render()` function of the [entity Service](./) is an [ExtensionML](https://developers.symphony.com/symphony-developer/docs/extensionml) string used to render entities. To render a static object or an iFrame, you can use advanced templating:
 
 ## Template and Data
 
@@ -50,26 +50,26 @@ The following steps show examples on how to use actions.
 
 ```markup
 <entity id="survey-voting-template" class="template">
-	<card id="card">
-		<h3>How did you like today's <text id="type"/> from <text id="venue"/>?</h3>
-		<p>
-			Please provide feedback by clicking one of the stars below to rate the meal.
-		</p>
-		<p>
-			<action id="onestar"/>
-			<action id="twostars"/>
-			<action id="threestars"/>
-			<action id="fourstars"/>
-			<action id="fivestars"/>
-		</p>
-		<p>
-			Voting ends at <text id="end"/>
-		</p>
-	</card>
+    <card id="card">
+        <h3>How did you like today's <text id="type"/> from <text id="venue"/>?</h3>
+        <p>
+            Please provide feedback by clicking one of the stars below to rate the meal.
+        </p>
+        <p>
+            <action id="onestar"/>
+            <action id="twostars"/>
+            <action id="threestars"/>
+            <action id="fourstars"/>
+            <action id="fivestars"/>
+        </p>
+        <p>
+            Voting ends at <text id="end"/>
+        </p>
+    </card>
 </entity>
 ```
 
-    2.  The data field of the entity must have objects that match the actions ids. For these objects, we can     provide an icon, a label and a service name for the action.
+1. The data field of the entity must have objects that match the actions ids. For these objects, we can     provide an icon, a label and a service name for the action.
 
 ```javascript
  onestar: {
@@ -80,11 +80,11 @@ The following steps show examples on how to use actions.
               }
 ```
 
-    3.  Implement an action method for the service of the entity renderer. This method will be called once the `<action>` tag is clicked.
+1. Implement an action method for the service of the entity renderer. This method will be called once the `<action>` tag is clicked.
 
 ```javascript
 action: function(data){
     console.log(data);
-		}
+        }
 ```
 

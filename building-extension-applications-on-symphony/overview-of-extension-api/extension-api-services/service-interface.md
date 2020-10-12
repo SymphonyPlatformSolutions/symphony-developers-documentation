@@ -25,7 +25,7 @@ function implement(methodName, implementation)
 var helloAppService = SYMPHONY.services.register("hello:app");
 
 helloAppService.implement("helloWorld", function() {
-	console.log("Hello World!");
+    console.log("Hello World!");
 });
 ```
 
@@ -43,8 +43,8 @@ function implement(implementations)
 var helloAppService = SYMPHONY.services.register("hello:app");
 
 helloAppService.implement({
-	helloWorld: function() {
-  	console.log("Hello World!");
+    helloWorld: function() {
+      console.log("Hello World!");
   }
 });
 ```
@@ -65,7 +65,7 @@ function invoke(methodName, ...)
 var helloAppService = SYMPHONY.services.register("hello:app");
 
 helloAppService.implement("helloWorld", function() {
-	console.log("Hello World!");
+    console.log("Hello World!");
 });
 
 helloAppService.invoke("helloWorld");

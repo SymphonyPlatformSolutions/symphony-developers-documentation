@@ -24,7 +24,7 @@ Once the app has obtained the user's `sessionToken`, it can make REST API calls 
 
 ## Getting Started
 
-  1.  In order to perform an OBO operation, you need to first create an extension application manifest `bundle.json` file and upload to the Pod.
+1. In order to perform an OBO operation, you need to first create an extension application manifest `bundle.json` file and upload to the Pod.
 
 ### Application Manifest Bundle File Sample:
 
@@ -60,29 +60,24 @@ Once the app has obtained the user's `sessionToken`, it can make REST API calls 
 | domain | String | Required | The domain for your app, which should match the controller file URL. |
 | icon | String | Optional | An icon for your app \(32x32 px\), which will be displayed in the Symphony Market. |
 
-2.  Upload the manifest `bundle.json` to the Admin Portal -&gt; App Management -&gt; Add Custom App -&gt; Import Application Bundle File
-
-3.  Add your App Backend's \(Bot\) RSA public key in the Authentication section under App Management.  
-
-4.  Give your Application the following Permissions:
-
-* **ACT\_AS\_USER**
+1. Upload the manifest `bundle.json` to the Admin Portal -&gt; App Management -&gt; Add Custom App -&gt; Import Application Bundle File
+2. Add your App Backend's \(Bot\) RSA public key in the Authentication section under App Management.
+3. Give your Application the following Permissions:
+4. **ACT\_AS\_USER**
 
 {% hint style="info" %}
-Note: Give your extension application the appropriate permissions corresponding to your OBO workflow.  For example,  if you Bot will perform an OBO workflow to list a user's streams, grant your application with the LIST\_USER\_STREAMS permission.  
+Note: Give your extension application the appropriate permissions corresponding to your OBO workflow. For example, if you Bot will perform an OBO workflow to list a user's streams, grant your application with the LIST\_USER\_STREAMS permission.
 {% endhint %}
 
-5. Once your App is created, make sure that it is enabled: 
-
-* Admin Portal -&gt; App Settings -&gt; Locate your App and toggle its 'Global Status' to be 'Enabled'
-* Toggle 'Visibility' to be 'Visible'
-* Toggle 'Installation' to be 'Manual'
-
-6.  The last step is to make sure that the application is installed for the appropriate users.  If the installation is set to 'Manual', make sure end-users install the extension application manually via the Symphony Marketplace.  If not, make sure Symphony Admin installs this application on behalf of a given list of users.  
+1. Once your App is created, make sure that it is enabled:
+2. Admin Portal -&gt; App Settings -&gt; Locate your App and toggle its 'Global Status' to be 'Enabled'
+3. Toggle 'Visibility' to be 'Visible'
+4. Toggle 'Installation' to be 'Manual'
+5. The last step is to make sure that the application is installed for the appropriate users. If the installation is set to 'Manual', make sure end-users install the extension application manually via the Symphony Marketplace. If not, make sure Symphony Admin installs this application on behalf of a given list of users.
 
 ## Implementing OBO Authentication
 
-The BDK 2.0 makes it super simple to create an OBO based workflow, To do so, simply, simply instantiate an OBO Session in your Bot project.  The BDK 2.0 allows you to instantiate your OBO session from a username or user ID. 
+The BDK 2.0 makes it super simple to create an OBO based workflow, To do so, simply, simply instantiate an OBO Session in your Bot project. The BDK 2.0 allows you to instantiate your OBO session from a username or user ID.
 
 ```java
 public class BotApplication {
@@ -133,6 +128,4 @@ public class BotApplication {
   }
 }
 ```
-
-
 

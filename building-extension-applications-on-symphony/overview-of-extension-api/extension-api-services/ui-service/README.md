@@ -42,7 +42,6 @@ function registerExtension(uiClass, id, serviceName, options)
       <td style="text-align:left">uiClass</td>
       <td style="text-align:left">String</td>
       <td style="text-align:left">
-        <p></p>
         <ul>
           <li>single-user-im</li>
           <li>multi-user-im</li>
@@ -153,7 +152,6 @@ function unregisterExtension(uiClass, id)
       <td style="text-align:left">uiClass</td>
       <td style="text-align:left">String</td>
       <td style="text-align:left">
-        <p></p>
         <ul>
           <li>single-user-im</li>
           <li>multi-user-im</li>

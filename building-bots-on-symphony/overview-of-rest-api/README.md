@@ -5,7 +5,7 @@ The Symphony REST API acts as a secure interface between your Symphony Bot and t
 The Symphony REST API is spread out across these components according to the type of API being called
 
 {% hint style="info" %}
-#### While Bots can call the Symphony API directly, Symphony's dedicated SDKs and BDK provide language-specific API bindings that enable developers to easily call the API directly from their Bot code:
+### While Bots can call the Symphony API directly, Symphony's dedicated SDKs and BDK provide language-specific API bindings that enable developers to easily call the API directly from their Bot code:
 
 * [SDKs](../../developer-tools/developer-tools/sdks/)
 * [BDK](../../developer-tools/developer-tools/bdk/)

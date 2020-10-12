@@ -1,8 +1,8 @@
 # CLI Tool
 
-The CLI tool allows you to generate code scaffolds for building Symphony Bots and Applications.  The generated code scaffolds provide sample implementations of best practices making it easy and fast to start building bots and applications. In addition, the CLI tool allows developers to add custom command handlers and message templates, and manage project dependencies, allowing developers to bootstrap bots and applications quickly.
+The CLI tool allows you to generate code scaffolds for building Symphony Bots and Applications. The generated code scaffolds provide sample implementations of best practices making it easy and fast to start building bots and applications. In addition, the CLI tool allows developers to add custom command handlers and message templates, and manage project dependencies, allowing developers to bootstrap bots and applications quickly.
 
-### Prerequisites
+## Prerequisites
 
 * Node
 * Yarn
@@ -10,19 +10,19 @@ The CLI tool allows you to generate code scaffolds for building Symphony Bots an
 * Maven 3
 * Git
 
-#### Install Yarn:
+### Install Yarn:
 
 ```text
 $ npm i -g yarn
 ```
 
-#### Install the BDK
+### Install the BDK
 
 ```text
 $ npm i -g symphony-bdk-cli
 ```
 
-#### Confirm all the dependencies are met:
+### Confirm all the dependencies are met:
 
 ```text
 $ symphony-bdk-cli --check-dependencies
@@ -30,8 +30,8 @@ $ symphony-bdk-cli --check-dependencies
 
 ```text
 $ symphony-bdk-cli
-                                                
-                                                
+
+
                ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄               
            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄           
           ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄          
@@ -52,8 +52,8 @@ $ symphony-bdk-cli
              ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄             
                  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄                 
                      ▄▄▄▄▄▄                     
-                                                
-                                                
+
+
 
 ✔ All Dependencies are met!
 Usage: symphony-bdk-cli [options]

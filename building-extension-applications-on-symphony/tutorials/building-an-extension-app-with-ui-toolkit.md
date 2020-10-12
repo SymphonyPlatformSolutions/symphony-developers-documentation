@@ -1,6 +1,6 @@
 # Building an Extension App with UI Toolkit
 
-In this step by step tutorial, we will build an FX Watchlist App, an extension app that allows users to keep track of FX \(foreign exchange\) swaps.  We will demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to display a list of FX swaps and to display a corresponding candleStick chart of the currency rates.  
+In this step by step tutorial, we will build an FX Watchlist App, an extension app that allows users to keep track of FX \(foreign exchange\) swaps. We will demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to display a list of FX swaps and to display a corresponding candleStick chart of the currency rates.
 
 ## Prerequisites:
 
@@ -10,7 +10,7 @@ Complete the BDK App configuration guide to generate the app frontend and bot ba
 
 ## 1.  Dive into the Code
 
-In this tutorial, we will be building off the generated app + bot scaffolds provided by the BDK.  The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development.  The following demonstrates the BDK's implementation for bootstrapping your extension app:
+In this tutorial, we will be building off the generated app + bot scaffolds provided by the BDK. The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
 
 ### Initialization:
 
@@ -38,7 +38,7 @@ In order to use the services provided by the Client Extension API, your app must
 {% endtab %}
 {% endtabs %}
 
-In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method.  This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules.  This method is located in the the `app.js` file provided out of the box by the BDK:
+In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK:
 
 {% tabs %}
 {% tab title="app.js" %}
@@ -59,9 +59,9 @@ SYMPHONY.remote.hello().then((data) => {
 {% endtab %}
 {% endtabs %}
 
-###  Connect:
+### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony.  Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely.  In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file: 
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
 
 ```javascript
 SYMPHONY.application.connect(
@@ -73,13 +73,13 @@ SYMPHONY.application.connect(
 
 ## 2.  Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication.  App authentication is required for apps that wish to receive sensitive conversation and user data.  Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK.  The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture.  The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
   .init()
   .then(() => bootstrap())
-  .catch(e => console.error(e));  
+  .catch(e => console.error(e));
 ```
 
 And subsequently inside the `authentication/index.js` file:
@@ -99,7 +99,7 @@ init() {
   }
 ```
 
-Upon completion of the above function, your extension application will be successfully authenticated.  For more information about app authentication, please continue here:
+Upon completion of the above function, your extension application will be successfully authenticated. For more information about app authentication, please continue here:
 
 {% page-ref page="../app-authentication/" %}
 
@@ -108,10 +108,10 @@ Upon completion of the above function, your extension application will be succes
 Let's start by creating a simple React component to ensure that our app is rendering views properly.
 
 {% hint style="info" %}
-Note:  The following React implementation is consistent with the Extension App implementation provided by the BDK.  However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation.  Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.  
+Note: The following React implementation is consistent with the Extension App implementation provided by the BDK. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
 {% endhint %}
 
-Create a package called fx-watchlist inside of the pages directory of our generated app project.  Subsequently, create a new React component called `FxWatchlist` in this pages directory:
+Create a package called fx-watchlist inside of the pages directory of our generated app project. Subsequently, create a new React component called `FxWatchlist` in this pages directory:
 
 {% tabs %}
 {% tab title="pages/fx-watchlist/index.js" %}
@@ -151,16 +151,16 @@ function route() {
 {% endtab %}
 {% endtabs %}
 
-Let's test to make sure our new React component is properly being rendered.  Start your app backend \(bot\) and your app frontend by running:
+Let's test to make sure our new React component is properly being rendered. Start your app backend \(bot\) and your app frontend by running:
 
 ```javascript
 $ yarn start:dev
 ```
 
-Open up your Symphony client and install your extension app in the Application Marketplace if you haven't already done so.  Click on your application in the lefthand navigation.  You should see the following after your application loads:
+Open up your Symphony client and install your extension app in the Application Marketplace if you haven't already done so. Click on your application in the lefthand navigation. You should see the following after your application loads:
 
 {% hint style="info" %}
-Note: You may need to navigate to https://localhost:4000 and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
+Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
 {% endhint %}
 
 ![](../../.gitbook/assets/screen-shot-2020-09-24-at-5.55.06-pm.png)
@@ -173,10 +173,10 @@ To launch the Symphony UI Toolkit run the following from your terminal:
 $ symphony-bfk-cli --bot
 ```
 
-For our FxWatchlist component, we will be leveraging the `Text`, `Card`, `Box`,  `DecisionDropdown`, and `Button` components provided out of the box by the UI Toolkit. 
+For our FxWatchlist component, we will be leveraging the `Text`, `Card`, `Box`, `DecisionDropdown`, and `Button` components provided out of the box by the UI Toolkit.
 
 {% hint style="info" %}
-Note:  If you wish to see in further detail how this component was constructed and how to implement the UI Toolkit, navigate to our developer certification where we provide in depth videos explaining this FxWatchlist example: [Developer Certification ](https://learn.symphony.com)
+Note: If you wish to see in further detail how this component was constructed and how to implement the UI Toolkit, navigate to our developer certification where we provide in depth videos explaining this FxWatchlist example: [Developer Certification ](https://learn.symphony.com)
 {% endhint %}
 
 ### Building the Watchlist Component:
@@ -242,9 +242,9 @@ export default FxWatchlist;
 {% endtab %}
 {% endtabs %}
 
-###  Adding Table and Chart Components:
+### Adding Table and Chart Components:
 
-Lets now make out Fx-Watchlist component more presentable and add some sample data to make the component more realistic.  In addition, lets use the `CandleStickChart` component also provided by the UI Toolkit in order to display our FX rates: 
+Lets now make out Fx-Watchlist component more presentable and add some sample data to make the component more realistic. In addition, lets use the `CandleStickChart` component also provided by the UI Toolkit in order to display our FX rates:
 
 {% tabs %}
 {% tab title="pages/fx-watchlist-index.js" %}
@@ -368,9 +368,9 @@ If you reload your app, and add an FX pair to you watchlist, you will be able to
 
 ### Adding Real Data to the UI
 
-To get some real data into our FxWatchlist app, let's use the FX\_DAILY endpoint provided by the Alphavantage API.  Specifically, let's render some times series data for a specific currency pair.  To do so, we need to create a data service on our app's backend \(bot\) in order to handle and process incoming data.  
+To get some real data into our FxWatchlist app, let's use the FX\_DAILY endpoint provided by the Alphavantage API. Specifically, let's render some times series data for a specific currency pair. To do so, we need to create a data service on our app's backend \(bot\) in order to handle and process incoming data.
 
-Navigate to your bot project and terminate your bot process for now.  Next add a services package and new DataService class, which will act as our RestController:
+Navigate to your bot project and terminate your bot process for now. Next add a services package and new DataService class, which will act as our RestController:
 
 {% tabs %}
 {% tab title="services/DataService.java" %}
@@ -511,14 +511,13 @@ class ChartData {
     public float getClose() {
         return close;
     }
-    
-}
 
+}
 ```
 {% endtab %}
 {% endtabs %}
 
-Now that our app's backend is properly configured let's navigate back to our App frontend and extend our `FxWatchlist` component to render this incoming data.  Lets add to our handleChart\(\) function to call our private API defined on our app's backend:
+Now that our app's backend is properly configured let's navigate back to our App frontend and extend our `FxWatchlist` component to render this incoming data. Lets add to our handleChart\(\) function to call our private API defined on our app's backend:
 
 {% tabs %}
 {% tab title="pages/fx-watchlist/index.js" %}
@@ -540,7 +539,6 @@ const handleChart = (item) => {
                 });
             });
     };
-
 ```
 {% endtab %}
 {% endtabs %}

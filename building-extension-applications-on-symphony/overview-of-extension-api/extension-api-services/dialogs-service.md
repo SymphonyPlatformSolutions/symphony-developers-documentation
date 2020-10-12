@@ -52,7 +52,6 @@ function show(id, serviceName, template, data, options)
             title: "Application Configuration"
         }
     );
-
 ```
 
 ## rerender\(\)
