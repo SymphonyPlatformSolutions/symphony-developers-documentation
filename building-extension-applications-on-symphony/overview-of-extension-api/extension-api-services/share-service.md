@@ -75,7 +75,7 @@ The following table shows the article options:
 | `date` | No | [Unix Epoch Timestamp](https://www.epochconverter.com/) | Date of publication |
 | `publisher` | No | String | Name of the publisher |
 | `author` | No | String | Name of the author |
-| `thumbnail` | No  | URL \(could be a data url\) | Image to be displayed - 106px-106px |
+| `thumbnail` | No | URL \(could be a data url\) | Image to be displayed - 106px-106px |
 | `id` | Must provide either `id` or `href`, or both | String | An identifier used by the application to deeplink to the article |
 | `href` | Must provide either `id` or `href`, or both | URL | URL to the article \(opened in a new browser window\) |
 
@@ -96,48 +96,48 @@ The following JavaScript shows an example of a custom third party entity being s
 ```javascript
 share : function(gameNbr, time)
 {
-	var fullTime = time;
-	var hours = Math.floor(time / 60 / 60 / 1000);
-	time -= hours * 60 * 60 * 1000;
-	var minutes = Math.floor(time / 60 / 1000);
-	time -= minutes * 60 * 1000;
-	var seconds = Math.floor(time / 1000);
-	var duration = hours.toString() + ':' + minutes.toString().pad(2, '0', 'left') + ':' + seconds.toString().pad(2, '0', 'left');
+    var fullTime = time;
+    var hours = Math.floor(time / 60 / 60 / 1000);
+    time -= hours * 60 * 60 * 1000;
+    var minutes = Math.floor(time / 60 / 1000);
+    time -= minutes * 60 * 1000;
+    var seconds = Math.floor(time / 1000);
+    var duration = hours.toString() + ':' + minutes.toString().pad(2, '0', 'left') + ':' + seconds.toString().pad(2, '0', 'left');
 
-	var title = 'Somebody you know won at Mah Jongg Solitaire';
-	var blurb = 'try to beat their time of ' + duration;
-	var date = new Date().getTime() / 1000;
-	var thumbnail = this.thumb;
-	var id = JSON.stringify({gameNbr: gameNbr, time: fullTime});
+    var title = 'Somebody you know won at Mah Jongg Solitaire';
+    var blurb = 'try to beat their time of ' + duration;
+    var date = new Date().getTime() / 1000;
+    var thumbnail = this.thumb;
+    var id = JSON.stringify({gameNbr: gameNbr, time: fullTime});
 
-	var presentationML =`
-		<entity>
-			<table><tr>
-				<td><img src="${thumbnail}" /></td>
-				<td>
-					<h1>${title}</h1>
-					${blurb}
-				</td>
-			</tr></table>
-		</entity>`;
+    var presentationML =`
+        <entity>
+            <table><tr>
+                <td><img src="${thumbnail}" /></td>
+                <td>
+                    <h1>${title}</h1>
+                    ${blurb}
+                </td>
+            </tr></table>
+        </entity>`;
 
-	var entityJSON = {
-		date: date,
-		thumbnail: thumbnail,
-		results: id,
-		time : time,
-		gameNbr : gameNbr,
-	};
+    var entityJSON = {
+        date: date,
+        thumbnail: thumbnail,
+        results: id,
+        time : time,
+        gameNbr : gameNbr,
+    };
 
-	var data = {
-		plaintext: `*${title}*\n${blurb}\n`,
-		presentationML : presentationML,
-		entityJSON: entityJSON,
-		entity: {},
-		format: 'com.symphony.messageml.v2',
-		inputAutofill : 'I ROCK!',
-	}
-	this.shareService.share('com.symfuny.invite.won', data);
+    var data = {
+        plaintext: `*${title}*\n${blurb}\n`,
+        presentationML : presentationML,
+        entityJSON: entityJSON,
+        entity: {},
+        format: 'com.symphony.messageml.v2',
+        inputAutofill : 'I ROCK!',
+    }
+    this.shareService.share('com.symfuny.invite.won', data);
 }
 ```
 
@@ -162,7 +162,7 @@ var helloControllerService = SYMPHONY.services.register("hello:controller");
 shareService.handleLink("article", "hello:controller");
 
 helloControllerService.implement({
-	// You only need to implement this function if you intend to deeplink articles into your app by specifying an id for the article. If you use href, then article links will open in a new browser window.
+    // You only need to implement this function if you intend to deeplink articles into your app by specifying an id for the article. If you use href, then article links will open in a new browser window.
   link: function(type, articleId) {
     if(type == "article") {
       // Implement this

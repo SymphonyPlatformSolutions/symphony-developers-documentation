@@ -136,4 +136,3 @@ Now that you have generated and configured your Bot, move onto one our BDK tutor
 
 {% page-ref page="../tutorials/bdk/" %}
 
-

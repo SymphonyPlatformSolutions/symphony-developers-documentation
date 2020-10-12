@@ -122,7 +122,5 @@
 
 ## Symphony REST API
 
----
-
 * [Symphony REST API](https://rest-api.symphony.com/)
 

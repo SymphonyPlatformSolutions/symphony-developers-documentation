@@ -34,16 +34,16 @@ You can use the following commands to generate the service account certificate. 
 
 ```text
 $ openssl genrsa -aes256 -passout pass:$PASSWORD -out admin-key.pem 4096
-$ openssl req -new -key admin-key.pem -passin pass:$PASSWORD -subj "/CN=$USERNAME/O=Symphony Communications LLC/OU=NOT FOR PRODUCTION USE/C=US" -out admin-req.pem 
+$ openssl req -new -key admin-key.pem -passin pass:$PASSWORD -subj "/CN=$USERNAME/O=Symphony Communications LLC/OU=NOT FOR PRODUCTION USE/C=US" -out admin-req.pem
 $ openssl x509 -req -sha256 -days 2922 -in admin-req.pem -CA $CA_CERT -CAkey $CA_KEY -passin pass:$CA_PASSWORD -out admin-cert.pem -set_serial 0x1
 $ openssl pkcs12 -export -out admin.p12 -aes256 -in admin-cert.pem -inkey admin-key.pem -passin pass:$PASSWORD -passout pass:$OUTPUT_PASSWORD
 ```
 
-* USERNAME = Service account username 
-* PASSWORD = Service account key password 
-* CA\_CERT = CA certificate file 
-* CA\_KEY = CA key file 
-* CA\_PASSWORD = CA key password 
+* USERNAME = Service account username
+* PASSWORD = Service account key password
+* CA\_CERT = CA certificate file
+* CA\_KEY = CA key file
+* CA\_PASSWORD = CA key password
 * OUTPUT\_PASSWORD = PKCS12 file password
 
 ### Creating a Certificate Signing Request \(CSR\):
@@ -89,8 +89,8 @@ If you have obtained a copy of your Root Certificate Authorities \(CA\) Public "
 To authenticate on the Pod the Bot must call the Session Auth endpoint: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate). Pass along the client certificate provided in the TLS session, returning a Session Token:
 
 ```bash
-$ curl --cert bot.user1.p12:mypassword 
-https://${symphony.url}/sessionauth/v1/authenticate 
+$ curl --cert bot.user1.p12:mypassword
+https://${symphony.url}/sessionauth/v1/authenticate
 -X POST
 ```
 
@@ -110,8 +110,8 @@ A successful response:
 To authenticate on the Key Manager, the Bot must call the Key Manager Auth endpoint: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate). Pass along the client certificate provided in the TLS session, returning a Key Manager Token:
 
 ```bash
-$ curl --cert bot.user1.p12:mypassword 
-https://${symphony.url}/keyauth/v1/authenticate 
+$ curl --cert bot.user1.p12:mypassword
+https://${symphony.url}/keyauth/v1/authenticate
 -X POST
 ```
 
@@ -129,6 +129,3 @@ A successful response:
 {% endtabs %}
 
 Pass the Session Token and Key Manager Token as headers for all subsequent API requests.
-
-
-

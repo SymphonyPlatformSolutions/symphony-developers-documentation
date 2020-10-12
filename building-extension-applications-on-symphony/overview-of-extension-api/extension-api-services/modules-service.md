@@ -68,7 +68,6 @@ function show(id, title, serviceName, iframe, options)
       <td style="text-align:left">options</td>
       <td style="text-align:left">Object</td>
       <td style="text-align:left">
-        <p></p>
         <p>
           <br />An object, which can contain:</p>
         <ul>
@@ -237,7 +236,7 @@ function redirect(id, url)
 
 ```javascript
 onSelect : function(symbol) {
-		this.modulesService.redirect(this.moduleId, MODULE.baseUrl + 'details?symbol=' + encodeURIComponent(symbol));
-	},
+        this.modulesService.redirect(this.moduleId, MODULE.baseUrl + 'details?symbol=' + encodeURIComponent(symbol));
+    },
 ```
 

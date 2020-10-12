@@ -40,6 +40,8 @@ Bring customized and extensible workflows into Symphony through Extension Apps. 
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
+{% page-ref page="/developer-certification/untitled.md" %}
+
 ## Symphony REST API ![](.gitbook/assets/symphony-api-large.png)
 
 In depth documentation and reference guide for the Symphony REST API:
@@ -57,4 +59,3 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 ## Embedded Modules
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications:
-

@@ -2,11 +2,11 @@
 
 Symphony’s Extension API allows apps to extend the Symphony client user interface by adding buttons on the IM, MIM, profile, and chatroom modules. This capability can be used to build apps that act upon the room and user identity details, such as a click-to-call integration.
 
-### **Prerequisites**
+## **Prerequisites**
 
 * Your app must be an [authenticated](../../../app-authentication/) Extension App.
 
-### **How this works**
+## **How this works**
 
 Extension apps can receive stream participant information when an end user clicks on a button added by the app.
 
@@ -14,7 +14,7 @@ Your button will receive information from the user object in a MIM, IM and a roo
 
 Please note that the current user’s information isn’t returned, only the information of the other user\(s\) in the profile of a user, an IM, MIM or room.
 
-### **Sample Objects**
+## **Sample Objects**
 
 This is the information that you will receive if your button is pressed inside of an IM or on a users Profile:
 
@@ -29,9 +29,9 @@ This is the information that you will receive if your button is pressed inside o
         id,             //user identifier
         emailAddress,   //user email
         username,       //user name
-      	displayName,    //user display name
-      	firstName,      //user first name
-      	lastName,       //user last name
+          displayName,    //user display name
+          firstName,      //user first name
+          lastName,       //user last name
         phone,          //user phone number
         mobile,         //user mobile phone number
     }
@@ -75,7 +75,7 @@ helloControllerService.implement({
 This is the information that you will receive if your button is pressed inside of a MIM or a room:
 
 {% hint style="info" %}
-This is the information that you will receive if your button is pressed inside of a MIM or a room with less than 20 users.  If there are more than 20 users, the _users_ list will be returned empty.
+This is the information that you will receive if your button is pressed inside of a MIM or a room with less than 20 users. If there are more than 20 users, the _users_ list will be returned empty.
 {% endhint %}
 
 {% tabs %}
@@ -102,7 +102,7 @@ This is the information that you will receive if your button is pressed inside o
 {% endtab %}
 
 {% tab title="MIM or Room \(<20 Users\)" %}
-```
+```text
 {
     isCrossPod,
     roomName, 
@@ -113,8 +113,8 @@ This is the information that you will receive if your button is pressed inside o
         isCrossPodUser,
         emailAddress,
         username,
-      	displayName,
-      	firstName,
+          displayName,
+          firstName,
         lastName,
         phone,
         mobile,

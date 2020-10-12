@@ -22,7 +22,7 @@ Symphony provides SDKs in Java, Python, Node.js, and .NET. Whatever your develop
 
 ### Building Your Bot
 
-Once your Bot is configured for SDK development head over to our step-by- step chatbot tutorial:
+Once your Bot is configured for SDK development head over to our step-by-step chatbot tutorial:
 
 {% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
 
@@ -64,9 +64,9 @@ The next step to building a Bot using the BDK is to configure your Bot:
 
 {% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
+<<<<<<< HEAD
 Once your Bot is configured for BDK development, head over to our step-by- step chatbot tutorial:
 
+=======
+>>>>>>> master
 {% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
-
-
-

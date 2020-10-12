@@ -106,7 +106,7 @@ In `bot-config.json` it is required to set the path to RSA private key as well \
 }
 ```
 
-For the full set of Symphony Bot SDK settings please refer to [Advanced Settings]()
+For the full set of Symphony Bot SDK settings please refer to [Advanced Settings](bot-sdk.md)
 
 ### Authenticating with certificate
 
@@ -612,7 +612,7 @@ Currently, Symphony Bot SDK offers the following templates:
 * SIMPLE
 * TABLE
 
-For more information about the Symphony standard templates, take a look on [https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-java](https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-java). Also, check [Template command]() section.
+For more information about the Symphony standard templates, take a look on [https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-java](https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-java). Also, check [Template command](bot-sdk.md) section.
 
 ## Extension applications
 

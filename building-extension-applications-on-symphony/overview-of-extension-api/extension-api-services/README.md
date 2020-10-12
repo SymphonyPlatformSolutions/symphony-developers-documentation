@@ -1,6 +1,6 @@
 # Extension API Services
 
-The Client Extension API uses services for communication between your application and the Symphony client. The Client Extension API provides a set of services that your application can leverage to extend the Symphony Client and to create custom workflows and experiences.  
+The Client Extension API uses services for communication between your application and the Symphony client. The Client Extension API provides a set of services that your application can leverage to extend the Symphony Client and to create custom workflows and experiences.
 
 ## Client Extension API Services:
 
@@ -42,7 +42,7 @@ Apps can offer premium functionality through licensed subscriptions. Use the `co
 
 {% page-ref page="commerce-service.md" %}
 
-### **Dialogs Service** 
+### **Dialogs Service**
 
 Use the `dialogs` service to create modal windows \(e.g. to open a modal window from a button registered at a room level\)**:**
 

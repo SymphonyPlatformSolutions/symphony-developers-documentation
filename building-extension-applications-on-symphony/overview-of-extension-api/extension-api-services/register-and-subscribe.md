@@ -1,14 +1,14 @@
 # Register and Subscribe
 
-In order to leverage the services provided by the Client Extension API, you must first subscribe to them.  To use your applications own services, you must register them via the Client Extension API.  Extension apps can register and subscribe to local and remote services in the following ways:
+In order to leverage the services provided by the Client Extension API, you must first subscribe to them. To use your applications own services, you must register them via the Client Extension API. Extension apps can register and subscribe to local and remote services in the following ways:
 
 ## SYMPHONY.services.make\(\)
 
 Creates a new local service and register it using existing classes:
 
-If you are developing an Object-Oriented Application, `SYMPHONY.services.make()` allows you to use a class as a prototype for implementing service methods, allowing you to choose which methods of the class will be available in the service by specifying them in the `implements` list.  
+If you are developing an Object-Oriented Application, `SYMPHONY.services.make()` allows you to use a class as a prototype for implementing service methods, allowing you to choose which methods of the class will be available in the service by specifying them in the `implements` list.
 
-This cannot be  and this cannot be achieved by the `SYMPHONY.services.register()` function, which is only recommended when creating small services since it does not require any class,  and it only requires the `serviceName`. If you use `SYMPHONY.services.register()` for large services, you will have to call `service.implement()` passing an object to it. As a result, all the methods will be public and the code might look unorganized.
+This cannot be and this cannot be achieved by the `SYMPHONY.services.register()` function, which is only recommended when creating small services since it does not require any class, and it only requires the `serviceName`. If you use `SYMPHONY.services.register()` for large services, you will have to call `service.implement()` passing an object to it. As a result, all the methods will be public and the code might look unorganized.
 
 ```javascript
 SYMPHONY.services.make(name, context, methods, makeEventHandlers)
@@ -112,6 +112,4 @@ subscribe : function(serviceName)
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | serviceName | String | The name of the remote service that you would like to access locally. |
-
-
 

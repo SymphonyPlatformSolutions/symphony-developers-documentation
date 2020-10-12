@@ -19,9 +19,9 @@ The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library o
 
 ## Installation
 
-The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Yeoman Generator.  
+The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Yeoman Generator.
 
-1.  **Install the Symphony Yeoman Generator:**
+1. **Install the Symphony Yeoman Generator:**
 
 ```text
 $ npm i -g generator-symphony
@@ -31,13 +31,13 @@ $ npm i -g generator-symphony
 Note: If you already have the Symphony Yeoman Generator installed, upgrade it by running the following: `npm update -g generator-symphony`
 {% endhint %}
 
-    2.  **Create a new directory and navigate inside:**
+1. **Create a new directory and navigate inside:**
 
 ```text
 $ mkdir bdk-bot && cd bdk-bot
 ```
 
-    3.  Run the generator:
+1. Run the generator:
 
 ```text
 $ yo symphony 2.0
@@ -49,14 +49,14 @@ You should see the following:
 
 ## Configuration
 
-Once installed, the next step is to configure your new Symphony Bot using the Yeoman Generator.  In the command line, enter the information for your Symphony environment and Bot metadata.  For example:
+Once installed, the next step is to configure your new Symphony Bot using the Yeoman Generator. In the command line, enter the information for your Symphony environment and Bot metadata. For example:
 
 ![](../../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
 
-After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold.  Open your generated project in your Java IDE of choice and navigate to your generated `config.yaml` file: 
+After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to your generated `config.yaml` file:
 
 {% hint style="info" %}
-Note: In the generated config.yaml file, the BDK assumes your Symphony Pod, Agent, and Key Manager components are all access via the same host, port, and scheme.  
+Note: In the generated config.yaml file, the BDK assumes your Symphony Pod, Agent, and Key Manager components are all access via the same host, port, and scheme.
 {% endhint %}
 
 {% tabs %}
@@ -71,7 +71,7 @@ bot:
 {% endtab %}
 {% endtabs %}
 
-By the default this configuration file is generated, however you can customize this file to meet the specifications of your symphony environment.  The following configuration properties can be added to this `config.yaml` file: 
+By the default this configuration file is generated, however you can customize this file to meet the specifications of your symphony environment. The following configuration properties can be added to this `config.yaml` file:
 
 ### Basic Configuration Structure
 
@@ -82,7 +82,7 @@ By the default this configuration file is generated, however you can customize t
 | `context` | component  context |
 | `scheme` | https or http |
 | `pod` | contains pod metadata including `host`, `port`, `scheme`, `context`, and `proxy` attributes |
-| `bot` | contains bot metadata including `username`, `privateKeyPath`, `certificatePath`, and`certificatePassword`  |
+| `bot` | contains bot metadata including `username`, `privateKeyPath`, `certificatePath`, and`certificatePassword` |
 | `app` | contains extension app metadata including `appId`, `privateKeyPath`, `certificatePath`, and `certificatePassword` |
 | `ssl` | contains `trustStore` and `trustStore` password for SSL communication |
 
@@ -92,11 +92,11 @@ By the default this configuration file is generated, however you can customize t
 | :--- | :--- |
 | `version` | version of the datafeed service to be used.  By default, the bot will use the datafeed v1 service. |
 | `idFilePath` | the path to the file which will be used to persist a created datafeed id in case the datafeed service v1 is used |
-| `retry` | the specific retry configuration can be used to override the global retry configuration.  If no retry configuration is defined, the global one will be used.   |
+| `retry` | the specific retry configuration can be used to override the global retry configuration.  If no retry configuration is defined, the global one will be used. |
 
 ### Retry Configuration Structure
 
-| Property  | Description |
+| Property | Description |
 | :--- | :--- |
 | `maxAttempts` | maximum number of retry attempts that a bot is able to make |
 | `multiplier` | after each attempt, the interval between two attempts will be multiplied by this factor |
@@ -160,7 +160,7 @@ retry:
 
 ## Authentication
 
-Authenticating your Bot is made simple when using the BDK 2.0.  Once you have your Bot and Symphony environment properly configured, the generated code provides an out of the box implementation for authenticating your Bot:
+Authenticating your Bot is made simple when using the BDK 2.0. Once you have your Bot and Symphony environment properly configured, the generated code provides an out of the box implementation for authenticating your Bot:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -170,15 +170,19 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
 {% endtab %}
 {% endtabs %}
 
- By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot.  Once authenticated, your bot is ready to leverage the REST API to create rich automations and workflows on Symphony. 
+By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot. Once authenticated, your bot is ready to leverage the REST API to create rich automations and workflows on Symphony.
 
 {% hint style="info" %}
+<<<<<<< HEAD:developer-tools/developer-tools/bdk-2.0/README.md
 Note:  You must have a corresponding service or Bot account setup on your Symphony instance before authenticating.  For more information navigate to the [Creating a Bot User](../../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
+=======
+Note: You must have a corresponding service or Bot account setup on your Symphony instance before authenticating. For more information navigate to the [Creating a Bot User](../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
+>>>>>>> master:developer-tools/developer-tools/bdk-2.0.md
 {% endhint %}
 
 ### OBO Authentication
 
-The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user.  The BDK's implementation makes it easy to perform the following operations on behalf of a given user:
+The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user. The BDK's implementation makes it easy to perform the following operations on behalf of a given user:
 
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
@@ -187,23 +191,23 @@ The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowi
 * Send messages and attachments
 * Set the context user's own presence
 
-To leverage an OBO based workflow, simply instantiate an OBO Session in your Bot project.  The BDK 2.0 allows you to instantiate your OBO session from a username or user ID.  Once authenticated bots can perform any of the OBO workflows listed above:
+To leverage an OBO based workflow, simply instantiate an OBO Session in your Bot project. The BDK 2.0 allows you to instantiate your OBO session from a username or user ID. Once authenticated bots can perform any of the OBO workflows listed above:
 
 ```java
  // setup SymphonyBdk facade object
  final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
- 
+
  //authenticate on-behalf-of a given user
  final AuthSession oboSessionUsername = bdk.obo("user.name");
  final AuthSession oboSessionUserId = bdk.obo(123456789L);
- 
+
  // list streams OBO user "user.name"
  bdk.streams().listStreams(oboSessionUsername, new StreamFilter());
 ```
 
 ## Managing Multiple Bots
 
-The BDK 2.0 makes it easy to manage multiple bot instances within a single project.  As long as you have unique configuration files that correspond to different service accounts, you can manage multiple bot instances from a centralized source.  To do so, simply instantiate multiple bot instances of the `SymphonyBDK` class within your bot project:
+The BDK 2.0 makes it easy to manage multiple bot instances within a single project. As long as you have unique configuration files that correspond to different service accounts, you can manage multiple bot instances from a centralized source. To do so, simply instantiate multiple bot instances of the `SymphonyBDK` class within your bot project:
 
 ```java
 // Bot #1
@@ -215,18 +219,18 @@ final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
 
 ## Datafeed Management
 
-The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events.  The `DatafeedService` interface provides the following methods for your bot to use: 
+The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events. The `DatafeedService` interface provides the following methods for your bot to use:
 
 | Method | Descriptions |
 | :--- | :--- |
 | `start()` | Start the bot's datafeed |
 | `stop()` | Stop the bot's datafeed |
-| `subscribe(RealTimeEventListener)` | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes.   |
+| `subscribe(RealTimeEventListener)` | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes. |
 | `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class. |
 
-For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`.  This `RealTimeEventListener` class must implement eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.  
+For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`. This `RealTimeEventListener` class must implement eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.
 
-When a user sends a bot a message, the Bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event.  If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method.  Otherwise the Bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK 2.0:
+When a user sends a bot a message, the Bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the Bot will not perform an action and will continue to listen for inbound events from the datafeed. An example implementation is provided out of the box by the BDK 2.0:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -244,7 +248,7 @@ When a user sends a bot a message, the Bot will pick up the event from the dataf
 {% endtab %}
 {% endtabs %}
 
-Below is a full list of methods provided by the `RealTimeEventListener` class and their corresponding eventTypes.  Implement the following methods in order to listen for a given Symphony event:
+Below is a full list of methods provided by the `RealTimeEventListener` class and their corresponding eventTypes. Implement the following methods in order to listen for a given Symphony event:
 
 | Method | Event Type |
 | :--- | :--- |
@@ -271,13 +275,13 @@ For more information on the Symphony datafeed continue here:
 
 ## Activities API
 
-The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage user-to-bot interactions or activities.  Specifically, the Activities API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events.  The methods and logic provided by the Activities API allows for granular control over the entire user-to-bot interaction.  This encapsulated logic is easily reused, forming the discrete building blocks of a Symphony workflow automation.  
+The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage user-to-bot interactions or activities. Specifically, the Activities API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events. The methods and logic provided by the Activities API allows for granular control over the entire user-to-bot interaction. This encapsulated logic is easily reused, forming the discrete building blocks of a Symphony workflow automation.
 
 ### Workflow API
 
-While the Activities API gives developers granular control over the user-to-bot interaction, the Workflow API makes it easy to string together this sequence of activities in order to create a complete Symphony workflow automation.  The Workflow API gives developers developers control over how these activities fit together in a context-based way that is easy monitored.  With both tools in hand, building powerful, enterprise grade workflows has never been easier.      
+While the Activities API gives developers granular control over the user-to-bot interaction, the Workflow API makes it easy to string together this sequence of activities in order to create a complete Symphony workflow automation. The Workflow API gives developers developers control over how these activities fit together in a context-based way that is easy monitored. With both tools in hand, building powerful, enterprise grade workflows has never been easier.
 
-worfklow = sequence of activities , worfklow is above activities not within  - introducte workflow not workflow api -&gt; explain conceepts of actors and actors making activiites, bots, users, exterenal system.   
+worfklow = sequence of activities , worfklow is above activities not within - introducte workflow not workflow api -&gt; explain conceepts of actors and actors making activiites, bots, users, exterenal system.
 
 ### Registering Activities
 
@@ -292,16 +296,16 @@ public static void main(String[] args) throws Exception {
   }
 ```
 
- There are two different types of activities supported by the BDK:
+There are two different types of activities supported by the BDK:
 
 * **Command Activity**: an activity triggered when a message is sent in an IM, MIM, or Chatroom.
 * **Form Activity**: an activity triggered when a user replies to an Elements form message.  
 
 ### Command Activities
 
-A command-based activity is triggered when a message is sent in an IM, MIM, or Chatroom.  Using the Activities API allows developers to register commands in the following formats:
+A command-based activity is triggered when a message is sent in an IM, MIM, or Chatroom. Using the Activities API allows developers to register commands in the following formats:
 
-1.  `@bdk2-bot /buy` \(Slash command with a bot @mention\)
+1. `@bdk2-bot /buy` \(Slash command with a bot @mention\)
 
 {% tabs %}
 {% tab title="@bdk-bot /buy" %}
@@ -318,7 +322,7 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 {% endtab %}
 {% endtabs %}
 
-   2.  `/buy 1000 goog` \(Slash command without a bot @mention\)
+1. `/buy 1000 goog` \(Slash command without a bot @mention\)
 
 {% tabs %}
 {% tab title="/buy" %}
@@ -336,7 +340,7 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 {% endtab %}
 {% endtabs %}
 
-  3.  Listen for the word `'hello'` \(Not a Slash command  - Listen for a specific word\)
+1. Listen for the word `'hello'` \(Not a Slash command  - Listen for a specific word\)
 
 {% tabs %}
 {% tab title="\'hello\'" %}
@@ -381,12 +385,12 @@ class HelloCommandActivity extends CommandActivity<CommandContext> {
 {% endtabs %}
 
 {% hint style="info" %}
-Note: If you choose to create your own `CommandActivity` class, you must implement the `matcher()` and `onActivity()` methods provided by the `AbstractActivity` class.  For more information on the implementation of the `CommandActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/tree/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/command).
+Note: If you choose to create your own `CommandActivity` class, you must implement the `matcher()` and `onActivity()` methods provided by the `AbstractActivity` class. For more information on the implementation of the `CommandActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/tree/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/command).
 {% endhint %}
 
 ### Form Activities
 
-The Activities API also makes it easy for Bots to listen for elements form submissions.  Assume the following elements form has been posted into a room with the following attributes:
+The Activities API also makes it easy for Bots to listen for elements form submissions. Assume the following elements form has been posted into a room with the following attributes:
 
 * formId = "hello-form"
 * &lt;text-field&gt; name = "name"
@@ -450,16 +454,16 @@ class HelloFormReplyActivity extends FormReplyActivity<FormReplyContext> {
 ```
 
 {% hint style="info" %}
-Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class.  For more information on the implementation fo the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
+Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class. For more information on the implementation fo the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
 {% endhint %}
 
-As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.    
+As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.
 
 ## User, Message, & Room Management
 
-The BDK 2.0 provides easy access to message, room, and user context.  
+The BDK 2.0 provides easy access to message, room, and user context.
 
-As shown above, the BDK 2.0 makes it easy to create a datafeed and listen for events through the `RealTimeEventListener` class.  In addition, this class makes it easy to access user, message, and room data in context.  Each eventType method is implemented with instances of `V4Initiator` and `V4MessageSent` objects:
+As shown above, the BDK 2.0 makes it easy to create a datafeed and listen for events through the `RealTimeEventListener` class. In addition, this class makes it easy to access user, message, and room data in context. Each eventType method is implemented with instances of `V4Initiator` and `V4MessageSent` objects:
 
 ```java
 public void onMessageSent(V4Initiator initiator, V4MessageSent event)
@@ -500,7 +504,7 @@ Use the `V4MessageSent` class methods to access stream data in context:
 
 ### Managing Context through Activities API
 
-The Activities API also makes it easy to access relevant user, message, and stream data in context.  `CommandActivity` classes have access to to this data through the `CommandContext` class.  This class is instantiated with instances of `V4Initiator` and `V4MessageSent` objects.  Bots are able access to the user, message, and stream data in context through the same methods shown above.  Leverage these methods within the `onActivity()` method shown below: 
+The Activities API also makes it easy to access relevant user, message, and stream data in context. `CommandActivity` classes have access to to this data through the `CommandContext` class. This class is instantiated with instances of `V4Initiator` and `V4MessageSent` objects. Bots are able access to the user, message, and stream data in context through the same methods shown above. Leverage these methods within the `onActivity()` method shown below:
 
 ```java
 @Override
@@ -509,7 +513,7 @@ The Activities API also makes it easy to access relevant user, message, and stre
   }
 ```
 
-FormActivity classes have access to relevant user, form, and stream data through the `FormReplyContext` class.  This class is instantiated with instances of the `V4Initiator` and `V4SymphonyElementsAction` class. The `V4SymphonyElementsAction` class provides the following methods to access form data in context:
+FormActivity classes have access to relevant user, form, and stream data through the `FormReplyContext` class. This class is instantiated with instances of the `V4Initiator` and `V4SymphonyElementsAction` class. The `V4SymphonyElementsAction` class provides the following methods to access form data in context:
 
 | Method | Attribute |
 | :--- | :--- |
@@ -528,7 +532,7 @@ FormActivity classes have access to relevant user, form, and stream data through
 
 ## Message Templating
 
-The BDK 2.0 also supports custom and built in message templating.  The BDK 2.0 is agnostic to what templating library developers choose, with support for FreeMarker templates, handlebars, and more.  In order to use message templating, you must leverage the `TemplateEngine` class provided by the BDK.  Implement the `newBuiltInTemplate()` method to reuse an simple messageML template:
+The BDK 2.0 also supports custom and built in message templating. The BDK 2.0 is agnostic to what templating library developers choose, with support for FreeMarker templates, handlebars, and more. In order to use message templating, you must leverage the `TemplateEngine` class provided by the BDK. Implement the `newBuiltInTemplate()` method to reuse an simple messageML template:
 
 ```java
 protected void onActivity(CommandContext context) {
@@ -541,21 +545,21 @@ protected void onActivity(CommandContext context) {
             messageService.send(context.getStreamId(), templateMessage);
         }
     }
-    
+
     catch (TemplateException te) {
                 log.error(te.getMessage());
         }
 }
 ```
 
-If you wish to build your own custom message template, you must implement one of the `newTemplate()` methods provided by the `TemplateEngine` class: 
+If you wish to build your own custom message template, you must implement one of the `newTemplate()` methods provided by the `TemplateEngine` class:
 
 * `newBuiltInTemplate()`
 * `newTemplateFromFile()`
 * `newTemplateFromClasspath()`
 * `newTemplateFromUrl()`
 
-The following shows an implementation of the `newTemplateFromClasspath()` method: 
+The following shows an implementation of the `newTemplateFromClasspath()` method:
 
 ```java
 protected void onActivity(CommandContext context) {
@@ -586,7 +590,7 @@ The corresponding FreeMarker template is shown below:
 
 ## SpringBoot Integration
 
-The BDK 2.0's SpringBoot integration provides a few out of the box class annotations, making it easy to configure your bot's datafeed listeners, and also register command activities.  To do so, you must create an entry point for your Bot by creating a  `BotApplication.java` class:
+The BDK 2.0's SpringBoot integration provides a few out of the box class annotations, making it easy to configure your bot's datafeed listeners, and also register command activities. To do so, you must create an entry point for your Bot by creating a `BotApplication.java` class:
 
 ```java
 @SpringBootApplication

@@ -1,9 +1,9 @@
 # Extension Applications + UI Toolkit
 
-Some Extension applications contain a standalone frontend that is embedded within the Symphony client.  While the Symphony client is agnostic to the implementation of your app's frontend, Symphony provides a UI toolkit containing a library of react components that help to build complex frontend applications rapidly.  The UI Toolkit contains layout guides, forms, dropdown menus, complex financial charts, and more.
+Some Extension applications contain a standalone frontend that is embedded within the Symphony client. While the Symphony client is agnostic to the implementation of your app's frontend, Symphony provides a UI toolkit containing a library of react components that help to build complex frontend applications rapidly. The UI Toolkit contains layout guides, forms, dropdown menus, complex financial charts, and more.
 
 {% hint style="info" %}
-Note: This guide is an overview of how to leverage the Extension API and UI Toolkit in order to render custom frontend applications within the Symphony client.  For an in depth reference of the Modules Service and Nav Service refer to the [Modules Service guide](../overview-of-extension-api/extension-api-services/modules-service.md) and [Applications-Nav Service guide](../overview-of-extension-api/extension-api-services/applications-nav-service.md) respectively.  
+Note: This guide is an overview of how to leverage the Extension API and UI Toolkit in order to render custom frontend applications within the Symphony client. For an in depth reference of the Modules Service and Nav Service refer to the [Modules Service guide](../overview-of-extension-api/extension-api-services/modules-service.md) and [Applications-Nav Service guide](../overview-of-extension-api/extension-api-services/applications-nav-service.md) respectively.
 {% endhint %}
 
 ## 1.  Subscribe and Add your App to the Left-Hand Navigation
@@ -46,7 +46,7 @@ controllerService.implement({
 
 ## 2.  Bring your Extension Application into View
 
-In order to bring your Extension Application into view, you must leverage the `modules` service.  A module is a new window inside the Symphony client workspace, such as a chatroom or an instant message.  In order for applications to occupy these UI spaces, applications must first subscribe to the `module` service:
+In order to bring your Extension Application into view, you must leverage the `modules` service. A module is a new window inside the Symphony client workspace, such as a chatroom or an instant message. In order for applications to occupy these UI spaces, applications must first subscribe to the `module` service:
 
 ```javascript
 const modulesService = SYMPHONY.services.subscribe('modules');
@@ -115,7 +115,7 @@ The `show()` method takes in the following parameters:
   </tbody>
 </table>
 
-As shown above, the iframe of the module being rendered points to an `app.html` file.  Inside this file is where you can include your app's custom javascript.  A sample implementation of the `app.htm`l file provided by the BDK is shown below: 
+As shown above, the iframe of the module being rendered points to an `app.html` file. Inside this file is where you can include your app's custom javascript. A sample implementation of the `app.htm`l file provided by the BDK is shown below:
 
 ```markup
 <!DOCTYPE html>
@@ -142,26 +142,25 @@ See app.js for how the user's theme (light or dark) and font size (large, normal
 
 ## 3.  UI Toolkit
 
-Now that we know how to bring our app view into focus, let's take a look at the library of react components provided by the UI Toolkit.  To access a live version of this library, leverage the `symphony-bdk-cli` tool:
+Now that we know how to bring our app view into focus, let's take a look at the library of react components provided by the UI Toolkit. To access a live version of this library, leverage the `symphony-bdk-cli` tool:
 
 ```text
-$ symphony-bdk-cli --toolkit 
+$ symphony-bdk-cli --toolkit
 ```
 
 {% hint style="info" %}
 Note: If you don't have the `symphony-bdk-cli` installed, continue to the [cli-tool](../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/#cli-tool) guide.   
 {% endhint %}
 
-This will launch a live version of the UI Toolkit library reference in your default browser.  In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.
+This will launch a live version of the UI Toolkit library reference in your default browser. In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.
 
-The UI Toolkit contains a number of different component groups including layouts, inputs, tables, and dedicated financial components.  To use these components in your extension app, add the following to your `package.json`: 
+The UI Toolkit contains a number of different component groups including layouts, inputs, tables, and dedicated financial components. To use these components in your extension app, add the following to your `package.json`:
 
 ```markup
 "symphony-bdk-ui-toolkit": "git+ssh://git@github.com:SymphonyPlatformSolutions/symphony-bdk-ui-toolkit.git#stage"
-
 ```
 
-Once installed, you can import the library and begin creating custom views.  For example, see how easy it is to leverage the UI toolkit to create an RFQ Quote Card component view:
+Once installed, you can import the library and begin creating custom views. For example, see how easy it is to leverage the UI toolkit to create an RFQ Quote Card component view:
 
 {% tabs %}
 {% tab title="index.js" %}
@@ -177,7 +176,7 @@ const Quote = () => {
             dealerPayedValue: 1.75,
             clientName: 'Client one',
             clientPayedValue: 3
-            }} productData={null} 
+            }} productData={null}
         />
     </>
     );
@@ -195,10 +194,10 @@ The following component will be rendered based on the above code:
 ## 4.  Creating Custom Views with the BDK
 
 {% hint style="info" %}
-Note:  The following React implementation is consistent with the Extension App implementation provided by the BDK.  However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation.  Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.  
+Note: The following React implementation is consistent with the Extension App implementation provided by the BDK. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
 {% endhint %}
 
-The `app.html` iframe is linked to a custom javascript file, `app.js`.  This file is where you could implement your own custom rendering logic.  In the case of the BDK, this file will act as the entry point into the react system: 
+The `app.html` iframe is linked to a custom javascript file, `app.js`. This file is where you could implement your own custom rendering logic. In the case of the BDK, this file will act as the entry point into the react system:
 
 {% tabs %}
 {% tab title="app.js" %}
@@ -243,11 +242,10 @@ const LocationRouter = () => route();
 {% endtab %}
 {% endtabs %}
 
-Whatever is returned by the `route()` function provided by the BDK will be rendered as the application view.  For more information about how to pass props from your backend to your frontend in order to bring relevant data into your application view, please refer to the following tutorial:
+Whatever is returned by the `route()` function provided by the BDK will be rendered as the application view. For more information about how to pass props from your backend to your frontend in order to bring relevant data into your application view, please refer to the following tutorial:
 
 {% page-ref page="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
 
-Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app.  Continue to the following tutorials where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK and react:
+Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app. Continue to the following tutorials where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK and react:
 
 {% page-ref page="../tutorials/building-an-extension-app-with-ui-toolkit.md" %}
-

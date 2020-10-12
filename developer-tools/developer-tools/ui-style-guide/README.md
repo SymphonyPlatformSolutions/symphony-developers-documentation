@@ -41,7 +41,7 @@ This image shows the result of the above code example:
 
 ![](../../../.gitbook/assets/85c0431-screen_shot_2017-06-06_at_3.22.38_pm.png)
 
-##  Personalization
+## Personalization
 
 Users of Symphony can personalize their user interface by choosing between a variety of modes \(day/night\), contrast level, and font sizes.
 
