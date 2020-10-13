@@ -16,8 +16,6 @@ Symphony has built numerous tools in order to streamline Extension App developme
 
 Go through our dedicated step by step Extension App tutorials to learn how to leverage our development tools and start building Extension Applications today!
 
-{% page-ref page="tutorials/" %}
-
 ## 4.  Add Custom Business Logic
 
 The next step is to add custom business logic to your app. Begin leveraging Symphony's Extension API and bring your workflows and automations to life:

@@ -44,8 +44,6 @@ BDK 2.0, the latest version of Symphony Bot Developer Kit is now available. With
 
 To learn more about the BDK 2.0, continue here:
 
-{% page-ref page="bdk-2.0/" %}
-
 ## Yeoman Generator
 
 The easiest way to begin building Bots and Extension Applications is through the Symphony Yeoman Generator. A command line tool that allows you to generate code scaffolds across the 4 SDKs and the BDK 2.0.

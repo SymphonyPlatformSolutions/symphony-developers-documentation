@@ -19,7 +19,7 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 * [**Embedded Modules**](./#embedded-modules)
 
 {% hint style="success" %}
- Checkout the latest release of the Bot Developer Kit, [BDK 2.0](developer-tools/developer-tools/bdk-2.0/).  BDK 2.0 is a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Get started building with BDK 2.0 today: [BDK 2.0](developer-tools/developer-tools/bdk-2.0/)
+Checkout the latest release of the Bot Developer Kit, [BDK 2.0](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/1815782361bce999db95809836b7e6193a383868/developer-tools/developer-tools/bdk-2.0). BDK 2.0 is a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Get started building with BDK 2.0 today: [BDK 2.0](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/1815782361bce999db95809836b7e6193a383868/developer-tools/developer-tools/bdk-2.0)
 {% endhint %}
 
 ## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
@@ -40,7 +40,7 @@ Bring customized and extensible workflows into Symphony through Extension Apps. 
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
-{% page-ref page="/developer-certification/untitled.md" %}
+{% page-ref page="developer-certification/untitled.md" %}
 
 ## Symphony REST API ![](.gitbook/assets/symphony-api-large.png)
 
@@ -59,3 +59,4 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 ## Embedded Modules
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications:
+

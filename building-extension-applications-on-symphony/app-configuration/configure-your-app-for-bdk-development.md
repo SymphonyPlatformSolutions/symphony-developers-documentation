@@ -317,5 +317,3 @@ com.symphony.bdk.bot.sdk.extapp.authentication.AppAuthController {transactionId=
 
 Now that you have successfully authenticated and configured your extension app, navigate to one of the extension app tutorials to add custom business logic to your app:
 
-{% page-ref page="../tutorials/" %}
-
