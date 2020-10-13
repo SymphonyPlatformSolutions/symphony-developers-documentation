@@ -2,7 +2,7 @@
 
 The `symphony:` URI can be used to launch the Symphony iOS application from another iOS app.
 
-### Launch the Symphony iOS app with a chat from another app
+## Launch the Symphony iOS app with a chat from another app
 
 ```text
 symphony://chat_with?username=USERNAME&name=USER_FULL_NAME

@@ -1,8 +1,8 @@
 # Symphony URI
 
-#### The `symphony:` URI allows you to launch the Symphony desktop client from your browser:
+### The `symphony:` URI allows you to launch the Symphony desktop client from your browser:
 
-### Launch the Symphony Desktop Client
+## Launch the Symphony Desktop Client
 
 ```text
 symphony://
@@ -13,30 +13,30 @@ symphony://
 * If the Symphony desktop client is already running and in focus, has no effect -- the Symphony desktop client remains in focus.
 * If the Symphony desktop client is not installed, the Windows operating system will handle the request with its default behavior.
 
-### Launch the Symphony Desktop Client with IM or MIM in Focus
+## Launch the Symphony Desktop Client with IM or MIM in Focus
 
 * If the Symphony desktop client is not running, starts up and focuses the Symphony desktop client with the IM, or MIM with the specified userIDs in focus
 * If the Symphony desktop client is already running, switches focus to the Symphony desktop client. If the client is minimized, brings the client to the foreground and loads the IM, or MIM with the specified userIDs in focus
 * If the Symphony desktop client is already running and in focus, it will open the IM, or MIM with the specified userIDs
 * If the Symphony desktop client is not installed, the Windows operating system will handle the request with its default behavior.
 
-> #### 📘Error Handling Behavior
+> ### 📘Error Handling Behavior
 >
 > For IM, if an invalid userId is supplied, the behaviour is the same as "symphony://"  
 > For MIM, if one of the userId is invalid, an MIM with only the valid userIds is opened.  
 > For MIM, if all the userIds are invalid, the behaviour is the same as "symphony://"
 
-### Opening a chat with a single user
+## Opening a chat with a single user
 
 {% tabs %}
 {% tab title="IM" %}
-```
+```text
 symphony://?startChat=71811853189751
 ```
 {% endtab %}
 {% endtabs %}
 
-### Opening a chat with other users
+## Opening a chat with other users
 
 {% tabs %}
 {% tab title="MIM" %}
@@ -46,7 +46,7 @@ symphony://?startChat=71811853187751,3563645678951
 {% endtab %}
 {% endtabs %}
 
-### Creating a chatroom with User IDs
+## Creating a chatroom with User IDs
 
 What happens if no room name is provided?
 
@@ -64,7 +64,7 @@ symphony://?startRoom=RoomName=Example&userIds=4378106230763,5478106410145,70781
 {% endtab %}
 {% endtabs %}
 
-### Creating a chatroom with User Emails
+## Creating a chatroom with User Emails
 
 What happens if no room name is provided?
 
@@ -84,7 +84,7 @@ symphony://?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,a
 {% endtab %}
 {% endtabs %}
 
-### Launch the Symphony Desktop Client with Stream in Focus
+## Launch the Symphony Desktop Client with Stream in Focus
 
 Mirrors the behavior of `symphony:` but puts the specified stream \(IM, multiparty IM, or chatroom\) in focus.Text
 
@@ -105,7 +105,7 @@ symphony://?streamId=STREAM_ID&streamType=STREAM_TYPE
 * If no such stream exists and `streamType=im`, a rendering error message is displayed.
 * If a stream where the user is not a participant is specified, the Symphony client is not launched.
 
-### Launch the Symphony Desktop Client with Profile in Focus
+## Launch the Symphony Desktop Client with Profile in Focus
 
 Mirrors the behavior of `symphony:` but puts the specified user's profile in focus.Text
 

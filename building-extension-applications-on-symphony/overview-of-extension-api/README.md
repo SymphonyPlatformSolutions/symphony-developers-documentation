@@ -18,7 +18,7 @@ Some of Symphony’s services will require you to implement your own services wi
 * Handling a user click on your app’s \#hashtag or $cashtag hovercard link by opening an app module with a contextual search
 
 {% hint style="info" %}
-Many of these event handlers are provided out of the box by the BDK's App Template. To learn more about the out-of-the-box implementations provided by the BDK continue to the [Planning Your App](../planning-your-app/) or [Tutorials]() sections.
+Many of these event handlers are provided out of the box by the BDK's App Template. To learn more about the out-of-the-box implementations provided by the BDK continue to the [Planning Your App](../planning-your-app/) or [Tutorials](./) sections.
 {% endhint %}
 
 ## App Controller and Views
