@@ -1,7 +1,5 @@
 # Bots Best Practices
 
-## Bots Best Practices
-
 Symphony has a number of best practices to ensure smooth bot development and a positive user experience.
 
 ## Getting Your Bots Attention
@@ -28,11 +26,7 @@ It important that users understand exactly what your bot is capable of and what 
 
 ## Datafeed
 
-It is considered best practice that bot's only create and read from one datafeed. If your bot goes down, it should re-authenticate, create a new datafeed, and begin reading from the newly created datafeed.
-
-{% hint style="info" %}
-Note: The SDK and BDK handles all of the datafeed retry and reauthentication logic for you.
-{% endhint %}
+It is considered best practice that bot's only create and read from one datafeed. If your bot goes down, it should re-authenticate, create a new datafeed, and begin reading from this one.
 
 Creating and reading from multiple datafeeds concurrently can result in your bot processing duplicate messages and subsequently sending duplicate or out of order messages back to the user.
 
@@ -41,6 +35,12 @@ Creating and reading from multiple datafeeds concurrently can result in your bot
 For large rooms, it is recommended that bots do not send messages at a rate of 2 messages/sec or every 500ms.
 
 If bots are bulk adding users to rooms, it is recommended that bots add users at a rate of 1 user every 3 seconds.
+
+## Stateful Elements
+
+The following example shows you how to create cascading elements to simulate a stateful Symphony message:
+
+\(insert example\)
 
 ## Duplicate Messages
 

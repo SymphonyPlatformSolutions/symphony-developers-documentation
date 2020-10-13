@@ -20,7 +20,7 @@ The first tool under the umbrella of the Bot Developer Kit is the Bot SDK. The B
 
 To learn more about the Bot SDK, continue here:
 
-{% page-ref page="bdk-2.0/bdk-1.0/bot-sdk.md" %}
+{% page-ref page="bdk/bot-sdk.md" %}
 
 ### CLI Tool
 
@@ -28,7 +28,7 @@ The CLI Tool allows you to generate code scaffolds for Symphony Bots and Extensi
 
 To learn more about the CLI Tool, continue here:
 
-{% page-ref page="bdk-2.0/bdk-1.0/cli-tool.md" %}
+{% page-ref page="bdk/cli-tool.md" %}
 
 ### UI Toolkit
 
@@ -36,7 +36,7 @@ The UI Toolkit is a library of react components that enables developers to build
 
 To learn more about the UI Toolkit, continue here:
 
-{% page-ref page="bdk-2.0/bdk-1.0/ui-toolkit.md" %}
+{% page-ref page="bdk/ui-toolkit.md" %}
 
 ## Bot Developer Kit 2.0
 
@@ -44,7 +44,7 @@ BDK 2.0, the latest version of Symphony Bot Developer Kit is now available. With
 
 To learn more about the BDK 2.0, continue here:
 
-{% page-ref page="bdk-2.0/" %}
+{% page-ref page="bdk-2.0.md" %}
 
 ## Yeoman Generator
 
