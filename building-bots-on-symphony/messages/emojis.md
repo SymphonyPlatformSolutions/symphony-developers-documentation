@@ -1,6 +1,6 @@
 # Emojis
 
-Emojis can be used within messages either by using **`:code:`** within Symphony for end users or using the MessageML short form tag **`<emoji shortcode="code" />`** in the message payload for bots.  The following table shows the codes correpsonding to their emoji symbol:
+Emojis can be used within messages either by using **`:code:`** within Symphony for end users or using the MessageML short form tag **`<emoji shortcode="code" />`** in the message payload for bots.  The following table shows the codes corresponding to their emoji symbol:
 
 | Code | Emoji |
 | :--- | :--- |
