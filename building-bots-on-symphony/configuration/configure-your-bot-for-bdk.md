@@ -4,9 +4,11 @@ description: Bot Configuration guide for using the BDK and CLI Tool
 
 # Configure your Bot for BDK
 
+## Configure your Bot for BDK
+
 The following is a language-agnostic Bot configuration guide for building Bots using the Symphony BDK and the CLI Tool.
 
-## Prerequisites
+### Prerequisites
 
 * Node
 * Yarn
@@ -14,25 +16,25 @@ The following is a language-agnostic Bot configuration guide for building Bots u
 * Maven 3
 * Git
 
-### Install Yarn:
+#### Install Yarn:
 
 ```text
 $ npm i -g yarn
 ```
 
-### Install the BDK
+#### Install the BDK
 
 ```text
 $ npm i -g symphony-bdk-cli
 ```
 
-### Confirm all the dependencies are met:
+#### Confirm all the dependencies are met:
 
 ```text
 $ symphony-bdk-cli --check-dependencies
 ```
 
-## 1.  Generate your Bot
+### 1.  Generate your Bot
 
 To generate a new Bot project, enter the following:
 
@@ -88,7 +90,7 @@ Leave the second to last question blank and press enter to skip.
 
 Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.
 
-## 2. Configure your Bot
+### 2. Configure your Bot
 
 Once you have your generated Bot scaffold, the next step is to configure your Bot user:
 

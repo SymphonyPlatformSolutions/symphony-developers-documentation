@@ -120,9 +120,11 @@ After the user fills out their information and clicks the 'Submit' button, the f
 
 The next step of your chatbot workflow is to introduce your Bot's custom business logic. Now that you have access to the Bot's events, messages, and elements payloads through the Symphony Datafeed, the next step is to create dedicated event listeners. Inside these listeners is where you parse messages and datafeed payloads, fetch data from external sources, manage conversation state, and make requests to Symphony's REST API in order to reply to users directly or performs administrative functions such as creating chatrooms.
 
-You can learn more about parsing events and introducing custom business logic here:
+You can learn more about parsing events and introducing custom business logic [here](../../datafeed.md#handling-events).
 
 ## Next Steps:
 
-Continue on to our [Getting Started With Interactive Bots](getting-started/) guide. Here you will learn how to get your own Interactive Bot up and running and take a closer look at the APIs used to create a simple Interactive Bot workflow.
+Continue on to our [Getting Started with Interactive Bots](getting-started.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Interactive Bot:
+
+{% page-ref page="getting-started.md" %}
 
