@@ -273,15 +273,17 @@ For more information on the Symphony datafeed continue here:
 
 {% page-ref page="../../../building-bots-on-symphony/datafeed.md" %}
 
+## Orchestrating Workflows with the BDK 2.0
+
+A Symphony workflow can be thought of as a sequence of operations or a repeatable pattern of activities that are organized together in order to transform data, provide a service, or process information.  Each of these operations or activities may be completed by a single user, shared between a bot and a user, or shared between multiple actors including bots, users, and even third party systems.
+
+By providing an intuitive Activities API, the BDK 2.0 makes it simple to define a set of discrete operations or activities for different actors in your system to execute.  Ultimately, these activities constitute the building blocks for a powerful Symphony workflow automation.
+
+Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  Luckily, The BDK 2.0 provides a powerful Workflow API that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony workflow.  
+
 ## Activities API
 
-The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage user-to-bot interactions or activities. Specifically, the Activities API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events. The methods and logic provided by the Activities API allows for granular control over the entire user-to-bot interaction. This encapsulated logic is easily reused, forming the discrete building blocks of a Symphony workflow automation.
-
-### Workflow API
-
-While the Activities API gives developers granular control over the user-to-bot interaction, the Workflow API makes it easy to string together this sequence of activities in order to create a complete Symphony workflow automation. The Workflow API gives developers developers control over how these activities fit together in a context-based way that is easy monitored. With both tools in hand, building powerful, enterprise grade workflows has never been easier.
-
-worfklow = sequence of activities , worfklow is above activities not within - introducte workflow not workflow api -&gt; explain conceepts of actors and actors making activiites, bots, users, exterenal system.
+The BDK 2.0 provides a new Activities API, an interface that makes it easy to manage user-to-bot interactions or activities.  Specifically, the Activities API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events.  The methods and logic provided by the Activities API allows for granular control over the entire user-to-bot interaction.  This encapsulated logic is easily reused, forming the discrete building blocks of a Symphony workflow automation.
 
 ### Registering Activities
 
@@ -706,4 +708,3 @@ public class GifFormActivity extends FormReplyActivity<FormReplyContext> {
   }
 }
 ```
-
