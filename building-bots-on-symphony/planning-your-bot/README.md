@@ -63,7 +63,7 @@ If so, you are looking to build an **interactive bot.** Interactive bots leverag
 
 ### Will your Bot act as a notification system, without any chat or request/reply mechanisms?
 
-If so, you are looking to build a **headless bot.** Headless bots can leverage Symphony Webhooks or build custom notification handlers and formatters from external systems. You can learn more about headless workflow and notification handlers here:
+If so, you are looking to build a **headless bot.** Headless bots can leverage Symphony webhooks or build custom notification handlers and formatters from external systems. You can learn more about headless workflow and notification handlers here:
 
 {% page-ref page="headless-bot/" %}
 
