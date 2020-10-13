@@ -13,7 +13,7 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 * [**Building Bots on Symphony**](./#building-bots-on-symphony)
 * [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
 * [**Become a Certified Developer**](./#developer-certification)
-* [**Developer Tools**](./#developer-tools)
+* [**Developer Tools**](developer-tools/developer-tools/)
 * [**REST API Reference**](./#symphony-rest-api)
 * [**Extension API Reference**](./#symphony-extension-api)
 * [**Embedded Modules**](./#embedded-modules)
@@ -36,6 +36,10 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 
 Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
+## Developer Certification
+
+Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
+
 ## Symphony REST API ![](.gitbook/assets/symphony-api-large.png)
 
 In depth documentation and reference guide for the Symphony REST API:
@@ -45,10 +49,6 @@ In depth documentation and reference guide for the Symphony REST API:
 In depth documentation and reference guide for the Symphony Extension API:
 
 {% page-ref page="building-extension-applications-on-symphony/overview-of-extension-api/" %}
-
-## Developer Certification
-
-Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
 ## Developer Tools
 
