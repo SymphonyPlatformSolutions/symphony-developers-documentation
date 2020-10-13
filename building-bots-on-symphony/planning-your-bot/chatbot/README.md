@@ -32,7 +32,7 @@ You can learn more about parsing events and introducing custom business logic [h
 
 ## Next Steps:
 
-Continue on to our [Getting Started with Chatbots](getting-started-with-chatbots.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Chatbot.  
+Continue on to our [Getting Started with Chatbots](getting-started-with-chatbots.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Chatbot.
 
 {% page-ref page="getting-started-with-chatbots.md" %}
 

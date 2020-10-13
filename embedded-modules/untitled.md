@@ -6,7 +6,7 @@ The Symphony Embedded Chat Module allows you to embed stand-alone Symphony chat 
 
 The chat module can be embedded into websites or any tool that supports a webview. ECM allows custom themes and extensive interface configuration.
 
-> #### Supported browser versions
+> ### Supported browser versions
 >
 > * Safari 11
 > * IE 11
@@ -22,7 +22,7 @@ There are three options to implement the Symphony Embedded Chat Module:
 
 Each of these options requires either a working [Symphony Conversation ID](https://developers.symphony.com/restapi/docs/overview-of-streams) or comma separated Symphony User IDs to load a working Symphony chat.
 
-> #### Conversation ID Encoding
+> ### Conversation ID Encoding
 >
 > The direct iFrame rendering, the Conversation ID must be URI encoded to be successfully placed within the iFrame URL. Refer to [Overview of Streams](https://developers.symphony.com/restapi/docs/overview-of-streams) for detailed information on encoding a Conversation ID.
 >
@@ -58,7 +58,7 @@ The example below contains many of the various configuration options, but the fu
 </div>
 ```
 
-> #### SSO Support for Automatic Rendering
+> ### SSO Support for Automatic Rendering
 >
 > Note: SSO is not supported in automatic rendering mode. To use SSO with the JS SDK, please use the explicit rendering.
 
@@ -139,7 +139,7 @@ To use SSO, use the urlIntercept callback, as exemplified below. If you do not w
     });
   };
 
- 
+
 </script>
 
 <div class="my-class" style="width: 500px; height: 500px;"></div>
