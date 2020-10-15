@@ -12,9 +12,9 @@ Complete the BDK Bot Configuration guide:
 
 ## 1. Dive into the Code
 
-The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. In addition, the Bot SDK also provides out-of-the-box Datafeed and event handling architecture that make it simple for your Bot to handle different events.
+The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your bot's code. In addition, the Bot SDK also provides out-of-the-box Datafeed and event handling architecture that make it simple for your bot to handle different events.
 
-The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out-of-the-box code that can be used to bootstrap your bot quickly, including sending and receiving Symphony Elements. To illustrate these best practices and convenient boilerplate code, navigate to TemplateHandler.java inside your project directory. The different bot commands are shown in the DESCRIPTIONS ARRAY:
+The Bot SDK is also baked in with bot's best practices and provides a lot of convenient out-of-the-box code that can be used to bootstrap your bot quickly, including sending and receiving Symphony Elements. To illustrate these best practices and convenient boilerplate code, navigate to `TemplateHandler.java` inside your project directory. The different bot commands are shown in the `DESCRIPTIONS` dictionary:
 
 {% tabs %}
 {% tab title="elements/TemplateHandler.java" %}
@@ -31,9 +31,9 @@ The Bot SDK is also baked in with Bot's best practices and provides a lot of con
 {% endtab %}
 {% endtabs %}
 
-The DESCRIPTIONS dictionary defines the different bot commands that you can send to your bot. Each of these commands corresponds to a different Symphony Element or combination of multiple elements that make up a form. The Bot automatically follows our best practice naming convention of "@botusername /command" when prompting your Bot.
+The `DESCRIPTIONS` dictionary defines the different bot commands that you can send to your bot. Each of these commands corresponds to a different Symphony Element or combination of multiple elements that make up a form. The Bot automatically follows our best practice naming convention of "@botusername /command" when prompting your Bot.
 
-When a user prompts the Bot with "@demobot2 /template simple", the bot will call pass my user input to the displayElements\(\) function:
+When a user prompts the bot with "@demobot2 /template simple", the bot will call pass my user input to the `displayElements()` function:
 
 {% tabs %}
 {% tab title="elements/TemplateHandler.java" %}
@@ -73,7 +73,7 @@ public void displayElements(BotCommand command, SymphonyMessage elementsResponse
 {% endtab %}
 {% endtabs %}
 
-Next, the bot will route the command to the SIMPLE case and render the handlebars template, simple-template.hbs:
+Next, the bot will route the command to the `SIMPLE` case and render the handlebars template, simple-template.hbs:
 
 {% tabs %}
 {% tab title="simple-template.hbs" %}
@@ -95,7 +95,7 @@ As you can see, this handlebars template contains designated messageML tags that
 
 ## 2. Handle Your Action
 
-When a user submits this form, the handleAction function\(\) is called and the form values collected:
+When a user submits this form, the `handleAction()` is called and the form values collected:
 
 {% tabs %}
 {% tab title="elements/TemplateHandler.java" %}
@@ -132,7 +132,7 @@ Afterwards the bot replies with the contents of the message. This illustrates ho
 
 ## 3.  Run your Bot
 
-Start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM by prompting and submitting a "simple" form:
+Start up your Spring Application by running your BotApplication.java and test that your Interactive Bot works in a 1-1 IM by prompting and submitting a "simple" form:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-17-at-12.11.25-pm.png)
 
