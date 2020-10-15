@@ -12,7 +12,7 @@ description: Building a Chatbot using the BDK and CLI Tool
 
 ## 1. Dive into the Code
 
-The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly. To illustrate these best practices and convenient boilerplate code, navigate to HelpCommandHandler.java inside your project directory:
+The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your Bot's code. The Bot SDK also provides out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. The Bot SDK is also baked in with Bot's best practices and provides a lot of convenient out of the box code that can be used to bootstrap your bot quickly. To illustrate these best practices and convenient boilerplate code, navigate to `HelpCommandHandler.java` inside your project directory:
 
 {% tabs %}
 {% tab title="command/HelpCommandHandler.java" %}
@@ -68,9 +68,9 @@ public class HelpCommandHandler extends CommandHandler {
 {% endtab %}
 {% endtabs %}
 
-The DESCRIPTIONS dictionary defined on line 17 defines a help menu or list of commands that the bot understands out of the box. The Bot automatically follows our best practice naming convention of "@botusername /command" which is defined on line 32. Each of these commands listed in the help menu have their own corresponding command handler inside of the commands folder.
+The `DESCRIPTIONS` dictionary defined on line 17 defines a help menu or list of commands that the bot understands out of the box. The bot automatically follows our best practice naming convention of "@botusername /command" which is defined on line 32. Each of these commands listed in the help menu have their own corresponding command handler inside of the commands folder.
 
-So for example when a user prompts the Bot with "@demobot2 /hello", the handle\(\) function inside HelpCommandHandler.java will be called:
+So for example when a user prompts the bot with "@demobot2 /hello", the `handle()` function inside `HelpCommandHandler.java` will be called:
 
 {% tabs %}
 {% tab title="command/HelpCommandHandler.java" %}
