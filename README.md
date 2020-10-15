@@ -52,11 +52,11 @@ In depth documentation and reference guide for the Symphony Extension API:
 
 {% page-ref page="building-extension-applications-on-symphony/overview-of-extension-api/" %}
 
-## Developer Tools
+## Developer Tools ![](.gitbook/assets/developer-tools.png) 
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
-## Embedded Modules
+## Embedded Modules ![](.gitbook/assets/embedded-modules.png) 
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications:
 
