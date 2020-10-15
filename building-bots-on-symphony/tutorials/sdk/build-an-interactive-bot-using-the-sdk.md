@@ -31,10 +31,10 @@ Let's take a look at the main\(\) function inside our python/main.py file:
 
 Running this file accomplishes four things:
 
-* Configures your Bot
-* Authenticates your Bot
-* Starts up the Bot's datafeed event service
-* Adds custom event listeners/handlers to the Bot's datafeed event service
+* Configures your bot
+* Authenticates your bot
+* Starts up the bot's datafeed event service
+* Adds custom event listeners/handlers to the bot's datafeed event service
 
 {% tabs %}
 {% tab title="python/main.py" %}
@@ -142,7 +142,7 @@ class IMListenerImpl(IMListener):
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within your Bot's scope will be read and captured by the Bot's datafeed. Any events that happen inside of an IM with the Bot will be parsed and directed to its IM Listener. Depending on the type of event, the corresponding IM Listener function will be called. So if for example, you send a message to your Bot 1-1, that event will be captured and as a result the on\_im\_message\(\) will be executed.
+Any events that happen within your bot's scope will be read and captured by the bot's datafeed. Any events that happen inside of an IM with the bot will be parsed and directed to its IM Listener. Depending on the type of event, the corresponding IM Listener function will be called. So if for example, you send a message to your bot 1-1, that event will be captured and as a result the `on_im_message()` will be executed.
 
 In this generated example, when an IM is sent to your Bot, it will capture the event, and reply to the user by calling the following SDK function, which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
@@ -156,7 +156,7 @@ self.bot_client.get_message_client().send_msg()
 
 ## 3.  Adding our own functionality
 
-Since we are building an Interactive Bot, instead of sending only text, our Bot will also send Symphony Elements. An interactive bot can send Symphony elements by calling the method used above since Symphony Elements are just messageML. Let's construct a form in order to capture user name, country, and type of bot being built.
+Since we are building an Interactive Bot, instead of sending only text, our bot will also send Symphony Elements. An interactive bot can send Symphony elements by calling the method used above since Symphony Elements are just messageML. Let's construct a form in order to capture user name, country, and type of bot being built.
 
 {% hint style="info" %}
 Note: In order to for a Symphony Element to be considered valid, it must contain opening and closing &lt;form&gt; tags and also a &lt;button&gt; with type="action"
@@ -267,17 +267,17 @@ datafeed_event_service.add_elements_listener(ElementsListenerImpl(bot_client))
 
 ## 4.  Run your Bot
 
-To see your Symphony Element or form rendered, run your Bot.
+To see your Symphony Element or form rendered, run your bot:
 
 ```python
 (demoEnv) demoBot1 $ python3 main.py
 ```
 
-Navigate to Symphony, create an IM with your Bot, and type any message to see the form rendered:
+Navigate to Symphony, create an IM with your bot, and type any message to see the form rendered:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-15-at-7.14.53-pm.png)
 
-When you fill out the form and click submit, the datafeed handles the event and dispatches it to your ElementsListenerImpl class:
+When you fill out the form and click submit, the datafeed handles the event and dispatches it to your `ElementsListenerImpl` class:
 
 {% tabs %}
 {% tab title="listeners/elements\_listener\_impl.py" %}
