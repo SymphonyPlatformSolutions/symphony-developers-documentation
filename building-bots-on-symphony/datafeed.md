@@ -12,7 +12,7 @@ The Symphony datafeed is a real-time messages and events stream that provides me
 
 Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.
 
-Once a bot has created a datafeed, it has access all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a Bot's scope are encrypted by the Agent before reaching your bot. That way the Bot is the only one who can access the contents of these events and messages being delivered to your bot.
+Once a bot has created a datafeed, it has access to all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a bot's scope are encrypted by the Agent before reaching your bot. That way the bot is the only one who can access the contents of these events and messages being delivered.
 
 The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
@@ -22,7 +22,7 @@ The following illustrates the relationship between your bot, datafeed, and Symph
 
 Events are delivered to your bot via the datafeed as JSON objects. Each type of Symphony event corresponds to a different JSON payload.
 
-For example, if a user sends your bot a message, an event of type 'MESSAGESENT' will be delivered to your bot through the datafeed.
+For example, if a user sends your bot a message, an event of type `'MESSAGESENT'` will be delivered to your bot through the datafeed:
 
 ```text
 {
@@ -69,7 +69,7 @@ For example, if a user sends your bot a message, an event of type 'MESSAGESENT' 
 }
 ```
 
-Notice how each event returned by the datafeed has important metadata and attributes such as messageId, timestamp, \(event\) type, initiator, as well as the contents of the message itself inside of the payload object. Additionally, you can find the streamID corresponding to the message and also information regarding externalRecipients.
+Notice how each event returned by the datafeed has important metadata and attributes such as `messageId`, `timestamp`, \(event\) `type`, `initiator`, as well as the contents of the message itself inside of the payload object. Additionally, you can find the `streamID` corresponding to the message and also information regarding `externalRecipients`.
 
 ### Here is the full list of different real-time datafeed events:
 
@@ -207,7 +207,7 @@ Notice how each event returned by the datafeed has important metadata and attrib
 
 Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) for the expanded JSON payload corresponding to each event type.
 
-## Handling Events:
+## Handling Events
 
 ## Handling Datafeed Events with SDKs
 
@@ -221,7 +221,7 @@ The following diagram shows the event handling workflow:
 
 ![](../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
 
-Inside of onRoomMessage\(\) is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
+Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -336,7 +336,7 @@ The following diagram shows the event handling workflow:
 
 ![](../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-4.png)
 
-Inside of handle\(\) is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
+Inside of `handle()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
 {% tabs %}
 {% tab title="Java" %}

@@ -15,7 +15,7 @@ In the Symphony message workflow, messages are represented in the following mark
 * **ExtensionML**: PresentationML translated to a special markup for use by a front end app to perform custom rendering of an entity.
 
 {% hint style="info" %}
-Note: MessageML is just a subset of PresentationML that makes it easier to construct messages from your Bot. The API can ingest either MessageML or PresentationML however, the API will only deliver messages as PresentationML to a Bot.
+Note: MessageML is just a subset of PresentationML that makes it easier to construct messages from your bot. The API can ingest either MessageML or PresentationML however, the API will only deliver messages as PresentationML to a bot.
 {% endhint %}
 
 ## Diagram of Symphony Message Workflow:

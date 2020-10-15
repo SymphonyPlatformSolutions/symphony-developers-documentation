@@ -245,9 +245,9 @@ The following is a example of a card tag that could be embedded into a message:
 
 ## Structured Objects and Tags
 
-[Structured objects](https://developers.symphony.com/symphony-developer/docs/objects) are rich, inline, interactive components for Symphony messages that allow you to embed [information](https://developers.symphony.com/symphony-developer/docs/messagemlv2#standard-entities) that is more complex than simple text.
+Structured objects are rich, inline, interactive components for Symphony messages that allow you to embed [information](https://developers.symphony.com/symphony-developer/docs/messagemlv2#standard-entities) that is more complex than simple text.
 
-To [create a message](https://rest-api.symphony.com/docs/create-message-v4) containing a [Structured object](https://developers.symphony.com/symphony-developer/docs/objects), construct the message content using MessageML with either a `<div>` or a `<span>` element containing the following attributes:
+To [create a message](https://rest-api.symphony.com/docs/create-message-v4) containing a Structured object, construct the message content using MessageML with either a `<div>` or a `<span>` element containing the following attributes:
 
 * `class="entity"`: specifies that the message contains a corresponding structured object.
 * `data-entity-id`: the unique ID of the corresponding structure object.
@@ -286,6 +286,10 @@ Data:
   }
 }
 ```
+
+To learn more about Structured Objects, continue here:
+
+{% page-ref page="../structured-objects.md" %}
 
 ## Style Attributes
 
@@ -417,9 +421,13 @@ The following shows an example of using styles for an HTML table:
 </table>
 ```
 
+To learn more about Symphony's built in styles, continue here:
+
+{% page-ref page="../../../developer-tools/developer-tools/ui-style-guide/" %}
+
 ## Standard Entities
 
-This section lists the [Structured Objects](https://developers.symphony.com/symphony-developer/docs/objects) available for use in messages.
+This section lists the Structured Objects available for use in messages.
 
 ## Article
 
@@ -506,11 +514,15 @@ This section lists the [Structured Objects](https://developers.symphony.com/symp
 | url | Yes | String | The URL of the video. |
 | id | Yes | String | The unique ID of the video \(can be extracted from the video URL\). |
 
+Continue here to learn more about structured objects:
+
+{% page-ref page="../structured-objects.md" %}
+
 ## Symphony Elements
 
 Symphony Elements is a collection of interactive elements that can be sent within messages to facilitate communication with Symphony users.
 
-Through the use of the elements, bots can send messages that contain forms with text fields, dropdown menus, person selectors, buttons and more! To use the Elements, you just need to call the [/agent/v4/stream/:sid/message/create](https://developers.symphony.com/restapi/reference#create-message-v4) API using the messageML v2 format. For more information and examples check out our guide on Symphony Elements:
+Through the use of the elements, bots can send messages that contain forms with text fields, dropdown menus, person selectors, buttons and more! To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) endpoint using the messageML v2 format. For more information and examples check out our guide on Symphony Elements:
 
 {% page-ref page="../../symphony-elements/" %}
 
