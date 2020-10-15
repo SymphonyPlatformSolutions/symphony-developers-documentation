@@ -2,15 +2,15 @@
 
 ## Build Your First Bot
 
-Symphony provides a number of tools to help streamline Bot development:
+Symphony provides a number of tools to help streamline bot development:
 
 ## Bot Developer Kit
 
-The Bot Developer Kit comprises of three development tools for more advanced Symphony Bot and Extension App development.
+The Bot Developer Kit comprises of three development tools for more advanced bot and extension app development.
 
 ### Bot SDK
 
-The Bot SDK is a Java specific SDK that provides all the basic support as our other SDKs including authentication handlers, centralized configuration, convenient error handling, Datafeed management, and API bindings. In addition, the Bot SDK provides development best practices for building enterprise grade, financial applications.
+The Bot SDK is a Java specific SDK that provides all the basic support as our other SDKs including authentication handlers, centralized configuration, convenient error handling, datafeed management, and API bindings. In addition, the Bot SDK provides development best practices for building enterprise grade, financial applications.
 
 Learn more about the Bot SDK here:
 
@@ -38,7 +38,7 @@ You can learn more about the UI Toolkit here:
 
 ## Configure your Bot for BDK Development
 
-The next step to building a Bot using the BDK is to configure your Bot:
+The next step to building a bot using the BDK is to configure your bot:
 
 {% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
