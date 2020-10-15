@@ -10,7 +10,7 @@ Symphony Bots enable end users to benefit from innovative **workflows** and time
 
 ## How do Bots create workflows and automations?
 
-The answer lies in Symphony's open REST API. Once authenticated, Symphony Bots can leverage the Symphony REST API that enables bots to execute administrative functions such as creating chatrooms, managing users, and facilitating cross-pod connections. In addition, Symphony's REST API allows bots to perform messaging functions such as sending and receiving messages and signals.
+The answer lies in Symphony's open REST API. Once authenticated, Symphony bots can leverage the Symphony REST API that enables bots to execute administrative functions such as creating chatrooms, managing users, and facilitating cross-pod connections. In addition, Symphony's REST API allows bots to perform messaging functions such as sending and receiving messages and signals.
 
 For a full overview of Symphony's REST API continue here:
 
@@ -24,7 +24,7 @@ Before you begin your Bot development journey, it is important to consider the f
 
 Before building your Symphony Bot, it's important that you identify the use cases that this Bot will serve. In other words, identify the ways in which this Bot will increase productivity, add meaningful color to your daily tasks, centralize information, reduce business pain points, and make working simpler for its users. To easily identify valuable use cases, ask yourself the following:
 
-* Are there any tasks in my daily workflow that are recurring and can be automated to assist me in my daily job?
+* Are there any tasks in my daily workflow that are recurring and can be automated to assist me in my job?
 * Are there numerous sources of information that I check daily that can be centralized inside of Symphony?
 * Are there any tasks in my daily workflow that require manually sifting through large amounts of data?
 * Is there tedious data validation or compliance checks that I must perform when dealing with colleagues, clients, customers, or third-party vendors?
@@ -34,20 +34,20 @@ If you need additional inspiration, checkout our **Symphony App Directory** for 
 
 ## 2.  Who is your Bot's target audience?
 
-The type of Bot you build will depend on who is using and interacting with it. To identify your Bot's audience, ask yourself the following:
+The type of Bot you build will depend on who is using and interacting with it. To identify your bot's audience, ask yourself the following:
 
-* Are the users of my Bot internal or external counter-parties?
-* Will the Bot be interacting with front-office or back-office employees mostly?
-* Is your Bot interacting with a technical audience or business audience?
-* Will users interact with your Bot via Symphony mobile or on the desktop?
+* Are the users of my bot internal or external counter-parties?
+* Will the bot be interacting with front-office or back-office employees mostly?
+* Is your bot interacting with a technical audience or business audience?
+* Will users interact with your bot via Symphony mobile or on the desktop?
 * What languages does your audience speak?
-* Will your Bot be performing bot-to-bot communication?
+* Will your bot be performing bot-to-bot communication?
 
-The more you understand your audience, the more you can understand their business pain points and in turn develop a better user-experience and Bot solution.
+The more you understand your audience, the more you can understand their business pain points and in turn develop a better user-experience and bot-based solution.
 
 ## 3.  What sort of interactions will your Bot have?
 
-Users can interact with Symphony Bots in IMs, MIMs, and in chatrooms. Before building your Bot, it's important to identify the types of interactions between users and your Bot:
+Users can interact with Symphony Bots in IMs, MIMs, and in chatrooms. Before building your bot, it's important to identify the types of interactions between users and your bot:
 
 ### Will your Bot be sending and receiving messages to and from users?
 
@@ -63,18 +63,18 @@ If so, you are looking to build an **interactive bot.** Interactive bots leverag
 
 ### Will your Bot act as a notification system, without any chat or request/reply mechanisms?
 
-If so, you are looking to build a **headless bot.** Headless bots can leverage Symphony webhooks or build custom notification handlers and formatters from external systems. You can learn more about headless workflow and notification handlers here:
+If so, you are looking to build a **headless bot.** Headless bots can leverage Symphony webhooks or build custom notification handlers and formatters from external systems. You can learn more about headless bot workflows and notification handlers here:
 
 {% page-ref page="headless-bot/" %}
 
 ## 4.  What is your Bot's entry point?
 
-Lastly, it's important to clearly define the lifecycle of the Bots workflow as well as the scope of your Bots workflow:
+Lastly, it's important to clearly define the lifecycle and scope of your bot's workflow:
 
-* What chatrooms, IMs, MIMs will my Bot exist in?
+* What chatrooms, IMs, MIMs will my bot exist in?
 * Will these rooms be public, private, broadcast, or cross-pod?
-* How can I define the scope of my Bot to reduce unnecessary noise not relevant to my Bot's workflow?
-* How can I clearly define the protocol for initiating my Bot's workflow
+* How can I define the scope of my bot in order to reduce unnecessary noise not relevant to my bot's workflow?
+* How can I clearly define the protocol for initiating my bot's workflow?
 
 Continue here for a full list of Bot's best practices to establish Bot parameters, scope, and protocol:
 
