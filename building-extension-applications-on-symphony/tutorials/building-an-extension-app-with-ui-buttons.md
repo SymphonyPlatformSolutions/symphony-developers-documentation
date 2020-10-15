@@ -57,7 +57,7 @@ SYMPHONY.remote.hello().then((data) => {
 
 ### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the SYMPHONY.application.connect\(\) function, provided out of the box by the BDK in the `app.js` file:
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
 
 ```javascript
 SYMPHONY.application.connect(
@@ -69,7 +69,7 @@ SYMPHONY.application.connect(
 
 ## 2.  Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data such as this example app, that will add buttons to an IM. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the controller.js file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data such as this example app, that will add buttons to an IM. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
@@ -78,7 +78,7 @@ authController
   .catch(e => console.error(e));
 ```
 
-And subsequently to the authentication/index.js file:
+And subsequently in the `authentication/index.js` file:
 
 ```javascript
 init() {
@@ -103,13 +103,13 @@ Upon completion of the above function, your extension application will be succes
 
 In addition to the boilerplate setup code and implementation of app authentication, the BDK also provides a sample implementation of the methods described in our guide on [Extension Applications + UI Buttons](../planning-your-app/extension-applications-+-ui-buttons.md).
 
-The first step of creating an extension app that adds a button to the IM module is to subscribe to the UI Service as shown on line 48 of the controller.js file:
+The first step of creating an extension app that adds a button to the IM module is to subscribe to the UI Service as shown on line 48 of the `controller.js` file:
 
 ```javascript
 const uiService = SYMPHONY.services.subscribe('ui');
 ```
 
-Once your app has subscribed to the UI Service, your app must register its UI extension by calling the `registerExtension()` function as shown on line 76 of controller.js:
+Once your app has subscribed to the UI Service, your app must register its UI extension by calling the `registerExtension()` function as shown on line 76 of `controller.js`:
 
 ```javascript
  // UI extensions, for buttons EXAMPLE
@@ -125,7 +125,7 @@ Once your app has subscribed to the UI Service, your app must register its UI ex
   );
 ```
 
-In this example implementation, the following extension is being registered:
+In this example implementation, the following extension is registered:
 
 <table>
   <thead>
@@ -138,9 +138,12 @@ In this example implementation, the following extension is being registered:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">single-user-im</td>
-      <td style="text-align:left">buy-im</td>
-      <td style="text-align:left">demobot3:controller</td>
+      <td style="text-align:left"><code>single-user-im</code>
+      </td>
+      <td style="text-align:left"><code>buy-im</code>
+      </td>
+      <td style="text-align:left"><code>demobot3:controller</code>
+      </td>
       <td style="text-align:left">
         <p>{</p>
         <p>label: &apos;Example In Chat Button&apos;,</p>
@@ -152,7 +155,7 @@ In this example implementation, the following extension is being registered:
   </tbody>
 </table>
 
-As we learned about in the [Extension Applications + UI Buttons](../planning-your-app/extension-applications-+-ui-buttons.md) guide, the UI extension is first passed to the `filter()` function. If this function evaluates as true, the UI extension will appear on the specified class. To make sure of this lets update the `filter()` function implemented to the following in your controller.js file:
+As we learned about in the [Extension Applications + UI Buttons](../planning-your-app/extension-applications-+-ui-buttons.md) guide, the UI extension is first passed to the `filter()` function. If this function evaluates as true, the UI extension will appear on the specified class. To make sure of this lets update the `filter()` function implemented to the following in your `controller.js` file:
 
 ```javascript
 filter(type, id, data) {
@@ -182,7 +185,7 @@ Open your pod \(in our case develop2\) and make sure your app is installed. Open
 
 In the provided implementation of the `trigger()` function, the `openModal()` function is called when our 'Example' button is clicked. This function leverages the dialog service, another service provided by the Extension API that enables apps to open modal windows from a registered button.
 
-Lets update the provided implementation of the trigger\(\) method to open the Symphony Platform Solutions Github page when the button is clicked:
+Lets update the provided implementation of the `trigger()` method to open the Symphony Platform Solutions Github page when the button is clicked:
 
 ```javascript
 trigger(uiClass, id, payload, data) {
