@@ -1,6 +1,6 @@
 # Symphony Elements
 
-Symphony Elements enable Bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more.
+Symphony Elements enable bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more.
 
 By reusing our standard UX component libraries, elements provides developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony.
 
@@ -29,7 +29,7 @@ Symphony Elements are a library of pre-designed reusable UX components \(text fi
 * In read-only rooms, only the owners of the room are able to interact with Symphony Elements. For non-owner users, messages with Elements will be disabled
 {% endhint %}
 
-**To begin leveraging Symphony Elements in your Bot workflows continue onto our Available Elements guide:**
+**To begin leveraging Symphony Elements in your bot workflows continue onto our Available Elements guide:**
 
 {% page-ref page="available-elements/" %}
 
