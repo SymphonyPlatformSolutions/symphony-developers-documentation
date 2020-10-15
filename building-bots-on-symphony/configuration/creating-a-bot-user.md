@@ -4,7 +4,7 @@ description: Guide for creating a Bot User in the admin portal.
 
 # Creating a Bot User
 
-In order to create a bot and begin your development journey, you must first create a Bot user or service account. You can do this directly or contact your Symphony administrator to assist you if you do not have the proper access.
+In order to create a bot and begin your development journey, you must first create a bot user or service account. You can do this directly in the admin portal or contact your Symphony administrator to assist you if you do not have the proper access.
 
 ## Create a Bot User
 

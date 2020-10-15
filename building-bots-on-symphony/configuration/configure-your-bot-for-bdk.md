@@ -6,7 +6,7 @@ description: Bot Configuration guide for using the BDK and CLI Tool
 
 ## Configure your Bot for BDK
 
-The following is a language-agnostic Bot configuration guide for building Bots using the Symphony BDK and the CLI Tool.
+The following is a language-agnostic Bot configuration guide for building bots using the Symphony BDK and the CLI Tool.
 
 ### Prerequisites
 
@@ -36,13 +36,13 @@ $ symphony-bdk-cli --check-dependencies
 
 ### 1.  Generate your Bot
 
-To generate a new Bot project, enter the following:
+To generate a new bot project, enter the following:
 
 ```text
 $ symphony-bdk-cli --bot
 ```
 
-This will prompt with you a number of questions about your Bot and Pod configuration. Type in your bots metadata, use arrows to scroll, and press enter to move onto the next prompt:
+This will prompt with you a number of questions about your bot and Pod configuration. Type in your bots metadata, use arrows to scroll, and press enter to move onto the next prompt:
 
 ```text
 ✔ All Dependencies are met!
@@ -92,19 +92,19 @@ Upon completion, the BDK CLI tool has created a public/private RSA key pair, a c
 
 ### 2. Configure your Bot
 
-Once you have your generated Bot scaffold, the next step is to configure your Bot user:
+Once you have your generated bot scaffold, the next step is to configure your bot user:
 
-Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated public key onto the service account created.
+Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated RSA public key onto the service account created.
 
-Copy the entire contents of this public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click save:
+Copy the entire contents of this RSA public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click save:
 
 {% hint style="info" %}
-Note: The Bot username and Bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod above.
+Note: The bot username and bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod above.
 {% endhint %}
 
 ![](../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm%20%281%29.png)
 
-Open your generated Bot code in your favorite Java IDE and navigate to the bot-config.json file:
+Open your generated bot code in your favorite Java IDE and navigate to the `bot-config.json` file:
 
 ```text
 {
@@ -130,11 +130,11 @@ Open your generated Bot code in your favorite Java IDE and navigate to the bot-c
 }
 ```
 
-Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Again, confirm that the botUsername, and botEmailAddress matches the information entered in the admin portal on the Pod.
+Confirm that the `sessionAuthHost`, `keyAuthHost`, and `agentHost` matches the correct Pod, Key Manager, and Agent endpoints respectfully. Again, confirm that the `botUsername`, and `botEmailAddress` matches the information entered in the admin portal on the Pod.
 
 ### 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one our BDK tutorials:
+Now that you have generated and configured your Bot, move onto one of our BDK tutorials:
 
 {% page-ref page="../tutorials/bdk/" %}
 

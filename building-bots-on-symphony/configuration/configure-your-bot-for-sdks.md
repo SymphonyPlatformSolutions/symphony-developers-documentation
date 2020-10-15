@@ -4,7 +4,7 @@ description: Bot Configuration Guide using SDKs and Symphony Generator
 
 # Configure your Bot for SDKs
 
-The following is a language-agnostic Bot configuration guide for building Bots using Symphony SDKs and the Symphony Bot Generator.
+The following is a language-agnostic bot configuration guide for building bots using Symphony SDKs and the Symphony Bot Generator.
 
 {% hint style="warning" %}
 For example purposes, we will be generating a Java chatbot, however the configuration steps provided can be applied to any of our supported SDKs.
@@ -33,7 +33,7 @@ To activate the Symphony Bot Generator:
 $ yo symphony
 ```
 
-This will prompt you with a number of questions about your Symphony environment and Bot metadata. Type in your Bot's basic information metadata, and press enter to move onto the next prompt. If questions give you multiple options, use the keyboard arrows to scroll.
+This will prompt you with a number of questions about your Symphony environment and bot metadata. Type in your bot's basic information metadata, and press enter to move onto the next prompt. If questions give you multiple options, use the keyboard arrows to scroll:
 
 ```text
 /------------------------------------------/
@@ -64,16 +64,16 @@ generating from template Request/Reply
 ```
 
 {% hint style="info" %}
-Note: In this guide, we will select 'RSA - Generate New Keys'. If you have preexisting RSA keys or wish to use certificates, select the other options accordingly
+Note: In this guide, we will select 'RSA - Generate New Keys'. If you have preexisting RSA keys or wish to use certificates, select the other options accordingly.
 {% endhint %}
 
 Upon completion, the Symphony Bot Generator has created a public/private RSA key pair, a configuration and requirements file, and also datafeed event listeners.
 
 ## 2. Configure your Bot
 
-Once you have your generated Bot scaffold, the next step is to configure your Bot user:
+Once you have your generated bot scaffold, the next step is to configure your bot user:
 
-Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated public key onto the service account created:
+Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated RSA public key for the service account created:
 
 ```text
 $ cd demoBot1
@@ -96,19 +96,19 @@ Agl9PvxdKEkNXJVPdUtBm7jIqQlljheYDs0825YP59H5WmaG3jywrkAS6QDP7uYvYd4skeJH
 -----END RSA PUBLIC KEY-----
 ```
 
-Copy the entire contents of this public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click create:
+Copy the entire contents of this RSA public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click create:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-13-at-9.57.25-pm.png)
 
 {% hint style="info" %}
-Note: The Bot username and Bot email address entered to the Symphony Bot Generator must match exactly the Basic Information shown in the Pod above.
+Note: The bot username and bot email address entered to the Symphony Bot Generator must match exactly the basic information shown in the Pod above.
 {% endhint %}
 
 For a detailed guide on how to create a service account in the admin portal, check out this guide:
 
 {% page-ref page="creating-a-bot-user.md" %}
 
-Open your generated Bot code in your favorite IDE and navigate to the config.json file:
+Open your generated bot code in your favorite IDE and navigate to the `config.json` file:
 
 {% tabs %}
 {% tab title="config.json" %}
@@ -147,9 +147,9 @@ Open your generated Bot code in your favorite IDE and navigate to the config.jso
 {% endtab %}
 {% endtabs %}
 
-Confirm that the sessionAuthHost, keyAuthHost, and agentHost matches the correct Pod, Key Manager, and Agent endpoints respectfully. Additionally, confirm that the botUsername, and botEmailAddress match the information entered in the admin portal on the Pod.
+Confirm that the `sessionAuthHost`, `keyAuthHost`, and `agentHost` matches the correct Pod, Key Manager, and Agent endpoints respectfully. Additionally, confirm that the `botUsername`, and `botEmailAddress` match the information entered in the admin portal on the Pod.
 
-The config.json file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank. For more information on advanced configurations continue here: [SDK Configuration](configure-your-bot-for-sdks.md).
+The `config.json` file has other fields that offers advanced configurations for proxy servers, certificate truststores, and custom ports. If these don't apply to your Bot or environment, leave them blank.  
 
 ## 3.  Build Your Bot
 

@@ -4,7 +4,7 @@ description: List of Bot Permissions
 
 # Bot Permissions
 
-This page lists the available roles and their associated privileges that may be required for certain endpoints.
+This page lists the available roles and the associated privileges that may be required for certain endpoints:
 
 ## Role: Administrator
 
