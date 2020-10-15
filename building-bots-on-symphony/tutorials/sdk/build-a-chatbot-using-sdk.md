@@ -568,7 +568,7 @@ namespace RequestResponse
 Check out our [Overview of MessageML](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/messages/overview-of-messageml.md) guide for more information on message formatting and styling.
 {% endhint %}
 
-Next, [launch your bot](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/planning-your-bot/chatbot/sdk.md#run-your-bot) again and test the new behaviour:
+Next, launch your bot again and test the new behaviour:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
 
