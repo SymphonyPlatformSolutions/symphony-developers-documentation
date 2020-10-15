@@ -1,6 +1,6 @@
 # Extension Applications + UI Buttons
 
-Symphony Extension Apps have the ability to extend various parts of the Symphony client user interface or UI. One common implementation is to add buttons to IMs, MIMs, and chatroom modules.
+Symphony extension apps have the ability to extend various parts of the Symphony client user interface or UI. One common implementation is to add buttons to IMs, MIMs, and chatroom modules.
 
 {% hint style="info" %}
 Note this guide is an overview of how to leverage the Extension API to build UI Extensions as buttons. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).
@@ -8,7 +8,7 @@ Note this guide is an overview of how to leverage the Extension API to build UI 
 
 ## 1.  Subscribe and Register your Extension
 
-In order extend the Symphony client's UI, Extension Apps must subscribe to the `UI` service provided by the Extension API:
+In order extend the Symphony client's UI, extension apps must subscribe to the `UI` service provided by the Extension API:
 
 ```javascript
 var uiService = SYMPHONY.services.subscribe("ui");
@@ -123,7 +123,7 @@ Note: If the chatroom or MIM exceeds 20 users, then the users list will be retur
 
 ## 3.  Filter Events
 
-Additionally, the UI Service provides a `filter()` function that allows you to control if and when your UI Extension / button is displayed. This filter\(\) function is called before your button is shown receiving the uiClass, data, and payload passed to.the trigger\(\) function. Based on the information passed to the filter\(\) function, you can choose to selectively display the button. For example, you can display the button only if a user's phone is present and if a user is not a cross-pod user:
+Additionally, the UI Service provides a `filter()` function that allows you to control if and when your UI Extension / button is displayed. This `filter()` function is called before your button is shown receiving the uiClass, data, and payload passed to.the `trigger()` function. Based on the information passed to the `filter()` function, you can choose to selectively display the button. For example, you can display the button only if a user's phone is present and if a user is not a cross-pod user:
 
 ```javascript
 // Implement the filter function on your application service
@@ -138,7 +138,7 @@ Additionally, the UI Service provides a `filter()` function that allows you to c
 
 Now that you've registered your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time the button is clicked.
 
-Continue here to go through a.step by step tutorial of how to add custom business logic to your UI Extension using the BDK \(Bot Developer Kit\):
+Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK \(Bot Developer Kit\):
 
 {% page-ref page="../tutorials/building-an-extension-app-with-ui-buttons.md" %}
 
