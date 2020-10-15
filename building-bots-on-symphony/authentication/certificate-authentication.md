@@ -14,7 +14,7 @@ This pages describes the implementation of certificate-based Authentication. For
 
 ## Overview of Certificate-Based Authentication
 
-Symphony allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate. When a Bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the Bot user and return a Session Token. The same process occurs when a Bot authenticates on the Key Manager.
+Symphony allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate. When a bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the bot user and return a Session Token. The same process occurs when a bot authenticates on the Key Manager.
 
 All Symphony network communications take place over TLS-protected HTTP. The network uses authentication methods that require a client-authenticated TLS connection.
 
@@ -86,7 +86,7 @@ If you have obtained a copy of your Root Certificate Authorities \(CA\) Public "
 
 ## 3. Authenticate
 
-To authenticate on the Pod the Bot must call the Session Auth endpoint: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate). Pass along the client certificate provided in the TLS session, returning a Session Token:
+To authenticate on the Pod the bot must call the Session Auth endpoint: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate). Pass along the client certificate provided in the TLS session, returning a Session Token:
 
 ```bash
 $ curl --cert bot.user1.p12:mypassword
@@ -107,7 +107,7 @@ A successful response:
 {% endtab %}
 {% endtabs %}
 
-To authenticate on the Key Manager, the Bot must call the Key Manager Auth endpoint: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate). Pass along the client certificate provided in the TLS session, returning a Key Manager Token:
+To authenticate on the Key Manager, the bot must call the Key Manager Auth endpoint: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate). Pass along the client certificate provided in the TLS session, returning a Key Manager Token:
 
 ```bash
 $ curl --cert bot.user1.p12:mypassword

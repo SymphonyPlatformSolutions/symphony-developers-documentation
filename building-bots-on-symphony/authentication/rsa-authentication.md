@@ -19,7 +19,7 @@ The Authentication process requires the following steps:
 1. The user creates a public/private RSA key pair.
 2. The admin imports the public key into the pod using the **Admin Console** or public APIs.
 3. The user creates a short-lived JWT \(JSON Web Token\) and signs it with their private key.
-4. The Bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
+4. The bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
 
 ## 1.  Create an RSA Key Pair
 
@@ -51,7 +51,7 @@ $ openssl x509 -pubkey -noout -in publickey.cer > publickey.pem
 
 Sign the authentication request using either `privatekey.pkcs8` or `privatekey.pem`, depending on the support available in the JWT library.
 
-The file publickey.pem is the public key. This is the key you will import into the pod in step 2.
+The file `publickey.pem` is the public key. This is the key you will import into the pod in step 2.
 
 ## 2. Import Public Key into the Pod
 
@@ -59,7 +59,7 @@ Navigate to the Admin Console and create a new Service Account. Copy the content
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-1.28.22-pm.png)
 
-Add your Bot's basic information:
+Add your bot's basic information:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-1.29.20-pm.png)
 
@@ -69,7 +69,7 @@ If successful, you should see the following:
 
 ## 3. Generate a signed JWT Token
 
-To authenticate on the Pod and the Key Manager, the Bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request. The JWT token must contain the following:
+To authenticate on the Pod and the Key Manager, the bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request. The JWT token must contain the following:
 
 * a _subject_ matching the username of the user to authenticate
 * an _expiration time_ of no more than 5 minutes from the current timestamp \(needed to prevent replay attacks\)
