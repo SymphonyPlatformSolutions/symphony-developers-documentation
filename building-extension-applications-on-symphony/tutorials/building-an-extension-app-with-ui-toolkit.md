@@ -71,7 +71,7 @@ SYMPHONY.application.connect(
     )
 ```
 
-## 2.  Authentication
+## 2.  App Authentication
 
 In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
@@ -111,7 +111,7 @@ Let's start by creating a simple React component to ensure that our app is rende
 Note: The following React implementation is consistent with the Extension App implementation provided by the BDK. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
 {% endhint %}
 
-Create a package called fx-watchlist inside of the pages directory of our generated app project. Subsequently, create a new React component called `FxWatchlist` in this pages directory:
+Create a package called `fx-watchlist` inside of the pages directory of our generated app project. Subsequently, create a new React component called `FxWatchlist` in this pages directory:
 
 {% tabs %}
 {% tab title="pages/fx-watchlist/index.js" %}
@@ -125,7 +125,7 @@ export default FxWatchlist;
 {% endtab %}
 {% endtabs %}
 
-Next, navigate to the location-router.js file inside of the pages directory and be sure to return our new component:
+Next, navigate to the `location-router.js` file inside of the pages directory and be sure to return our new component:
 
 {% tabs %}
 {% tab title="pages/location-router.js" %}
@@ -370,7 +370,7 @@ If you reload your app, and add an FX pair to you watchlist, you will be able to
 
 To get some real data into our FxWatchlist app, let's use the FX\_DAILY endpoint provided by the Alphavantage API. Specifically, let's render some times series data for a specific currency pair. To do so, we need to create a data service on our app's backend \(bot\) in order to handle and process incoming data.
 
-Navigate to your bot project and terminate your bot process for now. Next add a services package and new DataService class, which will act as our RestController:
+Navigate to your bot project and terminate your bot process for now. Next add a services package and new `DataService` class, which will act as our RestController:
 
 {% tabs %}
 {% tab title="services/DataService.java" %}
@@ -517,7 +517,7 @@ class ChartData {
 {% endtab %}
 {% endtabs %}
 
-Now that our app's backend is properly configured let's navigate back to our App frontend and extend our `FxWatchlist` component to render this incoming data. Lets add to our handleChart\(\) function to call our private API defined on our app's backend:
+Now that our app's backend is properly configured, let's navigate back to our App frontend and extend our `FxWatchlist` component to render this incoming data. Lets add to our `handleChart()` function to call our private API defined on our app's backend:
 
 {% tabs %}
 {% tab title="pages/fx-watchlist/index.js" %}

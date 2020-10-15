@@ -181,6 +181,10 @@ Open your pod \(in our case develop2\) and make sure your app is installed. Open
 
 ![](../../.gitbook/assets/screen-shot-2020-09-11-at-3.28.23-pm.png)
 
+{% hint style="info" %}
+Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
+{% endhint %}
+
 ## 5.  Adding our own Business Logic
 
 In the provided implementation of the `trigger()` function, the `openModal()` function is called when our 'Example' button is clicked. This function leverages the dialog service, another service provided by the Extension API that enables apps to open modal windows from a registered button.

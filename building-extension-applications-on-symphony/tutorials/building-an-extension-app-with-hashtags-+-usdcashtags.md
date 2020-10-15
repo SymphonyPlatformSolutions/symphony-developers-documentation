@@ -177,6 +177,10 @@ The next step is to run the code and launch your app. First run your bot \(app b
 $ yarn start:dev
 ```
 
+{% hint style="info" %}
+Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
+{% endhint %}
+
 Open your Symphony Client \(in our case develop2\) and make sure your app is installed. Open a 1-1 IM with a Symphony user and type a '$' followed by any stock symbol \(e.g. $aapl\). If successful, you should see the following when you hover over the $cashtag in the message:
 
 ![](../../.gitbook/assets/screen-shot-2020-09-04-at-12.54.57-pm.png)

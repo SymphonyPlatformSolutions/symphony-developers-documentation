@@ -61,7 +61,7 @@ SYMPHONY.remote.hello().then((data) => {
 
 ### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the Symphony.application.connect\(\) function, provided out of the box by the BDK in the `app.js` file:
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `Symphony.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
 
 {% tabs %}
 {% tab title="app.js" %}
@@ -75,7 +75,7 @@ SYMPHONY.application.connect(
 {% endtab %}
 {% endtabs %}
 
-## 2.  Authentication
+## 2.  App Authentication
 
 In addition to the boilerplate setup for connecting, initializing, and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the implementation of app authentication provided by the BDK. The sample implementation of app authentication leverages a combined bot \(app backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
@@ -110,10 +110,6 @@ init() {
 Upon completion of the above function, your extension application will be successfully authenticated. For more information about app authentication, please continue here:
 
 {% page-ref page="../app-authentication/" %}
-
-### OBO Authentication:
-
-The BDK 2.0 also supports the OBO \(On Behalf Of\) pattern of authentication allowing authenticated bots and apps to perform operations on behalf of a given user. With
 
 ## 3.  Setup the Enricher Service
 
@@ -275,6 +271,10 @@ public class SampleObject {
 Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` . The bot will render your message + structured object accordingly:
 
 ![](../../.gitbook/assets/screen-shot-2020-10-01-at-1.00.37-pm.png)
+
+{% hint style="info" %}
+Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
+{% endhint %}
 
 ## 6.  Create a Custom Renderer
 
