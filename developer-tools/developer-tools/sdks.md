@@ -404,3 +404,23 @@ For a tutorial on configuring a bot using the Symphony Generator and SDKs, conti
 
 {% page-ref page="../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
 
+## Tutorials
+
+Check out the following SDK tutorials to learn about how to leverage the SDKs to quickly build powerful workflows and automations:
+
+{% page-ref page="../../building-bots-on-symphony/tutorials/sdk/" %}
+
+## Reference
+
+Check out the following Github repositories for direct access and reference to Symphony's dedicated SDKs:
+
+### [Java SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/tree/master/symphony-bdk-legacy/symphony-api-client-java)
+
+### [Python SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-python) 
+
+### [Node.js SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-node)
+
+### [.NET SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-dotnet)
+
+
+
