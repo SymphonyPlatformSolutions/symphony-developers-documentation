@@ -10,7 +10,7 @@ Symphony SDKs help bootstrap your bot, providing easy to use authentication hand
 
 For a deeper dive into Symphony SDKs and their offerings continue here:
 
-{% page-ref page="../../../developer-tools/developer-tools/sdks/" %}
+{% page-ref page="../../../developer-tools/developer-tools/sdks.md" %}
 
 ## Configure your Bot
 

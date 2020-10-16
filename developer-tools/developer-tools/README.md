@@ -1,6 +1,6 @@
 # Developer Tools
 
-Symphony provides language specific SDKs, a Bot Developer Kit, Bot Generators and more to streamline your development process!
+Symphony provides language specific SDKs, a Bot Developer Kit \(BDK\), Bot Generators and more to streamline your development process!
 
 ## Symphony SDKs
 
@@ -8,7 +8,7 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 To learn more about using our SDKs continue here:
 
-{% page-ref page="sdks/" %}
+{% page-ref page="sdks.md" %}
 
 ## Bot Developer Kit
 

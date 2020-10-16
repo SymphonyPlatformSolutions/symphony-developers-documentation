@@ -96,11 +96,7 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
-  * [SDKs](developer-tools/developer-tools/sdks/README.md)
-    * [Python](developer-tools/developer-tools/sdks/python.md)
-    * [Java](developer-tools/developer-tools/sdks/java.md)
-    * [Node.js](developer-tools/developer-tools/sdks/node.js.md)
-    * [.NET](developer-tools/developer-tools/sdks/.net.md)
+  * [SDKs](developer-tools/developer-tools/sdks.md)
   * [BDK 2.0](developer-tools/developer-tools/bdk-2.0/README.md)
     * [BDK 1.0](developer-tools/developer-tools/bdk-2.0/bdk-1.0/README.md)
       * [CLI Tool](developer-tools/developer-tools/bdk-2.0/bdk-1.0/cli-tool.md)
