@@ -18,7 +18,7 @@ Continue here for an installation/usage guide:
 
 ## CLI Tool
 
-The CLI tool allows you to generate code scaffolds for building Symphony Bots and Applications. The generated code scaffolds provide sample implementations of best practices making it easy and fast to start building bots and applications. In addition, the CLI tool allows developers to add custom command handlers and message templates, and manage project dependencies, allowing developers to bootstrap bots and applications quickly.
+The CLI tool allows you to generate code scaffolds for building Symphony bots and extension applications. These code scaffolds contain sample implementations and best practices, making it easy to start building bots and applications. In addition, the CLI tool allows developers to add custom command handlers and message templates, and manage project dependencies, allowing developers to bootstrap bots and applications quickly.
 
 Continue here for an installation/usage guide:
 
