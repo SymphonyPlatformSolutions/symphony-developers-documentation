@@ -1,6 +1,6 @@
 # Symphony URI
 
-### The `symphony:` URI allows you to launch the Symphony desktop client from your browser:
+#### The `symphony:` URI allows you to launch the Symphony desktop client from your browser.
 
 ## Launch the Symphony Desktop Client
 
@@ -20,7 +20,7 @@ symphony://
 * If the Symphony desktop client is already running and in focus, it will open the IM, or MIM with the specified userIDs
 * If the Symphony desktop client is not installed, the Windows operating system will handle the request with its default behavior.
 
-> ### 📘Error Handling Behavior
+> ### Error Handling Behavior
 >
 > For IM, if an invalid userId is supplied, the behaviour is the same as "symphony://"  
 > For MIM, if one of the userId is invalid, an MIM with only the valid userIds is opened.  

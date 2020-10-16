@@ -20,11 +20,11 @@ There are three options to implement the Symphony Embedded Chat Module:
 * Explicit rendering
 * Direct iFrame rendering
 
-Each of these options requires either a working [Symphony Conversation ID](https://developers.symphony.com/restapi/docs/overview-of-streams) or comma separated Symphony User IDs to load a working Symphony chat.
+Each of these options requires either a working Symphony Conversation ID or comma separated Symphony User IDs to load a working Symphony chat.
 
 > ### Conversation ID Encoding
 >
-> The direct iFrame rendering, the Conversation ID must be URI encoded to be successfully placed within the iFrame URL. Refer to [Overview of Streams](https://developers.symphony.com/restapi/docs/overview-of-streams) for detailed information on encoding a Conversation ID.
+> The direct iFrame rendering, the Conversation ID must be URI encoded to be successfully placed within the iFrame URL.  
 >
 > The automatic and explicit rendering use the standard Conversation ID.
 
