@@ -16,7 +16,7 @@
 
 ### Description
 
-The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how the BDK 2.0 can help power your Symphony Bots and integrations today!
+The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how the BDK 2.0 can help power your Symphony bots and integrations today!
 
 ### Installation
 
@@ -38,26 +38,26 @@ Note: If you already have the Symphony Yeoman Generator installed, upgrade it by
 $ mkdir bdk-bot && cd bdk-bot
 ```
 
-1. Run the generator:
+    2.  **Run the generator:**
 
 ```text
 $ yo symphony 2.0
 ```
 
-You should see the following:
+**You should see the following:**
 
 ![](../../../.gitbook/assets/screen-shot-2020-09-15-at-12.48.13-pm.png)
 
 ### Configuration
 
-Once installed, the next step is to configure your new Symphony Bot using the Yeoman Generator. In the command line, enter the information for your Symphony environment and Bot metadata. For example:
+Once installed, the next step is to configure your new Symphony bot using the Yeoman Generator. In the command line, enter the information for your Symphony environment and bot metadata. For example:
 
 ![](../../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
 
-After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to your generated `config.yaml` file:
+After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to the generated `config.yaml` file:
 
 {% hint style="info" %}
-Note: In the generated config.yaml file, the BDK assumes your Symphony Pod, Agent, and Key Manager components are all access via the same host, port, and scheme.
+Note: In the generated `config.yaml` file, the BDK assumes that your Symphony Pod, Agent, and Key Manager components are all accessible via the same host, port, and scheme.
 {% endhint %}
 
 {% tabs %}
@@ -161,7 +161,7 @@ retry:
 
 ### Authentication
 
-Authenticating your Bot is made simple when using the BDK 2.0. Once you have your Bot and Symphony environment properly configured, the generated code provides an out of the box implementation for authenticating your Bot:
+Authenticating your bot is made simple when using the BDK 2.0. Once you have your bot and Symphony environment properly configured, the generated code provides an out of the box implementation for authenticating your bot:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -171,16 +171,10 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
 {% endtab %}
 {% endtabs %}
 
-By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot. Once authenticated, your bot is ready to leverage the REST API to create rich automations and workflows on Symphony.
+By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot. Once authenticated, your bot is ready to leverage the REST APIs in order to create rich automations and workflows on Symphony.
 
 {% hint style="info" %}
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:developer-tools/developer-tools/bdk-2.0/README.md
-
-## Note:  You must have a corresponding service or Bot account setup on your Symphony instance before authenticating.  For more information navigate to the [Creating a Bot User](../../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
-
-Note: You must have a corresponding service or Bot account setup on your Symphony instance before authenticating. For more information navigate to the [Creating a Bot User](../../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
-
-> > > > > > > master:developer-tools/developer-tools/bdk-2.0.md
+Note: You must have a corresponding service or bot account setup on your Symphony instance before authenticating. For more information navigate to the [Creating a Bot User](../../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
 {% endhint %}
 
 #### OBO Authentication
@@ -194,7 +188,7 @@ The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowi
 * Send messages and attachments
 * Set the context user's own presence
 
-To leverage an OBO based workflow, simply instantiate an OBO Session in your Bot project. The BDK 2.0 allows you to instantiate your OBO session from a username or user ID. Once authenticated bots can perform any of the OBO workflows listed above:
+To leverage an OBO based workflow, simply instantiate an OBO Session in your bot project. The BDK 2.0 allows you to instantiate your OBO session from a username or user ID. Once authenticated bots can perform any of the OBO workflows listed above:
 
 ```java
  // setup SymphonyBdk facade object
@@ -233,7 +227,7 @@ The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ev
 
 For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`. This `RealTimeEventListener` class must implement eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.
 
-When a user sends a bot a message, the Bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the Bot will not perform an action and will continue to listen for inbound events from the datafeed. An example implementation is provided out of the box by the BDK 2.0:
+When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK 2.0:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -255,22 +249,22 @@ Below is a full list of methods provided by the `RealTimeEventListener` class an
 
 | Method | Event Type |
 | :--- | :--- |
-| onMessageSent\(\) | MESSAGESENT |
-| onInstantMessageCreated\(\) | INSTANTMESSAGECREATED |
-| onMessageSuppressed\(\) | MESSAGESUPPRESSED |
-| onRoomCreated\(\) | ROOMCREATED |
-| onRoomUpdated\(\) | ROOMUPDATED |
-| onRoomDeactivated\(\) | ROOMDEACTIVATED |
-| onRoomReactivated\(\) | ROOMACTIVATED |
-| onUserRequestedToJoinRoom\(\) | USERREQUESTEDTOJOINROOM |
-| onUserJoinedRoom\(\) | USERJOINEDROOM |
-| onUserLeftRoom\(\) | USERLEFTROOM |
-| onRoomMemberPromotedToOwner\(\) | ROOMMEMBERPROMOTEDTOOWNER |
-| onRoomMemberDemotedFromOwner\(\) | ROOMMEMBERDEMOTEDFROMOWNER |
-| onConnectionRequested\(\) | CONNECTIONREQUESTED |
-| onConnectionAccepted\(\) | CONNECTIONACCEPTED |
-| onSymphonyElementsAction\(\) | SYMPHONYELEMENTSACTION |
-| onSharedPost\(\) | SHAREDPOST |
+| `onMessageSent()` | MESSAGESENT |
+| `onInstantMessageCreated()` | INSTANTMESSAGECREATED |
+| `onMessageSuppressed()` | MESSAGESUPPRESSED |
+| `onRoomCreated()` | ROOMCREATED |
+| `onRoomUpdated()` | ROOMUPDATED |
+| `onRoomDeactivated()` | ROOMDEACTIVATED |
+| `onRoomReactivated()` | ROOMACTIVATED |
+| `onUserRequestedToJoinRoom()` | USERREQUESTEDTOJOINROOM |
+| `onUserJoinedRoom()` | USERJOINEDROOM |
+| `onUserLeftRoom()` | USERLEFTROOM |
+| `onRoomMemberPromotedToOwner()` | ROOMMEMBERPROMOTEDTOOWNER |
+| `onRoomMemberDemotedFromOwner()` | ROOMMEMBERDEMOTEDFROMOWNER |
+| `onConnectionRequested()` | CONNECTIONREQUESTED |
+| `onConnectionAccepted()` | CONNECTIONACCEPTED |
+| `onSymphonyElementsAction()` | SYMPHONYELEMENTSACTION |
+| `onSharedPost()` | SHAREDPOST |
 
 For more information on the Symphony datafeed continue here:
 
@@ -282,7 +276,7 @@ A Symphony workflow can be thought of as a sequence of operations or a repeatabl
 
 By providing an intuitive Activities API, the BDK 2.0 makes it simple to define a set of discrete operations or activities for different actors in your system to execute. Ultimately, these activities constitute the building blocks for a powerful Symphony workflow automation.
 
-Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way. Luckily, The BDK 2.0 provides a powerful Workflow API that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony workflow.
+Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  The BDK 2.0 provides a powerful Workflow API \(coming soon\) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony workflow.
 
 ### Activities API
 
@@ -290,7 +284,7 @@ The BDK 2.0 provides a new Activities API, an interface that makes it easy to ma
 
 #### Registering Activities
 
-In order to register activities with your bot instance, you must leverage the `ActivityRegistry` class:
+In order to register activities for your bot instance, you must leverage the `ActivityRegistry` class:
 
 ```java
 public static void main(String[] args) throws Exception {
@@ -397,8 +391,8 @@ Note: If you choose to create your own `CommandActivity` class, you must impleme
 
 The Activities API also makes it easy for Bots to listen for elements form submissions. Assume the following elements form has been posted into a room with the following attributes:
 
-* formId = "hello-form"
-* &lt;text-field&gt; name = "name"
+* form `id` = "hello-form"
+* `<text-field>` name = "name"
 * form contains an action button
 
 ```markup
@@ -415,7 +409,7 @@ The Activities API also makes it easy for Bots to listen for elements form submi
 </messageML>
 ```
 
-In order to register a form activity or listen for an incoming elements form submission, Bots must register a class that extends the `FormReplyActivity` class:
+In order to register a form activity or listen for an incoming elements form submission, bots must register a class that extends the `FormReplyActivity` class:
 
 ```java
 public class Example {
@@ -466,8 +460,6 @@ As shown above, the Activities API makes it simple to manage incoming commands, 
 
 ### User, Message, & Room Management
 
-The BDK 2.0 provides easy access to message, room, and user context.
-
 As shown above, the BDK 2.0 makes it easy to create a datafeed and listen for events through the `RealTimeEventListener` class. In addition, this class makes it easy to access user, message, and room data in context. Each eventType method is implemented with instances of `V4Initiator` and `V4MessageSent` objects:
 
 ```java
@@ -478,34 +470,34 @@ Use the `V4Initiator` class methods to access the the user data in context:
 
 | Method | User Attribute |
 | :--- | :--- |
-| initiator.getUser\(\).getUserId\(\) | User ID |
-| initiator.getUser\(\).getFirstName\(\) | First Name |
-| initiator.getUser\(\).getLastName\(\) | Last Name |
-| initiator.getUser\(\).getDisplayName\(\) | Display Name |
-| initiator.getUser\(\).getEmail\(\) | Email |
-| initiator.getUser\(\).getUsername\(\) | Username |
+| `initiator.getUser().getUserId()` | User ID |
+| `initiator.getUser().getFirstName()` | First Name |
+| `initiator.getUser().getLastName()` | Last Name |
+| `initiator.getUser().getDisplayName()` | Display Name |
+| `initiator.getUser().getEmail()` | Email |
+| `initiator.getUser().getUsername()` | Username |
 
 Use the `V4MessageSent` class methods to access message data in context:
 
 | Method | Attribute |
 | :--- | :--- |
-| event.getMessage\(\).getMessageId | Message ID |
-| event.getMessage\(\).getTimestamp\(\) | Message Timestamp |
-| event.getMessage\(\).getMessage\(\) | Message Text |
-| event.getMessage\(\).getSharedMessage\(\) | Shared Message |
-| event.getMessage\(\).getData\(\) | Message Data |
-| event.getMessage\(\).getAttachments\(\) | Message Attachments |
+| `event.getMessage().getMessageId()` | Message ID |
+| `event.getMessage().getTimestamp()` | Message Timestamp |
+| `event.getMessage().getMessage()` | Message Text |
+| `event.getMessage().getSharedMessage()` | Shared Message |
+| `event.getMessage().getData()` | Message Data |
+| `event.getMessage().getAttachments()` | Message Attachments |
 
 Use the `V4MessageSent` class methods to access stream data in context:
 
 | Method | Attribute |
 | :--- | :--- |
-| event.getMessage\(\).getStream\(\).getStreamId\(\) | Stream ID |
-| event.getMessage\(\).getStream\(\).getStreamType\(\) | Stream Type |
-| event.getMessage\(\).getStream\(\).getRoomName\(\) | Room Name |
-| event.getMessage\(\).getStream\(\).getMembers\(\) | Room Members |
-| event.getMessage\(\).getStream\(\).getExternal\(\) | External |
-| event.getMessage\(\).getStream\(\).getCrossPod\(\) | Cross Pod |
+| `event.getMessage().getStream().getStreamId()` | Stream ID |
+| `event.getMessage().getStream().getStreamType()` | Stream Type |
+| `event.getMessage().getStream().getRoomName()` | Room Name |
+| `event.getMessage().getStream().getMembers()` | Room Members |
+| `event.getMessage().getStream().getExternal()` | External |
+| `event.getMessage().getStream().getCrossPod()` | Cross Pod |
 
 #### Managing Context through Activities API
 
@@ -522,10 +514,10 @@ FormActivity classes have access to relevant user, form, and stream data through
 
 | Method | Attribute |
 | :--- | :--- |
-| context.getSourceEvent\(\).getStream\(\) | Elements Stream ID |
-| context.getSourceEvent\(\).getFormMessageId\(\) | Elements Message ID |
-| context.getSourceEvent\(\).getFormId\(\) | Elements Form ID |
-| context.getSourceEvent\(\).getFormValues\(\) | Elements Form Values |
+| `context.getSourceEvent().getStream()` | Elements Stream ID |
+| `context.getSourceEvent().getFormMessageId()` | Elements Message ID |
+| `context.getSourceEvent().getFormId()` | Elements Form ID |
+| `context.getSourceEvent().getFormValues()` | Elements Form Values |
 
 ```java
 @Override
@@ -595,7 +587,7 @@ The corresponding FreeMarker template is shown below:
 
 ### SpringBoot Integration
 
-The BDK 2.0's SpringBoot integration provides a few out of the box class annotations, making it easy to configure your bot's datafeed listeners, and also register command activities. To do so, you must create an entry point for your Bot by creating a `BotApplication.java` class:
+The BDK 2.0's SpringBoot integration provides out of the box class annotations, making it easy to configure your bot's datafeed listeners and  register command activities. To do so, you must create an entry point for your bot by creating a `BotApplication.java` class:
 
 ```java
 @SpringBootApplication
@@ -607,7 +599,9 @@ public class BotApplication {
 }
 ```
 
-Now you can create a component for a simple bot applications through the `@Component` annotation:
+#### @Component
+
+Now you can create a component for bot applications by annotating classes with the `@Component` annotation:
 
 ```java
 @Component
@@ -627,7 +621,7 @@ public class HelloBot {
 
 The Core Starter uses [Spring Events](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEventPublisher.html) to deliver Real Time Events.
 
-You can subscribe to any Real Time Event from anywhere in your application by creating a handler method that has to respect two conditions:
+You can subscribe to any Real Time Event from anywhere in your application by creating a handler method with two conditions:
 
 * Be annotated with [@EventListener](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/event/EventListener.html)
 * Have a `com.symphony.bdk.spring.events.RealTimeEvent<T>` parameter
@@ -676,7 +670,7 @@ public class SlashHello {
 
 #### Activities
 
-Any service or component class that extends `FormReplyActivity` or `CommandActivity` will be automatically registered with thin the `ActivityRegistry`
+Any service or component class that extends `FormReplyActivity` or `CommandActivity` will be automatically registered within the `ActivityRegistry`
 
 ```java
 @Slf4j
