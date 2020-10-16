@@ -21,17 +21,17 @@ Each &lt;option&gt; element should have a `value` attribute containing the data 
 
 ## Rules and Limitations
 
-The &lt;select&gt; tag:
+The `<select>` tag:
 
-* The &lt;select&gt; tag stands for our dropdown parent tag, which has &lt;options&gt; as its children; one for each select.
-* Select tags only accept &lt;option&gt; tags as children. The &lt;select&gt; tag must contain at least one &lt;option&gt; tag.
-* The only valid attributes of the &lt;select&gt; tag are `name` and `required`.
+* The `<select>` tag stands for our dropdown parent tag, which has `<options>` as its children; one for each select.
+* Select tags only accept `<option>` tags as children. The `<select>` tag must contain at least one `<option>` tag.
+* The only valid attributes of the `<select>` tag are `name` and `required`.
 
-The &lt;option&gt; tag:
+The `<option>` tag:
 
-* The &lt;option&gt; tag cannot have other &lt;option&gt; tags as children. The only valid child of a &lt;option&gt; tag is a text node, which specifies the text that will be displayed for that option inside the dropdown menu. The text node is also required.
-* The only valid attributes of the &lt;option&gt; tag are `value` and `selected`.
-* Only one &lt;option&gt; of a given select can have the attribute `selected` as true.
+* The `<option>` tag cannot have other `<option>` tags as children. The only valid child of a `<option>` tag is a text node, which specifies the text that will be displayed for that option inside the dropdown menu. The text node is also required.
+* The only valid attributes of the `<option>` tag are `value` and `selected`.
+* Only one `<option>` of a given select can have the attribute `selected` as true.
 
 If neither the `selected` or `data-placeholder` attributes are set, the default text \(title\) of the dropdown menu will be "Dropdown".
 
@@ -68,7 +68,7 @@ When designing forms with dropdowns within it be aware that there is a chance of
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```text
+```javascript
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

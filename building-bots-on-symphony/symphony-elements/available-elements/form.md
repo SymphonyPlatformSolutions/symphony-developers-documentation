@@ -1,8 +1,8 @@
 # Form
 
-The form element can be considered the "frame" of a message, containing Elements that will be sent by the bot and subsequently read by the datafeed.
+The form element can be considered the "frame" of a message, containing elements that will be sent by the bot and subsequently read by the datafeed.
 
-All the Elements data within a Form element will be sent when the user clicks one of the action buttons within the same Form. The value of the attribute `name` of the button will be the value of the `action` field of the datafeed payload, so the bot manager can know what button triggered the action that sent the payload.
+All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload.  That way the bot manager can know which button triggered the submission of that form.
 
 If there is more than one element in the form having the same `name` attribute, the value is converted to an array. Every index of the array is related to a specific element value. The index order is not guaranteed, so the developer needs to iterate through this array and collect the values.
 
@@ -22,7 +22,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 ## Rules and Limitations
 
-* To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/symphony-elements/available-elements/buttons.md).
+* To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons.md).
 * When a form is submitted, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, you can fill out the form again and submit it as a new form.
 * When designing forms, it is important to consider the message size limit. For more information refer to [messageML - Message size limits](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits).
 
@@ -34,7 +34,7 @@ The following example shows a form being presented in MessageML. Also, you can s
 
 {% tabs %}
 {% tab title="MessageML" %}
-```text
+```markup
 <messageML>
   <form id="form_id"><h4>Personal Information</h4>
     <text-field name="name_01" required="true" placeholder="Name"/>
@@ -72,8 +72,8 @@ The following example shows a form being presented in MessageML. Also, you can s
 ```
 {% endtab %}
 
-{% tab title="Datafeed - Payload" %}
-```text
+{% tab title="Datafeed Payload" %}
+```javascript
 {
     "id": "ElnHWy",
     "messageId": "tVtMTHSFowQCRJSXwKQQVX___oyR8e6LbQ",

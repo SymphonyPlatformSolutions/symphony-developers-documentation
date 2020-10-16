@@ -118,7 +118,7 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 {% endtab %}
 
 {% tab title="JSON" %}
-```text
+```javascript
 {
   "select": {
     "position": "left",
@@ -140,7 +140,7 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 {% endtab %}
 
 {% tab title="Generated messageML" %}
-```text
+```markup
 <messageML>
     <form id="example">
         <table>
@@ -195,7 +195,7 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```text
+```javascript
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

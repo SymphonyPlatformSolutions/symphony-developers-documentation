@@ -36,7 +36,7 @@ The Person Selector element supports multi-user selection which means that you c
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```text
+```javascript
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

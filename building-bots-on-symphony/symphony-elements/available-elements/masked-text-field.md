@@ -44,7 +44,7 @@ The masked text field element is presented as a single-line text field whose cha
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```text
+```javascript
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",

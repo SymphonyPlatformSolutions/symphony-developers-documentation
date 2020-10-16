@@ -1,8 +1,12 @@
 # Buttons
 
-Buttons are the Symphony element responsible for submitting a form to the bot. As a result, all Symphony form elements are required to have at least one button where \`type=action\`. When an end-user clicks this button, the form and the contents inside will be submitted to the bot via the datafeed and presented as a JSON payload.
+Buttons are the Symphony element responsible for submitting a form to the bot. As a result, all Symphony form elements are required to have at least one button where \`type=`action`\`. When an end-user clicks this button, the form and the contents inside will be submitted to the bot via the datafeed and presented as a JSON payload.
 
 In addition, some forms can contain reset buttons. These buttons are used to reset a form back to its original state.
+
+{% hint style="info" %}
+Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.   
+{% endhint %}
 
 ![](../../../.gitbook/assets/e31e35d-buttons-1.png)
 
@@ -20,7 +24,7 @@ In addition, some forms can contain reset buttons. These buttons are used to res
 
 ## Examples
 
-The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field]():
+The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
 
 ![](../../../.gitbook/assets/ef5f06e-button-1.gif)
 
@@ -34,6 +38,41 @@ The following example shows the use of the **Reset** and the **Submit** button w
     <button name="submit_button" type="action">Submit</button>    
   </form>
 </messageML>
+```
+{% endtab %}
+
+{% tab title="Datafeed Payload" %}
+```javascript
+{
+        "id": "UW2p27",
+        "messageId": "4KrVjUU4gnGziWnlqMmD2n___oxo916XbQ",
+        "timestamp": 1595966792040,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "stream": {
+                    "streamId": "iMft6PLA4lHrEA9icKJobX___oyCKdVVdA",
+                    "streamType": "ROOM"
+                },
+                "formMessageId": "zGeog3OqoYqVI2lwcX2o1X___oxo-A_ubQ",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "submit_button",
+                    "text-field": "hello, my name is John Smith"
+                }
+            }
+        }
+    },
 ```
 {% endtab %}
 {% endtabs %}

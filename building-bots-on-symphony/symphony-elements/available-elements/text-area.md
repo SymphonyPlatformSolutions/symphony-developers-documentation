@@ -37,7 +37,7 @@ The following example shows a text area being used. Note that we have a **placeh
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
-```text
+```javascript
 {
     "id": "3dtVXF",
     "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
