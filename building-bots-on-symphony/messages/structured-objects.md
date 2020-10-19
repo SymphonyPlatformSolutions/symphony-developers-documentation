@@ -5,7 +5,7 @@ Structured Objects are rich, inline, interactive components for Symphony message
 * Unlike normal message text, these objects are structured and do not need to be parsed to have business logic.
 * Unlike attachments, end-users can view and interact with objects directly from their Symphony client, without having to change context.
 * Structured Objects can be "injected" into Symphony by sending messages using Symphony's [REST API](https://rest-api.symphony.com/docs/rest-api-introduction). 
-* Structured Objects can be rendered richly using Symphony's [Extension API](https://extension-api.symphony.com/).
+* Structured Objects can be rendered richly using [Symphony's Extension API](../../building-extension-applications-on-symphony/overview-of-extension-api/).
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ To inject messages containing structured objects:
 
 To build renderer applications for displaying your structured object:
 
-* You need to have an [Extension application](https://extension-api.symphony.com/) created and enabled on your pod.
+* You need to have an extension application created and enabled on your pod.
 
 ## Sending Structured Objects in Messages
 
@@ -62,8 +62,6 @@ The `data-entity-id` tag refers to a specific object in the JSON data, which nee
 
 * The data `type`.
 * The data `version` of that `type`. Both are needed to build renderer applications which can render this `type` of that `version`.
-
-JSON
 
 ```text
 {
