@@ -46,9 +46,9 @@ Each message in Symphony has a unique message ID.
 * The message ID in the UI is in standard Base64 encoding.
 * Message IDs returned in API responses are in URL Safe Base64 encoding.
 * A message ID used in a URL should be in URL Safe Base64 encoding. 
-* To obtain the URL Safe Base64 room ID, replace forward slashes with underscores, replace pluses with minuses, and ignore any trailing equal signs.
+* To obtain the URL Safe Base64 conversation \(stream\) ID, replace forward slashes with underscores, replace pluses with minuses, and ignore any trailing equal signs.
 
 | **StreamID** | **URL Safe Base64 encoded StreamID** |
 | :---: | :---: |
-| RUkxW4x40aB74g0UWpaMw3///ozLPsapdA== | RUkxW4x40aB74g0UWpaMw3\_\_\_ozLPsapdA |
+| `RUkxW4x40aB74g0UWpaMw3///ozLPsapdA==` | `RUkxW4x40aB74g0UWpaMw3___ozLPsapdA` |
 
