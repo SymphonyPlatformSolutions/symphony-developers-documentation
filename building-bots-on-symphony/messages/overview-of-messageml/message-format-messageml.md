@@ -1,10 +1,10 @@
 # Message Format - MessageML
 
-When calling API methods that create messages, the content of the message must be sent using _MessageML_ markup. MessageML is a tag-based language that is a subset of XHTML, with the addition of [shorthand tags](https://developers.symphony.com/symphony-developer/docs/messagemlv2#shorthand-tags) for embedding information \(e.g. a mention\) into a message. Messages in MessageML markup are enclosed in a `<messageML>` tag.
+When calling API methods that create messages, the content of the message must be sent using _MessageML_ markup. MessageML is a tag-based language that is a subset of XHTML, with the addition of [shorthand tags](message-format-messageml.md#shorthand-tags) for embedding information \(e.g. a mention\) into a message. Messages in MessageML markup are enclosed in a `<messageML>` tag.
 
 MessageML has full unicode support and messages should be sent using UTF-8 character encoding.
 
-When [creating](https://rest-api.symphony.com/docs/create-message-v4) or [retrieving](https://rest-api.symphony.com/docs/messages-v4) messages using the API, MessageML shorthand tags are translated into equivalent XHTML tags and returned in [PresentationML](https://developers.symphony.com/symphony-developer/docs/presentationml).
+When [creating](https://rest-api.symphony.com/docs/create-message-v4) or [retrieving](https://rest-api.symphony.com/docs/messages-v4) messages using the API, MessageML shorthand tags are translated into equivalent XHTML tags and returned in [PresentationML](../overview-of-presentationml.md).
 
 ## PresentationML Live Renderer Tool:
 
@@ -14,7 +14,7 @@ Symphony created the [Presentation ML Live Renderer Tool](https://renderer-tool.
 
 Messages may include:
 
-* Maximum 40 entities \(hashtags, cashtags, and mentions\).
+* Maximum 40 entities \(\#hashtags, $cashtags, and mentions\).
 * Maximum 2,500 unique tokens in the markdown representation of the message.
 * 81,130 characters of the encrypted markdown representation of the message. Note that there is a greater chance of reaching the token or the entity limit than the character limit.
 
@@ -35,7 +35,7 @@ For string attributes, standard rules for escaping XML special characters apply,
 
 Keywords may only contain alphanumeric characters, underscore, dot and dash.
 
-Important: when sending numeric cashtags as signals, add an `*` after the $ sign, for example, $\_122450.  
+Important: when sending numeric $cashtags as signals, add an `*` after the $ sign, for example, $\_122450.  
 &lt;cash tag="$\_122450"/&gt;
 {% endhint %}
 
@@ -76,7 +76,7 @@ MessageML supports the following tags for grouping information within a message:
 | `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list. | \* `class` |
 | `<ol>` `<li>list item</li>` `</ol>` | Numbered list. | \* `class` |
 | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | \* `class` |
-| `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](https://developers.symphony.com/symphony-developer/docs/objects). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](https://extension-api.symphony.com/docs/colors)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
+| `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](../structured-objects.md). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](../../../developer-tools/developer-tools/ui-style-guide/colors.md)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
 
 ## Text-level formatting and semantics
 
@@ -105,7 +105,7 @@ MessageML supports the following tags for formatting content within a message:
       <td style="text-align:left">Insert a hyperlink that will be displayed in the message.</td>
       <td style="text-align:left"><em><code>href</code>: the URL of the link<br /></em><code>class</code>:
         <a
-        href="https://extension-api.symphony.com/docs/colors">color options</a>.</td>
+        href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>&lt;b&gt;text&lt;/b&gt;</code>
@@ -116,7 +116,7 @@ MessageML supports the following tags for formatting content within a message:
         between the last character in a bolded section and the closing <code>&lt;/b&gt;</code> tag,
         the bold section will be returned in Markdown (i.e. surrounded by double
         &apos;*&apos; characters) instead of XHTML tags.</td>
-      <td style="text-align:left">* <code>class</code>: <a href="https://extension-api.symphony.com/docs/colors">color options</a>.</td>
+      <td style="text-align:left">* <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left">1.53 version onwards
@@ -149,7 +149,7 @@ MessageML supports the following tags for formatting content within a message:
         between the last character in an italics-formatted section and the closing <code>&lt;/i&gt;</code> tag,
         the italics section will be returned in Markdown (i.e. surrounded by single
         &apos;*&apos; characters) instead of XHTML tags.</td>
-      <td style="text-align:left">* <code>class</code>: <a href="https://extension-api.symphony.com/docs/colors">color options</a>.</td>
+      <td style="text-align:left">* <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>&lt;pre&gt;</code>
@@ -157,8 +157,8 @@ MessageML supports the following tags for formatting content within a message:
         <br /><code>&lt;/pre&gt;</code>
       </td>
       <td style="text-align:left">Preformatted text.</td>
-      <td style="text-align:left"><em><code>class</code>:</em>  <a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em>Non-HTML
-        MessageML <a href="https://developers.symphony.com/symphony-developer/docs/messagemlv2#shorthand-tags">shorthand tags</a> are
+      <td style="text-align:left"><em><code>class</code>:</em>  <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md"><em>color options</em></a><em>.<br /></em>Non-HTML
+        MessageML <a href="message-format-messageml.md#shorthand-tags">shorthand tags</a> are
         not supported inside <code>&lt;pre&gt;</code>.</td>
     </tr>
     <tr>
@@ -166,9 +166,9 @@ MessageML supports the following tags for formatting content within a message:
       </td>
       <td style="text-align:left">No formatting.
         <br /><em>This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<br /></em>This
-        tag is used to create <a href="https://developers.symphony.com/symphony-developer/docs/objects">Structured objects</a>.</td>
+        tag is used to create <a href="../structured-objects.md">Structured objects</a>.</td>
       <td
-      style="text-align:left"><em><code>class</code>:</em>  <a href="https://extension-api.symphony.com/docs/colors"><em>color options</em></a><em>.<br /></em><code>data-entity-id</code>
+      style="text-align:left"><em><code>class</code>:</em>  <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md"><em>color options</em></a><em>.<br /></em><code>data-entity-id</code>
         <br
         />* See below for list of translated PresentationML attributes.</td>
     </tr>
@@ -231,8 +231,8 @@ MessageML supports the following tags to embed additional information into messa
 | `<hash tag="label"/>` | Insert "label" as a hashtag. |  |
 | `<cash tag="ticker"/>` | Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a `*` after the $ sign, for example, $\_122450.  `<messageML>` \`&lt;cash tag="$\_122450"/&gt; ```\`` |  |
 | `<chime />` | Send a chime message. No other content is permitted with a `<chime/>` tag. |  |
-| `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](https://extension-api.symphony.com/docs/colors) to select the accent color of the card. |
-| `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](https://developers.symphony.com/symphony-developer/docs/emojis). |
+| `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](../emojis.md). |
 
 The following is a example of a card tag that could be embedded into a message:
 
@@ -245,7 +245,7 @@ The following is a example of a card tag that could be embedded into a message:
 
 ## Structured Objects and Tags
 
-Structured objects are rich, inline, interactive components for Symphony messages that allow you to embed [information](https://developers.symphony.com/symphony-developer/docs/messagemlv2#standard-entities) that is more complex than simple text.
+Structured objects are rich, inline, interactive components for Symphony messages that allow you to embed information that is more complex than simple text.
 
 To [create a message](https://rest-api.symphony.com/docs/create-message-v4) containing a Structured object, construct the message content using MessageML with either a `<div>` or a `<span>` element containing the following attributes:
 
@@ -262,7 +262,7 @@ This MessageML markup is then passed into the endpoint via the `message` paramet
 <span class="entity" data-entity-id="entityIdentifier">An inline object</span>
 ```
 
-The examples above reference an [entity object](https://developers.symphony.com/symphony-developer/docs/messagemlv2#standard-entities) called `entityIdentifier`. The JSON corresponding to this object is passed to the create message endpoint via the `data` parameter. For example:
+The examples above reference an entity object called `entityIdentifier`. The JSON corresponding to this object is passed to the create message endpoint via the `data` parameter. For example:
 
 ```bash
 Data:
