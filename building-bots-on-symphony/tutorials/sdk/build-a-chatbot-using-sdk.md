@@ -572,5 +572,5 @@ Next, launch your bot again and test the new behaviour:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
 
-**For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
+#### **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
