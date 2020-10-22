@@ -522,7 +522,7 @@ Continue here to learn more about structured objects:
 
 Symphony Elements is a collection of interactive elements that can be sent within messages to facilitate communication with Symphony users.
 
-Through the use of the elements, bots can send messages that contain forms with text fields, dropdown menus, person selectors, buttons and more! To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) endpoint using the messageML v2 format. For more information and examples check out our guide on Symphony Elements:
+Through the use of the elements, bots can send messages that contain forms with text fields, dropdown menus, person selectors, buttons and more! To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) endpoint using the MessageML v2 format. For more information and examples check out our guide on Symphony Elements:
 
 {% page-ref page="../../symphony-elements/" %}
 
