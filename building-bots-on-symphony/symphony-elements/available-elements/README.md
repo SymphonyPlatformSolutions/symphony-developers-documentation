@@ -49,7 +49,7 @@ The messageML above is rendered as the following:
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-20-at-12.27.07-pm.png)
 
-After completing the form and clicking the submit form, the following elements payload is generated and delivered to the bot via the datafeed:
+After completing and submitting the form, the following elements payload is generated and delivered to the bot via the datafeed:
 
 ```markup
 {
@@ -88,7 +88,7 @@ After completing the form and clicking the submit form, the following elements p
 }
 ```
 
-**The following list shows the currently available Symphony Elements. Click on the element to learn more about its implementation, limitations, and examples:**
+### **Currently available Symphony Elements:** 
 
 * \*\*\*\*[**Form**](form.md)\*\*\*\*
 * \*\*\*\*[**Buttons**](buttons.md)\*\*\*\*
