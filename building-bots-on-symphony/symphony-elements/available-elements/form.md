@@ -24,7 +24,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 * To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons.md).
 * When a form is submitted, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, you can fill out the form again and submit it as a new form.
-* When designing forms, it is important to consider the message size limit. For more information refer to [messageML - Message size limits](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits).
+* When designing forms, it is important to consider the message size limit. For more information refer to [MessageML - Message size limits.](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits)
 
 ## Examples
 
