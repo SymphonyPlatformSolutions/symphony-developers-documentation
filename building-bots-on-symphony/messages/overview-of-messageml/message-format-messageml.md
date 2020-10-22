@@ -234,7 +234,7 @@ MessageML supports the following tags to embed additional information into messa
 | `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
 | `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](../emojis.md). |
 
-The following is a example of a card tag that could be embedded into a message:
+An example of a card tag that could be embedded into a message:
 
 ```markup
 <card iconSrc="url" accent="tempo-bg-color--blue">
