@@ -1,6 +1,6 @@
 # Structured Objects
 
-Structured Objects are rich, inline, interactive components for Symphony messages. Objects allow you to build innovative workflows that go beyond working with normal text or attached files.
+Structured Objects are rich, inline, interactive components of Symphony messages. Objects allow you to build innovative workflows that go beyond working with normal text or attached files.
 
 * Unlike normal message text, these objects are structured and do not need to be parsed to have business logic.
 * Unlike attachments, end-users can view and interact with objects directly from their Symphony client, without having to change context.
@@ -13,7 +13,7 @@ To inject messages containing structured objects:
 
 * Your pod must be configured for Symphony's REST API, and you must have the Agent, the component used for handling encryption and decryption of messages and content, set up.
 * Your Agent must be version 1.51 or later.
-* You must have a X.509 identity certificate for your bot service user for REST API authentication, where the common name on the certificate matches your service user's username.
+* You must have an X.509 identity certificate for your bot service user for REST API authentication, where the common name on the certificate matches your service user's username.
 
 To build renderer applications for displaying your structured object:
 
@@ -40,7 +40,7 @@ These parameters also support using [Apache FreeMarker templates](http://freemar
 
 ## Message and Object Presentation
 
-Message presentation is represented in [messageML](https://developers.symphony.com/symphony-developer/docs/messagemlv2) format. For example:HTML
+Message presentation is represented in [MessageML](https://developers.symphony.com/symphony-developer/docs/messagemlv2) format. For example:HTML
 
 ```markup
 <messageML>
@@ -100,7 +100,7 @@ This data can be used by applications in the web client to provide a rich displa
 
 ## Reading objects
 
-You can read objects using any of the endpoints that can read messages, for example the [Read Message](https://rest-api.symphony.com/docs/messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
+You can read objects using any of the endpoints designed to read messages, for example, the [Read Message](https://rest-api.symphony.com/docs/messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
 
 {% hint style="info" %}
 Note:
