@@ -20,7 +20,7 @@ The first call you should be making to `BBAppDelegate` `sharedInstance` is `appl
 {% endtab %}
 {% endtabs %}
 
-**`authDelegate`**  
+**`authDelegate()`**  
 If you would like to override the standard Symphony sign-in experience, you should supply an object which conforms to the [`BBAuthorizationDelegate`](bbauthorizationdelegate.md).  
 Set the `authDelegate` property before calling `application:didFinishLaunchingWithOptions:`  
 If you change or reset or nil the authDelegate after calling `application:didFinishLaunchingWithOptions:` your changes may not be respected.
@@ -228,7 +228,7 @@ This should only be called after `didFinishLaunchingWithOptions`
 {% endtab %}
 {% endtabs %}
 
-**UpdateApplicationIconBadgeNumber**  
+**`UpdateApplicationIconBadgeNumber`**  
 Use this method to trigger the count update of the App Icon at the home screen.  
 This method will retrieve the correct updated count and set the app badge count.
 

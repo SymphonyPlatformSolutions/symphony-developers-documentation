@@ -16,7 +16,7 @@ Once you have passed the [`BBApplicationLaunchParameters`](bbapplicationlaunchpa
 {% endtab %}
 {% endtabs %}
 
-**PodDomain**  
+**`PodDomain`**  
 When set, this controls the domain name to which the application can connect.  
 For example:  
 If you pass "home" the application will try to connect to home.symphony.com.  
@@ -31,7 +31,7 @@ Default is nil, which allows connection to any pod in the default Authentication
 {% endtab %}
 {% endtabs %}
 
-**PodSSOURL**  
+**`PodSSOURL`**  
 If the pod's SSO URL is specified \(and disableSSO is not set to YES\), the application will jump to this URL as though SSO were selected by the user.  
 If specified, the host of this URL is used as the pod's domain, and the podDomain & userEmailAddress fields are ignored.  
 Default is nil.
@@ -44,7 +44,7 @@ Default is nil.
 {% endtab %}
 {% endtabs %}
 
-**UserEmailAddress**  
+**`UserEmailAddress`**  
 If the user's email address is specified, the sign-in control will be pre-populated with this value.
 
 {% tabs %}
@@ -55,7 +55,7 @@ If the user's email address is specified, the sign-in control will be pre-popula
 {% endtab %}
 {% endtabs %}
 
-**AllowPhotoPicker**  
+**`AllowPhotoPicker`**  
 Set this to YES if you would like to permit your users to attach photos from their camera roll \(or taken from their camera\) to messages sent within the application.  
 Default is YES.
 
@@ -67,8 +67,8 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**disableAccessToPhotoGallery**  
-Set this to YES if you would like to block your users from attaching photos from their camera roll to messages sent within the application.  
+**`disableAccessToPhotoGallery`**  
+``Set this to YES if you would like to block your users from attaching photos from their camera roll to messages sent within the application.  
 Default is NO.
 
 {% tabs %}
@@ -79,7 +79,7 @@ Default is NO.
 {% endtab %}
 {% endtabs %}
 
-**AllowWebView**  
+**`AllowWebView`**  
 Set this to YES if you would like to permit your users to view non-image attachments and URLs sent within the application.  
 Default is YES.
 
@@ -91,7 +91,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**AllowSharing**  
+**`AllowSharing`**  
 Set this to YES if you would like to permit your users to share image attachments out to other applications through the OS installed share extensions.  
 Default is YES.
 
@@ -103,7 +103,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**AllowCrashlytics**  
+**`AllowCrashlytics`**  
 Set this to YES if you would like to permit the Symphony application to submit crash reports through the 3rd party application named Crashlytics.  
 The Public AppStore version of the application does this and it is helpful for collecting crash reports and monitoring.  
 Default is YES.
@@ -116,7 +116,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**AllowAnalytics**  
+**`AllowAnalytics`**  
 Set this to YES if you would like to permit the Symphony application to record anonymous usage statistics.  
 Default is YES.
 
@@ -128,7 +128,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**AllowAddressBook**  
+**`AllowAddressBook`**  
 Set this to YES if you would like to permit your users to access their OS Address Book when inviting new contacts to the application.  
 Default is YES.
 
@@ -140,7 +140,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**AllowCopy**  
+**`AllowCopy`**  
 Set this to YES if you would like to permit your users to copy the contents of messages they receive within the application.  
 Default is YES.
 
@@ -152,7 +152,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**NetworkDebugging**  
+**`NetworkDebugging`**  
 Set this to YES if you would like the Symphony application to emit logging which may be helpful to debug network-related issues. This is probably only helpful during the bring-up/integration phase.  
 Default is NO.
 
@@ -164,7 +164,7 @@ Default is NO.
 {% endtab %}
 {% endtabs %}
 
-**ShowClearCacheOnSignOut**  
+**`ShowClearCacheOnSignOut`**  
 Set this to YES if you would like the Symphony application to show the "Clear Cache on Sign out" control in the Settings view.  
 The "Clear Cache on Sign out" allows the user to retain all of his information in a local \(encrypted\) cache when signed out of the application.  
 This could be useful for occasions when signing-in while offline to access data cached locally.  
@@ -178,7 +178,7 @@ Default is NO.
 {% endtab %}
 {% endtabs %}
 
-**DisablePincode**  
+**`DisablePincode`**  
 Set this to YES if you would like the Symphony application to hide the "Turn On Pincode" control in the Settings view.  
 The "Turn On Pincode" allows the application to require a 6 digit pin code to launch the application. This is in addition to the username & password required to login initially.  
 This could be useful for situations where you are providing your own layer of security to the application.  
@@ -201,14 +201,14 @@ Default is NO.
 {% endtab %}
 {% endtabs %}
 
-**EnforcePincode**  
+**`EnforcePincode`**  
 Set this to YES if you would like the Symphony application to force user to define a 6 digit pin code to launch the application.  
 If enabled, the "Turn Off Pincode" control in the Settings view must be hidden.  
 This option overrides disablePincode. It means if both disablePincode and enforcePincode are enabled, enforcePincode wins and the user must define the pin code.  
 If the user is already logged from a previous version of the app or with the enforcePincode disabled when logged, a prompt must ask the user to define the pin code to launch the application  
 Default is NO
 
-**DisableIntroduction**  
+**`DisableIntroduction`**  
 Set this to YES if you would like the Symphony application to hide First Launch introduction screens.  
 Default is NO.
 
@@ -220,7 +220,7 @@ Default is NO.
 {% endtab %}
 {% endtabs %}
 
-**AllowFeedback**  
+**`AllowFeedback`**  
 Set this to YES if you would like the Symphony application to show the feedback feature in settings.  
 Default is YES.
 
@@ -232,7 +232,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**EnforceBBAccess**  
+**`EnforceBBAccess`**  
 Set this to YES if you would like to enforce Symphony application to open links in BlackBerry Access app. \(applies to Symphony for BlackBerry only\).  
 Default is NO.
 
@@ -244,7 +244,7 @@ Default is NO.
 {% endtab %}
 {% endtabs %}
 
-**AllowSendingEmojis**  
+**`AllowSendingEmojis`**  
 Set this to YES if you would like the Symphony application to render emojis sent or received by the user.  
 Default is YES.
 
@@ -256,7 +256,7 @@ Default is YES.
 {% endtab %}
 {% endtabs %}
 
-**refreshTokenPeriod**  
+**`refreshTokenPeriod`**  
 Define the refresh token delay  
 If not defined the default value will be used 24h.
 
@@ -268,13 +268,13 @@ If not defined the default value will be used 24h.
 {% endtab %}
 {% endtabs %}
 
-**allowOpeningEmailAddress**  
+**`allowOpeningEmailAddress`**  
 Set this to YES if you would like to permit your users to open email address in an external application  
 Default is YES
 
 ## Methods
 
-### `init()`
+`init`
 
 ```text
 - (id)init NS_DESIGNATED_INITIALIZER;
@@ -292,7 +292,7 @@ Use this to create a BBApplicationLaunchParameters which you pass to the shared 
 {% endtab %}
 {% endtabs %}
 
-**setText:forCustomViewID:**  
+**`setText:forCustomViewID`:**  
 This is how you can pass custom text for various UI customizations.  
 **@param** text NSString of the text you would like displayed to the user.  
 **@param** customization [`BBCustomViewID`](../enumerations/bbcustomviewid.md) enumeration value specifying where the text should be displayed.
@@ -305,6 +305,7 @@ This is how you can pass custom text for various UI customizations.
 {% endtab %}
 {% endtabs %}
 
+`textForCustomViewID`:  
 This is how you can retrieve the custom text for various UI customizations.  
 This method is used by the Symphony App when setting up the associated UI elements.  
 **@param** customization [`BBCustomViewID`](../enumerations/bbcustomviewid.md) enumeration value of the text you would like to retrieve  
