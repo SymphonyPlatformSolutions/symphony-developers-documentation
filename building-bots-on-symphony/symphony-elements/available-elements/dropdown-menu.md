@@ -38,7 +38,7 @@ If neither the `selected` or `data-placeholder` attributes are set, the default 
 {% hint style="info" %}
 Message Size Limit:
 
-When designing forms with dropdowns within it be aware that there is a chance of reach the characters limit if too many dropdown options are included in the message. For more information about message size limits, refer to [MessageML](../../messages/overview-of-messageml/).
+When designing forms with dropdowns within it be aware that there is a chance of reach the characters limit if too many dropdown options are included in the message. For more information about message size limits, refer to [MessageML](../../messages/overview-of-messageml/message-format-messageml.md#message-size-limits).
 {% endhint %}
 
 ## Examples
