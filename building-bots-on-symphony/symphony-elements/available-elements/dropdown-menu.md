@@ -4,8 +4,8 @@ A dropdown menu **is a static list** of items that appears whenever a piece of t
 
 A dropdown menu is also known as a pull-down menu, pull-down list, dropdown list or dropdown box.
 
-The dropdown menu is represented by the &lt;select&gt; tag which provides a menu of &lt;options&gt;.  
-Each &lt;option&gt; element should have a `value` attribute containing the data value to submit to the server when that option is selected; You can also include a `selected` attribute on an &lt;option&gt; element to make it selected by default when the page first loads.
+The dropdown menu is represented by the `<select>` tag which provides a menu of `<options>`.  
+Each `<option>` element should have a `value` attribute containing the data value to submit to the server when that option is selected; You can also include a `selected` attribute on an `<option>` element to make it selected by default when the page first loads.
 
 ![](../../../.gitbook/assets/af42ada-dropdown.jpg)
 
@@ -13,10 +13,10 @@ Each &lt;option&gt; element should have a `value` attribute containing the data 
 
 | Attribute | Type | Required? | Description |
 | :--- | :--- | :--- | :--- |
-| `name` | String | Yes | Required attribute of the &lt;select&gt; tag. It identifies the dropdown menu. |
-| `required` | Boolean | No | Optional attribute of the &lt;select&gt; tag. it is a Boolean attribute indicating that an option with a non-empty string value must be selected. |
-| `value` | String | Yes | Required attribute of the &lt;option&gt; tag. It contains the data value to submit to the server when that option is selected. |
-| `selected` | Boolean | Optional | You can include a selected attribute on an &lt;option&gt; element to make it selected by default when the page first loads. Accepted values: `true` and `false`. |
+| `name` | String | Yes | Required attribute of the `<select>` tag. It identifies the dropdown menu. |
+| `required` | Boolean | No | Optional attribute of the `<select>` tag. it is a Boolean attribute indicating that an option with a non-empty string value must be selected. |
+| `value` | String | Yes | Required attribute of the `<option>` tag. It contains the data value to submit to the server when that option is selected. |
+| `selected` | Boolean | Optional | You can include a selected attribute on an `<option>` element to make it selected by default when the page first loads. Accepted values: `true` and `false`. |
 | `data-placeholder` | String | Optional | Text displayed in the dropdown menu before an option is selected. It can be a short hint or a title for the dropdown menu. |
 
 ## Rules and Limitations
