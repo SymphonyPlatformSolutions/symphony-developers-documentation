@@ -6,7 +6,7 @@ The Symphony Agent is responsible for encryption and decryption of messages and 
 
 ## Message APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Message APIs create, read and search messages on your company Pod. These APIs can be used to do the following:
+The Message APIs create, read and search messages on the Pod. These APIs can be used to do the following:
 
 * Get messages
 * Create messages
@@ -22,20 +22,20 @@ The full list of Messages API endpoints and their corresponding reference guide 
 
 ## Datafeed APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Datafeed APIs are used to create and manage a real-time message and event stream from your Symphony Pod to your bot. The Datafeed APIs can be leveraged to do the following:
+The Datafeed APIs create and manage real-time event streams from the Pod to your bot. These APIs can be used to do the following:
 
 * Create Datafeed
 * Read Datafeed
 
-For more information on how Symphony Datafeeds allow your Bot to create rich, interactive workflows navigate here:
+For more information on how Symphony Datafeeds allow your bot to create rich and interactive workflows, navigate here:
 
 {% page-ref page="../datafeed.md" %}
 
-The full list of Datafeed API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Datafeed API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#introduction-to-datafeed](https://developers.symphony.com/restapi/reference#introduction-to-datafeed)
 
-## Signals API ![](../../.gitbook/assets/symphony-api.png) 
+## Signal APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Signals API is used create and managed tailored alerts based on \#hashtag and $cashtag criteria. The Signals APIs can be leveraged to do the following:
+The Signal APIs create and manage tailored alerts based on mention or tag criteria. These APIs can be used to do the following:
 
 * List signals
 * Get signal details
@@ -43,16 +43,16 @@ The Signals API is used create and managed tailored alerts based on \#hashtag an
 * Subscribe/Unsubscribe to a signal
 * List signal subscribers
 
-The full list of Signals API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Signals API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#list-signals](https://developers.symphony.com/restapi/reference#list-signals)
 
-## Basics API ![](../../.gitbook/assets/symphony-api.png) 
+## Basic APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-This group of APIs allows you to perform testing and obtain diagnostics regarding the health of your Symphony components. The Basics API can be leveraged to do the following:
+This group of APIs perform testing and obtain diagnostics regarding the health of Symphony components. These APIs can be used to do the following:
 
 * Perform a component health check
 * Obtain Agent Info
 * Perform an echo test 
 * Get session info
 
-The full list of Basics API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Basics API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#health-check-v2](https://developers.symphony.com/restapi/reference#health-check-v2)
 
