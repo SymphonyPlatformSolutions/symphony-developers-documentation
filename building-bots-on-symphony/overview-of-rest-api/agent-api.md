@@ -4,9 +4,9 @@
 
 The Symphony Agent is responsible for encryption and decryption of messages and content sent to and from a bot. As a result, the Agent API is used to build applications that send and receive messages and content. The following guide includes API collections that exist on the Agent:
 
-## Messages API ![](../../.gitbook/assets/symphony-api.png) 
+## Message APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Messages API is used to create, read, and search messages on your company Pod. The Messages API can be leveraged to do the following:
+The Message APIs create, read and search messages on your company Pod. These APIs can be used to do the following:
 
 * Get messages
 * Create messages
@@ -18,11 +18,11 @@ The Messages API is used to create, read, and search messages on your company Po
 * Get message status
 * List message receipts
 
-The full list of Messages API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Messages API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#messages-v4](https://developers.symphony.com/restapi/reference#messages-v4)
 
-## Datafeed API ![](../../.gitbook/assets/symphony-api.png) 
+## Datafeed APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Datafeed API is used to create and manage a real-time message and event stream from your Symphony Pod to your bot. The Datafeed APIs can be leveraged to do the following:
+The Datafeed APIs are used to create and manage a real-time message and event stream from your Symphony Pod to your bot. The Datafeed APIs can be leveraged to do the following:
 
 * Create Datafeed
 * Read Datafeed

@@ -14,7 +14,7 @@ If successful, the Pod API returns a Session Token which is valid for up to two 
 
 ## User APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The User APIs are used to query and manage users on the Pod. These APIs can be used to do the following:
+The User APIs query and manage users on the Pod. These APIs can be used to do the following:
 
 * Search users
 * List all users
@@ -29,7 +29,7 @@ The full list of Users API endpoints and their corresponding reference guide can
 
 ## Stream APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Stream APIs are used to create and deactivate IMs, MIMs, chatrooms, and also manage room membership. These APIs can be used to do the following:
+The Stream APIs create and manage IMs, MIMs and chat rooms. These APIs can be used to do the following:
 
 * Create IM or MIM
 * Create chatrooms
@@ -44,7 +44,7 @@ The full list of Streams API endpoints and their corresponding reference guide c
 
 ## Connection APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Connection APIs are used to manage user connections. These APIs can be used to do the following:
+The Connection APIs manage user connections. These APIs can be used to do the following:
 
 * Get connection
 * List connections
@@ -57,7 +57,7 @@ The full list of Connections API endpoints and their corresponding reference gui
 
 ## Presence APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Presence APIs are used to get or set a presence status for given user or create a presence feed for your company pod. These APIs can be used to do the following:
+The Presence APIs manage presence status for users. These APIs can be used to do the following:
 
 * Get/Set user presence
 * Get all users presence
