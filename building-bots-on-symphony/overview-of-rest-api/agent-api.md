@@ -29,7 +29,7 @@ The Datafeed APIs create and manage real-time event streams from the Pod to your
 
 For more information on how Symphony Datafeeds allow your bot to create rich and interactive workflows, navigate here:
 
-{% page-ref page="../datafeed.md" %}
+{% page-ref page="../datafeed/" %}
 
 The full list of Datafeed API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#introduction-to-datafeed](https://developers.symphony.com/restapi/reference#introduction-to-datafeed)
 

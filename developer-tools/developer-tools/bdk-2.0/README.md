@@ -268,7 +268,7 @@ Below is a full list of methods provided by the `RealTimeEventListener` class an
 
 For more information on the Symphony datafeed continue here:
 
-{% page-ref page="../../../building-bots-on-symphony/datafeed.md" %}
+{% page-ref page="../../../building-bots-on-symphony/datafeed/" %}
 
 ### Orchestrating Workflows with the BDK 2.0
 

@@ -22,13 +22,13 @@ In order to 'listen' and respond to user events, bots create a single datafeed a
 
 To learn more about the Symphony Datafeed continue here:
 
-{% page-ref page="../../datafeed.md" %}
+{% page-ref page="../../datafeed/" %}
 
 ## 3.  Handle Events with Custom Business Logic
 
 The next step of your chatbot workflow is to introduce your custom business logic. Once you have access to the bot's events and messages through the Symphony Datafeed, the next step is to create dedicated event listeners. Inside these listeners is where you parse messages, fetch data from external sources, manage conversation state, and make requests to Symphony's REST API in order to reply to users directly or perform administrative functions such as creating chatrooms.
 
-You can learn more about parsing events and introducing custom business logic [here](../../datafeed.md#handling-events).
+You can learn more about parsing events and introducing custom business logic [here](../../datafeed/#handling-events).
 
 ## Next Steps:
 

@@ -34,7 +34,8 @@
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
   * [Certificate Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
-* [Datafeed](building-bots-on-symphony/datafeed.md)
+* [Datafeed](building-bots-on-symphony/datafeed/README.md)
+  * [Real-Time Events](building-bots-on-symphony/datafeed/real-time-events.md)
 * [Messages](building-bots-on-symphony/messages/README.md)
   * [MessageML](building-bots-on-symphony/messages/overview-of-messageml/README.md)
     * [Message Format - MessageML](building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md)
@@ -85,6 +86,7 @@
       * [Filter Function](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/ui-service/filter-function.md)
 * [App Configuration](building-extension-applications-on-symphony/app-configuration/README.md)
   * [Configure your App for BDK Development](building-extension-applications-on-symphony/app-configuration/configure-your-app-for-bdk-development.md)
+  * [Updating User Apps](building-extension-applications-on-symphony/app-configuration/updating-user-apps.md)
 * [App Authentication](building-extension-applications-on-symphony/app-authentication/README.md)
   * [OBO Authentication](building-extension-applications-on-symphony/app-authentication/obo-authentication.md)
 
@@ -163,7 +165,9 @@
 
 ## Admin Guides <a id="admin-guide"></a>
 
+* [Documentation Updates](admin-guide/documentation-updates.md)
 * [Change Log](admin-guide/change-log.md)
+* [Global Throttling](admin-guide/global-throttling.md)
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)
   * [Agent 2.X and above Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
