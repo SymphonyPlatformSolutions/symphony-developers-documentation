@@ -6,31 +6,24 @@ description: Bot Configuration guide for using the BDK and CLI Tool
 
 ## Configure your Bot for BDK
 
-The following is a language-agnostic Bot configuration guide for building bots using the Symphony BDK and the CLI Tool.
+This page is a configuration guide specific to using the Symphony BDK and the BDK CLI Tool.
 
 ### Prerequisites
 
-* Node
-* Yarn
+* Node.JS
 * Java 8
 * Maven 3
 * Git
 
-#### Install Yarn:
+#### Install the BDK CLI
 
-```text
-$ npm i -g yarn
-```
-
-#### Install the BDK
-
-```text
-$ npm i -g symphony-bdk-cli
+```bash
+$ npm install -g symphony-bdk-cli
 ```
 
 #### Confirm all the dependencies are met:
 
-```text
+```bash
 $ symphony-bdk-cli --check-dependencies
 ```
 
@@ -38,11 +31,11 @@ $ symphony-bdk-cli --check-dependencies
 
 To generate a new bot project, enter the following:
 
-```text
+```bash
 $ symphony-bdk-cli --bot
 ```
 
-This will prompt with you a number of questions about your bot and Pod configuration. Type in your bots metadata, use arrows to scroll, and press enter to move onto the next prompt:
+This will prompt with you a number of questions about your bot and Pod configuration. Type in your bot's metadata, use arrows to scroll, and press enter to move on to the next prompt:
 
 ```text
 ✔ All Dependencies are met!
@@ -60,9 +53,7 @@ Generating RSA private key, 4096 bit long modulus
 .............................++
 ............................................................++
 ✔ Keys generated.
-⠋ Installing dependencies  ✖ Ran install dependencies
-    → Command failed: mvn clean package
-✖
+✔ Ran install dependencies
 Project ready DONE
 ********************************************************************************************
 Please find below the bot public key, it must be added to the bot user account
@@ -85,18 +76,18 @@ cYtyBTslVQ5nUvIYPqPfrKECAwEAAQ==
 ```
 
 {% hint style="info" %}
-Leave the second to last question blank and press enter to skip.
+Leave the answer to the application ID question blank and press enter to skip
 {% endhint %}
 
 Upon completion, the BDK CLI tool has created a public/private RSA key pair, a configuration and requirements file, as well as some default commands/datafeed event listeners.
 
 ### 2. Configure your Bot
 
-Once you have your generated bot scaffold, the next step is to configure your bot user:
+Once you have your generated bot scaffold, the next step is to configure your bot user.
 
-Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated RSA public key onto the service account created.
+Ensure that your pod admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated RSA public key for the service account created.
 
-Copy the entire contents of this RSA public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click save:
+Copy the entire contents of this RSA public key including the dashes on either side, and hand it to your pod admin and request for it to be saved against the respective service account you will be using.
 
 {% hint style="info" %}
 Note: The bot username and bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod above.

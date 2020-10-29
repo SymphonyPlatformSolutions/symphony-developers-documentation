@@ -4,13 +4,13 @@ description: Bot Configuration Guide using SDKs and Symphony Generator
 
 # Configure your Bot for SDKs
 
-The following is a language-agnostic bot configuration guide for building bots using Symphony SDKs and the Symphony Bot Generator.
+This page is a language-agnostic bot configuration guide for building bots using Symphony SDKs and the Symphony Bot Generator.
 
 {% hint style="warning" %}
-For example purposes, we will be generating a Java chatbot, however the configuration steps provided can be applied to any of our supported SDKs.
+For example purposes, we will be generating a Java chat bot. However, the configuration steps provided can be applied to our SDKs in other languages.
 {% endhint %}
 
-The Symphony Bot Generator is a Yeoman-based code generator that generates a project scaffold for the Symphony SDKs. You can use the Symphony Bot Generator for the following:
+The Symphony Bot Generator is a Yeoman-based code generator that generates a project scaffold for the Symphony SDKs. The generator does the following for you:
 
 * RSA Key/Certificate creation
 * Bot configuration
@@ -19,7 +19,7 @@ The Symphony Bot Generator is a Yeoman-based code generator that generates a pro
 
 ## Prerequisites
 
-### Install Symphony Bot Generator:
+### Install Yeoman and the Symphony Bot Generator:
 
 ```text
 $ npm install -g yo generator-symphony
@@ -27,7 +27,7 @@ $ npm install -g yo generator-symphony
 
 ## 1.  Generate Your Bot
 
-To activate the Symphony Bot Generator:
+To launch the Symphony Bot Generator:
 
 ```text
 $ yo symphony
@@ -37,7 +37,7 @@ This will prompt you with a number of questions about your Symphony environment 
 
 ```text
 /------------------------------------------/
-/        SYMPHONY GENERATOR  1.1.1         /
+/        SYMPHONY GENERATOR  1.4.3         /
 /    by platformsolutions@symphony.com     /
 / (c) 2020 Symphony Communication Services /
 /------------------------------------------/
@@ -51,7 +51,7 @@ This will prompt you with a number of questions about your Symphony environment 
 ? Which template do you want to start with Request/Reply
 * Generating bot Java code from Request/Reply template...
 Looking for latest version of Java client library..
-Latest version of Java client library is 1.1.8
+Latest version of Java client library is 1.3.0
 generating from template Request/Reply
 * Generating RSA public/private keys for BOT demoBot1...
 * BOT generated successfully!!
@@ -64,7 +64,7 @@ generating from template Request/Reply
 ```
 
 {% hint style="info" %}
-Note: In this guide, we will select 'RSA - Generate New Keys'. If you have preexisting RSA keys or wish to use certificates, select the other options accordingly.
+Note: In this guide, we will select 'RSA - Generate New Keys'. If you have pre-existing RSA keys or wish to use certificates, select the other options accordingly.
 {% endhint %}
 
 Upon completion, the Symphony Bot Generator has created a public/private RSA key pair, a configuration and requirements file, and also datafeed event listeners.
@@ -73,15 +73,18 @@ Upon completion, the Symphony Bot Generator has created a public/private RSA key
 
 Once you have your generated bot scaffold, the next step is to configure your bot user:
 
-Ensure that you or your admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated RSA public key for the service account created:
+Ensure that your pod admin has created a corresponding service account on the admin portal of your Symphony Pod. Additionally, you must upload the generated RSA public key for the service account created:
 
-```text
+```bash
 $ cd demoBot1
-demoBot1 $ ls
-certificates    pom.xml        rsa        src
 
-demo-bot1 $ cd rsa
-rsa $ more rsa-public-demo-bot1.pem 
+$ ls -l
+certificates
+pom.xml
+rsa
+src
+
+$ cd rsa/rsa-public-demo-bot1.pem
 -----BEGIN RSA PUBLIC KEY-----
 MIICCgKCAgEAkuSmdAtnPDYF8j5lA9q5r7Mtv1uzbAr1RR6W+WqZKOkp5BdBmEz9C9h3qBfp
 SdBpowYd7DbMwcMUZZ69nxOrtjqJiTxIG/dPswiN4/I275gaFarUMkHGFqEDKMjR0gNG0oj8
@@ -96,12 +99,12 @@ Agl9PvxdKEkNXJVPdUtBm7jIqQlljheYDs0825YP59H5WmaG3jywrkAS6QDP7uYvYd4skeJH
 -----END RSA PUBLIC KEY-----
 ```
 
-Copy the entire contents of this RSA public key including the dashes on either side, and handoff to your system admin or upload directly to the pod and click create:
+Copy the entire contents of this RSA public key including the dashes on either side, and hand it to your pod admin and request for it to be saved against the respective service account you will be using.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-13-at-9.57.25-pm.png)
 
 {% hint style="info" %}
-Note: The bot username and bot email address entered to the Symphony Bot Generator must match exactly the basic information shown in the Pod above.
+Note: The bot username entered into the Bot Generator must match exactly the username on the service account as shown above
 {% endhint %}
 
 For a detailed guide on how to create a service account in the admin portal, check out this guide:
@@ -153,7 +156,7 @@ The `config.json` file has other fields that offers advanced configurations for 
 
 ## 3.  Build Your Bot
 
-Now that you have generated and configured your Bot, move onto one of the SDK bot tutorials:
+Now that you have generated and configured your Bot, move on to one of the SDK bot tutorials:
 
 {% page-ref page="../tutorials/sdk/" %}
 

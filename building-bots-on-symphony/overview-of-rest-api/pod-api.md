@@ -6,15 +6,15 @@ The Symphony Pod API is used to build tools in order to manage and administer Sy
 
 ## Session Authenticate API ![](../../.gitbook/assets/symphony-api.png) 
 
-In order to access Pod API endpoints, Bots must be authenticated on the Pod. To do so, a Bot must call the Session Authenticate endpoint: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
+In order to access Pod API endpoints, bots must be authenticated with the Pod. To do so, a Bot must call the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
 
-If successful, the Pod API returns a Session Token which is valid for up to two weeks. This Session Token must be passed along with every subsequent Pod API request. You can read more about Authentication and Session Token management here:
+If successful, the Pod API returns a Session Token which is valid for up to two weeks. This Session Token must be passed along with every subsequent Pod API request. You can read more about Authentication and Token management here:
 
 {% page-ref page="../authentication/" %}
 
-## Users API ![](../../.gitbook/assets/symphony-api.png) 
+## User APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Users API is used to query and manage users on the Pod. The Users API can be leveraged to do the following:
+The User APIs query and manage users on the Pod. These APIs can be used to do the following:
 
 * Search users
 * List all users
@@ -25,11 +25,11 @@ The Users API is used to query and manage users on the Pod. The Users API can be
 * List user roles
 * List user audit trail
 
-The full list of Users API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Users API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#search-users](https://developers.symphony.com/restapi/reference#search-users)
 
-## Streams API ![](../../.gitbook/assets/symphony-api.png) 
+## Stream APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Streams API is used to create and de-activate IMs, MIMs, chatrooms, and also manage room membership. The Streams API can be leveraged to do the following:
+The Stream APIs create and manage IMs, MIMs and chat rooms. These APIs can be used to do the following:
 
 * Create IM or MIM
 * Create chatrooms
@@ -40,11 +40,11 @@ The Streams API is used to create and de-activate IMs, MIMs, chatrooms, and also
 * Add/Remove room members
 * Promote/Demote user to room owner
 
-The full list of Streams API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Streams API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#create-im-or-mim](https://developers.symphony.com/restapi/reference#create-im-or-mim)
 
-## Connections API ![](../../.gitbook/assets/symphony-api.png) 
+## Connection APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Connections API is used to manage user connections. The Connections API can be leveraged to do the following:
+The Connection APIs manage user connections. These APIs can be used to do the following:
 
 * Get connection
 * List connections
@@ -53,11 +53,11 @@ The Connections API is used to manage user connections. The Connections API can 
 * Reject connection
 * Remove connection
 
-The full list of Connections API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Connections API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#get-connection](https://developers.symphony.com/restapi/reference#get-connection)
 
-## Presence API ![](../../.gitbook/assets/symphony-api.png) 
+## Presence APIs ![](../../.gitbook/assets/symphony-api.png) 
 
-The Presence API is used to get or set a presence status for given user or create a presence feed for your company pod. The Presence API can be leveraged to do the following:
+The Presence APIs manage presence status for users. These APIs can be used to do the following:
 
 * Get/Set user presence
 * Get all users presence
@@ -66,5 +66,5 @@ The Presence API is used to get or set a presence status for given user or creat
 * Read presence feed
 * Delete presence feed
 
-The full list of Presence API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference](https://developers.symphony.com/restapi/reference)
+The full list of Presence API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#get-presence](https://developers.symphony.com/restapi/reference#get-presence)
 
