@@ -60,7 +60,7 @@ The Agent distribution package contains:
 * **Agent Server Package:** `agent-<VERSION>.jar`.
 * **Configuration Helper Package:** `util/setup-VERSION.jar`.
 * **JCurl Replacement:** [JCurl](https://github.com/symphonyoss/JCurl) - a _curl\(1\)_ replacement with native support for PKCS12 certificates and JSON.
-* **Sample Configuration:** `agent.yml`. For information on the fields see [Agent Configuration Fields](https://developers.symphony.com/restapi/docs/agent-configuration-fields).
+* **Sample Configuration:** `agent.yml`. For information on the fields see [Agent Configuration Fields](agent-configuration-fields.md).
 * **Agent API Swagger Specification:** `resources/agent-api-public.yaml`.
 * **Test Certificates:** test certificates for the required service users \(`resources/certs/agentservice.p12` and `resources/certs/ceservice.p12`\).
 * **Test User Certificate**: a test user certificate for calling the Agent API \(`resources/certs/bot.user1.p12`; note that you must create the user first and import its certificate or its signing certificate into the pod\)
@@ -77,7 +77,7 @@ The Agent distribution package contains:
 
 Modify the included configuration template \(`agent.yml`\) to match your environment.
 
-```text
+```bash
 agent:
   # Adjust the value agent.podName to an identifier for your pod agent:
   podName: acme    
@@ -152,13 +152,15 @@ agent:
   # The remaining configuration properties are set to reasonable defaults and can be left unmodified, unless otherwise desired.
 ```
 
-> #### 📘Important
->
-> * The sections `podName`, `url` and `certificate` are **required**. All other config properties are optional.
-> * The users `agentservice` and `ceservice` require their certificates or their signing certificate to be imported into the pod.
-> * The Key Manager url is different if the Key Manager service is deployed on-prem or on-cloud. For more information, refer to [Network Topology](https://developers.symphony.com/restapi/docs/network-topology).
+{% hint style="info" %}
+### Important
 
-#### **Disabling deprecated endpoints**
+* The sections `podName`, `url`, and `certificate` are required.  All other config properties are optional
+* The users `agentservice` and `ceservice` require their certificates or their signing certificate to be imported into the pod
+* The Key Manager url is different if the Key Manager service is deployed on-prem or on cloud.
+{% endhint %}
+
+### **Disabling deprecated endpoints**
 
 Before disabling deprecated endpoints, it is important to consider:
 
@@ -169,7 +171,7 @@ Disadvantages:
 Advantages:  
 • You will have the latest API versions with the latest features, performance improvements and fixed bugs.
 
-#### **Configuring TLS 1.2**
+### **Configuring TLS 1.2**
 
 The Agent supports TLS 1.2 by default but also allows lower versions of TLS protocol to be used. To restrict the Agent to only accept TLS 1.2 and strong cipher suites, set the following values by passing them as command line arguments when starting the Agent:
 
@@ -179,7 +181,7 @@ The Agent supports TLS 1.2 by default but also allows lower versions of TLS prot
 --server.ssl.ciphers=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
 ```
 
-### Run
+## Run
 
 There are two options for running the agent:
 
@@ -188,7 +190,9 @@ There are two options for running the agent:
 
 BashTextBash
 
-```text
+{% tabs %}
+{% tab title="Bash" %}
+```bash
 java \
 -Dfile.encoding=UTF-8 \
 -jar agent-<VERSION>.jar \
@@ -198,10 +202,23 @@ java \
 --server.ssl.key-store-password=changeit \
 --server.ssl.key-password=changeit
 ```
+{% endtab %}
+
+{% tab title="Text" %}
+    To trust a pod certificate that is not in the Java `cacerts` file, include:
+{% endtab %}
+
+{% tab title="Bash" %}
+```bash
+--server.ssl.trust-store=/home/acme/truststore.jks \
+--server.ssl.trust-store-password=changeit
+```
+{% endtab %}
+{% endtabs %}
 
 If you want to set the output logs folder specify like this in the startup.sh. Placement is important, it must come before the jar file reference:
 
-```text
+```java
 java \
 -Dlogs.directory="/data/my_agent_logs/" \
 -jar agent.jar \
@@ -217,9 +234,11 @@ After the Agent server starts up, call its health check URL to confirm connectiv
 
 `https://<agent-server>/agent/v2/HealthCheck`
 
-The following is the output from the Agent server in a browser:JSON
+The following is the output from the Agent server in a browser:
 
-```text
+{% tabs %}
+{% tab title="JSON" %}
+```javascript
 {
   "podConnectivity":true,
   "keyManagerConnectivity":true,
@@ -230,8 +249,10 @@ The following is the output from the Agent server in a browser:JSON
   "ceServiceUser":true
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-### Overview of the Setup Script
+## Overview of the Setup Script
 
 The Agent distribution includes a setup helper script \(`util/setup-<VERSION>.jar`\) to create a custom configuration and generate certificates.
 
@@ -242,13 +263,15 @@ The setup script provides interactive options that serve two main purposes:
 
 Descriptions of the individual options are provided below.
 
-### Launch the Setup Script
+## Launch the Setup Script
 
 Launch the script with this command:  
 `java -jar util/setup-<VERSION>.jar`
 
-The script displays the main menu:Agent Configuration Generation
+The script displays the main menu:
 
+{% tabs %}
+{% tab title="Agent Configuration Generation" %}
 ```text
 java -jar util/setup-2.54.0.jar 
 
@@ -268,11 +291,15 @@ java -jar util/setup-2.54.0.jar
 
 Enter selection:
 ```
+{% endtab %}
+{% endtabs %}
 
 The following describes the various menu options.
 
-Option `[a]` \(`View current configuration`\) displays the current configuration:Agent Configuration
+Option `[a]` \(`View current configuration`\) displays the current configuration:
 
+{% tabs %}
+{% tab title="Agent Configuration" %}
 ```text
 Enter selection:  a
 -------------- Agent Configuration --------------
@@ -309,9 +336,13 @@ Enable proxy for authentication endpoints        : false
 Agentservice RSA private key file                : null
 Ceservice RSA private key file                   : null
 ```
+{% endtab %}
+{% endtabs %}
 
-Option `[b]` \(`Configure base URL (Symphony URL)`\) specifies the base URL \(Symphony URL\) to autogenerate the other URLs critical to the functioning of the Agent \(options \[b\]-\[j\] under "Configure required properties"\):Symphony URL
+Option `[b]` \(`Configure base URL (Symphony URL)`\) specifies the base URL \(Symphony URL\) to autogenerate the other URLs critical to the functioning of the Agent \(options \[b\]-\[j\] under "Configure required properties"\):
 
+{% tabs %}
+{% tab title="Symphony URL" %}
 ```text
 Enter selection:  b
 
@@ -320,9 +351,13 @@ Enter selection:  b
 Provide a valid Symphony URL and press enter or type 'q' to return to the previous menu:
 https://localhost.symphony.com:8443
 ```
+{% endtab %}
+{% endtabs %}
 
-Option `[c]` \(`Configure required properties`\) allows you to customize the URL guessed on the basis of the previous entry. This also lets the you to set the location of the agentservice user certificate or RSA key \(required for the [OBO](https://developers.symphony.com/restapi/docs/obo-overview) and the ceservice user certificate or RSA key \(required for Firehose 2.0\). If you don't have those yet, they can be generated by options `[e]` and `[f]` in the main menu. Entry `[c]` also allows you to set a "pod name", used internally by Symphony to identify the pod:Modify Agent Configuration
+Option `[c]` \(`Configure required properties`\) allows you to customize the URL guessed on the basis of the previous entry. This also lets the you to set the location of the agentservice user certificate or RSA key \(required for the [OBO](../building-extension-applications-on-symphony/app-authentication/obo-authentication.md) and the ceservice user certificate or RSA key \(required for Firehose 2.0\). If you don't have those yet, they can be generated by options `[e]` and `[f]` in the main menu. Entry `[c]` also allows you to set a "pod name", used internally by Symphony to identify the pod:
 
+{% tabs %}
+{% tab title="Modify Agent Configuration" %}
 ```text
 Enter selection:  c
 
@@ -352,9 +387,13 @@ Enter selection:  c
 
 [q]  Return to main menu
 ```
+{% endtab %}
+{% endtabs %}
 
-Option `[d]` \(`Configure proxies`\) configures HTTP\(s\) proxies individually for the various components of the system \(Symphony - AKA "Pod", Key Manager, Firehose 2.0\). You can also optionally configure proxy authentication \(username/password\) for each of the components, if used:Modify Agent Proxy Configuration
+Option `[d]` \(`Configure proxies`\) configures HTTP\(s\) proxies individually for the various components of the system \(Symphony - AKA "Pod", Key Manager, Firehose 2.0\). You can also optionally configure proxy authentication \(username/password\) for each of the components, if used:
 
+{% tabs %}
+{% tab title="Modify Agent Proxy Configuration" %}
 ```text
 Enter selection:  d
 
@@ -376,13 +415,15 @@ Enter selection:  d
 
 [q]  Return to main menu
 ```
+{% endtab %}
+{% endtabs %}
 
 Option `[e]` \(`Generate user certificate`\) generates certificates for authenticating service users \(`/data/agent/certs/agentservice.pem` and `/data/agent/certs/ceservice.pem`\). Once generated \(using sub option `[h]`\), the output file must be provided in the Agent config \(sub options `[k]` through `[p]` in the submenu of option `[b]` \(`Configure base URL`\)\). Certificate generation requires a signing certificate as described below using sub option `[a]`:
 
 * Sub option `[a]` \(`Provide signing certificate`\): specifies a signing certificate that will be used to sign the generated user certificate. Either the signing certificate or the user certificate needs to be imported to the pod using the Admin Console or [Create Company Certificate](https://developers.symphony.com/restapi/docs/create-company-certificate). If the signing certificate is imported, all users whose certificates are signed by that certificate will be able to authenticate; if only a specific user's certificate is imported, only that user will be able to authenticate:
 
-User Certificate Generation
-
+{% tabs %}
+{% tab title="User Certificate Generation" %}
 ```text
 Enter selection:  e
 
@@ -400,9 +441,11 @@ Enter selection:  e
 
 [q]  Return to main menu
 ```
+{% endtab %}
+{% endtabs %}
 
-Shell
-
+{% tabs %}
+{% tab title="Shell" %}
 ```text
 -------------- Generate RSA keypair --------------
 [a]  Public key filename                                [pubkey.pem]
@@ -413,22 +456,32 @@ Shell
 
 [q]  Return to main menu
 ```
+{% endtab %}
+{% endtabs %}
 
-The following image shows how to import the certificate to the pod, using the Admin Console:![](https://files.readme.io/2ae8349-step_1.png)![](https://files.readme.io/2ae8349-step_1.png)
+The following image shows how to import the certificate to the pod, using the Admin Console:
+
+![](https://files.readme.io/2ae8349-step_1.png)
 
 And here you can see how to configure the certificates on the App host:  
 A. Install root certs for the pod in the Trust Store of the Bot.  
-B. Install a Client Type cert in the Key Store of the BOT – obtained from internal PKI CA.![](https://files.readme.io/e0bda0b-app_host.png)![](https://files.readme.io/e0bda0b-app_host.png)
+B. Install a Client Type cert in the Key Store of the BOT – obtained from internal PKI CA.
 
-The following commands can be used to install the certificates on the Agent app host machine. The first command is used for adding A \(from the diagram above\) to the Trust Store and the second command is used for adding B to the Key Store:Shell
+![](https://files.readme.io/e0bda0b-app_host.png)
 
+The following commands can be used to install the certificates on the Agent app host machine. The first command is used for adding A \(from the diagram above\) to the Trust Store and the second command is used for adding B to the Key Store:
+
+{% tabs %}
+{% tab title="Shell" %}
 ```text
 $> keytool -importcert -trustcacerts -keystore /data/tomcat/certs/truststore -file YourFile.CRT -alias pod -storepass changeit
 
 $> keytool -genkeypair -keyalg RSA -alias 1 -keystore ./atlas/symphony/global/certs/server.keystore -storepass changeit -validity 730 -keysize 2048
 ```
+{% endtab %}
+{% endtabs %}
 
-Option `[f]` \(`Generate RSA keypair`\) generates an RSA public/private key pair for using RSA authentication [RSA Bot Authentication Workflow](https://developers.symphony.com/symphony-developer/docs/rsa-bot-authentication-workflow). This submenu lets you choose filenames for the keys and their encoding \(PCKS1 or PCKS8\), and writes out the key pair. Once generated, the public keys for each user must be imported to the pod using the Admin Console or [Update User V2](https://developers.symphony.com/restapi/docs/update-user-v2). Note that RSA authentication requires you to set up each user individually; it doesn't have a concept equivalent to a "signing certificate" for all users. The private key filenames should be set in the Agent config. If both RSA and certificate authentication is configured, RSA takes precedence:Write Configuration
+Option `[f]` \(`Generate RSA keypair`\) generates an RSA public/private key pair for using RSA authentication [RSA Bot Authentication](../building-bots-on-symphony/authentication/rsa-authentication.md) Workflow. This submenu lets you choose filenames for the keys and their encoding \(PCKS1 or PCKS8\), and writes out the key pair. Once generated, the public keys for each user must be imported to the pod using the Admin Console or [Update User V2](https://developers.symphony.com/restapi/docs/update-user-v2). Note that RSA authentication requires you to set up each user individually; it doesn't have a concept equivalent to a "signing certificate" for all users. The private key filenames should be set in the Agent config. If both RSA and certificate authentication is configured, RSA takes precedence:Write Configuration
 
 ```text
 Enter selection:  f
@@ -442,11 +495,14 @@ Enter selection:  f
 [q]  Return to main menu
 ```
 
-The following image shows how to import the public keys to the pod, using the Admin Console.  
-Note that you have to create a service account for the app![](https://files.readme.io/ec931f0-service_account.png)![](https://files.readme.io/ec931f0-service_account.png)
+The following image shows how to import the public keys to the pod, using the Admin Console. Note that you have to create a service account for the app:
 
-Option `g` \(`Generate startup script`\): generates a simple shell startup script for starting the Agent. The startup script sets a number of options configured through Java VM properties \(-D...\) or Spring runtime properties. You can set the location of your Agent JAR file, your custom Agent config, and additional runtime variables not included in the Agent config file:Modify Startup Script Configuration
+![](../.gitbook/assets/ec931f0-service_account.png)
 
+Option `g` \(`Generate startup script`\): generates a simple shell startup script for starting the Agent. The startup script sets a number of options configured through Java VM properties \(-D...\) or Spring runtime properties. You can set the location of your Agent JAR file, your custom Agent config, and additional runtime variables not included in the Agent config file:
+
+{% tabs %}
+{% tab title="Modify Startup Script Configuration" %}
 ```text
 Enter selection:  g
 
@@ -474,6 +530,8 @@ Enter selection:  g
 
 [q]  Return to main menu
 ```
+{% endtab %}
+{% endtabs %}
 
 The following submenu options are available:
 
@@ -481,7 +539,7 @@ The following submenu options are available:
 * Sub options `[d]` \(`Configure server certificate file`\) and `[e]` \(`Configure server certificate password`\): the certificate that the Agent server will present to incoming requests. By default the Agent ships with a Symphony testing certificate, but you should change it to one representing your company to prevent SSL validation errors.
 * Sub options `[h]` \(`Configure truststore file`\) and `[i]` \(`Configure truststore password`\): a custom truststore for validating SSL certificates presented by the customer's Pod and Key Manager. If not set, the default Java truststore is used.
 * Sub option `[j]` \(Enforce TLS 1.2\): for security reasons only the protocol TLS 1.2 using a strong encryption algorithm is accepted. It is enabled by default and you should not disable it unless your bots do not support TLS 1.2 and you do not want to upgrade them \(not recommended\).
-* Sub options `[k]` \(`Configure debug endpoints username`\) and `[l]` \(`Configure debug endpoints password`\): a username and password used to access protected enpoints under /actuator \(see [Debugging Endpoints](https://developers.symphony.com/restapi/docs/agent-20-installation#section-debugging-endpoints) below\).
+* Sub options `[k]` \(`Configure debug endpoints username`\) and `[l]` \(`Configure debug endpoints password`\): a username and password used to access protected endpoints under /actuator \(see [Debugging Endpoints](agent-2.x-and-above-installation.md#debugging-endpoints) below\).
 * Sub option `[m]` \(`Configure logs directory`\): a custom directory for Agent logs.
 
 A generated startup script with all options set looks like this:
@@ -533,8 +591,10 @@ fi
 exec java $JAVA_OPTS -jar $AGENT_EXECUTABLE --agent.config=$AGENT_CONFIG
 ```
 
-Option `h` \(`Write agent configuration file`\) is the final step in the generation of the config. It lets the user write the config as YAML or .properties in the directory of their choice.:Write Configuration
+Option `h` \(`Write agent configuration file`\) is the final step in the generation of the config. It lets the user write the config as YAML or .properties in the directory of their choice.:
 
+{% tabs %}
+{% tab title="Write Configuration" %}
 ```text
 Enter selection:  h
 
@@ -548,6 +608,8 @@ Enter selection:  h
 
 Enter selection:
 ```
+{% endtab %}
+{% endtabs %}
 
 This config must be used to start the Agent:
 
@@ -557,7 +619,7 @@ java jar agent<version>.jar --agent.config=<outputDir/agent>.<fileType>
 
 Note that each property in the generated config is annotated with comments describing its purpose.
 
-### Debugging Endpoints
+## Debugging Endpoints
 
 The Agent server includes a number of Actuator endpoints providing debugging information.
 
@@ -566,12 +628,12 @@ In the cloud setup, the actuator endpoints are disabled by default, and in on-pr
 All actuator endpoints are password-protected and are configured on a separate port, with 10443 as the default value. The port can be overridden by setting the property  
 `--management.server.port=<value>` when starting the Agent application.
 
-#### Security
+### Security
 
 The security username and password can be set by launching the Agent with:  
 `--spring.security.user.name=admin --spring.security.user.password=password` . If not set, the security password is automatically generated by the application.
 
-Check the Agent startup logs to find the generated value :
+Check the Agent startup logs to find the generated value:
 
 ```text
 2019-10-31T12:05:39,442 INFO  [main] UserDetailsServiceAutoConfiguration#  - 
@@ -579,7 +641,7 @@ Check the Agent startup logs to find the generated value :
 Using generated security password: <password-value>
 ```
 
-#### Endpoints
+### Endpoints
 
 The following list shows the available actuator endpoints for the Agent application:
 
@@ -595,23 +657,46 @@ The following list shows the available actuator endpoints for the Agent applicat
 | metrics `/agent/actuator/metrics` | no | Real-time metrics. | GET | `--management.endpoint.metrics.enabled=true` |
 | prometheus `/agent/actuator/prometheus` | no | Prometheus scrapping endpoint. | GET | `--management.endpoint.prometheus.enabled=true` |
 
-Note: Paths above are relative to the management URL:  
-[https://agent-server.symphony.com:10443](https://agent-server.symphony.com:10443/)
+{% hint style="info" %}
+Note: 
 
-### Logging
+Paths above are relative to the management URL[: https://agent-server.symphony.com:10443](https://agent-server.symphony.com:10443/)
+{% endhint %}
 
-If you want to set DEBUG log level agent.log, setBashTextBash
+## Logging
 
-```text
+If you want to set DEBUG log level agent.log, set
+
+{% tabs %}
+{% tab title="Bash" %}
+```bash
 -DlogLevel=DEBUG
 ```
+{% endtab %}
 
-#### **Logging Rotation**
+{% tab title="Text" %}
+```
+Note that the above "-D" option must come before "-jar" argument.
+
+If you want to provide a custom logging configuration, include:
+```
+{% endtab %}
+
+{% tab title="Bash" %}
+```
+--logging.cofig=/home/acme/log4j2.xml
+```
+{% endtab %}
+{% endtabs %}
+
+### **Logging Rotation**
 
 By default, the Agent has a logging rotation strategy to keep up to 10 local files, where each file can have a max file size of 100 MB.  
 When a file "rotates", it will be automatically zipped and renamed, adding a number at the end. This number corresponds to how many times the file has already rotated. The numbers will stop being added when the file reaches the limit size.
 
+{% hint style="info" %}
 Note: the Agent has 3 log files: _agent.log_, _agent-error.log_, and _agent-metrics.log_.
+{% endhint %}
 
 Example:
 
@@ -624,23 +709,44 @@ agent-metrics-1.log.gz
 agent-metrics-2.log.gz
 ```
 
-Logging rotation can be customized for all 3 files by setting the following AM options:BashTextBash
+Logging rotation can be customized for all 3 files by setting the following AM options:
 
+{% tabs %}
+{% tab title="Bash" %}
 ```text
 -DmaxLogFiles=20
 -DlogFileSizeLimit="500 MB"
 ```
+{% endtab %}
+
+{% tab title="Text" %}
+```
+With the above, all 3 Agent log files will rotate (independently) when one of them hits 500 MB in "unzipped" size, and will keep up to 20 files, always keeping the latest ones and discarding the older ones if it goes beyond the file limit.
+
+To customize these parameters for each log file independently, the following configuration can be used (it also demonstrates the syntax for sizes):
+
+agent.log:
+```
+{% endtab %}
+
+{% tab title="Bash" %}
+```
+-Dagent.maxLogFiles=5
+-Dagent.logFileSizeLimit="2 GB"
+```
+{% endtab %}
+{% endtabs %}
 
 agent-error.log:
 
-```text
+```bash
 -Derror.maxLogFiles=15
 -Derror.logFileSizeLimit=800MB
 ```
 
 agent-metrics.log:
 
-```text
+```bash
 -Dmetrics.maxLogFiles=20
 -Dmetrics.logFileSizeLimit=500KB
 ```
@@ -658,9 +764,11 @@ The previous command will have the same effect as the command below:
 java -Dagent.maxLogFiles=5 -Dagent.logFileSizeLimit="2 GB" -Derror.maxLogFiles=15 -Derror.logFileSizeLimit=800MB -Dmetrics.maxLogFiles=20 -Dmetrics.logFileSizeLimit=500KB -jar agent.jar --agent.config=<your-agent-config>.yml
 ```
 
+{% hint style="info" %}
 Note: Keep in mind that none of the previous configurations need to be set, this is just for customization purposes.
+{% endhint %}
 
-### Upgrade
+## Upgrade
 
 There is no upgrade path for the Agent. The new Agent can be installed on the same Agent Server as any previous version. Follow these steps to easily upgrade your Agent:
 
@@ -682,7 +790,7 @@ a\) Upgrading from 2.50+ -&gt; Latest version
 * Modify startup.sh to point to a new jar file.
 
 b\) Upgrading from version less than 1.50 -&gt; Latest version  
-Follow the instructions at: [https://rest-api.symphony.com/docs/agent-20-installation](https://rest-api.symphony.com/docs/agent-20-installation)
+Follow the installation instructions above.
 
 1. Start the Agent `./startup.sh &`
 2. Confirm health `curl -k https://localhost:443/agent/v2/HealthCheck`
