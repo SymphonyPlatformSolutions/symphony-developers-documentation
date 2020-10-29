@@ -161,3 +161,8 @@
   * [Good](https://marketplace.blackberry.com/apps/519414651)
   * [MobileIron](https://apps.apple.com/us/app/symphony-com-for-mobileiron/id1138896543)
 
+## Admin Guide
+
+* [Agent 2.X and above Installation](admin-guide/agent-2.x-and-above-installation.md)
+* [Agent Configuration Fields](admin-guide/agent-configuration-fields.md)
+
