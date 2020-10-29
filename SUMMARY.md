@@ -161,8 +161,13 @@
   * [Good](https://marketplace.blackberry.com/apps/519414651)
   * [MobileIron](https://apps.apple.com/us/app/symphony-com-for-mobileiron/id1138896543)
 
-## Admin Guide
+## Admin Guides <a id="admin-guide"></a>
 
-* [Agent 2.X and above Installation](admin-guide/agent-2.x-and-above-installation.md)
-* [Agent Configuration Fields](admin-guide/agent-configuration-fields.md)
+* [Agent Guide](admin-guide/agent-guide/README.md)
+  * [Network Topology](admin-guide/agent-guide/network-topology.md)
+  * [Agent 2.X and above Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
+  * [Agent Configuration Fields](admin-guide/agent-guide/agent-configuration-fields.md)
+  * [Agent Server High Availability](admin-guide/agent-guide/agent-server-high-availability.md)
+  * [SBE x Agent Compatibility Matrix](admin-guide/agent-guide/sbe-x-agent-compatibility-matrix.md)
+  * [Agent Diagnostic Tool](admin-guide/agent-guide/agent-diagnostic-tool.md)
 
