@@ -8,7 +8,7 @@ In order to create a bot and begin your development journey, you must first crea
 
 ## Create a Bot User
 
-1. Navigate to your Symphony admin console for your Pod \(for example, https://mycompany.symphony.com/?admin\) and login with your credentials.
+1. Navigate to your Symphony admin console for your Pod \(for example, [https://mycompany.symphony.com/?admin\](https://mycompany.symphony.com/?admin\)\) and login with your credentials.
 2. Select '**CREATE AN ACCOUNT**' from the left hand navigation.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.31.28-pm.png)
