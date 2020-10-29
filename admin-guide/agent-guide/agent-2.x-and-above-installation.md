@@ -10,7 +10,7 @@
 Note: Make sure that you have installed the OpenJDK 8 update 161 or later, otherwise, the [Java JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) will also be needed.
 {% endhint %}
 
-### Download
+### Agent Download
 
 Download the Agent package and unzip it into a directory of your choice:
 

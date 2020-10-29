@@ -163,6 +163,7 @@
 
 ## Admin Guides <a id="admin-guide"></a>
 
+* [Change Log](admin-guide/change-log.md)
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)
   * [Agent 2.X and above Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
