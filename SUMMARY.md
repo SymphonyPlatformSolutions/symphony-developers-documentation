@@ -167,10 +167,15 @@
 ## Admin Guides <a id="admin-guide"></a>
 
 * [Change Logs](admin-guide/change-log/README.md)
+  * [20.5 Release \(Current\)](admin-guide/change-log/20.5-release-current.md)
   * [20.4 Release](admin-guide/change-log/20.4-release.md)
   * [20.3 Release](admin-guide/change-log/20.3-release.md)
   * [1.55 Release](admin-guide/change-log/1.55-release.md)
-  * [1.54 Release](admin-guide/change-log/1.54-release.md)
+* [Deprecated Endpoints](admin-guide/deprecated-endpoints/README.md)
+  * [20.5 Deprecated Endpoints](admin-guide/deprecated-endpoints/20.5-deprecated-endpoints.md)
+  * [20.4 Deprecated Endpoints](admin-guide/deprecated-endpoints/20.4-deprecated-endpoints.md)
+  * [20.3 Deprecated Endpoints](admin-guide/deprecated-endpoints/20.3-deprecated-endpoints.md)
+  * [1.55 Deprecated Endpoints](admin-guide/deprecated-endpoints/1.55-deprecated-endpoints.md)
 * [Global Throttling](admin-guide/global-throttling.md)
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)
