@@ -11,6 +11,12 @@ The `textarea` element is a field for multi-line text input, allowing users to e
 | `name` | String | Yes | Identifies the text area. |
 | `placeholder` | String | No | Specifies a short hint that describes the expected value of the text area. |
 | `required` | Boolean | No | If `true`, it specifies that the text area must be filled out before submitting the form. Accepted values; `true` and `false`. |
+| `pattern` | String | No | Regex String to match for input validation |
+| `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+
+{% hint style="info" %}
+For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
+{% endhint %}
 
 ## Rules and Limitations
 

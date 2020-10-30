@@ -33,7 +33,7 @@ Symphony Elements are a library of pre-designed reusable UX components \(text fi
 
 {% page-ref page="available-elements/" %}
 
-#### Symphony Elements x SDKs
+### Symphony Elements x SDKs
 
 With the upgrade to Symphony v20.3, any bot or application that utilizes Elements requires that customers have the Agent upgraded to 2.57.x, and also to confirm the SDK used to build the bot or application supports the new Elements payload. The Symphony-supported SDK versions are:
 
@@ -42,4 +42,8 @@ With the upgrade to Symphony v20.3, any bot or application that utilizes Element
 • NodeJS 1.1.1 or later
 
 For customers who have developed their own SDK or have incorporated a third-party SDK, you must ensure that the SDK supports the modified JSON payload response. This is detailed in the Symphony API Specification located here [https://github.com/symphonyoss/symphony-api-spec/blob/20.3.1/agent/agent-api-public.yaml\#L3643](https://github.com/symphonyoss/symphony-api-spec/blob/20.3.1/agent/agent-api-public.yaml#L3643).
+
+### Symphony Elements with Cards
+
+With Symphony v20.5, the usage of cards with Symphony Elements became possible.
 
