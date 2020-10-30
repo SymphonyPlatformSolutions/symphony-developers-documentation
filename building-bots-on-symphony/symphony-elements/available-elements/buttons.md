@@ -16,6 +16,7 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 | :--- | :--- | :--- | :--- |
 | `name` | String | Yes | Identifies the clicked button. |
 | `type` | String | No  If `type` is not specified, the default value will be `type=”action”` | Indicates whether the button is an `action` button or a `reset` button. When clicked, the action button sends the form information to the datafeed. On the other hand, the reset button resets the form-data to its initial values.  Accepted values: `action` and `reset`. |
+| `class` | String | No | Toggle between new palette of colors: `primary`, `secondary`, `tertiary`, and `destructive`.   |
 
 ## Rules and Limitations
 
