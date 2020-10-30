@@ -166,8 +166,11 @@
 
 ## Admin Guides <a id="admin-guide"></a>
 
-* [Documentation Updates](admin-guide/documentation-updates.md)
-* [Change Log](admin-guide/change-log.md)
+* [Change Logs](admin-guide/change-log/README.md)
+  * [20.4 Release](admin-guide/change-log/20.4-release.md)
+  * [20.3 Release](admin-guide/change-log/20.3-release.md)
+  * [1.55 Release](admin-guide/change-log/1.55-release.md)
+  * [1.54 Release](admin-guide/change-log/1.54-release.md)
 * [Global Throttling](admin-guide/global-throttling.md)
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)

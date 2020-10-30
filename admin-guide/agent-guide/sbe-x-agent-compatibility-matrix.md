@@ -6,7 +6,7 @@ In the following table, we are showing the versions of the Agent and the three l
 Note that not all the versions listed on the table below are currently available. Some of them are still being developed and they will be released according to the release schedule.
 {% endhint %}
 
-To learn more about the changes that have occurred in the latest Agent and SBE versions available, refer to [Change Log](../change-log.md).  
+To learn more about the changes that have occurred in the latest Agent and SBE versions available, refer to [Change Log](../change-log/).  
 To download the latest version of the Agent, refer to [Agent Download](agent-2.x-and-above-installation.md#agent-download).
 
 | SBE product version | SBE version | Agent version |
