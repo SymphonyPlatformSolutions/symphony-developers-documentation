@@ -55,6 +55,7 @@
     * [Person Selector](building-bots-on-symphony/symphony-elements/available-elements/person-selector.md)
     * [Table Select](building-bots-on-symphony/symphony-elements/available-elements/table-select.md)
     * [Alignment of input texts](building-bots-on-symphony/symphony-elements/available-elements/alignment-of-input-texts.md)
+  * [Regular Expressions - Regex](building-bots-on-symphony/symphony-elements/regular-expressions-regex.md)
 * [Bots Best Practices](building-bots-on-symphony/bots-best-practices.md)
 
 ## Building Extension Applications on Symphony
