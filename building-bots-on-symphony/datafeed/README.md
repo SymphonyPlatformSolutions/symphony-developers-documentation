@@ -105,7 +105,6 @@ Notice how each event returned by the datafeed has important metadata and attrib
       <td style="text-align:left"><b>Shared Wall Post</b>
       </td>
       <td style="text-align:left">
-        <p>&lt;b&gt;&lt;/b&gt;</p>
         <p>Generated when either:</p>
         <ul>
           <li>The user in context shares a wall post written by another user.</li>
@@ -182,7 +181,6 @@ Notice how each event returned by the datafeed has important metadata and attrib
       <td style="text-align:left"><b>Connection Requested</b>
       </td>
       <td style="text-align:left">
-        <p>&lt;b&gt;&lt;/b&gt;</p>
         <p>Generated when a connection request is sent, either:</p>
         <ul>
           <li>Sent by the user in context to another user.</li>
@@ -194,7 +192,6 @@ Notice how each event returned by the datafeed has important metadata and attrib
       <td style="text-align:left"><b>Connection Accepted</b>
       </td>
       <td style="text-align:left">
-        <p>&lt;b&gt;&lt;/b&gt;</p>
         <p>Generated when a connection request is accepted, either:</p>
         <ul>
           <li>Sent by the user in context and accepted by another user.</li>
@@ -205,7 +202,9 @@ Notice how each event returned by the datafeed has important metadata and attrib
   </tbody>
 </table>
 
-Navigate [here](https://developers.symphony.com/restapi/docs/real-time-events) for the expanded JSON payload corresponding to each event type.
+For a full list of the  JSON payloads corresponding to each event type, continue here:
+
+{% page-ref page="real-time-events.md" %}
 
 ## Handling Events
 
