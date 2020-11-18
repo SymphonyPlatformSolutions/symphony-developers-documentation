@@ -249,8 +249,10 @@ We pass a default handlebars template, our newly created structured object, and 
 {% endtab %}
 {% endtabs %}
 
-In addition, create a SampleObject class to pass along as a structured object, the object must match the JSON schema provided in the `render()` method:
+In addition, create a SampleObject class in your bot \(app backend\) to pass along as a structured object, the object must match the JSON schema provided in the `render()` method:
 
+{% tabs %}
+{% tab title="command/model/SampleObject.java" %}
 ```java
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -267,6 +269,8 @@ public class SampleObject {
         this.content = content;
     }
 ```
+{% endtab %}
+{% endtabs %}
 
 Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` . The bot will render your message + structured object accordingly:
 
@@ -280,6 +284,8 @@ Note: You may need to navigate to [https://localhost:4000](https://localhost:400
 
 To create a custom renderer, we first need to create a handlebars template within our app frontend. For this example lets create a template called `sample-template.hbs` :
 
+{% tabs %}
+{% tab title="templates/base/sample-template.hbs" %}
 ```markup
 <div>
   <p>Stock Price:   
@@ -293,6 +299,8 @@ To create a custom renderer, we first need to create a handlebars template withi
   </p>
 </div>
 ```
+{% endtab %}
+{% endtabs %}
 
 Import this template and add it to the `CUSTOM_TEMPLATE_NAMES` and `customTemplates` dictionaries:
 
@@ -347,7 +355,9 @@ case ENRICHER_EVENTS.SAMPLE.type:
 
 To see your newly created structured object richly displayed, let's update our bot's code to send a structured object that matches the entity `type` registered with the app. Update the `handle()` function inside the `HelloCommandHandler` class to the following:
 
-```julia
+{% tabs %}
+{% tab title="command/HelloCommandHandler.java" %}
+```java
 public void handle(BotCommand command, SymphonyMessage response) {
     List<String> messages = Arrays.asList("Option 1", "Option 2", "Option 3");
     SampleObject sample = new SampleObject("AAPL = $112.56", messages);
@@ -355,6 +365,8 @@ public void handle(BotCommand command, SymphonyMessage response) {
             "com.symphony.ms.template.sample", sample, "1.0");
   }
 ```
+{% endtab %}
+{% endtabs %}
 
 Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` . The bot will render your message + structured object accordingly:
 
