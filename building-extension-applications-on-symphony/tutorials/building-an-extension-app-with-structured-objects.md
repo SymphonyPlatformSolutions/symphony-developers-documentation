@@ -201,7 +201,7 @@ case ENRICHER_EVENTS.HELP_COMMAND.type:
 {% endtab %}
 {% endtabs %}
 
-This statement checks to see if the incoming structured object ID or entity `type` matches the HELP\_COMMAND.type defined in `entities.js`:
+This statement checks to see if the incoming structured object ID or entity `type` matches the `HELP_COMMAND.type` defined in `entities.js`:
 
 {% tabs %}
 {% tab title="services/enrichers/entities.js" %}
@@ -213,11 +213,11 @@ HELP_COMMAND: {
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-Note: The rest of the JSON schemas defined in the entity type dictionaries defined in the `ENRICHER_EVENTS` dictionary are sample data used for the mock server and is outside the scope of this tutorial.
+{% hint style="danger" %}
+Note: The rest of the JSON schemas defined in the entity type dictionaries defined in the `ENRICHER_EVENTS` dictionary are sample data used for the mock server and is outside the scope of this tutorial.  **Only the `type` parameter defined in each object within `entities.js` is used by default.  The rest can be ignored.**   
 {% endhint %}
 
-If there is in fact a match, calls the renderAppMessage\(\) method, passing along the correct JSON schema and templateType \(`SmsRenderer.smsTypes.LIST`\) as parameters:
+If there is in fact a match, the `renderAppMessage()` method is called, passing along the correct JSON schema and templateType \(`SmsRenderer.smsTypes.LIST`\) as parameters:
 
 ## 5.  Rendering the Structured Objects
 
@@ -237,7 +237,7 @@ public void handle(BotCommand command, SymphonyMessage response) {
 {% endtab %}
 {% endtabs %}
 
-We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method. The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client. A default template can be as simple as the following `help-template.hbs` :
+We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method. **The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client.** A default template can be as simple as the following `help-template.hbs` :
 
 {% tabs %}
 {% tab title="templates/help-template.hbs" %}
