@@ -315,14 +315,20 @@ const customTemplates = {
 
 Next, add the `SAMPLE` entity and `type` to the `ENRICHER_EVENTS` in `entities.js` :
 
+{% tabs %}
+{% tab title="services/enrichers/entities.js" %}
 ```javascript
 SAMPLE: {
     type: 'com.symphony.ms.template.sample',
   }
 ```
+{% endtab %}
+{% endtabs %}
 
 Add to the switch statement inside the `render()` function and define the JSON schema to be injected into our `sample-template.hbs` message template:
 
+{% tabs %}
+{% tab title="services/enrichers/general-enricher.js" %}
 ```javascript
 case ENRICHER_EVENTS.SAMPLE.type:
     console.log('inside of sample');
@@ -334,6 +340,8 @@ case ENRICHER_EVENTS.SAMPLE.type:
     );
     break;
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Update your Bot Code:
 
