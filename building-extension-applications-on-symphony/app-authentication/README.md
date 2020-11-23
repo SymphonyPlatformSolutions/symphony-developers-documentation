@@ -151,6 +151,12 @@ This method returns a base-64 encoded JWT token for the user in context, contain
 
 At this point, your authenticated app has access to sensitive user data such as the Symphony user ID, username, email address, displayName, company, location, etc. Extension apps can leverage this user data in order to create user-specific workflows and automations.
 
+{% hint style="danger" %}
+#### Known Issue
+
+Currently, calling `getJwt()` without having completed the application authentication sequence will return Undefined. We will be addressing this in an upcoming release so that userReferenceId will correctly be returned if application authentication has not been completed. In the interim, userReferenceId can still be obtained from the [Register and Connect](https://developers.symphony.com/extension/docs/application-registration-and-connection) methods.
+{% endhint %}
+
 ## 6.  OBO Authentication
 
 If you wish to take this a step further, your app can take the JWT returned in the last step and perform authentication on behalf of \(OBO\) the user in context. If you wish you learn more about OBO authentication and OBO enabled workflows, continue here:

@@ -72,6 +72,8 @@
   * [Building an Extension App with Structured Objects](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-structured-objects.md)
   * [Building an Extension App with UI Toolkit](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md)
 * [Overview of Extension API](building-extension-applications-on-symphony/overview-of-extension-api/README.md)
+  * [Initialization](building-extension-applications-on-symphony/overview-of-extension-api/initialization.md)
+  * [Register and Connect](building-extension-applications-on-symphony/overview-of-extension-api/register-and-connect.md)
   * [Extension API Services](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/README.md)
     * [Service Interface](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/service-interface.md)
     * [Register and Subscribe](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/register-and-subscribe.md)

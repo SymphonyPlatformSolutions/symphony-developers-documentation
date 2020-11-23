@@ -101,16 +101,9 @@ No endpoints were deprecated in 1.55. For a complete list of Agent deprecated en
 ### **General Updates**
 
 * Fixed an issue when sending messages containing forbidden words and characters were not being blocked by DLP policies.
-* 1.55.3 version - the JWT that applications using Symphony Application Authentication use, included a minor change in its API. For more information, refer to [Obtaining User identity ](https://developers.symphony.com/extension/docs/application-authentication#section-obtaining-user-identity)for details on this change.
+* 1.55.3 version - the JWT that applications using Symphony Application Authentication use, included a minor change in its API. For more information, refer to [Obtaining User identity](../building-extension-applications-on-symphony/app-authentication/#5-obtain-user-identity) for details on this change.
 
 #### **Documentation Changes**
 
-For more information, refer to [Documentation Updates](https://developers.symphony.com/restapi/v1.55/docs/documentation-changes).
-
-### Symphony previous releases
-
-For more information about previous releases, please click on the version of your choice in the list below.
-
-* [Main Symphony 1.54 release](https://developers.symphony.com/restapi/v1.54/docs/change-log)
-* [Main Symphony 1.53 release](https://developers.symphony.com/restapi/v1.53/docs/change-log)
+For more information, refer to [Documentation Updates](documentation-updates.md).
 
