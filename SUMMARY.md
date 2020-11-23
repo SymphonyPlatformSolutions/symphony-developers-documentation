@@ -166,8 +166,9 @@
 
 ## Admin Guides <a id="admin-guide"></a>
 
-* [Change Log](admin-guide/1.55-release.md)
-* [Deprecated Endpoints](admin-guide/1.55-deprecated-endpoints.md)
+* [Change Log](admin-guide/change-log.md)
+* [Documentation Updates](admin-guide/documentation-updates.md)
+* [API Change Management](admin-guide/api-change-management.md)
 * [Global Throttling](admin-guide/global-throttling.md)
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)

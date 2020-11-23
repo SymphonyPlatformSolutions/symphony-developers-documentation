@@ -7,5 +7,5 @@
 {% endhint %}
 
 For more information regarding the Agent installation, refer to [Agent 2.X and above Installation](agent-2.x-and-above-installation.md)  
-Visit [Change Log](../1.55-release.md) to know more about Agent changes, new features and other updates.
+Visit [Change Log](../change-log.md) to know more about Agent changes, new features and other updates.
 
