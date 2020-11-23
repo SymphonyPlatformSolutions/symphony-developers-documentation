@@ -47,11 +47,11 @@ The Swagger file for v1.55 of Symphony's REST API is available [here](https://gi
 * Agent 2.55.12
   * Added the `agent.features.elements.enabled` setting that indicates if Symphony Elements are enabled to be sent via the Agent Messaging APIs.
   * The circuit breaker configuration is no longer available.
-  * Added the [Logging Rotation](https://developers.symphony.com/restapi/v1.55/docs/agent-20-installation#section--logging-rotation-) configuration.
+  * Added the Logging Rotation configuration.
 * Agent 2.55.3
   * Fixed an issue when searching for messages using `agent/v1/message/search?query=hashtag:<hashtag>` was not returning results if capital letters were used in the hashtag.
 * Agent 2.55.0
-  * Added DLP support when [updating signals](https://developers.symphony.com/restapi/v1.55/reference-link/update-signal).
+  * Added DLP support when updating signals.
 * Agent 2.54.4
   * Agent improvements on filtering logs by utilities.
   * Fixed the error "Failed to retrieve the entity key" that was being displayed when installing the new Agent.
@@ -96,7 +96,7 @@ The following table contains updates to existing endpoints:
 
 ### **Deprecated Endpoints**
 
-No endpoints were deprecated in 1.55. For a complete list of Agent deprecated endpoints, refer to [Deprecated endpoints](https://developers.symphony.com/restapi/v1.55/docs/deprecated-endpoints).
+No endpoints were deprecated in 1.55. For a complete list of Agent deprecated endpoints, refer to [Deprecated endpoints](agent-guide/agent-deprecated-endpoints.md).
 
 ### **General Updates**
 
