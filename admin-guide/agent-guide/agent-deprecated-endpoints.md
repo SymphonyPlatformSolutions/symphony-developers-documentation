@@ -26,20 +26,20 @@ The following table lists all the Agent deprecated endpoints and their replaceme
 
 | Method | Deprecated endpoint | Replacement endpoint |
 | :--- | :--- | :--- |
-| POST | /agent/v1/datafeed/create | [/agent/v4/datafeed/create](https://developers.symphony.com/restapi/v1.55/docs/create-messagesevents-stream-v4) |
-| GET | /agent/v1/datafeed/.+/read | [/agent/v4/datafeed/{id}/read](https://developers.symphony.com/restapi/v1.55/docs/read-messagesevents-stream-v4) |
-| GET | /agent/v2/datafeed/.+/read | [/agent/v4/datafeed/{id}/read](https://developers.symphony.com/restapi/v1.55/docs/read-messagesevents-stream-v4) |
-| GET | /agent/v1/HealthCheck | [/agent/v2/HealthCheck](https://developers.symphony.com/restapi/v1.55/docs/health-check-v2) |
-| POST | /agent/v1/message/import | [/agent/v4/message/import](https://developers.symphony.com/restapi/v1.55/docs/import-message-v4) |
-| POST | /agent/v2/message/import | [/agent/v4/message/import](https://developers.symphony.com/restapi/v1.55/docs/import-message-v4) |
-| POST | /agent/v1/stream/.+/attachment/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v1.55/docs/create-message-v4) |
-| POST | /agent/v3/stream/.+/attachment/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v1.55/docs/create-message-v4) |
-| GET | /agent/v1/stream/.+/message | [/agent/v4/stream/{sid}/message](https://developers.symphony.com/restapi/v1.55/docs/messages-v4) |
-| GET | /agent/v2/stream/.+/message | [/agent/v4/stream/{sid}/message](https://developers.symphony.com/restapi/v1.55/docs/messages-v4) |
-| POST | /agent/v1/stream/.+/message/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v1.55/docs/create-message-v4) |
-| POST | /agent/v2/stream/.+/message/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v1.55/docs/create-message-v4) |
-| POST | /agent/v3/stream/.+/message/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v1.55/docs/create-message-v4) |
-| POST | /agent/v1/stream/.+/share | [/agent/v3/stream/{sid}/share](https://developers.symphony.com/restapi/v1.55/docs/share-v3) |
+| POST | /agent/v1/datafeed/create | [/agent/v4/datafeed/create](https://developers.symphony.com/restapi/v20.4/docs/create-messagesevents-stream-v4) |
+| GET | /agent/v1/datafeed/.+/read | [/agent/v4/datafeed/{id}/read](https://developers.symphony.com/restapi/v20.4/docs/read-messagesevents-stream-v4) |
+| GET | /agent/v2/datafeed/.+/read | [/agent/v4/datafeed/{id}/read](https://developers.symphony.com/restapi/v20.4/docs/read-messagesevents-stream-v4) |
+| GET | /agent/v1/HealthCheck | [/agent/v2/HealthCheck](https://developers.symphony.com/restapi/v20.4/docs/health-check-v2) |
+| POST | /agent/v1/message/import | [/agent/v4/message/import](https://developers.symphony.com/restapi/v20.4/docs/import-message-v4) |
+| POST | /agent/v2/message/import | [/agent/v4/message/import](https://developers.symphony.com/restapi/v20.4/docs/import-message-v4) |
+| POST | /agent/v1/stream/.+/attachment/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v20.4/docs/create-message-v4) |
+| POST | /agent/v3/stream/.+/attachment/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v20.4/docs/create-message-v4) |
+| GET | /agent/v1/stream/.+/message | [/agent/v4/stream/{sid}/message](https://developers.symphony.com/restapi/v20.4/docs/messages-v4) |
+| GET | /agent/v2/stream/.+/message | [/agent/v4/stream/{sid}/message](https://developers.symphony.com/restapi/v20.4/docs/messages-v4) |
+| POST | /agent/v1/stream/.+/message/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v20.4/docs/create-message-v4) |
+| POST | /agent/v2/stream/.+/message/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v20.4/docs/create-message-v4) |
+| POST | /agent/v3/stream/.+/message/create | [/agent/v4/stream/{sid}/message/create](https://developers.symphony.com/restapi/v20.4/docs/create-message-v4) |
+| POST | /agent/v1/stream/.+/share | [/agent/v3/stream/{sid}/share](https://developers.symphony.com/restapi/v20.4/docs/share-v3) |
 | POST | /agent/v1/util/obsolete | No replacement endpoint |
 | /agent/v1/datafeed/create | /agent/v4/datafeed/create |  |
 
