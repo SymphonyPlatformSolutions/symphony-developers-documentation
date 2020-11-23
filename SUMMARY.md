@@ -177,6 +177,7 @@
   * [20.3 Deprecated Endpoints](admin-guide/deprecated-endpoints/20.3-deprecated-endpoints.md)
   * [1.55 Deprecated Endpoints](admin-guide/deprecated-endpoints/1.55-deprecated-endpoints.md)
 * [Global Throttling](admin-guide/global-throttling.md)
+* [Updating User Apps](admin-guide/updating-user-apps.md)
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)
   * [Agent 2.X and above Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
