@@ -11,8 +11,6 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
 
 | SBE product version | SBE version | Agent version |
 | :--- | :--- | :--- |
-| 20.5.x | 1.59.x | 2.59.x 2.58.x - Deprecated 2.57.x 2.56.x - Deprecated 2.55.x |
-| 20.4.x | 1.58.x | 2.58.x 2.57.x 2.56.x - Deprecated 2.55.x - Compatible only if not using Symphony Elements |
 | 20.3.x | 1.57.x | 2.57.x 2.56.x - Deprecated 2.55.x - Compatible only if not using Symphony Elements 2.54.4 - Compatible only if not using Symphony Elements |
 | 20.2.x - Deprecated | 1.56.x - Deprecated | 2.56.x - Deprecated 2.55.18 - Deprecated 2.54.4 - Deprecated |
 | R55 | 1.55.x | 2.55.x 2.54.x 2.53.x |
