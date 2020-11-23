@@ -55,6 +55,10 @@ SYMPHONY.remote.hello().then((data) => {
   }
 ```
 
+For more information on initializing your extension applications, continue here:
+
+{% page-ref page="../overview-of-extension-api/initialization.md" %}
+
 ### Connect:
 
 Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
@@ -66,6 +70,10 @@ SYMPHONY.application.connect(
       [`${APP_ID}:app`],
     )
 ```
+
+For more information on registering and connecting your extension application, continue here:
+
+{% page-ref page="../overview-of-extension-api/register-and-connect.md" %}
 
 ## 2.  Authentication
 
