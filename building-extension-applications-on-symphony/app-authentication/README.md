@@ -120,6 +120,12 @@ Once subscribed, you app can leverage the `getJwt()` method as follows:
 extendedUserInfoService.getJwt()
 ```
 
+{% hint style="warning" %}
+#### Deprecated Field
+
+The `username` field has been changed in version 1.55.3, it now returns &lt;email address&gt; instead of &lt;Symphony username&gt;. Please note that this change has been done to help the transition for Applications that were relying on the username field and that the username field will be entirely removed in an upcoming version.
+{% endhint %}
+
 This method returns a base-64 encoded JWT token for the user in context, containing the following data when decoded:
 
 {% tabs %}
