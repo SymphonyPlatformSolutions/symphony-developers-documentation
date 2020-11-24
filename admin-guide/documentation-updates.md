@@ -4,40 +4,24 @@ Our documentation is continually updated with new topics, and corrections or cla
 
 Also, visit the [Change Log](change-log.md) to know more about the major Symphony updates.
 
-## Documentation changes - 1.55 version
-
-This section contains the main changes that occurred in the 1.55 version of the documentation.
-
-### **New API References**
-
-The following list shows the endpoints that have been added to the [API Reference](https://rest-api.symphony.com/reference) documentation.
-
-* [Unassign User Disclaimer](https://developers.symphony.com/restapi/v1.55/reference-link/unassign-user-disclaimer): Unassigns a disclaimer from a user.
-* [List User Groups](https://developers.symphony.com/restapi/v1.55/reference-link/list-user-groups): List user groups matching a set of filters.
-* [Get a User Group](https://developers.symphony.com/restapi/v1.55/reference-link/get-a-user-group): Returns a user group.
-* [Create a User Group](https://developers.symphony.com/restapi/v1.55/reference-link/create-a-user-group): Creates a user group.
-* [Update a User Group](https://developers.symphony.com/restapi/v1.55/reference-link/update-a-user-group): Updates a user group information.
-* [List Assignments](https://developers.symphony.com/restapi/v1.55/reference-link/list-assignments): Lists assignments of a group.
-* [List Group Assignments](https://developers.symphony.com/restapi/v1.55/reference-link/list-group-assigments): Lists group assignments for a user.
-* [Update a Group](https://developers.symphony.com/restapi/v1.55/reference-link/update-a-group): Assigns or updates the assignment of a user to a group.
-* [List Memberships](https://developers.symphony.com/restapi/v1.55/reference-link/list-memberships): List memberships of a group.
-* [List Group Memberships](https://developers.symphony.com/restapi/v1.55/reference-link/list-group-memberships): Filters and lists group memberships for a user.
-* [Add Group Memberships](https://developers.symphony.com/restapi/v1.55/reference-link/add-group-memberships): Add multiple members to a group.
-* [Update a User Membership](https://developers.symphony.com/restapi/v1.55/reference-link/update-a-user-membership): Add or update a user's membership within a group.
-* [Unassign User Disclaimer](https://developers.symphony.com/restapi/v1.55/reference-link/unassign-user-disclaimer): Unassigns a disclaimer from a user.
+### Documentation Changes 20.6 \(1.60\)
 
 ### **General updates**
 
 The following list shows the pages that have been updated:
 
-* [Agent 2.X and above Installation](agent-guide/agent-2.x-and-above-installation.md):
-  * Added information about the Firehose configuration.
-  * Added information on how to configure private keys for authentication using RSA.
-  * Added information regarding deprecated endpoints.
-  * Added information on how to configure TLS 1.2.
-  * Improvements in the _Launch the Setup Script_ section.
-  * Added instructions on how to update the Agent.
-* [List IB Group Members](https://developers.symphony.com/restapi/v1.55/reference-link/list-ib-group-members): Included the 404 response - Not Found.
-* [Remove Role](https://developers.symphony.com/restapi/v1.55/reference-link/remove-role): Added new "bodies" to the 400 response - Bad Request.
-* [User Apps](https://developers.symphony.com/restapi/v1.55/reference-link/user-apps) and [Update User Apps](https://developers.symphony.com/restapi/v1.55/reference-link/update-user-apps): Endpoints moved from the ADMIN USER MANAGEMENT section to the APPLICATION ENTITLEMENTS section.
+* Symphony Elements:
+  * [Available Components](../building-bots-on-symphony/symphony-elements/available-elements/): added information about using Elements with cards.
+  * Text Field, Text Area and Masked Text Field: added the new `pattern` and `pattern-error-message`attributes. Also, the gif images have been updated in order to show the new design of the error messages.
+  * Buttons: added the new `class` attribute which allows bot developers to use the new palette of colors `primary`, `secondary`, `tertiary` and `destructive`. The classes `primary-destructive` and `secondary-destructive` are however deprecated.
+  * [Regular Expressions - Regex](../building-bots-on-symphony/symphony-elements/regular-expressions-regex.md): new page added in order to help bot developers to securely validate input data. This page describes what a regular expression is \(shortened as regex\) and how to add the validation to Symphony Elements.
+
+#### **API References**
+
+Updates on our [API Reference](https://rest-api.symphony.com/reference) documentation.
+
+* [Update User Avatar](https://developers.symphony.com/restapi/v20.6/reference#update-user-avatar): added a note stating that this API allows the current user also to update its own avatar.
+* [User Lookup](https://developers.symphony.com/restapi/v20.6/reference#users-lookup-v3): added the new `active` parameter.
+* [Demote Owner](https://developers.symphony.com/restapi/v20.6/reference#demote-owner): changed the API payload sample.
+* [Datafeed 2.0](https://developers.symphony.com/restapi/v20.6/reference#introduction-to-datafeed-1): added documentation regarding Datafeed 2.0 including a small introduction and the endpoints added in the agent to support it.
 
