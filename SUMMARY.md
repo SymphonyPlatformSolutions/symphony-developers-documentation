@@ -109,7 +109,7 @@
       * [UI Toolkit](developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md)
   * [Symphony BDK Generator](developer-tools/developer-tools/yeoman-generator.md)
   * [Postman](developer-tools/developer-tools/postman.md)
-  * [MessageML Renderer Tool](https://renderer-tool.app.symphony.com/)
+  * [Live Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
     * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
     * [Form Elements](developer-tools/developer-tools/ui-style-guide/forms.md)
