@@ -72,7 +72,7 @@ bot:
 {% endtab %}
 {% endtabs %}
 
-By the default this configuration file is generated, however you can customize this file to meet the specifications of your symphony environment. The following configuration properties can be added to this `config.yaml` file:
+By default this configuration file is generated, however you can customize this file to meet the specifications of your symphony environment. The following configuration properties can be added to this `config.yaml` file:
 
 #### Basic Configuration Structure
 
