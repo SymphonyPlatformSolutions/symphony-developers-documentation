@@ -66,8 +66,6 @@ To get started using the Symphony Postman collection, continue here:
 
 The MessageML Renderer tool was developed by Symphony to help you to create different messages, view their rendered output, and verify that your message syntax is correct. The tool allows developers to play around with MessageML, PresentationML, and render structured objects in realtime.
 
-To get started developing your own custom Symphony Messages, continue to our MessageML Renderer Tool:
-
 ## UI Style Guide
 
 When building Extension Applications, Symphony provides resources and libraries that allow you to shape the user interface of your applications.
