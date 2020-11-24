@@ -311,7 +311,7 @@ A command-based activity is triggered when a message is sent in an IM, MIM, or C
 ```java
 final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 
-    bdk.activities().register(new SlashCommand("/buy",    // (1)
+    bdk.activities().register(new SlashCommand.slash("/buy",    // (1)
                                                true,        // (2)
                                                context -> { // (3)
 
@@ -328,7 +328,7 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 ```java
 final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 
-    bdk.activities().register(new SlashCommand("/buy" + " (.+)",    // (1)
+    bdk.activities().register(new SlashCommand.slash("/buy" + " (.+)",    // (1)
                                                false,        // (2)
                                                context -> { // (3)
 
