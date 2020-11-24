@@ -13,7 +13,7 @@ Advantages:
 When using deprecated endpoints, a warning header stating that the endpoint is deprecated will be added into each deprecated endpoint response \(Agent and Pod APIs\). An example of a header is: `299 symphony-agent 'The requested endpoint is deprecated. The endpoint that replaces it is: /agent/v2/HealthCheck GET'`
 {% endhint %}
 
-### Deprecated endpoints
+## Deprecated endpoints
 
 By default, the Agent allows the use of deprecated endpoints.  
 Set `agent.endpoints.deprecated.disable` as **true** to disable the use of deprecated endpoints. For more information, refer to [Agent 2.X and above Installation](agent-2.x-and-above-installation.md).
