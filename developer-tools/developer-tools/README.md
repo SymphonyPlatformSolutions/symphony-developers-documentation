@@ -72,7 +72,3 @@ To get started developing your own custom Symphony Messages, continue to our Mes
 
 When building Extension Applications, Symphony provides resources and libraries that allow you to shape the user interface of your applications.
 
-To learn more about Symphony's design libraries, UI theming, and performance considerations, continue here:
-
-{% page-ref page="ui-style-guide/" %}
-
