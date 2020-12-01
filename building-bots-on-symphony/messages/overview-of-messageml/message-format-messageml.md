@@ -73,8 +73,8 @@ MessageML supports the following tags for grouping information within a message:
 | :--- | :--- | :--- |
 | `<p>paragraph</p>` | Paragraph formatting. | \* `class` |
 | `<hr />` | Horizontal rule. | None. |
-| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list. | \* `class` |
-| `<ol>` `<li>list item</li>` `</ol>` | Numbered list. | \* `class` |
+| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list.  Cannot be empty, must contain at least one child `<li>` item. | \* `class` |
+| `<ol>` `<li>list item</li>` `</ol>` | Numbered list.   Cannot be empty, must contain at least one child `<li>` item. | \* `class` |
 | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | \* `class` |
 | `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](../structured-objects.md). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](../../../developer-tools/developer-tools/ui-style-guide/colors.md)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
 
