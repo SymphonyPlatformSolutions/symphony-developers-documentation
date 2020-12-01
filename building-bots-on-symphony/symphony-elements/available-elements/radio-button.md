@@ -20,7 +20,7 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 * The text node of the MessageML will be converted to the `<label>` tag. This will preserve the formatting tags `<i>` and `<b>`, if present.
 * Radio buttons are presented in radio groups \(a collection of radio buttons describing a set of related options\). Only one radio button in a group can be selected at the same time. Note: The radio group must share the same name \(the value of the `name` attribute\) to be treated as a group. Once the radio group is created, selecting any radio button in that group automatically deselects any other selected radio button in the same group.
-* A form can have a maximum of 20 radio buttons within it which means that you can have more than one radio group on a form but the total number of radios cannot be more than 20.
+* A form can have a maximum of 50 radio buttons within it which means that you can have more than one radio group on a form but the total number of radios cannot be more than 50.
 * Once the user has selected a radio option, it can be deselected only by clicking on another radio option. The only way to deselect all the radio options is by clicking the **reset** button.
 
 ## Examples
