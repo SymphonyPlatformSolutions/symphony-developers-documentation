@@ -27,14 +27,14 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 
 ## Rules and Limitations
 
-* By default, action buttons are blue with white outline and text, and should be used for affirmation or confirmation actions.
-* Reset buttons are transparent with blue outline and text, and should be used when the content of the fields need to return to their original state.
+* If `class` is not defined, the action button assumes the `primary` class by default. Action buttons should be used for affirmation or confirmation actions.
+* Reset buttons have the `secondary` class set by default. Reset buttons should be used when the content of the fields need to return to their original state.
 
 ## Examples
 
-![](../../../.gitbook/assets/66f1958-buttons-20.9.gif)
+The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md).
 
-The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
+![](../../../.gitbook/assets/66f1958-buttons-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
