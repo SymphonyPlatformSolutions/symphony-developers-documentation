@@ -4,8 +4,6 @@ Our documentation is continually updated with new topics, and corrections or cla
 
 Also, visit the [Change Log](change-log.md) to know more about the major Symphony updates.
 
-### 
-
 ### Documentation Changes 20.5 \(1.59\)
 
 This section contains the main changes that occurred in the v20.5 version of the documentation.

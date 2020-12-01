@@ -2,8 +2,6 @@
 
 Thank you for using Symphony. This document contains essential information about the changes that occurred in the Agent and in the Public APIs of Symphony.
 
-### 
-
 ### **Symphony 20.5 \(1.59\) - Agent 2.59.0**
 
 #### Swagger
