@@ -51,7 +51,7 @@ The messageML above is rendered as the following:
 
 After completing and submitting the form, the following elements payload is generated and delivered to the bot via the datafeed:
 
-```markup
+```javascript
 {
     "id": "4t8d4K",
     "messageId": "UpUnarQVI3EG4xYxtiShln___oyS8RCmbQ",
