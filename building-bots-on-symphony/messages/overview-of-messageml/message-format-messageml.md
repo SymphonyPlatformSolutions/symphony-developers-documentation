@@ -220,6 +220,14 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 -F 'message=<messageML>Sending attachment via API<img src="data:image/svg+xml;base64,PHN2ZyBpZD0i...DcuMjcsMTYuN="></img></messageML>'
 ```
 
+{% hint style="warning" %}
+### Limit on Image size for Data URL \(base64\)
+
+This feature is intended to be used for small images, such as custom emoji. Our recommendation is that the total size of base64 encoded embedded images do not exceed 25KB per message.
+{% endhint %}
+
+
+
 ## Shorthand Tags
 
 MessageML supports the following tags to embed additional information into messages:
