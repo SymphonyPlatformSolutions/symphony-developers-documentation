@@ -30,15 +30,13 @@ To download the Agent, click [here](https://storage.googleapis.com/sym-platform/
 For a list of Agent x SBE compatibilities, click [here](https://developers.symphony.com/restapi/docs/agent-compatibilities).
 {% endhint %}
 
-\*\*\*\*
-
-#### **New APIs**
+### **New APIs**
 
 The following API endpoint has been created:
 
 * [Suspend User Account](https://developers.symphony.com/restapi/v20.7/reference#suspend-user-v1)
 
-#### **Updated APIs**
+### **Updated APIs**
 
 The following API endpoints were updated:
 
@@ -47,17 +45,17 @@ The following API endpoints were updated:
   * [Update Application Entitlements](https://developers.symphony.com/restapi/v20.7/reference#update-application-entitlements): override user specific settings when global settings are updated for a given pod and a given application.
   * [Update User Apps](https://developers.symphony.com/restapi/v20.7/reference#update-user-apps) now allows partial updates.
 
-#### **Deprecated APIs**
+### **Deprecated APIs**
 
 No API endpoints were deprecated in Symphony version 20.7.
 
-#### **General Updates**
+### **General Updates**
 
 * Symphony Elements:
   * [Available Components](../building-bots-on-symphony/symphony-elements/available-elements/): added information about using Elements with cards.
   * Embedded Chat Modules \(ECM\) now supports Elements
 
-#### **Documentation Changes**
+### **Documentation Changes**
 
 For more information, refer to [Documentation Updates](documentation-updates.md).
 
