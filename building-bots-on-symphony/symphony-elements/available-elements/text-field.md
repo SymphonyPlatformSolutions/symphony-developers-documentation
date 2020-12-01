@@ -11,15 +11,11 @@ Text input fields are the most common elements in a form. Symphony provides two 
 | `name` | String | Yes | Identifies the text field. |
 | `placeholder` | String | No | Specifies a short hint that describes the expected value of the input field. |
 | `required` | Boolean | No | If `true`, it specifies that the input field must be filled out before submitting the form. Accepted values; `true` and `false`. |
-| `masked` | Boolean | No | If `true`, it creates a masked text field with hide/show options when its value is "true". For more information, refer to [Masked Text Field](https://developers.symphony.com/symphony-developer/docs/masked). |
+| `masked` | Boolean | No | If `true`, it creates a masked text field with hide/show options when its value is "true". For more information, refer to [Masked Text Field](masked-text-field.md). |
 | `maxlength` | Integer | No | The `maxlength` attribute allows you to specify a maximum number of characters that the user can input. |
 | `minlength` | Integer | No | The `minlength` attribute allows you to specify a minimum number of characters that the user can input. |
 | `pattern` | String | No | Regex String to match for input validation |
 | `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
-
-{% hint style="info" %}
-For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
-{% endhint %}
 
 ## Using Input Validation
 

@@ -14,10 +14,6 @@ The `textarea` element is a field for multi-line text input, allowing users to e
 | `pattern` | String | No | Regex String to match for input validation |
 | `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
 
-{% hint style="info" %}
-For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
-{% endhint %}
-
 ## Using Input Validation
 
 With Symphony v20.6, bot developers can use Regex to validate `text fields` and `text areas` using the `pattern` and `pattern-error-message` attributes.  
