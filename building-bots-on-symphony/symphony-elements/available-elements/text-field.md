@@ -15,7 +15,7 @@ Text input fields are the most common elements in a form. Symphony provides two 
 | `maxlength` | Integer | No | The `maxlength` attribute allows you to specify a maximum number of characters that the user can input. |
 | `minlength` | Integer | No | The `minlength` attribute allows you to specify a minimum number of characters that the user can input. |
 | `pattern` | String | No | Regex String to match for input validation |
-| `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `pattern-error-message` | String | If `pattern` is defined, the `pattern-error-message` attribute is mandatory. | Error message returned to user if `pattern` parameter matches user input |
 
 ## Using Input Validation
 
@@ -24,9 +24,9 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 ## Rules and Limitations
 
-* The text field has a max number of 128 characters. For larger texts, use Text Area.
+* The text field has a max number of 128 characters. For larger texts, use [Text Area](text-area.md).
 * The text field cannot have children tags but it can have a default text \(initial value\) between the `<text-field></text-field>` tags. See Examples below for more details.
-* Text fields are grouped at a max of 4 per row, depending on the screen size. For more information, refer to Alignment of input texts.
+* Text fields are grouped at a max of 4 per row, depending on the screen size. For more information, refer to [Alignment of input texts](alignment-of-input-texts.md).
 * You can add a **default text** in your text field by including it between the `<text-field></text-field>` tags. Note that unlike the `placeholder` text, the **default text** will be sent with the form if not edited by the user. Refer to Examples for more information.
 * Input Validation - Pattern: the max length for all attributes is set to 256.
 

@@ -14,8 +14,8 @@ In the JSON data, you can configure the `type` of the Element that will be added
 
 | Attribute | Type | Required? | Description |
 | :--- | :--- | :--- | :--- |
-| `type` | String | Yes | The `type`attribute determines if a table will display a special column with [Buttons](https://developers.symphony.com/symphony-developer/docs/button) or [Checkboxes](https://developers.symphony.com/symphony-developer/docs/checkbox) within it.  Note that a table can have only one of the two possible `types`, being **button** or **checkbox**. For more information, see the [Example](https://developers.symphony.com/symphony-developer/docs/tables#section-examples) below. |
-| `position` | String | Yes | This attribute indicates how the buttons and checkboxes must be aligned inside the column. Accepted values: `left` or `right`. For more information, refer to the [JSON example](https://developers.symphony.com/symphony-developer/docs/tables#section-examples) below. |
+| `type` | String | Yes | The `type`attribute determines if a table will display a special column with [Buttons](buttons.md) or [Checkboxes](checkbox.md) within it.  Note that a table can have only one of the two possible `types`, being **button** or **checkbox**. For more information, see the Example below. |
+| `position` | String | Yes | This attribute indicates how the buttons and checkboxes must be aligned inside the column. Accepted values: `left` or `right`. For more information, refer to the JSON example below. |
 
 In this example, the table `type` is set as `button` and the `position` is set as `left`.
 

@@ -12,7 +12,7 @@ The `textarea` element is a field for multi-line text input, allowing users to e
 | `placeholder` | String | No | Specifies a short hint that describes the expected value of the text area. |
 | `required` | Boolean | No | If `true`, it specifies that the text area must be filled out before submitting the form. Accepted values; `true` and `false`. |
 | `pattern` | String | No | Regex String to match for input validation |
-| `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `pattern-error-message` | String | If `pattern` is defined, the `pattern-error-message` attribute is mandatory.Error message returned to user if `pattern` parameter matches user input | Definition of the error message to be displayed in case of validation error. |
 
 ## Using Input Validation
 

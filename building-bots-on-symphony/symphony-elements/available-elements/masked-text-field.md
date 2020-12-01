@@ -17,7 +17,7 @@ Use the `maxlength` and `minlength` attributes to specify the maximum and minimu
 | `maxlength` | Integer | No | The `maxlength` attribute allows you to specify a maximum number of characters that the user can input. |
 | `minlength` | Integer | No | The `minlength` attribute allows you to specify a minimum number of characters that the user can input. |
 | `pattern` | String | No | Regex String to match for input validation |
-| `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `pattern-error-message` | String | If `pattern` is defined, the `pattern-error-message` attribute is mandatory. | Error message returned to user if `pattern` parameter matches user input |
 
 ## Using Input Validation
 
