@@ -1,6 +1,6 @@
 # Table Select
 
-The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/b799acad1e4d419ec358e2c745b89c5484b16e65/building-bots-on-symphony/symphony-elements/available-elements/buttons.md) Element.
+The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](buttons.md) Element.
 
 The following image shows three different tables. The first table shows the use of checkboxes to select rows, positioned to the right side of the table. The second example also shows checkboxes, but they are positioned to the left side. The last table shows buttons positioned to the right.
 
@@ -14,14 +14,14 @@ In the JSON data, you can configure the `type` of the Element that will be added
 
 | Attribute | Type | Required? | Description |
 | :--- | :--- | :--- | :--- |
-| `type` | String | Yes | The `type`attribute determines if a table will display a special column with [Buttons](https://developers.symphony.com/symphony-developer/docs/button) or [Checkboxes](https://developers.symphony.com/symphony-developer/docs/checkbox) within it.  Note that a table can have only one of the two possible `types`, being **button** or **checkbox**. For more information, see the [Example](https://developers.symphony.com/symphony-developer/docs/tables#section-examples) below. |
-| `position` | String | Yes | This attribute indicates how the buttons and checkboxes must be aligned inside the column. Accepted values: `left` or `right`. For more information, refer to the [JSON example](https://developers.symphony.com/symphony-developer/docs/tables#section-examples) below. |
+| `type` | String | Yes | The `type`attribute determines if a table will display a special column with [Buttons](buttons.md) or [Checkboxes](checkbox.md) within it.  Note that a table can have only one of the two possible `types`, being **button** or **checkbox**. For more information, see the Example below. |
+| `position` | String | Yes | This attribute indicates how the buttons and checkboxes must be aligned inside the column. Accepted values: `left` or `right`. For more information, refer to the JSON example below. |
 
 In this example, the table `type` is set as `button` and the `position` is set as `left`.
 
 Note that the [FreeMarker](https://freemarker.apache.org/) template is being used to create the messageML that is rendering the Table.
 
-![](../../../.gitbook/assets/bb3bd44-table.gif)
+![](../../../.gitbook/assets/4e6284f-table-20.9.gif)
 
 {% tabs %}
 {% tab title="FreeMarker Template" %}

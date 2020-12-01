@@ -1,6 +1,6 @@
 # Text Field
 
-Text input fields are the most common elements in a form. Symphony provides two types of elements for text input fields: Text fields are for a single-line input; and [Text area](text-area.md) is for multi-line input.
+Text input fields are the most common elements in a form. Symphony provides two types of elements for text input fields: [Text fields](text-field.md) are for a single-line input; and [Text area](text-area.md) is for multi-line input.
 
 ![](../../../.gitbook/assets/0706421-text-area.jpg)
 
@@ -19,9 +19,10 @@ Text input fields are the most common elements in a form. Symphony provides two 
 | `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
 | `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Text Field Element. Available from Symphony v20.8 and above. |
 
-{% hint style="info" %}
-For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
-{% endhint %}
+## Using Input Validation
+
+With Symphony v20.6, bot developers can use Regex to validate `text fields` and `text areas` using the `pattern` and `pattern-error-message` attributes.  
+For more information and examples, refer to [Regular Expressions - Regex](../regular-expressions-regex.md).
 
 ## Rules and Limitations
 

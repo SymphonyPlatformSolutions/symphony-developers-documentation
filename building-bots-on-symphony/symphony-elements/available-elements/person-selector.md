@@ -88,8 +88,8 @@ The Person Selector element supports multi-user selection which means that you c
 {% endtabs %}
 
 {% hint style="info" %}
-### Note
+### User ID
 
-The result returned by the datafeed for the selected users is an array of usereIds, which is an array of long.  
+The result returned by the datafeed for the selected users is an array of user Ids, which is an array of `long`.  
 {% endhint %}
 
