@@ -18,6 +18,8 @@ Use the `maxlength` and `minlength` attributes to specify the maximum and minimu
 | `minlength` | Integer | No | The `minlength` attribute allows you to specify a minimum number of characters that the user can input. |
 | `pattern` | String | No | Regex String to match for input validation |
 | `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
+| `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above. |
 
 {% hint style="info" %}
 For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
@@ -34,16 +36,23 @@ For more information of pattern matching and input validation, see our guide on 
 
 The masked text field element is presented as a single-line text field whose characters are masked by dot \(•\) symbols. On the right side of the input, there is a link button called "show". When clicked, this link shows the entered characters. Note that after having displayed the characters, the link changes back to "hide".
 
-![](../../../.gitbook/assets/ff9293c-captured_4.gif)
+![](../../../.gitbook/assets/5a1118a-masked-text-fields-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
   <form id="form_id">
-    <text-field name="auth_key" placeholder="Insert your authentication key" required="true" masked="true" minlength="3" maxlength="40"></text-field>
-    <button type="reset">Reset</button>
-    <button name="example-button" type="action">Submit</button>    
+    <h2>masked text-fields</h2>
+      <text-field masked="true" name="init">With initial value</text-field>
+      <text-field masked="true" name="placeholder" placeholder="Only Placeholder"></text-field>
+      <text-field masked="true" name="noreq" placeholder="Not required"></text-field>
+      <text-field masked="true" name="req" required="true" placeholder="Required"></text-field>
+      <text-field masked="true" name="regex" pattern="^[a-zA-Z]{3,3}$" pattern-error-message="My error message - must contain exactly 3 letters">Regex</text-field>
+      <text-field masked="true" name="min" placeholder="With min length" minlength="3"></text-field>
+      <text-field masked="true" name="label" label="My Label">With Label</text-field>
+      <text-field masked="true" name="tooltip" title="My Tooltip\n With a second line">With Tooltip</text-field>
+      <button name="maskedtext-field">Submit</button>
   </form>
 </messageML>
 ```
@@ -51,36 +60,47 @@ The masked text field element is presented as a single-line text field whose cha
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                "action": "example-button",
-                "auth_key": "Byx*kjuygb#hghg265763"
+[
+    {
+        "id": "q6eUgG",
+        "messageId": "NowSKCnJJBdPOXQyoPQg8X___pQDVWaBbQ",
+        "timestamp": 1563312167294,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "actionStream": {
+                    "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA"
+                },
+                "formStream": {
+                    "streamId": "YuK1c2y2yuie6+UfQnjSPX///pQEn69idA=="
+                },
+                "formMessageId": "5iSJ+faXx/23Jkehx3lpSn///pQDVedXdA==5587",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "maskedtext-field",
+                    "init": "",
+                    "placeholder": "",
+                    "noreq": "",
+                    "req": "test",
+                    "regex": "Reg",
+                    "min6": "abc",
+                    "label": "With Label",
+                    "tooltip": "With Tooltip"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}

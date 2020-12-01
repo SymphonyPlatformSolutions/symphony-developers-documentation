@@ -13,6 +13,8 @@ The `textarea` element is a field for multi-line text input, allowing users to e
 | `required` | Boolean | No | If `true`, it specifies that the text area must be filled out before submitting the form. Accepted values; `true` and `false`. |
 | `pattern` | String | No | Regex String to match for input validation |
 | `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
+| `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above. |
 
 {% hint style="info" %}
 For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
@@ -25,18 +27,22 @@ For more information of pattern matching and input validation, see our guide on 
 
 ## Examples
 
-The following example shows a text area being used. Note that we have a **placeholder text** \("Your name"\) and also a **default text** \("My name is"\) which was included between the `<textarea></textarea>` tags.
+The following example shows a text area being used.  
+At the top of the Text Area, you can see a text and a tooltip icon, added using the `label` and the `title` attributes respectively.  
+Then, we have a **placeholder text** \("Your opinion here"\) and a **default text** \("In my opinion"\) which was included between the `<textarea></textarea>` tags.  
+Also, an input validation was added in order to prohibit the use of the word "badword".
 
-![](../../../.gitbook/assets/de049ef-taext_area.gif)
+![](../../../.gitbook/assets/7280159-textareas-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
   <form id="form_id">
-    <textarea name="id" placeholder="Your name" required="true">My name is</textarea>
-    <button type="reset">Reset</button>  
-    <button name="example-button" type="action">Submit</button>      
+    <h2>textareas</h2>
+      <textarea name="id1" >With initial value</textarea>
+      <textarea name="req" required="true" label="My label" title="My title\nWith second line" pattern="^[a-zA-Z]{3,3}$" pattern-error-message="My error message - must contain exactly 3 letters" placeholder="Required, with a placeholder, a regex, a label, and a tooltip"></textarea>
+      <button name="textarea">Submit</button>
   </form>
 </messageML>
 ```
@@ -44,36 +50,41 @@ The following example shows a text area being used. Note that we have a **placeh
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "id": "my name is John Doe"
+[
+    {
+        "id": "wPptaz",
+        "messageId": "LI4WgwZSDcstpKjyeKvCH3___pQEQvHfbQ",
+        "timestamp": 1563296599584,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "userbot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "actionStream": {
+                    "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA"
+                },
+                "formStream": {
+                    "streamId": "YuK1c2y2yuie6+UfQnjSPX///pQEn69idA=="
+                },
+                "formMessageId": "1P6z5kI6OzkxTKEoKOgWZ3///pQERpkYdA==5338",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "textarea",
+                    "id1": "",
+                    "req": "abc"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}

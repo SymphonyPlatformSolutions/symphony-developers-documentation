@@ -13,6 +13,8 @@ When a user types the person's name, a drop-down will be displayed with the resu
 | `name` | String | Yes | Identifies the person selector |
 | `placeholder` | String | No | Specifies a short hint that describes the expected value of the input field. |
 | `required` | Boolean | No | If `true`, it specifies that the person selector must be filled out before submitting the form, which means that at least one person must be "selected" Accepted values; `true` and `false`. |
+| `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
+| `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above. |
 
 ## Rules and Limitations
 
@@ -20,56 +22,74 @@ The Person Selector element supports multi-user selection which means that you c
 
 ## Examples
 
-![](../../../.gitbook/assets/691d6d3-test.gif)
+![](../../../.gitbook/assets/cdb70b0-person-selectors-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
-<messageML> 
-    <form id="form_id">
-        <person-selector name="awesome-users" placeholder="Search for someone" required="true"/>
-        <button type="reset">Reset</button>  
-        <button name="example-button" type="action">Submit</button> 
-    </form>    
+<messageML>
+  <form id="form_id">
+    <h2>person-selectors</h2>
+      <person-selector name="placeholder" placeholder="My Placeholder"/>
+      <person-selector name="noreq" placeholder="Not required"/>
+      <person-selector name="req" required="true" placeholder="Required"/>
+      <person-selector name="label" label="My Label" placeholder="With Label"/>
+      <person-selector name="tooltip" title="My Tooltip\n With a second line" placeholder="With Tooltip"/>
+      <button name="person-selector">Submit</button>
+  </form>
 </messageML>
 ```
 {% endtab %}
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "awesome-users": [
+[
+    {
+        "id": "RJ4MqQ",
+        "messageId": "BnjUz2Q26tKI_kQiplv0IX___pP-I0xXbQ",
+        "timestamp": 1563399336872,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890, 
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "actionStream": {
+                    "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA"
+                },
+                "formStream": {
+                    "streamId": "YuK1c2y2yuie6+UfQnjSPX///pQEn69idA=="
+                },
+                "formMessageId": "ojfA0Eei0kSymzDpX72ysX///pP+I7LjdA==5615",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "person-selectors",
+                    "placeholder": [],
+                    "noreq": [],
+                    "req": [
                         7078106482890
-                    ]
+                    ],
+                    "label": [],
+                    "tooltip": []
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+### Note
+
+The result returned by the datafeed for the selected users is an array of usereIds, which is an array of long.  
+{% endhint %}
 

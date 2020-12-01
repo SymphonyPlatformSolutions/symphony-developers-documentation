@@ -18,6 +18,8 @@ Each `<option>` element should have a `value` attribute containing the data valu
 | `value` | String | Yes | Required attribute of the `<option>` tag. It contains the data value to submit to the server when that option is selected. |
 | `selected` | Boolean | Optional | You can include a selected attribute on an `<option>` element to make it selected by default when the page first loads. Accepted values: `true` and `false`. |
 | `data-placeholder` | String | Optional | Text displayed in the dropdown menu before an option is selected. It can be a short hint or a title for the dropdown menu. |
+| `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
+| `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above. |
 
 ## Rules and Limitations
 
@@ -43,25 +45,22 @@ When designing forms with dropdowns within it be aware that there is a chance of
 
 ## Examples
 
-![](../../../.gitbook/assets/acdecc6-editing_a_page.gif)
+![](../../../.gitbook/assets/4914505-dropdown-menus-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
+
 <messageML>
-  <form id="form_01">
-    <select name="example-select" required="true" data-placeholder="Select an option">
-        <option value="opt1">First option</option>
-        <option value="opt2">Second option</option>
-        <option value="opt3">Third option</option>
-    </select>
-    <select name="example-select2" >
-        <option value="opt1">First option</option>
-        <option value="opt2" selected="true">Second option</option>
-        <option value="opt3">Third option</option>
-    </select>
-    <button type="reset">Reset</button> 
-    <button name="example-button" type="action">Submit</button>     
+  <form id="form_id">
+    <h2>dropdown menus</h2>
+      <select name="init"><option value="opt1">Unselected option 1</option><option value="opt2" selected="true">With selected option</option><option value="opt3">Unselected option 2</option></select>
+      <select name="data-placeholder" data-placeholder="Only data-placeholder"><option value="opt1">Unselected option 1</option><option value="opt2">Unselected option 2</option><option value="opt3">Unselected option 3</option></select>
+      <select name="noreq" data-placeholder="Not required"><option value="opt1">First</option><option value="opt2">Second</option><option value="opt3">Third</option></select>
+      <select name="req" required="true" data-placeholder="Required"><option value="opt1">First</option><option value="opt2">Second</option><option value="opt3">Third</option></select>
+      <select name="label" label="My Label" data-placeholder="With Label"><option value="opt1">Unselected option 1</option><option value="opt2">Unselected option 2</option><option value="opt3">Unselected option 3</option></select>
+      <select name="tooltip" title="My Tooltip\n With a second line" data-placeholder="With Tooltip"><option value="opt1">Unselected option 1</option><option value="opt2">Unselected option 2</option><option value="opt3">Unselected option 3</option></select>
+      <button name="dropdown">Submit</button>
   </form>
 </messageML>
 ```
@@ -69,37 +68,45 @@ When designing forms with dropdowns within it be aware that there is a chance of
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "example-select": "opt1",
-                    "example-select2": "opt2"
+[    
+    {
+        "id": "JQgymy",
+        "messageId": "h53CRuPWoInmYbfw2T8dkn___pNK27l7bQ",
+        "timestamp": 1566407149188,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "actionStream": {
+                    "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA"
+                },
+                "formStream": {
+                    "streamId": "YuK1c2y2yuie6+UfQnjSPX///pQEn69idA=="
+                },
+                "formMessageId": "RfqsxcfTHCV08+UcO03HQH///pIqaO6fdA==",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "dropdown",
+                    "init": "opt2",
+                    "data-placeholder": "",
+                    "noreq": "",
+                    "req": "opt2",
+                    "label": "",
+                    "tooltip": ""
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}
