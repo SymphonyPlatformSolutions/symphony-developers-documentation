@@ -4,7 +4,7 @@ The Table Select is not an Element itself but an example of what can be achieved
 
 The following image shows three different tables. The first table shows the use of checkboxes to select rows, positioned to the right side of the table. The second example also shows checkboxes, but they are positioned to the left side. The last table shows buttons positioned to the right.
 
-![](../../../.gitbook/assets/6e5dd13-tables.jpg)
+![](../../../.gitbook/assets/59e85e6-table_select_1%20%283%29.jpg)
 
 ## Building a Table Select with Apache FreeMarker
 
@@ -232,7 +232,8 @@ Note that the [FreeMarker](https://freemarker.apache.org/) template is being use
 ## Rules and Limitations
 
 * The table can be generated without header or footer.
-* If the table `type` is equal to "checkbox", then checkboxes will be added to the rows of the table. Also, a checkbox to select all the rows will be added to the header of the checkboxes column.
+* If the table `type` is equal to "checkbox", then checkboxes will be added to the rows of the table.
+* A checkbox can also be added in the header. Please note, clicking the checkbox in the header will not check all rows' checkboxes.
 * If the table `type` is equal to "button", then buttons will be added to select a specific row of the table.
 * When creating a MessageML using a [Freemarker](https://freemarker.apache.org/) template, you must send a JSON file with it.
 
