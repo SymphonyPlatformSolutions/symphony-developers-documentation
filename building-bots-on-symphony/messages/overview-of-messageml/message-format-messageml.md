@@ -231,17 +231,34 @@ MessageML supports the following tags to embed additional information into messa
 | `<hash tag="label"/>` | Insert "label" as a hashtag. |  |
 | `<cash tag="ticker"/>` | Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a `*` after the $ sign, for example, $\_122450.  `<messageML>` \`&lt;cash tag="$\_122450"/&gt; ```\`` |  |
 | `<chime />` | Send a chime message. No other content is permitted with a `<chime/>` tag. |  |
-| `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<card>` \(see example below\) | Inserts a card. It contains two different sections: • the `<header>` \(always visible\) • the `<body>` \(hidden\) | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<expandable-card>` \(see example below\) | Inserts a card with new styles and multiple levels of display within the card | • `state` \(mandatory\) in `<expandable-card>` can take 3 values: - "collapsed": only header is visible - "cropped": card expanded but the body is cropped - "expanded": card fully expanded  • `variant` \(optional\) in `<body>`: defines the style of the card. It can be either "default" for the default blue style, or "error" for the red error style |
 | `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](../emojis.md). |
 
-An example of a card tag that could be embedded into a message:
+An example of a `card` tag and `expandable-card` tag that could be embedded into a message:
 
+{% tabs %}
+{% tab title="card" %}
 ```markup
 <card iconSrc="url" accent="tempo-bg-color--blue">
     <header>Card Header. Always visible.</header>
     <body>Card Body. User must click to view it.</body>
 </card>
 ```
+{% endtab %}
+
+{% tab title="expandable-card" %}
+```markup
+<expandable-card state="collapsed">
+  <header>Card Header. Always visible.</header>
+  <body variant="error">
+      Card Body. User must click to view it (when the card is sent collapsed/cropped).
+      [it may contain a title, a paragraph, other elements for e.g. data bar and action bar]
+  </body>
+</expandable-card>
+```
+{% endtab %}
+{% endtabs %}
 
 ## Structured Objects and Tags
 

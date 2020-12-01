@@ -45,5 +45,11 @@ For customers who have developed their own SDK or have incorporated a third-part
 
 ### Symphony Elements with Cards
 
-With Symphony v20.5, the usage of cards with Symphony Elements became possible.
+You can now use cards with Symphony Elements. Both the `<header>` and the `<body>` can include them.
+
+* Since Symphony v20.5, basic cards support Symphony Elements.
+* Since Symphony v20.9, a new card is available: the expandable-card.
+
+_For more information regarding Symphony Elements, refer to_ [_Available Elements_](available-elements/)_.  
+For more information regarding the usage of cards within the messageML, please refer to_ [_Message Format - MessageML_](../messages/overview-of-messageml/message-format-messageml.md)\_\_
 
