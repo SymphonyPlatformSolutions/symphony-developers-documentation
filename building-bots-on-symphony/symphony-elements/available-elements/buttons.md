@@ -4,11 +4,18 @@ Buttons are the Symphony element responsible for submitting a form to the bot. A
 
 In addition, some forms can contain reset buttons. These buttons are used to reset a form back to its original state.
 
+With Symphony Elements 2.0, a new palette of colors is available for the Button Element, allowing bot developers to determine how the button will look like. There are four types of buttons: `primary`, `secondary`, `tertiary` and `destructive`. Each of those has different colors to suit different actions \(to convey meaning\). Use the `class` attribute to configure them.
+
+* Primary: use the Primary button when there is a clear primary action on a message. You can use it for the send button, for example.
+* Secondary: use the Secondary button when there are multiple actions of the same importance or some actions with less importance than a single primary action.
+* Tertiary: the Tertiary button is a low prominence option. Use the tertiary button alongside a Primary or as a standalone button with the ability to read more information.
+* Destructive: use the Destructive button when an action results in the removal of an item or if it can result in a potentially serious negative consequence.
+
+![](../../../.gitbook/assets/d18a2da-all_together.jpg)
+
 {% hint style="info" %}
 Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.   
 {% endhint %}
-
-![](../../../.gitbook/assets/e31e35d-buttons-1.png)
 
 ## Attributes
 
@@ -25,9 +32,9 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 
 ## Examples
 
-The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
+![](../../../.gitbook/assets/66f1958-buttons-20.9.gif)
 
-![](../../../.gitbook/assets/ef5f06e-button-1.gif)
+The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
 
 {% tabs %}
 {% tab title="MessageML" %}
@@ -39,6 +46,15 @@ The following example shows the use of the **Reset** and the **Submit** button w
     <button name="submit_button" type="action">Submit</button>    
   </form>
 </messageML>
+```
+{% endtab %}
+
+{% tab title="Using colors" %}
+```markup
+<button name="send-primary" type="action" class="primary">Primary Button</button>
+<button name="send-secondary" type="action" class="secondary">Secondary Button</button>
+<button name="send-tertiary" type="action" class="tertiary">Tertiary Button</button>
+<button name="send-destructive" type="action" class="destructive">Destructive Button</button>
 ```
 {% endtab %}
 
@@ -69,7 +85,7 @@ The following example shows the use of the **Reset** and the **Submit** button w
                 "formId": "form_id",
                 "formValues": {
                     "action": "submit_button",
-                    "text-field": "hello, my name is John Smith"
+                    "init": "hello, my name is John Smith"
                 }
             }
         }

@@ -25,18 +25,19 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 ## Examples
 
-![](../../../.gitbook/assets/03eaefe-radio_button.gif)
+![](../../../.gitbook/assets/b4275a0-radio-buttons-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
   <form id="form_id">
-    <radio name="groupId" value="value01" checked="true">red</radio>
-    <radio name="groupId" value="value02">green</radio>
-    <radio name="groupId" value="value03">blue</radio>
-    <button type="reset">Reset</button>
-    <button name="example-button" type="action">Submit</button>    
+    <h2>radio buttons</h2>
+      <radio name="groupId" value="value01" checked="true">red</radio>
+      <radio name="groupId" value="value02">green</radio>
+      <radio name="groupId" value="value03">blue</radio>
+      <button type="reset">Reset</button>
+      <button name="radio" value="action">Submit</button>
   </form>
 </messageML>
 ```
@@ -44,36 +45,39 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "groupId": "value02"
+[
+    {
+        "id": "chxhFk",
+        "messageId": "BwcQN6Y7RcKxwpWDfcjL2n___pQD2WPebQ",
+        "timestamp": 1563303517217,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+
+        "payload": {
+            "symphonyElementsAction": {
+                "stream": {
+                  "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA",
+                  "streamType": "ROOM"
+                },
+                "formMessageId": "qXF5jpNbJtlulAmjKjn0Pn///pQD2mc/dA==5935",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "radio",
+                    "groupId": "value03"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}
