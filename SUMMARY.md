@@ -107,7 +107,7 @@
       * [Bot SDK](developer-tools/developer-tools/bdk-2.0/bdk-1.0/bot-sdk.md)
       * [CLI Tool](developer-tools/developer-tools/bdk-2.0/bdk-1.0/cli-tool.md)
       * [UI Toolkit](developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md)
-  * [Symphony BDK Generator](developer-tools/developer-tools/yeoman-generator.md)
+  * [Symphony Bot Generator](developer-tools/developer-tools/symphony-bot-generator.md)
   * [Postman](developer-tools/developer-tools/postman.md)
   * [Live Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)

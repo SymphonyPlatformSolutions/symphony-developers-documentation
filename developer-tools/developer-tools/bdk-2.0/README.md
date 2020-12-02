@@ -18,6 +18,11 @@
 
 The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how the BDK 2.0 can help power your Symphony bots and integrations today!
 
+* The BDK 2.0 Github repo can be found here: [https://github.com/SymphonyPlatformSolutions/symphony-api-client-java](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java)
+* The BDK 2.0 Certification course can be found here: [https://learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
+
+
+
 ### Installation
 
 The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Yeoman Generator.

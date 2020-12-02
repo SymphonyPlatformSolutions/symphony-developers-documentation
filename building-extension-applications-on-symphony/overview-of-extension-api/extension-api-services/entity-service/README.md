@@ -145,7 +145,7 @@ If the entity has an `iframeId`, it will be passed in the invocation of the meth
 
 ## iFrame Tag Support
 
-In addition to [ExtensionML](https://symphony-developers.symphony.com/docs/extensionml) tags, `iframe` tags are also supported in the `template` parameter:
+In addition to ExtensionML tags, `iframe` tags are also supported in the `template` parameter:
 
 ```javascript
 helloControllerService.implement({

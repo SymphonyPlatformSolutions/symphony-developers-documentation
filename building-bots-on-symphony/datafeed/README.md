@@ -12,7 +12,7 @@ The Symphony datafeed provides a stream of real-time messages and events for all
 
 Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.
 
-Once a bot has created a datafeed, it has access to all of the [events](https://developers.symphony.com/restapi/docs/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a bot's scope are encrypted by the Agent before reaching your bot. That way the bot is the only one who can access the contents of these events and messages being delivered.
+Once a bot has created a datafeed, it has access to all of the [events](real-time-events.md) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a bot's scope are encrypted by the Agent before reaching your bot. That way the bot is the only one who can access the contents of these events and messages being delivered.
 
 The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
