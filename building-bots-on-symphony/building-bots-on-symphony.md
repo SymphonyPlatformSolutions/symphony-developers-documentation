@@ -24,23 +24,23 @@ Get started building bots using our new [Bot Developer Kit 2.0!](https://github.
 
 Go through our dedicated step by step bot building tutorials to learn how to leverage our development tools and start building bots today!
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+{% page-ref page="tutorials/" %}
 
-## {% page-ref page="tutorials/" %}
+### 4. Authentication
 
 At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
 
 {% page-ref page="authentication/" %}
 
-> > > > > > > master
-
-### 4.  Add Custom Business Logic
+### 5.  Add Custom Business Logic
 
 The last step is to add custom business logic to your Bot. Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
 
 {% page-ref page="overview-of-rest-api/" %}
 
-### 5.  Become a Certified Developer
+### 6.  Become a Certified Developer
 
 Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony skills, technical knowledge, and expertise. Learn more about how you can become a Certified Developer today!
+
+
 
