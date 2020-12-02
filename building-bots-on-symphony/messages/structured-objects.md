@@ -4,7 +4,7 @@ Structured Objects are rich, inline, interactive components of Symphony messages
 
 * Unlike normal message text, these objects are structured and do not need to be parsed to have business logic.
 * Unlike attachments, end-users can view and interact with objects directly from their Symphony client, without having to change context.
-* Structured Objects can be "injected" into Symphony by sending messages using Symphony's [REST API](https://rest-api.symphony.com/docs/rest-api-introduction). 
+* Structured Objects can be "injected" into Symphony by sending messages using Symphony's REST API. 
 * Structured Objects can be rendered richly using [Symphony's Extension API](../../building-extension-applications-on-symphony/overview-of-extension-api/).
 
 ## Prerequisites
@@ -40,7 +40,7 @@ These parameters also support using [Apache FreeMarker templates](http://freemar
 
 ## Message and Object Presentation
 
-Message presentation is represented in [MessageML](https://developers.symphony.com/symphony-developer/docs/messagemlv2) format. For example:HTML
+Message presentation is represented in MessageML format. For example:HTML
 
 ```markup
 <messageML>
