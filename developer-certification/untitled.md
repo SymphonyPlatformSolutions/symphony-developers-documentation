@@ -6,7 +6,7 @@
 
 Becoming a Symphony Certified Developer is a great way to validate your Symphony skills. When you become certified, you join an elite group of developers, and boost your career as demand for Symphony experts continues to grow!
 
-Check out our training center here:
+Check out our training center here
 
 ## **Module 1: Symphony Development Fundamentals**
 
