@@ -12,7 +12,7 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 
 * [**Building Bots on Symphony**](./#building-bots-on-symphony)
 * [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
-* [**Become a Certified Developer**](./#developer-certification)
+* \*\*\*\*[**Become a Certified Developer**](./#become-a-certified-developer)\*\*\*\*
 * [**Developer Tools**](./#developer-tools)
 * [**REST API Reference**](./#symphony-rest-api)
 * [**Extension API Reference**](./#symphony-extension-api)
