@@ -9,7 +9,7 @@ The Symphony REST API is spread out across these components according to the typ
 
 * [SDKs](../../developer-tools/developer-tools/sdks.md)
 * [BDK](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/01be512d5039efcee08612261ab28623b53067c7/developer-tools/developer-tools/bdk-2.0/bdk-1.0)
-* [BDK 2.0 \(Beta\)](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/01be512d5039efcee08612261ab28623b53067c7/developer-tools/developer-tools/bdk-2.0)
+* [BDK 2.0](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/01be512d5039efcee08612261ab28623b53067c7/developer-tools/developer-tools/bdk-2.0)
 {% endhint %}
 
 ## REST API Architecture
