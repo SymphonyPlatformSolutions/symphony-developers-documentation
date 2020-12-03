@@ -24,8 +24,8 @@ function show(id, serviceName, template, data, options)
 | :--- | :--- | :--- |
 | id | String | A unique id for the dialog. |
 | serviceName | String | The name of a local application-implemented service implemented. |
-| template | String | The [extensionML](https://symphony-developers.symphony.com/docs/extensionml) for the dialog content. |
-| data | String | The data for the [extensionML](https://symphony-developers.symphony.com/docs/extensionml). |
+| template | String | The extensionML for the dialog content. |
+| data | String | The data for the extensionML. |
 | options | Object | The data for the extensionML |
 
 ```javascript
@@ -65,8 +65,8 @@ function rerender(id, template, data)
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | id | String | The id of the dialog that should be updated. |
-| template | String | The new [extensionML](https://symphony-developers.symphony.com/docs/extensionml) content to display. |
-| data | String | The data for the [extensionML](https://symphony-developers.symphony.com/docs/extensionml). |
+| template | String | The new extensionML content to display. |
+| data | String | The data for the extensionML. |
 
 ## close\(\)
 

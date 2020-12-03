@@ -42,5 +42,5 @@ commerceService.getProducts('hello:controller').then(function(products) {
 
 This event is fired when the user's product subscriptions are changed.
 
-Use the [listen](https://developers.symphony.com/extension/docs/service-interface-1#listen) method on the service specified in `getProducts()` to subscribe to this event and specify a callback that will be executed when the event is fired. The callback should change the contents/features of your application to match the user's updated product subscriptions.
+Use the [listen](service-interface.md#listen) method on the service specified in `getProducts()` to subscribe to this event and specify a callback that will be executed when the event is fired. The callback should change the contents/features of your application to match the user's updated product subscriptions.
 

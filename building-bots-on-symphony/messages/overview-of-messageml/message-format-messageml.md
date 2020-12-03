@@ -190,7 +190,7 @@ MessageML supports the following tags to embed media into messages:
 
 | Tags | Description | Attributes |
 | :--- | :--- | :--- |
-| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/symphony-developer/docs/messagemlv2#section-sending-images). | _`src`_ `class` |
+| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](message-format-messageml.md#sending-images). | _`src`_ `class` |
 | `<audio/>` | Only supported for chime. See below. | _`src`_ |
 
 ## Sending Images
