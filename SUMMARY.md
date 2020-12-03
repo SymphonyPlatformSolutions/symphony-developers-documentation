@@ -184,5 +184,5 @@
 
 ---
 
-* [Developers Documentation v1](https://developers.symphony.com/)
+* [Developers Documentation v1](https://developers.symphony.com/symphony-developer/docs)
 
