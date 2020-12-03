@@ -93,3 +93,5 @@ Lastly, start up your Spring Application by running your BotApplication.java and
 
 To learn more about how your can add your own commands and business logic, navigate to our Developer Certification where we show you how to build a real-world FX Trading Bot using the Bot SDK and CLI tool:
 
+{% page-ref page="../../../developer-certification/untitled.md" %}
+
