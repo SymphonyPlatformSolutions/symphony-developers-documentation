@@ -17,22 +17,20 @@ Symphony has built numerous tools in order to streamline Symphony Bot Developmen
 {% hint style="success" %}
 #### New Bot Developer Kit 2.0 for Java \(Beta\)
 
-Get started building bots using our new [Bot Developer Kit 2.0!](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/1815782361bce999db95809836b7e6193a383868/developer-tools/developer-tools/bdk-2.0) With an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots on Symphony has never been easier.
+Get started building bots using our new [Bot Developer Kit 2.0!](../developer-tools/developer-tools/bdk-2.0/) With an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots on Symphony has never been easier.
 {% endhint %}
 
 ### 3.  Tutorials
 
 Go through our dedicated step by step bot building tutorials to learn how to leverage our development tools and start building bots today!
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+{% page-ref page="tutorials/" %}
 
-## {% page-ref page="tutorials/" %}
+### 4. Authentication 
 
 At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
 
 {% page-ref page="authentication/" %}
-
-> > > > > > > master
 
 ### 4.  Add Custom Business Logic
 

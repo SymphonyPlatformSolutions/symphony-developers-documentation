@@ -21,7 +21,7 @@ For more information of pattern matching and input validation, see our guide on 
 ## Rules and Limitations
 
 * The text field must be a self-closing tag or have no children.
-* You can add a **default text** in your text area by including it between the `<textarea></textarea>` tags. Note that unlike the `placeholder` text, the **default text** will be sent with the form if not edited by the user. Refer to [Examples](https://developers.symphony.com/symphony-developer/docs/text-area#section-examples) for more information.
+* You can add a **default text** in your text area by including it between the `<textarea></textarea>` tags. Note that unlike the `placeholder` text, the **default text** will be sent with the form if not edited by the user. Refer to Examples for more information.
 
 ## Examples
 

@@ -3,7 +3,7 @@
 Symphony extension apps have the ability to extend various parts of the Symphony client user interface or UI. One common implementation is to add buttons to Symphony's native \#hashtag and $cashtag modules.
 
 {% hint style="info" %}
-Note: This guide is an overview of how to leverage the Extension API in order to extend the native \#hashtag and $cashtag hover cards. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../../developer-tools/developer-tools/ui-style-guide/).
+Note: This guide is an overview of how to leverage the Extension API in order to extend the native \#hashtag and $cashtag hover cards. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).
 {% endhint %}
 
 ## 1.  Subscribe and Register your Extension

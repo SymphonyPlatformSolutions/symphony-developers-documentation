@@ -142,7 +142,7 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within 1-to-1 Instant Messages \(IMs\) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](https://developers.symphony.com/restapi/docs/real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
+Any events that happen within 1-to-1 Instant Messages \(IMs\) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](../../datafeed/real-time-events.md) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -565,7 +565,7 @@ namespace RequestResponse
 {% endtabs %}
 
 {% hint style="info" %}
-Check out our [Overview of MessageML](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/a779e8f2775f38727f8b2cbf05ab7409cd31987b/building-bots-on-symphony/messages/overview-of-messageml.md) guide for more information on message formatting and styling.
+Check out our [Overview of MessageML](../../messages/overview-of-messageml/) guide for more information on message formatting and styling.
 {% endhint %}
 
 Next, launch your bot again and test the new behaviour:
