@@ -160,7 +160,7 @@ At this point, your authenticated app has access to sensitive user data such as 
 {% hint style="danger" %}
 #### Known Issue
 
-Currently, calling `getJwt()` without having completed the application authentication sequence will return Undefined. We will be addressing this in an upcoming release so that userReferenceId will correctly be returned if application authentication has not been completed. In the interim, userReferenceId can still be obtained from the [Register and Connect](https://developers.symphony.com/extension/docs/application-registration-and-connection) methods.
+Currently, calling `getJwt()` without having completed the application authentication sequence will return Undefined. We will be addressing this in an upcoming release so that userReferenceId will correctly be returned if application authentication has not been completed. In the interim, userReferenceId can still be obtained from the [Register and Connect ](../overview-of-extension-api/register-and-connect.md)methods.
 {% endhint %}
 
 ## 6.  OBO Authentication

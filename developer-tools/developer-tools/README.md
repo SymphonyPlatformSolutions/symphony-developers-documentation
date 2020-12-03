@@ -46,13 +46,13 @@ To learn more about the BDK 2.0, continue here:
 
 {% page-ref page="bdk-2.0/" %}
 
-## Yeoman Generator
+## Symphony Bot Generator
 
-The easiest way to begin building Bots and Extension Applications is through the Symphony Yeoman Generator. A command line tool that allows you to generate code scaffolds across the 4 SDKs and the BDK 2.0.
+The easiest way to begin building Bots and Extension Applications is through the Symphony Bot Generator. A command line tool that allows you to generate code scaffolds across the 4 SDKs and the BDK 2.0.
 
-To learn more about how to get started using the Yeoman Generator, continue here:
+To learn more about how to get started using the Symphony Bot Generator, continue here:
 
-{% page-ref page="yeoman-generator.md" %}
+{% page-ref page="symphony-bot-generator.md" %}
 
 ## Postman
 
