@@ -21,20 +21,18 @@ The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library o
 * The BDK 2.0 Github repo can be found here: [https://github.com/SymphonyPlatformSolutions/symphony-api-client-java](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java)
 * The BDK 2.0 Certification course can be found here: [https://learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
 
-
-
 ### Installation
 
-The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Yeoman Generator.
+The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Bot Generator.
 
-1. **Install the Symphony Yeoman Generator:**
+1. **Install the Symphony Bot Generator:**
 
 ```text
 $ npm i -g generator-symphony
 ```
 
 {% hint style="info" %}
-Note: If you already have the Symphony Yeoman Generator installed, upgrade it by running the following: `npm update -g generator-symphony`
+Note: If you already have the Symphony Bot Generator installed, upgrade it by running the following: `npm update -g generator-symphony`
 {% endhint %}
 
 1. **Create a new directory and navigate inside:**
