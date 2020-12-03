@@ -6,6 +6,8 @@ Here you will learn about all the ways to streamline work using integrated bots 
 
 Keep reading to learn about core Symphony concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
 
+For the older version of the Symphony Developers Documentation, continue here:
+
 ## Getting Started
 
 It's time to get started. Navigate to one of the following guides to kick off your developer journey today!
