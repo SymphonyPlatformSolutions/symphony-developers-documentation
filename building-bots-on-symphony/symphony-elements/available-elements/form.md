@@ -14,10 +14,10 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 ![](../../../.gitbook/assets/bot-message-workflow-3x.svg)
 
-1. A Bot sends a message with Symphony Elements in a form.
-2. The message and form is visible to users.  Users interact with the elements.
-3. Once submitted, the data is submitted to the bot via the datafeed.
-4. Bots access the contents of the form submission by reading the datafeed.
+1. **A Bot sends a message with Symphony Elements in a form.**
+2. **The message and form is visible to users.  Users interact with the elements.**
+3. **Once submitted, the data is submitted to the bot via the datafeed.**
+4. **Bots access the contents of the form submission by reading the datafeed.**
 
 ## Form Attributes
 
