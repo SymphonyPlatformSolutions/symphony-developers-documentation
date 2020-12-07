@@ -20,7 +20,7 @@ Note: MessageML is just a subset of PresentationML that makes it easier to const
 
 ## Diagram of Symphony Message Workflow:
 
-![](../../../.gitbook/assets/screen-shot-2020-07-17-at-2.40.29-pm.png)
+![](../../../.gitbook/assets/message-workflow-3x.svg)
 
 The above diagram shows the following:
 
