@@ -16,7 +16,14 @@ Once a bot has created a datafeed, it has access to all of the [events ](./#real
 
 The following illustrates the relationship between your bot, datafeed, and Symphony's components:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow%20%281%29.png)
+![](../../.gitbook/assets/datafeeed-architecture-3x.svg)
+
+1. **Bot creates datafeed via Symphony’s REST API**
+2. **Agent creates secure upstream connection with the Symphony Pod**
+3. **End user sends a message to a bot in a chatroom**
+4. **Pod delivers ‘MESSAGESENT’ event to Agent**
+5. **Bot reads datafeed via REST API**
+6. **Agent delivers ‘MESSAGESENT’ event payload to the Bot**
 
 ## Real-Time Events
 
@@ -24,7 +31,7 @@ Events are delivered to your bot via the datafeed as JSON objects. Each type of 
 
 For example, if a user sends your bot a message, an event of type `'MESSAGESENT'` will be delivered to your bot through the datafeed:
 
-```text
+```javascript
 {
     "id": "9rc1dr",
     "messageId": "Fd4Pc8xO5Vg6hVfzabFe2X___oyM1eXobQ",
@@ -218,7 +225,15 @@ After the `DatafeedEventService` creates/reads from the datafeed API, it categor
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
+![](../../.gitbook/assets/sdk-datafeed-architecture-3x.svg)
+
+1. **Bot creates datafeed via Symphony’s REST API**
+2. **Agent creates secure upstream connection with the Symphony Pod**
+3. **End user sends a message to a bot in a chatroom**
+4. **Pod delivers ‘MESSAGESENT’ event to Agent**
+5. **Bot reads datafeed via REST API**
+6. **Agent delivers ‘MESSAGESENT’ event payload to the Bot**
+7. **Bot routes event to appropriate event listener/handler**
 
 Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
@@ -333,7 +348,15 @@ After the `DatafeedEventService` creates/reads from the datafeed API, it categor
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-4.png)
+![](../../.gitbook/assets/bdk-datafeed-architecture-3x.svg)
+
+1. **Bot creates datafeed via Symphony’s REST API**
+2. **Agent creates secure upstream connection with the Symphony Pod**
+3. **End user sends a message to a bot in a chatroom**
+4. **Pod delivers ‘MESSAGESENT’ event to Agent**
+5. **Bot reads datafeed via REST API**
+6. **Agent delivers ‘MESSAGESENT’ event payload to the Bot**
+7. **Bot routes event to appropriate event listener/handler**
 
 Inside of `handle()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
