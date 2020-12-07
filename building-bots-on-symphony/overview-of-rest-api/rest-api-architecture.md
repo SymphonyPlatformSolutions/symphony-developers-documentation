@@ -32,20 +32,22 @@ Read more about the Key Manager API here:
 
 ## Interacting with the Components
 
-![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.32.58-pm%20%281%29.png)
+![](../../.gitbook/assets/bot-component-interaction-3x.svg)
 
 The three components above all interact with each other in order to create Symphony's secure messaging service. Let's take a closer look at the sequence of API calls a bot must make in order to send and receive encrypted messages on Symphony.
 
-1. First, a bot must authenticate with the Pod. It does so by calling the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).  If successful, the bot will receive a valid Session Token. This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.
-2. Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#key-manager-authenticate). If successful, the bot will receive a valid Key Manager Token. This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.
-3. If the bot wants to send a message, the bot will call the [Create Message endpoint](https://developers.symphony.com/restapi/reference#create-message-v4) on the Agent API and pass both Session Token and Key Manager Token as a part of the request.
-4. At this point, the Agent Server calls the Key Manager and requests the bot's encryption keys.  
-5. Next, the Agent Server validates the bot's Key Manager Token.
-6. If successful, the Agent will encrypt the payload sent by the bot and will forward the encrypted message up to the Pod where it will be routed to the intended user or chatroom.  The message will remain encrypted until it reaches its final destination.
-
 The sequence of API calls and component interaction is illustrated below:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow.png)
+![](../../.gitbook/assets/bot-message-workflow-3x%20%281%29.svg)
+
+*  **1.**  First, a bot must authenticate with the Pod. It does so by calling the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
+* **1a.** If successful, the bot will receive a valid Session Token. This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.
+* **2**.  Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#key-manager-authenticate). 
+* **2a.** If successful, the bot will receive a valid Key Manager Token. This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.
+* **3.**  If the bot wants to send a message, the bot will call the [Create Message endpoint](https://developers.symphony.com/restapi/reference#create-message-v4) on the Agent API and pass both Session Token and Key Manager Token as a part of the request.
+* **4.**  At this point, the Agent Server calls the Key Manager and requests the bot's encryption keys.  
+* **5.**  Next, the Agent Server validates the bot's Key Manager Token.
+* **6.**  If successful, the Agent will encrypt the payload sent by the bot and will forward the encrypted message up to the Pod where it will be routed to the intended user or chatroom.  The message will remain encrypted until it reaches its final destination.
 
 For an even more detailed explanation, enroll in our Developer Certification Program:
 
@@ -59,7 +61,7 @@ For our enterprise customers, the API Agent and Key Manager components are deplo
 
 An visual representation showing an on-premise deployment of Symphony components is shown below:
 
-![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.25.55-pm.png)
+![](../../.gitbook/assets/on-prem-based-deployment-3x.svg)
 
 ## In-Cloud Deployment
 
@@ -67,5 +69,5 @@ For our smaller customers, the API Agent and Key Manager may be co-hosted with t
 
 A visual representation showing an in-cloud deployment of Symphony components is shown below:
 
-![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.40.33-pm.png)
+![](../../.gitbook/assets/cloud-based-deployment-3x.svg)
 
