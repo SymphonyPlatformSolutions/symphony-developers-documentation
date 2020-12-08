@@ -30,6 +30,7 @@
   * [Configure your Bot for SDKs](building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
   * [Configure your Bot for BDK](building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md)
   * [Creating a Bot User](building-bots-on-symphony/configuration/creating-a-bot-user.md)
+  * [Truststores](building-bots-on-symphony/configuration/truststores.md)
   * [Bot Permissions](building-bots-on-symphony/configuration/bot-permissions.md)
 * [Authentication](building-bots-on-symphony/authentication/README.md)
   * [RSA Authentication Workflow](building-bots-on-symphony/authentication/rsa-authentication.md)
