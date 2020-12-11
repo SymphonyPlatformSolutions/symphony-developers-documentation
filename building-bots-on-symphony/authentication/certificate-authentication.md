@@ -10,6 +10,7 @@ This pages describes the implementation of certificate-based Authentication. For
 
 * [Configure your Bot for SDKs](../configuration/configure-your-bot-for-sdks.md)
 * [Configure your Bot for BDK](../configuration/configure-your-bot-for-bdk.md)
+* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)
 {% endhint %}
 
 ## Overview of Certificate-Based Authentication
