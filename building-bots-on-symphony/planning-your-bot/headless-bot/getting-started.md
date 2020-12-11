@@ -22,8 +22,6 @@ Generating and configuring your bot project has never been easier.  Before movin
 
 Once your Bot is configured for BDK 2.0 development head over to our step-by-step chatbot tutorial:
 
-{% page-ref page="../../tutorials/bdk-2.0-tutorials/building-a-headless-bot-using-the-bdk-2.0.md" %}
-
 ## BDK 1.0
 
 The BDK 1.0 or Bot Developer Kit comprises of three development tools for more advanced bot and extension app development.
