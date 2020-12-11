@@ -87,7 +87,7 @@ bdk.activities().register(slash("/gif", false, context -> {
 bdk.activities().register(new GifFormActivity(bdk.messages()));
 ```
 
-Here we are using the Activities API to register a new slash command that listens to "/gif". If an incoming message contains this text, the bot builds a new message template which is provided out of the box for you:
+Here we are using the Activities API to register a new slash command that listens to "/gif".  To learn more about creating your own slash commands or leveraging the Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api). If an incoming message contains \("/gif\), the bot builds a new message template which is provided out of the box for you:
 
 {% tabs %}
 {% tab title="resources/templates/gif.ftl" %}
@@ -120,7 +120,7 @@ Your Bot now needs someway to capture the contents of this form. To do so, your 
 bdk.activities().register(new GifFormActivity(bdk.messages()));
 ```
 
-Open up your `GifFormActivity` class.  Here you will see that `GifFormActivity` extends the `FormReplyActivity` class.  A form activity is only triggered when an end-user replies or submits an _Elements_ form:
+Open up your `GifFormActivity` class.  Here you will see that `GifFormActivity` extends the `FormReplyActivity` class.  A form activity is only triggered when an end-user replies or submits an _Elements_ form.  To learn more about creating your own `FormReplyActivity` classes, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#form-activities).
 
 ```java
 public class GifFormActivity extends FormReplyActivity<FormReplyContext> {
@@ -162,6 +162,8 @@ Inside of the `GifFormActivity` class you will see an `ActivityMatcher method()`
         && "submit".equals(context.getFormValue("action"));
   }
 ```
+
+Through the `context` variable, your bot has valuable information about the context of the form submission such as the form values and the form Id.  To learn more about using `FormReplyActivities`, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#form-activities).
 
 Here the bot is performing a validation check.  If the `formId` of the submitted form is equal to `"gif-category-form"`, then the bot calls the `onActivity` function and executes its business logic.  If there is not a match, the bot does nothing and continues to listen for incoming events.  As we see in our `gif.ftl` template above, the formId matches and the following `onActivity` function executed:
 
