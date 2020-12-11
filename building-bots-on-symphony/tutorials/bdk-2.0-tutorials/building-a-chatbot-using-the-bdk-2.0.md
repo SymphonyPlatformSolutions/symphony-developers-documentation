@@ -12,6 +12,12 @@ BDK 2.0 is a library of tools and intelligent API bindings that provides an ultr
 
 To begin let's open up the code generated for you by the Symphony Bot Generator in your favorite IDE.  Navigate to the `BotApplication.java` file: 
 
+{% hint style="info" %}
+Note:
+
+As you can see above on line 32, we are leveraging the Activities API to register a slash command \("/gif"\).  While this functionality is provided out of the box, we will be building a new datafeed listener to keep it simple at first.  For a more in depth look at the provided activity and Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api).   
+{% endhint %}
+
 {% tabs %}
 {% tab title="BotApplication.java" %}
 ```java
@@ -74,11 +80,7 @@ public class BotApplication {
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-As you can see above on line 32, we are leveraging the Activities API to register a slash command \("/gif"\).  While this is a conversational workflow, we will be building a new datafeed listener to keep it simple at first.  For a more in depth look at the above activity and Activity API, continue on to our tutorial on [Building an Interactive Bot using the BDK 2.0](building-an-interactive-bot-using-the-bdk-2.0.md).   
-{% endhint %}
-
-To build a conversational flow, add the following datafeed listener \(`onMessageSent`\) to your main bot class:
+To build a conversational workflow, add the following datafeed listener \(`onMessageSent`\) to your main bot class:
 
 ```java
 bdk.datafeed().subscribe(new RealTimeEventListener() {
@@ -91,7 +93,7 @@ bdk.datafeed().subscribe(new RealTimeEventListener() {
     });
 ```
 
-The above snippet is listening for all incoming messages that contain "/hello".  To see a full list of datafeed listeners provided by the BDK 2.0, navigate [here](../../../developer-tools/developer-tools/bdk-2.0/#datafeed-management).  If there is match in the message received by the bot, the bot will respond by sending a message to the stream or conversation in context.  Run your bot and let's see it in action:
+The above snippet is listening for all incoming messages that contain "/hello".  To see a full list of datafeed listeners provided by the BDK 2.0, navigate [here](../../../developer-tools/developer-tools/bdk-2.0/#datafeed-management).  If the message received by the bot contains "/hello", the bot will respond by sending a message to the stream or conversation in context.  Run your bot and let's see it in action:
 
 ![](../../../.gitbook/assets/screen-shot-2020-12-11-at-12.21.32-pm.png)
 
@@ -99,5 +101,5 @@ As you can see, it's super easy to access the message, room, and user context fr
 
 ## 3.  Next Steps
 
-Above, we showed you a simple example of how to leverage the BDK 2.0 to build a conversational bot.  To understand more advanced usage of the BDK 2.0 to build complex financial workflows continue on to our dedicated BDK 2.0 Certification course:
+Above, we showed you a simple example of how to leverage the BDK 2.0 to build a conversational bot.  To see more advanced usage of the BDK 2.0 in order to build complex financial workflows, continue on to our dedicated BDK 2.0 Certification course:
 

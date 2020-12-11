@@ -74,7 +74,7 @@ public class BotApplication {
 {% endtab %}
 {% endtabs %}
 
-Let's take a closer look at the interactive workflow already generated for us in our BotApplication.java:
+Let's take a closer look at the code responsible for sending Symphony Elements in our BotApplication.java:
 
 ```java
 // Register a "slash" activity
@@ -87,7 +87,7 @@ bdk.activities().register(slash("/gif", false, context -> {
 bdk.activities().register(new GifFormActivity(bdk.messages()));
 ```
 
-Here we are using the Activities API to register a new slash command that listens to "/gif".  To learn more about creating your own slash commands or leveraging the Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api). If an incoming message contains \("/gif\), the bot builds a new message template which is provided out of the box for you:
+Here we are using the Activities API to register a new slash command that listens to "/gif".  To learn more about creating your own slash commands or how to leverage the Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api). If an incoming message contains \("/gif\), the bot builds a new message template which is provided out of the box for you:
 
 {% tabs %}
 {% tab title="resources/templates/gif.ftl" %}
@@ -109,11 +109,11 @@ Here we are using the Activities API to register a new slash command that listen
 {% endtab %}
 {% endtabs %}
 
-The above freemarker template contains messageML that represents a Symphony Element. To learn more about Symphony Elements, continue [here](../../symphony-elements/). When this message is sent back to the user on line 34, we see the following:
+The above freemarker template contains messageML that represents a Symphony Element. To learn more about Symphony Elements, continue [here](../../symphony-elements/). When a message is sent to the bot containing "/gif" the following Symphony Element is sent to the user in the conversation or stream in context:
 
 ![](../../../.gitbook/assets/screen-shot-2020-12-11-at-1.06.13-pm.png)
 
-Your Bot now needs someway to capture the contents of this form. To do so, your bot registers a new activity, `GifFormActivity`: 
+Bots need someway to capture the data submitted within this form.  Bots can easily do so by registering a new type of Activity class:
 
 ```java
 // Register a "formReply" activity that handles the Gif category form submission
@@ -153,7 +153,7 @@ public class GifFormActivity extends FormReplyActivity<FormReplyContext> {
 }
 ```
 
-Inside of the `GifFormActivity` class you will see an `ActivityMatcher method()`: 
+Inside of the `GifFormActivity` class you will see an `ActivityMatcher matcher()` method: 
 
 ```java
 @Override
@@ -163,9 +163,9 @@ Inside of the `GifFormActivity` class you will see an `ActivityMatcher method()`
   }
 ```
 
-Through the `context` variable, your bot has valuable information about the context of the form submission such as the form values and the form Id.  To learn more about using `FormReplyActivities`, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#form-activities).
+Using the `context` variable, your bot can access information about the context of the form submission including the form values and the form Id.  To learn more about using `FormReplyActivities`, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#form-activities).
 
-Here the bot is performing a validation check.  If the `formId` of the submitted form is equal to `"gif-category-form"`, then the bot calls the `onActivity` function and executes its business logic.  If there is not a match, the bot does nothing and continues to listen for incoming events.  As we see in our `gif.ftl` template above, the formId matches and the following `onActivity` function executed:
+Inside of the `matcher()` function, the bot is performing a validation check.  If the `formId` of the submitted form is equal to `"gif-category-form"`, then the bot calls the `onActivity()` trigger function and executes its business logic.  If there is not a match, the bot does nothing and continues to listen for incoming events.  As we see in our `gif.ftl` template above, the `formId` matches, so the following `onActivity()` trigger function executed:
 
 ```java
 @Override
@@ -184,5 +184,5 @@ Run your bot and execute the following to see it in action:
 
 ## 3.  Next Steps
 
-Above, we showed you a simple example of how to leverage the BDK 2.0 to build an interactive bot.  To understand more advanced usage of the BDK 2.0 to build complex financial workflows continue on to our dedicated BDK 2.0 Certification course:
+Above, we showed you a simple example of how to leverage the BDK 2.0 Symphony Elements to build an interactive bot.  To understand more advanced usage of the BDK 2.0, continue on to our dedicated BDK 2.0 Certification course:
 
