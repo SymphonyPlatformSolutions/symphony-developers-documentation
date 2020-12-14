@@ -18,6 +18,12 @@ $ yo symphony 2.0
 
 This will prompt you with a number of questions about your bot and Pod configuration.  Type in your bot's metadata, use arrows to scroll, and press enter to move on to the next prompt:
 
+{% hint style="info" %}
+### Spring Boot Integration
+
+The BDK 2.0 and Symphony Bot Generator provides an available Spring Boot Integration out of the box.  To bootstrap your bot as a Spring Boot project, select the 'Spring Boot' option when prompted to 'select your framework' when going through the generator's options.    
+{% endhint %}
+
 ```text
 $ yo symphony 2.0
  __   __     ___                 _                 
