@@ -4,17 +4,17 @@ In this step by step tutorial, we will build an FX Watchlist App, an extension a
 
 ## Prerequisites:
 
-Complete the BDK App configuration guide to generate the app frontend and bot backend required to complete this tutorial:
+Complete the BDK 1.0 App configuration guide to generate the app frontend and bot backend required to complete this tutorial:
 
 {% page-ref page="../app-configuration/configure-your-app-for-bdk-development.md" %}
 
 ## 1.  Dive into the Code
 
-In this tutorial, we will be building off the generated app + bot scaffolds provided by the BDK. The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
+In this tutorial, we will be building off the generated app + bot scaffolds provided by the BDK 1.0. The BDK 1.0 comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
 
 ### Initialization:
 
-In order to use the services provided by the Client Extension API, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK:
+In order to use the services provided by the Client Extension API, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK 1.0:
 
 {% tabs %}
 {% tab title="controller.html" %}
@@ -38,7 +38,7 @@ In order to use the services provided by the Client Extension API, your app must
 {% endtab %}
 {% endtabs %}
 
-In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK:
+In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK 1.0:
 
 {% tabs %}
 {% tab title="app.js" %}
@@ -65,7 +65,7 @@ For more information on initializing your extension application, continue here:
 
 ### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK 1.0 in the `app.js` file:
 
 ```javascript
 SYMPHONY.application.connect(
@@ -81,7 +81,7 @@ For more information on connecting your extension application, continue here:
 
 ## 2.  App Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
@@ -116,7 +116,7 @@ Upon completion of the above function, your extension application will be succes
 Let's start by creating a simple React component to ensure that our app is rendering views properly.
 
 {% hint style="info" %}
-Note: The following React implementation is consistent with the Extension App implementation provided by the BDK. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
+Note: The following React implementation is consistent with the Extension App implementation provided by the BDK 1.0. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
 {% endhint %}
 
 Create a package called `fx-watchlist` inside of the pages directory of our generated app project. Subsequently, create a new React component called `FxWatchlist` in this pages directory:

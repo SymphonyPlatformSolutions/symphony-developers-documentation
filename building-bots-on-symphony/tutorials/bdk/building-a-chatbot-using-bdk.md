@@ -2,7 +2,7 @@
 description: Building a Chatbot using the BDK and CLI Tool
 ---
 
-# Build a Chatbot using the BDK
+# Build a Chatbot using the BDK 1.0
 
 ## Prerequisites
 

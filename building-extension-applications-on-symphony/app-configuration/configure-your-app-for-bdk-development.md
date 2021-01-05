@@ -2,7 +2,7 @@
 description: App configuration guide for using the BDK and CLI Tool
 ---
 
-# Configure your App for BDK Development
+# Configure your App for BDK 1.0 Development
 
 The following tutorial is a configuration guide for building authenticated extension apps using the Symphony BDK and the CLI Tool.
 

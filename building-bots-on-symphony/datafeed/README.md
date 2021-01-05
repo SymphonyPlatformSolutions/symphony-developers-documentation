@@ -215,6 +215,56 @@ For a full list of the  JSON payloads corresponding to each event type, continue
 
 ## Handling Events
 
+## Handling Events using the BDK
+
+Similar to the SDKs, the BDK \(Bot Developer Kit\) comes bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
+
+As a bot developer, all you have to do is to implement generic `EventHandler` classes, passing in a given event type as the type parameter for that class.
+
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](./#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class. For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter. Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed.
+
+The following diagram shows the event handling workflow:
+
+![](../../.gitbook/assets/bdk-datafeed-architecture-3x.svg)
+
+1. **Bot creates datafeed via Symphony’s REST API**
+2. **Agent creates secure upstream connection with the Symphony Pod**
+3. **End user sends a message to a bot in a chatroom**
+4. **Pod delivers ‘MESSAGESENT’ event to Agent**
+5. **Bot reads datafeed via REST API**
+6. **Agent delivers ‘MESSAGESENT’ event payload to the Bot**
+7. **Bot routes event to appropriate event listener/handler**
+
+Inside of `onMessageSent()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
+
+{% tabs %}
+{% tab title="Java" %}
+```java
+public class Example {
+
+    public static void main(String[] args) { 
+        // create bdk entry point
+        final SymphonyBdk bdk = new SymphonyBdk(loadFromClasspath("/config.yaml"));
+        
+        // create listener to be subscribed
+        final RealTimeEventListener listener = new RealTimeEventListener() {
+            @Override
+            public void onMessageSent(V4Initiator initiator, V4MessageSent event) {
+                log.info("Message sent");
+            }
+        };
+
+        // subscribe a listener
+        bdk.datafeed().subscribe(listener);
+       
+        // start reading the datafeed 
+        bdk.datafeed().start(); 
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ## Handling Datafeed Events with SDKs
 
 Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
@@ -335,58 +385,6 @@ public class MyRoomListener : RoomListener
         }
     }
 ```
-{% endtab %}
-{% endtabs %}
-
-## Handling Events using the BDK
-
-Similar to the SDKs, the BDK \(Bot Developer Kit\) comes bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
-
-As a bot developer, all you have to do is to implement generic `EventHandler` classes, passing in a given event type as the type parameter for that class.
-
-After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](./#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to a generic event handler class. For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched downstream to the `EventHandler` class that that takes `MessageEvent` in as a type parameter. Further the `handle()` method belonging to your `EventHandler` class will be called each type that event type is read by the datafeed.
-
-The following diagram shows the event handling workflow:
-
-![](../../.gitbook/assets/bdk-datafeed-architecture-3x.svg)
-
-1. **Bot creates datafeed via Symphony’s REST API**
-2. **Agent creates secure upstream connection with the Symphony Pod**
-3. **End user sends a message to a bot in a chatroom**
-4. **Pod delivers ‘MESSAGESENT’ event to Agent**
-5. **Bot reads datafeed via REST API**
-6. **Agent delivers ‘MESSAGESENT’ event payload to the Bot**
-7. **Bot routes event to appropriate event listener/handler**
-
-Inside of `handle()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
-
-{% tabs %}
-{% tab title="Java" %}
-{% code title="RoomMessageEventHandler.java" %}
-```java
-import com.symphony.bdk.bot.sdk.event.EventHandler;
-import com.symphony.bdk.bot.sdk.event.model.MessageEvent;
-import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
-
-/**
- * Sample code. Implementation of {@link EventHandler} to send greeting message
- * to users joining a room with the bot.
- *
- */
-public class RoomMessageEventHandler extends EventHandler<MessageEvent> {
-
-  /**
-   * Invoked when event is triggered in Symphony
-   */
-  @Override
-  public void handle(MessagEvent event, SymphonyMessage response) {
-    response.setMessage("Hey, <mention uid=\"" + event.getUserId() +
-        "\"/>. It is good to have you here!");
-  }
-
-}
-```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
