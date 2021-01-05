@@ -20,7 +20,9 @@ Generating and configuring your bot project has never been easier.  Before movin
 
 ### Building your Bot
 
-Once your Bot is configured for BDK 2.0 development head over to our step-by-step chatbot tutorial:
+Once your Bot is configured for BDK 2.0 development head over to our step-by-step headless bot tutorial:
+
+{% page-ref page="../../tutorials/bdk-2.0-tutorials/building-a-headless-bot-using-the-bdk-2.0.md" %}
 
 ## BDK 1.0
 
