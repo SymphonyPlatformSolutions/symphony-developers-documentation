@@ -1,6 +1,6 @@
 # Building an Extension App with \#hashtags & $cashtags
 
-In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker \(Symphony $cashtag\). We will also demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to render a stock chart for that given stock symbol or ticker.
+In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker \(Symphony $cashtag\). We will also demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to render a stock chart for that given stock symbol or ticker by leveraging a [free stock API called AlphaVantage](https://www.alphavantage.co/).
 
 ## Prerequisites:
 
