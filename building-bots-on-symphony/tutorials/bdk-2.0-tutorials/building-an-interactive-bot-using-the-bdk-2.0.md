@@ -186,5 +186,3 @@ Run your bot and execute the following to see it in action:
 
 Above, we showed you a simple example of how to leverage the BDK 2.0 Symphony Elements to build an interactive bot.  To understand more advanced usage of the BDK 2.0, continue on to our dedicated BDK 2.0 Certification course:
 
-{% page-ref page="building-an-interactive-bot-using-the-bdk-2.0.md" %}
-
