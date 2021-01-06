@@ -138,7 +138,7 @@ Additionally, the UI Service provides a `filter()` function that allows you to c
 
 Now that you've registered your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time the button is clicked.
 
-Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK \(Bot Developer Kit\):
+Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 \(Bot Developer Kit\):
 
 {% page-ref page="../tutorials/building-an-extension-app-with-ui-buttons.md" %}
 
