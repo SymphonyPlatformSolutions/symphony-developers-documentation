@@ -119,7 +119,7 @@ The `show()` method takes in the following parameters:
   </tbody>
 </table>
 
-As shown above, the iframe of the module being rendered points to an `app.html` file. Inside this file is where you can include your app's custom javascript. A sample implementation of the `app.htm`l file provided by the BDK is shown below:
+As shown above, the iframe of the module being rendered points to an `app.html` file. Inside this file is where you can include your app's custom javascript. A sample implementation of the `app.htm`l file provided by the BDK 1.0 is shown below:
 
 ```markup
 <!DOCTYPE html>
@@ -195,13 +195,13 @@ The following component will be rendered based on the above code:
 
 ![](../../.gitbook/assets/screen-shot-2020-09-21-at-10.33.47-pm.png)
 
-## 4.  Creating Custom Views with the BDK
+## 4.  Creating Custom Views with the BDK 1.0
 
 {% hint style="info" %}
-Note: The following React implementation is consistent with the extension app implementation provided by the BDK. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
+Note: The following React implementation is consistent with the extension app implementation provided by the BDK 1.0. However, if you choose to not use react or the UI Toolkit, Symphony is agnostic to your app's frontend implementation. Since the app view is displayed within a hidden iframe, the implementation of your app's frontend is entirely up to you.
 {% endhint %}
 
-The `app.html` iframe is linked to a custom javascript file, `app.js`. This file is where you could implement your own custom rendering logic. In the case of the BDK, this file will act as the entry point into the react system:
+The `app.html` iframe is linked to a custom javascript file, `app.js`. This file is where you could implement your own custom rendering logic. In the case of the BDK 1.0, this file will act as the entry point into the react system:
 
 {% tabs %}
 {% tab title="app.js" %}
@@ -246,11 +246,11 @@ const LocationRouter = () => route();
 {% endtab %}
 {% endtabs %}
 
-Whatever is returned by the `route()` function provided by the BDK will be rendered as the application view. For more information about how to pass props from your backend to your frontend in order to bring relevant data into your application view, please refer to the following tutorial:
+Whatever is returned by the `route()` function provided by the BDK 1.0 will be rendered as the application view. For more information about how to pass props from your backend to your frontend in order to bring relevant data into your application view, please refer to the following tutorial:
 
 {% page-ref page="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
 
-Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app. Continue to the following tutorial where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK and react:
+Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app. Continue to the following tutorial where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK 1.0 and react:
 
 {% page-ref page="../tutorials/building-an-extension-app-with-ui-toolkit.md" %}
 

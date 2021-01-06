@@ -2,6 +2,22 @@
 
 Symphony provides language specific SDKs, a Bot Developer Kit \(BDK\), Bot Generators and more to streamline your development process!
 
+## Bot Developer Kit 2.0
+
+BDK 2.0, the latest version of Symphony Bot Developer Kit is now available. With an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots on Symphony has never been easier. The BDK 2.0
+
+To learn more about the BDK 2.0, continue here:
+
+{% page-ref page="bdk-2.0/" %}
+
+## Symphony Bot Generator
+
+The easiest way to begin building Bots and Extension Applications is through the Symphony Bot Generator. A command line tool that allows you to generate code scaffolds across the 4 SDKs and the BDK 2.0.
+
+To learn more about how to get started using the Symphony Generator, continue here:
+
+{% page-ref page="symphony-bot-generator.md" %}
+
 ## Symphony SDKs
 
 Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
@@ -10,7 +26,7 @@ To learn more about using our SDKs continue here:
 
 {% page-ref page="sdks.md" %}
 
-## Bot Developer Kit
+## BDK 1.0
 
 The Bot Developer Kit \(BDK\) is a set of tools made for advanced Symphony Bot and Extension Applications. The BDK consists of the following three development tools:
 
@@ -37,22 +53,6 @@ The UI Toolkit is a library of react components that enables developers to build
 To learn more about the UI Toolkit, continue here:
 
 {% page-ref page="bdk-2.0/bdk-1.0/ui-toolkit.md" %}
-
-## Bot Developer Kit 2.0
-
-BDK 2.0, the latest version of Symphony Bot Developer Kit is now available. With an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots on Symphony has never been easier. The BDK 2.0
-
-To learn more about the BDK 2.0, continue here:
-
-{% page-ref page="bdk-2.0/" %}
-
-## Symphony Bot Generator
-
-The easiest way to begin building Bots and Extension Applications is through the Symphony Bot Generator. A command line tool that allows you to generate code scaffolds across the 4 SDKs and the BDK 2.0.
-
-To learn more about how to get started using the Symphony Generator, continue here:
-
-{% page-ref page="symphony-bot-generator.md" %}
 
 ## Postman
 
