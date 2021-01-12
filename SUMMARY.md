@@ -63,6 +63,7 @@
     * [Alignment of input texts](building-bots-on-symphony/symphony-elements/available-elements/alignment-of-input-texts.md)
   * [Regular Expressions - Regex](building-bots-on-symphony/symphony-elements/regular-expressions-regex.md)
 * [Bots Best Practices](building-bots-on-symphony/bots-best-practices.md)
+* [Open Source Code Samples](building-bots-on-symphony/code-samples.md)
 
 ## Building Extension Applications on Symphony
 
