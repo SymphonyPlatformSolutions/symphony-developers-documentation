@@ -12,7 +12,12 @@ Every message exists as part of a flow, in a continuum of events that results in
 
 Here is that flow in colorful diagram form, for you to know more about each stage of the message:
 
-![](../../../.gitbook/assets/feda489-sequence_diagram_2_4.png)
+![](../../../.gitbook/assets/bot-message-workflow-3x.svg)
+
+1. **A Bot sends a message with Symphony Elements in a form**
+2. **The message/from is visible to users.  Users interact with the elements**
+3. **Once submitted, the data is submitted to the bot**
+4. **Bots can access the data, by reading the datafeed.** 
 
 ## Form Attributes
 
@@ -30,13 +35,15 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 The following example shows a form being presented in MessageML. Also, you can see the returned datafeed payload:
 
-![](../../../.gitbook/assets/599c94d-form.gif)
+![](../../../.gitbook/assets/0ce9f52-forms-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
-  <form id="form_id"><h4>Personal Information</h4>
+  <form id="form_id">
+    <h2>forms</h2>
+    <h4>Personal Information</h4>
     <text-field name="name_01" required="true" placeholder="Name"/>
     <text-field name="email_01" required="true" placeholder="email"/>
 
@@ -63,7 +70,7 @@ The following example shows a form being presented in MessageML. Also, you can s
 
     <h4>Send a comment</h4> 
     <textarea name="comment" placeholder="Add your comment here" required="true"></textarea>
-
+    
     <button type="reset">Reset</button>
     <button name="submit_button" type="action">Submit</button>
 
@@ -74,42 +81,44 @@ The following example shows a form being presented in MessageML. Also, you can s
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "ElnHWy",
-    "messageId": "tVtMTHSFowQCRJSXwKQQVX___oyR8e6LbQ",
-    "timestamp": 1595279282548,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "h0J6_XtuAbGKvSJhp4x7O3___oyR8nTLbQ",
-            "formId": "form_id",
-            "formValues": {
-                "action": "submit_button",
-                "name_01": "John",
-                "email_01": "john@exmail.com",
-                "Country": "opt1",
-                "example_radio": "option_01",
-                "checkbox_1": "value01",
-                "checkbox_2": "value02",
-                "comment": "test"
+[
+    {
+        "id": "80Jvub",
+        "messageId": "w5MM7WgArWpSB1yVhaeBvH___oxpIy9GbQ",
+        "timestamp": 1595963920569,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "stream": {
+                    "streamId": "iMft6PLA4lHrEA9icKJobX___oyCKdVVdA",
+                    "streamType": "ROOM"
+                },
+                "formMessageId": "WnXgBsdZ_JMwg4ZKSeh-2X___oxpJE6WbQ",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "submit_button",
+                    "name_01": "John",
+                    "email_01": "john@email.com",
+                    "country": "opt1",
+                    "example_radio": "option_01",
+                    "checkbox_1": "value01",
+                    "checkbox_2": "value02",
+                    "comment": "test"
+                }
             }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}

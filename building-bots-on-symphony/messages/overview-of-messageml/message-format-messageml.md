@@ -73,8 +73,8 @@ MessageML supports the following tags for grouping information within a message:
 | :--- | :--- | :--- |
 | `<p>paragraph</p>` | Paragraph formatting. | \* `class` |
 | `<hr />` | Horizontal rule. | None. |
-| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list. | \* `class` |
-| `<ol>` `<li>list item</li>` `</ol>` | Numbered list. | \* `class` |
+| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list.  Cannot be empty, must contain at least one child `<li>` item. | \* `class` |
+| `<ol>` `<li>list item</li>` `</ol>` | Numbered list.  Cannot be empty, must contain at least one child `<li>` item. | \* `class` |
 | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | \* `class` |
 | `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](../structured-objects.md). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](../../../developer-tools/developer-tools/ui-style-guide/colors.md)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
 
@@ -190,7 +190,7 @@ MessageML supports the following tags to embed media into messages:
 
 | Tags | Description | Attributes |
 | :--- | :--- | :--- |
-| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/symphony-developer/docs/messagemlv2#section-sending-images). | _`src`_ `class` |
+| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](message-format-messageml.md#sending-images). | _`src`_ `class` |
 | `<audio/>` | Only supported for chime. See below. | _`src`_ |
 
 ## Sending Images
@@ -220,6 +220,12 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 -F 'message=<messageML>Sending attachment via API<img src="data:image/svg+xml;base64,PHN2ZyBpZD0i...DcuMjcsMTYuN="></img></messageML>'
 ```
 
+{% hint style="warning" %}
+### Limit on Image size for Data URL \(base64\)
+
+This feature is intended to be used for small images, such as custom emoji. Our recommendation is that the total size of base64 encoded embedded images do not exceed 25KB per message.
+{% endhint %}
+
 ## Shorthand Tags
 
 MessageML supports the following tags to embed additional information into messages:
@@ -231,17 +237,34 @@ MessageML supports the following tags to embed additional information into messa
 | `<hash tag="label"/>` | Insert "label" as a hashtag. |  |
 | `<cash tag="ticker"/>` | Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a `*` after the $ sign, for example, $\_122450.  `<messageML>` \`&lt;cash tag="$\_122450"/&gt; ```\`` |  |
 | `<chime />` | Send a chime message. No other content is permitted with a `<chime/>` tag. |  |
-| `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<card>` \(see example below\) | Inserts a card. It contains two different sections: • the `<header>` \(always visible\) • the `<body>` \(hidden\) | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<expandable-card>` \(see example below\) | Inserts a card with new styles and multiple levels of display within the card | • `state` \(mandatory\) in `<expandable-card>` can take 3 values: - "collapsed": only header is visible - "cropped": card expanded but the body is cropped - "expanded": card fully expanded  • `variant` \(optional\) in `<body>`: defines the style of the card. It can be either "default" for the default blue style, or "error" for the red error style |
 | `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](../emojis.md). |
 
-An example of a card tag that could be embedded into a message:
+An example of a `card` tag and `expandable-card` tag that could be embedded into a message:
 
+{% tabs %}
+{% tab title="card" %}
 ```markup
 <card iconSrc="url" accent="tempo-bg-color--blue">
     <header>Card Header. Always visible.</header>
     <body>Card Body. User must click to view it.</body>
 </card>
 ```
+{% endtab %}
+
+{% tab title="expandable-card" %}
+```markup
+<expandable-card state="collapsed">
+  <header>Card Header. Always visible.</header>
+  <body variant="error">
+      Card Body. User must click to view it (when the card is sent collapsed/cropped).
+      [it may contain a title, a paragraph, other elements for e.g. data bar and action bar]
+  </body>
+</expandable-card>
+```
+{% endtab %}
+{% endtabs %}
 
 ## Structured Objects and Tags
 

@@ -23,14 +23,14 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 ## Rules and Limitations
 
 * The text node of the MessageML will be converted to the `<label>` tag. This will preserve the formatting tags `<i>` and `<b>`, if present.
-* A form can have a maximum of 20 checkboxes within it.
+* A form can have a maximum of 50 checkboxes within it.
 * Once selected, checkboxes can be deselected by clicking them.
 * Click the reset button to return the checkboxes to their original status \(checked or unchecked\).
 * If a checkbox is sent without at least one checked option, it will not be displayed in the datafeed payload.
 
 ## Examples
 
-![](../../../.gitbook/assets/e43ba06-check.gif)
+![](../../../.gitbook/assets/7fbe88b-checkboxes-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
@@ -49,37 +49,38 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "id1": "value01",
-                    "id2": "value02"
+[
+    {
+        "id": "CfVa3O",
+        "messageId": "TwSQ5mOSHJHaqABxRBYmmn___pQD5znvbQ",
+        "timestamp": 1563302610448,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "stream": {
+                  "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA",
+                  "streamType": "ROOM"
+                },
+                "formMessageId": "en1LFlhkWTwdXyYvyMsna3///pQD6JE4dA==5856",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "checkbox",
+                    "id3": "value03"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}

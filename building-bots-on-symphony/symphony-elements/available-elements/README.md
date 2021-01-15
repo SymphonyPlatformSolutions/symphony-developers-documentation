@@ -47,11 +47,11 @@ Currently, all the available elements use a specific structure to render message
 
 The messageML above is rendered as the following:
 
-![](../../../.gitbook/assets/screen-shot-2020-07-20-at-12.27.07-pm.png)
+![](../../../.gitbook/assets/e9e3b93-form-20.9.png)
 
 After completing and submitting the form, the following elements payload is generated and delivered to the bot via the datafeed:
 
-```markup
+```javascript
 {
     "id": "4t8d4K",
     "messageId": "UpUnarQVI3EG4xYxtiShln___oyS8RCmbQ",

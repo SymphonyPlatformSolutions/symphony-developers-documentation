@@ -1,20 +1,20 @@
 # Building an Extension App with \#hashtags & $cashtags
 
-In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker \(Symphony $cashtag\). We will also demonstrate how to use the UI Toolkit provided by the BDK \(Bot Developer Kit\) in order to render a stock chart for that given stock symbol or ticker.
+In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker \(Symphony $cashtag\). We will also demonstrate how to use the UI Toolkit provided by the BDK 1.0 \(Bot Developer Kit\) in order to render a stock chart for that given stock symbol or ticker by leveraging a [free stock API called AlphaVantage](https://www.alphavantage.co/).
 
 ## Prerequisites:
 
-Complete the BDK App configuration guide:
+Complete the BDK 1.0 App configuration guide:
 
 {% page-ref page="../app-configuration/configure-your-app-for-bdk-development.md" %}
 
 ## 1.  Dive into the Code
 
-In this tutorial we will be building off the generated app + bot scaffolds provided by the BDK. The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
+In this tutorial we will be building off the generated app + bot scaffolds provided by the BDK 1.0. The BDK 1.0 comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK 1.0's implementation for bootstrapping your extension app:
 
 ### Initialization:
 
-In order to use the Client Extension API services, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK:
+In order to use the Client Extension API services, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK 1.0:
 
 {% tabs %}
 {% tab title="controller.html" %}
@@ -38,7 +38,7 @@ In order to use the Client Extension API services, your app must include the `sy
 {% endtab %}
 {% endtabs %}
 
-In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK:
+In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK 1.0:
 
 ```javascript
 SYMPHONY.remote.hello().then((data) => {
@@ -61,7 +61,7 @@ For more information on initializing your extension application, continue here:
 
 ### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK 1.0 in the `app.js` file:
 
 ```javascript
 SYMPHONY.application.connect(
@@ -77,7 +77,7 @@ For more information on connecting your extension application, continue here:
 
 ## 2.  Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the provided implementation of app authentication by the BDK 1.0. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
@@ -109,7 +109,7 @@ Upon completion of the above function, your extension application will be succes
 
 ## 3.  UI Service
 
-In addition to the boilerplate code and implementation of app authentication, the BDK also provides a sample implementation of the methods described in our guide on [Extension Applications + \#hashtags & $cashtags](../planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md).
+In addition to the boilerplate code and implementation of app authentication, the BDK 1.0 also provides a sample implementation of the methods described in our guide on [Extension Applications + \#hashtags & $cashtags](../planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md).
 
 The first step of creating an extension app that add a button to the \#hashtag or $cashtag hovercard is to subscribe to the UI Service as shown on line 48 of the `controller.js` file:
 
@@ -206,7 +206,7 @@ trigger(uiClass, id, payload, data) {
         }
 ```
 
-Here we are calling a the provided `showExtensionApp()` method provided out of the box by the BDK. This method is defined in `services/controller/extension-app/index.js` and provides a sample implementation of the Extension API's `moduleService` in order to bring your application into view. The `showExtensionApp()` function allows you to pass along a queryObject as a parameter. In our case, we are grabbing the ticker name from the payload received in the `trigger()` method and passing that along as an argument to be used in our view.
+Here we are calling a the provided `showExtensionApp()` method provided out of the box by the BDK 1.0. This method is defined in `services/controller/extension-app/index.js` and provides a sample implementation of the Extension API's `moduleService` in order to bring your application into view. The `showExtensionApp()` function allows you to pass along a queryObject as a parameter. In our case, we are grabbing the ticker name from the payload received in the `trigger()` method and passing that along as an argument to be used in our view.
 
 ### Creating the View:
 
@@ -258,7 +258,7 @@ Run your Bot + Extension Application and click on your custom button added to th
 To learn more about the UI Toolkit and how to access it, continue [here](../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md).
 {% endhint %}
 
-The Symphony BDK \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly. Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications. In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit. The `CandleStickChart` component takes in the following data format in order to render the data:
+The Symphony BDK 1.0 \(Bot Developer Kit\) provides a library of UI components, that helps you to build complex frontend applications rapidly. Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications. In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit. The `CandleStickChart` component takes in the following data format in order to render the data:
 
 ```javascript
 [

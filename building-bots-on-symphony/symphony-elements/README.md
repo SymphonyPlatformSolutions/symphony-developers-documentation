@@ -4,13 +4,13 @@ Symphony Elements enable bots to send messages that contain interactive forms wi
 
 By reusing our standard UX component libraries, Elements provide developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony.
 
-![](../../.gitbook/assets/e75bdfa-overview_form.png)
+![](../../.gitbook/assets/b4272d1-overview.png)
 
 ### The Elements
 
 Symphony Elements are a library of pre-designed reusable UX components \(text fields, dropdown menus, person selectors, buttons and more\). You can use the Elements to create forms that enable Symphony users to interact graphically with bot messages:
 
-![](../../.gitbook/assets/dde53e7-form.gif)
+![](../../.gitbook/assets/fd76176-overview-20.9.gif)
 
 {% hint style="danger" %}
 ## Availability
@@ -45,5 +45,11 @@ For customers who have developed their own SDK or have incorporated a third-part
 
 ### Symphony Elements with Cards
 
-With Symphony v20.5, the usage of cards with Symphony Elements became possible.
+You can now use cards with Symphony Elements. Both the `<header>` and the `<body>` can include them.
+
+* Since Symphony v20.5, basic cards support Symphony Elements.
+* Since Symphony v20.9, a new card is available: the expandable-card.
+
+_For more information regarding Symphony Elements, refer to_ [_Available Elements_](available-elements/)_.  
+For more information regarding the usage of cards within the messageML, please refer to_ [_Message Format - MessageML_](../messages/overview-of-messageml/message-format-messageml.md)\_\_
 
