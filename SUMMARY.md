@@ -86,6 +86,7 @@
     * [Register and Subscribe](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/register-and-subscribe.md)
     * [Modules Service](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/modules-service.md)
     * [Entity Service](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/README.md)
+      * [Message Format - ExtensionML](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/message-format-extensionml.md)
       * [Entity Advanced Templating](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/entity-advanced-templating.md)
     * [Applications-Nav Service](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/applications-nav-service.md)
     * [Share Service](building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/share-service.md)

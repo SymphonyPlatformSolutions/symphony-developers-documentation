@@ -1,6 +1,10 @@
 # Entity Advanced Templating
 
-The `template`parameter in the `render()` function of the [entity Service](./) is an [ExtensionML](https://developers.symphony.com/symphony-developer/docs/extensionml) string used to render entities. To render a static object or an iFrame, you can use advanced templating:
+The `template`parameter in the `render()` function of the [entity Service](./) is an [ExtensionML](message-format-extensionml.md) string used to render entities. To render a static object or an iFrame, you can use advanced templating.
+
+For a full ExtensionML reference, continue here:
+
+{% page-ref page="message-format-extensionml.md" %}
 
 ## Template and Data
 
