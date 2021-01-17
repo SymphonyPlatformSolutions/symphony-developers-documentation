@@ -194,7 +194,7 @@ public String getToken(@RequestBody MessageIdentityRequest request) throws Excep
 
 The resource server will be a standard Spring Boot web server, enabled with Spring Security and will have no knowledge of Symphony. Create an empty maven project and add these dependencies:
 
-{% code title="pom.xm;l" %}
+{% code title="pom.xml" %}
 ```markup
 <parent>
     <groupId>org.springframework.boot</groupId>
