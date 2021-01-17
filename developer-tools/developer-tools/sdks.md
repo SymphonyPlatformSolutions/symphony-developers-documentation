@@ -398,7 +398,7 @@ public class MyRoomListener : RoomListener
 
 Generating SDK bot projects is made simple with the Symphony Generator.  This is a command-line utility that generates language specific code scaffolds on top of our SDKs.  To learn more about generating your bot project navigate here:
 
-{% page-ref page="yeoman-generator.md" %}
+{% page-ref page="symphony-bot-generator.md" %}
 
 For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here: 
 
