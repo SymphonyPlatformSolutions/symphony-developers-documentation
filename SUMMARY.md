@@ -17,6 +17,7 @@
     * [Building a Chatbot using the BDK 2.0](building-bots-on-symphony/tutorials/bdk-2.0-tutorials/building-a-chatbot-using-the-bdk-2.0.md)
     * [Building an Interactive Bot using the BDK 2.0](building-bots-on-symphony/tutorials/bdk-2.0-tutorials/building-an-interactive-bot-using-the-bdk-2.0.md)
     * [Building a Headless Bot using the BDK 2.0](building-bots-on-symphony/tutorials/bdk-2.0-tutorials/building-a-headless-bot-using-the-bdk-2.0.md)
+    * [Integrating a Bot with an Identity Provider](building-bots-on-symphony/tutorials/bdk-2.0-tutorials/integrating-a-bot-with-an-identity-provider.md)
   * [SDK Tutorials](building-bots-on-symphony/tutorials/sdk/README.md)
     * [Build a Chatbot using the SDK](building-bots-on-symphony/tutorials/sdk/build-a-chatbot-using-sdk.md)
     * [Build an Interactive Bot using the SDK](building-bots-on-symphony/tutorials/sdk/build-an-interactive-bot-using-the-sdk.md)
