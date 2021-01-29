@@ -24,7 +24,7 @@ The Swagger file for v20.5 \(1.59\) available [here](https://github.com/symphony
 
 To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.59.0.zip).
 
-For a list of Agent x SBE compatibilities, click [here](https://developers.symphony.com/restapi/docs/agent-compatibilities).
+For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 #### **New APIs**
