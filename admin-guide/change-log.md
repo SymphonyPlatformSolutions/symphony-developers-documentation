@@ -16,16 +16,28 @@ The Swagger file for v20.7 \(1.61\) available [here](https://github.com/symphony
   * [Message Create v4](https://developers.symphony.com/restapi/v20.7/reference#create-message-v4): Fixed issue when sending a message that mentions an external user by his/her email.
   * Properly return a 451 error code when a message sent is blocked by DLP \(Data Loss Prevention\) instead of returning a 400 error code.
   * More secured way to provide Authentication credentials for the Agent: RSA private key for the agentservice user and ceservice user can be passed through VM parameters. For more information, refer to [Agent 2.X and above Installation](agent-guide/agent-2.x-and-above-installation.md).
+
+
+
 * Agent 2.61.1
   * Fix backward compatibility bug for Elements buttons \(Deprecated `primary-destructive` and `secondary-destructive` classes are now mapped to `primary` and `secondary`\)
+
+
+
 * Agent 2.61.2
   * Removed a duplicated definition in swagger
   * Fixed some bugs
 
-{% hint style="info" %}
-### Agent 2.61.2 - officially supported Agent for Symphony version v20.7
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.61.2.zip).
+
+* Agent 2.61.3
+  * Removed the stack trace logging if log level is not set to "debug"
+  * Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
+
+{% hint style="info" %}
+### Agent 2.61.3 - officially supported Agent for Symphony version v20.7
+
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.61.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](https://developers.symphony.com/restapi/docs/agent-compatibilities).
 {% endhint %}
