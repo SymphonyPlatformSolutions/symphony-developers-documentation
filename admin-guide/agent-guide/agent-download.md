@@ -1,9 +1,9 @@
 # Agent Download
 
 {% hint style="info" %}
-### Agent 2.60.1 - officially supported Agent for Symphony version 20.6 \(1.60+\) 
+### Agent 2.60.2 - officially supported Agent for Symphony version 20.6 \(1.60+\) 
 
-[Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.57.2.zip)
+[Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.60.2.zip)
 {% endhint %}
 
 For more information regarding the Agent installation, refer to [Agent 2.X and above Installation](agent-2.x-and-above-installation.md)  
