@@ -11,11 +11,11 @@ Text input fields are the most common elements in a form. Symphony provides two 
 | `name` | String | Yes | Identifies the text field. |
 | `placeholder` | String | No | Specifies a short hint that describes the expected value of the input field. |
 | `required` | Boolean | No | If `true`, it specifies that the input field must be filled out before submitting the form. Accepted values; `true` and `false`. |
-| `masked` | Boolean | No | If `true`, it creates a masked text field with hide/show options when its value is "true". For more information, refer to [Masked Text Field](https://developers.symphony.com/symphony-developer/docs/masked). |
+| `masked` | Boolean | No | If `true`, it creates a masked text field with hide/show options when its value is "true". For more information, refer to [Masked Text Field](masked-text-field.md). |
 | `maxlength` | Integer | No | The `maxlength` attribute allows you to specify a maximum number of characters that the user can input. |
 | `minlength` | Integer | No | The `minlength` attribute allows you to specify a minimum number of characters that the user can input. |
-| `pattern` | String | No | Regex String to match for input validation |
-| `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `pattern` | String | No | Regex String to match for input validation. For more information, refer to [Regular Expressions - Regex](../regular-expressions-regex.md). |
+| `pattern-error-message` | String | No but if `pattern` is defined, the `pattern-error-message` attribute is mandatory. | Error message returned to user if `pattern` parameter matches user input |
 | `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
 | `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Text Field Element. Available from Symphony v20.8 and above. |
 
@@ -36,13 +36,14 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 The following examples show text fields being used as follows:
 
-* The first text field \(id1\) is required and has a **placeholder text** \("Input some text..."\). It has also a **default text** \("With initial value"\) which was included between the `<text-field></text-field>` tags. Note that the default text will be sent to the payload given that it was not deleted before submitting the form.
-* The second text field \(id2\) is required. It contains a placeholder text and does not have a default text.
-* The third text field \(id3\) is not required. It contains a placeholder text and does not have a default text.
-* The fourth text field \(id4\) is required. It does not contain a placeholder or a default text.
-* The fifth text field \(id5\) contains a placeholder text and an input validation \(pattern\). The input validation automatically makes the field required.
-* The sixth text field \(id6\) contains a placeholder text and a minimum and maximum length. The length configuration automatically makes the field required.
-* The seventh text field \(id7\) contains the `title` and `label` attributes. Note that they are displayed on top of the text field.
+* The first text-field \(init\) shows how to display a **default text** \("With initial value"\). Note that the default text would have been sent to the payload if it had not been deleted before submitting the form.
+* The second text-field \(placeholder\) shows how a **placeholder text** \("Only Placeholder"\) is displayed in the UI. Please note the placeholder text is not sent in the payload if no text has been entered in the field by the enduser.
+* The third text-field \(noreq\) shows how a user can interact with a non-required field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), the field does not show any error and does not prevent the enduser from submitting the form.
+* The fourth text-field \(req\) shows the behaviour of the unique required field of the form, which cannot be submitted in case it is not filled; an error is displayed under the field in case the user submits the form with this empty field.
+* The fifth text-field \(regex\) shows the behaviour of the field when a regex **pattern** is entered. You can note that the pattern-error-message is displayed under the field when a 
+* The sixth text-field \(min\) shows the way the placeholder evolves to adapt to a new format transmitted thanks to the format parameter. Also please note the accessible interaction with the date-picker via the keyboard.
+* The seventh text-field \(label\) shows how a **label text** \("My Label"\) is displayed.
+* The eighth text-field \(tooltip\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
 
 ![](../../../.gitbook/assets/332ce97-text-fields-20.9.gif)
 
