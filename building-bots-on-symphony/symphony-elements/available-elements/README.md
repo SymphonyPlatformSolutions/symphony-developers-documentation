@@ -4,7 +4,7 @@ Using Symphony Elements and the [Create Message](https://developers.symphony.com
 
 ## Sending Elements
 
-Like any other message, Symphony Elements are sent by a bot as MessageML. To start using Symphony Elements, you first need to create a form element using the `<form>` MessageML tag. The form element can be considered the "frame" of a message, containing elements that will be sent by the bot and subsequently read by the datafeed.
+Like any other message, Symphony Elements are sent by a bot as [MessageML](../../messages/overview-of-messageml/). To start using Symphony Elements, you first need to create a form element using the `<form>` MessageML tag. The form element can be considered the "frame" of a message, containing elements that will be sent by the bot and subsequently read by the datafeed.
 
 Currently, all the available elements use a specific structure to render messages based on MessageML:
 
