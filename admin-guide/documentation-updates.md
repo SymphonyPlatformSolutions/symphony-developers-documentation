@@ -13,4 +13,10 @@ This section contains the main changes that occurred in the v20.5 version of the
 The following list shows the pages that have been updated:
 
 * Line breaks \('\n'\) are now allowed in the [Text Area](../building-bots-on-symphony/symphony-elements/available-elements/text-area.md) Element.
+* The [Change Log](change-log.md) page has been moved from the REST API Guide to the Developer Guide.
+* The Documentation Updates page has been moved from the REST API Guide to the Developer Guide.
+* The [RSA Bot Authentication Workflow](../building-bots-on-symphony/authentication/rsa-authentication.md) page has been moved from the REST API Guide to the Developer Guide.
+* The [Bot Authentication Workflow](../building-bots-on-symphony/authentication/certificate-authentication.md) page has been moved from the REST API Guide to the Developer Guide.
+
+
 
