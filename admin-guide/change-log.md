@@ -38,11 +38,11 @@ The Swagger file for v20.6 \(1.60\) available [here](https://github.com/symphony
   * Fixed security vulnerabilities in the Agent
 
 {% hint style="info" %}
-### Agent 2.60.1 - officially supported Agent for Symphony version v20.6
+### Agent 2.60.2 - officially supported Agent for Symphony version v20.6
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.60.1.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.60.2.zip).
 
-For a list of Agent x SBE compatibilities, click [here](https://developers.symphony.com/restapi/docs/agent-compatibilities).
+For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 **New APIs**
