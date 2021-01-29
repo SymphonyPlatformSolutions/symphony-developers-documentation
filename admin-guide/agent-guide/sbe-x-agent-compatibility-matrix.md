@@ -46,6 +46,7 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
         <p>2.58.x</p>
         <p>2.57.x</p>
         <p>2.56.x - Deprecated</p>
+        <p>2.55.x - Compatible only if not using Symphony Elements</p>
       </td>
     </tr>
     <tr>
@@ -69,13 +70,6 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
       <td style="text-align:left">2.55.x
         <br />2.54.x
         <br />2.53.x</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">R54</td>
-      <td style="text-align:left">1.54.x</td>
-      <td style="text-align:left">2.54.x
-        <br />2.53.x
-        <br />2.52.x</td>
     </tr>
   </tbody>
 </table>
