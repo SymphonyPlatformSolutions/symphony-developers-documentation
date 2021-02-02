@@ -28,12 +28,12 @@ For more information and examples, refer to Regular [Expressions - Regex](../reg
 
 ## Examples
 
-The following example shows a text area being used.  
-At the top of the Text Area, you can see a text and a tooltip icon, added using the `label` and the `title` attributes respectively.  
-Then, we have a **placeholder text** \("Your opinion here"\) and a **default text** \("In my opinion"\) which was included between the `<textarea></textarea>` tags.  
-Also, an input validation was added in order to prohibit the use of the word "badword".
+The following example shows two textareas being used as follows:
 
-![](../../../.gitbook/assets/7280159-textareas-20.9.gif)
+* The first textarea \(_id1_\) shows how to display a **default text** \("With initial value"\). Note that the default text would have been sent to the payload if it had not been deleted before submitting the form.
+* The second text-field \(_req_\) shows how a **placeholder text** \("Required, with a placeholder, a regex, a label, and a tooltip"\) is displayed in the UI. Please note the placeholder text is not sent in the payload if no text has been entered in the field by the enduser. It shows as well the behaviour of a **required** textarea in a form, which cannot be submitted in case it is not filled; an error is displayed under the textarea in case the user submits the form with this empty field. The textarea presents how a **label text** \("My Label"\) as well as a **title text** \("My Tooltip/n With a second line"\) are displayed in the UI. Finally, it shows how users can interact with a regex **pattern** which does not allow the form to be submitted if the input does not follow the pattern required by the bot developer.
+
+![](../../../.gitbook/assets/textareas-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
