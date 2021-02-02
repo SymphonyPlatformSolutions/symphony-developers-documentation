@@ -45,6 +45,15 @@ When designing forms with dropdowns within it be aware that there is a chance of
 
 ## Examples
 
+The following examples show dropdown menus being used as follows:
+
+* The first dropdown \(_init_\) shows how to display a **default preselected option** \("opt2": "With selected option"\). Note that the preselected option is sent to the payload when submitting the form.
+* The second dropdown \(_data-placeholder_\) shows how a **placeholder text** \("Only data-placeholder"\) is displayed in the UI. Please note the placeholder text is not sent in the payload if no option from the dropdown menu has been selected by the enduser.
+* The third dropdown \(_noreq_\) shows how a user can interact with a **non-required** field. Even no option is selected by the user, it does not prevent the enduser from submitting the form.
+* The fourth dropdown \(_req_\) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case no option from the dropdown menu is selected by the user; an error is displayed under the field in case the user submits the form with this empty field.
+* The fifth dropdown \(_label_\) shows how a **label text** \("My Label"\) is displayed.
+* The sixth dropdown \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
+
 ![](../../../.gitbook/assets/4914505-dropdown-menus-20.9.gif)
 
 {% tabs %}
