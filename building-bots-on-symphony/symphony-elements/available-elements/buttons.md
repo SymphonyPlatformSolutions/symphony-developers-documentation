@@ -34,7 +34,7 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 
 The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md).
 
-![](../../../.gitbook/assets/66f1958-buttons-20.9.gif)
+![](../../../.gitbook/assets/buttons-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

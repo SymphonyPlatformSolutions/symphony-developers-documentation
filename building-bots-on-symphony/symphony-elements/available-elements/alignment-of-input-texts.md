@@ -6,5 +6,5 @@ This rule is applied only for input texts such as [Text Field](text-field.md) an
 
 The following image shows the behavior of the input texts as the screen gets smaller:
 
-![](../../../.gitbook/assets/b9aada9-input-text_align%20%281%29.gif)
+![](../../../.gitbook/assets/alignment-input-text-20.9.gif)
 

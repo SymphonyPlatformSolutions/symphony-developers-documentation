@@ -32,7 +32,7 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 
 The following example shows checkboxes being used. It shows how developers can use the **checked** parameter with the value01 preselected when the form is sent. It also shows how users can select or unselect one or several checkboxes before submitting the form, as well as how to reset it to its initial values.
 
-![](../../../.gitbook/assets/7fbe88b-checkboxes-20.9.gif)
+![](../../../.gitbook/assets/checkboxes-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
