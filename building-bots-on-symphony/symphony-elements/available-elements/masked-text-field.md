@@ -35,7 +35,16 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 ## Examples
 
-The masked text field element is presented as a single-line text field whose characters are masked by dot \(•\) symbols. On the right side of the input, there is a link button called "show". When clicked, this link shows the entered characters. Note that after having displayed the characters, the link changes back to "hide".
+The following examples show masked text-fields being used as follows:
+
+* The first masked text-field \(_init_\) shows how to display a **default text** \("With initial value"\). Note that the default text would have been sent to the payload if it had not been deleted before submitting the form.
+* The second masked text-field \(_placeholder_\) shows how a **placeholder text** \("Only Placeholder"\) is displayed in the UI. Please note the placeholder text is not masked nor sent in the payload if no text has been entered in the field by the enduser.
+* The third masked text-field \(_noreq_\) shows how a user can interact with a **non-required** field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), it does not prevent the enduser from submitting the form.
+* The fourth masked text-field \(_req_\) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case it is not filled; an error is displayed under the field in case the user submits the form with this empty field.
+* The fifth masked text-field \(_regex_\) shows the behaviour of the field when a regex **pattern** is entered. You can note that the pattern-error-message is displayed under the field if the input does not follow the pattern required by the bot developer.
+* The sixth masked text-field \(_min_\) shows how to force users to enter an input with a minimum number of characters, and how an error message is displayed under the field if the input does not respect the **minlength** required.
+* The seventh masked text-field \(_label_\) shows how a **label text** \("My Label"\) is displayed.
+* The eighth masked text-field \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
 
 ![](../../../.gitbook/assets/5a1118a-masked-text-fields-20.9.gif)
 

@@ -36,14 +36,14 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 The following examples show text fields being used as follows:
 
-* The first text-field \(init\) shows how to display a **default text** \("With initial value"\). Note that the default text would have been sent to the payload if it had not been deleted before submitting the form.
-* The second text-field \(placeholder\) shows how a **placeholder text** \("Only Placeholder"\) is displayed in the UI. Please note the placeholder text is not sent in the payload if no text has been entered in the field by the enduser.
-* The third text-field \(noreq\) shows how a user can interact with a **non-required** field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), it does not prevent the enduser from submitting the form.
-* The fourth text-field \(req\) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case it is not filled; an error is displayed under the field in case the user submits the form with this empty field.
-* The fifth text-field \(regex\) shows the behaviour of the field when a regex **pattern** is entered. You can note that the pattern-error-message is displayed under the field if the input does not follow the pattern required by the bot developer.
-* The sixth text-field \(min\) shows how to force users to enter an input with a minimum number of characters.
-* The seventh text-field \(label\) shows how a **label text** \("My Label"\) is displayed.
-* The eighth text-field \(tooltip\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
+* The first text-field \(_init_\) shows how to display a **default text** \("With initial value"\). Note that the default text would have been sent to the payload if it had not been deleted before submitting the form.
+* The second text-field \(_placeholder_\) shows how a **placeholder text** \("Only Placeholder"\) is displayed in the UI. Please note the placeholder text is not sent in the payload if no text has been entered in the field by the enduser.
+* The third text-field \(_noreq_\) shows how a user can interact with a **non-required** field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), it does not prevent the enduser from submitting the form.
+* The fourth text-field \(_req_\) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case it is not filled; an error is displayed under the field in case the user submits the form with this empty field.
+* The fifth text-field \(_regex_\) shows the behaviour of the field when a regex **pattern** is entered. You can note that the pattern-error-message is displayed under the field if the input does not follow the pattern required by the bot developer.
+* The sixth text-field \(_min_\) shows how to force users to enter an input with a minimum number of characters, and how an error message is displayed under the field if the input does not respect the **minlength** required.
+* The seventh text-field \(_label_\) shows how a **label text** \("My Label"\) is displayed.
+* The eighth text-field \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
 
 ![](../../../.gitbook/assets/332ce97-text-fields-20.9.gif)
 
