@@ -45,7 +45,7 @@ The following examples show text fields being used as follows:
 * The seventh text-field \(_label_\) shows how a **label text** \("My Label"\) is displayed.
 * The eighth text-field \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
 
-![](../../../.gitbook/assets/332ce97-text-fields-20.9.gif)
+![](../../../.gitbook/assets/text-fields-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

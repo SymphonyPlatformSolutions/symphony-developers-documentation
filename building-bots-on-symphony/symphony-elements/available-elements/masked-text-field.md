@@ -46,7 +46,7 @@ The following examples show masked text-fields being used as follows:
 * The seventh masked text-field \(_label_\) shows how a **label text** \("My Label"\) is displayed.
 * The eighth masked text-field \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
 
-![](../../../.gitbook/assets/5a1118a-masked-text-fields-20.9.gif)
+![](../../../.gitbook/assets/masked-text-fields-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

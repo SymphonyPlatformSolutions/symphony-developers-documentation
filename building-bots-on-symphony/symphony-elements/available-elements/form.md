@@ -35,7 +35,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 The following example shows a form being presented in MessageML. Also, you can see the returned datafeed payload:
 
-![](../../../.gitbook/assets/0ce9f52-forms-20.9.gif)
+![](../../../.gitbook/assets/forms-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

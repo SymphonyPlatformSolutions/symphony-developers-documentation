@@ -54,7 +54,7 @@ The following examples show dropdown menus being used as follows:
 * The fifth dropdown \(_label_\) shows how a **label text** \("My Label"\) is displayed.
 * The sixth dropdown \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
 
-![](../../../.gitbook/assets/4914505-dropdown-menus-20.9.gif)
+![](../../../.gitbook/assets/dropdown-menus-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
