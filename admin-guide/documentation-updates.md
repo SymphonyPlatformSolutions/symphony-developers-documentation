@@ -21,6 +21,7 @@ The following list shows the endpoints that have been updated or added to the [A
 * [Unfollow User](https://developers.symphony.com/restapi/v20.9/reference#unfollow-user) - added
 * [List User Followers](https://developers.symphony.com/restapi/v20.9/reference#list-user-followers) - added
 * [List Users Followed](https://developers.symphony.com/restapi/v20.9/reference#list-users-followed) - added
+* [User Attributes](https://developers.symphony.com/restapi/reference#user-attributes) Object - some attributes were added \(impacts on the endpoints [Create User v2](https://developers.symphony.com/restapi/reference#create-user-v2) / [Update User v2](https://developers.symphony.com/restapi/reference#update-user-v2) / [Search Users](https://developers.symphony.com/restapi/reference#search-users)\)
 
 #### Other Changes
 
@@ -42,6 +43,8 @@ Here after you can find the updates of our documentation impacting the 20.9 vers
   * [Create Protocol](https://developers.symphony.com/restapi/v20.9/reference#create-protocol) - example for 200 payload updated
   * [V3 Message Violations](https://developers.symphony.com/restapi/v20.9/reference#v3-message-violations) - example for 200 payload updated
   * [Update Room v3](https://developers.symphony.com/restapi/v20.9/reference#update-room-v3) - attributes information panel were updated
+  * [Create Message v4](https://developers.symphony.com/restapi/reference#create-message-v4) - updated attachment limits
+  * Updated the [User Attributes](https://developers.symphony.com/restapi/reference#user-attributes) Object and therefore its impacts on the endpoints [Create User v2](https://developers.symphony.com/restapi/reference#create-user-v2) / [Update User v2](https://developers.symphony.com/restapi/reference#update-user-v2) / [Search Users](https://developers.symphony.com/restapi/reference#search-users)
 
 
 
