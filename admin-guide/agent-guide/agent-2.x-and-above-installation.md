@@ -652,7 +652,7 @@ The following list shows the available actuator endpoints for the Agent applicat
 | health `/agent/actuator/health` | yes | Displays the health status of your application. | GET |  |
 | info `/agent/v1/info` `/agent/actuator/info` | no | Displays information about your application. | GET | `--management.endpoint.info.enabled=true` |
 | env `/agent/actuator/env` | no | Displays current environment properties. | GET | `--management.endpoint.env.enabled=true` |
-| threaddump `/agent/actuator/dump` | no | Performs a thread dump. | GET | `--management.endpoint.threaddump.enabled=true` |
+| threaddump `/agent/actuator/threaddump` | no | Performs a thread dump. | GET | `--management.endpoint.threaddump.enabled=true` |
 | heapdump `/agent/actuator/heapdump` | no | Returns a GZip compressed JVM heap dump. | GET | `--management.endpoint.heapdump.enabled=true` |
 | metrics `/agent/actuator/metrics` | no | Real-time metrics. | GET | `--management.endpoint.metrics.enabled=true` |
 | prometheus `/agent/actuator/prometheus` | no | Prometheus scrapping endpoint. | GET | `--management.endpoint.prometheus.enabled=true` |

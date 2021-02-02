@@ -24,11 +24,11 @@ The following tags present text in different ways. Most of these require data to
 
 | Tag | Description | Attributes |
 | :--- | :--- | :--- |
-| `<formatted>` | Adds text formatted with HTML markup. This must be properly formatted XML See [here](message-format-extensionml.md#generating-properly-formatted-xml) for information on converting HTML to XHTML. | \* `id` \(Required\): The key of a string within the template data. |
-| `<text>` | Specifies regular text to be inserted into the entity. This text is inserted as is, without processing any HTML markup. | \* `id` \(Optional\): The key of a string within the template data. If no `id` is specified, it uses the contents between the opening and closing tags. |
-| `<label>` | Inserts a label. Labels are like text tags but are styled differently. | \* `id` \(Optional\): The key of a string within the template data. If no `id` is specified, it uses the contents between the opening and closing tags. |
-| `<color-text>` | Inserts a colored text. Supported colors: red, purple, green, darkGreen, blue, darkBlue, orange, grey, and yellow. | `id` \(Optional\): The key of an object with two members: • text specifies the text to be used • color is one of the listed colors. |
-| `<pill>` | Inserts text with a colored background and rounded corners. Supported colors: red, purple, green, darkGreen, blue, darkBlue, orange, grey, and yellow. | `id` \(Optional\): The key of an object with two members: • text specifies the text to be used • color is one of the listed colors. |
+| `<formatted>` | Adds text formatted with HTML markup. This must be properly formatted XML See [here](message-format-extensionml.md#generating-properly-formatted-xml) for information on converting HTML to XHTML. | • `id` \(Required\): The key of a string within the template data. |
+| `<text>` | Specifies regular text to be inserted into the entity. This text is inserted as is, without processing any HTML markup. | • `id` \(Optional\): The key of a string within the template data. If no `id` is specified, it uses the contents between the opening and closing tags. |
+| `<label>` | Inserts a label. Labels are like text tags but are styled differently. | • `id` \(Optional\): The key of a string within the template data. If no `id` is specified, it uses the contents between the opening and closing tags. |
+| `<color-text>` | Inserts a colored text. Supported colors: red, purple, green, darkGreen, blue, darkBlue, orange, grey, and yellow. | `id` \(Optional\): The key of an object with two members:  • text specifies the text to be used  • color is one of the listed colors. |
+| `<pill>` | Inserts text with a colored background and rounded corners. Supported colors: red, purple, green, darkGreen, blue, darkBlue, orange, grey, and yellow. | `id` \(Optional\): The key of an object with two members:  • text specifies the text to be used  • color is one of the listed colors. |
 
 ### Extended HTML Tags <a id="extended-html-tags"></a>
 
@@ -36,20 +36,20 @@ The following HTML tags are handled in a slightly modified way:
 
 | Tag | Description | Attributes |
 | :--- | :--- | :--- |
-| `<a>` | Inserts a link. | \* `id` \(Optional\): The tag must include either an `id` attribute or an `href` attribute. If `id` is specified, it must be a key to a string specifying the URL of the link. If no `id` attribute is specified, the `href` attribute is used. |
+| `<a>` | Inserts a link. | •  `id` \(Optional\): The tag must include either an `id` attribute or an `href` attribute. If `id` is specified, it must be a key to a string specifying the URL of the link. If no `id` attribute is specified, the `href` attribute is used. |
 | `<hr>` | Inserts a horizontal line. | ​ |
-| `<icon>` | Displays a 16x16 pixel icon. | \* `id` \(Required\): The key to a text string specifying the URL to the image to display. |
-| `<small-icon>` | Displays a 13x13 pixel icon. | \* `id` \(Required\): The key to a text string specifying the URL to the image to display. |
-| `<img>` | Displays a 128x128 pixel image. | \* `id` \(Optional\): The tag must include either an `id` attribute or an `src` attribute. If `id` is specified, it must be a key to a string specifying the URL of the link. If no `id` attribute is specified, the `src` attribute is used. |
-| `<iframe>` | Inserts an iframe. | _`src`_ _\(Required\): The URL to the iframe._ `height` \(Optional\): If not specified, the default height of the iframe will be 50px. The maximum height is 1000px. \* `width` \(Optional\): If not specified, the default width of the iframe will be 100%. The maximum width is 300px. |
+| `<icon>` | Displays a 16x16 pixel icon. | • `id` \(Required\): The key to a text string specifying the URL to the image to display. |
+| `<small-icon>` | Displays a 13x13 pixel icon. | •  `id` \(Required\): The key to a text string specifying the URL to the image to display. |
+| `<img>` | Displays a 128x128 pixel image. | • `id` \(Optional\): The tag must include either an `id` attribute or an `src` attribute. If `id` is specified, it must be a key to a string specifying the URL of the link. If no `id` attribute is specified, the `src` attribute is used. |
+| `<iframe>` | Inserts an iframe. | • `src` \(Required\): The URL to the iframe.  • `height` \(Optional\): If not specified, the default height of the iframe will be 50px. The maximum height is 1000px.  • `width` \(Optional\): If not specified, the default width of the iframe will be 100%. The maximum width is 300px. |
 
 ### Special Entity Tags <a id="special-entity-tags"></a>
 
 | Tag | Description | Attributes |
 | :--- | :--- | :--- |
-| `<mention>` | Insert a mention. | _`id`_ _\(required\): The key to an object with the following members:_ `id`: The unique ID of the user being mentioned. \* `name`: The pretty name that is displayed for the mentioned user. |
-| `<hashtag>` | Inserts a hashtag. | \* `id` \(required\): The key to a string specifying the hashtag. The string must be prefixed with '\#'. |
-| `<cashtag>` | Inserts a cashtag. | \* `id` \(required\): The key to a string specifying the cashtag. The string must be prefixed with '$'. |
+| `<mention>` | Insert a mention. | • `id` \(required\): The key to an object with the following members:  - `id`: The unique ID of the user being mentioned.  - `name`: The pretty name that is displayed for the mentioned user. |
+| `<hashtag>` | Inserts a hashtag. | • `id` \(required\): The key to a string specifying the hashtag. The string must be prefixed with '\#'. |
+| `<cashtag>` | Inserts a cashtag. | • `id` \(required\): The key to a string specifying the cashtag. The string must be prefixed with '$'. |
 
 ### Flow Control Tags <a id="flow-control-tags"></a>
 
@@ -57,10 +57,10 @@ The following flow control tags are used for entities that have conditional logi
 
 | Tag | Description | Attributes |
 | :--- | :--- | :--- |
-| `<if>` | Conditionally uses the enclosing template. | \* `id` \(required\): The key to the data. If there is data at the specified key, the enclosing template is used; otherwise it is skipped. |
+| `<if>` | Conditionally uses the enclosing template. | • `id` \(required\): The key to the data. If there is data at the specified key, the enclosing template is used; otherwise it is skipped. |
 | `<if:not-last>` | Conditionally uses the enclosing template within an iteration. If the current iteration is not the last item in the iterated list, the enclosing template is used. This is convenient when you want to add commas between list items without adding one after the last item. | ​ |
 | `<if:last>` | Conditionally uses the enclosing template within an iteration. If the current iteration is the last item in the iterated list, the enclosing template will be used. | ​ |
-| `<iterate>` | Loops through the items in an array. The template between the opening and closing `iterate` tag is used for each array item. The data for the template references the data in the current list item. | \* `id` \(Required\): The key to an array in the data object. |
+| `<iterate>` | Loops through the items in an array. The template between the opening and closing `iterate` tag is used for each array item. The data for the template references the data in the current list item. | • `id` \(Required\): The key to an array in the data object. |
 
 The following example shows the XML template for an entity with flow control logic and corresponding data:
 
