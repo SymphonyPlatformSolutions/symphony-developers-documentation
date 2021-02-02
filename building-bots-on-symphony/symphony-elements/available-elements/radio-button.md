@@ -25,6 +25,8 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 ## Examples
 
+The following example shows radio buttons being used. It shows how developers can use the **checked** parameter with the value01 preselected when the form is sent. It also shows how users can select another radio button and how it automatically unselect any other value checked, as the 3 radio buttons have the same name and therefore are part of the same group "groupId".
+
 ![](../../../.gitbook/assets/b4275a0-radio-buttons-20.9.gif)
 
 {% tabs %}
