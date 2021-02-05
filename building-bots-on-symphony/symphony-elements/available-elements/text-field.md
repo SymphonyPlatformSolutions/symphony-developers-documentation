@@ -28,7 +28,7 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 * The text field has a max number of 128 characters. For larger texts, use [Text Area](text-area.md).
 * The text field cannot have children tags but it can have a default text \(initial value\) between the `<text-field></text-field>` tags. See Examples below for more details.
-* Text fields are grouped at a max of 4 per row, depending on the screen size. For more information, refer to [Alignment of input texts](alignment-of-input-texts.md).
+* Text fields are grouped at a max of 4 per row, depending on the screen size. For more information, refer to [Alignment of input texts]().
 * You can add a **default text** in your text field by including it between the `<text-field></text-field>` tags. Note that unlike the `placeholder` text, the **default text** will be sent with the form if not edited by the user.
 * Input Validation - Pattern: the max length for all attributes is set to 256.
 
