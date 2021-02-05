@@ -11,7 +11,7 @@ With Symphony Elements 2.0, a new palette of colors is available for the Button 
 * Tertiary: the Tertiary button is a low prominence option. Use the tertiary button alongside a Primary or as a standalone button with the ability to read more information.
 * Destructive: use the Destructive button when an action results in the removal of an item or if it can result in a potentially serious negative consequence.
 
-![](../../../.gitbook/assets/d18a2da-all_together.jpg)
+![](../../../.gitbook/assets/button-2.0.png)
 
 {% hint style="info" %}
 Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.   

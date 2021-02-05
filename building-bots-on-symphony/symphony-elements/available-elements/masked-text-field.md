@@ -4,7 +4,7 @@ The masked text input is a single-line plain text editor control in which the te
 
 Use the `maxlength` and `minlength` attributes to specify the maximum and minimum length of the value that can be entered.
 
-![](../../../.gitbook/assets/32ff4cc-screen_shot_2019-07-12_at_5.46.22_pm.png)
+![](../../../.gitbook/assets/masked-text-field-2.0.png)
 
 ## Attributes
 

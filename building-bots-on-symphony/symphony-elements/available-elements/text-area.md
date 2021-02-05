@@ -2,7 +2,7 @@
 
 The `textarea` element is a field for multi-line text input, allowing users to edit multiple lines of plain text. Text areas are useful to collect or edit runs of text like messages, opinions, reviews, articles, etc.
 
-![](../../../.gitbook/assets/c819e23-text-area.jpg)
+![](../../../.gitbook/assets/textarea-2.0.png)
 
 ## Attributes
 

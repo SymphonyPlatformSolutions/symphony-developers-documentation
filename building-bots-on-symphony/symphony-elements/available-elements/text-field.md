@@ -2,7 +2,7 @@
 
 Text input fields are the most common elements in a form. Symphony provides two types of elements for text input fields: [Text fields](text-field.md) are for a single-line input; and [Text area](text-area.md) is for multi-line input.
 
-![](../../../.gitbook/assets/0706421-text-area.jpg)
+![](../../../.gitbook/assets/text-field-2.0.png)
 
 ## Attributes
 
