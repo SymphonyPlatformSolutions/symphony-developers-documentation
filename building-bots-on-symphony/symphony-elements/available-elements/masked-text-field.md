@@ -1,3 +1,7 @@
+---
+description: see Text Field for more information
+---
+
 # Masked Text Field
 
 The masked text input is a single-line plain text editor control in which the text is masked by replacing each character with a dot \(•\) symbol, providing a way for the user to enter data without people over their shoulder being able to see what they are entering.

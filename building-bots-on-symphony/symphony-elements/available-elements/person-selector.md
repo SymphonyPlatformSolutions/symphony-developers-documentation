@@ -101,3 +101,11 @@ The following examples show person selectors being used as follows:
 The result returned by the datafeed for the selected users is an array of user Ids, which is an array of `long`.  
 {% endhint %}
 
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
+| Label | 20.9 | Label displayed and form can still be submitted | 20.7 |
+| Tooltip \(title\) | 20.9 | Tooltip not displayed but form can still be submitted | 20.7 |
+

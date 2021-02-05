@@ -114,3 +114,18 @@ The following examples show text fields being used as follows:
 {% endtab %}
 {% endtabs %}
 
+## Alignment of text-fields
+
+Please note that several text-fields are aligned next to another. Note also that this behaviour is reactive to the screen size, the number of text-fields on the same line decreasing until one per row, as the screen gets smaller \(see in the example below\).
+
+![](../../../.gitbook/assets/alignment-input-text-20.9%20%281%29.gif)
+
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
+| Regex | 20.6 | Regex validation not enforced but field can be submitted | 20.6 |
+| Label | 20.9 | Label displayed and form can still be submitted | 20.7 |
+| Tooltip \(title\) | 20.9 | Tooltip not displayed but form can still be submitted | 20.7 |
+

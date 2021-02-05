@@ -90,3 +90,12 @@ The following example shows two textareas being used as follows:
 {% endtab %}
 {% endtabs %}
 
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
+| Regex | 20.6 | Regex validation not enforced but field can be submitted | 20.6 |
+| Label | 20.9 | Label displayed and form can still be submitted | 20.7 |
+| Tooltip \(title\) | 20.9 | Tooltip not displayed but form can still be submitted | 20.7 |
+

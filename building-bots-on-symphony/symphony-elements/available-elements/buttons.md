@@ -94,3 +94,11 @@ The following example shows the use of the **Reset** and the **Submit** button w
 {% endtab %}
 {% endtabs %}
 
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
+| Reset features behaviour is to show back the initial value of the form  | 20.4 | Working as previous behavior: clear fields | 2.55.9 |
+| New styles: • New designs for the buttons • Styles `primary destructive` and `secondary destructive` are deprecated • Styles `tertiary` and `destructive` are introducedMain features introduced | 20.6 | New styles are displayed as the previous ones, `tertiary` and `destructive` are displayed as the default blue `primary` style | 20.6 |
+
