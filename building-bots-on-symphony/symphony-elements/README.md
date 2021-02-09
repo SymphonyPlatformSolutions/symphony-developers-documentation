@@ -46,6 +46,8 @@ For customers who have developed their own SDK or have incorporated a third-part
 
 ### Symphony Elements with Cards
 
+#### Rule
+
 You can now use cards with Symphony Elements. Both the `<header>` and the `<body>` can include them.
 
 * Since Symphony v20.5, basic cards support Symphony Elements.
@@ -53,4 +55,46 @@ You can now use cards with Symphony Elements. Both the `<header>` and the `<body
 
 _For more information regarding Symphony Elements, refer to_ [_Available Elements_](available-elements/)_.  
 For more information regarding the usage of cards within the messageML, please refer to_ [_Message Format - MessageML_](../messages/overview-of-messageml/message-format-messageml.md)\_\_
+
+#### Example of using Elements with expandable-cards
+
+```markup
+<messageML>
+  <form id="form_id">
+    <h1>expandable-cards</h1>
+      <h2>1st expandable-card</h2>
+      <expandable-card state="collapsed">
+        <header><h3>Header Content (always visible)</h3>This is a <b>collapsed</b> expandable-card with the <b>default</b> variant</header>
+        <body>
+          <h3>Body Content</h3>
+          It is possible to use Elements in the body as you can see below:
+          <text-field name="id1" placeholder="Enter your name..."/>
+          <text-field name="id2" placeholder="Enter your age..."/>
+          <button type="reset">Reset</button>
+        </body>
+      </expandable-card><br/>
+      <h2>2nd expandable-card</h2>
+      <expandable-card state="expanded">
+        <header><h3>Header Content (always visible)</h3><text-field name="id_header" label="Text-field in the header" placeholder="Type your input..."/>This is an <b>expanded</b> expandable-card with the <b>default</b> variant and with a <b>Symphony Element</b> in the header</header>
+        <body>
+          <h3>Body Content</h3>
+          When expanded, the whole body content is displayed in the expandable-card.
+          <text-field name="id3" placeholder="Enter your name..."/>
+          <text-field name="id4" placeholder="Enter your age..."/>
+        </body>
+      </expandable-card><br/>
+      <h2>3rd expandable-card</h2>
+      <expandable-card state="cropped">
+        <header><h3>Header Content (always visible)</h3>This is a <b>cropped</b> expandable-card with the <b>error</b> variant</header>
+        <body variant="error">
+          <h3>Body Content</h3>
+          When cropped, the body content is displayed in the expandable-card until a certain limit. A show more button allows to expand the card and display the rest of the body.
+        </body>
+      </expandable-card>
+    <button name="form_id_submit">Submit</button>
+  </form>
+</messageML>
+```
+
+![](../../.gitbook/assets/expandable-cards-20.9.gif)
 
