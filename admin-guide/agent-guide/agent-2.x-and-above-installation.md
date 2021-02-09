@@ -14,13 +14,9 @@ Note: Make sure that you have installed the OpenJDK 8 update 161 or later, other
 
 Download the Agent package and unzip it into a directory of your choice:
 
-{% hint style="info" %}
-### Agent 2.59.0 - officially supported Agent for Symphony 20.5 \(1.59\)
+{% page-ref page="agent-download.md" %}
 
-[Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.59.0.zip)
-{% endhint %}
-
-  The following example shows version 2.54.0 being unzipped:
+The following example shows version 2.54.0 being unzipped:
 
 ```text
 unzip agent-2.54.0.zip
