@@ -2,7 +2,7 @@
 
 Thank you for using Symphony. This document contains essential information about the changes that occurred in the Agent and in the Public APIs of Symphony.
 
-### **Symphony 20.9 \(1.62\) - Agent 2.62.0**
+### **Symphony 20.9 \(1.62\) - Agent 2.62.3**
 
 ### Swagger
 
@@ -10,31 +10,31 @@ The Swagger file for v20.9 \(1.62\) available [here](https://github.com/symphony
 
 ### Agent Changes
 
-Agent 2.62.0
+#### Agent 2.62.0
 
 * Support of new Elements features \(Expandable Card, Label and Tooltip\): see the General Updates section below
 * Added a new API for sending the same message to a list of streams: Blast message \(see new APIs below\).
 * Removed a duplicated definition in swagger and moved some endpoints definition to the right swagger repository \(see swagger link above\)
 * Upgrade of library dependencies
 
-
-
-Agent 2.62.1
+#### Agent 2.62.1
 
 * Fixed Docker image of the agent
 * Upgrade for library dependencies
 
-
-
-Agent 2.62.2
+#### Agent 2.62.2
 
 * Removed the stack trace logging if log level is not set to "debug"
 * Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
 
-{% hint style="info" %}
-### Agent 2.62.2 - officially supported Agent for Symphony version v20.9
+#### Agent 2.62.3
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.62.0.zip).
+* Fixed some vulnerable dependencies \(including jackson and apache\)
+
+{% hint style="info" %}
+### Agent 2.62.3 - officially supported Agent for Symphony version v20.9
+
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.62.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
