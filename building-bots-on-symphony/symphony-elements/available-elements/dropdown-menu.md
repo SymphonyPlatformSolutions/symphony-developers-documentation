@@ -125,6 +125,6 @@ The following examples show dropdown menus being used as follows:
 | Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
 | :--- | :--- | :--- | :--- |
 | Initial release | 1.55 | Not working | 2.55.9 |
-| Label | 20.9 | Label displayed and form can still be submitted | 20.7 |
+| Label | 20.9 | Label displayed and form can still be submitted | 20.6 |
 | Tooltip \(title\) | 20.9 | Tooltip not displayed but form can still be submitted | 20.7 |
 
