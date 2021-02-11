@@ -29,7 +29,7 @@ The Swagger file for v20.9 \(1.62\) available [here](https://github.com/symphony
 
 #### Agent 2.62.3
 
-* Fixed some vulnerable dependencies \(including upgrades of jackson and apache\)
+* Fixed some vulnerable dependencies \(including upgrades of jackson and httpclient\)
 
 {% hint style="info" %}
 ### Agent 2.62.3 - officially supported Agent for Symphony version v20.9
