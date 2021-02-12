@@ -12,17 +12,16 @@ Symphony Elements are a library of pre-designed reusable UX components \(text fi
 
 ![](../../.gitbook/assets/overview-20.9.gif)
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 ## Availability
 
 * It is only available on pods that have been updated to 20.3.1 and running an Agent 20.3.1 \(2.57.0\) or above.
-* It is allowed to be displayed in cross-pod rooms.
-* Forms and their responses are exported in Content Export.
 * Our iOS application \(versions 1.56.0 and above\) fully supports Symphony Elements.
 * Our Android application fully supports Symphony Elements with Agent version 2.57.0 and above.
+* If you are using a custom SDK to build your Bot, please note it needs to support the modified JSON payload response, see Symphony API Specification located here [https://github.com/symphonyoss/symphony-api-spec/blob/20.3.1/agent/agent-api-public.yaml\#L3643](https://github.com/symphonyoss/symphony-api-spec/blob/20.3.1/agent/agent-api-public.yaml#L3643). We advise you to upgrade to a supported Symphony SDK.
 {% endhint %}
 
-{% hint style="danger" %}
+{% hint style="info" %}
 ## Known Limitations
 
 * Once the user has submitted the form, it becomes disabled. However, if the conversation is reloaded, the form resets and the user is able to send a new reply. If your workflow requires a single reply per user, please implement this control on the Bot side.
@@ -34,30 +33,20 @@ Symphony Elements are a library of pre-designed reusable UX components \(text fi
 
 {% page-ref page="available-elements/" %}
 
-### Symphony Elements x SDKs
-
-With the upgrade to Symphony v20.3, any bot or application that utilizes Elements requires that customers have the Agent upgraded to 2.57.x, and also to confirm the SDK used to build the bot or application supports the new Elements payload. The Symphony-supported SDK versions are:
-
-• Java SDK 1.1.1 or later  
-• Python SDK 1.1.0 or later  
-• NodeJS 1.1.1 or later
-
-For customers who have developed their own SDK or have incorporated a third-party SDK, you must ensure that the SDK supports the modified JSON payload response. This is detailed in the Symphony API Specification located here [https://github.com/symphonyoss/symphony-api-spec/blob/20.3.1/agent/agent-api-public.yaml\#L3643](https://github.com/symphonyoss/symphony-api-spec/blob/20.3.1/agent/agent-api-public.yaml#L3643).
-
 ### Symphony Elements with Cards
 
-#### Rule
+You can include Symphony Elements inside Cards, both in the card `<header>` and the card `<body>.`
 
-You can now use cards with Symphony Elements. Both the `<header>` and the `<body>` can include them.
+Note: the new expandable-card is available starting with Symphony v20.9
 
-* Since Symphony v20.5, basic cards support Symphony Elements.
-* Since Symphony v20.9, a new card is available: the expandable-card.
+For more information regarding the usage of cards within the messageML, please refer to [Message Format - MessageML](../messages/overview-of-messageml/message-format-messageml.md)
 
-_For more information regarding Symphony Elements, refer to_ [_Available Elements_](available-elements/)_.  
-For more information regarding the usage of cards within the messageML, please refer to_ [_Message Format - MessageML_](../messages/overview-of-messageml/message-format-messageml.md)\_\_
+{% tabs %}
+{% tab title="Example" %}
+![](../../.gitbook/assets/expandable-cards-20.9.gif)
+{% endtab %}
 
-#### Example of using Elements with expandable-cards
-
+{% tab title="Code sample" %}
 ```markup
 <messageML>
   <form id="form_id">
@@ -95,6 +84,8 @@ For more information regarding the usage of cards within the messageML, please r
   </form>
 </messageML>
 ```
+{% endtab %}
+{% endtabs %}
 
-![](../../.gitbook/assets/expandable-cards-20.9.gif)
+
 
