@@ -132,6 +132,7 @@
 ## Symphony REST API
 
 * [Symphony REST API](https://rest-api.symphony.com/)
+* [Symphony Connect REST API](https://federation.readme.io/)
 
 ## Mobile Frameworks
 
