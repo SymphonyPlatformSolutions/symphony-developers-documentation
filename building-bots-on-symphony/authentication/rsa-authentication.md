@@ -22,6 +22,32 @@ The Authentication process requires the following steps:
 3. The user creates a short-lived JWT \(JSON Web Token\) and signs it with their private key.
 4. The bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
 
+{% hint style="danger" %}
+### Session Token Management
+
+The token you receive is valid for the lifetime of a session that is defined by your pod's administration team. This ranges from 1 hour to 2 weeks.
+
+You should keep using the same token until you receive a HTTP 401, at which you should re-authenticate and get a new token for a new session.
+
+[Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
+{% endhint %}
+
+{% hint style="warning" %}
+#### Supported Ciphers for the SSL/TLS session
+
+**From April 2021, Symphony will only support the following cipher suites:**
+
+**ECDHE-RSA-AES256-GCM-SHA384 \(Preferred\)**
+
+**ECDHE-RSA-AES128-GCM-SHA256**
+
+**DHE-RSA-AES256-GCM-SHA384**
+
+**DHE-RSA-AES128-GCM-SHA256**
+
+**For more information, please contact your Technical Account Manager, Solutions Architect or the Technical Support Team.**
+{% endhint %}
+
 ## 1.  Create an RSA Key Pair
 
 The public/private key pair for signing authentication requests requires the following:

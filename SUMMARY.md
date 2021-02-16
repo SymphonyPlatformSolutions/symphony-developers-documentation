@@ -43,6 +43,7 @@
   * [Certificate Authentication Workflow](building-bots-on-symphony/authentication/certificate-authentication.md)
 * [Datafeed](building-bots-on-symphony/datafeed/README.md)
   * [Real-Time Events](building-bots-on-symphony/datafeed/real-time-events.md)
+  * [Overview of Streams](building-bots-on-symphony/datafeed/overview-of-streams.md)
 * [Messages](building-bots-on-symphony/messages/README.md)
   * [MessageML](building-bots-on-symphony/messages/overview-of-messageml/README.md)
     * [Message Format - MessageML](building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md)
@@ -98,7 +99,9 @@
 * [App Configuration](building-extension-applications-on-symphony/app-configuration/README.md)
   * [Configure your App for BDK 1.0 Development](building-extension-applications-on-symphony/app-configuration/configure-your-app-for-bdk-development.md)
   * [Updating User Apps](building-extension-applications-on-symphony/app-configuration/updating-user-apps-1.md)
+  * [Application Manifest Bundle File Reference](building-extension-applications-on-symphony/app-configuration/application-manifest-bundle-file-reference.md)
 * [App Authentication](building-extension-applications-on-symphony/app-authentication/README.md)
+  * [Circle of Trust Authentication](building-extension-applications-on-symphony/app-authentication/circle-of-trust-authentication.md)
   * [OBO Authentication](building-extension-applications-on-symphony/app-authentication/obo-authentication.md)
 
 ## Developer Certification
