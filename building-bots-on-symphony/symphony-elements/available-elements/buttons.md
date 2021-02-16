@@ -4,7 +4,7 @@ Buttons are the Symphony element responsible for submitting a form to the bot. A
 
 In addition, some forms can contain reset buttons. These buttons are used to reset a form back to its original state.
 
-With Sony Elements 2.0, a new palette of colors is available for the Button Element, allowing bot developers to determine how the button will look like. There are four types of buttons: `primary`, `secondary`, `tertiary` and `destructive`. Each of those has different colors to suit different actions \(to convey meaning\). Use the `class` attribute to configure them.
+With Symphony Elements 2.0, a new palette of colors is available for the Button Element, allowing bot developers to determine how the button will look like. There are four types of buttons: `primary`, `secondary`, `tertiary` and `destructive`. Each of those has different colors to suit different actions \(to convey meaning\). Use the `class` attribute to configure them.
 
 * Primary: use the Primary button when there is a clear primary action on a message. You can use it for the send button, for example.
 * Secondary: use the Secondary button when there are multiple actions of the same importance or some actions with less importance than a single primary action.
