@@ -17,6 +17,7 @@ Messages may include:
 * Maximum 40 entities \(\#hashtags, $cashtags, and mentions\).
 * Maximum 2,500 unique tokens in the markdown representation of the message.
 * 81,130 characters of the encrypted markdown representation of the message. Note that there is a greater chance of reaching the token or the entity limit than the character limit.
+* By default, the maximum total size of a message cannot exceed 1.5Mb
 
 {% hint style="warning" %}
 ## XML Formatting
@@ -38,6 +39,16 @@ Keywords may only contain alphanumeric characters, underscore, dot and dash.
 Important: when sending numeric $cashtags as signals, add an `*` after the $ sign, for example, $\_122450.  
 &lt;cash tag="$\_122450"/&gt;
 {% endhint %}
+
+{% code title="Example of payload if the message exceeds the total size limit \(default is 1.5Mb\)" %}
+```markup
+{
+message=Limit message-content-max-total-size reached, 
+status=PAYLOAD_TOO_LARGE, 
+code=LIMIT_MESSAGE_CONTENT_MAX_TOTAL_SIZE_REACHED
+}
+```
+{% endcode %}
 
 ## Root Tag:
 
