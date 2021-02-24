@@ -61,6 +61,7 @@
     * [Radio Button](building-bots-on-symphony/symphony-elements/available-elements/radio-button.md)
     * [Dropdown Menu](building-bots-on-symphony/symphony-elements/available-elements/dropdown-menu.md)
     * [Person Selector](building-bots-on-symphony/symphony-elements/available-elements/person-selector.md)
+    * [Date Picker](building-bots-on-symphony/symphony-elements/available-elements/date-picker.md)
     * [Table Select](building-bots-on-symphony/symphony-elements/available-elements/table-select.md)
   * [Regular Expressions - Regex](building-bots-on-symphony/symphony-elements/regular-expressions-regex.md)
 * [Bots Best Practices](building-bots-on-symphony/bots-best-practices.md)
