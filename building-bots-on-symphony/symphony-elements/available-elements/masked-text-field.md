@@ -17,11 +17,12 @@ Use the `maxlength` and `minlength` attributes to specify the maximum and minimu
 | `maxlength` | Integer | No | The `maxlength` attribute allows you to specify a maximum number of characters that the user can input. |
 | `minlength` | Integer | No | The `minlength` attribute allows you to specify a minimum number of characters that the user can input. |
 | `pattern` | String | No | Regex String to match for input validation |
-| `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
+| `pattern-error-message` | String | If `pattern` is defined, the `pattern-error-message` attribute is mandatory. | Error message returned to user if `pattern` parameter matches user input |
 
-{% hint style="info" %}
-For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
-{% endhint %}
+## Using Input Validation
+
+With Symphony v20.6, bot developers can use Regex to validate `text fields` and `text areas` using the `pattern` and `pattern-error-message` attributes.  
+For more information and examples, refer to [Regular Expressions - Regex](../regular-expressions-regex.md).
 
 ## Rules and Limitations
 
@@ -34,14 +35,14 @@ For more information of pattern matching and input validation, see our guide on 
 
 The masked text field element is presented as a single-line text field whose characters are masked by dot \(•\) symbols. On the right side of the input, there is a link button called "show". When clicked, this link shows the entered characters. Note that after having displayed the characters, the link changes back to "hide".
 
-![](../../../.gitbook/assets/ff9293c-captured_4.gif)
+![](../../../.gitbook/assets/d8a5957-masked_text_field.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
   <form id="form_id">
-    <text-field name="auth_key" placeholder="Insert your authentication key" required="true" masked="true" minlength="3" maxlength="40"></text-field>
+    <text-field name="auth_key" placeholder="Insert your authentication key" required="true" masked="true" minlength="3" maxlength="40" pattern="[a-zA-Z]+" pattern-error-message="It must contain letters"></text-field>
     <button type="reset">Reset</button>
     <button name="example-button" type="action">Submit</button>    
   </form>
@@ -51,36 +52,40 @@ The masked text field element is presented as a single-line text field whose cha
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                "action": "example-button",
-                "auth_key": "Byx*kjuygb#hghg265763"
+[
+    {
+        "id": "q6eUgG",
+        "messageId": "NowSKCnJJBdPOXQyoPQg8X___pQDVWaBbQ",
+        "timestamp": 1563312167294,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "actionStream": {
+                    "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA"
+                },
+                "formStream": {
+                    "streamId": "YuK1c2y2yuie6+UfQnjSPX///pQEn69idA=="
+                },
+                "formMessageId": "5iSJ+faXx/23Jkehx3lpSn///pQDVedXdA==5587",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "example-button",
+                    "auth_key": "abcd123456"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}

@@ -12,7 +12,12 @@ Every message exists as part of a flow, in a continuum of events that results in
 
 Here is that flow in colorful diagram form, for you to know more about each stage of the message:
 
-![](../../../.gitbook/assets/feda489-sequence_diagram_2_4.png)
+![](../../../.gitbook/assets/bot-message-workflow-3x.svg)
+
+1. **A Bot sends a message with Symphony Elements in a form**
+2. **The message/from is visible to users.  Users interact with the elements**
+3. **Once submitted, the data is submitted to the bot**
+4. **Bots can access the data, by reading the datafeed.**
 
 ## Form Attributes
 

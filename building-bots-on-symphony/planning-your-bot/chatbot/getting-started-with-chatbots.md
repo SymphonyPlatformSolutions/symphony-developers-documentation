@@ -6,7 +6,27 @@
 
 Symphony provides a number of tools to help streamline bot development:
 
-### Symphony SDKs
+## BDK 2.0
+
+BDK 2.0 is a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows.  
+
+For a deeper dive into the BDK 2.0 and its offerings, continue here:
+
+{% page-ref page="../../../developer-tools/developer-tools/bdk-2.0/" %}
+
+### Configure your Bot for BDK 2.0 Development
+
+Generating and configuring your bot project has never been easier.  Before moving on to one of our dedicated bot tutorials, quickly generate and configure your bot using the BDK 2.0!
+
+{% page-ref page="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
+
+### Building your Bot <a id="building-your-bot"></a>
+
+Once your Bot is configured for BDK 2.0 development head over to our step-by-step chatbot tutorial:
+
+{% page-ref page="../../tutorials/bdk-2.0-tutorials/building-a-chatbot-using-the-bdk-2.0.md" %}
+
+## Symphony SDKs
 
 Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box datafed and event handling architecture that make it simple for your bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
 
@@ -26,9 +46,9 @@ Once your Bot is configured for SDK development head over to our step-by-step ch
 
 {% page-ref page="../../tutorials/sdk/build-a-chatbot-using-sdk.md" %}
 
-### Bot Developer Kit \(BDK\)
+## BDK 1.0
 
-The next tool in Symphony's suite of development tools is the BDK, or Bot Developer Kit. The Bot Developer Kit comprises of three development tools for more advanced Symphony bot and extension app development.
+The next tool in Symphony's suite of development tools is the BDK 1.0, or Bot Developer Kit. The Bot Developer Kit comprises of three development tools for more advanced Symphony bot and extension app development.
 
 #### Bot SDK
 
@@ -58,13 +78,13 @@ You can learn more about the UI Toolkit here:
 
 {% page-ref page="../../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md" %}
 
-### Configure your Bot for BDK Development
+### Configure your Bot for BDK 1.0 Development
 
 The next step to building a Bot using the BDK is to configure your Bot:
 
 {% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
 
-Once your Bot is configured for BDK development, head over to our step-by-step chatbot tutorial:
+Once your Bot is configured for BDK 1.0 development, head over to our step-by-step chatbot tutorial:
 
 {% page-ref page="../../tutorials/bdk/building-a-chatbot-using-bdk.md" %}
 

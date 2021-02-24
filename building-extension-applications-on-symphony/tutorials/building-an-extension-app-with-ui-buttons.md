@@ -4,17 +4,17 @@ In this step by step tutorial, we will build an extension app that adds a button
 
 ## Prerequisites:
 
-Complete the BDK App configuration guide:
+Complete the BDK 1.0 App configuration guide:
 
 {% page-ref page="../app-configuration/configure-your-app-for-bdk-development.md" %}
 
 ## 1.  Dive into the Code
 
-In this tutorial we will be building off of the generated app + bot project scaffolds provided by the BDK. The BDK comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
+In this tutorial we will be building off of the generated app + bot project scaffolds provided by the BDK. The BDK 1.0comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
 
 ### Initialization:
 
-In order to use the Client Extension API services, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK:
+In order to use the Client Extension API services, your app must include the `symphony-api.js` file as seen on line 11 of the `controller.html` file provided by the BDK 1.0:
 
 {% tabs %}
 {% tab title="controller.html" %}
@@ -38,7 +38,7 @@ In order to use the Client Extension API services, your app must include the `sy
 {% endtab %}
 {% endtabs %}
 
-In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK:
+In order to initialize the connection from your application's controller and views, your app must call the `SYMPHONY.remote.hello()` method. This method returns an object containing the user's Symphony client theme name, font size, and any associated classes, including those for theme name, size, and condensed modules. This method is located in the the `app.js` file provided out of the box by the BDK 1.0:
 
 ```javascript
 SYMPHONY.remote.hello().then((data) => {
@@ -61,7 +61,7 @@ For more information on initializing your extension applications, continue here:
 
 ### Connect:
 
-Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK in the `app.js` file:
+Next, you must connect an application view to an existing application that has been registered with Symphony. Additionally, you must subscribe the application to remote services provided by the Extension API and also register local services that will be used by your application remotely. In order to connect your application, your app must call the `SYMPHONY.application.connect()` function, provided out of the box by the BDK 1.0 in the `app.js` file:
 
 ```javascript
 SYMPHONY.application.connect(
@@ -77,7 +77,7 @@ For more information on registering and connecting your extension application, c
 
 ## 2.  Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data such as this example app, that will add buttons to an IM. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data such as this example app, that will add buttons to an IM. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
@@ -109,7 +109,7 @@ Upon completion of the above function, your extension application will be succes
 
 ## 3.  UI Service
 
-In addition to the boilerplate setup code and implementation of app authentication, the BDK also provides a sample implementation of the methods described in our guide on [Extension Applications + UI Buttons](../planning-your-app/extension-applications-+-ui-buttons.md).
+In addition to the boilerplate setup code and implementation of app authentication, the BDK 1.0 also provides a sample implementation of the methods described in our guide on [Extension Applications + UI Buttons](../planning-your-app/extension-applications-+-ui-buttons.md).
 
 The first step of creating an extension app that adds a button to the IM module is to subscribe to the UI Service as shown on line 48 of the `controller.js` file:
 

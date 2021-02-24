@@ -73,8 +73,8 @@ MessageML supports the following tags for grouping information within a message:
 | :--- | :--- | :--- |
 | `<p>paragraph</p>` | Paragraph formatting. | \* `class` |
 | `<hr />` | Horizontal rule. | None. |
-| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list. | \* `class` |
-| `<ol>` `<li>list item</li>` `</ol>` | Numbered list. | \* `class` |
+| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list.  Cannot be empty, must contain at least one child `<li>` item. | \* `class` |
+| `<ol>` `<li>list item</li>` `</ol>` | Numbered list.  Cannot be empty, must contain at least one child `<li>` item. | \* `class` |
 | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | \* `class` |
 | `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](../structured-objects.md). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](../../../developer-tools/developer-tools/ui-style-guide/colors.md)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
 
@@ -190,7 +190,7 @@ MessageML supports the following tags to embed media into messages:
 
 | Tags | Description | Attributes |
 | :--- | :--- | :--- |
-| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/symphony-developer/docs/messagemlv2#section-sending-images). | _`src`_ `class` |
+| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](message-format-messageml.md#sending-images). | _`src`_ `class` |
 | `<audio/>` | Only supported for chime. See below. | _`src`_ |
 
 ## Sending Images
@@ -219,6 +219,14 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 -H 'sessionToken: eyJhbGciOiJSU...6YmlWyim0peFkMA' \
 -F 'message=<messageML>Sending attachment via API<img src="data:image/svg+xml;base64,PHN2ZyBpZD0i...DcuMjcsMTYuN="></img></messageML>'
 ```
+
+{% hint style="warning" %}
+### Limit on Image size for Data URL \(base64\)
+
+This feature is intended to be used for small images, such as custom emoji. Our recommendation is that the total size of base64 encoded embedded images do not exceed 25KB per message.
+{% endhint %}
+
+
 
 ## Shorthand Tags
 
