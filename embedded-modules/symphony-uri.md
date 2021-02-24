@@ -52,6 +52,10 @@ What happens if no room name is provided?
 
 * The wrapper is brought into focus and nothings happens
 
+What happens if your own User-ID is not included?
+
+* The wrapper is brought into focus and an error message pop-up mentions _'Please ensure your own email address is included in room creation URL'_
+
 Can you put spaces in the URI to create a room name?
 
 * Yes, if opening the URI via chrome.
@@ -69,6 +73,10 @@ symphony://?startRoom=RoomName=Example&userIds=4378106230763,5478106410145,70781
 What happens if no room name is provided?
 
 * The wrapper is brought into focus and nothings happens
+
+What happens if your own email is not included?
+
+* The wrapper is brought into focus and an error message pop-up mentions _'Please ensure your own email address is included in room creation URL'_
 
 Can you put spaces in the URI to create a room name?
 
