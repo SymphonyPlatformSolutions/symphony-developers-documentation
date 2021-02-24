@@ -57,7 +57,7 @@ Once installed, the next step is to configure your new Symphony bot using the Sy
 
 ![](../../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
 
-After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to the generated `config.yaml` file:
+After pressing enter, the Symphony Bot Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to the generated `config.yaml` file:
 
 {% hint style="info" %}
 Note: In the generated `config.yaml` file, the BDK assumes that your Symphony Pod, Agent, and Key Manager components are all accessible via the same host, port, and scheme.

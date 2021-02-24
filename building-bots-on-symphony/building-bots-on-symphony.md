@@ -26,9 +26,9 @@ Go through our dedicated step by step bot building tutorials to learn how to lev
 
 {% page-ref page="tutorials/" %}
 
-At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
-
 ### 4.  Authentication
+
+At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
 
 {% page-ref page="authentication/" %}
 

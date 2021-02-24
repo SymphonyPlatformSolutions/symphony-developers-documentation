@@ -2,72 +2,57 @@
 
 Thank you for using Symphony. This document contains essential information about the changes that occurred in the Agent and in the Public APIs of Symphony.
 
-### **Symphony 20.7 \(1.61\) - Agent 2.61.2**
+### **Symphony 20.10 - Agent 20.10.1**
 
-#### Swagger
+### Swagger
 
-The Swagger file for v20.7 \(1.61\) available [here](https://github.com/symphonyoss/symphony-api-spec/tree/20.7).
+The Swagger file for v20.10 available [here](https://github.com/symphonyoss/symphony-api-spec/tree/20.10).
 
-#### Agent Changes
+### Agent Changes
 
-* Agent 2.61.0
-  * Fixed issues in the conversion of the emoji shortcode from messageML to presentationML.
-  * Improved the [Health Check Extended v3](https://developers.symphony.com/v20.7/restapi/reference#health-check-extended-v3) API endpoint to return the authType field, showing if the Agent authentication is configured to use RSA or Certificate.
-  * [Message Create v4](https://developers.symphony.com/restapi/v20.7/reference#create-message-v4): Fixed issue when sending a message that mentions an external user by his/her email.
-  * Properly return a 451 error code when a message sent is blocked by DLP \(Data Loss Prevention\) instead of returning a 400 error code.
-  * More secured way to provide Authentication credentials for the Agent: RSA private key for the agentservice user and ceservice user can be passed through VM parameters. For more information, refer to [Agent 2.X and above Installation](agent-guide/agent-2.x-and-above-installation.md).
+#### Agent 20.10.0
 
+* The Agent will return a direct error when trying to send a message larger than the max message length. Please keep in mind that other errors related to message size limits such as the number of Search tokens to be indexed will continue to be returned indirectly through the datafeed.
+* Agent compatibility with OpenJDK 1.8 262 has been verified 
+* Fixed security vulnerabilities in the Agent
+* Removed logging of Agent properties at startup
+* Removed the stack trace logging if log level is not set to "debug"
+* Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
 
+#### Agent 20.10.1
 
-* Agent 2.61.1
-  * Fix backward compatibility bug for Elements buttons \(Deprecated `primary-destructive` and `secondary-destructive` classes are now mapped to `primary` and `secondary`\)
-
-
-
-* Agent 2.61.2
-  * Removed a duplicated definition in swagger
-  * Fixed some bugs
-
-
-
-* Agent 2.61.3
-  * Removed the stack trace logging if log level is not set to "debug"
-  * Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
+* Upgrade of Docker image of the agent
+* Fixed some vulnerable dependencies
 
 {% hint style="info" %}
-### Agent 2.61.3 - officially supported Agent for Symphony version v20.7
+### Agent 20.10.1 - officially supported Agent for Symphony version v20.10
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.61.3.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.10.1.zip).
 
-For a list of Agent x SBE compatibilities, click [here](https://developers.symphony.com/restapi/docs/agent-compatibilities).
+For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
-### **New APIs**
+#### **New APIs**
 
-The following API endpoint has been created:
+No API endpoints were created in Symphony version 20.10.
 
-* [Suspend User Account](https://developers.symphony.com/restapi/v20.7/reference#suspend-user-v1)
+#### **Updated APIs**
 
-### **Updated APIs**
+The behavior of some API endpoints has been changed to ignore unexpected parameters. Please keep in mind that unexpected parameters are not officially supported and may result in an error in a future version.
 
-The following API endpoints were updated:
+#### **Deprecated APIs**
 
-* [Stream Info](https://developers.symphony.com/restapi/reference#stream-info-v2) is now OBO enabled
-* The behaviour of two endpoints has been changed. In order to avoid a breaking change, we have implemented a pod setting which will allow an admin user to activate this new behaviour. For more information, please contact your Technical Account Manager, Solutions Architect or the Technical Support Team.
-  * [Update Application Entitlements](https://developers.symphony.com/restapi/v20.7/reference#update-application-entitlements): override user specific settings when global settings are updated for a given pod and a given application.
-  * [Update User Apps](https://developers.symphony.com/restapi/v20.7/reference#update-user-apps) now allows partial updates.
+* [Get Message IDs by Timestamp](%20https://developers.symphony.com/restapi/v20.10/reference#get-message-ids-by-timestamp) is deprecated starting with version 20.10. Please reach out to your Technical Account Manager or Solution Architect for more information.
 
-### **Deprecated APIs**
+#### **General Updates**
 
-No API endpoints were deprecated in Symphony version 20.7.
-
-### **General Updates**
-
-* Symphony Elements:
-  * [Available Components](../building-bots-on-symphony/symphony-elements/available-elements/): added information about using Elements with cards.
-  * Embedded Chat Modules \(ECM\) now supports Elements
-
-### **Documentation Changes**
-
-For more information, refer to [Documentation Updates](documentation-updates.md).
+* Client 2.0: Fixed display bug of Elements in Dark theme. Dark theme is not yet fully supported.
+* Client 2.0: Fixed display bug of Elements in Condensed mode. Condensed mode is not supported.
+* Client 2.0: Fixed display bug of Elements Text area \(incorrect font\).
+* Fixed display bug of Elements Tooltip \(incorrect font & font color\).
+* Elements Text area: Fixed missing default value when a label is also set.
+* Elements Checkboxes and Radio buttons: The limit of number of Elements in a form has been increased to 50. Please note that this limit has been set as a safeguard to avoid reaching the limit of the message total number of characters.
+* Fixed security vulnerabilities in message rendering libraries
+* Starting with Symphony v20.10, some “built in” applications of the Marketplace will also be modifiable directly in the Admin Portal. Please reach out to your Technical Account Manager for more information.
+* Extension Applications: Improved support of Client 2.0 \(retrieve user entitlements, support of theme changed event, support of app in last active popped out workspace, support of developper mode, support of Module service open link, focus, and redirect methods\)
 

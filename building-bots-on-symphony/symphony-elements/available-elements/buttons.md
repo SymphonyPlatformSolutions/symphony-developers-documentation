@@ -11,7 +11,11 @@ With Symphony Elements 2.0, a new palette of colors is available for the Button 
 * Tertiary: the Tertiary button is a low prominence option. Use the tertiary button alongside a Primary or as a standalone button with the ability to read more information.
 * Destructive: use the Destructive button when an action results in the removal of an item or if it can result in a potentially serious negative consequence.
 
-![](../../../.gitbook/assets/d18a2da-all_together%20%282%29.jpg)
+![](../../../.gitbook/assets/button-2.0.png)
+
+{% hint style="info" %}
+Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.   
+{% endhint %}
 
 ## Attributes
 
@@ -26,11 +30,11 @@ With Symphony Elements 2.0, a new palette of colors is available for the Button 
 * If `class` is not defined, the action button assumes the `primary` class by default. Action buttons should be used for affirmation or confirmation actions.
 * Reset buttons have the `secondary` class set by default. Reset buttons should be used when the content of the fields need to return to their original state.
 
-  **Examples**
+## Examples
 
-The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
+The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md).
 
-![](../../../.gitbook/assets/1673f61-button%20%281%29.gif)
+![](../../../.gitbook/assets/buttons-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
@@ -39,7 +43,7 @@ The following example shows the use of the **Reset** and the **Submit** button w
   <form id="form_id">
     <text-field name="text-field" placeholder="Add your comment here" required="true">Initial value</text-field>
     <button type="reset">Reset</button>
-    <button name="submit_button" type="action" class="primary">Submit</button>
+    <button name="submit_button" type="action">Submit</button>    
   </form>
 </messageML>
 ```
@@ -81,7 +85,7 @@ The following example shows the use of the **Reset** and the **Submit** button w
                 "formId": "form_id",
                 "formValues": {
                     "action": "submit_button",
-                    "text-field": "hello, my name is John Smith"
+                    "init": "hello, my name is John Smith"
                 }
             }
         }
@@ -89,4 +93,12 @@ The following example shows the use of the **Reset** and the **Submit** button w
 ```
 {% endtab %}
 {% endtabs %}
+
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
+| Reset features behaviour is to show back the initial value of the form  | 20.4 | Working as previous behavior: clear fields | 2.55.9 |
+| New styles: • New designs for the buttons • Styles `primary destructive` and `secondary destructive` are deprecated • Styles `tertiary` and `destructive` are introducedMain features introduced | 20.6 | New styles are displayed as the previous ones, `tertiary` and `destructive` are displayed as the default blue `primary` style | 20.6 |
 

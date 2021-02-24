@@ -21,7 +21,7 @@ Create a new directory and go into it:
 $ mkdir myBot && cd myBot
 ```
 
-Run Symphony Bot Generator and follow instructions in your terminal:
+Run Symphony BDK Generator and follow instructions in your terminal:
 
 ```text
 $ yo symphony
@@ -40,6 +40,6 @@ $ yo symphony 2.0
 ```
 
 {% hint style="info" %}
-Note: At the moment the Bot Generator 2.0 and subsequent BDK 2.0 projects are only available in Java. Support for Python, Node.js and .NET are coming soon.
+Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are only available in Java. Support for Python, Node.js and .NET are coming soon.
 {% endhint %}
 

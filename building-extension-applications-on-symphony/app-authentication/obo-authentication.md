@@ -22,6 +22,22 @@ For OBO apps, authentication is a two-fold process:
 
 Once the app has obtained the user's `sessionToken`, it can make REST API calls with this `sessionToken` to perform activities on behalf of the session user.
 
+## OBO App Permissions
+
+Before proceeding, check out the OBO App permissions required for a given workflow:
+
+| Category | Permission | Description |
+| :--- | :---: | :--- |
+| On Behalf Of | `ACT_AS_USER` | **Required**. This required permission allows an application to act on behalf of a user via any of the other permissions.  **Note**: This permission does not display to administrators on the Admin Portal because all apps can act on behalf of a user and therefore have the `ACT_AS_USER` permission by default. |
+| Messaging | `SEND_MESSAGES` | The application can send messages for the logged-in user. |
+| Get Connections | `GET_USER_CONNECTIONS` | The application can get connection requests for the logged-in user. |
+| Send Connections | `REQUEST_USER_CONNECTIONS` | The application can send connection requests for the logged-in user. |
+| Get Presence | `GET_PRESENCE` | The application can only get presence for the logged-in user. |
+| Set Presence | `SET_PRESENCE` | The application can only set presence for the logged-in user. |
+| Primary User Identity | `GET_BASIC_USER_INFO` | The application can get information about the logged-in user. |
+| Primary Contacts Access | `GET_BASIC_CONTACT_INFO` | The application can get information about other users through user look-up and search. |
+| List User's Streams | `LIST_USER_STREAMS` | The application can list the streams in which the logged-in user is a member. |
+
 ## Getting Started
 
 1. In order to perform an OBO operation, you need to first create an extension application manifest `bundle.json` file and upload to the Pod.
@@ -128,4 +144,6 @@ public class BotApplication {
   }
 }
 ```
+
+
 

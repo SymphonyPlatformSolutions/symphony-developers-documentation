@@ -19,6 +19,28 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">20.10.x</td>
+      <td style="text-align:left">20.10.x</td>
+      <td style="text-align:left">
+        <p>20.10.x
+          <br />2.62.x</p>
+        <p>2.61.x</p>
+        <p>2.60.x</p>
+        <p>2.59.x</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">20.9.x</td>
+      <td style="text-align:left">1.62.x</td>
+      <td style="text-align:left">
+        <p>2.62.x</p>
+        <p>2.61.x</p>
+        <p>2.60.x</p>
+        <p>2.59.x</p>
+        <p>2.57.x</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left">20.7.x</td>
       <td style="text-align:left">1.61.x</td>
       <td style="text-align:left">
@@ -47,31 +69,6 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
         <p>2.56.x - Deprecated</p>
         <p>2.55.x</p>
       </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">20.4.x</td>
-      <td style="text-align:left">1.58.x</td>
-      <td style="text-align:left">
-        <p>2.58.x</p>
-        <p>2.57.x</p>
-        <p>2.56.x - Deprecated</p>
-        <p>2.55.x - Compatible only if not using Symphony Elements</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">20.3.x</td>
-      <td style="text-align:left">1.57.x</td>
-      <td style="text-align:left">2.57.x
-        <br />2.56.x - Deprecated
-        <br />2.55.x - Compatible only if not using Symphony Elements
-        <br />2.54.4 - Compatible only if not using Symphony Elements</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">20.2.x - Deprecated</td>
-      <td style="text-align:left">1.56.x - Deprecated</td>
-      <td style="text-align:left">2.56.x - Deprecated
-        <br />2.55.18 - Deprecated
-        <br />2.54.4 - Deprecated</td>
     </tr>
   </tbody>
 </table>

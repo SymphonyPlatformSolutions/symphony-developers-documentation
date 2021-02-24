@@ -40,7 +40,7 @@ For large rooms, it is recommended that bots do not send messages at a higher ra
 
 ## Bulk Adding Users
 
-If bots are bulk adding users to rooms, it is recommended that bots add users at a rate of 1/3 seconds.
+If bots are bulk adding users to rooms, it is recommended that bots add users at rate of 3 users / second.
 
 ## Duplicate Messages
 

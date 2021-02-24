@@ -40,6 +40,8 @@ The sequence of API calls and component interaction is illustrated below:
 
 ![](../../.gitbook/assets/bot-message-workflow-3x%20%281%29.svg)
 
+
+
 *  **1.**  First, a bot must authenticate with the Pod. It does so by calling the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
 * **1a.** If successful, the bot will receive a valid Session Token. This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.
 * **2**.  Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#key-manager-authenticate). 

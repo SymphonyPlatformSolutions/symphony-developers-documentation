@@ -10,7 +10,7 @@ Complete the BDK 1.0 App configuration guide:
 
 ## 1.  Dive into the Code
 
-In this tutorial we will be building off of the generated app + bot project scaffolds provided by the BDK. The BDK 1.0comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
+In this tutorial we will be building off of the generated app + bot project scaffolds provided by the BDK 1.0. The BDK 1.0 comes out of the box with a number of best practices as well as boiler plate code in order to streamline extension app development. The following demonstrates the BDK's implementation for bootstrapping your extension app:
 
 ### Initialization:
 

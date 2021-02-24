@@ -11,12 +11,43 @@ Extension apps can receive stream participant information when an end user click
 
 The following methods are available on the `ui` service:
 
+* openIMbyStreamID
+* openIMbyUserIDs
 * registerExtension
 * unregisterExtension
 
 The following events are fired by the `ui` service:
 
 * themeChangeV2
+
+## openIMbyStreamID\(\)
+
+Open an existing conversation in a new module.
+
+Released in version 20.10.
+
+```javascript
+function openIMbyStreamID(streamID, messageId)
+```
+
+| Parameter | Type | Possible Values | Description |
+| :--- | :--- | :--- | :--- |
+| streamID | String |  | The stream ID or conversation ID to be opened. |
+| messageID | String | Either a messageID, or the null value | The messageId can be used in addition to the streamId to focus on a specific message of the conversation. Use "null" as parameter value to jump to the latest message of the conversation. |
+
+## openIMbyUserIDs\(\)
+
+Open a conversation with one or more users in a new module.
+
+Released in version 20.10.
+
+```javascript
+function openIMbyUserIDs(userIds)
+```
+
+| Parameter | Type | Possible Values | Description |
+| :--- | :--- | :--- | :--- |
+| userIds | String\[\] |  | Array of userIds. |
 
 ## registerExtension\(\)
 
