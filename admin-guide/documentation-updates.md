@@ -4,7 +4,7 @@ Our documentation is continually updated with new topics, and corrections or cla
 
 Also, visit the [Change Log](change-log.md) to know more about the major Symphony updates.
 
-### Documentation Changes of Version 20.9 \(1.62\)
+## Documentation Changes of Version 20.9 \(1.62\)
 
 This section contains the main changes that occurred in the v20.9 version of the documentation.
 
@@ -14,7 +14,7 @@ No tutorial pages, overviews, nor guides have been added to the Symphony Platfor
 
 #### **API References**
 
-The following list shows the endpoints that have been updated or added to the [API Reference](https://rest-api.symphony.com/v20.9/reference) documentation.
+The following list shows the endpoints that have been updated or added to the [API Reference](%20https://rest-api.symphony.com/v20.9/reference) documentation.
 
 * [Blast Message](https://developers.symphony.com/restapi/v20.9/reference#blast-message) - added
 * [Follow User](https://developers.symphony.com/restapi/v20.9/reference#follow-user) - added
@@ -29,7 +29,7 @@ The following list shows the endpoints that have been updated or added to the [A
 * Updated [Text Field](../building-bots-on-symphony/symphony-elements/available-elements/text-field.md), [Masked Text Field](../building-bots-on-symphony/symphony-elements/available-elements/masked-text-field.md), [Text Area](../building-bots-on-symphony/symphony-elements/available-elements/text-area.md), [Person Selector](../building-bots-on-symphony/symphony-elements/available-elements/person-selector.md), and [Dropdown Menu](../building-bots-on-symphony/symphony-elements/available-elements/dropdown-menu.md) documentation in order to guide on how to use `label` and `title` attributes.
 * Updated [Message Format - MessageML](../building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md) guide on how to use the `expandable-card` tag in messageML.
 
-### General Documentation Updates
+## General Documentation Updates
 
 Here after you can find the updates of our documentation impacting the 20.9 version. These changes might be also reflected in previous versions:
 
@@ -45,6 +45,7 @@ Here after you can find the updates of our documentation impacting the 20.9 vers
   * [Update Room v3](https://developers.symphony.com/restapi/v20.9/reference#update-room-v3) - attributes information panel were updated
   * [Create Message v4](https://developers.symphony.com/restapi/reference#create-message-v4) - updated attachment limits
   * Updated the [User Attributes](https://developers.symphony.com/restapi/reference#user-attributes) Object and therefore its impacts on the endpoints [Create User v2](https://developers.symphony.com/restapi/reference#create-user-v2) / [Update User v2](https://developers.symphony.com/restapi/reference#update-user-v2) / [Search Users](https://developers.symphony.com/restapi/reference#search-users)
+  * The endpoint [Subscribers](https://developers.symphony.com/restapi/reference#subscribers) documentation has been updated to highlight both default and maximum values for the parameter "limit"
 
 
 

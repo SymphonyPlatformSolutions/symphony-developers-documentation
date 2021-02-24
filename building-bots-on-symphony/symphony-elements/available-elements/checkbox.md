@@ -23,7 +23,7 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 ## Rules and Limitations
 
 * The text node of the MessageML will be converted to the `<label>` tag. This will preserve the formatting tags `<i>` and `<b>`, if present.
-* A form can have a maximum of 50 checkboxes within it.
+* A form can have a maximum of 20 checkboxes within it.
 * Once selected, checkboxes can be deselected by clicking them.
 * Click the reset button to return the checkboxes to their original status \(checked or unchecked\).
 * If a checkbox is sent without at least one checked option, it will not be displayed in the datafeed payload.
