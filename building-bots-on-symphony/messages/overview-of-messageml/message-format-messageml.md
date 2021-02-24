@@ -71,12 +71,12 @@ MessageML supports the following tags for grouping information within a message:
 
 | Tag | Description | Optional attributes |
 | :--- | :--- | :--- |
-| `<p>paragraph</p>` | Paragraph formatting. | \* `class` |
+| `<p>paragraph</p>` | Paragraph formatting. | • `class` |
 | `<hr />` | Horizontal rule. | None. |
-| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list. | \* `class` |
-| `<ol>` `<li>list item</li>` `</ol>` | Numbered list. | \* `class` |
-| `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | \* `class` |
-| `<div>paragraph</div>` | Block of text. _This tag can be used to specify visual styles, by adding a `class` attribute._ This tag is used to create [Structured objects](../structured-objects.md). \* This tag is also the root of any message read through the API. | _`class`:_ [_color options_](../../../developer-tools/developer-tools/ui-style-guide/colors.md)_._ `data-entity-id` _`data-icon-src`_ `data-accent-color` \* See below for list of translated PresentationML attributes. |
+| `<ul>` `<li>list item</li>` `</ul>` | Unordered or bullet list. _Cannot be empty, must contain at least one child `<li>` item._ | • `class` |
+| `<ol>` `<li>list item</li>` `</ol>` | Numbered list.  _Cannot be empty, must contain at least one child `<li>` item._ | • `class` |
+| `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels. | • `class` |
+| `<div>paragraph</div>` | Block of text. • This tag can be used to specify visual styles, by adding a `class` attribute. __• This tag is used to create [Structured objects](../structured-objects.md). • This tag is also the root of any message read through the API. | • `class`: [color options](../../../developer-tools/developer-tools/ui-style-guide/colors.md) __• `data-entity-id`  • `data-icon-src` • `data-accent-color`  • See below for list of translated PresentationML attributes. |
 
 ## Text-level formatting and semantics
 
@@ -103,7 +103,7 @@ MessageML supports the following tags for formatting content within a message:
         <br /><code>&lt;/a&gt;</code>
       </td>
       <td style="text-align:left">Insert a hyperlink that will be displayed in the message.</td>
-      <td style="text-align:left"><em><code>href</code>: the URL of the link<br /></em><code>class</code>:
+      <td style="text-align:left">&#x2022; <code>href</code>: the URL of the link<em><br /></em>&#x2022; <code>class</code>:
         <a
         href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
     </tr>
@@ -116,7 +116,7 @@ MessageML supports the following tags for formatting content within a message:
         between the last character in a bolded section and the closing <code>&lt;/b&gt;</code> tag,
         the bold section will be returned in Markdown (i.e. surrounded by double
         &apos;*&apos; characters) instead of XHTML tags.</td>
-      <td style="text-align:left">* <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
+      <td style="text-align:left">&#x2022; <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left">1.53 version onwards
@@ -149,7 +149,7 @@ MessageML supports the following tags for formatting content within a message:
         between the last character in an italics-formatted section and the closing <code>&lt;/i&gt;</code> tag,
         the italics section will be returned in Markdown (i.e. surrounded by single
         &apos;*&apos; characters) instead of XHTML tags.</td>
-      <td style="text-align:left">* <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
+      <td style="text-align:left">&#x2022; <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>&lt;pre&gt;</code>
@@ -157,20 +157,20 @@ MessageML supports the following tags for formatting content within a message:
         <br /><code>&lt;/pre&gt;</code>
       </td>
       <td style="text-align:left">Preformatted text.</td>
-      <td style="text-align:left"><em><code>class</code>:</em>  <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md"><em>color options</em></a><em>.<br /></em>Non-HTML
-        MessageML <a href="message-format-messageml.md#shorthand-tags">shorthand tags</a> are
+      <td style="text-align:left">&#x2022; <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.<em><br /></em>&#x2022;
+        Non-HTML MessageML <a href="message-format-messageml.md#shorthand-tags">shorthand tags</a> are
         not supported inside <code>&lt;pre&gt;</code>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>&lt;span&gt;text&lt;/span&gt;</code>
       </td>
       <td style="text-align:left">No formatting.
-        <br /><em>This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<br /></em>This
-        tag is used to create <a href="../structured-objects.md">Structured objects</a>.</td>
+        <br />&#x2022; This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<em><br /></em>&#x2022;
+        This tag is used to create <a href="../structured-objects.md">Structured objects</a>.</td>
       <td
-      style="text-align:left"><em><code>class</code>:</em>  <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md"><em>color options</em></a><em>.<br /></em><code>data-entity-id</code>
+      style="text-align:left">&#x2022; <code>class</code>: <a href="../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a>.<em><br /></em>&#x2022; <code>data-entity-id</code>
         <br
-        />* See below for list of translated PresentationML attributes.</td>
+        />&#x2022; See below for list of translated PresentationML attributes.</td>
     </tr>
   </tbody>
 </table>
@@ -181,17 +181,46 @@ MessageML supports the following tags to arrange information within a message us
 
 | Tags | Description | Optional attributes |
 | :--- | :--- | :--- |
-| `<table>` `<tr>` `<td>text</td>` `</tr>` `</table>` | Render "text" in a table format. | _`class`_ `rowspan` \* `colspan` |
-| `<thead>`, `<tbody>`, `<tfoot>` | Table sections. | \* `class` |
+| `<table>` `<tr>` `<td>text</td>` `</tr>` `</table>` | Render "text" in a table format. | • _`class`_  • `rowspan`  • `colspan` |
+| `<thead>`, `<tbody>`, `<tfoot>` | Table sections. | • `class` |
 
 ## Images and Media
 
 MessageML supports the following tags to embed media into messages:
 
-| Tags | Description | Attributes |
-| :--- | :--- | :--- |
-| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/symphony-developer/docs/messagemlv2#section-sending-images). | _`src`_ `class` |
-| `<audio/>` | Only supported for chime. See below. | _`src`_ |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Tags</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Attributes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>&lt;img src=&quot;url&quot;/&gt;</code>
+      </td>
+      <td style="text-align:left">Image. Images have a max height of 256px; otherwise, the default size
+        is the size of the image. For more information on how to send images through
+        API call, refer to <a href="message-format-messageml.md#sending-images">Sending images</a>.</td>
+      <td
+      style="text-align:left">&#x2022; <code>src</code> 
+        <br />&#x2022; <code>class</code>
+        </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;audio/&gt;</code>
+      </td>
+      <td style="text-align:left">Only supported for chime. See below.</td>
+      <td style="text-align:left">
+        <p>&#x2022; <code>src</code>
+        </p>
+        <p>&#x2022; <code>autoplay</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Sending Images
 
@@ -220,6 +249,12 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 -F 'message=<messageML>Sending attachment via API<img src="data:image/svg+xml;base64,PHN2ZyBpZD0i...DcuMjcsMTYuN="></img></messageML>'
 ```
 
+{% hint style="warning" %}
+### Limit on Image size for Data URL \(base64\)
+
+This feature is intended to be used for small images, such as custom emoji. Our recommendation is that the total size of base64 encoded embedded images do not exceed 25KB per message.
+{% endhint %}
+
 ## Shorthand Tags
 
 MessageML supports the following tags to embed additional information into messages:
@@ -227,21 +262,38 @@ MessageML supports the following tags to embed additional information into messa
 | Tag | Description | Optional attributes |
 | :--- | :--- | :--- |
 | `<mention uid="123456789"/>` | Insert a mention for the user whose Symphony userid is `123456789`. |  |
-| `<mention email="user@music.org"/>` | Insert a mention for the user whose email address is `user@music.org`. | _`strict`=`true`, the API will throw an error if no user of that email address exists. \(default\)_ `strict`=`false` . Message is accepted even if the user cannot be resolved. |
+| `<mention email="user@music.org"/>` | Insert a mention for the user whose email address is `user@music.org`. | • `strict`=`true`, the API will throw an error if no user of that email address exists. \(default\)  • `strict`=`false` . Message is accepted even if the user cannot be resolved. |
 | `<hash tag="label"/>` | Insert "label" as a hashtag. |  |
 | `<cash tag="ticker"/>` | Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a `*` after the $ sign, for example, $\_122450.  `<messageML>` \`&lt;cash tag="$\_122450"/&gt; ```\`` |  |
 | `<chime />` | Send a chime message. No other content is permitted with a `<chime/>` tag. |  |
-| `<card>` \(see example below\) | Inserts a card. | _`iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)_ `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<card>` \(see example below\) | Inserts a card. It contains two different sections: • the `<header>` \(always visible\) • the `<body>` \(hidden\) | • `iconSrc`: image will be resized to 28 pixels by 28 pixels, use spacious mode. \(.jpg, .png and .gif\)  • `accent`: use [background color values](../../../developer-tools/developer-tools/ui-style-guide/colors.md) to select the accent color of the card. |
+| `<expandable-card>` \(see example below\) | Inserts a card with new styles and multiple levels of display within the card | • `state` \(mandatory\) in `<expandable-card>` can take 3 values: - "collapsed": only header is visible - "cropped": card expanded but the body is cropped - "expanded": card fully expanded  • `variant` \(optional\) in `<body>`: defines the style of the card. It can be either "default" for the default blue style, or "error" for the red error style |
 | `<emoji shortcode="hearts">` | Inserts an emoji. | For a list of available emojis, refer to [Emojis](../emojis.md). |
 
-An example of a card tag that could be embedded into a message:
+An example of a `card` tag and `expandable-card` tag that could be embedded into a message:
 
+{% tabs %}
+{% tab title="card" %}
 ```markup
 <card iconSrc="url" accent="tempo-bg-color--blue">
     <header>Card Header. Always visible.</header>
     <body>Card Body. User must click to view it.</body>
 </card>
 ```
+{% endtab %}
+
+{% tab title="expandable-card" %}
+```markup
+<expandable-card state="collapsed">
+  <header>Card Header. Always visible.</header>
+  <body variant="error">
+      Card Body. User must click to view it (when the card is sent collapsed/cropped).
+      [it may contain a title, a paragraph, other elements for e.g. data bar and action bar]
+  </body>
+</expandable-card>
+```
+{% endtab %}
+{% endtabs %}
 
 ## Structured Objects and Tags
 
@@ -495,7 +547,7 @@ This section lists the Structured Objects available for use in messages.
 | :--- | :--- | :--- | :--- |
 | type | Yes | String | The type of object. Must be set to `com.symphony.user.mention`. |
 | version | Yes | String | The object's version. |
-| id | Yes | Array of objects | An array of one or more of the following objects: \* com.symphony.user.userId  More information about these objects is provided below. |
+| id | Yes | Array of objects | An array of one or more of the following objects:  • com.symphony.user.userId More information about these objects is provided below. |
 
 ### com.symphony.user.userId
 

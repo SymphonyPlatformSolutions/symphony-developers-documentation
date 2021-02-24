@@ -52,6 +52,10 @@ What happens if no room name is provided?
 
 * The wrapper is brought into focus and nothings happens
 
+What happens if your own User-ID is not included?
+
+* The wrapper is brought into focus and an error message pop-up mentions _'Please ensure your own email address is included in room creation URL'_
+
 Can you put spaces in the URI to create a room name?
 
 * Yes, if opening the URI via chrome.
@@ -64,11 +68,19 @@ symphony://?startRoom=RoomName=Example&userIds=4378106230763,5478106410145,70781
 {% endtab %}
 {% endtabs %}
 
+**Error Handling**
+
+* The room creator's userID must be included in the in the userIds list alongside the other room members' userIds
+
 ## Creating a chatroom with User Emails
 
 What happens if no room name is provided?
 
 * The wrapper is brought into focus and nothings happens
+
+What happens if your own email is not included?
+
+* The wrapper is brought into focus and an error message pop-up mentions _'Please ensure your own email address is included in room creation URL'_
 
 Can you put spaces in the URI to create a room name?
 
@@ -83,6 +95,10 @@ symphony://?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,a
 ```
 {% endtab %}
 {% endtabs %}
+
+**Error Handling**
+
+* The room creator's email must be included in the in the userEmails list alongside the other room members' emails
 
 ## Launch the Symphony Desktop Client with Stream in Focus
 

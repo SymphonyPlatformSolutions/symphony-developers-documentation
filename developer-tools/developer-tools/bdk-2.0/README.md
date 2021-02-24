@@ -18,18 +18,21 @@
 
 The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how the BDK 2.0 can help power your Symphony bots and integrations today!
 
+* The BDK 2.0 Github repo can be found here: [https://github.com/SymphonyPlatformSolutions/symphony-api-client-java](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java)
+* The BDK 2.0 Certification course can be found here: [https://learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
+
 ### Installation
 
-The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Yeoman Generator.
+The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is through the Symphony Bot Generator.
 
-1. **Install the Symphony Yeoman Generator:**
+1. **Install the Symphony Bot Generator:**
 
 ```text
 $ npm i -g generator-symphony
 ```
 
 {% hint style="info" %}
-Note: If you already have the Symphony Yeoman Generator installed, upgrade it by running the following: `npm update -g generator-symphony`
+Note: If you already have the Symphony Bot Generator installed, upgrade it by running the following: `npm update -g generator-symphony`
 {% endhint %}
 
 1. **Create a new directory and navigate inside:**
@@ -50,11 +53,11 @@ $ yo symphony 2.0
 
 ### Configuration
 
-Once installed, the next step is to configure your new Symphony bot using the Yeoman Generator. In the command line, enter the information for your Symphony environment and bot metadata. For example:
+Once installed, the next step is to configure your new Symphony bot using the Symphony Bot Generator. In the command line, enter the information for your Symphony environment and bot metadata. For example:
 
 ![](../../../.gitbook/assets/screen-shot-2020-09-20-at-9.56.12-pm.png)
 
-After pressing enter, the Yeoman Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to the generated `config.yaml` file:
+After pressing enter, the Symphony Bot Generator will generate a RSA public/private key pair and generate your bot project scaffold. Open your generated project in your Java IDE of choice and navigate to the generated `config.yaml` file:
 
 {% hint style="info" %}
 Note: In the generated `config.yaml` file, the BDK assumes that your Symphony Pod, Agent, and Key Manager components are all accessible via the same host, port, and scheme.
@@ -72,7 +75,7 @@ bot:
 {% endtab %}
 {% endtabs %}
 
-By default this configuration file is generated, however you can customize this file to meet the specifications of your symphony environment. The following configuration properties can be added to this `config.yaml` file:
+By the default this configuration file is generated, however you can customize this file to meet the specifications of your symphony environment. The following configuration properties can be added to this `config.yaml` file:
 
 #### Basic Configuration Structure
 

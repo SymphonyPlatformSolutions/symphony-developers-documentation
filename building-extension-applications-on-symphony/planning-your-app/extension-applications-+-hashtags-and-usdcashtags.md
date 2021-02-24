@@ -3,7 +3,7 @@
 Symphony extension apps have the ability to extend various parts of the Symphony client user interface or UI. One common implementation is to add buttons to Symphony's native \#hashtag and $cashtag modules.
 
 {% hint style="info" %}
-Note: This guide is an overview of how to leverage the Extension API in order to extend the native \#hashtag and $cashtag hover cards. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../../developer-tools/developer-tools/ui-style-guide/).
+Note: This guide is an overview of how to leverage the Extension API in order to extend the native \#hashtag and $cashtag hover cards. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).
 {% endhint %}
 
 ## 1.  Subscribe and Register your Extension
@@ -96,7 +96,7 @@ Note: If the `filter()` function on this particular service returns False, the b
 
 ## 4.  Add Custom Business Logic
 
-Now that you've register your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time your extension/button is clicked. Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK \(Bot Developer Kit\):
+Now that you've register your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time your extension/button is clicked. Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 \(Bot Developer Kit\):
 
 {% page-ref page="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
 

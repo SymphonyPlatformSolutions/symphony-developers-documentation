@@ -23,14 +23,16 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 ## Rules and Limitations
 
 * The text node of the MessageML will be converted to the `<label>` tag. This will preserve the formatting tags `<i>` and `<b>`, if present.
-* A form can have a maximum of 20 checkboxes within it.
+* A form can have a maximum of 50 checkboxes within it. Note: The limit in previous versions was set to 20, so this limit may still apply when sending messages to customers with an earlier version of Symphony \(before 20.10\).
 * Once selected, checkboxes can be deselected by clicking them.
 * Click the reset button to return the checkboxes to their original status \(checked or unchecked\).
 * If a checkbox is sent without at least one checked option, it will not be displayed in the datafeed payload.
 
 ## Examples
 
-![](../../../.gitbook/assets/e43ba06-check.gif)
+The following example shows checkboxes being used. It shows how developers can use the **checked** parameter with the value01 preselected when the form is sent. It also shows how users can select or unselect one or several checkboxes before submitting the form, as well as how to reset it to its initial values.
+
+![](../../../.gitbook/assets/checkboxes-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
@@ -49,38 +51,45 @@ Note: If you want the user to only be able to pick a single option, use the [Rad
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "id1": "value01",
-                    "id2": "value02"
+[
+    {
+        "id": "CfVa3O",
+        "messageId": "TwSQ5mOSHJHaqABxRBYmmn___pQD5znvbQ",
+        "timestamp": 1563302610448,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+        "payload": {
+            "symphonyElementsAction": {
+                "stream": {
+                  "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA",
+                  "streamType": "ROOM"
+                },
+                "formMessageId": "en1LFlhkWTwdXyYvyMsna3///pQD6JE4dA==5856",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "checkbox",
+                    "id3": "value03"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}
+
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
 
