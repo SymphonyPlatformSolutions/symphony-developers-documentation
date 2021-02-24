@@ -33,7 +33,7 @@ When you create a message using PresentationML, you must include the root `<div>
 
 | Tag | Description | Attributes |
 | :--- | :--- | :--- |
-| root `<div>` | The root element of a Symphony message, when read through the API. | _`data-format`: must be set to "PresentationML"_ `data-version` |
+| root `<div>` | The root element of a Symphony message, when read through the API. | • `data-format`: must be set to "PresentationML"  • `data-version` |
 
 The following is an example of content for a simple message using presentationML markup:
 

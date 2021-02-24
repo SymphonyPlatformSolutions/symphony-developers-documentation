@@ -20,23 +20,26 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 * The text node of the MessageML will be converted to the `<label>` tag. This will preserve the formatting tags `<i>` and `<b>`, if present.
 * Radio buttons are presented in radio groups \(a collection of radio buttons describing a set of related options\). Only one radio button in a group can be selected at the same time. Note: The radio group must share the same name \(the value of the `name` attribute\) to be treated as a group. Once the radio group is created, selecting any radio button in that group automatically deselects any other selected radio button in the same group.
-* A form can have a maximum of 20 radio buttons within it which means that you can have more than one radio group on a form but the total number of radios cannot be more than 20.
+* A form can have a maximum of 50 radio buttons. Note: The limit in previous versions was set to 20, so this limit may still apply when sending messages to customers with an earlier version of Symphony \(before 20.10\).
 * Once the user has selected a radio option, it can be deselected only by clicking on another radio option. The only way to deselect all the radio options is by clicking the **reset** button.
 
 ## Examples
 
-![](../../../.gitbook/assets/03eaefe-radio_button.gif)
+The following example shows radio buttons being used. It shows how developers can use the **checked** parameter with the value01 preselected when the form is sent. It also shows how users can select another radio button and how it automatically unselect any other value checked, as the 3 radio buttons have the same name and therefore are part of the same group "groupId".
+
+![](../../../.gitbook/assets/radio-20.9.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
   <form id="form_id">
-    <radio name="groupId" value="value01" checked="true">red</radio>
-    <radio name="groupId" value="value02">green</radio>
-    <radio name="groupId" value="value03">blue</radio>
-    <button type="reset">Reset</button>
-    <button name="example-button" type="action">Submit</button>    
+    <h2>radio buttons</h2>
+      <radio name="groupId" value="value01" checked="true">red</radio>
+      <radio name="groupId" value="value02">green</radio>
+      <radio name="groupId" value="value03">blue</radio>
+      <button type="reset">Reset</button>
+      <button name="radio" value="action">Submit</button>
   </form>
 </messageML>
 ```
@@ -44,37 +47,46 @@ Note: If you want the user to be able to select more than one option, use the [C
 
 {% tab title="Datafeed Payload" %}
 ```javascript
-{
-    "id": "3dtVXF",
-    "messageId": "amKuCXE9wjfEFX7qQPzanX___oyR5rbWbQ",
-    "timestamp": 1595280017705,
-    "type": "SYMPHONYELEMENTSACTION",
-    "initiator": {
-        "user": {
-            "userId": 344147139494862,
-            "firstName": "Reed",
-            "lastName": "Feldman",
-            "displayName": "Reed Feldman (SUP)",
-            "email": "reed.feldman@symphony.com",
-            "username": "reedUAT"
-        }
-    },
-    "payload": {
-        "symphonyElementsAction": {
-            "stream": {
-                "streamId": "IEj12WoWsfTkiqOBkATdUn___pFXhN9OdA",
-                "streamType": "IM"
-            },
-            "formMessageId": "BFawdKkxmV0ZQmSuIzgfTX___oyR5yO2bQ",
-            "formId": "form_id",
-            "formValues": {
-                    "action": "example-button",
-                    "groupId": "value02"
+[
+    {
+        "id": "chxhFk",
+        "messageId": "BwcQN6Y7RcKxwpWDfcjL2n___pQD2WPebQ",
+        "timestamp": 1563303517217,
+        "type": "SYMPHONYELEMENTSACTION",
+        "initiator": {
+            "user": {
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "user_bot@symphony.com",
+                "username": "user_bot"
+            }
+        },
+
+        "payload": {
+            "symphonyElementsAction": {
+                "stream": {
+                  "streamId": "0YeiA-neZa1PrdHy1L82jX___pQjntU-dA",
+                  "streamType": "ROOM"
+                },
+                "formMessageId": "qXF5jpNbJtlulAmjKjn0Pn///pQD2mc/dA==5935",
+                "formId": "form_id",
+                "formValues": {
+                    "action": "radio",
+                    "groupId": "value03"
                 }
+            }
         }
     }
-}
+]
 ```
 {% endtab %}
 {% endtabs %}
+
+## Versions and Compatibility
+
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| :--- | :--- | :--- | :--- |
+| Initial release | 1.55 | Not working | 2.55.9 |
 
