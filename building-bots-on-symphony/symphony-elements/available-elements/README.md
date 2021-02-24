@@ -100,4 +100,5 @@ After completing and submitting the form, the following elements payload is gene
 * \*\*\*\*[**Text Field**](text-field.md)\*\*\*\*
 * \*\*\*\*[**Tables**](table-select.md)\*\*\*\*
 * \*\*\*\*[**Masked Text Field**](masked-text-field.md)\*\*\*\*
+* \*\*\*\*[**Date Picker**](date-picker.md)\*\*\*\*
 
