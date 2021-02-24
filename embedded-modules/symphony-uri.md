@@ -68,6 +68,10 @@ symphony://?startRoom=RoomName=Example&userIds=4378106230763,5478106410145,70781
 {% endtab %}
 {% endtabs %}
 
+**Error Handling**
+
+* The room creator's userID must be included in the in the userIds list alongside the other room members' userIds
+
 ## Creating a chatroom with User Emails
 
 What happens if no room name is provided?
@@ -91,6 +95,10 @@ symphony://?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,a
 ```
 {% endtab %}
 {% endtabs %}
+
+**Error Handling**
+
+* The room creator's email must be included in the in the userEmails list alongside the other room members' emails
 
 ## Launch the Symphony Desktop Client with Stream in Focus
 
