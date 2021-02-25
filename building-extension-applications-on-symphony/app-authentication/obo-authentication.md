@@ -30,6 +30,7 @@ Before proceeding, check out the OBO App permissions required for a given workfl
 | :--- | :---: | :--- |
 | On Behalf Of | `ACT_AS_USER` | **Required**. This required permission allows an application to act on behalf of a user via any of the other permissions.  **Note**: This permission does not display to administrators on the Admin Portal because all apps can act on behalf of a user and therefore have the `ACT_AS_USER` permission by default. |
 | Messaging | `SEND_MESSAGES` | The application can send messages for the logged-in user. |
+| Messaging | `SUPPRESS_MESSAGES` | The application can suppress messages for the logged-in user. |
 | Get Connections | `GET_USER_CONNECTIONS` | The application can get connection requests for the logged-in user. |
 | Send Connections | `REQUEST_USER_CONNECTIONS` | The application can send connection requests for the logged-in user. |
 | Get Presence | `GET_PRESENCE` | The application can only get presence for the logged-in user. |
