@@ -1,6 +1,6 @@
 # Date Picker
 
-Do you need users to pick a date as part of an interactive flow? With the Date Picker element, Symphony users can easily select a date from a calendar-style UI component.
+ou need users to pick a date as part of an interactive flow? With the Date Picker element, Symphony users can easily select a date from a calendar-style UI component.
 
 The Date Picker offers to Symphony users the possibility to enter the date in two different ways:
 
