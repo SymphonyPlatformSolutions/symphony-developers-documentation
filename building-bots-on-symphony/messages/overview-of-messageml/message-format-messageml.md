@@ -17,7 +17,7 @@ Messages may include:
 * Maximum 40 entities \(\#hashtags, $cashtags, and mentions\).
 * Maximum 2,500 unique tokens in the markdown representation of the message.
 * 81,130 characters of the encrypted markdown representation of the message. Note that there is a greater chance of reaching the token or the entity limit than the character limit.
-* By default, the maximum total size of a message cannot exceed 1.5Mb
+* The size of a message cannot exceed 1.5Mb.
 
 {% hint style="warning" %}
 ## XML Formatting
