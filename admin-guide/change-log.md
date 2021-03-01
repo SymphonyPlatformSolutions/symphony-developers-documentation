@@ -21,7 +21,6 @@ The Swagger file for v20.10 available [here](https://github.com/symphonyoss/symp
 
 #### Agent 20.10.1
 
-* Upgrade of Docker image of the agent
 * Fixed some vulnerable dependencies
 
 {% hint style="info" %}
