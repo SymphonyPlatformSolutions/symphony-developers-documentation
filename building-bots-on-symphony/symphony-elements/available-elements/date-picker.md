@@ -9,7 +9,7 @@ The Date Picker offers to Symphony users the possibility to enter the date in tw
 
 ## MessageML tag
 
-The Date Picker is represented by the &lt;date-picker&gt; tag, as you can see in the examples at the bottom of the page.
+The Date Picker is represented by the **&lt;date-picker&gt;** tag, as you can see in the examples at the bottom of the page.
 
 ## Accessibility
 
@@ -79,13 +79,13 @@ Note that currently, if a date is entered in the disabled and highlighted parame
 
 The following examples show the date picker being used as follows:
 
-* The first date-picker \(init\) shows how to display a default date, as an initial value is entered as parameter. Note that the default text will be sent to the payload given that it was not deleted before submitting the form.
-* The second date-picker \(placeholder\) shows how a placeholder is displayed in the UI. Please note that any text is accepted as input. However, if you compare with the next date-pickers present in the form, you can notice that a default placeholder is generated \(with a hint of the correct format to accepted by the date-picker field\) in case no placeholder is mentioned in parameter.
-* The third date-picker \(label\) shows how a label is displayed. In the GIF below, it shows also the interaction with the form when the user directly writes an input with an incorrect format: an error message is displayed and the form cannot be sent.
-* The fourth date-picker \(tooltip\) shows how a tooltip is displayed. Note that when a user enters the month and the date in the correct format, the current year is automatically preselected. It can be modified if the user continues writing the year in the input field.
-* The fifth date-picker \(req\) shows the behaviour of the unique required field of the form, which cannot be submitted in case it is not filled. Also note the use of the "today" button.
-* The sixth date-picker \(format\) shows the way the placeholder evolves to adapt to a new format transmitted thanks to the format parameter. Also please note the accessible interaction with the date-picker via the keyboard.
-* The seventh date-picker \(rules\) shows how to interact with the following parameters: min, max, disabled, and highlighted. Please note that a disabled date cannot be entered manually.
+* The first date-picker \(_init_\) shows how to display a **default date**, as an initial value is entered as parameter. Note that the default text will be sent to the payload given that it was not deleted before submitting the form.
+* The second date-picker \(_placeholder_\) shows how a **placeholder** is displayed in the UI. Please note that any text is accepted as input. However, if you compare with the next date-pickers present in the form, you can notice that a default placeholder is generated \(with a hint of the correct format to accepted by the date-picker field\) in case no placeholder is mentioned in parameter.
+* The third date-picker \(_label_\) shows how a **label** is displayed. In the GIF below, it shows also the interaction with the form when the user directly writes an input with an incorrect format: an error message is displayed and the form cannot be sent.
+* The fourth date-picker \(_tooltip_\) shows how the **title** attribute is displayed. Note that when a user enters the month and the date in the correct format, the current year is automatically preselected. It can be modified if the user continues writing the year in the input field.
+* The fifth date-picker \(_req_\) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case it is not filled. Also note the use of the "today" button.
+* The sixth date-picker \(_format_\) shows the way the placeholder evolves to adapt to a new **format** transmitted thanks to the format parameter. Also please note the accessible interaction with the date-picker via the keyboard.
+* The seventh date-picker \(_rules_\) shows how to interact with the following parameters: **min**, **max**, **disabled**, and **highlighted**. Please note that a disabled date cannot be entered manually.
 
 ![](../../../.gitbook/assets/date-picker-20.12.gif)
 
