@@ -8,7 +8,9 @@ The Timezone Picker is represented by the **&lt;timezone-picker&gt;** tag, as yo
 
 ## Designs
 
-You can see below the designs of the date picker.
+You can see below the designs of the timezone picker.
+
+![Timezone Picker designs](../../../.gitbook/assets/timezone-picker.png)
 
 For a list of all the available elements, refer to [Elements](./).
 
@@ -123,8 +125,9 @@ For the purpose of accessibility, Symphony users can interact with the timezone 
 ## Rules and Limitations
 
 * The max length of any timezone picker attribute is 256 except `disabled-timezone` attribute which max length is set to 1024 characters.
-* All timezone values are displayed in English only
+* All timezone values are displayed in English only.
 * You can add a **default timezone** in your text field by including it in the value parameter. Please note that unlike the `placeholder` text, the **default timezone** \(`value` attribute\) will be sent in the formReply when the form is submitted if not edited by the user.
+* Please note that if the default timezone \(value attribute\) matches a value from the disabled-timezone array, then the value is left empty.
 * The timezone-picker will be allowed on the following versions of clients:
   * 20.14 for Client 2.0
   * 20.13 for Client 1.5
