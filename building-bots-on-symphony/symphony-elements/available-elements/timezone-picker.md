@@ -1,6 +1,6 @@
 # Timezone Picker
 
-Do you need users to pick a timezone as part of an interactive flow? With the Timezone Picker element, Symphony users can easily select a timezone from a selection of possible values. It is very accessible to users who can type in the country they wish to select the timezone from and the timezone picker filters the values appearing in the dropdown to the selection of possible matches \(see the examples in the bottom of the page\).
+Do you need users to pick a timezone as part of an interactive flow? With the Timezone Picker, Symphony users can easily select a timezone from a selection of possible values. It recognises both cities and countries so the user can quickly filter and find the right timezone.
 
 ## MessageML tag
 
@@ -46,7 +46,7 @@ For a list of all the available elements, refer to [Elements](./).
       <td style="text-align:left">No</td>
       <td style="text-align:left">
         <p>Timezone displayed by default when the user receives or resets the form.</p>
-        <p><em><br />Please note that if it is not defined by the developer, the value will be based on the user&apos;s browser data. You need to enter value=&quot;&quot; to enforce the timezone to be empty.</em>
+        <p><em><br />Please note that if it is not defined by the developer, the value will be based on the user&apos;s browser setting. You need to enter value=&quot;&quot; to enforce the timezone to be empty.</em>
         </p>
       </td>
     </tr>
@@ -62,7 +62,7 @@ For a list of all the available elements, refer to [Elements](./).
       <td style="text-align:left"><code>label</code>
       </td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">Not required but it is recommend if <code>title</code> is defined</td>
+      <td style="text-align:left">Not required but it is recommended if <code>title</code> is defined</td>
       <td
       style="text-align:left">Definition of the label that will be displayed on top of the timezone
         picker Element.</td>
@@ -124,16 +124,16 @@ For the purpose of accessibility, Symphony users can interact with the timezone 
 
 ## Rules and Limitations
 
-* The max length of any timezone picker attribute is 256 except `disabled-timezone` attribute which max length is set to 1024 characters.
+* The max length of any timezone picker attribute is 256 characters except `disabled-timezone` attribute which max length is set to 1024 characters.
 * All timezone values are displayed in English only.
 * You can add a **default timezone** in your text field by including it in the value parameter. Please note that unlike the `placeholder` text, the **default timezone** \(`value` attribute\) will be sent in the formReply when the form is submitted if not edited by the user.
-* Please note that if the default timezone \(value attribute\) matches a value from the disabled-timezone array, then the value is left empty.
-* The timezone-picker will be allowed on the following versions of clients:
+* Please note that if the default timezone \(`value` attribute\) matches a value from the disabled-timezone array, then the value is left empty.
+* The timezone-picker will be supported on the following versions of clients:
   * 20.14 for Client 2.0
   * 20.13 for Client 1.5
 
 {% hint style="info" %}
-When the `value` attribute is not defined by the developer, please note that the **default value will be based on the user's browser data**.
+When the `value` attribute is not defined by the developer, please note that the **default value will be based on the user's browser setting**.
 
 _If you want however to force the default value to be displayed as empty for the user when sending the form, please enforce `value=""` in the messageML._
 {% endhint %}
@@ -142,14 +142,14 @@ _If you want however to force the default value to be displayed as empty for the
 
 The following examples show the timezone picker being used as follows:
 
-* The first timezone-picker \(_init_\) shows how to display an **empty** timezone-picker \("With empty default value"\). Note in the messageML sent that value was enforced to empty with `value=""`.
+* The first timezone-picker \(_init_\) shows how to display an **empty** timezone-picker \("With empty default value"\). Note in the messageML sent the value was enforced to empty with `value=""`.
 * The second timezone-picker \(_specific\_value_\) shows how to display, by default, a **value specifically** chosen by the developer. Note that the default value would have been sent to the payload if it had not been deleted before submitting the form. You can see how users can remove a pre-selected value from the timezone-picker, thanks to the cross on the right side of the input.
-* The third timezone-picker \(_default\_value_\) shows how to display, by **default**, **the user browser timezone value**. Note that the default value is sent to the payload when submitting the form.
+* The third timezone-picker \(_default\_value_\) shows how to display, by default, **the user browser timezone value**. Note that the default value is sent to the payload when submitting the form.
 * The fourth timezone-picker \(_placeholder_\) shows how a **placeholder text** \("Only Placeholder"\) is displayed in the timezone-picker. Please note the placeholder text is not sent in the payload if no value has been chosen by the enduser.
 * The fifth timezone-picker \(_label_\) shows how a **label text** \("My Label"\) is displayed.
 * The sixth timezone-picker \(_tooltip_\) shows how a **title text** \("My Tooltip/n With a second line"\) is inserted in the UI under the \(i\) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
-* The seventh timezone-picker \(_noreq_\) shows how a user can interact with a **non-required** field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), it does not prevent the enduser from submitting the form.
-* The eighth timezone-picker \(_req_\) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case it is not filled; an error is displayed under the field in case the user submits the form with this field as empty.
+* The seventh timezone-picker \(_noreq_\) shows how a user can interact with a **non-required** field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), it does not prevent the user from submitting the form.
+* The eighth timezone-picker \(_req_\) shows the behavior of the unique **required** field of the form, which cannot be submitted in case it is not filled; an error is displayed under the field in case the user submits the form with this field as empty.
 * The ninth timezone-picker \(_disabled_\) shows how users interact with **disabled** values from the timezone-picker.
 
 ![](../../../.gitbook/assets/timezone-picker-20.12.gif)
@@ -223,16 +223,16 @@ The following examples show the timezone picker being used as follows:
 
 ## Versions and Compatibility
 
-| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent needed to parse message sent by the bot |
+| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent minimal version |
 | :--- | :--- | :--- | :--- |
-| Initial release | 20.14 | ? | 20.12 |
+| Initial release | 20.14 | Not supported | 20.12 |
 
-## Annexe: list of values in the timezone
+## Annex: list of timezone values
 
-The possible values of the timezone-picker are restricted to the **Canonical values** only of the [tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+The possible values of the timezone-picker are restricted to the **Canonical values** of the [tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 Please note in the examples above that the values are displayed to users according to the following rules:
 
-* The country name only is displayed if there is only 1 timezone value in it \(see Israel\)
-* A list of cities are displayed under their country title if this country owns different timezones \(see United States of America\)
+* The country name only is displayed if it has a single timezone \(see Israel\)
+* A list of cities are displayed under their country title if this country has multiple timezones \(see United States of America\)
 
