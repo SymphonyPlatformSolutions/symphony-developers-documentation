@@ -21,7 +21,11 @@ Before continuing, you will need the following:
 
 ## Symphony Postman Collection
 
-Download the following archive containing the Symphony Rest APIs collection and a sample environment configuration.
+Click on the button below to launch Postman with the Symphony REST APIs collection and a sample environment.
+
+\[Button\]
+
+If the button above does not work for you, download the following archive containing the Symphony Rest APIs collection and a sample environment configuration.
 
 1. [Download Collection and Environment Here](https://filevault.symphony.com/index.php/s/LcoG9wZJcET6Pr4)
 2. Unzip the archive
