@@ -218,7 +218,7 @@ After the `DatafeedEventService` creates/reads from the datafeed API, it categor
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3%20%281%29.png)
 
 Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 

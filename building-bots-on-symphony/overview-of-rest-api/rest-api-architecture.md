@@ -32,7 +32,7 @@ Read more about the Key Manager API here:
 
 ## Interacting with the Components
 
-![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.32.58-pm%20%281%29.png)
+![](../../.gitbook/assets/screen-shot-2020-07-02-at-4.32.58-pm%20%281%29%20%281%29.png)
 
 The three components above all interact with each other in order to create Symphony's secure messaging service. Let's take a closer look at the sequence of API calls a bot must make in order to send and receive encrypted messages on Symphony.
 
