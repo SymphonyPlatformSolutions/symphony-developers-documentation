@@ -12,7 +12,7 @@ By default, Symphony provides secure authentication and authorization for all us
 
 This sequence diagram describes the flow of requests between the various components.
 
-![](../../../.gitbook/assets/sso-workflow-7-%20%281%29.svg)
+![](../../../.gitbook/assets/sso-workflow-7-%20%281%29%20%281%29.svg)
 
 ## Create Authorization Server <a id="create-authorization-server"></a>
 
