@@ -4,7 +4,7 @@ The Table Select is not an Element itself but an example of what can be achieved
 
 The following image shows three different tables. The first table shows the use of checkboxes to select rows, positioned to the right side of the table. The second example also shows checkboxes, but they are positioned to the left side. The last table shows buttons positioned to the right.
 
-![](../../../.gitbook/assets/59e85e6-table_select_1%20%281%29.jpg)
+![](../../../.gitbook/assets/59e85e6-table_select_1%20%284%29%20%281%29.jpg)
 
 ## Building a Table Select with Apache FreeMarker
 

@@ -41,7 +41,7 @@ The following examples show text fields being used as follows:
 * The fifth text field \(id5\) contains a placeholder text and an input validation \(pattern\). The input validation automatically makes the field required.
 * The sixth text field \(id6\) contains a placeholder text and a minimum and maximum length. The length configuration automatically makes the field required.
 
-![](../../../.gitbook/assets/250df12-text_field-1.gif)
+![](../../../.gitbook/assets/250df12-text_field%20%281%29.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

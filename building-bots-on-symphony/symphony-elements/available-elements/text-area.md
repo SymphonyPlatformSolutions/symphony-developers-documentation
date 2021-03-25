@@ -28,7 +28,7 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 The following example shows a text area being used. Note that we have a **placeholder text** \("Your name"\) and a **default text** \("My name is"\) which was included between the `<textarea></textarea>` tags. Also, an input validation was added to the field in order to prohibit the use of the word "badword".
 
-![](../../../.gitbook/assets/f3dc476-text_area.gif)
+![](../../../.gitbook/assets/f3dc476-text_area%20%281%29.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

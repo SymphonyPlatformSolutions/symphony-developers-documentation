@@ -11,7 +11,7 @@ With Symphony Elements 2.0, a new palette of colors is available for the Button 
 * Tertiary: the Tertiary button is a low prominence option. Use the tertiary button alongside a Primary or as a standalone button with the ability to read more information.
 * Destructive: use the Destructive button when an action results in the removal of an item or if it can result in a potentially serious negative consequence.
 
-![](../../../.gitbook/assets/d18a2da-all_together%20%282%29.jpg)
+![](../../../.gitbook/assets/d18a2da-all_together%20%282%29%20%282%29.jpg)
 
 ## Attributes
 
@@ -30,7 +30,7 @@ With Symphony Elements 2.0, a new palette of colors is available for the Button 
 
 The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
 
-![](../../../.gitbook/assets/1673f61-button%20%281%29.gif)
+![](../../../.gitbook/assets/1673f61-button%20%281%29%20%281%29.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
