@@ -2,7 +2,7 @@
 description: Building an Interactive Bot using BDK
 ---
 
-# Build an Interactive Bot using the BDK
+# Build an Interactive Bot using the BDK 1.0
 
 ## Prerequisites
 

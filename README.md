@@ -36,7 +36,7 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 
 Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
-## Become a Certified Developer ![](.gitbook/assets/certified-developer.png) 
+## Become a Certified Developer ![](.gitbook/assets/certified-developer%20%281%29%20%282%29.png)
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
@@ -52,11 +52,11 @@ In depth documentation and reference guide for the Symphony Extension API:
 
 {% page-ref page="building-extension-applications-on-symphony/overview-of-extension-api/" %}
 
-## Developer Tools ![](.gitbook/assets/developer-tools.png) 
+## Developer Tools ![](.gitbook/assets/developer-tools.png)
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
-## Embedded Modules ![](.gitbook/assets/embedded-modules.png) 
+## Embedded Modules ![](.gitbook/assets/embedded-modules.png)
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications:
 

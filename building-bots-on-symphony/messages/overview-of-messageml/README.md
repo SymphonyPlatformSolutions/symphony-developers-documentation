@@ -59,5 +59,3 @@ Amazon AWS SQS service ensures high availability through redundancy, with "At-le
 
 If this occurs, you might receive a second copy of that message. Therefore, Bots designed to work with External rooms \(cross pod\) should be **idempotent**: they should not be affected adversely when processing the same message more than once. Continue [here](../../bots-best-practices.md#duplicate-messages) to learn about how your bot should handle duplicate messages.
 
-
-

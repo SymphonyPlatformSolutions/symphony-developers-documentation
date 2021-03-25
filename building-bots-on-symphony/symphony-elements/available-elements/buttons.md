@@ -5,10 +5,10 @@ Buttons are the Symphony element responsible for submitting a form to the bot. A
 In addition, some forms can contain reset buttons. These buttons are used to reset a form back to its original state.
 
 {% hint style="info" %}
-Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.   
+Note: Developers cannot toggle the 'Disabled' State. Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.
 {% endhint %}
 
-![](../../../.gitbook/assets/e31e35d-buttons-1.png)
+![](../../../.gitbook/assets/e31e35d-buttons%20%282%29.png)
 
 ## Attributes
 
@@ -16,7 +16,7 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 | :--- | :--- | :--- | :--- |
 | `name` | String | Yes | Identifies the clicked button. |
 | `type` | String | No  If `type` is not specified, the default value will be `type=”action”` | Indicates whether the button is an `action` button or a `reset` button. When clicked, the action button sends the form information to the datafeed. On the other hand, the reset button resets the form-data to its initial values.  Accepted values: `action` and `reset`. |
-| `class` | String | No | Toggle between new palette of colors: `primary`, `secondary`, `tertiary`, and `destructive`.   |
+| `class` | String | No | Toggle between new palette of colors: `primary`, `secondary`, `tertiary`, and `destructive`. |
 
 ## Rules and Limitations
 
@@ -27,7 +27,7 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 
 The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
 
-![](../../../.gitbook/assets/ef5f06e-button-1.gif)
+![](../../../.gitbook/assets/ef5f06e-button%20%281%29.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

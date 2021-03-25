@@ -10,7 +10,7 @@ By reusing our standard UX component libraries, Elements provide developers with
 
 Symphony Elements are a library of pre-designed reusable UX components \(text fields, dropdown menus, person selectors, buttons and more\). You can use the Elements to create forms that enable Symphony users to interact graphically with bot messages:
 
-![](../../.gitbook/assets/dde53e7-form.gif)
+![](../../.gitbook/assets/599c94d-form.gif)
 
 {% hint style="danger" %}
 ## Availability

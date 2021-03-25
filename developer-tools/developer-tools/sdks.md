@@ -16,17 +16,17 @@ Symphony provides SDKs in the following languages:
 * .NET
 
 {% hint style="info" %}
-Note: Symphony provides a dedicated Bot SDK for Java developers. While Java developers can choose to use the Java SDK, we recommend you check out the latest version of the  Bot SDK \(BDK 2.0\) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+Note: Symphony provides a dedicated Bot SDK for Java developers. While Java developers can choose to use the Java SDK, we recommend you check out the latest version of the Bot SDK \(BDK 2.0\) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
 
-### [BDK 2.0](bdk-2.0/)
+### [BDK 2.0](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/babde54387e243a23e1f579d1921406d871abdc0/developer-tools/developer-tools/bdk-2.0)
 {% endhint %}
 
 ## Configuration
 
-The SDKs have a common configuration protocol across the 4 languages.  Bot's running on the SDKs expect a standard `config.json` file, in which you specify your development environment, authentication credentials, as well as bot metadata:
+The SDKs have a common configuration protocol across the 4 languages. Bot's running on the SDKs expect a standard `config.json` file, in which you specify your development environment, authentication credentials, as well as bot metadata:
 
 {% hint style="info" %}
-Note: While RSA is the preferred method of authentication, all SDKs support both certificate-based and RSA authentication.    
+Note: While RSA is the preferred method of authentication, all SDKs support both certificate-based and RSA authentication.
 {% endhint %}
 
 {% tabs %}
@@ -42,7 +42,7 @@ Note: While RSA is the preferred method of authentication, all SDKs support both
     "podPort": 443,
     "agentHost": "my-company-name.symphony.com",
     "agentPort": 443,
-    
+
     // For bots only
     "botUsername": "my-bot-name",
     "botEmailAddress": "bot@company.com",
@@ -53,7 +53,7 @@ Note: While RSA is the preferred method of authentication, all SDKs support both
     "botCertPath": "/path/to/bot-cert/",
     "botCertName": "bot-cert.p12",
     "botCertPassword": "bot-cert-password",
-    
+
     // For extension apps only
     "appId": "app-id",
     // For extension apps using RSA authentication
@@ -63,40 +63,40 @@ Note: While RSA is the preferred method of authentication, all SDKs support both
     "appCertPath": "/path/to/app-cert/",
     "appCertName": "app-cert.p12",
     "appCertPassword": "app-cert-password",
-    
+
     // Optional: If the connection to the pod (but not the agent) needs to run through a proxy
     "podProxyURL": "http://localhost:3128",
     "podProxyUsername": "proxy-username",
     "podProxyPassword": "proxy-password",
-    
+
     // Optional: If the connection to both the pod and the agent needs to run through a proxy
     //           Do not include the podProxy properties if using this
     "proxyURL": "http://localhost:3128",
     "proxyUsername": "proxy-username",
     "proxyPassword": "proxy-password",
-    
+
     // Optional: If the connection to the key manager needs to run through a proxy
     "keyManagerProxyURL": "http://localhost:3128",
     "keyManagerProxyUsername": "proxy-username",
     "keyManagerProxyPassword": "proxy-password",
-    
+
     // Optional: If the SSL connection to any endpoint uses private or self-signed certificates
     "truststorePath": "/path/to/store/truststore.pks",
     "truststorePassword": "changeit",
-    
+
     // Optional: To modify the default datafeed handling properties
     "datafeedEventsThreadpoolSize": 5, // default value: 5
     "datafeedEventsErrorTimeout": 30, // default value: 30
     "reuseDatafeedID": true,
     "datafeedVersion": "v2", // bot will use datafeed version 1 by default
-    
+
     // Optional: Request filter pattern to verify JWT
     "authenticationFilterUrlPattern": "/v1/",
-    
+
     // Optional: If custom URI schemes need to be supported by MessageML parser 
                  By setting this property, the default schemes (http and https) will be overridden
     "supportedUriSchemes": ["http", "https", "customScheme"],
-  
+
     // Optional/experimental: exponential backoff configuration for retries
     "retry": {
         "maxAttempts": 10,
@@ -255,23 +255,23 @@ Note: While RSA is the preferred method of authentication, all SDKs support both
         "appCertPath": "",
         "appCertName": "",
         "appCertPassword": "",
-		// Optional, global proxy
+        // Optional, global proxy
         "proxyURL": "",
         "proxyUsername": "",
         "proxyPassword": "",
-		// Optional, session host proxy
+        // Optional, session host proxy
         "sessionProxyURL": "",
         "sessionProxyUsername":"",
         "sessionProxyPassword": "",
-		// Optional, key manager host proxy
+        // Optional, key manager host proxy
         "keyProxyURL": "",
         "keyProxyUsername":"",
         "keyProxyPassword": "",
-		// Optional, pod host proxy
+        // Optional, pod host proxy
         "podProxyURL": "",
         "podProxyUsername":"",
         "podProxyPassword": "",
-		// Optional, agent host proxy
+        // Optional, agent host proxy
         "agentProxyURL": "",
         "agentProxyUsername":"",
         "agentProxyPassword": "",
@@ -282,7 +282,7 @@ Note: While RSA is the preferred method of authentication, all SDKs support both
 {% endtab %}
 {% endtabs %}
 
-## Datafeed 
+## Datafeed
 
 Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
 
@@ -292,9 +292,8 @@ After the `DatafeedEventService` creates/reads from the datafeed API, it categor
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3%20%281%29.png)
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3%20%282%29.png)
 
-  
 Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
 {% tabs %}
@@ -396,11 +395,9 @@ public class MyRoomListener : RoomListener
 
 ## Generating SDK Bot Projects
 
-Generating SDK bot projects is made simple with the Symphony Generator.  This is a command-line utility that generates language specific code scaffolds on top of our SDKs.  To learn more about generating your bot project navigate here:
+Generating SDK bot projects is made simple with the Symphony Generator. This is a command-line utility that generates language specific code scaffolds on top of our SDKs. To learn more about generating your bot project navigate here:
 
-{% page-ref page="yeoman-generator.md" %}
-
-For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here: 
+For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here:
 
 {% page-ref page="../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
 
@@ -416,11 +413,9 @@ Check out the following Github repositories for direct access and reference to S
 
 ### [Java SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/tree/master/symphony-bdk-legacy/symphony-api-client-java)
 
-### [Python SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-python) 
+### [Python SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-python)
 
 ### [Node.js SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-node)
 
 ### [.NET SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-dotnet)
-
-
 

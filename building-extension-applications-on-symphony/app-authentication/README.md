@@ -121,7 +121,7 @@ extendedUserInfoService.getJwt()
 ```
 
 {% hint style="warning" %}
-#### Deprecated Field
+### Deprecated Field
 
 The `username` field has been changed in version 1.55.3, it now returns &lt;email address&gt; instead of &lt;Symphony username&gt;. Please note that this change has been done to help the transition for Applications that were relying on the username field and that the username field will be entirely removed in an upcoming version.
 {% endhint %}
@@ -158,7 +158,7 @@ This method returns a base-64 encoded JWT token for the user in context, contain
 At this point, your authenticated app has access to sensitive user data such as the Symphony user ID, username, email address, displayName, company, location, etc. Extension apps can leverage this user data in order to create user-specific workflows and automations.
 
 {% hint style="danger" %}
-#### Known Issue
+### Known Issue
 
 Currently, calling `getJwt()` without having completed the application authentication sequence will return Undefined. We will be addressing this in an upcoming release so that userReferenceId will correctly be returned if application authentication has not been completed. In the interim, userReferenceId can still be obtained from the [Register and Connect](https://developers.symphony.com/extension/docs/application-registration-and-connection) methods.
 {% endhint %}

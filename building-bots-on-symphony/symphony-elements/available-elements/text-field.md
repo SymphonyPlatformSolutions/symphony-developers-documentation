@@ -18,14 +18,14 @@ Text input fields are the most common elements in a form. Symphony provides two 
 | `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
 
 {% hint style="info" %}
-For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
+For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).
 {% endhint %}
 
 ## Rules and Limitations
 
 * The text field has a max number of 128 characters. For larger texts, use [Text Area](text-area.md).
 * The text field cannot have children tags but it can have a default text \(initial value\) between the `<text-field></text-field>` tags. See Examples below for more details.
-* Text fields are grouped at a max of 4 per row, depending on the screen size. For more information, refer to [Alignment of input texts](alignment-of-input-texts.md).
+* Text fields are grouped at a max of 4 per row, depending on the screen size. For more information, refer to [Alignment of input texts](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/babde54387e243a23e1f579d1921406d871abdc0/building-bots-on-symphony/symphony-elements/available-elements/alignment-of-input-texts.md).
 * You can add a **default text** in your text field by including it between the `<text-field></text-field>` tags. Note that unlike the `placeholder` text, the **default text** will be sent with the form if not edited by the user.
 
 ## Examples

@@ -202,7 +202,7 @@ Notice how each event returned by the datafeed has important metadata and attrib
   </tbody>
 </table>
 
-For a full list of the  JSON payloads corresponding to each event type, continue here:
+For a full list of the JSON payloads corresponding to each event type, continue here:
 
 {% page-ref page="real-time-events.md" %}
 

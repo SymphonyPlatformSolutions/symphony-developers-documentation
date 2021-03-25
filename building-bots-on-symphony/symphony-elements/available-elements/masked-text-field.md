@@ -20,7 +20,7 @@ Use the `maxlength` and `minlength` attributes to specify the maximum and minimu
 | `pattern-error-message` | String | No | Error message returned to user if `pattern` parameter matches user input |
 
 {% hint style="info" %}
-For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).  
+For more information of pattern matching and input validation, see our guide on [Regular Expressions](../regular-expressions-regex.md).
 {% endhint %}
 
 ## Rules and Limitations

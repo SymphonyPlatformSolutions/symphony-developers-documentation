@@ -2,7 +2,7 @@
 description: Bot Configuration guide for using the BDK and CLI Tool
 ---
 
-# Configure your Bot for BDK
+# Configure your Bot for BDK 1.0
 
 ## Configure your Bot for BDK
 

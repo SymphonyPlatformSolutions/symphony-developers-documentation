@@ -2,7 +2,7 @@
 description: App configuration guide for using the BDK and CLI Tool
 ---
 
-# Configure your App for BDK Development
+# Configure your App for BDK 1.0 Development
 
 The following tutorial is a configuration guide for building authenticated extension apps using the Symphony BDK and the CLI Tool.
 
@@ -104,7 +104,7 @@ Copy the entire contents of this public key including the dashes on either side,
 Note: The Bot username and Bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod below.
 {% endhint %}
 
-![](../../.gitbook/assets/screen-shot-2020-08-25-at-3.42.24-pm%20%281%29.png)
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-3.42.24-pm.png)
 
 Click 'Create' and open your generated Bot code in your favorite Java IDE and navigate to the bot-config.json file:
 
