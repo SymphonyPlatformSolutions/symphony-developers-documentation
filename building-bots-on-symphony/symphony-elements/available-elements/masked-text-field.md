@@ -35,7 +35,7 @@ For more information and examples, refer to [Regular Expressions - Regex](../reg
 
 The masked text field element is presented as a single-line text field whose characters are masked by dot \(•\) symbols. On the right side of the input, there is a link button called "show". When clicked, this link shows the entered characters. Note that after having displayed the characters, the link changes back to "hide".
 
-![](../../../.gitbook/assets/d8a5957-masked_text_field-1.gif)
+![](../../../.gitbook/assets/d8a5957-masked_text_field.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
