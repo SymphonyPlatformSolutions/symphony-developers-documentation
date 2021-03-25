@@ -1,7 +1,7 @@
 # Agent Download
 
 {% hint style="info" %}
-### Agent 20.10.1 - officially supported Agent for Symphony version 20.10 \(1.62+\)
+### Agent 20.10.1 - officially supported Agent for Symphony version 20.10
 
 [Download](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.10.1.zip)
 {% endhint %}
