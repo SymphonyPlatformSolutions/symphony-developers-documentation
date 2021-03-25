@@ -2,57 +2,56 @@
 
 Thank you for using Symphony. This document contains essential information about the changes that occurred in the Agent and in the Public APIs of Symphony.
 
-### **Symphony 20.10 - Agent 20.10.1**
+## **Symphony 20.12 - Agent 20.12.0**
 
 ### Swagger
 
-The Swagger file for v20.10 available [here](https://github.com/symphonyoss/symphony-api-spec/tree/20.10).
+The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/symphony-api-spec/tree/20.12).
 
 ### Agent Changes
 
-#### Agent 20.10.0
+#### Agent 20.12.0
 
-* The Agent will return a direct error when trying to send a message larger than the max message length. Please keep in mind that other errors related to message size limits such as the number of Search tokens to be indexed will continue to be returned indirectly through the datafeed.
-* Agent compatibility with OpenJDK 1.8 262 has been verified 
-* Fixed security vulnerabilities in the Agent
-* Removed logging of Agent properties at startup
-* Removed the stack trace logging if log level is not set to "debug"
-* Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
-
-#### Agent 20.10.1
-
-* Upgrade of Docker image of the agent
-* Fixed some vulnerable dependencies
+* With API Gateway v2 being rolled out, Agent now supports new 429 Retry later replies:
+  * For all endpoints, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded
+  * For importing or retrieving multiple messages, then Agent has implemented a retry mechanism
+* Improved performance when creating message with multiple files attached
+* Fix to support the usage of base64 image in background-image style
+* Fixed some security vulnerabilities
 
 {% hint style="info" %}
-### Agent 20.10.1 - officially supported Agent for Symphony version v20.10
+### Agent 20.12.0 - officially supported Agent for Symphony version v20.12
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.10.1.zip).
+To download the Agent, click [here](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.0.zip).
 
 For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 #### **New APIs**
 
-No API endpoints were created in Symphony version 20.10.
+No API endpoint was created in Symphony version 20.12.
 
 #### **Updated APIs**
 
-The behavior of some API endpoints has been changed to ignore unexpected parameters. Please keep in mind that unexpected parameters are not officially supported and may result in an error in a future version.
+* [Suppress Message](https://developers.symphony.com/restapi/v20.12/reference#suppress-message) endpoint has been updated to allow Service Accounts to suppress their own message without the need of any permission, as well as Apps to suppress messages on behalf of Users with the new permission SUPPRESS\_MESSAGE \(see [OBO Authentication](../building-extension-applications-on-symphony/app-authentication/obo-authentication.md)\).
+* [POST](https://developers.symphony.com/restapi/v20.12/reference#message-search-post) and [GET Message Search](https://developers.symphony.com/restapi/v20.12/reference#message-search-get) endpoints were updated to return 400 error instead of 500 when call requested to search by invalid StreamId.
+* [Create Message v4](https://developers.symphony.com/restapi/v20.12/reference#create-message-v4) endpoint was updated to return 400 error instead of 500 when creating a message into a deleted room.
+* [Import Message](https://developers.symphony.com/restapi/v20.12/reference#import-message-v4) endpoint was updated to return a more explicit message when trying to import a message into a deleted conversation
+* Agent was updated to return a 400 error as well as an explicit message when the backend identifies that the message size limit has been exceeded at ingestion.
+* [Read Datafeed v5](https://developers.symphony.com/restapi/v20.12/reference#read-datafeed-v5) response now contains empty events array for changing presence status instead of an events array containing the 'null' value
 
 #### **Deprecated APIs**
 
-* [Get Message IDs by Timestamp](%20https://developers.symphony.com/restapi/v20.10/reference#get-message-ids-by-timestamp) is deprecated starting with version 20.10. Please reach out to your Technical Account Manager or Solution Architect for more information.
+* [Health Check v2](https://developers.symphony.com/restapi/v20.12/reference#health-check-v2) endpoint was deprecated.
 
-#### **General Updates**
+### **General Updates**
 
-* Client 2.0: Fixed display bug of Elements in Dark theme. Dark theme is not yet fully supported.
-* Client 2.0: Fixed display bug of Elements in Condensed mode. Condensed mode is not supported.
-* Client 2.0: Fixed display bug of Elements Text area \(incorrect font\).
-* Fixed display bug of Elements Tooltip \(incorrect font & font color\).
-* Elements Text area: Fixed missing default value when a label is also set.
-* Elements Checkboxes and Radio buttons: The limit of number of Elements in a form has been increased to 50. Please note that this limit has been set as a safeguard to avoid reaching the limit of the message total number of characters.
-* Fixed security vulnerabilities in message rendering libraries
-* Starting with Symphony v20.10, some “built in” applications of the Marketplace will also be modifiable directly in the Admin Portal. Please reach out to your Technical Account Manager for more information.
-* Extension Applications: Improved support of Client 2.0 \(retrieve user entitlements, support of theme changed event, support of app in last active popped out workspace, support of developper mode, support of Module service open link, focus, and redirect methods\)
+* Introduction of 3 new Elements: [Date Picker](../building-bots-on-symphony/symphony-elements/available-elements/date-picker.md), [Time Picker](../building-bots-on-symphony/symphony-elements/available-elements/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md). _Please go to the description of these new Elements to see their availability on the Client side, as some of them are not or only partially available in the 20.12 version of the Client 1.5, but already released in compatible versions of Client 2.0._
+* Elements formReplies are now processed via DLP in both Client 1.5 and 2.0.
+* Client 1.5: Fixed display bugs of Elements: removed extra spacing at the bottom of forms, as well as more general bugs
+* Fixed the issue of still getting wall post messages via the [Get Message v1](https://developers.symphony.com/restapi/v20.12/reference#get-message-v1) endpoint, although "Allow user to read wall posts" entitlement was set to No
+
+### Client 2.0 updates
+
+Please look at the Mana release notes to see which features have been introduced in the Client 2.0, such as features for Extension Apps, or eventual Elements changes.
 

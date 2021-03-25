@@ -25,7 +25,6 @@ Symphony Elements are a library of pre-designed reusable UX components \(text fi
 ## Known Limitations
 
 * Once the user has submitted the form, it becomes disabled. However, if the conversation is reloaded, the form resets and the user is able to send a new reply. If your workflow requires a single reply per user, please implement this control on the Bot side.
-* User replies are not processed by DLP \(Data Loss Prevention\)
 * In read-only rooms, only the owners of the room are able to interact with Symphony Elements. For non-owner users, messages with Elements will be disabled
 {% endhint %}
 
