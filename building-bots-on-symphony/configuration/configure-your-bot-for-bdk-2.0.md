@@ -167,7 +167,7 @@ Copy the entire contents of this RSA public key including the dashes on either s
 Note: The bot username and bot email address entered to the Symphony Bot Generator must match exactly the Basic Information shown in the Pod above.
 {% endhint %}
 
-![](../../.gitbook/assets/screen-shot-2020-12-10-at-4.41.40-pm.png)
+![](../../.gitbook/assets/screen-shot-2020-12-10-at-4.41.40-pm%20%281%29%20%281%29.png)
 
 #### Create configuration file
 
