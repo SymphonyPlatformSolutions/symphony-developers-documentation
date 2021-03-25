@@ -112,7 +112,7 @@ For a list of all the available elements, refer to [Elements](./).
 
 ## Accessibility
 
-For the purpose of accessibility, Symphony users can interact with the timezone picker with their keyboard:
+For the purpose of accessibility, Symphony users can interact with the timezone picker via their keyboard:
 
 * First, using "Tab" to enter the component
 * Using "Enter", "Arrow-up", or "Arrow-down" to open the timezone list
@@ -126,11 +126,11 @@ For the purpose of accessibility, Symphony users can interact with the timezone 
 
 * The max length of any timezone picker attribute is 256 characters except `disabled-timezone` attribute which max length is set to 1024 characters.
 * All timezone values are displayed in English only.
-* You can add a **default timezone** in your text field by including it in the value parameter. Please note that unlike the `placeholder` text, the **default timezone** \(`value` attribute\) will be sent in the formReply when the form is submitted if not edited by the user.
+* You can add a **default timezone** in your text field by including it in the `value` parameter. Please note that unlike the `placeholder` text, the **default timezone** will be sent in the formReply when the form is submitted if not edited by the user.
 * Please note that if the default timezone \(`value` attribute\) matches a value from the disabled-timezone array, then the value is left empty.
 * The timezone-picker will be supported on the following versions of clients:
   * 20.14 for Client 2.0
-  * 20.13 for Client 1.5
+  * 20.13 for Client 1.5 \(a beta version is released in Client 20.12 for Client 1.5\)
 
 {% hint style="info" %}
 When the `value` attribute is not defined by the developer, please note that the **default value will be based on the user's browser setting**.
@@ -185,12 +185,12 @@ The following examples show the timezone picker being used as follows:
         "type": "SYMPHONYELEMENTSACTION",
         "initiator": {
             "user": {
-                "userId": 13056700580887,
-                "firstName": "Thibault",
-                "lastName": "Chays",
-                "displayName": "Thibault Chays (DevX3)",
-                "email": "thibault.chays@symphony.com",
-                "username": "thibault.chays"
+                "userId": 7078106482890,
+                "firstName": "User",
+                "lastName": "Bot",
+                "displayName": "User",
+                "email": "userbot@symphony.com",
+                "username": "user_bot"
             }
         },
         "payload": {
@@ -223,9 +223,10 @@ The following examples show the timezone picker being used as follows:
 
 ## Versions and Compatibility
 
-| Main features introduced | Client release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent minimal version |
-| :--- | :--- | :--- | :--- |
-| Initial release | 20.14 | Not supported | 20.12 |
+| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior \(e.g. external rooms\) | Agent minimal version |
+| :--- | :--- | :--- | :--- | :--- |
+| Beta version | 20.12 |  | Not supported | 20.12 |
+| Initial release | 20.13 | 20.14 | Not supported \(except for 20.12 in client 1.5\) | 20.12 |
 
 ## Annex: list of timezone values
 

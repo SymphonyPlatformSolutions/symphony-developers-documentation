@@ -62,6 +62,7 @@
     * [Dropdown Menu](building-bots-on-symphony/symphony-elements/available-elements/dropdown-menu.md)
     * [Person Selector](building-bots-on-symphony/symphony-elements/available-elements/person-selector.md)
     * [Date Picker](building-bots-on-symphony/symphony-elements/available-elements/date-picker.md)
+    * [Time Picker](building-bots-on-symphony/symphony-elements/available-elements/time-picker.md)
     * [Timezone Picker](building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md)
     * [Table Select](building-bots-on-symphony/symphony-elements/available-elements/table-select.md)
   * [Regular Expressions - Regex](building-bots-on-symphony/symphony-elements/regular-expressions-regex.md)
