@@ -53,5 +53,5 @@ No API endpoint was created in Symphony version 20.12.
 
 ### Client 2.0 updates
 
-Please look at the Mana release notes to see which features have been introduced in the Client 2.0, such as features for Extension Apps, or eventual Elements changes.
+Please look at the Client 2.0 release notes to see which features have been introduced in the new Client, such as features for Extension Apps, or eventual Elements changes.
 
