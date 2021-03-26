@@ -2,7 +2,7 @@
 
 Do you need users to pick a time as part of an interactive flow? With the Time Picker element, Symphony users can easily select a time from a list of possible values.
 
-The Time Picker offers to Symphony users the possibility to enter the date in two different ways:
+The Time Picker offers to Symphony users the possibility to enter the time in two different ways:
 
 * Populating the field directly with the keyboard, following the appropriate format and the list of possible values \(see attributes strict, min, max, and disabled-time\)
 * Clicking on the wished time from the dropdown displayed
@@ -107,7 +107,7 @@ You can see below the designs of the time picker.
       <td style="text-align:left">No</td>
       <td style="text-align:left">
         <p>Specifies the latest acceptable time with ISO_8601 format.</p>
-        <p><em>Note: Times earlier than the min are not displayed in the time picker.</em>
+        <p><em>Note: Times later than the max are not displayed in the time picker.</em>
         </p>
       </td>
     </tr>
@@ -158,7 +158,7 @@ You can see below the designs of the time picker.
           />
           <br /><em>Note 1: be careful as many combinations may be possible, may have a weird display for the Symphony user, and are not restricted in the messageML. Therefore, we strongly recommend to use the default value as much as possible.</em>
           <br
-          /><em>Note 2: The format only impacts what the end user will see. It does not affect how you have to specify the value, disabled-date, highlighted-date, or the format of the response.</em>
+          /><em>Note 2: The format only impacts what the end user will see. It does not affect how you have to specify the value, min, max, disabled-time, or the format of the response.</em>
         </p>
       </td>
     </tr>
@@ -187,9 +187,13 @@ You can see below the designs of the time picker.
         <p><em>Default is false</em>
         </p>
       </td>
-      <td style="text-align:left">Enforce that the user cannot select a time that is not in the proposed
-        list (e.g. we want him to only select an hour, he can&#x2019;t decide to
-        set the field to 9:15, even with the keyboard)</td>
+      <td style="text-align:left">
+        <p>Enforce that the user cannot select a time that is not in the proposed
+          list (e.g. we want him to only select an hour, he can&#x2019;t decide to
+          set the field to 9:15, even with the keyboard).</p>
+        <p><em>Please note that in addition to this, the value picked will be validated against attributes min, max, and disabled-time.</em>
+        </p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -199,7 +203,8 @@ You can see below the designs of the time picker.
 For the purpose of accessibility, Symphony users can interact with the time picker via their keyboard:
 
 * First, using "Tab" to enter the component
-* Using "Enter" or "Space" to open the dropdown
+* Using "Enter" or "Space" to open the dropdown when focus is on the icon, or just "Enter" when focus is on the input
+* Using "Arrow up" or "Arrow down" to navigate within the dropdown list and using "Enter" to select the preselected value
 * Either "Typing" or pressing "Tab" to go from the hours to the minutes, and then from the minutes to the seconds
 * Either "Deleting" or pressing "Shift+Tab" to go back from the seconds to the minutes, ad then from the minutes to the hours
 * Finally using "Tab" to exit the component
@@ -221,7 +226,7 @@ Please note that a limited amount of values are displayed in the dropdown of the
 
 The following examples show the time picker being used as follows:
 
-* The first time-picker \(_init_\) shows how to display a **default time**, as an initial value is entered as parameter. Note that the default value would have been sent to the payload if it had not been deleted before submitting the form. You can see how users can remove a pre-selected value from the time-picker, thanks to the cross on the right side of the input.
+* The first time-picker \(_init_\) shows how to display a **default time**, as an initial value is entered as parameter. Note that the default value is sent to the payload as it has not been deleted before submitting the form.
 * The second time-picker \(_placeholder_\) shows how a **placeholder** is displayed in the UI. Please note that any text is accepted as input. However, if you compare with the next time-pickers present in the form, you can notice that a default placeholder is generated \(with a hint of the correct format to accepted by the time-picker field\) in case no placeholder is mentioned in parameter.
 * The third time-picker \(_label_\) shows how a **label** \("My Label"\) is displayed.
 * The fourth time-picker \(_tooltip_\) shows how the **title** attribute \("My Tooltip/n With a second line"\) is displayed.
@@ -232,13 +237,15 @@ The following examples show the time picker being used as follows:
 * The ninth time-picker \(_strict\_step_\) shows how to enforce the user to choose among the non-disabled values displayed in the dropdown, thanks to the **strict** attribute.
 * The tenth time-picker \(_rules_\) shows how to interact with the following parameters: **min**, **max**, and **disabled-time**. Please note that a disabled time cannot be entered manually.
 
+![](../../../.gitbook/assets/time-picker-20.12.gif)
+
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
 <messageML>
   <form id="form_id">
     <h2>time-pickers</h2>
-      <time-picker name="init" label="With empty default value" value="13:51:06" />
+      <time-picker name="init" label="With default value" value="13:51:06" />
       <time-picker name="placeholder" placeholder="Only Placeholder..." />
       <time-picker name="label" label="My Label" />
       <time-picker name="tooltip" label="With Tooltip" title="My Tooltip\n With a second line" />
@@ -287,11 +294,11 @@ The following examples show the time picker being used as follows:
                     "label": "",
                     "tooltip": "",
                     "noreq": "",
-                    "req": "00:15:00",
-                    "format": "00:30:00",
-                    "step": "",
-                    "strict_step": "01:00:00",
-                    "rules": "14:45:00"
+                    "req": "12:45:02",
+                    "format": "00:45:00",
+                    "step": "00:10:02",
+                    "strict_step": "00:15:00",
+                    "rules": "14:15:00"
                 }
             }
         }
