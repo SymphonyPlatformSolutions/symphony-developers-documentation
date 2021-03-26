@@ -60,10 +60,9 @@ You can see below the designs of the time picker.
       <td style="text-align:left"><code>label</code>
       </td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left">Not required but it is recommend if <code>title</code> is defined</td>
+      <td style="text-align:left">Not required but it is recommended if <code>title</code> is defined</td>
       <td
-      style="text-align:left">Definition of the label that will be displayed on top of the time picker
-        Element.</td>
+      style="text-align:left">The text of the label that will be displayed above the time picker field.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>required</code>
@@ -79,12 +78,13 @@ You can see below the designs of the time picker.
       <td style="text-align:left">String</td>
       <td style="text-align:left">No</td>
       <td style="text-align:left">Specifies a short hint that describes the expected format of the time
-        picker.
-        <br />Accepts any string value but is overridden by the value, if a value is
-        entered.
-        <br />If not set, the accepted format will be displayed.
+        picker field.
+        <br />If the attribute<code>value</code> is entered, the placeholder will not
+        be displayed.
+        <br />If the placeholder is not set, the accepted time format will be displayed
+        by default.
         <br />
-        <br /><em>Note: be careful as adding a placeholder might bring confusion to the end user. Therefore we recommend to use the default one as much as possible, to use the label if context is needed, or the title if instructions are needed.</em>
+        <br /><em>Note: We recommend to use the default placeholder. It is better to rely on the label if context is needed, or the title if instructions are needed.</em>
       </td>
     </tr>
     <tr>
@@ -150,15 +150,15 @@ You can see below the designs of the time picker.
           third hour)
           <br />&#x2022; &apos;m&apos; defines the minutes. Similarly to the hours, you
           can use one or two (&apos;m&apos; or &apos;mm&apos;)
-          <br />&#x2022; &apos;s&apos; defines the minutes. Similarly to the hours and
-          minutes, you can use one or two (&apos;m&apos; or &apos;mm&apos;)</p>
+          <br />&#x2022; &apos;s&apos; defines the seconds. Similarly to the hours and
+          minutes, you can use one or two (&apos;s&apos; or &apos;ss&apos;)</p>
         <p>&#x2022; &apos;a&apos; (usually placed after a space) allows to display
           &apos;AM&apos; for morning times and &apos;PM&apos; for afternoon times
           <br
           />
-          <br /><em>Note 1: be careful as many combinations may be possible, may have a weird display for the Symphony user, and are not restricted in the messageML. Therefore, we strongly recommend to use the default value as much as possible.</em>
+          <br /><em>Note 1: We recommend the use of the default value as much as possible.</em>
           <br
-          /><em>Note 2: The format only impacts what the end user will see. It does not affect how you have to specify the value, min, max, disabled-time, or the format of the response.</em>
+          /><em>Note 2: The format only impacts what the end user will see. It does not affect how you have to specify the value, min, max, disabled-time, or the format of the user reply.</em>
         </p>
       </td>
     </tr>
@@ -172,7 +172,8 @@ You can see below the designs of the time picker.
         </p>
       </td>
       <td style="text-align:left">
-        <p>The stepping interval (in s) for the times displayed in the dropdown values.</p>
+        <p>The stepping interval (in seconds) for the times displayed in the dropdown
+          menu.</p>
         <p></p>
         <p>Min value: 600 (corresponding to 10 min)</p>
         <p>Max value: 43 200 (corresponding to half a day)</p>
@@ -206,14 +207,14 @@ For the purpose of accessibility, Symphony users can interact with the time pick
 * Using "Enter" or "Space" to open the dropdown when focus is on the icon, or just "Enter" when focus is on the input
 * Using "Arrow up" or "Arrow down" to navigate within the dropdown list and using "Enter" to select the preselected value
 * Either "Typing" or pressing "Tab" to go from the hours to the minutes, and then from the minutes to the seconds
-* Either "Deleting" or pressing "Shift+Tab" to go back from the seconds to the minutes, ad then from the minutes to the hours
+* Either "Deleting" or pressing "Shift+Tab" to go back from the seconds to the minutes, and then from the minutes to the hours
 * Finally using "Tab" to exit the component
 
 ## Rules and Limitations
 
 * The max length of any time picker attribute is 256 except `disabled-time` attribute which max length is set to 1024 characters.
 * If the format entered by the user is not correct or if the time entered is a disabled time, then an error message is displayed to the user. _Note that it is not possible for the user to submit the form with an invalid format or disabled time._
-* You can add a **default time** in your text field by including it in the `value` parameter. Please note that unlike the `placeholder` text, the **default time** will be sent in the formReply when the form is submitted if not edited by the user.
+* You can add a **default time** in your text field by including it in the `value` parameter. Please note that unlike the `placeholder` text, the **default time** will be sent back to the Bot in the user reply when the form is submitted if it is not edited by the user.
 * The time-picker will be supported on the following versions of clients:
   * 20.14 for Client 2.0
   * 20.13 for Client 1.5
@@ -226,8 +227,8 @@ Please note that a limited amount of values are displayed in the dropdown of the
 
 The following examples show the time picker being used as follows:
 
-* The first time-picker \(_init_\) shows how to display a **default time**, as an initial value is entered as parameter. Note that the default value is sent to the payload as it has not been deleted before submitting the form.
-* The second time-picker \(_placeholder_\) shows how a **placeholder** is displayed in the UI. Please note that any text is accepted as input. However, if you compare with the next time-pickers present in the form, you can notice that a default placeholder is generated \(with a hint of the correct format to accepted by the time-picker field\) in case no placeholder is mentioned in parameter.
+* The first time-picker \(_init_\) shows how to display a **default time**, as an initial value is entered as parameter. Note that the default value is present in the user reply as it has not been deleted before submitting the form.
+* The second time-picker \(_placeholder_\) shows how a **placeholder** is displayed in the UI. Please note that any text is accepted as input. However, if you compare with the next time-pickers present in the form, you can notice that a default placeholder is generated \(with a hint of the correct format to accepted by the time-picker field\) in case no placeholder is set.
 * The third time-picker \(_label_\) shows how a **label** \("My Label"\) is displayed.
 * The fourth time-picker \(_tooltip_\) shows how the **title** attribute \("My Tooltip/n With a second line"\) is displayed.
 * The fifth time-picker \(_noreq_\) shows how a user can interact with a **non-required** field. Even if the field is empty \(only a placeholder text is present but does not count as a value\), it does not prevent the user from submitting the form.
@@ -261,7 +262,7 @@ The following examples show the time picker being used as follows:
 ```
 {% endtab %}
 
-{% tab title="Datafeed payload" %}
+{% tab title="User reply" %}
 ```
 [
     {
