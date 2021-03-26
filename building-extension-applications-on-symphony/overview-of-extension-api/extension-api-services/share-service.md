@@ -26,13 +26,14 @@ The following methods are available on the `share` service:
 Launches the "Share on Symphony" modal from your application, allowing the user to share content from your application into a Symphony conversation \(IM or chatroom\):
 
 ```javascript
-function share(type, options)
+function share(type, content, options)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| type | String | The type of content that is being shared. |
-| options | Object | An object that describes the content being shared. For a list of objects see [standard entities](../../../building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md#standard-entities). |
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| type | String | Yes | The type of content that is being shared. |
+| content | Object | Yes | An object that describes the content being shared. For a list of objects see [standard entities](../../../building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md#standard-entities). |
+| options | Object | No | An object that describes options that can be used to enhance the share service |
 
 The following JavaScript shows an example of an article being shared:
 
@@ -53,7 +54,10 @@ var articleOptions = {
   author: "Dan DeFrancesco",
   id: "symphony-article",
   thumbnail: 'https://symphony.com/example/image.png',
-  href: 'https://symphony.com',
+  href: 'https://symphony.com'
+};
+
+var articleOptions = {
   prepopulateUsers: ['71811853190920', '71811853190903']
 };
 
@@ -61,10 +65,25 @@ var articleOptions = {
 shareButton.addEventListener("click", function(){
   shareService.share(
     "article",
+    articleContent,
     articleOptions
   );
 });
 ```
+
+The following table shows the article content:
+
+| Field | Required | Format | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | Yes | String | The headline of the article |
+| `subTitle` | No | String | The subtitle of the article |
+| `blurb` | No | String | A summary of the article to display |
+| `date` | No | [Unix Epoch Timestamp](https://www.epochconverter.com/) | Date of publication |
+| `publisher` | No | String | Name of the publisher |
+| `author` | No | String | Name of the author |
+| `thumbnail` | No | URL \(could be a data url\) | Image to be displayed - 106px-106px |
+| `id` | Must provide either `id` or `href`, or both | String | An identifier used by the application to deeplink to the article |
+| `href` | Must provide either `id` or `href`, or both | URL | URL to the article \(opened in a new browser window\) |
 
 The following table shows the article options:
 
@@ -79,92 +98,18 @@ The following table shows the article options:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>title</code>
-      </td>
-      <td style="text-align:left">Yes</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">The headline of the article</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>subTitle</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">The subtitle of the article</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>blurb</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">A summary of the article to display</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>date</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left"><a href="https://www.epochconverter.com/">Unix Epoch Timestamp</a>
-      </td>
-      <td style="text-align:left">Date of publication</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>publisher</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">Name of the publisher</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>author</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">Name of the author</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>thumbnail</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">URL (could be a data url)</td>
-      <td style="text-align:left">Image to be displayed - 106px-106px</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>id</code>
-      </td>
-      <td style="text-align:left">Must provide either <code>id</code> or <code>href</code>, or both</td>
-      <td
-      style="text-align:left">String</td>
-        <td style="text-align:left">An identifier used by the application to deeplink to the article</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>href</code>
-      </td>
-      <td style="text-align:left">Must provide either <code>id</code> or <code>href</code>, or both</td>
-      <td
-      style="text-align:left">URL</td>
-        <td style="text-align:left">URL to the article (opened in a new browser window)</td>
-    </tr>
-    <tr>
       <td style="text-align:left"><code>prepopulateUsers</code>
       </td>
       <td style="text-align:left">No</td>
       <td style="text-align:left">Array of strings</td>
       <td style="text-align:left">
         <p>The users who will be displayed by default in the person selector from
-          the share modal</p>
-        <p><em>Available only for authenticated apps, limited to 10 UserIds, and works only for Client 2.0</em>
+          the share modal.
+          <br />
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>prepopulateStreams</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">
-        <p>The stream that will be displayed by default in the person selector from
-          the share modal</p>
-        <p><em>Available only for authenticated apps, and works only for Client 2.0</em>
+        <p><em>Available only for authenticated apps, and works only for Client 2.0.</em>
+        </p>
+        <p><em>It is recommended not to populate this field with too many UserIds in order to not confuse the Symphony user willing to share an article.</em>
         </p>
       </td>
     </tr>
