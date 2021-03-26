@@ -152,7 +152,7 @@ The following table shows the article options:
       <td style="text-align:left">
         <p>The users who will be displayed by default in the person selector from
           the share modal</p>
-        <p><em>Available only for authenticated apps and limited to 10 UserIds</em>
+        <p><em>Available only for authenticated apps, limited to 10 UserIds, and works only for Client 2.0</em>
         </p>
       </td>
     </tr>
@@ -160,11 +160,11 @@ The following table shows the article options:
       <td style="text-align:left"><code>prepopulateStreams</code>
       </td>
       <td style="text-align:left">No</td>
-      <td style="text-align:left">Array of strings</td>
+      <td style="text-align:left">String</td>
       <td style="text-align:left">
-        <p>The streams that will be displayed by default in the person selector from
+        <p>The stream that will be displayed by default in the person selector from
           the share modal</p>
-        <p><em>Available only for authenticated apps and limited to 10 StreamIds</em>
+        <p><em>Available only for authenticated apps, and works only for Client 2.0</em>
         </p>
       </td>
     </tr>
