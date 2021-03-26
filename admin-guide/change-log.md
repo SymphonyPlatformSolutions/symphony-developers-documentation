@@ -12,12 +12,10 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 
 #### Agent 20.12.0
 
-* With API Gateway v2 being rolled out, Agent now supports new 429 Retry later replies:
-  * For all endpoints, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded
-  * For importing or retrieving multiple messages, then Agent has implemented a retry mechanism
-* Improved performance when creating message with multiple files attached
-* Fix to support the usage of base64 image in background-image style
-* Fixed some security vulnerabilities
+* Agent now supports new 429 Retry later replies from downstream services \(such as Symphony Back-End\) as follows: for backward-compatibility purposes, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded. _Please start updating your bots to support 429 errors as we will introduce them in the future._
+* Improved performance when creating message with multiple files attached.
+* MessageML: Fix to support the usage of base64 image in background-image style.
+* Updated dependencies to address potential security vulnerabilities.
 
 {% hint style="info" %}
 ### Agent 20.12.0 - officially supported Agent for Symphony version v20.12
@@ -36,9 +34,10 @@ No API endpoint was created in Symphony version 20.12.
 * [Suppress Message](https://developers.symphony.com/restapi/v20.12/reference#suppress-message) endpoint has been updated to allow Service Accounts to suppress their own message without the need of any permission, as well as Apps to suppress messages on behalf of Users with the new permission SUPPRESS\_MESSAGE \(see [OBO Authentication](../building-extension-applications-on-symphony/app-authentication/obo-authentication.md)\).
 * [POST](https://developers.symphony.com/restapi/v20.12/reference#message-search-post) and [GET Message Search](https://developers.symphony.com/restapi/v20.12/reference#message-search-get) endpoints were updated to return 400 error instead of 500 when call requested to search by invalid StreamId.
 * [Create Message v4](https://developers.symphony.com/restapi/v20.12/reference#create-message-v4) endpoint was updated to return 400 error instead of 500 when creating a message into a deleted room.
-* [Import Message](https://developers.symphony.com/restapi/v20.12/reference#import-message-v4) endpoint was updated to return a more explicit message when trying to import a message into a deleted conversation
+* [Import Message](https://developers.symphony.com/restapi/v20.12/reference#import-message-v4) endpoint was updated to return a more explicit message when trying to import a message into a deleted conversation.
 * Agent was updated to return a 400 error as well as an explicit message when the backend identifies that the message size limit has been exceeded at ingestion.
-* [Read Datafeed v5](https://developers.symphony.com/restapi/v20.12/reference#read-datafeed-v5) response now contains empty events array for changing presence status instead of an events array containing the 'null' value
+* In order to be consistent with other endpoints, [Attachment](https://developers.symphony.com/restapi/v20.12/reference#attachment) 404 errors are mapped by the agent to 400.
+* [Read Datafeed v5](https://developers.symphony.com/restapi/v20.12/reference#read-datafeed-v5) response now contains empty events array for changing presence status instead of an events array containing the 'null' value.
 
 #### **Deprecated APIs**
 
