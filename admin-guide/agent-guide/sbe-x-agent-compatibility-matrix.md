@@ -19,6 +19,11 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left">20.12.x</td>
+      <td style="text-align:left">20.12</td>
+      <td style="text-align:left">20.12.x</td>
+    </tr>
+    <tr>
       <td style="text-align:left">20.10.x</td>
       <td style="text-align:left">20.10.x</td>
       <td style="text-align:left">
@@ -33,6 +38,7 @@ To download the latest version of the Agent, refer to [Agent Download](agent-2.x
       <td style="text-align:left">20.9.x</td>
       <td style="text-align:left">1.62.x</td>
       <td style="text-align:left">
+        <p>20.12.x</p>
         <p>2.62.x</p>
         <p>2.61.x</p>
         <p>2.60.x</p>

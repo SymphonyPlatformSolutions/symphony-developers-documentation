@@ -27,7 +27,7 @@ The following list shows the endpoints that have been updated or added to the [A
 
 * Updated Extension App Documentation to add the specification of adding default value to the [share service](../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/share-service.md)
 * Updated [MessageML Format](../building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md#message-size-limits) to highlight the message size limit
-* Added the documentation of 3 new Elements: [Date Picker](../building-bots-on-symphony/symphony-elements/available-elements/date-picker.md), [Time Picker](../building-bots-on-symphony/symphony-elements/available-elements/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md)
+* Added the documentation of three new Elements: [Date Picker](../building-bots-on-symphony/symphony-elements/available-elements/date-picker.md), [Time Picker](../building-bots-on-symphony/symphony-elements/available-elements/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md)
 
 ## General Documentation Updates
 
