@@ -43,4 +43,4 @@ $ yo symphony 2.0
 Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are only available in Java and Python \(Beta\). Support for Node.js and .NET are coming soon.
 {% endhint %}
 
-<script id="asciicast-402924" src="https://asciinema.org/a/402924.js" async></script>
+[![asciicast](https://asciinema.org/a/402924.svg)](https://asciinema.org/a/402924)
