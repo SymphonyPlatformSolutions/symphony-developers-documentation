@@ -44,3 +44,5 @@ Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are on
 {% endhint %}
 
 [![asciicast](https://asciinema.org/a/402924.svg)](https://asciinema.org/a/402924)
+
+<script id="asciicast-402924" src="https://asciinema.org/a/402924.js" async></script>
