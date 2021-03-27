@@ -292,7 +292,7 @@ After the `DatafeedEventService` creates/reads from the datafeed API, it categor
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3.png)
+![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3%20%282%29.png)
 
   
 Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
@@ -398,7 +398,7 @@ public class MyRoomListener : RoomListener
 
 Generating SDK bot projects is made simple with the Symphony Generator.  This is a command-line utility that generates language specific code scaffolds on top of our SDKs.  To learn more about generating your bot project navigate here:
 
-{% page-ref page="yeoman-generator.md" %}
+{% page-ref page="symphony-bot-generator.md" %}
 
 For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here: 
 

@@ -2,7 +2,7 @@
 description: Bot Configuration guide for using the BDK and CLI Tool
 ---
 
-# Configure your Bot for BDK
+# Configure your Bot for BDK 1.0
 
 ## Configure your Bot for BDK
 
@@ -93,7 +93,7 @@ Copy the entire contents of this RSA public key including the dashes on either s
 Note: The bot username and bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod above.
 {% endhint %}
 
-![](../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm%20%282%29.png)
+![](../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm%20%282%29%20%282%29.png)
 
 Open your generated bot code in your favorite Java IDE and navigate to the `bot-config.json` file:
 
