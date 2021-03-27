@@ -20,7 +20,7 @@ Download the Agent package and unzip it into a directory of your choice:
 [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.59.0.zip)
 {% endhint %}
 
-  The following example shows version 2.54.0 being unzipped:
+The following example shows version 2.54.0 being unzipped:
 
 ```text
 unzip agent-2.54.0.zip
@@ -105,7 +105,7 @@ agent:
   endpoints:
     deprecated:
       disable: false   
-                                             
+
   # A test signing certificate ("Disposable Test Intermediate Certificate Authority", int-cert.pem) and a bot certificate 
   # signed by that CA (bot.user1.p12) are provided to help during development; the password for both certificates is "changeit".
   certificate:
@@ -117,7 +117,7 @@ agent:
       file: /data/agent/certs/ceservice.p12                         
       password: changeit                                            
       type: pkcs12              
-                                    
+
   # Private Keys for authentication using RSA. This is an alternative method to signing certificates (see above) for authenticating.
   privateKey:
     agentservice:                                                   
@@ -142,7 +142,7 @@ agent:
       uri: https://proxy.acme.com:8080                               
       username: user                                                 
       password: pass    
-                                             
+
   # Adjust the value of agent.limits.firehose.maxPerUser to change the default number of firehoses per user
   # The default value is 2.
   limits:
@@ -205,7 +205,9 @@ java \
 {% endtab %}
 
 {% tab title="Text" %}
-    To trust a pod certificate that is not in the Java `cacerts` file, include:
+```text
+To trust a pod certificate that is not in the Java `cacerts` file, include:
+```
 {% endtab %}
 
 {% tab title="Bash" %}
@@ -658,7 +660,7 @@ The following list shows the available actuator endpoints for the Agent applicat
 | prometheus `/agent/actuator/prometheus` | no | Prometheus scrapping endpoint. | GET | `--management.endpoint.prometheus.enabled=true` |
 
 {% hint style="info" %}
-Note: 
+Note:
 
 Paths above are relative to the management URL[: https://agent-server.symphony.com:10443](https://agent-server.symphony.com:10443/)
 {% endhint %}
@@ -675,7 +677,7 @@ If you want to set DEBUG log level agent.log, set
 {% endtab %}
 
 {% tab title="Text" %}
-```
+```text
 Note that the above "-D" option must come before "-jar" argument.
 
 If you want to provide a custom logging configuration, include:
@@ -683,7 +685,7 @@ If you want to provide a custom logging configuration, include:
 {% endtab %}
 
 {% tab title="Bash" %}
-```
+```text
 --logging.cofig=/home/acme/log4j2.xml
 ```
 {% endtab %}
@@ -720,7 +722,7 @@ Logging rotation can be customized for all 3 files by setting the following AM o
 {% endtab %}
 
 {% tab title="Text" %}
-```
+```text
 With the above, all 3 Agent log files will rotate (independently) when one of them hits 500 MB in "unzipped" size, and will keep up to 20 files, always keeping the latest ones and discarding the older ones if it goes beyond the file limit.
 
 To customize these parameters for each log file independently, the following configuration can be used (it also demonstrates the syntax for sizes):
@@ -730,7 +732,7 @@ agent.log:
 {% endtab %}
 
 {% tab title="Bash" %}
-```
+```text
 -Dagent.maxLogFiles=5
 -Dagent.logFileSizeLimit="2 GB"
 ```
@@ -773,15 +775,13 @@ Note: Keep in mind that none of the previous configurations need to be set, this
 There is no upgrade path for the Agent. The new Agent can be installed on the same Agent Server as any previous version. Follow these steps to easily upgrade your Agent:
 
 1. Shut down your running Agent Server Follow the installation instructions for the new Agent Server you will be installing. Remember to do these things:
-
-* Install OpenJDK version 8 - [https://openjdk.java.net/install](https://openjdk.java.net/install) Red Hat Enterprise Linux: `sudo yum install java-1.8.0-openjdk`
-* Edit the java.security file to protect against pod IP changes: `vi $JAVA_HOME/jre/lib/security/java.security`
-* Search for this line to edit `/ttl<Enter>`
-* Uncomment the line and set the value to 60 `networkaddress.cache.ttl=60`
-* Save changes and exit
-
-1. Make a new Directory for 2.54 `mkdir agent2.54`
-2. Copy from the existing files
+2. Install OpenJDK version 8 - [https://openjdk.java.net/install](https://openjdk.java.net/install) Red Hat Enterprise Linux: `sudo yum install java-1.8.0-openjdk`
+3. Edit the java.security file to protect against pod IP changes: `vi $JAVA_HOME/jre/lib/security/java.security`
+4. Search for this line to edit `/ttl<Enter>`
+5. Uncomment the line and set the value to 60 `networkaddress.cache.ttl=60`
+6. Save changes and exit
+7. Make a new Directory for 2.54 `mkdir agent2.54`
+8. Copy from the existing files
 
 a\) Upgrading from 2.50+ -&gt; Latest version
 

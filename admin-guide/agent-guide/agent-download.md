@@ -1,7 +1,7 @@
 # Agent Download
 
 {% hint style="info" %}
-### Agent 2.55.21 - officially supported Agent for Symphony versions 1.55.x
+## Agent 2.55.21 - officially supported Agent for Symphony versions 1.55.x
 
 [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.55.21.zip)
 {% endhint %}

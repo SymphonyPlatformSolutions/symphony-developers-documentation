@@ -2,7 +2,7 @@
 
 The form element can be considered the "frame" of a message, containing elements that will be sent by the bot and subsequently read by the datafeed.
 
-All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload.  That way the bot manager can know which button triggered the submission of that form.
+All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload. That way the bot manager can know which button triggered the submission of that form.
 
 If there is more than one element in the form having the same `name` attribute, the value is converted to an array. Every index of the array is related to a specific element value. The index order is not guaranteed, so the developer needs to iterate through this array and collect the values.
 
@@ -30,7 +30,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 The following example shows a form being presented in MessageML. Also, you can see the returned datafeed payload:
 
-![](../../../.gitbook/assets/599c94d-form%20%282%29.gif)
+![](../../../.gitbook/assets/599c94d-form%20%282%29%20%282%29%20%283%29.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

@@ -40,7 +40,10 @@ $ yo symphony 2.0
 ```
 
 {% hint style="info" %}
-Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are only available in Java and Python \(Beta\). Support for Node.js and .NET are coming soon.
+Note: At the moment the BDK Generator 2.0 and BDK 2.0 projects are only available in Java and Python \(Beta\). Support for Node.js and .NET are coming soon.
 {% endhint %}
 
-<iframe src="https://asciinema.org/a/402924/iframe" style="width: 100%; height: 400px"></iframe>
+{% embed url="https://asciinema.org/a/402924/iframe" %}
+
+
+

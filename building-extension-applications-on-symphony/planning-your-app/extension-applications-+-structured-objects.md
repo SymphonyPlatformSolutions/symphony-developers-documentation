@@ -1,6 +1,6 @@
 # Extension Applications + Structured Objects
 
-Structured Objects are rich, inline, interactive components for Symphony messages. By injecting a structured object as a JSON payload inside a Symphony message, Symphony is able to richly display this message beyond what is possible with normal text or attachment files. In order to render these structured objects, though, an extension app must have a registered renderer that matches the unique identifier placed on the object. 
+Structured Objects are rich, inline, interactive components for Symphony messages. By injecting a structured object as a JSON payload inside a Symphony message, Symphony is able to richly display this message beyond what is possible with normal text or attachment files. In order to render these structured objects, though, an extension app must have a registered renderer that matches the unique identifier placed on the object.
 
 When a message is sent along with a structured object via the API, the Symphony client checks to see if there is a custom renderer registered. If one exists that matches the identifier of the structured object itself, the message and the data are dynamically rendered as specified by the custom renderer supplied by the extension application. If no custom renderer matches the identifier of the structured object, the message will be rendered normally.
 

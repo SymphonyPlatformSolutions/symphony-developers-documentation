@@ -19,11 +19,11 @@ In order to create a bot and begin your development journey, you must first crea
 
 1. Fill in the '**Basic Information'** and the '**Additional Information'** sections
 
-![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.35.11-pm%20%283%29%20%283%29%20%283%29.png)
+![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.35.11-pm%20%283%29%20%283%29%20%283%29%20%283%29.png)
 
 1. Enable the appropriate role\(s\) that your bot requires. 
 
-![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.36.17-pm%20%282%29%20%282%29%20%282%29.png)
+![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.36.17-pm%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 {% hint style="info" %}
 Navigate to [Bot Permissions](bot-permissions.md) for a full list of bot roles and privileges.

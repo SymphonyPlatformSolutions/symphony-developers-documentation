@@ -51,7 +51,7 @@ MessageML messages are enclosed in a `<messageML>` tag. The following is a simpl
 
 ## Handling Special Characters
 
-The Apache Freemarker uses the HTML output format by default.  In some cases, special characters placed within the MessageML must be HTML-escaped, otherwise, the request sending the MessageML will receive a 400 error response. The following are examples of valid HTML-escaping:
+The Apache Freemarker uses the HTML output format by default. In some cases, special characters placed within the MessageML must be HTML-escaped, otherwise, the request sending the MessageML will receive a 400 error response. The following are examples of valid HTML-escaping:
 
 | Character | HTML escaping | Required escaping | messageML example |
 | :--- | :--- | :--- | :--- |

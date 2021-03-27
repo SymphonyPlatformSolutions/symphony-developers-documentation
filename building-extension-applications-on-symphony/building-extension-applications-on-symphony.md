@@ -24,5 +24,5 @@ The next step is to add custom business logic to your app. Begin leveraging Symp
 
 ## 5.  Become a Certified Developer
 
-Want to take your bot and extension app development to the next level? Symphony offers a free course and certification program for developers wishing to improve their Symphony skills, technical knowledge, and expertise.  Learn more about how you can become a certified Symphony Developer today!
+Want to take your bot and extension app development to the next level? Symphony offers a free course and certification program for developers wishing to improve their Symphony skills, technical knowledge, and expertise. Learn more about how you can become a certified Symphony Developer today!
 

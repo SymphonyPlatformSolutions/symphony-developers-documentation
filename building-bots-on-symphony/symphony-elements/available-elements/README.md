@@ -88,7 +88,7 @@ After completing and submitting the form, the following elements payload is gene
 }
 ```
 
-### **Currently available Symphony Elements:** 
+### **Currently available Symphony Elements:**
 
 * \*\*\*\*[**Form**](form.md)\*\*\*\*
 * \*\*\*\*[**Buttons**](buttons.md)\*\*\*\*
