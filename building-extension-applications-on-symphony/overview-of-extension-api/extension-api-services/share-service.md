@@ -103,13 +103,13 @@ The following table shows the share options:
       <td style="text-align:left">No</td>
       <td style="text-align:left">Array of strings</td>
       <td style="text-align:left">
-        <p>The users who will be displayed by default in the person selector from
-          the share modal.
+        <p>The users (UserIds) who will be listed initially as recipients in the
+          share modal.
           <br />
         </p>
-        <p><em>Available only for authenticated apps, and works only for Client 2.0.</em>
+        <p><em>Available only for authenticated apps, and only for Client 2.0.</em>
         </p>
-        <p><em>It is recommended not to populate this field with too many UserIds in order to not confuse the Symphony user willing to share an article.</em>
+        <p><em>It is recommended to limit the number of pre-populated users so the Symphony end user can easily review the list of recipients before sharing.</em>
         </p>
       </td>
     </tr>
