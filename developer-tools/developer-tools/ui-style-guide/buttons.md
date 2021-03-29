@@ -36,7 +36,7 @@ Use the Primary button style when there is a clear primary action on a page or f
 <div class="tempo-btn tempo-btn--primary">Button</div>
 ```
 
-![](../../../.gitbook/assets/abc3381-cancel_action_and_button%20%281%29%20%281%29.png)
+![](../../../.gitbook/assets/abc3381-cancel_action_and_button%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
 ## Secondary
 
@@ -72,7 +72,7 @@ Use the Disabled button style to show that an action is currently unavailable. Y
 
 Use this style for situations where a user can choose one of two actions: cancel and complete.
 
-![](../../../.gitbook/assets/abc3381-cancel_action_and_button%20%281%29.png)
+![](../../../.gitbook/assets/abc3381-cancel_action_and_button%20%281%29%20%281%29%20%281%29.png)
 
 ## Compact
 

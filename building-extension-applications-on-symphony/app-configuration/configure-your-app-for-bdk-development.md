@@ -110,7 +110,7 @@ Copy the entire contents of this public key including the dashes on either side,
 Note: The Bot username and Bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod below.
 {% endhint %}
 
-![](../../.gitbook/assets/screen-shot-2020-08-25-at-3.42.24-pm%20%282%29%20%282%29.png)
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-3.42.24-pm%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 Click 'Create' and open your generated Bot code in your favorite Java IDE and navigate to the bot-config.json file:
 
@@ -212,7 +212,7 @@ Finally, populate the Configuration section and click 'Create'.
 
 Once you've configured and created your app on the Symphony Pod, the next step is to enable your app for a given set of users. In the admin portal of your Symphony Pod, navigate to 'App Settings' in the lefthand navigation bar. Find your newly created extension app, in this case 'demoapp3' and set the Global Status, Visibility, and installation fields as shown below:
 
-![](../../.gitbook/assets/screen-shot-2020-08-25-at-11.58.02-pm%20%282%29%20%282%29%20%282%29.png)
+![](../../.gitbook/assets/screen-shot-2020-08-25-at-11.58.02-pm%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 Lastly, save your changes.
 

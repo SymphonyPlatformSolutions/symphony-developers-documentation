@@ -317,7 +317,7 @@ dotnet run
 
 Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
-![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29%20%282%29%20%282%29.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29.png)
 
 As you can see, your bot replied with the message shown in the IM Listener implementation.
 

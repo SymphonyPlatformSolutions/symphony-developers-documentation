@@ -45,7 +45,7 @@ The following JavaScript shows an example of an article being shared:
 
 var shareButton = document.getElementById("share");
 
-var articleOptions = {
+var articleContent = {
   title: "Symphony Launches Mobile App",
   subTitle: "Application is mobile device management (MDM) compatible.",
   blurb: "Symphony Communication Services, a Palo Alto, Calif.-based messaging startup, announced its enterprise-ready mobile app for Apple iPhone is now available for download.",
@@ -57,7 +57,7 @@ var articleOptions = {
   href: 'https://symphony.com'
 };
 
-var articleOptions = {
+var shareOptions = {
   prepopulateUsers: ['71811853190920', '71811853190903']
 };
 
@@ -66,7 +66,7 @@ shareButton.addEventListener("click", function(){
   shareService.share(
     "article",
     articleContent,
-    articleOptions
+    shareOptions
   );
 });
 ```
@@ -85,7 +85,7 @@ The following table shows the article content:
 | `id` | Must provide either `id` or `href`, or both | String | An identifier used by the application to deeplink to the article |
 | `href` | Must provide either `id` or `href`, or both | URL | URL to the article \(opened in a new browser window\) |
 
-The following table shows the article options:
+The following table shows the share options:
 
 <table>
   <thead>
