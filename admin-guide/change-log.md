@@ -47,7 +47,7 @@ No API endpoint was created in Symphony version 20.12.
 
 * Introduction of 3 new Elements: [Date Picker](../building-bots-on-symphony/symphony-elements/available-elements/date-picker.md), [Time Picker](../building-bots-on-symphony/symphony-elements/available-elements/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md). _Please go to the description of these new Elements to see their availability on the Client side, as some of them are not or only partially available in the 20.12 version of the Client 1.5, but already released in compatible versions of Client 2.0._
 * Elements formReplies are now processed via DLP in both Client 1.5 and 2.0.
-* Client 1.5: Fixed display bugs of Elements: removed extra spacing at the bottom of forms, as well as more general bugs
+* Fixed display bugs of Elements: removed extra spacing at the bottom of forms, as well as more general bugs
 * Fixed the issue of still getting wall post messages via the [Get Message v1](https://developers.symphony.com/restapi/v20.12/reference#get-message-v1) endpoint, although "Allow user to read wall posts" entitlement was set to No
 
 ### Client 2.0 updates
