@@ -118,7 +118,7 @@ The following examples show text fields being used as follows:
 
 Please note that several text-fields are aligned next to another. Note also that this behaviour is reactive to the screen size, the number of text-fields on the same line decreasing until one per row, as the screen gets smaller \(see in the example below\).
 
-![](../../../.gitbook/assets/alignment-input-text-20.9%20%281%29%20%281%29.gif)
+![](../../../.gitbook/assets/alignment-input-text-20.9%20%281%29%20%281%29%20%281%29%20%281%29.gif)
 
 ## Versions and Compatibility
 
