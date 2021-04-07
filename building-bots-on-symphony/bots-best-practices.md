@@ -46,3 +46,9 @@ If bots are bulk adding users to rooms, it is recommended that bots add users at
 
 In some rare cases, bots may receive duplicate messages from Symphony. In order to prevent duplicate processing, developers can implement logic to keep track of previous messages. It is recommended that bots store a list of unique messageIDs up to 15 minutes in the past. Upon each new message, bots should do a quick validation that new message is not received in the past and continue to process the message.
 
+## Logging
+
+Along with any request made to the [Symphony APIs](overview-of-rest-api/), bots should send header `X-Trace-Id` \(random alphanumeric string of 6 characters\) for logging purposes.
+
+_Please note that the Symphony BDK sets up your logger_ [_MDC_](http://logback.qos.ch/manual/mdc.html) _\(Mapped Diagnostic Context\) with this X-Trace-Id. This is especially useful for cross-applications debugging, assuming that the X-Trace-Id value is also present in your application logs. You can find more information about how to print the X-Trace-Id with specific technologies \(like logback or log4j2\) in the_ [_BDK documentation_](https://github.com/finos/symphony-bdk-java/blob/main/docs/tech/production-readiness.md)_._
+
