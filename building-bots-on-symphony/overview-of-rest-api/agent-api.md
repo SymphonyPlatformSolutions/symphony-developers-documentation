@@ -54,5 +54,5 @@ This group of APIs perform testing and obtain diagnostics regarding the health o
 * Perform an echo test 
 * Get session info
 
-The full list of Basics API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#health-check-v2](https://developers.symphony.com/restapi/reference#health-check-v2)
+The full list of Basics API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#health-check-v3](https://developers.symphony.com/restapi/reference#health-check-v3)
 

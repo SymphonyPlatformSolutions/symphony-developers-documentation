@@ -8,7 +8,7 @@ Symphony Administration and messaging API calls are stateless. These types of re
 
 | VIP Name | SSL Offload | Persistent Sessions | Balance Method | Sticky | Server List |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | \*No | Round Robin | No | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: [https://agent-server:8443/agent/v2/HealthCheck](https://agent-server:8443/agent/v2/HealthCheck) **Result**: HTTP 200OK **Message**: `{ "podConnectivity":true, "keyManagerConnectivity":true, "version":"1.52.0" }` |
+| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | \*No | Round Robin | No | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: [https://agent-server:8443/agent/v3/HealthCheck](https://agent-server:8443/agent/v3/HealthCheck)  _See_ [_Health Check_](https://developers.symphony.com/restapi/reference#health-check-v3) _endpoint documentation for more details on the payload \(code + message\) received_ |
 
 {% hint style="info" %}
 The above applies for non real-time events and messaging API calls \(e.g. /agent/v4/datafeed\)
@@ -27,7 +27,7 @@ If you are using an F5 type load balancer, you can load balance requests to the 
 
 | VIP Name | SSL Offload | Persistent Sessions | Balance Method | Sticky | Server List |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | Yes \(source-ip or cookie-injection\) | Round Robin | Yes | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: [https://agent-server:8443/agent/v2/HealthCheck](https://agent-server:8443/agent/v2/HealthCheck)  **Result**: HTTP 200OK **Message**: `{ "podConnectivity":true, "keyManagerConnectivity":true, "version":"1.52.0" }` |
+| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | Yes \(source-ip or cookie-injection\) | Round Robin | Yes | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: [https://agent-server:8443/agent/v3/HealthCheck](https://agent-server:8443/agent/v3/HealthCheck)  _See_ [_Health Check_](https://developers.symphony.com/restapi/reference#health-check-v3) _endpoint documentation for more details on the payload \(code + message\) received_ |
 
 ### Managing Session Persistence Using a DNS-Based Load Balancer
 

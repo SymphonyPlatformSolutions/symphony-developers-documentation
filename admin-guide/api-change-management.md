@@ -2,7 +2,7 @@
 
 The API change management policy for endpoints introduced as of 1.46 is as follows:
 
-The version of the API Agent that you are using controls the API capabilities and behavior \(i.e. what endpoints are available, what parameters are accepted in requests, what fields are returned in responses, etc.\). You can check your deployed version of the API Agent by calling the [Health Check](https://rest-api.symphony.com/reference#health-check-v2) endpoint.
+The version of the API Agent that you are using controls the API capabilities and behavior \(i.e. what endpoints are available, what parameters are accepted in requests, what fields are returned in responses, etc.\). You can check your deployed version of the API Agent by calling the [Health Check](https://developers.symphony.com/restapi/reference#health-check-v3) endpoint.
 
 **Backwards Compatibility**
 
