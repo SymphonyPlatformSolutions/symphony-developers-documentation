@@ -6,9 +6,44 @@ Below is a quick guide on the load balancer rules to apply when hosting multiple
 
 Symphony Administration and messaging API calls are stateless. These types of requests can be forwarded to any Agent server that is available:
 
-| VIP Name | SSL Offload | Persistent Sessions | Balance Method | Sticky | Server List |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | \*No | Round Robin | No | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: [https://agent-server:8443/agent/v3/HealthCheck](https://agent-server:8443/agent/v3/HealthCheck)  _See_ [_Health Check_](https://developers.symphony.com/restapi/reference#health-check-v3) _endpoint documentation for more details on the payload \(code + message\) received_ |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">VIP Name</th>
+      <th style="text-align:left">SSL Offload</th>
+      <th style="text-align:left">Persistent Sessions</th>
+      <th style="text-align:left">Balance Method</th>
+      <th style="text-align:left">Sticky</th>
+      <th style="text-align:left">Server List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>agent.company.com:443</code>
+        <br />
+        <br /><b>Description</b>: Rule for the FQDN host domain of the Agent server(s).
+        This value should also be configured in your agent.properties settings
+        e.g:
+        <br /><code>agent.host: localhost agent.https.port:8443</code>
+        <br />
+        <br />URI paths that are sent to the Agent servers are:
+        <br /><code>/agent /pod</code>
+      </td>
+      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">*No</td>
+      <td style="text-align:left">Round Robin</td>
+      <td style="text-align:left">No</td>
+      <td style="text-align:left">
+        <p><code>agent-server1:8443/HTTPS agent-server2:8443/HTTPS</code>
+          <br />
+          <br /><b>Health-Check</b>: https://agent-server:8443/agent/v3/health</p>
+        <p>
+          <br /><em>See </em><a href="https://developers.symphony.com/restapi/reference#health-check-v3"><em>Health Check</em></a><em> endpoint documentation for more details on the payload (code + message) received</em>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 {% hint style="info" %}
 The above applies for non real-time events and messaging API calls \(e.g. /agent/v4/datafeed\)
@@ -27,7 +62,7 @@ If you are using an F5 type load balancer, you can load balance requests to the 
 
 | VIP Name | SSL Offload | Persistent Sessions | Balance Method | Sticky | Server List |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | Yes \(source-ip or cookie-injection\) | Round Robin | Yes | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: [https://agent-server:8443/agent/v3/HealthCheck](https://agent-server:8443/agent/v3/HealthCheck)  _See_ [_Health Check_](https://developers.symphony.com/restapi/reference#health-check-v3) _endpoint documentation for more details on the payload \(code + message\) received_ |
+| `agent.company.com:443`  **Description**: Rule for the FQDN host domain of the Agent server\(s\). This value should also be configured in your agent.properties settings e.g: `agent.host: localhost agent.https.port:8443`  URI paths that are sent to the Agent servers are: `/agent /pod` | Yes | Yes \(source-ip or cookie-injection\) | Round Robin | Yes | `agent-server1:8443/HTTPS agent-server2:8443/HTTPS`  **Health-Check**: https://agent-server:8443/agent/v3/health _See_ [_Health Check_](https://developers.symphony.com/restapi/reference#health-check-v3) _endpoint documentation for more details on the payload \(code + message\) received_ |
 
 ### Managing Session Persistence Using a DNS-Based Load Balancer
 
