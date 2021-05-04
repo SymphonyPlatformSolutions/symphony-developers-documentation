@@ -23,11 +23,11 @@ Before continuing, you will need the following:
 
 Click on the button below to launch Postman with the Symphony REST APIs collection and a sample environment.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](postman://app/collections/import/6756114-97e93a2e-819a-4385-a1b0-61a988be789b-TzCJe9K5?environment=6756114-45c6a9da-8681-4cbd-8609-3e8364953aa8-TzCJe9K5)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/symphony-devx/workspace/symphony/collection/15539217-e9bea678-8642-47da-adf7-a33c08c84b1d?ctx=documentation)
 
 If the button above does not work for you, download the following archive containing the Symphony Rest APIs collection and a sample environment configuration.
 
-1. [Download Collection and Environment Here](https://filevault.symphony.com/index.php/s/LcoG9wZJcET6Pr4)
+1. [Download Collection and Environment Here](https://github.com/symphonyoss/symphony-api-spec/tree/master/postman)
 2. Unzip the archive
 3. Launch Postman
 4. Click on the **Import** button on the top-left
