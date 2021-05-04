@@ -8,7 +8,7 @@ Becoming a Symphony Certified Developer is a great way to validate your Symphony
 
 Check out our training center here:
 
-## Developer Certification ![](../.gitbook/assets/certified-developer%20%281%29%20%281%29.png) 
+## Developer Certification ![](../.gitbook/assets/certified-developer%20%281%29%20%282%29%20%282%29%20%282%29%20%281%29.png) 
 
 ### **Module 1: Symphony Development Fundamentals**
 

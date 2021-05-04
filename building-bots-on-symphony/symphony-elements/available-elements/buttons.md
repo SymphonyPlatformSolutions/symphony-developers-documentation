@@ -8,7 +8,7 @@ In addition, some forms can contain reset buttons. These buttons are used to res
 Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disabled' if a button element is sent in a 'Read-Only' room where user input is not valid.   
 {% endhint %}
 
-![](../../../.gitbook/assets/e31e35d-buttons%20%283%29.png)
+![](../../../.gitbook/assets/e31e35d-buttons%20%283%29%20%283%29%20%282%29%20%282%29.png)
 
 ## Attributes
 
@@ -27,7 +27,7 @@ Note: Developers cannot toggle the 'Disabled' State.  Buttons will appear 'Disab
 
 The following example shows the use of the **Reset** and the **Submit** button when sending a text inserted in a [Text Field](text-field.md):
 
-![](../../../.gitbook/assets/ef5f06e-button%20%281%29%20%281%29.gif)
+![](../../../.gitbook/assets/ef5f06e-button%20%281%29%20%283%29%20%283%29%20%283%29%20%281%29.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
