@@ -31,10 +31,15 @@ The Swagger file for v20.9 \(1.62\) available [here](https://github.com/symphony
 
 * Fixed some vulnerable dependencies \(including upgrades of jackson and httpclient\)
 
-{% hint style="info" %}
-### Agent 2.62.3 - officially supported Agent for Symphony version v20.9
+#### Agent 2.62.4
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.62.3.zip).
+* Fixed agentservice/ceservice healthcheck
+* Fixed some vulnerable dependencies
+
+{% hint style="info" %}
+### Agent 2.62.4 - officially supported Agent for Symphony version v20.9
+
+To download the Agent, click [here](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.62.4.zip).
 
 For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
