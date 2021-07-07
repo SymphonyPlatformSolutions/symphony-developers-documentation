@@ -16,10 +16,12 @@
 
 ### Description
 
-The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how the BDK 2.0 can help power your Symphony bots and integrations today!
+The BDK 2.0 is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. The BDK is released in 2 languages: **Java** and **Python** _**\(Beta\)**_. Continue here to learn how the BDK 2.0 can help power your Symphony bots and integrations today!
 
-* The BDK 2.0 Github repo can be found here: [https://github.com/SymphonyPlatformSolutions/symphony-api-client-java](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java)
-* The BDK 2.0 Certification course can be found here: [https://learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
+* The Java BDK 2.0 Github repo can be found here: [https://github.com/finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
+* The Python BDK 2.0 _**\(Beta\)**_ Github repo can be found here: [https://github.com/SymphonyPlatformSolutions/symphony-api-client-python/tree/2.0-rc](https://github.com/SymphonyPlatformSolutions/symphony-api-client-python/tree/2.0-rc)
+* The Java BDK 2.0 Certification course can be found here: [https://learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
+* The Python BDK 2.0 Certification course will be available soon
 
 ### Installation
 
