@@ -190,7 +190,7 @@
 * [Agent Guide](admin-guide/agent-guide/README.md)
   * [Network Topology](admin-guide/agent-guide/network-topology.md)
   * [Agent Download](admin-guide/agent-guide/agent-download.md)
-  * [Agent 2.X and above Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
+  * [Agent Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
   * [Agent Configuration Fields](admin-guide/agent-guide/agent-configuration-fields.md)
   * [Agent Server High Availability](admin-guide/agent-guide/agent-server-high-availability.md)
   * [SBE x Agent Compatibility Matrix](admin-guide/agent-guide/sbe-x-agent-compatibility-matrix.md)
