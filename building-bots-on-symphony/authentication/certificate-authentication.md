@@ -5,7 +5,7 @@ This pages describes the implementation of certificate-based Authentication. For
 * Session Auth: [https://developers.symphony.com/restapi/reference\#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference\#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate)
 
-{% hint style="danger" %}
+{% hint style="info" %}
 #### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
 * [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)

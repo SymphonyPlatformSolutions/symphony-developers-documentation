@@ -6,7 +6,7 @@ As we learned in [Overview of Pod API](../overview-of-rest-api/pod-api.md), bots
 
 We also learned in [Overview of Agent API](../overview-of-rest-api/agent-api.md), that bots must be authenticated on the Key Manager in order to access Agent API endpoints. To make authenticated Agent API calls, Bots must pass a valid Session Token and Key Manager Token as headers of each Agent API request.
 
-{% hint style="danger" %}
+{% hint style="info" %}
 ### Token Management
 
 The token you receive is valid for the lifetime of a session that is defined by your Pod's administration team. This ranges from 1 hour to 2 weeks.

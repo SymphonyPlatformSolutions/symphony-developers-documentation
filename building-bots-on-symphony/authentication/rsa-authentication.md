@@ -5,7 +5,7 @@ This pages describes the implementation of RSA Authentication. For the API refer
 * Session Auth: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference\#rsa-key-manager-authenticate](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate)
 
-{% hint style="danger" %}
+{% hint style="info" %}
 #### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
 * [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)
@@ -22,7 +22,7 @@ The Authentication process requires the following steps:
 3. The user creates a short-lived JWT \(JSON Web Token\) and signs it with their private key.
 4. The bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 ### Session Token Management
 
 The token you receive is valid for the lifetime of a session that is defined by your pod's administration team. This ranges from 1 hour to 2 weeks.
@@ -32,21 +32,21 @@ You should keep using the same token until you receive a HTTP 401, at which you 
 [Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="success" %}
 #### Supported Ciphers for the SSL/TLS session
 
-**From April 2021, Symphony will only support the following cipher suites:**
+Symphony only supports the following cipher suites:
 
-**ECDHE-RSA-AES256-GCM-SHA384 \(Preferred\)**
+ECDHE-RSA-AES256-GCM-SHA384 \(Preferred\)
 
-**ECDHE-RSA-AES128-GCM-SHA256**
+ECDHE-RSA-AES128-GCM-SHA256
 
-**DHE-RSA-AES256-GCM-SHA384**
+DHE-RSA-AES256-GCM-SHA384
 
-**DHE-RSA-AES128-GCM-SHA256**
-
-**For more information, please contact your Technical Account Manager, Solutions Architect or the Technical Support Team.**
+DHE-RSA-AES128-GCM-SHA256
 {% endhint %}
+
+
 
 ## 1.  Create an RSA Key Pair
 
@@ -103,6 +103,8 @@ To authenticate on the Pod and the Key Manager, the bot must call the authentica
 * a signature by a private RSA key matching a public key stored for the user in the Pod
 
 The following script generates the authentication request:
+
+
 
 {% tabs %}
 {% tab title="Java" %}

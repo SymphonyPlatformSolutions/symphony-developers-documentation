@@ -1,6 +1,6 @@
 # API Change Management
 
-The API change management policy for endpoints introduced as of 1.46 is as follows:
+The API change management policy for endpoints is as follows:
 
 The version of the API Agent that you are using controls the API capabilities and behavior \(i.e. what endpoints are available, what parameters are accepted in requests, what fields are returned in responses, etc.\). You can check your deployed version of the API Agent by calling the [Health Check](https://developers.symphony.com/restapi/v20.12/reference#health-check-extended-v3) endpoint.
 
@@ -19,14 +19,6 @@ You should ensure your code is robust and can handle such changes from us. All f
 
 * We will ignore unrecognized query string arguments and unrecognized HTTP headers.
 * We will reject requests containing unrecognized fields in request body.
-
-### API Change Management Policy prior to 1.46
-
-The following API change management policy applies to any endpoints introduced prior to 1.46:
-
-* Once finalized, the interface of any endpoint is immutable. If a change or addition to a published endpoint becomes necessary, a new endpoint will published, with an incremented version number.
-* If an endpoint is to be removed from the API, it will be marked as deprecated in the reference and specification, and will be maintained for a period of at least six months.
-* Requests to any endpoint which include unknown or unexpected parameters will be treated as a client error and return a 4XX HTTP response.
 
 Most changes to API endpoints will be versioned in the way described above. However, if we discover that endpoints expose customers to security vulnerabilities, we will publish new endpoints immediately and expedite deprecation insecure endpoints.  
 
