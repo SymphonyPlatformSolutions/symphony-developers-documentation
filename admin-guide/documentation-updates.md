@@ -32,6 +32,7 @@ Here after you can find the updates of our documentation impacting the 20.10 ver
   * New Elements features are generally not supported by pods running an older client version than the one where they have been introduced \(i.e. for XPod use cases\)
 * Added a section "Versions and Compatibility" on each [Available Element](../building-bots-on-symphony/symphony-elements/available-elements/) documentation, which gathers the versions in which main features of the considered Element were introduced, and which outcome can be expected from it in previous Client version, for the purpose of using it in XPod use-cases for example.
 * The endpoint [Subscribers](https://developers.symphony.com/restapi/reference#subscribers) documentation has been updated to highlight both default and maximum values for the parameter "limit"
+* Added the information that only PKCS8 format is allowed for the key of the [UserKeyRequest Object](https://developers.symphony.com/restapi/reference#userkeyrequest-object)
 
 
 
