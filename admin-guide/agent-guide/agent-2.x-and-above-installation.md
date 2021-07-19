@@ -655,7 +655,7 @@ Once the property has been selected, the script will output the resulting encryp
 Please then set the value of the property or parameter required with this encrypted string of characters.
 
 {% hint style="info" %}
-Please note that as the value of the properties now contains the special character parenthesis `'('`, you may need to wrap the property values with double quotes "". See below an example:
+Please note that as the value of the properties will contain parenthesis`'('` \(special character\), you may need to wrap the property values with double quotes "". See below an example:
 
 ```text
 export SERVER_SSL_KEY_STORE_PASSWORD="ENC(...,...)"
