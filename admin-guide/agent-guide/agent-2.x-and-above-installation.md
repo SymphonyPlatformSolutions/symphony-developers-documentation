@@ -654,7 +654,15 @@ Select `Option b` to encrypt credentials stored in a file.
 Once the property has been selected, the script will output the resulting encrypted value with the format **ENC\(..., ...\).**  
 Please then set the value of the property or parameter required with this encrypted string of characters.
 
-These steps need to be repeated for each property or parameter that requires encryption.
+{% hint style="info" %}
+Please note that as the value of the properties now contains the special character parenthesis `'('`, you may need to wrap the property values with double quotes "". See below an example:
+
+```text
+export SERVER_SSL_KEY_STORE_PASSWORD="ENC(...,...)"
+```
+{% endhint %}
+
+The steps above need to be repeated for each property or parameter that requires encryption.
 
 {% hint style="info" %}
 Please note that all the properties need to be encrypted with the **same password.**
