@@ -46,6 +46,7 @@ Here after you can find the updates of our documentation impacting the 20.9 vers
   * [Create Message v4](https://developers.symphony.com/restapi/reference#create-message-v4) - updated attachment limits
   * Updated the [User Attributes](https://developers.symphony.com/restapi/reference#user-attributes) Object and therefore its impacts on the endpoints [Create User v2](https://developers.symphony.com/restapi/reference#create-user-v2) / [Update User v2](https://developers.symphony.com/restapi/reference#update-user-v2) / [Search Users](https://developers.symphony.com/restapi/reference#search-users)
   * The endpoint [Subscribers](https://developers.symphony.com/restapi/reference#subscribers) documentation has been updated to highlight both default and maximum values for the parameter "limit"
+* Added the information that only PKCS8 format is allowed for the key of the [UserKeyRequest Object](https://developers.symphony.com/restapi/reference#userkeyrequest-object)
 
 
 
