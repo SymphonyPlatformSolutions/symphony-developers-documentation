@@ -34,6 +34,7 @@ The following list shows the endpoints that have been updated or added to the [A
 Here after you can find the updates of our documentation impacting the 20.12 version. These changes might be also reflected in previous versions:
 
 * Removed the limitation of DLP scanning formReplies on the [Overview of Symphony Elements](../building-bots-on-symphony/symphony-elements/)
+* Added the information that only PKCS8 format is allowed for the key of the [UserKeyRequest Object](https://developers.symphony.com/restapi/reference#userkeyrequest-object)
 
 
 
