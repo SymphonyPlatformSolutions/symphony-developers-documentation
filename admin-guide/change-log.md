@@ -1,14 +1,35 @@
+---
+description: >-
+  This page contains essential information about the changes that occurred in
+  the Agent service and in Symphony's REST APIs.
+---
+
 # Change Log
 
-Thank you for using Symphony. This document contains essential information about the changes that occurred in the Agent and in the Public APIs of Symphony.
-
-## **Symphony 20.12 - Agent 20.12.0**
+## **Symphony 20.12 - Agent 20.12.2**
 
 ### Swagger
 
 The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/symphony-api-spec/tree/20.12).
 
 ### Agent Changes
+
+#### Agent 20.12.2
+
+* Fixed handling of unknown fields when using Datafeed v2.
+* Removed unnecessary error logs from standard & error outputs.
+* Collection of metrics on MessageML features used in messages. The metrics consist of the number of tags that are used in messages \(e.g. number of Datepicker elements sent\), as well as how often some of the tags' properties are used \(e.g. number of Datepicker elements that have a default value set\). The content of the messages are not captured under any circumstances. The metrics will help driving evolutions to the messageML language going forward.
+* Support for future MessageML features, dependent on a new Client 2.0 release. Features will be documented once available in Client 2.0.
+  * Elements - Support multiple submits of a form \(optional parameter\).
+  * Elements - Support the future Dialog element. 
+  * UI Action - Support the future Open Chat UI Action.
+* Fixed an issue with the DLP support of the Share endpoint \(/agent/v3/stream/:sid/share/\)
+* Performance improvement: The time required to parse MessageML has been divided by a factor of 5.
+
+#### Agent 20.12.1
+
+* Agent now supports the encryption of the sensitive Agent configuration parameters such as passwords and keys. Please refer to Agent [installation page](https://docs.developers.symphony.com/v/v20.12/admin-guide/agent-guide/agent-2.x-and-above-installation#overview-of-the-setup-script) \(Setup Script option i\) for more information. 
+* Fixed connection pool shortage issue related to an unreleased connection.
 
 #### Agent 20.12.0
 
@@ -18,9 +39,9 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 * Updated dependencies to address potential security vulnerabilities.
 
 {% hint style="info" %}
-### Agent 20.12.0 - officially supported Agent for Symphony version v20.12
+### Agent 20.12.2 - officially supported Agent for Symphony version v20.12
 
-To download the Agent, click [here](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.0.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.2.zip).
 
 For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
@@ -46,9 +67,9 @@ No API endpoint was created in Symphony version 20.12.
 ### **General Updates**
 
 * Introduction of 3 new Elements: [Date Picker](../building-bots-on-symphony/symphony-elements/available-elements/date-picker.md), [Time Picker](../building-bots-on-symphony/symphony-elements/available-elements/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md). _Please go to the description of these new Elements to see their availability on the Client side, as some of them are not or only partially available in the 20.12 version of the Client 1.5, but already released in compatible versions of Client 2.0._
-* Elements formReplies are now processed via DLP in both Client 1.5 and 2.0.
 * Fixed display bugs of Elements: removed extra spacing at the bottom of forms, as well as more general bugs
 * Fixed the issue of still getting wall post messages via the [Get Message v1](https://developers.symphony.com/restapi/v20.12/reference#get-message-v1) endpoint, although "Allow user to read wall posts" entitlement was set to No
+* New [Agent Performance Tuning](agent-guide/agent-performance-tuning.md) guide available.
 
 ### Client 2.0 updates
 

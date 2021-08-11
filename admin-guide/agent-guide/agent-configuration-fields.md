@@ -6,21 +6,6 @@ This page describes the fields of the `agent.yml` configuration file used during
 
 | Field | Required | Description |
 | :--- | :--- | :--- |
-| `agent.circuitbreaker.targetGet.threadpool.allowMaximumSizeToDivergeFromCoreSize` | No | Allows the configuration for maximumSize to take effect. That value can then be equal to, or higher, than coreSize. Default: false Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.circuitbreaker.enable` | No | Determines whether a circuit breaker will be used to track health and to short-circuit requests if it trips. Default: true Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.circuitbreaker.errorThresholdPercentage` | No | The error percentage at or above which the circuit should trip open and start short-circuiting requests to fallback logic. Default: 50 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.circuitbreaker.forceClosed` | No | If true, forces the circuit breaker into a closed state in which it will allow requests regardless of the error percentage. Default: false Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.circuitbreaker.forceOpen` | No | If true, forces the circuit breaker into an open \(tripped\) state in which it will reject all requests. Takes precedence over circuitBreaker.forceClosed. Default: false Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.circuitbreaker.sleepWindowInMilliseconds` | No | The amount of time, after tripping the circuit, to reject requests before allowing attempts again to determine if the circuit should again be closed. Default: 5000 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.circuitbreaker.requestVolumeThreshold` | No | The minimum number of requests in a rolling window that will trip the circuit. Default: 20 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.execution.isolation.thread.timeoutInMilliseconds` | No | The time in milliseconds after which the caller will observe a timeout and walk away from the command execution. Default: 5000 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.execution.timeout.enabled` | No | Indicates whether the circuit breaker execution should have a timeout. Default: true Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.threadpool.coreSize` | No | The core thread pool size. Default: 100 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.threadpool.keepAliveTimeMinutes` | No | The keep-alive time, in minutes. Default: 1 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.threadpool.maximumSize` | No | The maximum thread pool size. This is the maximum amount of concurrency that can be supported without starting to reject Commands. Please note that this setting only takes effect if you also set allowMaximumSizeToDivergeFromCoreSize. Default: 100 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.threadpool.maxQueueSize` | No | The maximum queue size of the BlockingQueue implementation. If set to -1, then SynchronousQueue will be used, otherwise a positive value will be used with LinkedBlockingQueue. Default: -1 Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.threadpool.name` | No | The thread pool name which will show in the logs. Default: targetGet-pool Note: This configuration is no longer available since Agent 2.55.12 |
-| `agent.circuitbreaker.targetGet.threadpool.queueSizeRejectionThreshold` | No | The queue size rejection threshold — an artificial maximum queue size at which rejections will occur even if maxQueueSize has not been reached. Not applicable if maxQueueSize == -1. Default: 5 Note: This configuration is no longer available since Agent 2.55.12 |
 | `agent.certificate.agentservice.file` | No | The "agentservice" user certificate file. Either certificate or RSA authentication of the user key must be set for OBO functionality to be available. Default: unset. |
 | `agent.certificate.agentservice.password` | No | The "agentservice" user certificate password. Required if the agentservice certificate is set. Default: unset |
 | `agent.certificate.agentservice.type` | Yes | The "agentservice" user certificate type. Default: pkcs12. |
@@ -63,10 +48,10 @@ This page describes the fields of the `agent.yml` configuration file used during
 | `agent.limits.importThreads` | No | Number of threads to use for message import. Default: 20 |
 | `agent.limits.keyCache.size` | No | Maximum number of stream keys to cache. Default: 1000 |
 | `agent.limits.keyCache.ttl` | No | Time to live of stream key cache entries, in hours. Default: 72 |
-| `agent.limits.oboSessionCache.size` | No | Maximum number of OBO sessions to cache. Default: 10000  Note: This configuration is no longer available since Agent 2.55.13 |
-| `agent.limits.oboSessionCache.ttl` | No | Time to live of OBO session cache entries, in milliseconds. Default: 3600000  Note: This configuration is no longer available since Agent 2.55.13 |
 | `agent.limits.sessionCache.size` | No | Maximum number of sessions to cache. Default: 10000 |
 | `agent.limits.sessionCache.ttl` | No | Time to live of session cache entries, in hours. Default: 72 |
+| `agent.messaging.retry.initialDelay` | No | \(in milliseconds\), the initial time before making the first polling call to check if a message has been correctly ingested. Changing this parameter can increase the load on the backend, is subject to rate limiting, and should only be done in specific scenarios following a discussion with the Symphony team. |
+| `agent.messaging.retry.delayMultiplier` | No | \(in milliseconds\), the multiplier between each retry polling calls to check if a message has been ingested. Changing this parameter can increase the load on the backend, is subject to rate limiting, and should only be done in specific scenarios following a discussion with the Symphony team. |
 | `agent.onPrem` | No | Indicates whether this is an on-prem or cloud installation. Default: true. |
 | `agent.podName` | No | An identifier for the pod \(e.g. the hostname of the pod\). |
 | `agent.privateKey.agentservice.file` | No | The "agentservice" user RSA private key file. Either certificate or RSA authentication of the user key must be set for OBO functionality to be available. Default: unset |

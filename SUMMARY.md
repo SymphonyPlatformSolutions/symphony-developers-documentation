@@ -193,6 +193,7 @@
   * [Agent Installation](admin-guide/agent-guide/agent-2.x-and-above-installation.md)
   * [Agent Configuration Fields](admin-guide/agent-guide/agent-configuration-fields.md)
   * [Agent Server High Availability](admin-guide/agent-guide/agent-server-high-availability.md)
+  * [Agent Performance Tuning](admin-guide/agent-guide/agent-performance-tuning.md)
   * [SBE x Agent Compatibility Matrix](admin-guide/agent-guide/sbe-x-agent-compatibility-matrix.md)
   * [Agent Diagnostic Tool](admin-guide/agent-guide/agent-diagnostic-tool.md)
 
