@@ -16,8 +16,7 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 
 #### Agent 20.12.2
 
-* Fixed handling of unknown fields when using Datafeed v2.
-* Removed unnecessary error logs from standard & error outputs.
+* Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers.
 * Collection of metrics on MessageML features used in messages. The metrics consist of the number of tags that are used in messages \(e.g. number of Datepicker elements sent\), as well as how often some of the tags' properties are used \(e.g. number of Datepicker elements that have a default value set\). The content of the messages are not captured under any circumstances. The metrics will help driving evolutions to the messageML language going forward.
 * Support for future MessageML features, dependent on a new Client 2.0 release. Features will be documented once available in Client 2.0.
   * Elements - Support multiple submits of a form \(optional parameter\).
@@ -25,11 +24,12 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
   * UI Action - Support the future Open Chat UI Action.
 * Fixed an issue with the DLP support of the Share endpoint \(/agent/v3/stream/:sid/share/\)
 * Performance improvement: The time required to parse MessageML has been divided by a factor of 5.
+* Ability for service users to benefit from a reduced latency when sending messages, by bypassing the DLP service \(Data Loss Prevention\). This behavior can be configured through a service user entitlement "Bypass DLP" available in the Admin Portal. By default, DLP is enabled for all service users.
 
 #### Agent 20.12.1
 
 * Agent now supports the encryption of the sensitive Agent configuration parameters such as passwords and keys. Please refer to Agent [installation page](https://docs.developers.symphony.com/v/v20.12/admin-guide/agent-guide/agent-2.x-and-above-installation#overview-of-the-setup-script) \(Setup Script option i\) for more information. 
-* Fixed connection pool shortage issue related to an unreleased connection.
+* Fixed connection pool shortage issue related to an unreleased connection in the Healthcheck.
 
 #### Agent 20.12.0
 
