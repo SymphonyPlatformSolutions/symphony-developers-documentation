@@ -17,7 +17,7 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 #### Agent 20.12.2
 
 * Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers.
-* Collection of metrics on MessageML features used in messages. The metrics consist of the number of tags that are used in messages \(e.g. number of Datepicker elements sent\), as well as how often some of the tags' properties are used \(e.g. number of Datepicker elements that have a default value set\). The content of the messages are not captured under any circumstances. The metrics will help driving evolutions to the messageML language going forward.
+* Collection of statistics on the usage of messageML features. The statistics consist in the usage of features such as the Elements Datepicker or the usage of regex patterns in  textfields. The data will help understanding which features are favoured by developers and will help driving evolutions to the messageML language going forward. No sensitive parts of messages can be captured in any circumstances.
 * Support for future MessageML features, dependent on a new Client 2.0 release. Features will be documented once available in Client 2.0.
   * Elements - Support multiple submits of a form \(optional parameter\).
   * Elements - Support the future Dialog element. 
