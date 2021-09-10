@@ -2,7 +2,7 @@
 
 Thank you for using Symphony. This document contains essential information about the changes that occurred in the Agent and in the Public APIs of Symphony.
 
-### **Symphony 20.10 - Agent 20.10.1**
+### **Symphony 20.10 - Agent 20.10.3**
 
 ### Swagger
 
@@ -23,10 +23,19 @@ The Swagger file for v20.10 available [here](https://github.com/symphonyoss/symp
 
 * Fixed some vulnerable dependencies
 
-{% hint style="info" %}
-### Agent 20.10.1 - officially supported Agent for Symphony version v20.10
+#### Agent 20.10.2
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.10.1.zip).
+* Fixed connection pool shortage issue related to an unreleased connection in the Healthcheck
+* Updated dependencies to address potential security vulnerabilities
+
+#### Agent 20.10.3
+
+* Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers
+
+{% hint style="info" %}
+### Agent 20.10.3 - officially supported Agent for Symphony version v20.10
+
+To download the Agent, click [here](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.10.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
