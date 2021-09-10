@@ -6,13 +6,17 @@ description: >-
 
 # Change Log
 
-## **Symphony 20.12 - Agent 20.12.2**
+## **Symphony 20.12 - Agent 20.12.3**
 
 ### Swagger
 
 The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/symphony-api-spec/tree/20.12).
 
 ### Agent Changes
+
+#### Agent 20.12.3
+
+* Fixed bug due to excessive token storing duration in cache, causing occasional 401s when trying to read datafeed v2 once expired
 
 #### Agent 20.12.2
 
@@ -39,9 +43,9 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 * Updated dependencies to address potential security vulnerabilities.
 
 {% hint style="info" %}
-### Agent 20.12.2 - officially supported Agent for Symphony version v20.12
+### Agent 20.12.3 - officially supported Agent for Symphony version v20.12
 
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.2.zip).
+To download the Agent, click [here](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}

@@ -1,9 +1,9 @@
 # Agent Download
 
 {% hint style="info" %}
-### Agent 20.12.2 - officially supported Agent for Symphony version 20.12
+### Agent 20.12.3 - officially supported Agent for Symphony version 20.12
 
-[Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.2.zip)
+[Download](%20https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.3.zip)
 {% endhint %}
 
 For more information regarding the Agent installation, refer to [Agent Installation](agent-2.x-and-above-installation.md).  
