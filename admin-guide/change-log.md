@@ -14,9 +14,17 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 
 ### Agent Changes
 
-#### Agent 20.12.3
+#### Agent 20.12.0
 
-* Fixed bug due to excessive token storing duration in cache, causing occasional 401s when trying to read datafeed v2 once expired
+* Agent now supports new 429 Retry later replies from downstream services \(such as Symphony Back-End\) as follows: for backward-compatibility purposes, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded. _Please start updating your bots to support 429 errors as we will introduce them in the future._
+* Improved performance when creating message with multiple files attached.
+* MessageML: Fix to support the usage of base64 image in background-image style.
+* Updated dependencies to address potential security vulnerabilities.
+
+#### Agent 20.12.1
+
+* Agent now supports the encryption of the sensitive Agent configuration parameters such as passwords and keys. Please refer to Agent [installation page](https://docs.developers.symphony.com/v/v20.12/admin-guide/agent-guide/agent-2.x-and-above-installation#overview-of-the-setup-script) \(Setup Script option i\) for more information. 
+* Fixed connection pool shortage issue related to an unreleased connection in the Healthcheck.
 
 #### Agent 20.12.2
 
@@ -30,17 +38,9 @@ The Swagger file for v20.12 available [here](%20https://github.com/symphonyoss/s
 * Performance improvement: The time required to parse MessageML has been divided by a factor of 5.
 * Ability for service users to benefit from a reduced latency when sending messages, by bypassing the DLP service \(Data Loss Prevention\). This behavior can be configured through a service user entitlement "Bypass DLP" available in the Admin Portal. By default, DLP is enabled for all service users.
 
-#### Agent 20.12.1
+#### Agent 20.12.3
 
-* Agent now supports the encryption of the sensitive Agent configuration parameters such as passwords and keys. Please refer to Agent [installation page](https://docs.developers.symphony.com/v/v20.12/admin-guide/agent-guide/agent-2.x-and-above-installation#overview-of-the-setup-script) \(Setup Script option i\) for more information. 
-* Fixed connection pool shortage issue related to an unreleased connection in the Healthcheck.
-
-#### Agent 20.12.0
-
-* Agent now supports new 429 Retry later replies from downstream services \(such as Symphony Back-End\) as follows: for backward-compatibility purposes, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded. _Please start updating your bots to support 429 errors as we will introduce them in the future._
-* Improved performance when creating message with multiple files attached.
-* MessageML: Fix to support the usage of base64 image in background-image style.
-* Updated dependencies to address potential security vulnerabilities.
+* Fixed bug due to excessive token storing duration in cache, causing occasional 401s when trying to read datafeed v2 once expired
 
 {% hint style="info" %}
 ### Agent 20.12.3 - officially supported Agent for Symphony version v20.12
