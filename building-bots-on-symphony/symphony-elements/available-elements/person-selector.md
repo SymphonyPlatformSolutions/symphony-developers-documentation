@@ -15,7 +15,7 @@ When a user types the person's name, a drop-down will be displayed with the resu
 | `required` | Boolean | No | If `true`, it specifies that the person selector must be filled out before submitting the form, which means that at least one person must be "selected" Accepted values; `true` and `false`. |
 | `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
 | `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above. |
-| `value` | String | No | Default value that will be preselected in the person-selector when the user will receive the form from the bot. |
+| `value` | Array of Integers | No | Default value that will be preselected in the person-selector when the user receive the form from the bot. |
 
 ## Rules and Limitations
 
@@ -115,5 +115,5 @@ The result returned by the datafeed for the selected users is an array of user I
 | Initial release | 1.55 |  | Not working | 2.55.9 |
 | Label | 20.9 | 20.9 | Label displayed and form can still be submitted | 20.7 |
 | Tooltip \(title\) | 20.9 | 20.9 | Tooltip not displayed but form can still be submitted | 20.7 |
-| Value | Not Available | 21.7 | For client 1.5, it displays the person-selector as if there was no default value. | 20.12 |
+| Value | Not Available | 21.7 | For client 1.5, it displays the person-selector as if there was no default value | 20.12 |
 
