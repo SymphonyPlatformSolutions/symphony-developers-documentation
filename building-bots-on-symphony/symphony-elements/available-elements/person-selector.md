@@ -8,14 +8,72 @@ When a user types the person's name, a drop-down will be displayed with the resu
 
 ## Attributes
 
-| Attribute | Type | Required? | Description |
-| :--- | :--- | :--- | :--- |
-| `name` | String | Yes | Identifies the person selector |
-| `placeholder` | String | No | Specifies a short hint that describes the expected value of the input field. |
-| `required` | Boolean | No | If `true`, it specifies that the person selector must be filled out before submitting the form, which means that at least one person must be "selected" Accepted values; `true` and `false`. |
-| `title` | It accepts a simple text and `\n` for line breaks | No | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
-| `label` | String | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above. |
-| `value` | Array of Integers | No | Default value that will be preselected in the person-selector when the user receive the form from the bot. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Attribute</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required?</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>name</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">Identifies the person selector</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>placeholder</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">No</td>
+      <td style="text-align:left">Specifies a short hint that describes the expected value of the input
+        field.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>required</code>
+      </td>
+      <td style="text-align:left">Boolean</td>
+      <td style="text-align:left">No</td>
+      <td style="text-align:left">If <code>true</code>, it specifies that the person selector must be filled
+        out before submitting the form, which means that at least one person must
+        be &quot;selected&quot; Accepted values; <code>true</code> and <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>title</code>
+      </td>
+      <td style="text-align:left">It accepts a simple text and <code>\n</code> for line breaks</td>
+      <td style="text-align:left">No</td>
+      <td style="text-align:left">The description that will be displayed when clicking the tooltip icon
+        located on top of the Masked Text Field Element. Max length: 256 characters.
+        Available from Symphony v20.8 and above.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>label</code>
+      </td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Not required but it is recommended if <code>title</code> is defined</td>
+      <td
+      style="text-align:left">Definition of the label that will be displayed on top of the Masked Text
+        Field Element. Available from Symphony v20.8 and above.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>value</code>
+      </td>
+      <td style="text-align:left">
+        <p>Array of</p>
+        <p><code>long</code>
+        </p>
+      </td>
+      <td style="text-align:left">No</td>
+      <td style="text-align:left">Default value that will be preselected in the person-selector when the
+        user receive the form from the bot.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Rules and Limitations
 
