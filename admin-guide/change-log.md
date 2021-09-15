@@ -74,6 +74,8 @@ No API endpoint was created in Symphony version 20.12.
 * Fixed display bugs of Elements: removed extra spacing at the bottom of forms, as well as more general bugs
 * Fixed the issue of still getting wall post messages via the [Get Message v1](https://developers.symphony.com/restapi/v20.12/reference#get-message-v1) endpoint, although "Allow user to read wall posts" entitlement was set to No
 * New [Agent Performance Tuning](agent-guide/agent-performance-tuning.md) guide available.
+* **Deprecation notice**: The legacy Java & Python SDKs are now replaced with the new [Java BDK](https://github.com/finos/symphony-bdk-java) and [Python BDK](https://github.com/finos/symphony-bdk-python). These are now the reference for building Bots in Java or Python on Symphony, and are hosted on FINOS. Please consider migrating to the new BDKs for a faster development, a higher reliability & always being up to date with the new features. The legacy SDKs will no longer be supported in March 2022.
+* **Deprecation notice:** The legacy NodeJS SDK will no longer be supported in March 2022. 
 
 ### Client 2.0 updates
 
