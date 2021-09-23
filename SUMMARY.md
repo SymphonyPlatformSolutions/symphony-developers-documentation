@@ -26,7 +26,6 @@
     * [Build an Interactive Bot using the BDK 1.0](building-bots-on-symphony/tutorials/bdk/building-an-interactive-bot-using-bdk.md)
     * [Build a Headless Bot using the BDK 1.0](building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md)
 * [Overview of REST API](building-bots-on-symphony/overview-of-rest-api/README.md)
-  * [Untitled](building-bots-on-symphony/overview-of-rest-api/untitled.md)
   * [REST API Architecture](building-bots-on-symphony/overview-of-rest-api/rest-api-architecture.md)
   * [Overview of Pod API](building-bots-on-symphony/overview-of-rest-api/pod-api.md)
   * [Overview of Key Manager API](building-bots-on-symphony/overview-of-rest-api/key-manager-api.md)
