@@ -64,5 +64,5 @@ The behavior of some API endpoints has been changed to ignore unexpected paramet
 * Starting with Symphony v20.10, some “built in” applications of the Marketplace will also be modifiable directly in the Admin Portal. Please reach out to your Technical Account Manager for more information.
 * Extension Applications:
   * Improved support of Client 2.0 \(retrieve user entitlements, support of theme changed event, support of app in last active popped out workspace, support of developper mode, support of Module service open link, focus, and redirect methods\)
-  * Added an openIM functionality in the [UI Service](../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/ui-service/). Please note that the focus on the message which id has been transmitted with the service is only working in the Client 2.0.
+  * Added an openIM functionality in the [UI Service](../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/ui-service/).
 
