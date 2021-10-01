@@ -1,109 +1,53 @@
+---
+description: >-
+  This page contains essential information about the changes that occurred in
+  the Agent service and in Symphony's REST APIs.
+---
+
 # Change Log
 
-## Main Symphony 1.55 release - Agent 2.55.21
-
-### **New Features**
-
-* **Symphony Elements** - released in 1.55.3
-
-Symphony Elements is a collection of [interactive elements](../building-bots-on-symphony/symphony-elements/available-elements/) that can be sent within messages to facilitate the communication with Symphony users. Through interactive content, users can reply to messages in an entertaining and easy way.
-
-Through the use of the elements, bots can send messages that contain forms with text fields, dropdown menus, person selectors, buttons and more! For more information, refer to [Symphony Elements](../building-bots-on-symphony/symphony-elements/).
-
-### **Swagger**
-
-The Swagger file for v1.55 of Symphony's REST API is available [here](https://github.com/symphonyoss/symphony-api-spec/tree/rc-current-r55).
-
-### **Agent Changes**
-
-* Agent 2.55.21
-  * Fixed an issue when sending attachments using the Create Message V3 API, was not allowing the UI to download the attachment.
-  * Fixed an issue when replying to a message containing a table was not working properly.
-* Agent 2.55.20
-  * Fixed issues with OBO session cache.
-  * Agent improvements in order to get sessions for different user ids without compromising performance when running multiple bots.
-* Agent 2.55.19
-  * Added support for OpenJDK 8-242.
-  * The Tomcat Embed Core has been upgraded to version 8.5.51 due to a reported security vulnerability.
-* Agent 2.55.18
-  * Fixed an issue when bots were not being able to send a message to a Corporate pod using the Agent from a Bot-home pod.
-* Agent 2.55.17
-  * Handling of an unauthorized exception from _SymphonyClient_ on app session calls.
-* Agent 2.55.16
-  * Message endpoints now return the `sid` \(session id\) field. This new field represents the id of the session that was used to generate a message.
-* Agent 2.55.15
-  * Fixed distortion on the preview of small attached images.
-  * POST '/v1/message/search' endpoint: fixed swagger file.
-* Agent 2.55.14
-  * Fixed V2MessageGet endpoint to properly return the message attachments.
-  * Now returning urlSafe threadId on Elements datafeed payload.
-* Agent 2.55.13
-  * The Spring Security has been re-added to the Agent so actuator endpoints can use basic HTTP authentication.
-  * `agent.yaml` file: the `certAuth` was updated to properly use the default values.
-  * Improved caching mechanism for sessions.
-  * Reduction on the number of requests made for the key manager.
-  * Fixed issues with compatibility on specific proxy configurations.
-  * The `agent.limits.oboSessionCache.size` and `agent.limits.oboSessionCache.ttl` properties have been removed.
-* Agent 2.55.12
-  * Added the `agent.features.elements.enabled` setting that indicates if Symphony Elements are enabled to be sent via the Agent Messaging APIs.
-  * The circuit breaker configuration is no longer available.
-  * Added the Logging Rotation configuration.
-* Agent 2.55.3
-  * Fixed an issue when searching for messages using `agent/v1/message/search?query=hashtag:<hashtag>` was not returning results if capital letters were used in the hashtag.
-* Agent 2.55.0
-  * Added DLP support when updating signals.
-* Agent 2.54.4
-  * Agent improvements on filtering logs by utilities.
-  * Fixed the error "Failed to retrieve the entity key" that was being displayed when installing the new Agent.
-  * Fixed an issue when executing the Agent without a running Firehose instance was returning an error.
-
-{% hint style="info" %}
-### Agent 2.55.21 - officially supported Agent for Symphony version 1.55.x
-
-[Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.55.21.zip)
+{% hint style="warning" %}
+The change log of version 20.13 is **DRAFT** 
 {% endhint %}
 
-### **New Endpoints**
+## **Symphony 20.13 - Agent 20.13.0**
 
-| New endpoint | Description |
-| :--- | :--- |
-| [Unassign User Disclaimer](https://developers.symphony.com/restapi/v1.55/reference-link/unassign-user-disclaimer) | Unassigns a disclaimer from a user. Released in 1.55.2 |
-| [List User Groups](https://developers.symphony.com/restapi/v1.55/reference-link/list-user-groups) | List user groups matching a set of filters. Released in 1.55.3 |
-| [Get a User Group](https://developers.symphony.com/restapi/v1.55/reference-link/get-a-user-group) | Returns a user group. Released in 1.55.3 |
-| [Create a User Group](https://developers.symphony.com/restapi/v1.55/reference-link/create-a-user-group) | Creates a user group. Released in 1.55.3 |
-| [Update a User Group](https://developers.symphony.com/restapi/v1.55/reference-link/update-a-user-group) | Updates a user group information Released in 1.55.3 |
-| [List Assignments](https://developers.symphony.com/restapi/v1.55/reference-link/list-assignments) | List assignments of a group Released in 1.55.3 |
-| [List Group Assignments](https://developers.symphony.com/restapi/v1.55/reference-link/list-group-assigments) | Lists group assignments for a user. Released in 1.55.3 |
-| [Update a Group](https://developers.symphony.com/restapi/v1.55/reference-link/update-a-group) | Assigns or updates the assignment of a user to a group. Released in 1.55.3 |
-| [List Memberships](https://developers.symphony.com/restapi/v1.55/reference-link/list-memberships) | List memberships of a group. Released in 1.55.3 |
-| [List Group Memberships](https://developers.symphony.com/restapi/v1.55/reference-link/list-group-memberships) | Filters and lists group memberships for a user. Released in 1.55.3 |
-| [Add Group Memberships](https://developers.symphony.com/restapi/v1.55/reference-link/add-group-memberships) | Add multiple members to a group. Released in 1.55.3 |
-| [Update a User Membership](https://developers.symphony.com/restapi/v1.55/reference-link/update-a-user-membership) | Add or update a user's membership within a group. Released in 1.55.3 |
+### Swagger
 
-### **Updated Endpoints**
+The Swagger file for v20.13 available here \(Not yet available\).
 
-The following table contains updates to existing endpoints:
+### Agent Changes
 
-| Updated Endpoint | What has changed |
-| :--- | :--- |
-| [Get User v2](https://developers.symphony.com/restapi/v1.55/reference-link/get-user-v2) | Now returning the user deactivated date. Available from 1.55.2 version onwards. |
-| [Messages](https://developers.symphony.com/restapi/v1.55/reference-link/messages-v4) | Now returning the session id: `sid`. Available from 1.55.0 version onwards. |
-| [Create Message v4](https://developers.symphony.com/restapi/v1.55/reference-link/create-message-v4) | Now returning the session id: `sid`. Available from 1.55.0 version onwards. |
-| [Message Search - POST](https://developers.symphony.com/restapi/v1.55/reference-link/message-search-post) | Now returning the session id: `sid`. Available from 1.55.0 version onwards. |
-| [Message Search - GET](https://developers.symphony.com/restapi/v1.55/reference-link/message-search-get) | Now returning the session id: `sid`. Available from 1.55.0 version onwards. |
-| [Read Messages/Events Stream](https://developers.symphony.com/restapi/v1.55/reference-link/read-messagesevents-stream-v4) | Now returning the session id: `sid`. Available from 1.55.0 version onwards. |
-| [Users Lookup v3](https://developers.symphony.com/restapi/v1.55/reference-link/users-lookup-v3) | Now, the endpoint returns the 204 code instead of the 500 error when searching for users by `username` returns no users. Available from 1.55.0 version onwards. |
+#### Agent 20.13.0
 
-### **Deprecated Endpoints**
+* Draft, change log construction in progress.
 
-No endpoints were deprecated in 1.55. For a complete list of Agent deprecated endpoints, refer to [Deprecated endpoints](agent-guide/agent-deprecated-endpoints.md).
+{% hint style="info" %}
+### Agent 20.13.0 - officially supported Agent for Symphony version v20.13
+
+To download the Agent, click here \(Not yet available\).
+
+For a list of Agent x SBE compatibilities, click [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
+{% endhint %}
+
+#### **New APIs**
+
+No API endpoint was created in Symphony version 20.13.
+
+#### **Updated APIs**
+
+No API endpoint was updated in Symphony version 20.13.
+
+#### **Deprecated APIs**
+
+No API endpoint was deprecated in Symphony version 20.13.
 
 ### **General Updates**
 
-* Fixed an issue when sending messages containing forbidden words and characters were not being blocked by DLP policies.
-* 1.55.3 version - the JWT that applications using Symphony Application Authentication use, included a minor change in its API. For more information, refer to [Obtaining User identity](../building-extension-applications-on-symphony/app-authentication/#5-obtain-user-identity) for details on this change.
+* **Deprecation notice**: The legacy Java & Python SDKs are now replaced with the new [Java BDK](https://github.com/finos/symphony-bdk-java) and [Python BDK](https://github.com/finos/symphony-bdk-python). These are now the reference for building Bots in Java or Python on Symphony, and are hosted on FINOS. The legacy SDKs will have a reduced support starting in **January 2022** and will no longer be supported in **March 2022**. At this date, you will still be able to use the legacy SDKs, however please consider migrating to the new BDKs for faster development, higher reliability & always benefit from the new features. 
+* **Deprecation notice:** Symphony will stop supporting the legacy NodeJS SDK in the coming months, with the following timeline: In **January 2022**, only critical issues will be fixed in the legacy NodeJS SDK. **In March 2022**, the SDK will no longer be actively supported. At this date you will still be able to use the SDK, however, please consider our SDKs in Java, Python or .Net if you prefer to benefit from a better support.
 
-#### **Documentation Changes**
+### Client 2.0 updates
 
-For more information, refer to [Documentation Updates](documentation-updates.md).
+Please look at the Client 2.0 release notes to see which features have been introduced in the new Client, such as features for Extension Apps, or eventual Elements changes.
 
