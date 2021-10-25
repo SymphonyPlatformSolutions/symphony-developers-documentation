@@ -4,15 +4,23 @@ description: Elements input validation.  Available from Symphony v20.6 and above
 
 # Regular Expressions - Regex
 
-Input validation is your first line of defense when creating a secure application. Thinking on how to help bot developers to securely validate input data, Symphony has added regular expressions \(shortened as regex\) validation to `text field` and `text area` elements.
+Input validation is your first line of defense when creating a secure application.&#x20;
 
-Regex is a sequence of characters that defines a search pattern. Such patterns are used by the front-end for input validation, being processed by the browser Javascript engine.
+Symphony Elements supports input validation using **regular expressions (regex)** for the `text field` and `text area` elements.
+
+{% hint style="info" %}
+The regular expression pattern is validated on the front end by the Client. It is therefore critical to also validate the input in your code as well.
+{% endhint %}
 
 ## Regular expression Denial of Service - ReDoS
 
-It is important to keep in mind that even with all the security that Symphony has designed to protect against malicious regex, developers must verify that the regex they are using is valid and offers no risk of ReDos \(Regular expression Denial of Service\).
+Regular expressions can cause performance issues in the Client if the validation of the regular expression is very complex. Poorly designed regular expressions can even cause denial of service (ReDoS). Please verify that your regular expressions are safe. This can be done using services such as [https://devina.io/redos-checker](https://devina.io/redos-checker).
 
-For more information, refer to [Regular expression Denial of Service - ReDoS](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS).
+{% hint style="info" %}
+To prevent performance issues on the Client, a validation mechanism checks regular expressions to ensure they are safe. If the regular expression is unsafe, it is automatically disabled**. In that situation, the user input will not be validated.**
+{% endhint %}
+
+For more information, refer to [Regular expression Denial of Service - ReDoS](https://owasp.org/www-community/attacks/Regular\_expression\_Denial\_of\_Service\_-\_ReDoS).
 
 ## Validation examples
 
@@ -49,4 +57,3 @@ Note that the content of the regex has to be checked again on the bot side.
 ```
 {% endtab %}
 {% endtabs %}
-
