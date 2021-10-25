@@ -39,11 +39,11 @@ This example shows how you can apply the styles:
 
 This image shows the result of the above code example:
 
-![](../../../.gitbook/assets/85c0431-screen_shot_2017-06-06_at_3.22.38_pm.png)
+![](../../../.gitbook/assets/85c0431-screen\_shot\_2017-06-06\_at\_3.22.38\_pm.png)
 
 ## Personalization
 
-Users of Symphony can personalize their user interface by choosing between a variety of modes \(day/night\), contrast level, and font sizes.
+Users of Symphony can personalize their user interface by choosing between a variety of modes (day/night), contrast level, and font sizes.
 
 To make your application respect the user’s font, add one of the font classes to the `<html>` tag of your application:
 
@@ -59,11 +59,10 @@ To make your application respect the user’s mode, add one of the theme classes
 * dark
 * light
 
-You should leave the background color of your application as transparent to inherent all the application states from Symphony \(for example, by doing this, if the user focuses your application, the background color will be changed, depending on the user's theme\).
+You should leave the background color of your application as transparent to inherent all the application states from Symphony (for example, by doing this, if the user focuses your application, the background color will be changed, depending on the user's theme).
 
 The user’s preferences are returned in the Extension API theme object.
 
 ## Typography
 
 Symphony uses a modified version of font named _Lato_, which is an open source font hosted by Google. Because we have modified _Lato_ to include a specific set of glyphs for fractions commonly used by our customers, our stylesheet includes a modified version called _SymphonyLato_ that is hosted by Symphony. This font is automatically applied to your body tag when you include the stylesheet.
-

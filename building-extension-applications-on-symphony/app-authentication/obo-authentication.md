@@ -26,18 +26,18 @@ Once the app has obtained the user's `sessionToken`, it can make REST API calls 
 
 Before proceeding, check out the OBO App permissions required for a given workflow:
 
-| Category | Permission | Description |
-| :--- | :---: | :--- |
-| On Behalf Of | `ACT_AS_USER` | **Required**. This required permission allows an application to act on behalf of a user via any of the other permissions.  **Note**: This permission does not display to administrators on the Admin Portal because all apps can act on behalf of a user and therefore have the `ACT_AS_USER` permission by default. |
-| Messaging | `SEND_MESSAGES` | The application can send messages for the logged-in user. |
-| Messaging | `SUPPRESS_MESSAGES` | The application can suppress messages for the logged-in user. |
-| Get Connections | `GET_USER_CONNECTIONS` | The application can get connection requests for the logged-in user. |
-| Send Connections | `REQUEST_USER_CONNECTIONS` | The application can send connection requests for the logged-in user. |
-| Get Presence | `GET_PRESENCE` | The application can only get presence for the logged-in user. |
-| Set Presence | `SET_PRESENCE` | The application can only set presence for the logged-in user. |
-| Primary User Identity | `GET_BASIC_USER_INFO` | The application can get information about the logged-in user. |
-| Primary Contacts Access | `GET_BASIC_CONTACT_INFO` | The application can get information about other users through user look-up and search. |
-| List User's Streams | `LIST_USER_STREAMS` | The application can list the streams in which the logged-in user is a member. |
+| Category                |         Permission         | Description                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------- | :------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| On Behalf Of            |        `ACT_AS_USER`       | <p><strong>Required</strong>. This required permission allows an application to act on behalf of a user via any of the other permissions.<br><br><strong>Note</strong>: This permission does not display to administrators on the Admin Portal because all apps can act on behalf of a user and therefore have the <code>ACT_AS_USER</code> permission by default.</p> |
+| Messaging               |       `SEND_MESSAGES`      | The application can send messages for the logged-in user.                                                                                                                                                                                                                                                                                                              |
+| Messaging               |     `SUPPRESS_MESSAGES`    | The application can suppress messages for the logged-in user.                                                                                                                                                                                                                                                                                                          |
+| Get Connections         |   `GET_USER_CONNECTIONS`   | The application can get connection requests for the logged-in user.                                                                                                                                                                                                                                                                                                    |
+| Send Connections        | `REQUEST_USER_CONNECTIONS` | The application can send connection requests for the logged-in user.                                                                                                                                                                                                                                                                                                   |
+| Get Presence            |       `GET_PRESENCE`       | The application can only get presence for the logged-in user.                                                                                                                                                                                                                                                                                                          |
+| Set Presence            |       `SET_PRESENCE`       | The application can only set presence for the logged-in user.                                                                                                                                                                                                                                                                                                          |
+| Primary User Identity   |    `GET_BASIC_USER_INFO`   | The application can get information about the logged-in user.                                                                                                                                                                                                                                                                                                          |
+| Primary Contacts Access |  `GET_BASIC_CONTACT_INFO`  | The application can get information about other users through user look-up and search.                                                                                                                                                                                                                                                                                 |
+| List User's Streams     |     `LIST_USER_STREAMS`    | The application can list the streams in which the logged-in user is a member.                                                                                                                                                                                                                                                                                          |
 
 ## Getting Started
 
@@ -66,19 +66,19 @@ Before proceeding, check out the OBO App permissions required for a given workfl
 {% endtab %}
 {% endtabs %}
 
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| type | String | Required | This field should be set to `sandbox`, which indicates that this is a standalone app, embedded within Symphony's client. |
-| id | String | Required | The unique identifier for your app. **Note**: Do not use a colon \(:\) in this field, or you will receive a `401 Unauthorized` error. |
-| name | String | Required | The name of your app, which will be displayed in the Symphony Market. |
-| blurb | String | Optional | Applied for Developer Mode. Field for display in the Symphony Market and Admin Portal. |
-| publisher | String | Optional | The publisher of your app, which will be displayed in the Symphony Market. |
-| url | String | Optional | URL which the pod will call to send pod information to the application |
-| domain | String | Required | The domain for your app, which should match the controller file URL. |
-| icon | String | Optional | An icon for your app \(32x32 px\), which will be displayed in the Symphony Market. |
+| Parameter | Type   | Required | Description                                                                                                                         |
+| --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| type      | String | Required | This field should be set to `sandbox`, which indicates that this is a standalone app, embedded within Symphony's client.            |
+| id        | String | Required | The unique identifier for your app. **Note**: Do not use a colon (:) in this field, or you will receive a `401 Unauthorized` error. |
+| name      | String | Required | The name of your app, which will be displayed in the Symphony Market.                                                               |
+| blurb     | String | Optional | Applied for Developer Mode. Field for display in the Symphony Market and Admin Portal.                                              |
+| publisher | String | Optional | The publisher of your app, which will be displayed in the Symphony Market.                                                          |
+| url       | String | Optional | URL which the pod will call to send pod information to the application                                                              |
+| domain    | String | Required | The domain for your app, which should match the controller file URL.                                                                |
+| icon      | String | Optional | An icon for your app (32x32 px), which will be displayed in the Symphony Market.                                                    |
 
-1. Upload the manifest `bundle.json` to the Admin Portal -&gt; App Management -&gt; Add Custom App -&gt; Import Application Bundle File
-2. Add your App Backend's \(Bot\) RSA public key in the Authentication section under App Management.
+1. Upload the manifest `bundle.json` to the Admin Portal -> App Management -> Add Custom App -> Import Application Bundle File
+2. Add your App Backend's (Bot) RSA public key in the Authentication section under App Management.
 3. Give your Application the following Permissions:
 4. **ACT\_AS\_USER**
 
@@ -87,7 +87,7 @@ Note: Give your extension application the appropriate permissions corresponding 
 {% endhint %}
 
 1. Once your App is created, make sure that it is enabled:
-2. Admin Portal -&gt; App Settings -&gt; Locate your App and toggle its 'Global Status' to be 'Enabled'
+2. Admin Portal -> App Settings -> Locate your App and toggle its 'Global Status' to be 'Enabled'
 3. Toggle 'Visibility' to be 'Visible'
 4. Toggle 'Installation' to be 'Manual'
 5. The last step is to make sure that the application is installed for the appropriate users. If the installation is set to 'Manual', make sure end-users install the extension application manually via the Symphony Marketplace. If not, make sure Symphony Admin installs this application on behalf of a given list of users.
@@ -118,7 +118,7 @@ public class BotApplication {
 
 ### Perform the Intended OBO workflow
 
-In the following code snippet, the Bot authenticates on behalf of a given user and then prints a list of Streams \(Type = ROOM\) that the user in context is apart of:
+In the following code snippet, the Bot authenticates on behalf of a given user and then prints a list of Streams (Type = ROOM) that the user in context is apart of:
 
 ```java
 public class BotApplication {
@@ -145,6 +145,4 @@ public class BotApplication {
   }
 }
 ```
-
-
 

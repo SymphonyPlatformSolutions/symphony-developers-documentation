@@ -99,9 +99,9 @@ public static class CoreComponentFactory {
 public Client createHttpClient(Interceptor[] interceptors);
 ```
 
-| Function | Parameter | Parameter Description | Returns |
-| :--- | :--- | :--- | :--- |
-| `createHttpClient()` | `interceptors` | Array of Interceptors | None |
+| Function             | Parameter      | Parameter Description | Returns |
+| -------------------- | -------------- | --------------------- | ------- |
+| `createHttpClient()` | `interceptors` | Array of Interceptors | None    |
 
 Your `CoreComponentFactory` overrides this method to create a new instance of a HTTP client that will be used to communicate with the server.
 
@@ -113,9 +113,9 @@ public IAttachmentHandler createAttachmentHandler();
 
 Your `CoreComponentFactory` overrides this method to create a new instance of a `com.symphony.android.framework.IAttachmentHandler`.
 
-| Function | Parameter | Parameter Description | Returns |
-| :--- | :--- | :--- | :--- |
-| `createHttpClient()` | `interceptors` | Array of Interceptors | \`\`[`IAttachmentHandler`](iattachmenthandler.md)\`\` |
+| Function             | Parameter      | Parameter Description | Returns                                           |
+| -------------------- | -------------- | --------------------- | ------------------------------------------------- |
+| `createHttpClient()` | `interceptors` | Array of Interceptors | ``[`IAttachmentHandler`](iattachmenthandler.md)`` |
 
 ### **`getSharedPreferences()`**
 
@@ -133,14 +133,14 @@ public ISQLiteDatabase initDatabase(boolean openExistingDB, int dbVersion);
 
 Your `CoreComponentFactory` overrides this method to create a new instance of a [`ISQLiteDatabase`](isqlitedatabase.md). Use this method change the SQLite engine and or to change the location of the SQLite database.
 
-| Function | Returns |
-| :--- | :--- |
-| `initDatabase()` | \`\`[`ISQLLiteDatabase`](isqlitedatabase.md)\`\` |
+| Function         | Returns                                      |
+| ---------------- | -------------------------------------------- |
+| `initDatabase()` | ``[`ISQLLiteDatabase`](isqlitedatabase.md)`` |
 
-| Parameter | Description |
-| :--- | :--- |
+| Parameter        | Description                                                            |
+| ---------------- | ---------------------------------------------------------------------- |
 | `openExistingDB` | true if the application is opening existing database; false otherwise. |
-| `dbVersion` | Database Version |
+| `dbVersion`      | Database Version                                                       |
 
 ### **`getAppPolicy()`**
 
@@ -150,9 +150,9 @@ public IAppPolicy getAppPolicy();
 
 Your CoreComponentFactory overrides this method to create a new instance of a [`IAppPolicy`](iapppolicy.md).
 
-| Function | Returns |
-| :--- | :--- |
-| `getAppPolicy()` | \`\`[`IAppPolicy`](iapppolicy.md)\`\` |
+| Function         | Returns                           |
+| ---------------- | --------------------------------- |
+| `getAppPolicy()` | ``[`IAppPolicy`](iapppolicy.md)`` |
 
 ### **`getAppVersionName()`**
 
@@ -160,8 +160,8 @@ Your CoreComponentFactory overrides this method to create a new instance of a [`
 public java.lang.String getAppVersionName();
 ```
 
-| Function | Returns |
-| :--- | :--- |
+| Function              | Returns                        |
+| --------------------- | ------------------------------ |
 | `getAppVersionName()` | App Version Name as a `String` |
 
 ### **`createEditText()`**
@@ -172,8 +172,8 @@ public android.widget.EditText createEditText(android.content.Context context, a
 
 Create custom `EditText` instance that implement the `EditText`. This allows you to use widgets which prohibit/permits copy/paste or any other custom behavior.
 
-| Function | Returns |
-| :--- | :--- |
+| Function           | Returns    |
+| ------------------ | ---------- |
 | `createEditText()` | `EditText` |
 
 ### `createTextView()`
@@ -184,8 +184,8 @@ public android.widget.TextView createTextView(android.content.Context context, a
 
 Create custom `EditText` instance that implement the `EditText`. This allows you to use widgets which prohibit/permits copy/paste or any other custom behavior.
 
-| Function | Returns |
-| :--- | :--- |
+| Function           | Returns    |
+| ------------------ | ---------- |
 | `createTextView()` | `EditText` |
 
 ### **`createWebView()`**
@@ -196,8 +196,8 @@ public android.webkit.WebView createWebView(android.content.Context context, and
 
 Create custom WebView instance that implement the WebView.
 
-| Function | Returns |
-| :--- | :--- |
+| Function          | Returns   |
+| ----------------- | --------- |
 | `createWebView()` | `WebView` |
 
 ### **`createClipboardManager()`**
@@ -206,10 +206,9 @@ Create custom WebView instance that implement the WebView.
 public IClipboardManager createClipboardManager();
 ```
 
-Your CoreComponentFactory overrides this method to create a new instance of a com.symphony.android.framework.IClipboardManager.  
+Your CoreComponentFactory overrides this method to create a new instance of a com.symphony.android.framework.IClipboardManager.\
 
 
-| Function | Returns |
-| :--- | :--- |
-| `createClipboardManager()` | \`\`[`IClipboardManager`](iclipboardmanager.md)\`\` |
-
+| Function                   | Returns                                         |
+| -------------------------- | ----------------------------------------------- |
+| `createClipboardManager()` | ``[`IClipboardManager`](iclipboardmanager.md)`` |

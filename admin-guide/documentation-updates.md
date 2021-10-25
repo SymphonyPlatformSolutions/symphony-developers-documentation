@@ -14,9 +14,9 @@ No tutorial pages, overviews, nor guides have been added to the Symphony Platfor
 
 #### **API References**
 
-The following list shows the endpoints that have been updated or added to the [API Reference](%20https://rest-api.symphony.com/v20.10/reference) documentation to include the changes according to the [Change Log](change-log.md):
+The following list shows the endpoints that have been updated or added to the [API Reference](https://rest-api.symphony.com/v20.10/reference) documentation to include the changes according to the [Change Log](change-log.md):
 
-* Updated: 
+* Updated:&#x20;
   * [Suppress Message](https://developers.symphony.com/restapi/v20.12/reference#suppress-message) endpoint
   * [POST](https://developers.symphony.com/restapi/v20.12/reference#message-search-post) and [GET Message Search](https://developers.symphony.com/restapi/v20.12/reference#message-search-get) endpoints
 * Deprecated:
@@ -26,15 +26,13 @@ The following list shows the endpoints that have been updated or added to the [A
 #### Other Changes
 
 * Updated Extension App Documentation to add the specification of adding default value to the [share service](../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/share-service.md)
-* Updated [MessageML Format](../building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md#message-size-limits) to highlight the message size limit
-* Added the documentation of three new Elements: [Date Picker](../building-bots-on-symphony/symphony-elements/available-elements/date-picker.md), [Time Picker](../building-bots-on-symphony/symphony-elements/available-elements/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md)
+* Updated [MessageML Format](broken-reference) to highlight the message size limit
+* Added the documentation of three new Elements: [Date Picker](../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/date-picker.md), [Time Picker](../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/time-picker.md), and [Timezone Picker](../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/timezone-picker.md)
 
 ## General Documentation Updates
 
 Here after you can find the updates of our documentation impacting the 20.12 version. These changes might be also reflected in previous versions:
 
-* Removed the limitation of DLP scanning formReplies on the [Overview of Symphony Elements](../building-bots-on-symphony/symphony-elements/)
+* Removed the limitation of DLP scanning formReplies on the [Overview of Symphony Elements](../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/)
 * Added the information that only PKCS8 format is allowed for the key of the [UserKeyRequest Object](https://developers.symphony.com/restapi/reference#userkeyrequest-object)
-
-
 

@@ -94,177 +94,23 @@ In the following examples, the bundle files are applied for the **AC Portal**. N
 
 The table describes the required and additional optional fields.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Required</th>
-      <th style="text-align:left">Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>appGroupId</code>
-      </td>
-      <td style="text-align:left">
-        <p>Applied for version 1.53 onwards. The unique identifier for your app.
-          The ID must not match any existing app IDs or user names.</p>
-        <p>It consists of alphanumeric characters [0-9,A-Z, a-z], underscores (_),
-          and dashes.</p>
-        <p><b>Note</b>: Do not use a colon (:) in this field, or you will receive
-          a <code>401 Unauthorized</code> error.</p>
-      </td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>name</code>
-      </td>
-      <td style="text-align:left">The name of your app, which will be displayed in the Symphony Market.</td>
-      <td
-      style="text-align:left">Required</td>
-        <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>description</code>
-      </td>
-      <td style="text-align:left">The description of your app, which will be displayed in the Symphony Market.</td>
-      <td
-      style="text-align:left">Optional</td>
-        <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>publisher</code>
-      </td>
-      <td style="text-align:left">The publisher of your app, which will be displayed in the Symphony Market.</td>
-      <td
-      style="text-align:left">Optional</td>
-        <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>loadUrl</code>
-      </td>
-      <td style="text-align:left">
-        <p>The location of the app&apos;s controller, which will be displayed in
-          a hidden iframe. Value must start with <code>https://</code>.</p>
-        <p><b>Note</b>: Do not specify this value for On Behalf Of (OBO) applications.</p>
-      </td>
-      <td style="text-align:left">Required, except for OBO applications</td>
-      <td style="text-align:left">URI</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>domain</code>
-      </td>
-      <td style="text-align:left">The domain for your app, which should match the controller file URL.</td>
-      <td
-      style="text-align:left">Required</td>
-        <td style="text-align:left">URI</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>iconUrl</code>
-      </td>
-      <td style="text-align:left">An icon for your app (32x32 px), which will be displayed in the Symphony
-        Market.</td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">URI</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>notification</code>
-      </td>
-      <td style="text-align:left">Fields required in order to receive webhook callback containing pod information
-        (ie. pod, authentication and Agent URLs).</td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">Object</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>url</code>
-      </td>
-      <td style="text-align:left">URL which the pod will call to send pod information to the application</td>
-      <td
-      style="text-align:left">Optional</td>
-        <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>apiKey</code>
-      </td>
-      <td style="text-align:left">Secret key used to validate the pod when calling the notification URL.</td>
-      <td
-      style="text-align:left">Optional</td>
-        <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>permissions</code>
-      </td>
-      <td style="text-align:left">List of permissions the application requires. See Permissions details
-        for <a href="../app-authentication/obo-authentication.md#obo-app-permissions">on-behalf-of applications</a>.</td>
-      <td
-      style="text-align:left">Optional</td>
-        <td style="text-align:left">List</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>certificate</code>
-      </td>
-      <td style="text-align:left">Certificate for the application. See <a href="../app-authentication/">Application Authentication</a>
-      </td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>rsaKey</code>
-      </td>
-      <td style="text-align:left">Applied for version 1.54 onwards. RSA key for the application. See <a href="../app-authentication/">Application Authentication</a>
-      </td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>allowOrigins</code>
-      </td>
-      <td style="text-align:left">
-        <p>The origin or origins that this application is allowed to receive cross-domain
-          requests from.</p>
-        <p>For more information, see the <b>AllowedOrigin</b> description in <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-Origin Resource Sharing</a>.</p>
-      </td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">URI</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>type</code>
-      </td>
-      <td style="text-align:left">Applied for 1.52 and prior versions.This field should be set to <code>sandbox</code>,
-        which indicates that this is a standalone app, embedded within Symphony&apos;s
-        client.</td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>id</code>
-      </td>
-      <td style="text-align:left">Applied for 1.52 and prior versions. The unique identifier for your app.
-        <br
-        /><b>Note</b>: Do not use a colon (:) in this field, or you will receive
-        a <code>401 Unauthorized</code> error.</td>
-      <td style="text-align:left">Required</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>blurb</code>
-      </td>
-      <td style="text-align:left">Applied for Developer Mode.
-        <br />Field for display in the Symphony Market and Admin Portal.</td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">String</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>icon</code>
-      </td>
-      <td style="text-align:left">Applied for Developer Mode.
-        <br />An icon for your app (32x32 px), which will be displayed in the Symphony
-        Market.</td>
-      <td style="text-align:left">Optional</td>
-      <td style="text-align:left">String</td>
-    </tr>
-  </tbody>
-</table>
-
+| Field          | Description                                                                                                                                                                                                                                                                                                                                                    | Required                              | Type   |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------ |
+| `appGroupId`   | <p>Applied for version 1.53 onwards. The unique identifier for your app. The ID must not match any existing app IDs or user names.</p><p>It consists of alphanumeric characters [0-9,A-Z, a-z], underscores (_), and dashes.</p><p><strong>Note</strong>: Do not use a colon (:) in this field, or you will receive a <code>401 Unauthorized</code> error.</p> | Required                              | String |
+| `name`         | The name of your app, which will be displayed in the Symphony Market.                                                                                                                                                                                                                                                                                          | Required                              | String |
+| `description`  | The description of your app, which will be displayed in the Symphony Market.                                                                                                                                                                                                                                                                                   | Optional                              | String |
+| `publisher`    | The publisher of your app, which will be displayed in the Symphony Market.                                                                                                                                                                                                                                                                                     | Optional                              | String |
+| `loadUrl`      | <p>The location of the app's controller, which will be displayed in a hidden iframe. Value must start with <code>https://</code>.</p><p><strong>Note</strong>: Do not specify this value for On Behalf Of (OBO) applications.</p>                                                                                                                              | Required, except for OBO applications | URI    |
+| `domain`       | The domain for your app, which should match the controller file URL.                                                                                                                                                                                                                                                                                           | Required                              | URI    |
+| `iconUrl`      | An icon for your app (32x32 px), which will be displayed in the Symphony Market.                                                                                                                                                                                                                                                                               | Optional                              | URI    |
+| `notification` | Fields required in order to receive webhook callback containing pod information (ie. pod, authentication and Agent URLs).                                                                                                                                                                                                                                      | Optional                              | Object |
+| `url`          | URL which the pod will call to send pod information to the application                                                                                                                                                                                                                                                                                         | Optional                              | String |
+| `apiKey`       | Secret key used to validate the pod when calling the notification URL.                                                                                                                                                                                                                                                                                         | Optional                              | String |
+| `permissions`  | List of permissions the application requires. See Permissions details for [on-behalf-of applications](../app-authentication/obo-authentication.md#obo-app-permissions).                                                                                                                                                                                        | Optional                              | List   |
+| `certificate`  | Certificate for the application. See [Application Authentication](../app-authentication/)                                                                                                                                                                                                                                                                      | Optional                              | String |
+| `rsaKey`       | Applied for version 1.54 onwards. RSA key for the application. See [Application Authentication](../app-authentication/)                                                                                                                                                                                                                                        | Optional                              | String |
+| `allowOrigins` | <p>The origin or origins that this application is allowed to receive cross-domain requests from.</p><p>For more information, see the <strong>AllowedOrigin</strong> description in <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-Origin Resource Sharing</a>.</p>                                                                   | Optional                              | URI    |
+| `type`         | Applied for 1.52 and prior versions.This field should be set to `sandbox`, which indicates that this is a standalone app, embedded within Symphony's client.                                                                                                                                                                                                   | Required                              | String |
+| `id`           | <p>Applied for 1.52 and prior versions. The unique identifier for your app.<br><strong>Note</strong>: Do not use a colon (:) in this field, or you will receive a <code>401 Unauthorized</code> error.</p>                                                                                                                                                     | Required                              | String |
+| `blurb`        | <p>Applied for Developer Mode.<br>Field for display in the Symphony Market and Admin Portal.</p>                                                                                                                                                                                                                                                               | Optional                              | String |
+| `icon`         | <p>Applied for Developer Mode.<br>An icon for your app (32x32 px), which will be displayed in the Symphony Market.</p>                                                                                                                                                                                                                                         | Optional                              | String |

@@ -12,7 +12,7 @@ In practice, each time a Headless Bot kicks off its scheduled workflow, it will:
 
 1. Authenticate
 2. Post a message/alert in a designated IM, MIM, chatroom or call any number of Symphony's API endpoints
-3. Terminate its process 
+3. Terminate its process&#x20;
 
 ## External Workflow
 
@@ -22,11 +22,12 @@ In practice, a Headless Bot needs to expose an endpoint in order to listen and h
 
 1. Authenticate
 2. Post a message/alert in a designated IM, MIM, chatroom or call any number of Symphony's API endpoints
-3. Terminate its process 
+3. Terminate its process&#x20;
 
 ## Next Steps:
 
 Continue on to our [Getting Started With Headless Bots](getting-started.md) guide. Here you will learn how to get your own Headless Bot up and running and take a closer look at the APIs used to create a simple Headless Bot workflow:
 
-{% page-ref page="getting-started.md" %}
-
+{% content-ref url="getting-started.md" %}
+[getting-started.md](getting-started.md)
+{% endcontent-ref %}

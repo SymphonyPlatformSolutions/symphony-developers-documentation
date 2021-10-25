@@ -46,11 +46,10 @@ If the button above does not work for you, download the following archive contai
 
 ## Run Collection
 
-Try to perform Authentication &gt; RSA Session Auth and RSA KeyMan Auth. If any of them fail, check that your environment details are accurate:
+Try to perform Authentication > RSA Session Auth and RSA KeyMan Auth. If any of them fail, check that your environment details are accurate:
 
 ![](../../.gitbook/assets/159e580-postman-authenticate.png)
 
 Explore the rest of the collection and make requests by filling in the respective request parameters or body payloads and pressing the Send button. There is no need to manually copy and paste tokens from the authentication process as they are saved in the environment. If the tokens expire, simply redo the requests from step 1 above and try again.
 
 ![](../../.gitbook/assets/29d3382-postman-list-streams.png)
-

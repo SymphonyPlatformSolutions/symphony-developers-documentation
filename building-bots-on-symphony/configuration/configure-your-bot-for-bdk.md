@@ -37,7 +37,7 @@ $ symphony-bdk-cli --bot
 
 This will prompt with you a number of questions about your bot and Pod configuration. Type in your bot's metadata, use arrows to scroll, and press enter to move on to the next prompt:
 
-```text
+```
 ✔ All Dependencies are met!
 Setting up a new Bot application
 Please answer the following questions
@@ -93,11 +93,11 @@ Copy the entire contents of this RSA public key including the dashes on either s
 Note: The bot username and bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod above.
 {% endhint %}
 
-![](../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm%20%282%29%20%282%29%20%282%29%20%282%29.png)
+![](<../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm (2) (2) (2) (2).png>)
 
 Open your generated bot code in your favorite Java IDE and navigate to the `bot-config.json` file:
 
-```text
+```
 {
   "sessionAuthHost": "develop2.symphony.com",
   "sessionAuthPort": 443,
@@ -127,5 +127,6 @@ Confirm that the `sessionAuthHost`, `keyAuthHost`, and `agentHost` matches the c
 
 Now that you have generated and configured your Bot, move onto one of our BDK tutorials:
 
-{% page-ref page="../tutorials/bdk/" %}
-
+{% content-ref url="../tutorials/bdk/" %}
+[bdk](../tutorials/bdk/)
+{% endcontent-ref %}

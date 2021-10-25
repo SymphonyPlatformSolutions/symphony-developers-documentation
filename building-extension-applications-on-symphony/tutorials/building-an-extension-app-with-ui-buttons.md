@@ -6,7 +6,9 @@ In this step by step tutorial, we will build an extension app that adds a button
 
 Complete the BDK 1.0 App configuration guide:
 
-{% page-ref page="../app-configuration/configure-your-app-for-bdk-development.md" %}
+{% content-ref url="../app-configuration/configure-your-app-for-bdk-development.md" %}
+[configure-your-app-for-bdk-development.md](../app-configuration/configure-your-app-for-bdk-development.md)
+{% endcontent-ref %}
 
 ## 1.  Dive into the Code
 
@@ -57,7 +59,9 @@ SYMPHONY.remote.hello().then((data) => {
 
 For more information on initializing your extension applications, continue here:
 
-{% page-ref page="../overview-of-extension-api/initialization.md" %}
+{% content-ref url="../overview-of-extension-api/initialization.md" %}
+[initialization.md](../overview-of-extension-api/initialization.md)
+{% endcontent-ref %}
 
 ### Connect:
 
@@ -73,11 +77,13 @@ SYMPHONY.application.connect(
 
 For more information on registering and connecting your extension application, continue here:
 
-{% page-ref page="../overview-of-extension-api/register-and-connect.md" %}
+{% content-ref url="../overview-of-extension-api/register-and-connect.md" %}
+[register-and-connect.md](../overview-of-extension-api/register-and-connect.md)
+{% endcontent-ref %}
 
 ## 2.  Authentication
 
-In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data such as this example app, that will add buttons to an IM. The sample implementation of App Authentication leverages a combined bot \(backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data such as this example app, that will add buttons to an IM. The sample implementation of App Authentication leverages a combined bot (backend) and app (frontend) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 ```javascript
 authController
@@ -105,7 +111,9 @@ init() {
 
 Upon completion of the above function, your extension application will be successfully authenticated. For more information about app authentication, please continue here:
 
-{% page-ref page="../app-authentication/" %}
+{% content-ref url="../app-authentication/" %}
+[app-authentication](../app-authentication/)
+{% endcontent-ref %}
 
 ## 3.  UI Service
 
@@ -135,33 +143,9 @@ Once your app has subscribed to the UI Service, your app must register its UI ex
 
 In this example implementation, the following extension is registered:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">uiClass</th>
-      <th style="text-align:left">id</th>
-      <th style="text-align:left">serviceName</th>
-      <th style="text-align:left">options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>single-user-im</code>
-      </td>
-      <td style="text-align:left"><code>buy-im</code>
-      </td>
-      <td style="text-align:left"><code>demobot3:controller</code>
-      </td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p>label: &apos;Example In Chat Button&apos;,</p>
-        <p>icon: LINK_TO_ICON</p>
-        <p>data: {}</p>
-        <p>}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| uiClass          | id       | serviceName           | options                                                                                         |
+| ---------------- | -------- | --------------------- | ----------------------------------------------------------------------------------------------- |
+| `single-user-im` | `buy-im` | `demobot3:controller` | <p>{</p><p>label: 'Example In Chat Button',</p><p>icon: LINK_TO_ICON</p><p>data: {}</p><p>}</p> |
 
 As we learned about in the [Extension Applications + UI Buttons](../planning-your-app/extension-applications-+-ui-buttons.md) guide, the UI extension is first passed to the `filter()` function. If this function evaluates as true, the UI extension will appear on the specified class. To make sure of this lets update the `filter()` function implemented to the following in your `controller.js` file:
 
@@ -179,18 +163,18 @@ filter(type, id, data) {
 
 ## 4.  Run the Code
 
-The next step is to run the code and launch your app. First run your bot \(app backend\) by running the BotApplication.java file. Once your bot has successfully run, launch your app:
+The next step is to run the code and launch your app. First run your bot (app backend) by running the BotApplication.java file. Once your bot has successfully run, launch your app:
 
 ```javascript
 $ yarn start:dev
 ```
 
-Open your pod \(in our case develop2\) and make sure your app is installed. Open a 1-1 IM with a Symphony user and notice the button attached to the IM module. If you see the following, that means your application is running successfully:
+Open your pod (in our case develop2) and make sure your app is installed. Open a 1-1 IM with a Symphony user and notice the button attached to the IM module. If you see the following, that means your application is running successfully:
 
 ![](../../.gitbook/assets/screen-shot-2020-09-11-at-3.28.23-pm.png)
 
 {% hint style="info" %}
-Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
+Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost (unsafe)' since we are using a self-signed certificate.
 {% endhint %}
 
 ## 5.  Adding our own Business Logic
@@ -212,4 +196,3 @@ trigger(uiClass, id, payload, data) {
 ```
 
 The bulk of your custom business logic for UI buttons and extensions will exist inside this `trigger()` method. This is just one possible example of what you can build. Other possible workflows could leverage buttons to create phone integrations, create redirect workflows, or create meeting/reminder workflows by leveraging third party services and APIs.
-

@@ -1,16 +1,16 @@
 # Configure your Bot for BDK 2.0
 
-## 1. Generate your Bot 
+## 1. Generate your Bot&#x20;
 
 ### Building your Project using the Symphony Bot Generator
 
 {% hint style="info" %}
-This section requires `npm` \([Node Package Manager](https://www.npmjs.com/)\) to be installed on your local machine as a prerequisite.
+This section requires `npm` ([Node Package Manager](https://www.npmjs.com)) to be installed on your local machine as a prerequisite.
 {% endhint %}
 
 For all Symphony BDK applications, you should start with the [Symphony Bot Generator](../../developer-tools/developer-tools/symphony-bot-generator.md). The Symphony Generator offers a fast way to bootstrap your Symphony BDK project in several languages, including Java:
 
-```text
+```
 $ npm i -g generator-symphony
 $ mkdir botProject && cd botProject
 $ yo symphony 2.0
@@ -21,10 +21,10 @@ This will prompt you with a number of questions about your bot and Pod configura
 {% hint style="info" %}
 ### Spring Boot Integration
 
-The BDK 2.0 and Symphony Bot Generator provides an available Spring Boot Integration out of the box.  To bootstrap your bot as a Spring Boot project, select the 'Spring Boot' option when prompted to 'select your framework' when going through the generator's options.    
+The BDK 2.0 and Symphony Bot Generator provides an available Spring Boot Integration out of the box.  To bootstrap your bot as a Spring Boot project, select the 'Spring Boot' option when prompted to 'select your framework' when going through the generator's options.   &#x20;
 {% endhint %}
 
-```text
+```
 $ yo symphony 2.0
  __   __     ___                 _                 
  \ \ / /__  / __|_  _ _ __  _ __| |_  ___ _ _ _  _ 
@@ -66,7 +66,7 @@ This section will help you to understand how to create your bot application from
 
 #### Maven-based project
 
-If you want to use [Maven](https://maven.apache.org/) as build system, you have to configure your root `pom.xml` as such:
+If you want to use [Maven](https://maven.apache.org) as build system, you have to configure your root `pom.xml` as such:
 
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
@@ -125,7 +125,7 @@ If you want to use [Maven](https://maven.apache.org/) as build system, you have 
 
 #### Gradle-based project
 
-If you want to use [Gradle](https://gradle.org/) as build system, you have to configure your root `build.gradle` as such:
+If you want to use [Gradle](https://gradle.org) as build system, you have to configure your root `build.gradle` as such:
 
 ```javascript
 plugins {
@@ -167,7 +167,7 @@ Copy the entire contents of this RSA public key including the dashes on either s
 Note: The bot username and bot email address entered to the Symphony Bot Generator must match exactly the Basic Information shown in the Pod above.
 {% endhint %}
 
-![](../../.gitbook/assets/screen-shot-2020-12-10-at-4.41.40-pm%20%281%29%20%281%29.png)
+![](<../../.gitbook/assets/screen-shot-2020-12-10-at-4.41.40-pm (1) (1).png>)
 
 #### Create configuration file
 
@@ -175,7 +175,7 @@ Before implementing any code, you need to navigate to your `src/main/resources/c
 
 {% tabs %}
 {% tab title="src/main/resources/config.yaml" %}
-```text
+```
 host: develop2.symphony.com
 
 bot:
@@ -186,7 +186,7 @@ bot:
 {% endtabs %}
 
 {% hint style="info" %}
- Depending on your Symphony environment you may need to make update and add additional values to your `config.yaml` file.
+&#x20;Depending on your Symphony environment you may need to make update and add additional values to your `config.yaml` file.
 
 ### Click [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/docs/configuration.md) for more detailed documentation about BDK configuration
 {% endhint %}
@@ -195,5 +195,6 @@ bot:
 
 Now that you have configured your Bot project using the BDK 2.0 and Symphony Bot Generator, checkout one of our dedicated BDK 2.0 tutorials:
 
-{% page-ref page="../tutorials/bdk-2.0-tutorials/" %}
-
+{% content-ref url="../tutorials/bdk-2.0-tutorials/" %}
+[bdk-2.0-tutorials](../tutorials/bdk-2.0-tutorials/)
+{% endcontent-ref %}

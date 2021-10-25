@@ -50,4 +50,3 @@ All of the options available in [`BBApplicationLaunchParameters`](../classes/bba
 {% endtabs %}
 
 To disable a feature, remove the key from the `basicAllows` or the `advancedAllows` array.
-

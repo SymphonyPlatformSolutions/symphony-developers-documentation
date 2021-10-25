@@ -2,13 +2,13 @@
 
 ## Overview
 
-In an enterprise environment, it is very common to have an internal root certificate authority \(root CA\) that signs all certificates used internally for TLS termination on HTTPS sites. While this trust is federated on the operating system level for all domain-connected Windows workstations, non-Windows servers are typically not configured the same way. Even on a Windows workstation, your Java runtime might not necessarily trust the enterprise root CA certificates.
+In an enterprise environment, it is very common to have an internal root certificate authority (root CA) that signs all certificates used internally for TLS termination on HTTPS sites. While this trust is federated on the operating system level for all domain-connected Windows workstations, non-Windows servers are typically not configured the same way. Even on a Windows workstation, your Java runtime might not necessarily trust the enterprise root CA certificates.
 
 If a Java application attempts to make a connection to an untrusted remote server, it will throw an `SSLException` and fail to connect.
 
 ## Java Truststores
 
-A Java truststore is a bundle of certificates used when establishing connections to remote servers \(this could be internal or on the Internet\). Each Java runtime ships with a default truststore called `cacerts`. Adding certificates directly into `cacerts` is usually not recommended unless there is a centrally-managed deployment process for all workstations and servers.
+A Java truststore is a bundle of certificates used when establishing connections to remote servers (this could be internal or on the Internet). Each Java runtime ships with a default truststore called `cacerts`. Adding certificates directly into `cacerts` is usually not recommended unless there is a centrally-managed deployment process for all workstations and servers.
 
 ## Bot Truststore
 
@@ -16,7 +16,7 @@ A bot requires connections to several servers like the key manager or API agent,
 
 ### Java SDK / BDK 1.0
 
-The Java SDK and BDK 1.0 uses the Java Key Store \(JKS\) format for its truststore. Your config.json should look like this:
+The Java SDK and BDK 1.0 uses the Java Key Store (JKS) format for its truststore. Your config.json should look like this:
 
 ```javascript
 {
@@ -138,4 +138,3 @@ You can verify the entries by using the -list option:
 ```bash
 keytool -list -keystore my_truststore -storepass my_store_password
 ```
-

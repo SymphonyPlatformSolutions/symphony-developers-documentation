@@ -2,7 +2,7 @@
 
 In order to leverage the services provided by the Client Extension API, you must first subscribe to them. To use your applications own services, you must register them via the Client Extension API. Extension apps can register and subscribe to local and remote services in the following ways:
 
-## SYMPHONY.services.make\(\)
+## SYMPHONY.services.make()
 
 Creates a new local service and register it using existing classes:
 
@@ -14,11 +14,11 @@ This cannot be and this cannot be achieved by the `SYMPHONY.services.register()`
 SYMPHONY.services.make(name, context, methods, makeEventHandlers)
 ```
 
-| Parameter | Description |
-| :--- | :--- |
-| name | The name of the service being created |
-| context | The object instance, usually **this** |
-| methods | The names of the methods of this object that will be available on the created service |
+| Parameter         | Description                                                                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| name              | The name of the service being created                                                                                              |
+| context           | The object instance, usually **this**                                                                                              |
+| methods           | The names of the methods of this object that will be available on the created service                                              |
 | makeEventHandlers | If true, the methods listen and fire will be added to this instance. Calling the listen or fire objects will do so on the service. |
 
 ```javascript
@@ -44,12 +44,12 @@ var service = new Navigation();
 service.register()
 ```
 
-## SYMPHONY.services.register\(\)
+## SYMPHONY.services.register()
 
 Creates a new local service and register it to be used by a specific application view or your application controller:
 
 {% hint style="info" %}
-`SYMPHONY.services.register()` is an alternative method for creating a new local service and it is recommended only when creating small services.  
+`SYMPHONY.services.register()` is an alternative method for creating a new local service and it is recommended only when creating small services.\
 For Object-Oriented Applications, the use of the `SYMPHONY.services.make()` is recommended since it uses the class as a prototype for implementing the service methods.
 {% endhint %}
 
@@ -57,8 +57,8 @@ For Object-Oriented Applications, the use of the `SYMPHONY.services.make()` is r
 register: function(serviceName)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
+| Parameter   | Type   | Description                         |
+| ----------- | ------ | ----------------------------------- |
 | serviceName | String | The name of the service to register |
 
 {% hint style="info" %}
@@ -70,7 +70,7 @@ Local services should be namespaced using a string representing the application 
 var helloControllerService = SYMPHONY.services.register("hello:controller");
 ```
 
-## SYMPHONY.services.subscribe\(\)
+## SYMPHONY.services.subscribe()
 
 Finds a service - either local or remote - that has been registered and returns it. Returns false if the service does not exist.
 
@@ -80,8 +80,8 @@ In order to use a service, it must have been requested by your application durin
 subscribe : function(serviceName)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
+| Parameter   | Type   | Description                             |
+| ----------- | ------ | --------------------------------------- |
 | serviceName | String | The name of the service to subscribe to |
 
 ```javascript
@@ -89,7 +89,7 @@ subscribe : function(serviceName)
 var modulesService = SYMPHONY.services.subscribe("modules");
 ```
 
-## SYMPHONY.remote.register\(\)
+## SYMPHONY.remote.register()
 
 Takes an existing local service and makes it available remotely. Use this to make services available between multiple application views or between your application view and controller:
 
@@ -97,11 +97,11 @@ Takes an existing local service and makes it available remotely. Use this to mak
 register : function(serviceName)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
+| Parameter   | Type   | Description                                                       |
+| ----------- | ------ | ----------------------------------------------------------------- |
 | serviceName | String | The name of the existing local service to make available remotely |
 
-## SYMPHONY.remote.subscribe\(\)
+## SYMPHONY.remote.subscribe()
 
 Imports a remote service and makes it available locally. Returns a promise which resolves to a reference to a service. This service would now be available in your registry using `SYMPHONY.services.subscribe:`
 
@@ -109,7 +109,6 @@ Imports a remote service and makes it available locally. Returns a promise which
 subscribe : function(serviceName)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
+| Parameter   | Type   | Description                                                           |
+| ----------- | ------ | --------------------------------------------------------------------- |
 | serviceName | String | The name of the remote service that you would like to access locally. |
-

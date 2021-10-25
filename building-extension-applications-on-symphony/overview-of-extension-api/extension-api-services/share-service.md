@@ -7,33 +7,33 @@ Use the `share` service to allow users to share content from your application in
 var shareService = SYMPHONY.services.subscribe("share");
 ```
 
-When the share function is invoked, a modal dialog is launched and populated with the shared object content \(for example, the article options\). The end user can then select conversations \(IMs or chatrooms\) into which to share the article.
+When the share function is invoked, a modal dialog is launched and populated with the shared object content (for example, the article options). The end user can then select conversations (IMs or chatrooms) into which to share the article.
 
-Once the article is shared, it appears in the conversation view in a card format. The article will be linked either to a webpage \(if the `href` option is provided\) or deep linked into the app \(if the `id` option is provided\).
+Once the article is shared, it appears in the conversation view in a card format. The article will be linked either to a webpage (if the `href` option is provided) or deep linked into the app (if the `id` option is provided).
 
 ![](../../../.gitbook/assets/2584e4f-share-2.png)
 
-In order to view article contents in an application \(for example, if the article `id` is provided\), the user must have the application installed.
+In order to view article contents in an application (for example, if the article `id` is provided), the user must have the application installed.
 
-If the recipient of a shared article does not have the application installed, the user will be prompted to install the application \(provided that the user's enterprise has that application enabled\).
+If the recipient of a shared article does not have the application installed, the user will be prompted to install the application (provided that the user's enterprise has that application enabled).
 
-If the recipient of a shared article does not have the application installed, and the application is not enabled for the user's enterprise, the user can view the content via the link \(if `href` is provided\). If a link is not provided, the user will be notified that the article cannot be viewed because the application is disabled for the enterprise.
+If the recipient of a shared article does not have the application installed, and the application is not enabled for the user's enterprise, the user can view the content via the link (if `href` is provided). If a link is not provided, the user will be notified that the article cannot be viewed because the application is disabled for the enterprise.
 
 The following methods are available on the `share` service:
 
-## share\(\)
+## share()
 
-Launches the "Share on Symphony" modal from your application, allowing the user to share content from your application into a Symphony conversation \(IM or chatroom\):
+Launches the "Share on Symphony" modal from your application, allowing the user to share content from your application into a Symphony conversation (IM or chatroom):
 
 ```javascript
 function share(type, content, options)
 ```
 
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| type | String | Yes | The type of content that is being shared. |
-| content | Object | Yes | An object that describes the content being shared. For a list of objects see [standard entities](../../../building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md#standard-entities). |
-| options | Object | No | An object that describes options that can be used to enhance the share service |
+| Parameter | Type   | Required | Description                                                                                                         |
+| --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| type      | String | Yes      | The type of content that is being shared.                                                                           |
+| content   | Object | Yes      | An object that describes the content being shared. For a list of objects see [standard entities](broken-reference). |
+| options   | Object | No       | An object that describes options that can be used to enhance the share service                                      |
 
 The following JavaScript shows an example of an article being shared:
 
@@ -73,60 +73,35 @@ shareButton.addEventListener("click", function(){
 
 The following table shows the article content:
 
-| Field | Required | Format | Description |
-| :--- | :--- | :--- | :--- |
-| `title` | Yes | String | The headline of the article |
-| `subTitle` | No | String | The subtitle of the article |
-| `blurb` | No | String | A summary of the article to display |
-| `date` | No | [Unix Epoch Timestamp](https://www.epochconverter.com/) | Date of publication |
-| `publisher` | No | String | Name of the publisher |
-| `author` | No | String | Name of the author |
-| `thumbnail` | No | URL \(could be a data url\) | Image to be displayed - 106px-106px |
-| `id` | Must provide either `id` or `href`, or both | String | An identifier used by the application to deeplink to the article |
-| `href` | Must provide either `id` or `href`, or both | URL | URL to the article \(opened in a new browser window\) |
+| Field       | Required                                    | Format                                                 | Description                                                      |
+| ----------- | ------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------- |
+| `title`     | Yes                                         | String                                                 | The headline of the article                                      |
+| `subTitle`  | No                                          | String                                                 | The subtitle of the article                                      |
+| `blurb`     | No                                          | String                                                 | A summary of the article to display                              |
+| `date`      | No                                          | [Unix Epoch Timestamp](https://www.epochconverter.com) | Date of publication                                              |
+| `publisher` | No                                          | String                                                 | Name of the publisher                                            |
+| `author`    | No                                          | String                                                 | Name of the author                                               |
+| `thumbnail` | No                                          | URL (could be a data url)                              | Image to be displayed - 106px-106px                              |
+| `id`        | Must provide either `id` or `href`, or both | String                                                 | An identifier used by the application to deeplink to the article |
+| `href`      | Must provide either `id` or `href`, or both | URL                                                    | URL to the article (opened in a new browser window)              |
 
 The following table shows the share options:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Required</th>
-      <th style="text-align:left">Format</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>prepopulateUsers</code>
-      </td>
-      <td style="text-align:left">No</td>
-      <td style="text-align:left">Array of strings</td>
-      <td style="text-align:left">
-        <p>The users (UserIds) who will be listed initially as recipients in the
-          share modal.
-          <br />
-        </p>
-        <p><em>Available only for authenticated apps, and only for Client 2.0.</em>
-        </p>
-        <p><em>It is recommended to limit the number of pre-populated users so the Symphony end user can easily review the list of recipients before sharing.</em>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Field              | Required | Format           | Description                                                                                                                                                                                                                                                                                                                                |
+| ------------------ | -------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `prepopulateUsers` | No       | Array of strings | <p>The users (UserIds) who will be listed initially as recipients in the share modal.<br></p><p><em>Available only for authenticated apps, and only for Client 2.0.</em></p><p><em>It is recommended to limit the number of pre-populated users so the Symphony end user can easily review the list of recipients before sharing.</em></p> |
 
 ## Sharing Third Party Content
 
 The `share` function can also be used to share custom, third-party entity types. In this case, the `data` parameter must be populated with the following fields:
 
-| Field | Description |
-| :--- | :--- |
-| inputAutofill | Use this to fill the comment field in the share dialog to provide initial text. Cash tags and hash tags that are specified in the text will be converted to the correct entity. |
-| plaintext | The markdown representation of the entity, supporting a limited set of markdown features. The value of this field will be displayed on mobile devices and other older clients. |
+| Field          | Description                                                                                                                                                                                                                                  |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inputAutofill  | Use this to fill the comment field in the share dialog to provide initial text. Cash tags and hash tags that are specified in the text will be converted to the correct entity.                                                              |
+| plaintext      | The markdown representation of the entity, supporting a limited set of markdown features. The value of this field will be displayed on mobile devices and other older clients.                                                               |
 | presentationML | The default presentation of the entity using [presentationML](../../../building-bots-on-symphony/messages/overview-of-presentationml.md). This will be seen by everybody who does not have an app with a custom renderer for the given type. |
-| entityJSON | The object being shared. |
-| format | The format of the message being sent. This must be set to "com.symphony.messageml.v2". |
+| entityJSON     | The object being shared.                                                                                                                                                                                                                     |
+| format         | The format of the message being sent. This must be set to "com.symphony.messageml.v2".                                                                                                                                                       |
 
 The following JavaScript shows an example of a custom third party entity being shared:
 
@@ -182,7 +157,7 @@ In this example, the following modal dialog is launched and populated with the s
 
 ![](../../../.gitbook/assets/3de51d4-shared-mj.jpg)
 
-## handleLink\(\)
+## handleLink()
 
 You must specify your own application service for handling clicks on shared articles using `handleLink` if you use the `id` field for deep linking articles into your application.
 
@@ -209,4 +184,3 @@ helloControllerService.implement({
   }
 });
 ```
-

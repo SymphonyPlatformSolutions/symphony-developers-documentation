@@ -8,7 +8,11 @@ Becoming a Symphony Certified Developer is a great way to validate your Symphony
 
 Check out our training center here:
 
-## Developer Certification ![](../.gitbook/assets/certified-developer%20%281%29%20%282%29%20%282%29%20%282%29%20%281%29.png) 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
+## Developer Certification ![](<../.gitbook/assets/certified-developer (1) (2) (2) (2) (1).png>)&#x20;
 
 ### **Module 1: Symphony Development Fundamentals**
 
@@ -16,7 +20,7 @@ Covers the Symphony essentials including UI features, Architecture, Security, an
 
 ### Module 2: Developing Bots and Apps on Symphony
 
-Takes a deeper dive into Symphony APIs, including hands-on examples built using our latest developer tool, the Symphony Bot Developer Kit \(BDK\)
+Takes a deeper dive into Symphony APIs, including hands-on examples built using our latest developer tool, the Symphony Bot Developer Kit (BDK)
 
 ### How It works
 
@@ -24,9 +28,9 @@ Certification involves taking Module 1 and Module 2 of the certification trainin
 
 * The program is free and open to developers with knowledge of programming languages such as JavaScript, Python and Java.
 * Knowledge of the Symphony platform is not required, but exercises will require developers to access a Symphony environment.
-* Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment. 
+* Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment.&#x20;
 
-## Java Bot Developer Certification ![](../.gitbook/assets/bot.png) 
+## Java Bot Developer Certification ![](../.gitbook/assets/bot.png)&#x20;
 
 ### Module 1: Symphony Development Fundamentals
 
@@ -38,9 +42,8 @@ Take an in depth look into the latest Symphony developer tool, the Bot Developer
 
 ### How it works
 
-Becoming a Certified Java Bot Developer involves taking Module 1 & 2 of the Java Bot Developer Certification program and then passing the dedicated certification exam.  
+Becoming a Certified Java Bot Developer involves taking Module 1 & 2 of the Java Bot Developer Certification program and then passing the dedicated certification exam. &#x20;
 
 * The program is free and open to all developers.
 * Knowledge of the Symphony platform is not required, but exercises will require developers to access a Symphony environment.
-* Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment. 
-
+* Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment.&#x20;

@@ -1,7 +1,7 @@
 # Buttons
 
 {% hint style="info" %}
-Note: For native support of Buttons, refer to [Symphony Elements](../../../building-bots-on-symphony/symphony-elements/). The following is built for extension applications looking to implement their own button or input logic.
+Note: For native support of Buttons, refer to [Symphony Elements](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/). The following is built for extension applications looking to implement their own button or input logic.
 {% endhint %}
 
 Buttons change color depending on the user’s theming preferences. They are generally the same color as the theme accent color.
@@ -25,7 +25,7 @@ You can modify the style of a button by applying any of these additional classes
   * Have a label of _Cancel_, _Remove_, _Ignore_, or similar text.
   * Are the last button on the left if buttons are horizontally aligned.
 * Have up to two secondary buttons to the left of the primary button.
-* Third-level buttons \(or tertiary buttons\) are generally icons or plain text links. Do not place third-level buttons inline with standard size buttons.
+* Third-level buttons (or tertiary buttons) are generally icons or plain text links. Do not place third-level buttons inline with standard size buttons.
 * Do not use compact buttons with standard size buttons. We recommend using compact buttons only when space prohibits the using standard size buttons.
 
 ## Primary
@@ -36,7 +36,7 @@ Use the Primary button style when there is a clear primary action on a page or f
 <div class="tempo-btn tempo-btn--primary">Button</div>
 ```
 
-![](../../../.gitbook/assets/abc3381-cancel_action_and_button%20%281%29%20%281%29%20%281%29%20%281%29.png)
+![](<../../../.gitbook/assets/abc3381-cancel\_action\_and\_button (1) (1) (1) (1).png>)
 
 ## Secondary
 
@@ -46,7 +46,7 @@ Use the Secondary button style when there are multiple actions of the same impor
 <div class="tempo-btn tempo-btn--secondary">Button</div>
 ```
 
-![](../../../.gitbook/assets/0f5d22d-secondary_action.png)
+![](../../../.gitbook/assets/0f5d22d-secondary\_action.png)
 
 ## Link
 
@@ -56,7 +56,7 @@ Link buttons are similar to secondary action buttons, while being more discreet.
 <div class="tempo-btn tempo-btn--link">Button</div>
 ```
 
-![](../../../.gitbook/assets/10408a7-link_buttons.png)
+![](../../../.gitbook/assets/10408a7-link\_buttons.png)
 
 ## Disabled
 
@@ -66,13 +66,13 @@ Use the Disabled button style to show that an action is currently unavailable. Y
 <div class="tempo-btn tempo-btn--<style> tempo-btn--disabled">Button</div>
 ```
 
-![](../../../.gitbook/assets/2f07af7-disabled_buttons.png)
+![](../../../.gitbook/assets/2f07af7-disabled\_buttons.png)
 
 ## Cancel Action
 
 Use this style for situations where a user can choose one of two actions: cancel and complete.
 
-![](../../../.gitbook/assets/abc3381-cancel_action_and_button%20%281%29%20%281%29%20%281%29.png)
+![](<../../../.gitbook/assets/abc3381-cancel\_action\_and\_button (1) (1) (1).png>)
 
 ## Compact
 
@@ -80,13 +80,13 @@ You can apply the Compact style to the Primary, Secondary, and Link styles. This
 
 **Note**: Do not use compact buttons with standard size buttons. We recommend using compact buttons only when space prohibits the use of standard size buttons.
 
-![](../../../.gitbook/assets/18e0859-compact_buttons.png)
+![](../../../.gitbook/assets/18e0859-compact\_buttons.png)
 
 ## Icon Buttons
 
 Use Icon buttons when there is limited space and the action can be represented by an icon, such as a checkmark. You can use the Icon style for Primary, Secondary, Disabled, and Compact buttons.
 
-![](../../../.gitbook/assets/78c09c1-icon_buttons.png)
+![](../../../.gitbook/assets/78c09c1-icon\_buttons.png)
 
 ## Icon Action
 
@@ -96,4 +96,3 @@ Use the Icon Action style for situations where you don’t need a button; for ex
 * Size: 18 x 18 pixels
 * Color: Black and white or color
 * State: Normal is 54% opacity; Hover/Active is 87% opacity
-

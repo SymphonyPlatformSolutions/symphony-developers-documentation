@@ -1,27 +1,27 @@
 # BBFileManagerHelper
 
-`BBFileManagerHelper` is a class that the framework uses to coordinate all file IO \(apart from database access\). There are two classes you can subclass or reimplement which will allow you to secure the way the framework accesses the device's storage. BBFileManager and NSFileHandle.
+`BBFileManagerHelper` is a class that the framework uses to coordinate all file IO (apart from database access). There are two classes you can subclass or reimplement which will allow you to secure the way the framework accesses the device's storage. BBFileManager and NSFileHandle.
 
 {% tabs %}
 {% tab title="BBFileManager" %}
-```text
+```
 + (void)registerClassForFileManager:(Class)fileManagerClass;
 ```
 {% endtab %}
 {% endtabs %}
 
-**`registerClassForFileManager`**  
+**`registerClassForFileManager`**\
 This is how you tell the framework which class to instantiate when it wants any of the functionality provided by BBFileManager. If you do not register a different class, the default BBFileManager is used, which uses iOS standard APIs to read & write files to the device's storage.
 
 {% tabs %}
 {% tab title="NSFileHandle" %}
-```text
+```
 + (void)registerClassForFileHandle:(Class)fileHandleClass;
 ```
 {% endtab %}
 {% endtabs %}
 
-**`registerClassForFileHandle`**  
+**`registerClassForFileHandle`**\
 This is how you tell the framework which class to use when it wants an NSFileHandle for accessing files on the device's storage. If you do not register a different class, NSFileHandle is used.
 
 {% tabs %}
@@ -50,4 +50,3 @@ This is how you tell the framework which class to use when it wants an NSFileHan
 ```
 {% endtab %}
 {% endtabs %}
-

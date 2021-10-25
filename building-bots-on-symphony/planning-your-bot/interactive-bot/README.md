@@ -6,7 +6,9 @@ Symphony Elements allow bots to send messages that contain interactive forms wit
 
 To learn more about Symphony Elements navigate here:
 
-{% page-ref page="../../symphony-elements/" %}
+{% content-ref url="../../messages/overview-of-messageml/symphony-elements-1/" %}
+[symphony-elements-1](../../messages/overview-of-messageml/symphony-elements-1/)
+{% endcontent-ref %}
 
 ## Interactive Bot Workflow
 
@@ -28,7 +30,9 @@ In order to 'listen' and respond to user events, bots create a single datafeed a
 
 To learn more about the Symphony Datafeed continue here:
 
-{% page-ref page="../../datafeed/" %}
+{% content-ref url="../../datafeed/" %}
+[datafeed](../../datafeed/)
+{% endcontent-ref %}
 
 When an end-user submits a Symphony Element form, the bot is able to access the contents of that form through the Symphony Datafeed. The Symphony Elements form lifecycle is illustrated below:
 
@@ -71,7 +75,7 @@ First an Interactive Bot sends a Symphony Element which is an extension of messa
 </messageML>
 ```
 
-The messageML is sent by your Bot and rendered as a form or Symphony Element:[    
+The messageML is sent by your Bot and rendered as a form or Symphony Element:[  \
 ](https://app.gitbook.com/@symphony-1/s/symphony-developers-documentation/building-bots-on-symphony/datafeed)
 
 ![](../../../.gitbook/assets/screen-shot-2020-07-14-at-12.18.49-pm.png)
@@ -126,5 +130,6 @@ You can learn more about parsing events and introducing custom business logic [h
 
 Continue on to our [Getting Started with Interactive Bots](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/ca6abde30e0bc0a2309a885f28efb96df7e470ed/building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Interactive Bot:
 
-{% page-ref page="getting-started.md" %}
-
+{% content-ref url="getting-started.md" %}
+[getting-started.md](getting-started.md)
+{% endcontent-ref %}

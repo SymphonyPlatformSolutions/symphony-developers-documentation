@@ -8,7 +8,9 @@ description: Building a Chatbot using the BDK and CLI Tool
 
 ### Complete the BDK Bot Configuration guide:
 
-{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
+{% content-ref url="../../configuration/configure-your-bot-for-bdk.md" %}
+[configure-your-bot-for-bdk.md](../../configuration/configure-your-bot-for-bdk.md)
+{% endcontent-ref %}
 
 ## 1. Dive into the Code
 
@@ -89,7 +91,10 @@ So for example when a user prompts the bot with "@demobot2 /hello", the `handle(
 
 Lastly, start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM:
 
-![](../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm%20%281%29.png)
+![](<../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm (1).png>)
 
 To learn more about how your can add your own commands and business logic, navigate to our Developer Certification where we show you how to build a real-world FX Trading Bot using the Bot SDK and CLI tool:
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

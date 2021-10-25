@@ -4,7 +4,9 @@ The `template`parameter in the `render()` function of the [entity Service](./) i
 
 For a full ExtensionML reference, continue here:
 
-{% page-ref page="message-format-extensionml.md" %}
+{% content-ref url="message-format-extensionml.md" %}
+[message-format-extensionml.md](message-format-extensionml.md)
+{% endcontent-ref %}
 
 ## Template and Data
 
@@ -31,19 +33,19 @@ For example, the template and data below could be used to display a link within 
 
 Use the following flow control tags to support entities that have conditional logic or recursive data:
 
-| Tag | Description |
-| :--- | :--- |
-| `<if>` | Use this tag to conditionally use the enclosing template. This tag must include an `id` attribute. If there is data at the `key` specified by the `id`, then the enclosing template will be used, otherwise it will be skipped. |
-| `<if:last>` | Use this tag within an iteration to conditionally use the enclosing template. If the current iteration is the last item in the iterated list, the enclosing template will be used. |
-| `<if:not-last>` | Use this tag within an iteration to conditionally use the enclosing template. If the current iteration is not last item in the iterated list, the enclosing template will be used. This is useful to add commas between items in a list, without adding one to the last item. |
-| `<iterate>` | Use this tag to loop through the items in an array. The template between the opening and closing `<iterate>` tag will be used for each item in the array. The data for the template will reference the data in current the list item. This tag must include an `id` attribute. This must be the `key` to an array in the `data` object. |
+| Tag             | Description                                                                                                                                                                                                                                                                                                                             |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<if>`          | Use this tag to conditionally use the enclosing template. This tag must include an `id` attribute. If there is data at the `key` specified by the `id`, then the enclosing template will be used, otherwise it will be skipped.                                                                                                         |
+| `<if:last>`     | Use this tag within an iteration to conditionally use the enclosing template. If the current iteration is the last item in the iterated list, the enclosing template will be used.                                                                                                                                                      |
+| `<if:not-last>` | Use this tag within an iteration to conditionally use the enclosing template. If the current iteration is not last item in the iterated list, the enclosing template will be used. This is useful to add commas between items in a list, without adding one to the last item.                                                           |
+| `<iterate>`     | Use this tag to loop through the items in an array. The template between the opening and closing `<iterate>` tag will be used for each item in the array. The data for the template will reference the data in current the list item. This tag must include an `id` attribute. This must be the `key` to an array in the `data` object. |
 
 ## Interactivity Tags
 
 Use the following tags to have interactivity on messages by implementing methods that are called to execute business logic:
 
-| Tag | Description |
-| :--- | :--- |
+| Tag        | Description                                                                                                                                                            |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<action>` | Use this tag to enable clicks on entities. For more information on how to use the `action` tag, refer to [Using Actions](entity-advanced-templating.md#using-actions). |
 
 ### Using Actions
@@ -91,4 +93,3 @@ action: function(data){
     console.log(data);
         }
 ```
-

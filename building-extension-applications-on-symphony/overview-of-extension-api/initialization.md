@@ -16,7 +16,7 @@ To style your app, you must include the symphony-style.css CSS file in your appl
 <link rel="stylesheet" type="text/css" href="https://cdn.symphony.com/resources/api/v1.1/symphony-style.css">
 ```
 
-## SYMPHONY.remote.hello\(\)
+## SYMPHONY.remote.hello()
 
 The `SYMPHONY.remote.hello()` method should be used to initialize the connection to the Client Extension API from your application controller and views.
 
@@ -26,8 +26,8 @@ Returns a promise that will be fulfilled when the introduction is complete. If t
 hello: function()
 ```
 
-| Returns | Type | Description |
-| :--- | :--- | :--- |
+| Returns | Type   | Description                                                    |
+| ------- | ------ | -------------------------------------------------------------- |
 | themeV2 | Object | An object containing the user's Symphony client theme settings |
 
 ```javascript
@@ -56,6 +56,4 @@ You should style your application according to the user's theme by applying the 
 });
 ```
 
-If a user changes his theme, a themeChangeV2 event is fired from the [ui service](extension-api-services/ui-service/), which will pass a `themeV2` object with the new values. You should use a service to [listen](extension-api-services/service-interface.md#listen) to this event and update the classes on the application module `<body>`.  
-
-
+If a user changes his theme, a themeChangeV2 event is fired from the [ui service](extension-api-services/ui-service/), which will pass a `themeV2` object with the new values. You should use a service to [listen](extension-api-services/service-interface.md#listen) to this event and update the classes on the application module `<body>`.\

@@ -23,13 +23,13 @@ The UI Toolkit is a library of react components that helps you build complex fro
 1. To gain access to the UI Toolkit, navigate to the dedicated Github repository: [https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit](https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit)
 2. Clone the repository locally:
 
-```text
+```
 $ git clone https://github.com/SymphonyPlatformSolutions/symphony-bdk-ui-toolkit.git
 ```
 
 1. To access a live version of this library, run the following from inside your project:
 
-```text
+```
 $ yarn storybook
 ```
 
@@ -39,7 +39,7 @@ This will launch a live version of the UI Toolkit library reference in your defa
 
 To use the library in your extension application:
 
-```text
+```
 $ npm install symphony-bdk-ui-toolkit
 ```
 
@@ -49,7 +49,7 @@ Note: This is automatically installed when generating applications using the BDK
 
 Import the components you want to use:
 
-```text
+```
 $ import { Box , Text, Button } from 'symphony-bdk-ui-toolkit';
 ```
 
@@ -57,7 +57,7 @@ $ import { Box , Text, Button } from 'symphony-bdk-ui-toolkit';
 
 There's a few components that require a peer dependency installation, that means that although these components uses such dependency, it expects that it will be installed on your project, **rather** than packaged and shipped with this toolkit. Here's the complete list of peer dependencies:
 
-```text
+```
 {
     "peerDependencies": {
         "axios": "^0.19.0",
@@ -78,5 +78,6 @@ There's a few components that require a peer dependency installation, that means
 
 For an step by step tutorial on how to leverage the UI Toolkit to create complex frontend applications, continue here:
 
-{% page-ref page="../../../../building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md" %}
-
+{% content-ref url="../../../../building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md" %}
+[building-an-extension-app-with-ui-toolkit.md](../../../../building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md)
+{% endcontent-ref %}

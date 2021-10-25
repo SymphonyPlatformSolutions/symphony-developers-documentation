@@ -8,13 +8,15 @@ description: Building an Interactive Bot using BDK
 
 Complete the BDK Bot Configuration guide:
 
-{% page-ref page="../../configuration/configure-your-bot-for-bdk.md" %}
+{% content-ref url="../../configuration/configure-your-bot-for-bdk.md" %}
+[configure-your-bot-for-bdk.md](../../configuration/configure-your-bot-for-bdk.md)
+{% endcontent-ref %}
 
 ## 1. Dive into the Code
 
 The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your bot's code. In addition, the Bot SDK also provides out-of-the-box Datafeed and event handling architecture that make it simple for your bot to handle different events.
 
-The Bot SDK is also baked in with bot's best practices and provides a lot of convenient out-of-the-box code that can be used to bootstrap your bot quickly, including sending and receiving Symphony Elements. To illustrate these best practices and convenient boilerplate code, navigate to `TemplateHandler.java` inside your project directory. The different bot commands are shown in the `DESCRIPTIONS` dictionary:
+The Bot SDK is also baked in with bot's best practices and provides a lot of convenient out-of-the-box code that can be used to bootstrap your bot quickly, including sending and receiving Symphony Elements. To illustrate these best practices and convenient boilerplate code, navigate to `TemplateHandler.java` inside your project directory. The different bot commands are shown in the `DESCRIPTIONS `dictionary:
 
 {% tabs %}
 {% tab title="elements/TemplateHandler.java" %}
@@ -138,3 +140,6 @@ Start up your Spring Application by running your BotApplication.java and test th
 
 Feel free to play around with the other commands to see how Symphony Elements can be useful to your workflow. To learn more about how your can add your own Symphony Elements and business logic to your workflow, navigate to our Developer Certification program:
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

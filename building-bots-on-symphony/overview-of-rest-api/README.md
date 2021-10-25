@@ -16,27 +16,38 @@ The Symphony REST API is spread out across these components according to the typ
 
 To learn more about how bots securely interact with Symphony's three components, continue onto the REST API Architecture guide below:
 
-{% page-ref page="rest-api-architecture.md" %}
+{% content-ref url="rest-api-architecture.md" %}
+[rest-api-architecture.md](rest-api-architecture.md)
+{% endcontent-ref %}
 
 ## Pod API
 
 To learn more about how bots can make authentication and administrative calls such as manage streams, manage users or facilitate cross-pod connections, continue onto the Pod API guide below:
 
-{% page-ref page="pod-api.md" %}
+{% content-ref url="pod-api.md" %}
+[pod-api.md](pod-api.md)
+{% endcontent-ref %}
 
 ## Key Manager API
 
 To learn more about how bots can authenticate and encrypt messages on Symphony, continue onto the Key Manager API guide below:
 
-{% page-ref page="key-manager-api.md" %}
+{% content-ref url="key-manager-api.md" %}
+[key-manager-api.md](key-manager-api.md)
+{% endcontent-ref %}
 
 ## Agent API
 
 To learn more about how bots can send and receive encrypted messages on Symphony, continue onto the Agent API guide below:
 
-{% page-ref page="agent-api.md" %}
+{% content-ref url="agent-api.md" %}
+[agent-api.md](agent-api.md)
+{% endcontent-ref %}
 
 ## REST API Reference
 
 For the full Symphony API reference continue here:
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

@@ -21,7 +21,7 @@ The Symphony Bot Generator is a Yeoman-based code generator that generates a pro
 
 ### Install Yeoman and the Symphony Bot Generator:
 
-```text
+```
 $ npm install -g yo generator-symphony
 ```
 
@@ -29,13 +29,13 @@ $ npm install -g yo generator-symphony
 
 To launch the Symphony Bot Generator:
 
-```text
+```
 $ yo symphony
 ```
 
 This will prompt you with a number of questions about your Symphony environment and bot metadata. Type in your bot's basic information metadata, and press enter to move onto the next prompt. If questions give you multiple options, use the keyboard arrows to scroll:
 
-```text
+```
 /------------------------------------------/
 /        SYMPHONY GENERATOR  1.4.3         /
 /    by platformsolutions@symphony.com     /
@@ -109,7 +109,9 @@ Note: The bot username entered into the Bot Generator must match exactly the use
 
 For a detailed guide on how to create a service account in the admin portal, check out this guide:
 
-{% page-ref page="creating-a-bot-user.md" %}
+{% content-ref url="creating-a-bot-user.md" %}
+[creating-a-bot-user.md](creating-a-bot-user.md)
+{% endcontent-ref %}
 
 Open your generated bot code in your favorite IDE and navigate to the `config.json` file:
 
@@ -158,5 +160,6 @@ The `config.json` file has other fields that offers advanced configurations for 
 
 Now that you have generated and configured your Bot, move on to one of the SDK bot tutorials:
 
-{% page-ref page="../tutorials/sdk/" %}
-
+{% content-ref url="../tutorials/sdk/" %}
+[sdk](../tutorials/sdk/)
+{% endcontent-ref %}

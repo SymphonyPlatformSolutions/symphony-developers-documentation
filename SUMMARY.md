@@ -46,26 +46,36 @@
   * [Overview of Streams](building-bots-on-symphony/datafeed/overview-of-streams.md)
 * [Messages](building-bots-on-symphony/messages/README.md)
   * [MessageML](building-bots-on-symphony/messages/overview-of-messageml/README.md)
-    * [Message Format - MessageML](building-bots-on-symphony/messages/overview-of-messageml/message-format-messageml.md)
+    * [MessageML Basics](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/README.md)
+      * [Content Grouping](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/content-grouping.md)
+      * [Text formatting and semantics](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/text-level-formatting-and-semantics.md)
+      * [Tables](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/tables.md)
+      * [Images](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/images-and-media.md)
+      * [Specific to Symphony](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md)
+      * [Style Attributes](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/style-attributes.md)
+      * [Special Characters](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/special-characters.md)
+      * [Emojis](building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/emojis.md)
+    * [Interactive Elements Forms](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/README.md)
+      * [Buttons](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/buttons.md)
+      * [Text Field](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/text-field.md)
+      * [Masked Text Field](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/masked-text-field.md)
+      * [Text Area](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/text-area.md)
+      * [Checkbox](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/checkbox.md)
+      * [Radio Button](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/radio-button.md)
+      * [Dropdown Menu](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/dropdown-menu.md)
+      * [Person Selector](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/person-selector.md)
+      * [Date Picker](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/date-picker.md)
+      * [Time Picker](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/time-picker.md)
+      * [Timezone Picker](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/timezone-picker.md)
+      * [Table Select](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/table-select.md)
+      * [Regular Expressions - Regex](building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/regular-expressions-regex.md)
+    * [Extensibility UI Actions](building-bots-on-symphony/messages/overview-of-messageml/ui-action-for-your-bots-ui-extensibility/README.md)
+      * [OpenChat](building-bots-on-symphony/messages/overview-of-messageml/ui-action-for-your-bots-ui-extensibility/openchat.md)
+      * [Dialog](building-bots-on-symphony/messages/overview-of-messageml/ui-action-for-your-bots-ui-extensibility/dialog.md)
+    * [Entities](building-bots-on-symphony/messages/overview-of-messageml/entities/README.md)
+      * [Standard Entities](building-bots-on-symphony/messages/overview-of-messageml/entities/standard-entities.md)
+      * [Custom Entities](building-bots-on-symphony/messages/overview-of-messageml/entities/structured-objects.md)
   * [PresentationML](building-bots-on-symphony/messages/overview-of-presentationml.md)
-  * [Structured Objects](building-bots-on-symphony/messages/structured-objects.md)
-  * [Emojis](building-bots-on-symphony/messages/emojis.md)
-* [Symphony Elements](building-bots-on-symphony/symphony-elements/README.md)
-  * [Available Elements](building-bots-on-symphony/symphony-elements/available-elements/README.md)
-    * [Form](building-bots-on-symphony/symphony-elements/available-elements/form.md)
-    * [Buttons](building-bots-on-symphony/symphony-elements/available-elements/buttons.md)
-    * [Text Field](building-bots-on-symphony/symphony-elements/available-elements/text-field.md)
-    * [Masked Text Field](building-bots-on-symphony/symphony-elements/available-elements/masked-text-field.md)
-    * [Text Area](building-bots-on-symphony/symphony-elements/available-elements/text-area.md)
-    * [Checkbox](building-bots-on-symphony/symphony-elements/available-elements/checkbox.md)
-    * [Radio Button](building-bots-on-symphony/symphony-elements/available-elements/radio-button.md)
-    * [Dropdown Menu](building-bots-on-symphony/symphony-elements/available-elements/dropdown-menu.md)
-    * [Person Selector](building-bots-on-symphony/symphony-elements/available-elements/person-selector.md)
-    * [Date Picker](building-bots-on-symphony/symphony-elements/available-elements/date-picker.md)
-    * [Time Picker](building-bots-on-symphony/symphony-elements/available-elements/time-picker.md)
-    * [Timezone Picker](building-bots-on-symphony/symphony-elements/available-elements/timezone-picker.md)
-    * [Table Select](building-bots-on-symphony/symphony-elements/available-elements/table-select.md)
-  * [Regular Expressions - Regex](building-bots-on-symphony/symphony-elements/regular-expressions-regex.md)
 * [Bots Best Practices](building-bots-on-symphony/bots-best-practices.md)
 * [Open Source Code Samples](building-bots-on-symphony/open-source-code-samples.md)
 
@@ -74,12 +84,12 @@
 * [Building Extension Applications on Symphony](building-extension-applications-on-symphony/building-extension-applications-on-symphony.md)
 * [Planning Your App](building-extension-applications-on-symphony/planning-your-app/README.md)
   * [Extension Applications + UI Buttons](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-ui-buttons.md)
-  * [Extension Applications + \#hashtags and $cashtags](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md)
+  * [Extension Applications + #hashtags and $cashtags](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md)
   * [Extension Applications + Structured Objects](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md)
   * [Extension Applications + UI Toolkit](building-extension-applications-on-symphony/planning-your-app/extension-applications-+-ui-toolkit.md)
 * [Tutorials](building-extension-applications-on-symphony/tutorials/README.md)
   * [Building an Extension App with UI Buttons](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-buttons.md)
-  * [Building an Extension App with \#hashtags & $cashtags](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
+  * [Building an Extension App with #hashtags & $cashtags](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
   * [Building an Extension App with Structured Objects](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-structured-objects.md)
   * [Building an Extension App with UI Toolkit](building-extension-applications-on-symphony/tutorials/building-an-extension-app-with-ui-toolkit.md)
 * [Overview of Extension API](building-extension-applications-on-symphony/overview-of-extension-api/README.md)
@@ -123,7 +133,7 @@
       * [UI Toolkit](developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md)
   * [Symphony Bot Generator](developer-tools/developer-tools/symphony-bot-generator.md)
   * [Postman](developer-tools/developer-tools/postman.md)
-  * [Live Renderer Tool](https://renderer-tool.app.symphony.com/)
+  * [Live Renderer Tool](https://renderer-tool.app.symphony.com)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
     * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
     * [Form Elements](developer-tools/developer-tools/ui-style-guide/forms.md)
@@ -137,8 +147,8 @@
 
 ## Symphony REST API
 
-* [Symphony REST API](https://rest-api.symphony.com/)
-* [Symphony Connect REST API](https://federation.readme.io/)
+* [Symphony REST API](https://rest-api.symphony.com)
+* [Symphony Connect REST API](https://federation.readme.io)
 
 ## Mobile Frameworks
 
@@ -177,11 +187,11 @@
   * [Good MDM Support](mobile-frameworks/ios-framework/good-mdm-support/README.md)
     * [Good Policy](mobile-frameworks/ios-framework/good-mdm-support/good-policy.md)
 * [Pre-Built MDM/EMM Solutions](mobile-frameworks/pre-built-mdm-emm-solutions/README.md)
-  * [AirWatch \(Coming Soon\)](https://marketplace.air-watch.com/)
+  * [AirWatch (Coming Soon)](https://marketplace.air-watch.com)
   * [Good](https://marketplace.blackberry.com/apps/519414651)
   * [MobileIron](https://apps.apple.com/us/app/symphony-com-for-mobileiron/id1138896543)
 
-## Admin Guides <a id="admin-guide"></a>
+## Admin Guides <a href="admin-guide" id="admin-guide"></a>
 
 * [Change Log](admin-guide/change-log.md)
 * [Documentation Updates](admin-guide/documentation-updates.md)
@@ -197,7 +207,6 @@
   * [SBE x Agent Compatibility Matrix](admin-guide/agent-guide/sbe-x-agent-compatibility-matrix.md)
   * [Agent Diagnostic Tool](admin-guide/agent-guide/agent-diagnostic-tool.md)
 
----
+***
 
 * [Developers Documentation v1](https://developers.symphony.com/symphony-developer/docs)
-

@@ -7,12 +7,12 @@ One common use for this API is to forward selected URLs & attachments to externa
 {% hint style="info" %}
 #### BBURLManagerDelegate & BBApplicationLaunchParameters
 
-The following functionality is triggered only after the framework has evaluated the allowWebView property of [`BBApplicationLaunchParameters`](bbapplicationlaunchparameters.md).  If `allowWebView` is set to NO, your [`BBURLManagerDelegate`](bburlmanagerdelegate.md) will not be called at all.  
+The following functionality is triggered only after the framework has evaluated the allowWebView property of [`BBApplicationLaunchParameters`](bbapplicationlaunchparameters.md).  If `allowWebView` is set to NO, your [`BBURLManagerDelegate`](bburlmanagerdelegate.md) will not be called at all. &#x20;
 {% endhint %}
 
 {% tabs %}
 {% tab title="BBURLManagerDelegate" %}
-```text
+```
 @protocol BBURLManagerDelegate <NSObject>
 
 @optional
@@ -42,7 +42,7 @@ The following functionality is triggered only after the framework has evaluated 
 ## Methods
 
 {% hint style="info" %}
-#### The following methods must only be called on the main thread/queue.  
+#### The following methods must only be called on the main thread/queue. &#x20;
 {% endhint %}
 
 {% tabs %}
@@ -71,8 +71,8 @@ When the pod requires a minimum version that is newer than the version running t
 
 **`urlManager:shouldOpenURL`:**
 
-When the user has tapped on a URL in a chat room, should the contents be opened in an in-app UIWebView? This is your opportunity to open the URL in an external application of your choosing.  
-If you return YES, the app will present the URL in an in-app UIWebView.  
+When the user has tapped on a URL in a chat room, should the contents be opened in an in-app UIWebView? This is your opportunity to open the URL in an external application of your choosing.\
+If you return YES, the app will present the URL in an in-app UIWebView.\
 If you return NO, the app will not present the URL, with the assumption that you either have forbidden it or have presented it yourself.
 
 * _manager_ The shared instance of the BBURLManager
@@ -82,7 +82,7 @@ If you do not override this method, the app will open this URL in an in-app UIWe
 
 {% tabs %}
 {% tab title="Objective-C" %}
-```text
+```
 - (BOOL)urlManager:(BBURLManager *)manager shouldOpenDecryptedData:(NSData *)data withFileName:(NSString *)name;
 ```
 {% endtab %}
@@ -90,8 +90,8 @@ If you do not override this method, the app will open this URL in an in-app UIWe
 
 **`urlManager:shouldOpenDecryptedData:withFileName`:**
 
-When the user has tapped on an attached file \(PDF, XLS, etc\) in a chat room. Should the contents be opened in an in-app UIWebView? This is your opportunity to open the URL in an external application of your choosing.  
-If you return YES, the app will present the URL in an in-app UIWebView.  
+When the user has tapped on an attached file (PDF, XLS, etc) in a chat room. Should the contents be opened in an in-app UIWebView? This is your opportunity to open the URL in an external application of your choosing.\
+If you return YES, the app will present the URL in an in-app UIWebView.\
 If you return NO, the app will not present the data, with the assumption that you either have forbidden it or have presented it yourself.
 
 * _manager_ The shared instance of the `BBURLManager`
@@ -102,7 +102,7 @@ If you do not override this method, the app will open this file data in an in-ap
 
 {% tabs %}
 {% tab title="Objective-C" %}
-```text
+```
 - (id <BBAlternateApplicationProxy>)urlManager:(BBURLManager *)manager alternateApplicationForURL:(NSURL *)url;
 ```
 {% endtab %}
@@ -110,18 +110,18 @@ If you do not override this method, the app will open this file data in an in-ap
 
 **`urlManager:alternateApplicationForURL`:**
 
-When the user has tapped on an attached URL in a chat room,  
-and when your `URLManagerDelegate` has answered YES to `shouldOpenURL:`  
-The URLManager will ask you for an alternate application which the user might want to use to open this URL.  
-If you have such an alternate application you can create an object to let the URLManager know that the alternate application exists.  
-The Alternate Application needs only be able to provide a 48x48 pixel image \(presumably the app's icon\) for use in a navigation bar button.  
+When the user has tapped on an attached URL in a chat room,\
+and when your `URLManagerDelegate` has answered YES to `shouldOpenURL:`\
+The URLManager will ask you for an alternate application which the user might want to use to open this URL.\
+If you have such an alternate application you can create an object to let the URLManager know that the alternate application exists.\
+The Alternate Application needs only be able to provide a 48x48 pixel image (presumably the app's icon) for use in a navigation bar button.\
 When the user taps on this navigation bar button, the `openURL:withAlternateApplication:` method will be called.
 
 Return nil to indicate there is no alternate application.
 
 {% tabs %}
 {% tab title="Objective-C" %}
-```text
+```
 - (id <BBAlternateApplicationProxy>)urlManager:(BBURLManager *)manager alternateApplicationForFileName:(NSString *)name;
 ```
 {% endtab %}
@@ -129,18 +129,18 @@ Return nil to indicate there is no alternate application.
 
 **`urlManager:alternateApplicationForFileName`:**
 
-When the user has tapped on an attached file in a chat room,  
-and when your `URLManagerDelegate` has answered YES to `shouldOpenDecryptedData:`  
-The URLManager will ask you for an alternate application which the user might want to use to open this data.  
-If you have such an alternate application you can create an object to let the URLManager know that the alternate application exists.  
-The Alternate Application needs only be able to provide a 48x48 pixel image \(presumably the app's icon\) for use in a navigation bar button.  
+When the user has tapped on an attached file in a chat room,\
+and when your `URLManagerDelegate` has answered YES to `shouldOpenDecryptedData:`\
+The URLManager will ask you for an alternate application which the user might want to use to open this data.\
+If you have such an alternate application you can create an object to let the URLManager know that the alternate application exists.\
+The Alternate Application needs only be able to provide a 48x48 pixel image (presumably the app's icon) for use in a navigation bar button.\
 When the user taps on this navigation bar button, the `openDecryptedData:withAlternateApplication:`method will be called.
 
 Return nil to indicate there is no alternate application.
 
 {% tabs %}
 {% tab title="Objective-C" %}
-```text
+```
 - (BOOL)urlManager:(BBURLManager *)manager openURL:(NSURL *)url inAlternateApplication:(id <BBAlternateApplicationProxy>)alternate;
 ```
 {% endtab %}
@@ -148,16 +148,16 @@ Return nil to indicate there is no alternate application.
 
 **`urlManager:openURL:inAlternateApplication`:**
 
-When you have returned a `BBAlternateApplicationProxy` for a given URL,  
-the framework will present UI which allows the user to open the URL in an external application.  
-When the user opts to open the URL in the external application, this delegate call gives you the opportunity to open the URL in the external application.  
+When you have returned a `BBAlternateApplicationProxy` for a given URL,\
+the framework will present UI which allows the user to open the URL in an external application.\
+When the user opts to open the URL in the external application, this delegate call gives you the opportunity to open the URL in the external application.\
 The `BBAlternateApplicationProxy` will be the same object returned by you in the call to `alternateApplicationForURL:`
 
 Return NO if there was an error.
 
 {% tabs %}
 {% tab title="Objective-C" %}
-```text
+```
 - (BOOL)urlManager:(BBURLManager *)manager openDecryptedData:(NSData *)data withFileName:(NSString *)filenme inAlternateApplication:(id <BBAlternateApplicationProxy>)alternate;
 ```
 {% endtab %}
@@ -165,31 +165,30 @@ Return NO if there was an error.
 
 **`urlManager:openDecryptedData:withFileName:inAlternateApplication`**
 
-When you have returned a `BBAlternateApplicationProxy` for a given file,  
-the framework will present UI which allows the user to open the file in an external application.  
-When the user opts to open the file in the external application, this delegate call gives you the opportunity to open the file in the external application.  
+When you have returned a `BBAlternateApplicationProxy` for a given file,\
+the framework will present UI which allows the user to open the file in an external application.\
+When the user opts to open the file in the external application, this delegate call gives you the opportunity to open the file in the external application.\
 The `BBAlternateApplicationProxy` will be the same object returned by you in the call to `alternateApplicationForFileName:`
 
 Return NO if there was an error.
 
 {% tabs %}
 {% tab title="UIWebViews" %}
-```text
+```
 - (void)urlManager:(BBURLManager *)manager webView:(UIWebView *)webView willMoveToWindow:(UIWindow *)window;
 - (void)urlManager:(BBURLManager *)manager webViewDidMoveToWindow:(UIWebView *)webView;
 ```
 {% endtab %}
 {% endtabs %}
 
-**`urlManager:webView:willMoveToWindow`:**  
+**`urlManager:webView:willMoveToWindow`:**\
 **`urlManager:webViewDidMoveToWindow`:**
 
-These methods are called anytime \(before & after\) a UIWebView is moved to a window. The window will be nil when exiting the window.  
+These methods are called anytime (before & after) a UIWebView is moved to a window. The window will be nil when exiting the window.\
 This gives the application the chance to modify the UIWebView or to interrogate its settings.
 
 {% hint style="danger" %}
 ### Do not change the `UIWebView` delegate
 
-Changing the UIWebView delegate is not recommended, and may lead to unexpected results.  The intended use o these methods are to allow you to control how the UIWebView connects to the internet, as the GD.framework's `GDURLRequestConnectionDelegate`.  
+Changing the UIWebView delegate is not recommended, and may lead to unexpected results.  The intended use o these methods are to allow you to control how the UIWebView connects to the internet, as the GD.framework's `GDURLRequestConnectionDelegate`. &#x20;
 {% endhint %}
-

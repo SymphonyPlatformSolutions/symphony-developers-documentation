@@ -4,7 +4,7 @@ BBDatabaseResultSet is a subset of the functionality provided by FMResultSet.
 
 {% tabs %}
 {% tab title="BBDatabaseResultSet" %}
-```text
+```
 @protocol BBDatabaseResultSet <NSObject>
 
 - (int)intForColumnIndex:(int)columnIdx;
@@ -23,4 +23,3 @@ BBDatabaseResultSet is a subset of the functionality provided by FMResultSet.
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -20,13 +20,13 @@ After subscribing to this service you must register your extension in order to a
 function registerExtension(uiClass, id, serviceName, options)
 ```
 
-The `uiClass` registered is the location within the Symphony application where the UI extension \(button\) will appear. The following are the possible values for the `uiClass` parameter:
+The `uiClass` registered is the location within the Symphony application where the UI extension (button) will appear. The following are the possible values for the `uiClass` parameter:
 
-| uiClass | Description |
-| :--- | :--- |
-| single-user-im | Button added to 1-1 instant message module header |
-| multi-user-im | Button added to multi-party instant message module header |
-| room | Button added to chatroom module header |
+| uiClass        | Description                                               |
+| -------------- | --------------------------------------------------------- |
+| single-user-im | Button added to 1-1 instant message module header         |
+| multi-user-im  | Button added to multi-party instant message module header |
+| room           | Button added to chatroom module header                    |
 
 To customize the look and feel of your button, you can pass in an object containing an icon, label, and data to the options parameter:
 
@@ -138,7 +138,8 @@ Additionally, the UI Service provides a `filter()` function that allows you to c
 
 Now that you've registered your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time the button is clicked.
 
-Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 \(Bot Developer Kit\):
+Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 (Bot Developer Kit):
 
-{% page-ref page="../tutorials/building-an-extension-app-with-ui-buttons.md" %}
-
+{% content-ref url="../tutorials/building-an-extension-app-with-ui-buttons.md" %}
+[building-an-extension-app-with-ui-buttons.md](../tutorials/building-an-extension-app-with-ui-buttons.md)
+{% endcontent-ref %}

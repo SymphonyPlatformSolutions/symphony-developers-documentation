@@ -18,7 +18,7 @@ The Message APIs create, read and search messages on the Pod. These APIs can be 
 * Get message status
 * List message receipts
 
-The full list of Messages API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#messages-v4](https://developers.symphony.com/restapi/reference#messages-v4)
+The full list of Messages API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#messages-v4](https://developers.symphony.com/restapi/reference#messages-v4)
 
 ## Datafeed APIs ![](../../.gitbook/assets/symphony-api.png)
 
@@ -29,9 +29,11 @@ The Datafeed APIs create and manage real-time event streams from the Pod to your
 
 For more information on how Symphony Datafeeds allow your bot to create rich and interactive workflows, navigate here:
 
-{% page-ref page="../datafeed/" %}
+{% content-ref url="../datafeed/" %}
+[datafeed](../datafeed/)
+{% endcontent-ref %}
 
-The full list of Datafeed API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#introduction-to-datafeed](https://developers.symphony.com/restapi/reference#introduction-to-datafeed)
+The full list of Datafeed API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#introduction-to-datafeed](https://developers.symphony.com/restapi/reference#introduction-to-datafeed)
 
 ## Signal APIs ![](../../.gitbook/assets/symphony-api.png)
 
@@ -43,7 +45,7 @@ The Signal APIs create and manage tailored alerts based on mention or tag criter
 * Subscribe/Unsubscribe to a signal
 * List signal subscribers
 
-The full list of Signals API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#list-signals](https://developers.symphony.com/restapi/reference#list-signals)
+The full list of Signals API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#list-signals](https://developers.symphony.com/restapi/reference#list-signals)
 
 ## Basic APIs ![](../../.gitbook/assets/symphony-api.png)
 
@@ -51,8 +53,7 @@ This group of APIs perform testing and obtain diagnostics regarding the health o
 
 * Perform a component health check
 * Obtain Agent Info
-* Perform an echo test 
+* Perform an echo test&#x20;
 * Get session info
 
-The full list of Basics API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference\#health-check-v3](https://developers.symphony.com/restapi/reference#health-check-v3)
-
+The full list of Basics API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#health-check-v3](https://developers.symphony.com/restapi/reference#health-check-v3)

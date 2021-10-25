@@ -9,4 +9,3 @@ The framework stores some preference-like information in a data store that confo
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,7 +4,7 @@
 
 {% tabs %}
 {% tab title="BBDatabaseKeyFactory" %}
-```text
+```
 @protocol BBDatabaseKeyFactory <NSObject>
 + (NSString *)databaseKeyForSeedString:(NSString *)string;
 @end
@@ -15,8 +15,6 @@
 {% hint style="danger" %}
 ### Key For Seed String
 
-For a given input string, your BBDatabaseKeyFactory class must return the same output string.  If your BBDatabaseKeyFactory returns a different key, the locally cached data cannot be decrypted by the app.  
+For a given input string, your BBDatabaseKeyFactory class must return the same output string.  If your BBDatabaseKeyFactory returns a different key, the locally cached data cannot be decrypted by the app. &#x20;
 {% endhint %}
-
-
 

@@ -12,7 +12,7 @@ Extension apps can receive stream participant information when an end user click
 
 Your button will receive information from the user object in a MIM, IM and a room of up to 20 users.
 
-Please note that the current user’s information isn’t returned, only the information of the other user\(s\) in the profile of a user, an IM, MIM or room.
+Please note that the current user’s information isn’t returned, only the information of the other user(s) in the profile of a user, an IM, MIM or room.
 
 ## **Sample Objects**
 
@@ -20,7 +20,7 @@ This is the information that you will receive if your button is pressed inside o
 
 {% tabs %}
 {% tab title="IM, User Profile" %}
-```text
+```
 {
    threadId,         //id of the conversation. Also known as streamId or conversationId
    userCount,        //number of users returned
@@ -101,8 +101,8 @@ This is the information that you will receive if your button is pressed inside o
 ```
 {% endtab %}
 
-{% tab title="MIM or Room \(<20 Users\)" %}
-```text
+{% tab title="MIM or Room (<20 Users)" %}
+```
 {
     isCrossPod,
     roomName, 
@@ -123,4 +123,3 @@ This is the information that you will receive if your button is pressed inside o
 ```
 {% endtab %}
 {% endtabs %}
-

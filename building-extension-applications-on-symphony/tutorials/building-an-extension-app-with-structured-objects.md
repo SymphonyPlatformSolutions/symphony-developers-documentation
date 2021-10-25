@@ -6,7 +6,9 @@ In this step by step tutorial, we will build an extension app that registers a c
 
 Complete the BDK 1.0 App configuration guide:
 
-{% page-ref page="../app-configuration/configure-your-app-for-bdk-development.md" %}
+{% content-ref url="../app-configuration/configure-your-app-for-bdk-development.md" %}
+[configure-your-app-for-bdk-development.md](../app-configuration/configure-your-app-for-bdk-development.md)
+{% endcontent-ref %}
 
 ## 1.  Dive into the Code
 
@@ -61,7 +63,9 @@ SYMPHONY.remote.hello().then((data) => {
 
 For more information on initializing your extension application, continue here:
 
-{% page-ref page="../overview-of-extension-api/initialization.md" %}
+{% content-ref url="../overview-of-extension-api/initialization.md" %}
+[initialization.md](../overview-of-extension-api/initialization.md)
+{% endcontent-ref %}
 
 ### Connect:
 
@@ -81,11 +85,13 @@ SYMPHONY.application.connect(
 
 For more information on registering your extension application, continue here:
 
-{% page-ref page="../overview-of-extension-api/register-and-connect.md" %}
+{% content-ref url="../overview-of-extension-api/register-and-connect.md" %}
+[register-and-connect.md](../overview-of-extension-api/register-and-connect.md)
+{% endcontent-ref %}
 
 ## 2.  App Authentication
 
-In addition to the boilerplate setup for connecting, initializing, and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the implementation of app authentication provided by the BDK 1.0. The sample implementation of app authentication leverages a combined bot \(app backend\) and app \(frontend\) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
+In addition to the boilerplate setup for connecting, initializing, and registering you application, the BDK 1.0 also provides an out of the box implementation of app authentication. App authentication is required for apps that wish to receive sensitive conversation and user data. Even though the extension app constructed in this tutorial does not require app authentication, we will keep the implementation of app authentication provided by the BDK 1.0. The sample implementation of app authentication leverages a combined bot (app backend) and app (frontend) architecture. The out of the box authentication sequence can be found at the bottom of the `controller.js` file:
 
 {% tabs %}
 {% tab title="controller.js" %}
@@ -117,7 +123,9 @@ init() {
 
 Upon completion of the above function, your extension application will be successfully authenticated. For more information about app authentication, please continue here:
 
-{% page-ref page="../app-authentication/" %}
+{% content-ref url="../app-authentication/" %}
+[app-authentication](../app-authentication/)
+{% endcontent-ref %}
 
 ## 3.  Setup the Enricher Service
 
@@ -159,8 +167,8 @@ constructor(name) {
 
 1. Specify the service name: `'${APP_ID}:enricher'`
 2. Load in a dictionary of predefined structured objects, storing the entity id or entity `types` in an array, `messageEvents`.
-3. Specify which methods of the class will be available in the service by adding them to the `implements` array.  
-4. Lastly, register your `customTemplates` with the `SmsRenderer`.  This customTemplates dictionary is where we are going to add our own custom templates as shown in Step 6.  
+3. Specify which methods of the class will be available in the service by adding them to the `implements` array. &#x20;
+4. Lastly, register your `customTemplates` with the `SmsRenderer`.  This customTemplates dictionary is where we are going to add our own custom templates as shown in Step 6. &#x20;
 
 {% hint style="info" %}
 Note: The SmsRenderer is a handlebars templating library provided by the BDK 1.0. This library already has predefined template values including: SIMPLE, ALERT, INFORMATION, NOTIFICATION, TABLE, LIST, BADGE, and a series of complex RFQ templates.
@@ -172,7 +180,7 @@ In order to render a message template using the `SmsRenderer` templating engine,
 SmsRenderer.renderAppMessage(messageData, messageType)
 ```
 
-Each template has a specific `messageType` and corresponding JSON schema \(`messageData`\). The templates and their corresponding schemas can be found [here.](https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-node#common-elements)
+Each template has a specific `messageType` and corresponding JSON schema (`messageData`). The templates and their corresponding schemas can be found [here.](https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-node#common-elements)
 
 Next, we subscribe to the `entity` service and register our list of structured object IDs or entity `types` :
 
@@ -222,14 +230,14 @@ HELP_COMMAND: {
 {% endtabs %}
 
 {% hint style="danger" %}
-Note: The rest of the JSON schemas defined in the entity type dictionaries defined in the `ENRICHER_EVENTS` dictionary are sample data used for the mock server and is outside the scope of this tutorial.  **Only the `type` parameter defined in each object within `entities.js` is used by default.  The rest can be ignored.**   
+Note: The rest of the JSON schemas defined in the entity type dictionaries defined in the `ENRICHER_EVENTS` dictionary are sample data used for the mock server and is outside the scope of this tutorial.  **Only the `type` parameter defined in each object within `entities.js` is used by default.  The rest can be ignored.**  &#x20;
 {% endhint %}
 
-If there is in fact a match, the `renderAppMessage()` method is called, passing along the correct JSON schema and templateType \(`SmsRenderer.smsTypes.LIST`\) as parameters:
+If there is in fact a match, the `renderAppMessage()` method is called, passing along the correct JSON schema and templateType (`SmsRenderer.smsTypes.LIST`) as parameters:
 
 ## 5.  Rendering the Structured Objects
 
-Now that we understand the BDK 1.0's implementation of the `GeneralEnricher` class as well as the `render()` method, let's test it out for ourselves. Open up your app backend \(bot\) and navigate to the `HelloCommandHandler` class. Update your `handle()` method to the following:
+Now that we understand the BDK 1.0's implementation of the `GeneralEnricher` class as well as the `render()` method, let's test it out for ourselves. Open up your app backend (bot) and navigate to the `HelloCommandHandler` class. Update your `handle()` method to the following:
 
 {% tabs %}
 {% tab title="command/HelloCommandHandler.java" %}
@@ -245,7 +253,7 @@ public void handle(BotCommand command, SymphonyMessage response) {
 {% endtab %}
 {% endtabs %}
 
-We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method. **The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client.** A default template can be as simple as the following `help-template.hbs` :
+We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method. **The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client. **A default template can be as simple as the following `help-template.hbs` :
 
 {% tabs %}
 {% tab title="templates/help-template.hbs" %}
@@ -257,7 +265,7 @@ We pass a default handlebars template, our newly created structured object, and 
 {% endtab %}
 {% endtabs %}
 
-In addition, create a SampleObject class in your bot \(app backend\) to pass along as a structured object, the object must match the JSON schema provided in the `render()` method:
+In addition, create a SampleObject class in your bot (app backend) to pass along as a structured object, the object must match the JSON schema provided in the `render()` method:
 
 {% tabs %}
 {% tab title="command/model/SampleObject.java" %}
@@ -285,7 +293,7 @@ Now start up your app and bot back end and type into an IM with the bot, `'@YOUR
 ![](../../.gitbook/assets/screen-shot-2020-10-01-at-1.00.37-pm.png)
 
 {% hint style="info" %}
-Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost \(unsafe\)' since we are using a self-signed certificate.
+Note: You may need to navigate to [https://localhost:4000](https://localhost:4000) and click 'Proceed to localhost (unsafe)' since we are using a self-signed certificate.
 {% endhint %}
 
 ## 6.  Create a Custom Renderer
@@ -379,4 +387,3 @@ public void handle(BotCommand command, SymphonyMessage response) {
 Now start up your app and bot back end and type into an IM with the bot, `'@YOUR_BOTS_USERNAME /hello'` . The bot will render your message + structured object accordingly:
 
 ![](../../.gitbook/assets/screen-shot-2020-10-02-at-12.21.57-pm.png)
-

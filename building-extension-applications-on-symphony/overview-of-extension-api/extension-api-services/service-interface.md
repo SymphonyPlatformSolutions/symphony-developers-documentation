@@ -8,7 +8,7 @@ Both the Client Extensions API services and your application services use the sa
 * [listen](service-interface.md#listen)
 * [remove](service-interface.md#remove)
 
-## implement\(\)
+## implement()
 
 Create a method on a service and specify the implementation.
 
@@ -16,10 +16,10 @@ Create a method on a service and specify the implementation.
 function implement(methodName, implementation)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| methodName | String | The name of the method to create on your service |
-| implementation | Function | The implementation of the method |
+| Parameter      | Type     | Description                                      |
+| -------------- | -------- | ------------------------------------------------ |
+| methodName     | String   | The name of the method to create on your service |
+| implementation | Function | The implementation of the method                 |
 
 ```javascript
 var helloAppService = SYMPHONY.services.register("hello:app");
@@ -35,8 +35,8 @@ Alternately, create several methods on a service at once by specifying an object
 function implement(implementations)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
+| Parameters      | Type   | Description                                                                                                                                                |
+| --------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | implementations | Object | An object containing one or more functions to create on this service, where the keys are the names of the functions and the values are the implementations |
 
 ```javascript
@@ -49,7 +49,7 @@ helloAppService.implement({
 });
 ```
 
-## invoke\(\)
+## invoke()
 
 Call a method on a service. Any extra parameters passed to this method will be sent as arguments to the service method:
 
@@ -57,8 +57,8 @@ Call a method on a service. Any extra parameters passed to this method will be s
 function invoke(methodName, ...)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
+| Parameters | Type   | Description                                   |
+| ---------- | ------ | --------------------------------------------- |
 | methodName | String | The name of the method to call on the service |
 
 ```javascript
@@ -71,7 +71,7 @@ helloAppService.implement("helloWorld", function() {
 helloAppService.invoke("helloWorld");
 ```
 
-## fire\(\)
+## fire()
 
 Fire an event from a service. Any extra parameters passed to this method will be passed to the callbacks defined by services that listen to this event:
 
@@ -79,27 +79,27 @@ Fire an event from a service. Any extra parameters passed to this method will be
 function fire(eventName, ...)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
-| eventName | String | The name of the event to fire |
+| Parameters | Type   | Description                   |
+| ---------- | ------ | ----------------------------- |
+| eventName  | String | The name of the event to fire |
 
 ```javascript
 var helloAppService = SYMPHONY.services.register("hello:app");
 helloAppService.fire('myEvent');
 ```
 
-## listen\(\)
+## listen()
 
-Subscribe a service to an event that is fired by another service \(or itself\). This method returns a handle that can later be used to remove the listener:
+Subscribe a service to an event that is fired by another service (or itself). This method returns a handle that can later be used to remove the listener:
 
 ```javascript
 function listen(eventName, callback)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
-| eventName | String | The name of the event to listen for |
-| callback | Function | The function that will be called when the event is fired |
+| Parameters | Type     | Description                                              |
+| ---------- | -------- | -------------------------------------------------------- |
+| eventName  | String   | The name of the event to listen for                      |
+| callback   | Function | The function that will be called when the event is fired |
 
 {% hint style="info" %}
 The `listen` namespace is the same as the namespace for methods, thus names must be unique across both service methods and events.
@@ -116,7 +116,7 @@ uiService.listen("themeChangeV2", function() {
 });
 ```
 
-## remove\(\)
+## remove()
 
 Unsubscribe a service from an event:
 
@@ -124,10 +124,10 @@ Unsubscribe a service from an event:
 function remove(eventName, handle)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
-| eventName | String | The name of the event to unsubscribe from |
-| handle | String | The handle returned by the call to listen |
+| Parameters | Type   | Description                               |
+| ---------- | ------ | ----------------------------------------- |
+| eventName  | String | The name of the event to unsubscribe from |
+| handle     | String | The handle returned by the call to listen |
 
 ```javascript
 var uiService = SYMPHONY.services.subscribe("ui");
@@ -143,4 +143,3 @@ var handle = uiService.listen("themeChangeV2", function() {
 
 uiService.remove("themeChangeV2", handle);
 ```
-

@@ -12,23 +12,23 @@ The CLI tool allows you to generate code scaffolds for building Symphony bots an
 
 ### Install Yarn:
 
-```text
+```
 $ npm i -g yarn
 ```
 
 ### Install the BDK
 
-```text
+```
 $ npm i -g symphony-bdk-cli
 ```
 
 ### Confirm all the dependencies are met:
 
-```text
+```
 $ symphony-bdk-cli --check-dependencies
 ```
 
-```text
+```
 $ symphony-bdk-cli
 
 
@@ -73,4 +73,3 @@ Options:
 ```
 
 For more information continue to the designated Github repository [here](https://github.com/SymphonyPlatformSolutions/symphony-bdk-cli).
-

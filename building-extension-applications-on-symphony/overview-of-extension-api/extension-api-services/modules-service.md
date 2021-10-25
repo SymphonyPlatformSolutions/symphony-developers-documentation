@@ -18,7 +18,7 @@ The following methods are available on the `modules` service:
 * [openLink](modules-service.md#openlink)
 * [redirect](modules-service.md#redirect)
 
-## show\(\)
+## show()
 
 Show a new application module:
 
@@ -26,62 +26,13 @@ Show a new application module:
 function show(id, title, serviceName, iframe, options)
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">id</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">A unique id for this module (must be unique across all modules of a given
-        application)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>Either</b>  <code>title</code>
-        <br /><b>or</b>  <code>{title, icon}</code>
-      </td>
-      <td style="text-align:left">String or Object</td>
-      <td style="text-align:left"><b>Either</b> the title of the module as a string
-        <br /><b>or</b> an object with the keys <code>title</code> and <code>icon</code> where
-        the value of <code>title</code> is a string and the value of <code>icon</code> is
-        the url of a 32x16 pixel sprite sheet
-        <br />(The first 16x16 pixels will be used in a dark theme, and second will
-        be used in the light theme.)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">serviceName</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">The name of a local service implemented by your application that will
-        be invoked when a user action is performed relating to this module</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">iframe</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">The URL for the content of the module (must be an HTTPS URL)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>
-          <br />An object, which can contain:</p>
-        <ul>
-          <li><code>canFloat</code>: if set to true, a menu item will be added to the
-            More menu (found under the (&#x2026;) on the module frame) that, when clicked,
-            will pop the module out into its own browser window</li>
-          <li><code>parentModuleId</code>: if set to the ID of a module opened by an
-            application, the specified module will not be closed when this module is
-            shown</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter                                                                                           | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                                                                                                  | String           | A unique id for this module (must be unique across all modules of a given application)                                                                                                                                                                                                                                                                                                                                      |
+| <p><strong>Either</strong> <code>title</code><br><strong>or</strong> <code>{title, icon}</code></p> | String or Object | <p><strong>Either</strong> the title of the module as a string<br><strong>or</strong> an object with the keys <code>title</code> and <code>icon</code> where the value of <code>title</code> is a string and the value of <code>icon</code> is the url of a 32x16 pixel sprite sheet<br>(The first 16x16 pixels will be used in a dark theme, and second will be used in the light theme.)</p>                              |
+| serviceName                                                                                         | String           | The name of a local service implemented by your application that will be invoked when a user action is performed relating to this module                                                                                                                                                                                                                                                                                    |
+| iframe                                                                                              | String           | The URL for the content of the module (must be an HTTPS URL)                                                                                                                                                                                                                                                                                                                                                                |
+| options                                                                                             | Object           | <p><br>An object, which can contain:</p><ul><li><code>canFloat</code>: if set to true, a menu item will be added to the More menu (found under the (…) on the module frame) that, when clicked, will pop the module out into its own browser window</li><li><code>parentModuleId</code>: if set to the ID of a module opened by an application, the specified module will not be closed when this module is shown</li></ul> |
 
 ```javascript
 modulesService.show(
@@ -95,7 +46,7 @@ modulesService.show(
 );
 ```
 
-## hide\(\)
+## hide()
 
 Hide an existing application module:
 
@@ -103,15 +54,15 @@ Hide an existing application module:
 function hide(id)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the module that should be hidden. |
+| Parameter | Type   | Description                                 |
+| --------- | ------ | ------------------------------------------- |
+| id        | String | The id of the module that should be hidden. |
 
 ```javascript
 modulesService.hide("hello");
 ```
 
-## setTitle\(\)
+## setTitle()
 
 Change the title of an existing application module:
 
@@ -123,16 +74,16 @@ Note that this only changes the title of a specific module, not all titles of al
 function setTitle(id, title)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the module for which the title should be changed |
-| **Either** `title` **or** `{title, icon}` | String or Object | **Either** the title of the module as a string **or** an object with the keys `title` and `icon` where the value of `title` is a string and the value of `icon` is the url of a 32x16 pixel sprite sheet \(The first 16x16 pixels will be used in a dark theme, and second will be used in the light theme.\) |
+| Parameters                                | Type             | Description                                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                                        | String           | The id of the module for which the title should be changed                                                                                                                                                                                                                                                  |
+| **Either** `title` **or** `{title, icon}` | String or Object | **Either** the title of the module as a string **or** an object with the keys `title` and `icon` where the value of `title` is a string and the value of `icon` is the url of a 32x16 pixel sprite sheet (The first 16x16 pixels will be used in a dark theme, and second will be used in the light theme.) |
 
 ```javascript
 modulesService.setTitle("hello", "New Module Title");
 ```
 
-## focus\(\)
+## focus()
 
 Focus an existing application module:
 
@@ -140,29 +91,29 @@ Focus an existing application module:
 function focus(id)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the module to focus |
+| Parameter | Type   | Description                   |
+| --------- | ------ | ----------------------------- |
+| id        | String | The id of the module to focus |
 
 ```javascript
 modulesService.focus("hello");
 ```
 
-## addMenuItem\(\)
+## addMenuItem()
 
-Add a menu item to the module's More \(...\) menu:
+Add a menu item to the module's More (...) menu:
 
 ```javascript
 function addMenuItem(moduleId, title, itemId)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| moduleId | String | The id of the module to which a menu item should be added |
-| title | String | The title of the item being added |
-| itemId | String | The id of the item being added to the menu |
+| Parameter | Type   | Description                                               |
+| --------- | ------ | --------------------------------------------------------- |
+| moduleId  | String | The id of the module to which a menu item should be added |
+| title     | String | The title of the item being added                         |
+| itemId    | String | The id of the item being added to the menu                |
 
-## setHandler\(\)
+## setHandler()
 
 You must specify your own application service for handling clicks on the menu item using `setHandler`.
 
@@ -172,10 +123,10 @@ You must implement the `menuSelect` method on your application service in order 
 function setHandler(moduleId, serviceName)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| moduleId | String | The id of the module for which menu selection is being handled |
-| title | String | The name of your application service that will be called when a module menu item has been selected \(This service must previously have been registered remotely.\) |
+| Parameter | Type   | Description                                                                                                                                                      |
+| --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| moduleId  | String | The id of the module for which menu selection is being handled                                                                                                   |
+| title     | String | The name of your application service that will be called when a module menu item has been selected (This service must previously have been registered remotely.) |
 
 ```javascript
 // The application service that will be used to handle menu item clicks
@@ -194,7 +145,7 @@ helloAppService.implement({
 });
 ```
 
-## openLink\(\)
+## openLink()
 
 Opens a link from your application in a new tab in the user's default browser. This method should be used to open links, rather than `<a href="..." target="_blank">...</a>`.
 
@@ -202,9 +153,9 @@ Opens a link from your application in a new tab in the user's default browser. T
 function openLink(url)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| url | String | The URL to be opened |
+| Parameter | Type   | Description          |
+| --------- | ------ | -------------------- |
+| url       | String | The URL to be opened |
 
 ```javascript
 // This code will live in your application view.
@@ -219,7 +170,7 @@ linkButton.addEventListener("click", function(){
 });
 ```
 
-## redirect\(\)
+## redirect()
 
 Reloads the content of the module at the new URL.
 
@@ -229,14 +180,13 @@ The Client Extensions API is designed for single-page applications. Use this met
 function redirect(id, url)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The unique identifier for the module. A module with this id must already exist. |
-| url | String | The URL of the new iframe to load in the module. |
+| Parameter | Type   | Description                                                                     |
+| --------- | ------ | ------------------------------------------------------------------------------- |
+| id        | String | The unique identifier for the module. A module with this id must already exist. |
+| url       | String | The URL of the new iframe to load in the module.                                |
 
 ```javascript
 onSelect : function(symbol) {
         this.modulesService.redirect(this.moduleId, MODULE.baseUrl + 'details?symbol=' + encodeURIComponent(symbol));
     },
 ```
-

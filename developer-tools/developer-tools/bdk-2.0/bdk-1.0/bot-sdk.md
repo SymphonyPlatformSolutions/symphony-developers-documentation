@@ -42,7 +42,7 @@ To install Symphony Bot SDK to your projects add the following entry in your `po
 
 To build and install Symphony Bot SDK from source you need to clone this repository and once you have all the requirements installed simply run:
 
-```text
+```
 $ mvn clean install
 ```
 
@@ -64,7 +64,7 @@ public class MyApplication {
 
 ## Configuration
 
-Symphony Bot SDK requires two main configuration files, `application.yaml` \(or `application.properties`\) and `bot-config.json`. The first one helps you to configure the SDK aspects and features while the latter holds Symphony details such as POD, agent and key manager addresses, bot and extension app details, etc.
+Symphony Bot SDK requires two main configuration files, `application.yaml` (or `application.properties`) and `bot-config.json`. The first one helps you to configure the SDK aspects and features while the latter holds Symphony details such as POD, agent and key manager addresses, bot and extension app details, etc.
 
 It is required to set the path to `bot-config.json` in `application.yaml` through the `bot-config` property, as well as, you must set the path to the RSA private key using `certs` property.
 
@@ -81,7 +81,7 @@ logging:
   file: /logs/bot-app.log
 ```
 
-In `bot-config.json` it is required to set the path to the RSA private key as well \(see `appPrivateKeyPath` and `botPrivateKeyPath`\):
+In `bot-config.json` it is required to set the path to the RSA private key as well (see `appPrivateKeyPath` and `botPrivateKeyPath`):
 
 ```javascript
 {
@@ -140,12 +140,12 @@ Certificates are the alternative to RSA keys for authentication with Symphony. F
 
 ## Adding bot commands
 
-Easily add commands to your bot by extending the `CommandHandler` class \(or its subclasses `AuthenticatedCommandHandler`, `DefaultCommandHandler` more on them later\).
+Easily add commands to your bot by extending the `CommandHandler` class (or its subclasses `AuthenticatedCommandHandler`, `DefaultCommandHandler` more on them later).
 
 To extend `CommandHandler` implement the following methods:
 
 * **`Predicate<String> getCommandMatcher()`**: use regular expression to specify the pattern to be used by the SDK to look for commands in Symphony messages.
-* **`handle(BotCommand command, SymphonyMessage response)`**: where you add your business logic to handle the command. This method is automatically called when a Symphony message matches the specified command pattern. Use the `BotCommand` object to retrieve the command details \(e.g. user who triggered it, room where the command was triggered, the raw command line, etc\). Use the `SymphonyMessage` object to format the command response. The SDK will take care of delivering the response to the correct Symphony room.
+* **`handle(BotCommand command, SymphonyMessage response)`**: where you add your business logic to handle the command. This method is automatically called when a Symphony message matches the specified command pattern. Use the `BotCommand` object to retrieve the command details (e.g. user who triggered it, room where the command was triggered, the raw command line, etc). Use the `SymphonyMessage` object to format the command response. The SDK will take care of delivering the response to the correct Symphony room.
 
 ```java
   @Override
@@ -181,7 +181,7 @@ To initialize your own logic prior to `CommandHandler` bootstrap, override the f
 
 Typically bots reply to invalid commands with a friendly default message. Extend the `DefaultCommandHandler` class to add that behavior to your bots.
 
-Similar to its base class \(i.e. `CommandHandler`\), in `DefaultCommandHandler` you will need to provide implementation for both `getCommandMatcher` and `handle` methods.
+Similar to its base class (i.e. `CommandHandler`), in `DefaultCommandHandler` you will need to provide implementation for both `getCommandMatcher` and `handle` methods.
 
 Use simple regular expressions to make sure the message was targeted to the bot.
 
@@ -203,7 +203,7 @@ Use simple regular expressions to make sure the message was targeted to the bot.
 
 Some bots may also need to send custom messages to different rooms. Extend the `MultiResponseCommandHandler` class to add that behavior to your bot.
 
-Similar to its base class \(i.e. `CommandHandler`\), in `MultiResponseCommandHandler` you will need to provide implementation for both `getCommandMatcher` and `handle` methods.
+Similar to its base class (i.e. `CommandHandler`), in `MultiResponseCommandHandler` you will need to provide implementation for both `getCommandMatcher` and `handle` methods.
 
 Use `MultiResponseComposer` to compose your messages.
 
@@ -335,14 +335,14 @@ would be built this way with `CommandMatcherBuilder`:
 
 ## Handling Symphony events
 
-Bots may need to react to events happening on Symphony rooms they are part of \(e.g. sending a greeting message to users who join the room\).
+Bots may need to react to events happening on Symphony rooms they are part of (e.g. sending a greeting message to users who join the room).
 
 Similarly to commands, Symphony Bot SDK offers straightforward mechanisms for your bots to be notified when something happens on Symphony chats. By extending the `EventHandler` class you register your bot to react to a specific Symphony event.
 
 To extend `EventHandler` you need to:
 
 * specify the event type: `EventHandler` is a parameterized class so you need to specified which event type you want to handle. _Refer to the following subsection for the list of supported events_.
-* implement **`void handle(<symphony_event> event, final SymphonyMessage eventResponse)`**: this is where you add your business logic to handle the specified event. This method is automatically called when the specified event occurs in a room where the bot is. Use the `event` object to retrieve event details \(e.g. target user or target room\). Use the `SymphonyMessage` object to format the event response. The SDK will take care of delivering the response to the correct Symphony room.
+* implement **`void handle(<symphony_event> event, final SymphonyMessage eventResponse)`**: this is where you add your business logic to handle the specified event. This method is automatically called when the specified event occurs in a room where the bot is. Use the `event` object to retrieve event details (e.g. target user or target room). Use the `SymphonyMessage` object to format the event response. The SDK will take care of delivering the response to the correct Symphony room.
 
 ```java
 public class UserJoinedEventHandler extends EventHandler<UserJoinedRoomEvent> {
@@ -378,11 +378,11 @@ By default, bots built with the Symphony Bot SDK are able to join public rooms. 
 
 It is also possible to configure a custom message the bot would send before quitting the room, through the following configurations:
 
-| Property | Description |
-| :--- | :--- |
-| `features.isPublicRoomAllowed` | Whether bot is allowed in public rooms |
-| `features.publicRoomNotAllowedMessage` | Message displayed before the bot leaves the room |
-| `features.publicRoomNotAllowedTemplate` | Template file with the message displayed before the bot leaves the room |
+| Property                                   | Description                                                                 |
+| ------------------------------------------ | --------------------------------------------------------------------------- |
+| `features.isPublicRoomAllowed`             | Whether bot is allowed in public rooms                                      |
+| `features.publicRoomNotAllowedMessage`     | Message displayed before the bot leaves the room                            |
+| `features.publicRoomNotAllowedTemplate`    | Template file with the message displayed before the bot leaves the room     |
 | `features.publicRoomNotAllowedTemplateMap` | Template parameters of the message displayed before the bot leaves the room |
 
 You can specify simple static message to be displayed before the bot leaves the room, by setting `publicRoomNotAllowedMessage`, like the example below:
@@ -415,8 +415,8 @@ To extend `ElementsHandler` you need to implement the following methods:
 
 * **`Predicate<String> getCommandMatcher()`**: similar to `CommandHandler`. Use regular expression to specify the pattern to be used by the SDK to look for commands in Symphony messages.
 * **`String getElementsFormId()`**: returns the Symphony Elements form ID.
-* **`void displayElements(BotCommand command, SymphonyMessage elementsResponse)`**: This is where you add your logic to render the Symphony Elements form.  Similar to `CommandHandler`, this method is automatically called when a Symphony message matches the specified command pattern. Use the `BotCommand` object to retrieve the command details \(e.g. user which triggered it, room where the command was triggered, the raw command line, etc\). Use the `SymphonyMessage` object to format the Symphony Elements form. The SDK will take care of delivering the response to the correct Symphony room.
-* **`void handleAction(SymphonyElementsEvent event, SymphonyMessage elementsResponse)`**: where you handle interactions with the Elements form. This method is automatically called when users submit the Elements form. The `SymphonyElementsEvent` holds details about the action performed on the form \(e.g. form payload, action name, etc\). Use the `SymphonyMessage` object to format a response according to the Elements form action.
+* **`void displayElements(BotCommand command, SymphonyMessage elementsResponse)`**: This is where you add your logic to render the Symphony Elements form.  Similar to `CommandHandler`, this method is automatically called when a Symphony message matches the specified command pattern. Use the `BotCommand` object to retrieve the command details (e.g. user which triggered it, room where the command was triggered, the raw command line, etc). Use the `SymphonyMessage` object to format the Symphony Elements form. The SDK will take care of delivering the response to the correct Symphony room.
+* **`void handleAction(SymphonyElementsEvent event, SymphonyMessage elementsResponse)`**: where you handle interactions with the Elements form. This method is automatically called when users submit the Elements form. The `SymphonyElementsEvent` holds details about the action performed on the form (e.g. form payload, action name, etc). Use the `SymphonyMessage` object to format a response according to the Elements form action.
 
 ```java
   private static final String FORM_ID = "quo-register-form";
@@ -489,7 +489,7 @@ Sample [Handlebars](https://github.com/jknack/handlebars.java)-based template fo
 
 ### ElementsActionHandler
 
-For scenarios where the Symphony Elements form is not generated through a command targeted to your bot \(e.g. a user interacting with an extension app, a notification from external system\) but you need to handle the interactions with that form, extend the `ElementsActionHandler` class rather than `ElementsHandler`.
+For scenarios where the Symphony Elements form is not generated through a command targeted to your bot (e.g. a user interacting with an extension app, a notification from external system) but you need to handle the interactions with that form, extend the `ElementsActionHandler` class rather than `ElementsHandler`.
 
 `ElementsActionHandler` is actually an `EventHandler` and therefore is simpler and easier to extend than `ElementsHandler`. It just requires implementing the `getElementsFormId` and `handle` methods.
 
@@ -497,14 +497,16 @@ For scenarios where the Symphony Elements form is not generated through a comman
 
 Receiving notifications from external systems directly into Symphony chats is another common use case for bots and Symphony Bot SDK delivers all the support you need by:
 
-1. Exposing the `/notification` endpoint through which external systems can send their events: http\(s\)://&lt;hostname&gt;:&lt;port&gt;/&lt;application\_context&gt;/notification
+1. Exposing the `/notification` endpoint through which external systems can send their events: http(s)://\<hostname>:\<port>/\<application\_context>/notification
 2. Offering mechanisms for you to register your own logic to process incoming notification requests through the `NotificationInterceptor` class, including discarding requests when applicable
 3. Sending notification contents to Symphony rooms
 4. Protecting the `/notification` endpoint
 
 For a tutorial on how to receive notifications using the BDK, continue here:
 
-{% page-ref page="../../../../building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md" %}
+{% content-ref url="../../../../building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md" %}
+[building-a-headless-bot-using-the-bdk.md](../../../../building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md)
+{% endcontent-ref %}
 
 ### Processing incoming requests
 
@@ -514,7 +516,7 @@ Extending `NotificationInterceptor` class will automatically register your inter
 
 To create your own `NotificationInterceptor` you simply need to implement the following method:
 
-* **`process(NotificationRequest notificationRequest, SymphonyMessage notificationMessage)`**: Where you add your business logic to process incoming requests \(e.g. HTTP header verification, JSON payload mapping, etc\). Use the `NotificationRequest` to retrieve all details of the notification request \(e.g. headers, payload, identifier\). You can also use its `getAttribute`/`setAttribute` methods to exchange data among your interceptors. Use the `SymphonyMessage` object to format the notification. The SDK will take care of delivering the response to the correct Symphony room. This method is automatically called for each notification request. Return false if the request should be discarded, true otherwise.
+* **`process(NotificationRequest notificationRequest, SymphonyMessage notificationMessage)`**: Where you add your business logic to process incoming requests (e.g. HTTP header verification, JSON payload mapping, etc). Use the `NotificationRequest` to retrieve all details of the notification request (e.g. headers, payload, identifier). You can also use its `getAttribute`/`setAttribute` methods to exchange data among your interceptors. Use the `SymphonyMessage` object to format the notification. The SDK will take care of delivering the response to the correct Symphony room. This method is automatically called for each notification request. Return false if the request should be discarded, true otherwise.
 
 ```java
   @Override
@@ -540,7 +542,7 @@ If you need to specify multiple request interceptors and want to control their e
 
 ### Forwarding notifications to rooms
 
-The notification support offered by the SDK uses an extra path parameter \(that is, `/notification/<some_value>`\) to identify which room a particular notification should be sent to. That extra parameter is internally called as 'identifier' and can be retrieved from the `NotificationRequest` object.
+The notification support offered by the SDK uses an extra path parameter (that is, `/notification/<some_value>`) to identify which room a particular notification should be sent to. That extra parameter is internally called as 'identifier' and can be retrieved from the `NotificationRequest` object.
 
 By default the SDK assumes the 'identifier' is the stream ID of the room. If for your scenario 'identifier' means something else or you have a completely different mechanism to identify the room, you must set the stream ID in `NotificationRequest` manually.
 
@@ -585,7 +587,7 @@ Symphony Bot SDK is shipped with [Handlebars](https://github.com/jknack/handleba
 
 Symphony Bot SDK integrates seamlessly with [SmsRenderer](https://github.com/SymphonyPlatformSolutions/sms-sdk-renderer-java) tool to offer predefined message templates.
 
-The file-based methods in `SymphonyMessage` \(`setTemplateFile` and `setEnrichedTemplateFile`\) can be used to render such templates. For that, you just need to specify the predefined template from `SmsRenderer.SmsTypes` enum:
+The file-based methods in `SymphonyMessage` (`setTemplateFile` and `setEnrichedTemplateFile`) can be used to render such templates. For that, you just need to specify the predefined template from `SmsRenderer.SmsTypes` enum:
 
 ```java
 public class TemplateSampleHandler extends CommandHandler {
@@ -626,13 +628,13 @@ The extension app authentication process spawns three steps which aim to establi
 
 Symphony Bot SDK removes all the complexity related to the authentication process by exposing the following endpoints through which an application can authenticate itself:
 
-| Method | Endpoint | Description | Request | Response |
-| :--- | :--- | :--- | :--- | :--- |
-| POST | /application/**authenticate** | Initiates the authentication process. Extension app sends its application ID, retrieved from Symphony Client APIs, which must match the same ID configured in Symphony Admin portal. An application token is returned to the extension app. | `{"appId": "myAppId"}` | `{"appId": "myAppId", "appToken": "bde...e"}` |
-| POST | /application/**tokens/validate** | Validates the application and Symphony tokens generated in previous step. Extension app provides the Symphony token, obtained through Symphony Client APIs. | `{"appToken":"05b...c",` `"symphonyToken":"0...6",` `"appId":"myAppId"}` | 200 OK if tokens valid, 401 Unauthorized otherwise |
-| POST | /application/**jwt/validate** | Validates a signed JWT holding user details | `{"jwt":"ey...g"}` | the user ID |
+| Method | Endpoint                         | Description                                                                                                                                                                                                                                 | Request                                                                  | Response                                           |
+| ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
+| POST   | /application/**authenticate**    | Initiates the authentication process. Extension app sends its application ID, retrieved from Symphony Client APIs, which must match the same ID configured in Symphony Admin portal. An application token is returned to the extension app. | `{"appId": "myAppId"}`                                                   | `{"appId": "myAppId", "appToken": "bde...e"}`      |
+| POST   | /application/**tokens/validate** | Validates the application and Symphony tokens generated in previous step. Extension app provides the Symphony token, obtained through Symphony Client APIs.                                                                                 | `{"appToken":"05b...c",` `"symphonyToken":"0...6",` `"appId":"myAppId"}` | 200 OK if tokens valid, 401 Unauthorized otherwise |
+| POST   | /application/**jwt/validate**    | Validates a signed JWT holding user details                                                                                                                                                                                                 | `{"jwt":"ey...g"}`                                                       | the user ID                                        |
 
-Extension apps must rely on those three endpoints in the order they are described to get authenticated to Symphony. If any of those steps fails, the authentication fails and extension app will not be launched \(i.e. not displayed on the left-nav menu\).
+Extension apps must rely on those three endpoints in the order they are described to get authenticated to Symphony. If any of those steps fails, the authentication fails and extension app will not be launched (i.e. not displayed on the left-nav menu).
 
 ### Exposing new endpoints
 
@@ -672,7 +674,7 @@ To access them, Symphony Bot SDK requires requests to have the HTTP authorizatio
 
 It is possible to configure a different value for the secure path. In `bot-config.json` change the following property:
 
-```text
+```
   "authenticationFilterUrlPattern": "/secure/",
 ```
 
@@ -712,7 +714,7 @@ Note: For any communication issue with Symphony a `SymphonyClientException` is r
 
 ### Serving the extension app
 
-Static assets of an extension app \(e.g. Javascript, CSS, images, HTML\) can be served either in a separated host or along with the bundle you generate for your Symphony Bot SDK.
+Static assets of an extension app (e.g. Javascript, CSS, images, HTML) can be served either in a separated host or along with the bundle you generate for your Symphony Bot SDK.
 
 If you plan to have a different server for you web UI, make sure CORS is properly configured. In `application.yaml` add the following properties:
 
@@ -724,7 +726,7 @@ cors:
 
 To distribute the extension app as part of your Symphony Bot SDK based application, place all of you static assets under: `<symphony bot application base path>/src/main/resources/public` and build your application. In this case, all of your assets will be under `/app/` path. Example, my\_image.png file placed under `public` directory would be accessible in the following URL:
 
-```text
+````
 **Notice:** When registering your extension apps in Symphony Admin portal, make sure you take the ```/app/``` into account when setting the load URL.
 
 
@@ -745,23 +747,23 @@ Please refer to following sub-sections for more details.
 
 ```javascript
 "a log message from frontend"
-```
+````
 
 ### Automatic endpoint documentation
 
 Symphony Bot SDK is shipped with [Swagger](https://swagger.io/tools/open-source/getting-started/) already configured. Documentation for all existing endpoints and new ones that you may add can be found here:
 
-```text
+```
 http(s)://<hostname>:<port>/<application_context>/swagger-ui.html
 ```
 
 ## Real-Time events
 
-With Symphony Bot SDK your extension apps can quickly leverage real-time events. Based on the Server-Sent Event \(SSE\) technology, Symphony Bot SDK delivers real-time events support through the following components:
+With Symphony Bot SDK your extension apps can quickly leverage real-time events. Based on the Server-Sent Event (SSE) technology, Symphony Bot SDK delivers real-time events support through the following components:
 
 * `SseController` which exposes the endpoint through which extension applications subscribe for real-time events
 * `SsePublisher`, a base class to publish real-time events
-* `SseSubscriber`, an abstraction of clients subscribing for events   
+* `SseSubscriber`, an abstraction of clients subscribing for events  &#x20;
 
 ### Publishing events
 
@@ -869,9 +871,9 @@ Note: DO NOT block the thread in `onSubscriberAdded` and `onSubscriberRemoved` m
 
 ### Subscribing to event types
 
-| Method | URL | Description |
-| :--- | :--- | :--- |
-| GET | /secure/events/&lt;comma separated event types&gt; | Subscribe to the specified event types. Use query params to add metadata such as filtering criteria. |
+| Method | URL                                           | Description                                                                                          |
+| ------ | --------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| GET    | /secure/events/\<comma separated event types> | Subscribe to the specified event types. Use query params to add metadata such as filtering criteria. |
 
 **Client sample**
 
@@ -882,9 +884,9 @@ const evtSource = new EventSource("http://localhost:8080/botapp/secure/events/st
 
 ### Event stream mapping
 
-If you have multiple `SsePublisher` generating events of different nature \(e.g. stock prices and currencies exchange rates\), you can name the event types so that subscribers are properly served by the corresponding publishers.
+If you have multiple `SsePublisher` generating events of different nature (e.g. stock prices and currencies exchange rates), you can name the event types so that subscribers are properly served by the corresponding publishers.
 
-Symphony Bot SDK automatically maps clients requests to the corresponding publishers based on the event types present in the request path \(e.g. /stockprice, /x-rate\). Event types in client requests must match the ones registered by publishers through `getEventTypes()` method.
+Symphony Bot SDK automatically maps clients requests to the corresponding publishers based on the event types present in the request path (e.g. /stockprice, /x-rate). Event types in client requests must match the ones registered by publishers through `getEventTypes()` method.
 
 **Client sample**
 
@@ -930,14 +932,14 @@ Such features consist of the following HTTP endpoints that you can use to pull h
 
 * **/monitor/info**: simple endpoint that returns HTTP 200 OK when application is up
 * **/monitor/health**: provides health details. By default, only Symphony-related health details are exposed
-* **/monitor/prometheus**: health and metrics details to be consumed by [Prometheus](https://prometheus.io/)
+* **/monitor/prometheus**: health and metrics details to be consumed by [Prometheus](https://prometheus.io)
 
 ### Extending health details
 
 The Symphony Bot SDK monitoring system is based on Spring Actuators. By default, it exposes the following health metrics:
 
 * **overall system health status**: represented by the top `status` field. It shows 'UP' if all other metrics are fine, that is, 'UP'.
-* **symphony**: symphony components metrics. It shows 'UP' only if your bot is properly communicating with the POD and agent and all Symphony components \(e.g. agent, Key Manager, POD\) are accessible.
+* **symphony**: symphony components metrics. It shows 'UP' only if your bot is properly communicating with the POD and agent and all Symphony components (e.g. agent, Key Manager, POD) are accessible.
 
 ```javascript
 {
@@ -966,7 +968,7 @@ The Symphony Bot SDK monitoring system is based on Spring Actuators. By default,
 
 There are many other built-in metrics in Spring Actuator. Please refer to their documentation for enabling those metrics.
 
-To create your own custom metric you need to implement the Spring Actuator `HealthIndicator` interface and use `Health` builder to convey your status. Your metrics are automatically integrated with the system ones in the monitoring endpoint: http\(s\)://&lt;hostname&gt;:&lt;port&gt;/&lt;application\_context&gt;/monitor/health.
+To create your own custom metric you need to implement the Spring Actuator `HealthIndicator` interface and use `Health` builder to convey your status. Your metrics are automatically integrated with the system ones in the monitoring endpoint: http(s)://\<hostname>:\<port>/\<application\_context>/monitor/health.
 
 ```java
 public class InternetConnectivityHealthIndicator implements HealthIndicator {
@@ -992,7 +994,7 @@ public class InternetConnectivityHealthIndicator implements HealthIndicator {
 
 ### Extending Prometheus details
 
-Spring Actuator exposes default metrics in Prometheus endpoint. Symphony Bot SDK extends them to also include the communication status of Symphony-related components \(e.g. agent, Key Manager, POD\).
+Spring Actuator exposes default metrics in Prometheus endpoint. Symphony Bot SDK extends them to also include the communication status of Symphony-related components (e.g. agent, Key Manager, POD).
 
 To expose your own custom details in Prometheus endpoint, you need to implement `MeterBinder` interface as follow:
 
@@ -1034,7 +1036,7 @@ If SSL connection to any endpoint uses private or self-signed certificates, add 
 
 ### Proxy support
 
-In case connection to Symphony components \(e.g. POD, agent, key manager\) requires going through proxies, the following properties can be set in `bot-config.json`:
+In case connection to Symphony components (e.g. POD, agent, key manager) requires going through proxies, the following properties can be set in `bot-config.json`:
 
 ```javascript
 // If only POD access requires proxy. Username/password only required
@@ -1129,8 +1131,8 @@ request-origin:
 
 It is possible to limit access to your application using the Symphony Bot SDK's throttling mechanism. You need to specify the limit and one of the throttling modes:
 
-* ORIGIN: limits request rate based on origin IP address    
-* ENDPOINT: limits request rate per endpoints exposed by your application \(default if not specified\)
+* ORIGIN: limits request rate based on origin IP address   &#x20;
+* ENDPOINT: limits request rate per endpoints exposed by your application (default if not specified)
 
 {% hint style="info" %}
 Note: When an application is running behind load balancers or firewalls, the calling IP address may be rewritten. Usually such network components keep the original IP address in HTTP headers. Symphony Bot SDK looks for the following headers when throttling in ORIGIN mode:
@@ -1161,56 +1163,55 @@ The timeout property is used to define the maximum amount of time a request wait
 
 ### Settings reference
 
-| Property | Description | Configuration file |
-| :--- | :--- | :--- |
-| `truststorePath` | The truststore path | bot-config.json |
-| `truststorePassword` | The truststore password | bot-config.json |
-| `podProxyURL` | The pod proxy URL | bot-config.json |
-| `podProxyUsername` | The pod proxy username | bot-config.json |
-| `podProxyPassword` | The pod proxy password | bot-config.json |
-| `proxyURL` | The agent and pod proxy URL | bot-config.json |
-| `proxyUsername` | The agent and pod proxy username | bot-config.json |
-| `proxyPassword` | The agent and pod proxy password | bot-config.json |
-| `keyManagerProxyURL` | The key manager proxy URL | bot-config.json |
-| `keyManagerProxyUsername` | The key manager proxy username | bot-config.json |
-| `keyManagerProxyPassword` | The key manager proxy password | bot-config.json |
-| `server.port` | Port to be used by application \(e.g. 8080\) | application.yaml |
-| `server.servlet.context-path` | Application context path \(e.g. /botapp\) | application.yaml |
-| `certs` | Path to the directory containing bot private key | application.yaml |
-| `logging.file` | The log file path \(including file name\) | application.yaml |
-| `logging.level.<package>` | The log level for the given package \(e.g. DEBUG, INFO, WARN, ERROR\) | application.yaml |
-| `access-control.name` | The username for basic authentication | application.yaml |
-| `access-control.hashedPassword` | The salted hashed password for basic authentication | application.yaml |
-| `access-control.salt` | Salt used when hashing password | application.yaml |
-| `access-control.ipWhitelist` | The IP whitelist set | application.yaml |
-| `access-control.urlMapping` | The endpoints protected by either basic authentication or IP whitelist | application.yaml |
-| `concurrency.bot.pool.core-size` | The bot concurrency pools coreSize | application.yaml |
-| `concurrency.bot.pool.max-size` | The bot concurrency pools max size | application.yaml |
-| `concurrency.bot.pool.queue-capacity` | The bot concurrency pools queue capacity | application.yaml |
-| `concurrency.bot.pool.thread-name-prefix` | The bot concurrency pools thread name prefix | application.yaml |
-| `concurrency.sse.pool.core-size` | The SSE concurrency pools coreSize | application.yaml |
-| `concurrency.sse.pool.max-size` | The SSE concurrency pools max size | application.yaml |
-| `concurrency.sse.pool.queue-capacity` | The SSE concurrency pools queue capacity \(if 0 returns immediately if no thread available\) | application.yaml |
-| `concurrency.sse.pool.thread-name-prefix` | The SSE concurrency pools thread name prefix | application.yaml |
-| `concurrency.sse.subscriber.queue-capacity` | Capacity of SSE subscriber queue. Defines the maximum number of concurrent publishers writing to the queue | application.yaml |
-| `concurrency.sse.subscriber.queue-timeout` | How long a subscriber will wait for events before sending a keep-alive | application.yaml |
-| `cors.allowed-origin` | The allowed origin domain | application.yaml |
-| `cors.url-mapping` | The endpoints which CORS support should be applied to | application.yaml |
-| `xss.url-mapping` | The endpoints which cross-site scripting protection should be applied to | application.yaml |
-| `request-origin.origin-header` | The HTTP header used to convey the request origin secret | application.yaml |
-| `request-origin.url-mapping` | The endpoints for which origin header should be verified | application.yaml |
-| `restclient.proxy.address` | The rest client proxy address | application.yaml |
-| `restclient.proxy.port` | The rest client port | application.yaml |
-| `restclient.timeout` | The rest client timeout | application.yaml |
-| `throttling.limit` | Limits the number of requests per second | application.yaml |
-| `throttling.mode` | Throttling modes: ORIGIN - throttle based on IP or ENDPOINT - throttle based on target endpoint. If not specified, default to ENDPOINT | application.yaml |
-| `throttling.timeout` | Maximum amount of time a request waits before a HTTP 408 is returned to client | application.yaml |
-| `features.commandFeedback` | The command feedback enablement | application.yaml |
-| `features.transactionIdOnError` | The transaction id on error enablement | application.yaml |
-| `features.eventUnexpectedErrorMessage` | The message for unexpected errors on events | application.yaml |
-| `features.notificationBaseUrl` | The notification base URL | application.yaml |
-| `features.isPublicRoomAllowed` | The enablement for allowing bot addition to public rooms | application.yaml |
-| `features.publicRoomNotAllowedMessage` | The message when adding bots to public rooms is not allowed | application.yaml |
-| `features.publicRoomNotAllowedTemplate` | The template to be used when adding bots to public rooms is not allowed | application.yaml |
-| `features.publicRoomNotAllowedTemplateMap` | The parameter of the template to be used when adding bots to public rooms is not allowed | application.yaml |
-
+| Property                                    | Description                                                                                                                            | Configuration file |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `truststorePath`                            | The truststore path                                                                                                                    | bot-config.json    |
+| `truststorePassword`                        | The truststore password                                                                                                                | bot-config.json    |
+| `podProxyURL`                               | The pod proxy URL                                                                                                                      | bot-config.json    |
+| `podProxyUsername`                          | The pod proxy username                                                                                                                 | bot-config.json    |
+| `podProxyPassword`                          | The pod proxy password                                                                                                                 | bot-config.json    |
+| `proxyURL`                                  | The agent and pod proxy URL                                                                                                            | bot-config.json    |
+| `proxyUsername`                             | The agent and pod proxy username                                                                                                       | bot-config.json    |
+| `proxyPassword`                             | The agent and pod proxy password                                                                                                       | bot-config.json    |
+| `keyManagerProxyURL`                        | The key manager proxy URL                                                                                                              | bot-config.json    |
+| `keyManagerProxyUsername`                   | The key manager proxy username                                                                                                         | bot-config.json    |
+| `keyManagerProxyPassword`                   | The key manager proxy password                                                                                                         | bot-config.json    |
+| `server.port`                               | Port to be used by application (e.g. 8080)                                                                                             | application.yaml   |
+| `server.servlet.context-path`               | Application context path (e.g. /botapp)                                                                                                | application.yaml   |
+| `certs`                                     | Path to the directory containing bot private key                                                                                       | application.yaml   |
+| `logging.file`                              | The log file path (including file name)                                                                                                | application.yaml   |
+| `logging.level.<package>`                   | The log level for the given package (e.g. DEBUG, INFO, WARN, ERROR)                                                                    | application.yaml   |
+| `access-control.name`                       | The username for basic authentication                                                                                                  | application.yaml   |
+| `access-control.hashedPassword`             | The salted hashed password for basic authentication                                                                                    | application.yaml   |
+| `access-control.salt`                       | Salt used when hashing password                                                                                                        | application.yaml   |
+| `access-control.ipWhitelist`                | The IP whitelist set                                                                                                                   | application.yaml   |
+| `access-control.urlMapping`                 | The endpoints protected by either basic authentication or IP whitelist                                                                 | application.yaml   |
+| `concurrency.bot.pool.core-size`            | The bot concurrency pools coreSize                                                                                                     | application.yaml   |
+| `concurrency.bot.pool.max-size`             | The bot concurrency pools max size                                                                                                     | application.yaml   |
+| `concurrency.bot.pool.queue-capacity`       | The bot concurrency pools queue capacity                                                                                               | application.yaml   |
+| `concurrency.bot.pool.thread-name-prefix`   | The bot concurrency pools thread name prefix                                                                                           | application.yaml   |
+| `concurrency.sse.pool.core-size`            | The SSE concurrency pools coreSize                                                                                                     | application.yaml   |
+| `concurrency.sse.pool.max-size`             | The SSE concurrency pools max size                                                                                                     | application.yaml   |
+| `concurrency.sse.pool.queue-capacity`       | The SSE concurrency pools queue capacity (if 0 returns immediately if no thread available)                                             | application.yaml   |
+| `concurrency.sse.pool.thread-name-prefix`   | The SSE concurrency pools thread name prefix                                                                                           | application.yaml   |
+| `concurrency.sse.subscriber.queue-capacity` | Capacity of SSE subscriber queue. Defines the maximum number of concurrent publishers writing to the queue                             | application.yaml   |
+| `concurrency.sse.subscriber.queue-timeout`  | How long a subscriber will wait for events before sending a keep-alive                                                                 | application.yaml   |
+| `cors.allowed-origin`                       | The allowed origin domain                                                                                                              | application.yaml   |
+| `cors.url-mapping`                          | The endpoints which CORS support should be applied to                                                                                  | application.yaml   |
+| `xss.url-mapping`                           | The endpoints which cross-site scripting protection should be applied to                                                               | application.yaml   |
+| `request-origin.origin-header`              | The HTTP header used to convey the request origin secret                                                                               | application.yaml   |
+| `request-origin.url-mapping`                | The endpoints for which origin header should be verified                                                                               | application.yaml   |
+| `restclient.proxy.address`                  | The rest client proxy address                                                                                                          | application.yaml   |
+| `restclient.proxy.port`                     | The rest client port                                                                                                                   | application.yaml   |
+| `restclient.timeout`                        | The rest client timeout                                                                                                                | application.yaml   |
+| `throttling.limit`                          | Limits the number of requests per second                                                                                               | application.yaml   |
+| `throttling.mode`                           | Throttling modes: ORIGIN - throttle based on IP or ENDPOINT - throttle based on target endpoint. If not specified, default to ENDPOINT | application.yaml   |
+| `throttling.timeout`                        | Maximum amount of time a request waits before a HTTP 408 is returned to client                                                         | application.yaml   |
+| `features.commandFeedback`                  | The command feedback enablement                                                                                                        | application.yaml   |
+| `features.transactionIdOnError`             | The transaction id on error enablement                                                                                                 | application.yaml   |
+| `features.eventUnexpectedErrorMessage`      | The message for unexpected errors on events                                                                                            | application.yaml   |
+| `features.notificationBaseUrl`              | The notification base URL                                                                                                              | application.yaml   |
+| `features.isPublicRoomAllowed`              | The enablement for allowing bot addition to public rooms                                                                               | application.yaml   |
+| `features.publicRoomNotAllowedMessage`      | The message when adding bots to public rooms is not allowed                                                                            | application.yaml   |
+| `features.publicRoomNotAllowedTemplate`     | The template to be used when adding bots to public rooms is not allowed                                                                | application.yaml   |
+| `features.publicRoomNotAllowedTemplateMap`  | The parameter of the template to be used when adding bots to public rooms is not allowed                                               | application.yaml   |

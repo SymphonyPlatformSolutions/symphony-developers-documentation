@@ -14,7 +14,9 @@ The answer lies in Symphony's open REST API. Once authenticated, Symphony bots c
 
 For a full overview of Symphony's REST API continue here:
 
-{% page-ref page="../overview-of-rest-api/" %}
+{% content-ref url="../overview-of-rest-api/" %}
+[overview-of-rest-api](../overview-of-rest-api/)
+{% endcontent-ref %}
 
 ## Next Steps
 
@@ -53,19 +55,25 @@ Users can interact with Symphony Bots in IMs, MIMs, and in chatrooms. Before bui
 
 If so, you are looking to build a **chatbot**, which is a type of Symphony Bot that allows direct user interaction in the form of request/reply. You can learn more about rich chat-based workflows and building chatbots here:
 
-{% page-ref page="chatbot/" %}
+{% content-ref url="chatbot/" %}
+[chatbot](chatbot/)
+{% endcontent-ref %}
 
-### Will your Bot need to collect structured/unstructured data through [Symphony Elements](../symphony-elements/)?
+### Will your Bot need to collect structured/unstructured data through [Symphony Elements](../messages/overview-of-messageml/symphony-elements-1/)?
 
 If so, you are looking to build an **interactive bot.** Interactive bots leverage Symphony Elements to collect user data and feedback through forms, textfields, buttons, etc. You can learn more about interactive workflows and Symphony Elements here:
 
-{% page-ref page="interactive-bot/" %}
+{% content-ref url="interactive-bot/" %}
+[interactive-bot](interactive-bot/)
+{% endcontent-ref %}
 
 ### Will your Bot act as a notification system, without any chat or request/reply mechanisms?
 
 If so, you are looking to build a **headless bot.** Headless bots can leverage Symphony webhooks or build custom notification handlers and formatters from external systems. You can learn more about headless bot workflows and notification handlers here:
 
-{% page-ref page="headless-bot/" %}
+{% content-ref url="headless-bot/" %}
+[headless-bot](headless-bot/)
+{% endcontent-ref %}
 
 ## 4.  What is your Bot's entry point?
 
@@ -78,5 +86,6 @@ Lastly, it's important to clearly define the lifecycle and scope of your bot's w
 
 Continue here for a full list of Bot's best practices to establish Bot parameters, scope, and protocol:
 
-{% page-ref page="../bots-best-practices.md" %}
-
+{% content-ref url="../bots-best-practices.md" %}
+[bots-best-practices.md](../bots-best-practices.md)
+{% endcontent-ref %}

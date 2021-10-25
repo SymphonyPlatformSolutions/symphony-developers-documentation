@@ -16,7 +16,7 @@ Symphony provides SDKs in the following languages:
 * .NET
 
 {% hint style="info" %}
-Note: Symphony provides a dedicated Bot SDK for Java developers. While Java developers can choose to use the Java SDK, we recommend you check out the latest version of the  Bot SDK \(BDK 2.0\) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+Note: Symphony provides a dedicated Bot SDK for Java developers. While Java developers can choose to use the Java SDK, we recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
 
 ### [BDK 2.0](bdk-2.0/)
 {% endhint %}
@@ -26,7 +26,7 @@ Note: Symphony provides a dedicated Bot SDK for Java developers. While Java deve
 The SDKs have a common configuration protocol across the 4 languages.  Bot's running on the SDKs expect a standard `config.json` file, in which you specify your development environment, authentication credentials, as well as bot metadata:
 
 {% hint style="info" %}
-Note: While RSA is the preferred method of authentication, all SDKs support both certificate-based and RSA authentication.    
+Note: While RSA is the preferred method of authentication, all SDKs support both certificate-based and RSA authentication.   &#x20;
 {% endhint %}
 
 {% tabs %}
@@ -282,7 +282,7 @@ Note: While RSA is the preferred method of authentication, all SDKs support both
 {% endtab %}
 {% endtabs %}
 
-## Datafeed 
+## Datafeed&#x20;
 
 Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
 
@@ -292,9 +292,9 @@ After the `DatafeedEventService` creates/reads from the datafeed API, it categor
 
 The following diagram shows the event handling workflow:
 
-![](../../.gitbook/assets/copy-of-on-prem-bot-auth_workflow-copy-3%20%282%29%20%282%29%20%282%29.png)
+![](<../../.gitbook/assets/copy-of-on-prem-bot-auth\_workflow-copy-3 (2) (2) (2).png>)
 
-  
+\
 Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
 
 {% tabs %}
@@ -398,17 +398,23 @@ public class MyRoomListener : RoomListener
 
 Generating SDK bot projects is made simple with the Symphony Generator.  This is a command-line utility that generates language specific code scaffolds on top of our SDKs.  To learn more about generating your bot project navigate here:
 
-{% page-ref page="symphony-bot-generator.md" %}
+{% content-ref url="symphony-bot-generator.md" %}
+[symphony-bot-generator.md](symphony-bot-generator.md)
+{% endcontent-ref %}
 
-For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here: 
+For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here:&#x20;
 
-{% page-ref page="../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
+{% content-ref url="../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
+{% endcontent-ref %}
 
 ## Tutorials
 
 Check out the following SDK tutorials to learn about how to leverage the SDKs to quickly build powerful workflows and automations:
 
-{% page-ref page="../../building-bots-on-symphony/tutorials/sdk/" %}
+{% content-ref url="../../building-bots-on-symphony/tutorials/sdk/" %}
+[sdk](../../building-bots-on-symphony/tutorials/sdk/)
+{% endcontent-ref %}
 
 ## Reference
 
@@ -416,11 +422,9 @@ Check out the following Github repositories for direct access and reference to S
 
 ### [Java SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/tree/master/symphony-bdk-legacy/symphony-api-client-java)
 
-### [Python SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-python) 
+### [Python SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-python)&#x20;
 
 ### [Node.js SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-node)
 
 ### [.NET SDK](https://github.com/SymphonyPlatformSolutions/symphony-api-client-dotnet)
-
-
 

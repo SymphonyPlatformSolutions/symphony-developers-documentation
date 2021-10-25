@@ -8,7 +8,7 @@ In order to create a bot and begin your development journey, you must first crea
 
 ## Create a Bot User
 
-1. Navigate to your Symphony admin console for your Pod \(for example, [https://mycompany.symphony.com/?admin\](https://mycompany.symphony.com/?admin\)\) and login with your credentials.
+1. Navigate to your Symphony admin console for your Pod (for example, [https://mycompany.symphony.com/?admin\\](https://mycompany.symphony.com/?admin\\)) and login with your credentials.
 2. Select '**CREATE AN ACCOUNT**' from the left hand navigation.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.31.28-pm.png)
@@ -19,13 +19,12 @@ In order to create a bot and begin your development journey, you must first crea
 
 1. Fill in the '**Basic Information'** and the '**Additional Information'** sections
 
-![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.35.11-pm%20%283%29%20%283%29%20%283%29%20%283%29%20%283%29.png)
+![](<../../.gitbook/assets/screen-shot-2020-07-01-at-5.35.11-pm (3) (3) (3) (3) (3).png>)
 
-1. Enable the appropriate role\(s\) that your bot requires. 
+1. Enable the appropriate role(s) that your bot requires.&#x20;
 
-![](../../.gitbook/assets/screen-shot-2020-07-01-at-5.36.17-pm%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29.png)
+![](<../../.gitbook/assets/screen-shot-2020-07-01-at-5.36.17-pm (2) (2) (2) (2) (2).png>)
 
 {% hint style="info" %}
 Navigate to [Bot Permissions](bot-permissions.md) for a full list of bot roles and privileges.
 {% endhint %}
-

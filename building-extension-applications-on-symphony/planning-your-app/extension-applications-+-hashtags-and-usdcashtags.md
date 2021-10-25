@@ -1,9 +1,9 @@
-# Extension Applications + \#hashtags and $cashtags
+# Extension Applications + #hashtags and $cashtags
 
-Symphony extension apps have the ability to extend various parts of the Symphony client user interface or UI. One common implementation is to add buttons to Symphony's native \#hashtag and $cashtag modules.
+Symphony extension apps have the ability to extend various parts of the Symphony client user interface or UI. One common implementation is to add buttons to Symphony's native #hashtag and $cashtag modules.
 
 {% hint style="info" %}
-Note: This guide is an overview of how to leverage the Extension API in order to extend the native \#hashtag and $cashtag hover cards. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).
+Note: This guide is an overview of how to leverage the Extension API in order to extend the native #hashtag and $cashtag hover cards. For an in depth reference of the UI Service and its methods refer to the [UI Service guide](../overview-of-extension-api/extension-api-services/ui-service/).
 {% endhint %}
 
 ## 1.  Subscribe and Register your Extension
@@ -22,10 +22,10 @@ function registerExtension(uiClass, id, serviceName, options)
 
 The `uiClass` parameter of this function represents the location within the Symphony client where the UI extension will appear. In this case, the possible values for the uiClass parameter are the following:
 
-| uiClass | Description |
-| :--- | :--- |
-| `hashtag` | Link added to hovercard that appears when hovering over a hashtag \(e.g. \#symphony\) |
-| `cashtag` | Link added to hovercard that appears when hovering over a cashtag \(e.g. $GOOG\) |
+| uiClass   | Description                                                                        |
+| --------- | ---------------------------------------------------------------------------------- |
+| `hashtag` | Link added to hovercard that appears when hovering over a hashtag (e.g. #symphony) |
+| `cashtag` | Link added to hovercard that appears when hovering over a cashtag (e.g. $GOOG)     |
 
 To customize the look and feel of your button, you can pass in an object containing an icon, label, and data to the options parameter:
 
@@ -39,7 +39,7 @@ To customize the look and feel of your button, you can pass in an object contain
 
 ## 2.  Listen for Events
 
-Once you have registered your UI extension of the appropriate UI class, you can listen for and handle user clicks by implementing the `trigger()` method on your application service. This `trigger()` function will be called each time your extended uiClass button, \#hashtag, or $cashtag is clicked inside the Symphony client. The `trigger()` method must be `implemented` on your registered application service:
+Once you have registered your UI extension of the appropriate UI class, you can listen for and handle user clicks by implementing the `trigger()` method on your application service. This `trigger()` function will be called each time your extended uiClass button, #hashtag, or $cashtag is clicked inside the Symphony client. The `trigger()` method must be `implemented` on your registered application service:
 
 ```javascript
 // The application service that will be used to handle clicks on UI extensions
@@ -72,14 +72,14 @@ helloControllerService.implement({
 ```
 
 {% hint style="info" %}
-Note: Extensions created on \#hashtag and $cashtag modules do not have access to user data. To learn more about building extension apps that are able to access user and conversation data check out our guide on [Extension Apps with UI Buttons](extension-applications-+-ui-buttons.md#receiving-conversation-and-user-data).
+Note: Extensions created on #hashtag and $cashtag modules do not have access to user data. To learn more about building extension apps that are able to access user and conversation data check out our guide on [Extension Apps with UI Buttons](extension-applications-+-ui-buttons.md#receiving-conversation-and-user-data).
 {% endhint %}
 
 ## 3.  Filter Events
 
-Additionally, the UI Service provides a `filter()` function that allows you to control if/when your UI Extension is displayed. The `filter()` function is called each time your custom extension is invoked from a user click. In this case, each time a \#hashtag or $cashtag link is clicked, the `filter()` function will be called in order to determine if the custom button should be rendered on the \#hashtag or $cashtag hover card.
+Additionally, the UI Service provides a `filter()` function that allows you to control if/when your UI Extension is displayed. The `filter()` function is called each time your custom extension is invoked from a user click. In this case, each time a #hashtag or $cashtag link is clicked, the `filter()` function will be called in order to determine if the custom button should be rendered on the #hashtag or $cashtag hover card.
 
-The `filter()` function receives the `uiClass`, `id`, and `payload` parameters passed to the `trigger()` function. Based of the information returned, you can selectively display a button on a \#hashtag or $cashtag hovercard:
+The `filter()` function receives the `uiClass`, `id`, and `payload` parameters passed to the `trigger()` function. Based of the information returned, you can selectively display a button on a #hashtag or $cashtag hovercard:
 
 ```javascript
 // Implement the filter function on your application service
@@ -96,7 +96,8 @@ Note: If the `filter()` function on this particular service returns False, the b
 
 ## 4.  Add Custom Business Logic
 
-Now that you've register your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time your extension/button is clicked. Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 \(Bot Developer Kit\):
+Now that you've register your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time your extension/button is clicked. Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 (Bot Developer Kit):
 
-{% page-ref page="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
-
+{% content-ref url="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
+[building-an-extension-app-with-hashtags-+-usdcashtags.md](../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
+{% endcontent-ref %}

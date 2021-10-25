@@ -21,10 +21,10 @@ The following events are returned when reading from a real time messages and eve
 
 All events follow the structure below:
 
-* `id`: A randomly generated ID for the event, distinct from the ID of the message or chatroom or other objects that the event pertains to. These IDs are unique, except in the situation where two activities are performed simultaneously in the Symphony client \(for example, members are added during the creation of a room\). In this case, the two associated events will share the same id. This is for Symphony internal use.
-* `timestamp`: The timestamp for when the event occurred in Unix timestamp milliseconds format. For certain events, this will be equivalent to the created timestamp of the object the event pertains to \(for instance, room creation timestamp\).
-* `type`: The type of event that occurred \(for instance, a "MessageSent" or "RoomCreated" event\).
-* `initiator`: The actor that initiated the event. Currently, initiator will always be a user. The initiator user may be distinct from the affected user \(for instance, when one user adds another user to a chatroom\).
+* `id`: A randomly generated ID for the event, distinct from the ID of the message or chatroom or other objects that the event pertains to. These IDs are unique, except in the situation where two activities are performed simultaneously in the Symphony client (for example, members are added during the creation of a room). In this case, the two associated events will share the same id. This is for Symphony internal use.
+* `timestamp`: The timestamp for when the event occurred in Unix timestamp milliseconds format. For certain events, this will be equivalent to the created timestamp of the object the event pertains to (for instance, room creation timestamp).
+* `type`: The type of event that occurred (for instance, a "MessageSent" or "RoomCreated" event).
+* `initiator`: The actor that initiated the event. Currently, initiator will always be a user. The initiator user may be distinct from the affected user (for instance, when one user adds another user to a chatroom).
 * `payload`: An object containing event-specific information that is keyed off the event type.
 
 ### Message Sent
@@ -118,8 +118,8 @@ Events attributes details:
 Note:
 
 * Th event `initiator` and the message `user` are the same
-* Hashtags and cashtags in EntityJSON have no '\#' or '$'
-* An external chatroom can contain messages with `externalRecipients` set to `false` in cases where external users hav not been added to the chatroom yet.  
+* Hashtags and cashtags in EntityJSON have no '#' or '$'
+* An external chatroom can contain messages with `externalRecipients` set to `false` in cases where external users hav not been added to the chatroom yet. &#x20;
 {% endhint %}
 
 ### Messages Suppressed
@@ -150,7 +150,7 @@ Generated when messages are suppressed:
 
 ### Symphony Elements Action
 
-Generated when a user replies to a bot message that contains an interactive form with UX components such as text fields, radio buttons, checkboxes, person selectors and more.  Please refer to [Symphony Elements](../symphony-elements/) for more information.  
+Generated when a user replies to a bot message that contains an interactive form with UX components such as text fields, radio buttons, checkboxes, person selectors and more.  Please refer to [Symphony Elements](../messages/overview-of-messageml/symphony-elements-1/) for more information. &#x20;
 
 ```javascript
 [
@@ -405,7 +405,7 @@ Generated when a room of which the user in context is a member is updated, inclu
 
 Generated when a room of which the user in context is a member is deactivated, including rooms deactivated by the user him/herself:
 
-```text
+```
 {
     "id": "",
   "timestamp": 0,
@@ -469,8 +469,8 @@ Generated when a room of which the user in context is a member is reactivated, i
 
 ### User Requested to Join Room
 
-Generated when a user requests to join a room. Only the user who requested to join the room and the owners of that room will receive this event on their datafeeds.  
-The `affectedUsers` attribute represents the owners of the room.  
+Generated when a user requests to join a room. Only the user who requested to join the room and the owners of that room will receive this event on their datafeeds.\
+The `affectedUsers` attribute represents the owners of the room.\
 Available in Agent 2.56.0.
 
 ```javascript
@@ -762,4 +762,3 @@ Generated when a connection request is accepted, either:
   }
 }
 ```
-

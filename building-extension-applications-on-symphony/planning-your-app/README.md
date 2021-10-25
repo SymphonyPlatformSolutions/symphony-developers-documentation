@@ -5,7 +5,7 @@
 Symphony extension apps are standalone web applications that are embedded within the Symphony user interface as iframes.  These iframes interact with the Symphony container using the Client Extension API. Extension applications can either be accessed by the end user in two ways:
 
 1. Extension apps can be accessed from the left hand navigation under the 'applications' tab.  Clicking on your application from the left hand navigation brings your app into view.
-2. Extension apps can be attached to contexts such as \#hashtags, $cashtags, or user profiles.  Clicking on one of these items can bring your app into view.    
+2. Extension apps can be attached to contexts such as #hashtags, $cashtags, or user profiles.  Clicking on one of these items can bring your app into view.   &#x20;
 
 Developing extension applications enables developers to enrich the Symphony experience and create custom workflows and automations on top of the Symphony platform.
 
@@ -14,13 +14,15 @@ Developing extension applications enables developers to enrich the Symphony expe
 The answer lies in Symphony's Extension API. The Extension API is a JavaScript library that consists of services and methods that allow applications to extend and interact with Symphony's user interface. By leveraging these services, developers can:
 
 * Add modules, or windows bringing your app's content into the Symphony canvas
-* Add entry points for your app, such as navigation items on the left hand nav or \#hashtags and $cashtags.
+* Add entry points for your app, such as navigation items on the left hand nav or #hashtags and $cashtags.
 * Add interactive buttons to chat and user profile module headers
 * Enable users to share content from your app into Symphony chats
 
 For a full overview of Symphony's Extension API continue here:
 
-{% page-ref page="../overview-of-extension-api/" %}
+{% content-ref url="../overview-of-extension-api/" %}
+[overview-of-extension-api](../overview-of-extension-api/)
+{% endcontent-ref %}
 
 ## Next Steps
 
@@ -51,31 +53,39 @@ The more you understand your app's audience, the more you can understand their b
 
 ## 3.  What sort of interactions will your App have?
 
-Users can interact with extension applications in a number of different ways. Specifically, users can launch a standalone extension app from the left-hand nav, invoke the app by clicking on custom UI buttons on a users profile, launch the app by clicking on attached contexts such as \#hashtags or $cashtags, and even allow authenticated apps to make actions on-behalf-of an authorized user. Before building your extension app, its important to identify the types of interactions between users and your app:
+Users can interact with extension applications in a number of different ways. Specifically, users can launch a standalone extension app from the left-hand nav, invoke the app by clicking on custom UI buttons on a users profile, launch the app by clicking on attached contexts such as #hashtags or $cashtags, and even allow authenticated apps to make actions on-behalf-of an authorized user. Before building your extension app, its important to identify the types of interactions between users and your app:
 
 ### Will your application need to receive conversation or user data?
 
 Many extension applications built on top of Symphony need to receive conversation or user data. For example, if you wanted to build an extension app that extends the Symphony UI to add buttons to the IM, MIM, profile, or chatroom modules, it is likely that you would need access to conversation or user data. In order to do so your application will need to perform app authentication. You can learn more about performing app authentication here:
 
-{% page-ref page="../app-authentication/" %}
+{% content-ref url="../app-authentication/" %}
+[app-authentication](../app-authentication/)
+{% endcontent-ref %}
 
 ### Will your application customize modules by adding buttons to IMs, MIMs, chatrooms, or user profiles?
 
 Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IMs, MIMs, chatrooms, or profile modules. In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication. You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
 
-{% page-ref page="extension-applications-+-ui-buttons.md" %}
+{% content-ref url="extension-applications-+-ui-buttons.md" %}
+[extension-applications-+-ui-buttons.md](extension-applications-+-ui-buttons.md)
+{% endcontent-ref %}
 
-### Will your application customize links added to the \#hashtag and $cashtag hovercards?
+### Will your application customize links added to the #hashtag and $cashtag hovercards?
 
-Another way extension applications can extend Symphony's UI is to override links associated with \#hashtag \(e.g. \#symphony\) and $cashtag \(e.g. $GOOG\) hover cards. By attaching your extension app to \#hashtag or $cashtag contexts, you can show content in your app that is relevant to the context clicked by the user. You can learn more about how build extension apps that extend these \#hashtag and $cashtag entities here:
+Another way extension applications can extend Symphony's UI is to override links associated with #hashtag (e.g. #symphony) and $cashtag (e.g. $GOOG) hover cards. By attaching your extension app to #hashtag or $cashtag contexts, you can show content in your app that is relevant to the context clicked by the user. You can learn more about how build extension apps that extend these #hashtag and $cashtag entities here:
 
-{% page-ref page="extension-applications-+-hashtags-and-usdcashtags.md" %}
+{% content-ref url="extension-applications-+-hashtags-and-usdcashtags.md" %}
+[extension-applications-+-hashtags-and-usdcashtags.md](extension-applications-+-hashtags-and-usdcashtags.md)
+{% endcontent-ref %}
 
 ### Will your application perform custom rendering?
 
 Extension apps can extend Symphony's UI by acting as a custom renderer for structured objects created by the REST API. Structured objects are rich, inline, and interactive components embedded in a Symphony message. These structured objects can be rendered and injected into Symphony by creating a custom renderer as a part of an extension application. You can learn more about how to create a custom renderer in order to render structured objects here:
 
-{% page-ref page="extension-applications-+-structured-objects.md" %}
+{% content-ref url="extension-applications-+-structured-objects.md" %}
+[extension-applications-+-structured-objects.md](extension-applications-+-structured-objects.md)
+{% endcontent-ref %}
 
 ### Will your application contain a standalone frontend?
 
@@ -83,5 +93,6 @@ Some extension apps contain a dedicated frontend that will be embedded within of
 
 To learn more about leveraging the UI Toolkit to build complex frontend applications continue here:
 
-{% page-ref page="extension-applications-+-ui-toolkit.md" %}
-
+{% content-ref url="extension-applications-+-ui-toolkit.md" %}
+[extension-applications-+-ui-toolkit.md](extension-applications-+-ui-toolkit.md)
+{% endcontent-ref %}

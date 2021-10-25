@@ -1,6 +1,6 @@
 # Dialogs Service
 
-Use the `dialogs` service to create modal windows \(e.g. to open a modal window from a button registered at a room level\).
+Use the `dialogs` service to create modal windows (e.g. to open a modal window from a button registered at a room level).
 
 The following methods are available on the `dialogs` service:
 
@@ -12,7 +12,7 @@ The following picture is an example of what you will be able to create with this
 
 ![](../../../.gitbook/assets/7bfc2c3-configuration.png)
 
-## show\(\)
+## show()
 
 Presents a modal dialog to the user:
 
@@ -20,13 +20,13 @@ Presents a modal dialog to the user:
 function show(id, serviceName, template, data, options)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | A unique id for the dialog. |
+| Parameter   | Type   | Description                                                      |
+| ----------- | ------ | ---------------------------------------------------------------- |
+| id          | String | A unique id for the dialog.                                      |
 | serviceName | String | The name of a local application-implemented service implemented. |
-| template | String | The extensionML for the dialog content. |
-| data | String | The data for the extensionML. |
-| options | Object | The data for the extensionML |
+| template    | String | The extensionML for the dialog content.                          |
+| data        | String | The data for the extensionML.                                    |
+| options     | Object | The data for the extensionML                                     |
 
 ```javascript
     const dialogsService = SYMPHONY.services.subscribe("dialogs");
@@ -54,7 +54,7 @@ function show(id, serviceName, template, data, options)
     );
 ```
 
-## rerender\(\)
+## rerender()
 
 Changes the contents of the dialog. This is usually invoked when the user has performed some action:
 
@@ -62,19 +62,18 @@ Changes the contents of the dialog. This is usually invoked when the user has pe
 function rerender(id, template, data)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the dialog that should be updated. |
-| template | String | The new extensionML content to display. |
-| data | String | The data for the extensionML. |
+| Parameter | Type   | Description                                  |
+| --------- | ------ | -------------------------------------------- |
+| id        | String | The id of the dialog that should be updated. |
+| template  | String | The new extensionML content to display.      |
+| data      | String | The data for the extensionML.                |
 
-## close\(\)
+## close()
 
 ```javascript
 function close(id)
 ```
 
-| Parameters | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the dialog to close. |
-
+| Parameters | Type   | Description                    |
+| ---------- | ------ | ------------------------------ |
+| id         | String | The id of the dialog to close. |

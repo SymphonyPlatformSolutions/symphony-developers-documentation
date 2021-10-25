@@ -4,7 +4,7 @@
 
 ## Launch the Symphony Desktop Client
 
-```text
+```
 symphony://
 ```
 
@@ -22,15 +22,15 @@ symphony://
 
 > ### Error Handling Behavior
 >
-> For IM, if an invalid userId is supplied, the behaviour is the same as "symphony://"  
-> For MIM, if one of the userId is invalid, an MIM with only the valid userIds is opened.  
+> For IM, if an invalid userId is supplied, the behaviour is the same as "symphony://"\
+> For MIM, if one of the userId is invalid, an MIM with only the valid userIds is opened.\
 > For MIM, if all the userIds are invalid, the behaviour is the same as "symphony://"
 
 ## Opening a chat with a single user
 
 {% tabs %}
 {% tab title="IM" %}
-```text
+```
 symphony://?startChat=71811853189751
 ```
 {% endtab %}
@@ -40,7 +40,7 @@ symphony://?startChat=71811853189751
 
 {% tabs %}
 {% tab title="MIM" %}
-```text
+```
 symphony://?startChat=71811853187751,3563645678951
 ```
 {% endtab %}
@@ -62,7 +62,7 @@ Can you put spaces in the URI to create a room name?
 
 {% tabs %}
 {% tab title="Chatroom" %}
-```text
+```
 symphony://?startRoom=RoomName=Example&userIds=4378106230763,5478106410145,7078106304564
 ```
 {% endtab %}
@@ -89,7 +89,7 @@ Can you put spaces in the URI to create a room name?
 
 {% tabs %}
 {% tab title="Chatroom" %}
-```text
+```
 Protocol example with userEmails
 symphony://?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,acme@bank.com
 ```
@@ -102,9 +102,9 @@ symphony://?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,a
 
 ## Launch the Symphony Desktop Client with Stream in Focus
 
-Mirrors the behavior of `symphony:` but puts the specified stream \(IM, multiparty IM, or chatroom\) in focus.Text
+Mirrors the behavior of `symphony:` but puts the specified stream (IM, multiparty IM, or chatroom) in focus.Text
 
-```text
+```
 symphony://?streamId=STREAM_ID&streamType=STREAM_TYPE
 ```
 
@@ -112,7 +112,7 @@ symphony://?streamId=STREAM_ID&streamType=STREAM_TYPE
 * If an unpinned module is open in the grid, replaces the unpinned module with the specified stream.
 * If there are existing pinned modules, opens a new module with the specified stream, while retaining the existing modules.
 * If the user is not logged into Symphony when the client is launched, the user will be required to first login. Once logged in, the specified stream will be displayed.
-* You must specify `streamType`, which can be either `im` \(for IM or multiparty IM\) or `chatroom`. If `streamType` is not specified, the Symphony client is launched as with `symphony:`.
+* You must specify `streamType`, which can be either `im` (for IM or multiparty IM) or `chatroom`. If `streamType` is not specified, the Symphony client is launched as with `symphony:`.
 
 **Error Handling**
 
@@ -125,7 +125,7 @@ symphony://?streamId=STREAM_ID&streamType=STREAM_TYPE
 
 Mirrors the behavior of `symphony:` but puts the specified user's profile in focus.Text
 
-```text
+```
 symphony://?userId=USER_ID
 ```
 
@@ -136,7 +136,6 @@ symphony://?userId=USER_ID
 
 **Error Handling**
 
-* If no such user exists but the userId is of a valid format \(integer\), a blank user profile is opened.
+* If no such user exists but the userId is of a valid format (integer), a blank user profile is opened.
 * If a userId of invalid format is specified, the Symphony client is launched as with `symphony:`.
 * If an external userId of a user who is not entitled to external communications is specified, a blank user profile is opened.
-

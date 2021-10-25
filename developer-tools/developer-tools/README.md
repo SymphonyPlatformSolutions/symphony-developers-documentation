@@ -1,6 +1,6 @@
 # Developer Tools
 
-Symphony provides language specific SDKs, a Bot Developer Kit \(BDK\), Bot Generators and more to streamline your development process!
+Symphony provides language specific SDKs, a Bot Developer Kit (BDK), Bot Generators and more to streamline your development process!
 
 ## Bot Developer Kit 2.0
 
@@ -8,7 +8,9 @@ BDK 2.0, the latest version of Symphony Bot Developer Kit is now available. With
 
 To learn more about the BDK 2.0, continue here:
 
-{% page-ref page="bdk-2.0/" %}
+{% content-ref url="bdk-2.0/" %}
+[bdk-2.0](bdk-2.0/)
+{% endcontent-ref %}
 
 ## Symphony Bot Generator
 
@@ -16,7 +18,9 @@ The easiest way to begin building Bots and Extension Applications is through the
 
 To learn more about how to get started using the Symphony Generator, continue here:
 
-{% page-ref page="symphony-bot-generator.md" %}
+{% content-ref url="symphony-bot-generator.md" %}
+[symphony-bot-generator.md](symphony-bot-generator.md)
+{% endcontent-ref %}
 
 ## Symphony SDKs
 
@@ -24,11 +28,13 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 To learn more about using our SDKs continue here:
 
-{% page-ref page="sdks.md" %}
+{% content-ref url="sdks.md" %}
+[sdks.md](sdks.md)
+{% endcontent-ref %}
 
 ## BDK 1.0
 
-The Bot Developer Kit \(BDK\) is a set of tools made for advanced Symphony Bot and Extension Applications. The BDK consists of the following three development tools:
+The Bot Developer Kit (BDK) is a set of tools made for advanced Symphony Bot and Extension Applications. The BDK consists of the following three development tools:
 
 ### Bot SDK
 
@@ -36,7 +42,9 @@ The first tool under the umbrella of the Bot Developer Kit is the Bot SDK. The B
 
 To learn more about the Bot SDK, continue here:
 
-{% page-ref page="bdk-2.0/bdk-1.0/bot-sdk.md" %}
+{% content-ref url="bdk-2.0/bdk-1.0/bot-sdk.md" %}
+[bot-sdk.md](bdk-2.0/bdk-1.0/bot-sdk.md)
+{% endcontent-ref %}
 
 ### CLI Tool
 
@@ -44,7 +52,9 @@ The CLI Tool allows you to generate code scaffolds for Symphony Bots and Extensi
 
 To learn more about the CLI Tool, continue here:
 
-{% page-ref page="bdk-2.0/bdk-1.0/cli-tool.md" %}
+{% content-ref url="bdk-2.0/bdk-1.0/cli-tool.md" %}
+[cli-tool.md](bdk-2.0/bdk-1.0/cli-tool.md)
+{% endcontent-ref %}
 
 ### UI Toolkit
 
@@ -52,7 +62,9 @@ The UI Toolkit is a library of react components that enables developers to build
 
 To learn more about the UI Toolkit, continue here:
 
-{% page-ref page="bdk-2.0/bdk-1.0/ui-toolkit.md" %}
+{% content-ref url="bdk-2.0/bdk-1.0/ui-toolkit.md" %}
+[ui-toolkit.md](bdk-2.0/bdk-1.0/ui-toolkit.md)
+{% endcontent-ref %}
 
 ## Postman
 
@@ -60,11 +72,17 @@ Using Postman to invoke Symphony APIs allows you to quickly learn about the capa
 
 To get started using the Symphony Postman collection, continue here:
 
-{% page-ref page="postman.md" %}
+{% content-ref url="postman.md" %}
+[postman.md](postman.md)
+{% endcontent-ref %}
 
 ## MessageML Renderer Tool
 
 The MessageML Renderer tool was developed by Symphony to help you to create different messages, view their rendered output, and verify that your message syntax is correct. The tool allows developers to play around with MessageML, PresentationML, and render structured objects in realtime.
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 ## UI Style Guide
 
@@ -72,5 +90,6 @@ When building Extension Applications, Symphony provides resources and libraries 
 
 To learn more about Symphony's design libraries, UI theming, and performance considerations, continue here:
 
-{% page-ref page="ui-style-guide/" %}
-
+{% content-ref url="ui-style-guide/" %}
+[ui-style-guide](ui-style-guide/)
+{% endcontent-ref %}

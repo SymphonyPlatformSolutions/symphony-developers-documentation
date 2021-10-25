@@ -2,7 +2,7 @@
 
 ## Description
 
-The Symphony Embedded Chat Module allows you to embed stand-alone Symphony chat modules \(both chatrooms and IMs\) inside other applications.
+The Symphony Embedded Chat Module allows you to embed stand-alone Symphony chat modules (both chatrooms and IMs) inside other applications.
 
 The chat module can be embedded into websites or any tool that supports a webview. ECM allows custom themes and extensive interface configuration.
 
@@ -24,7 +24,7 @@ Each of these options requires either a working Symphony Conversation ID or comm
 
 > ### Conversation ID Encoding
 >
-> The direct iFrame rendering, the Conversation ID must be URI encoded to be successfully placed within the iFrame URL.  
+> The direct iFrame rendering, the Conversation ID must be URI encoded to be successfully placed within the iFrame URL. &#x20;
 >
 > The automatic and explicit rendering use the standard Conversation ID.
 
@@ -163,23 +163,22 @@ The above example creates an Embedded Chat Module pointing to a room with a Conv
 
 These parameters work in all embedded chat scenarios: iFrame, explicit and automatic:
 
-| Parameter | Description | Acceptable Values | Default |
-| :--- | :--- | :--- | :--- |
-| `module` | Which type of conversation the module contains. | `im`, `room` | `null` |
-| `streamId` | The Conversation ID of the IM/MIM/Room. Needs the `module` parameter to be set to `room`. | URL encoded Conversation ID | `null` |
-| `userIds` | To create an IM or MIM, use List of User IDs. Needs the `module` parameter to be set to `im`. | Comma separated userIds for IM/MIM | - |
-| `mode` | Dark or light mode. | `light`, `dark` | `light` |
-| `contrast` | Enables contrast mode. | `true`, `false` | `false` |
-| `condensed` | Enables condensed mode. | `true`, `false` | `false` |
-| `font` | Font size. | `xsmall`, `small`, `medium`, `large` | `medium` |
-| `showTitle` | Display the module tile | `true`, `false` | `true` |
-| `showInfo` | Display the module info \(private icon, member count\) | `true`, `false` | `true` |
-| `showXPod` | Display orange coloring for cross pod rooms | `true`, `false` | `true` |
-| `showEmoji` | Display the emoji picker | `true`, `false` | `true` |
-| `showAttach` | Display the "attach file" button | `true`, `false` | `true` |
-| `showDisableInput` | Display the "disable input" button | `true`, `false` | `true` |
-| `showCompose` | Display the RTE "compose" mode | `true`, `false` | `true` |
-| `urlIntercept` | Intercept the login URL to use with your SSO system | 'function' | `noop` |
-| `showSystemMessages` | Display system messages such as "Bob added John to the room" | `true`, `false` | `true` |
-| `'Theme'` | Select the color of the theme | 'blue', 'green', 'yellow', 'magenta' , 'grey' | N/A |
-
+| Parameter            | Description                                                                                   | Acceptable Values                             | Default  |
+| -------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------- | -------- |
+| `module`             | Which type of conversation the module contains.                                               | `im`, `room`                                  | `null`   |
+| `streamId`           | The Conversation ID of the IM/MIM/Room. Needs the `module` parameter to be set to `room`.     | URL encoded Conversation ID                   | `null`   |
+| `userIds`            | To create an IM or MIM, use List of User IDs. Needs the `module` parameter to be set to `im`. | Comma separated userIds for IM/MIM            | -        |
+| `mode`               | Dark or light mode.                                                                           | `light`, `dark`                               | `light`  |
+| `contrast`           | Enables contrast mode.                                                                        | `true`, `false`                               | `false`  |
+| `condensed`          | Enables condensed mode.                                                                       | `true`, `false`                               | `false`  |
+| `font`               | Font size.                                                                                    | `xsmall`, `small`, `medium`, `large`          | `medium` |
+| `showTitle`          | Display the module tile                                                                       | `true`, `false`                               | `true`   |
+| `showInfo`           | Display the module info (private icon, member count)                                          | `true`, `false`                               | `true`   |
+| `showXPod`           | Display orange coloring for cross pod rooms                                                   | `true`, `false`                               | `true`   |
+| `showEmoji`          | Display the emoji picker                                                                      | `true`, `false`                               | `true`   |
+| `showAttach`         | Display the "attach file" button                                                              | `true`, `false`                               | `true`   |
+| `showDisableInput`   | Display the "disable input" button                                                            | `true`, `false`                               | `true`   |
+| `showCompose`        | Display the RTE "compose" mode                                                                | `true`, `false`                               | `true`   |
+| `urlIntercept`       | Intercept the login URL to use with your SSO system                                           | 'function'                                    | `noop`   |
+| `showSystemMessages` | Display system messages such as "Bob added John to the room"                                  | `true`, `false`                               | `true`   |
+| `'Theme'`            | Select the color of the theme                                                                 | 'blue', 'green', 'yellow', 'magenta' , 'grey' | N/A      |

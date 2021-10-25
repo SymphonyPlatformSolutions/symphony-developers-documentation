@@ -1,11 +1,11 @@
 # BBDatabase
 
-`BBDatabase` is a subset of the functionality in the open-source class named FMDatabase.  
+`BBDatabase` is a subset of the functionality in the open-source class named FMDatabase.\
 You should use FMDatabase as the template for implementing your own class which implements the `BBDatabase` protocol.
 
 {% tabs %}
 {% tab title="BBDatabase" %}
-```text
+```
 @protocol BBDatabase <NSObject>
 
 + (instancetype)databaseWithPath:(NSString *)inPath;
@@ -45,12 +45,11 @@ BBDatabase adds one method to the API exposed by the off-the-shelf FMDatabase cl
 
 {% tabs %}
 {% tab title="statementVariableLimit" %}
-```text
+```
 - (NSUInteger)statementVariableLimit
 ```
 {% endtab %}
 {% endtabs %}
 
-Based upon how SQLite was compiled, the maximum number of statement variables supported by SQLite can be changed. This limit can be determined at runtime with `sqlite3_limit(_db, SQLITE_LIMIT_VARIABLE_NUMBER, -1).`  
+Based upon how SQLite was compiled, the maximum number of statement variables supported by SQLite can be changed. This limit can be determined at runtime with `sqlite3_limit(_db, SQLITE_LIMIT_VARIABLE_NUMBER, -1).`\
 This API provides a way for `BBDatabase` classes to declare the maximum number of variables that are permitted in a SQL statement.
-

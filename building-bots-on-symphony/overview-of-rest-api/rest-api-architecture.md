@@ -6,13 +6,15 @@ description: Overview of Symphony REST API Architecture
 
 Symphony's REST API is spread out over three main components: the **Symphony Pod**, **API Agent** and **Key Manager**. Let's take a closer look at these components below.
 
-## Symphony Pod ![](../../.gitbook/assets/symphony-pod.png) 
+## Symphony Pod ![](../../.gitbook/assets/symphony-pod.png)&#x20;
 
 The Symphony Pod is a dedicated Symphony instance for each customer environment. It is a cloud-hosted component that handles all core operations necessary to provide the Symphony service to you. Since Symphony provides end-to-end encrypted messaging, all messages passed from user to user are fully encrypted at the time of sending, such that no Pod ever has access to the unencrypted contents of any message.
 
 In addition, the Symphony Pod provides REST API endpoints in order for your bot to perform administrative functions on the Pod. You can read more about the Pod API here:
 
-{% page-ref page="pod-api.md" %}
+{% content-ref url="pod-api.md" %}
+[pod-api.md](pod-api.md)
+{% endcontent-ref %}
 
 ## API Agent
 
@@ -20,7 +22,9 @@ The API Agent is the Symphony component responsible for encrypting and decryptin
 
 Read more about the Agent API here:
 
-{% page-ref page="agent-api.md" %}
+{% content-ref url="agent-api.md" %}
+[agent-api.md](agent-api.md)
+{% endcontent-ref %}
 
 ## Key Manager
 
@@ -28,7 +32,9 @@ The Key Manager generates and stores encryption keys which are used to encrypt a
 
 Read more about the Key Manager API here:
 
-{% page-ref page="key-manager-api.md" %}
+{% content-ref url="key-manager-api.md" %}
+[key-manager-api.md](key-manager-api.md)
+{% endcontent-ref %}
 
 ## Interacting with the Components
 
@@ -38,20 +44,24 @@ The three components above all interact with each other in order to create Symph
 
 The sequence of API calls and component interaction is illustrated below:
 
-![](../../.gitbook/assets/bot-message-workflow-3x%20%281%29.svg)
+![](<../../.gitbook/assets/bot-message-workflow-3x (1).svg>)
 
 
 
-*  **1.**  First, a bot must authenticate with the Pod. It does so by calling the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
-* **1a.** If successful, the bot will receive a valid Session Token. This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.
-* **2**.  Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#key-manager-authenticate). 
+* &#x20;**1. ** First, a bot must authenticate with the Pod. It does so by calling the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
+* **1a. **If successful, the bot will receive a valid Session Token. This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.
+* **2**.  Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#key-manager-authenticate).&#x20;
 * **2a.** If successful, the bot will receive a valid Key Manager Token. This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.
 * **3.**  If the bot wants to send a message, the bot will call the [Create Message endpoint](https://developers.symphony.com/restapi/reference#create-message-v4) on the Agent API and pass both Session Token and Key Manager Token as a part of the request.
-* **4.**  At this point, the Agent Server calls the Key Manager and requests the bot's encryption keys.  
+* **4. ** At this point, the Agent Server calls the Key Manager and requests the bot's encryption keys. &#x20;
 * **5.**  Next, the Agent Server validates the bot's Key Manager Token.
 * **6.**  If successful, the Agent will encrypt the payload sent by the bot and will forward the encrypted message up to the Pod where it will be routed to the intended user or chatroom.  The message will remain encrypted until it reaches its final destination.
 
 For an even more detailed explanation, enroll in our Developer Certification Program:
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 {% hint style="info" %}
 Navigate to [Overview of Datafeed](rest-api-architecture.md) to learn more about how bots process messages and other real time events
@@ -72,4 +82,3 @@ For our smaller customers, the API Agent and Key Manager may be co-hosted with t
 A visual representation showing an in-cloud deployment of Symphony components is shown below:
 
 ![](../../.gitbook/assets/cloud-based-deployment-3x.svg)
-

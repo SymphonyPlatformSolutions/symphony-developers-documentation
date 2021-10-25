@@ -10,7 +10,9 @@ description: Building a Chatbot using the Symphony Generator + SDK
 
 #### Complete the Bot Configuration guide:
 
-{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
+{% content-ref url="../../configuration/configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](../../configuration/configure-your-bot-for-sdks.md)
+{% endcontent-ref %}
 
 {% hint style="info" %}
 Note: We will be using the **Request/Reply** example from the Bot Generator.
@@ -20,7 +22,7 @@ Note: We will be using the **Request/Reply** example from the Bot Generator.
 
 {% tabs %}
 {% tab title="Java" %}
-```text
+```
 mvn dependency:resolve
 ```
 {% endtab %}
@@ -34,13 +36,13 @@ pip install -r requirements.txt
 {% endtab %}
 
 {% tab title="Node.JS" %}
-```text
+```
 npm install
 ```
 {% endtab %}
 
 {% tab title=".NET" %}
-```text
+```
 dotnet restore
 ```
 {% endtab %}
@@ -142,7 +144,7 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within 1-to-1 Instant Messages \(IMs\) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](../../datafeed/#real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
+Any events that happen within 1-to-1 Instant Messages (IMs) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](../../datafeed/#real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -173,7 +175,7 @@ public class IMListenerImpl implements IMListener {
 {% endtab %}
 
 {% tab title="Python" %}
-{% code title="python/listeners/im\_listener\_impl.py" %}
+{% code title="python/listeners/im_listener_impl.py" %}
 ```python
 import logging
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
@@ -253,7 +255,7 @@ namespace RequestResponse
 {% endtab %}
 {% endtabs %}
 
-In this generated example, when an message is sent in an IM with your Bot, it will capture the event, and reply to the user by calling the `sendMessage` function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
+In this generated example, when an message is sent in an IM with your Bot, it will capture the event, and reply to the user by calling the `sendMessage` function which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
 {% tab title="Java" %}
@@ -290,7 +292,7 @@ Now that you understand the datafeed event handling process implemented by the b
 
 {% tabs %}
 {% tab title="Java" %}
-```text
+```
 mvn compile exec:java -Dexec.mainClass=RequestReplyBot
 ```
 {% endtab %}
@@ -302,13 +304,13 @@ python3 main.py
 {% endtab %}
 
 {% tab title="Node.JS" %}
-```text
+```
 npm start
 ```
 {% endtab %}
 
 {% tab title=".NET" %}
-```text
+```
 dotnet build
 dotnet run
 ```
@@ -317,7 +319,7 @@ dotnet run
 
 Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
-![](../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm%20%282%29%20%282%29%20%282%29%20%282%29%20%282%29.png)
+![](<../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm (2) (2) (2) (2) (2).png>)
 
 As you can see, your bot replied with the message shown in the IM Listener implementation.
 
@@ -382,7 +384,7 @@ public class IMListenerImpl implements IMListener {
 {% endtab %}
 
 {% tab title="Python" %}
-{% code title="python/listeners/room\_listener\_impl.py" %}
+{% code title="python/listeners/room_listener_impl.py" %}
 ```python
 import logging
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
@@ -574,3 +576,6 @@ Next, launch your bot again and test the new behaviour:
 
 #### **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

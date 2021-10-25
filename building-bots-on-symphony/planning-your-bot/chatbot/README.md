@@ -22,7 +22,9 @@ In order to 'listen' and respond to user events, bots create a single datafeed a
 
 To learn more about the Symphony Datafeed continue here:
 
-{% page-ref page="../../datafeed/" %}
+{% content-ref url="../../datafeed/" %}
+[datafeed](../../datafeed/)
+{% endcontent-ref %}
 
 ## 3.  Handle Events with Custom Business Logic
 
@@ -34,5 +36,6 @@ You can learn more about parsing events and introducing custom business logic [h
 
 Continue on to our [Getting Started with Chatbots](getting-started-with-chatbots.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Chatbot.
 
-{% page-ref page="getting-started-with-chatbots.md" %}
-
+{% content-ref url="getting-started-with-chatbots.md" %}
+[getting-started-with-chatbots.md](getting-started-with-chatbots.md)
+{% endcontent-ref %}

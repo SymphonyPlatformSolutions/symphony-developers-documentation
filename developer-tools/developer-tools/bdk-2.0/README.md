@@ -27,7 +27,7 @@ The easiest way to access the BDK 2.0 and build bots on top of the BDK 2.0 is th
 
 1. **Install the Symphony Bot Generator:**
 
-```text
+```
 $ npm i -g generator-symphony
 ```
 
@@ -37,13 +37,13 @@ Note: If you already have the Symphony Bot Generator installed, upgrade it by ru
 
 1. **Create a new directory and navigate inside:**
 
-```text
+```
 $ mkdir bdk-bot && cd bdk-bot
 ```
 
-    2.  **Run the generator:**
+&#x20;   2\.  **Run the generator:**
 
-```text
+```
 $ yo symphony 2.0
 ```
 
@@ -79,33 +79,33 @@ By the default this configuration file is generated, however you can customize t
 
 #### Basic Configuration Structure
 
-| Property | Description |
-| :--- | :--- |
-| `host` | component URL |
-| `port` | component port available |
-| `context` | component  context |
-| `scheme` | https or http |
-| `pod` | contains pod metadata including `host`, `port`, `scheme`, `context`, and `proxy` attributes |
-| `bot` | contains bot metadata including `username`, `privateKeyPath`, `certificatePath`, and`certificatePassword` |
-| `app` | contains extension app metadata including `appId`, `privateKeyPath`, `certificatePath`, and `certificatePassword` |
-| `ssl` | contains `trustStore` and `trustStore` password for SSL communication |
+| Property  | Description                                                                                                       |
+| --------- | ----------------------------------------------------------------------------------------------------------------- |
+| `host`    | component URL                                                                                                     |
+| `port`    | component port available                                                                                          |
+| `context` | component  context                                                                                                |
+| `scheme`  | https or http                                                                                                     |
+| `pod`     | contains pod metadata including `host`, `port`, `scheme`, `context`, and `proxy` attributes                       |
+| `bot`     | contains bot metadata including `username`, `privateKeyPath`, `certificatePath`, and`certificatePassword`         |
+| `app`     | contains extension app metadata including `appId`, `privateKeyPath`, `certificatePath`, and `certificatePassword` |
+| `ssl`     | contains `trustStore` and `trustStore` password for SSL communication                                             |
 
 #### Datafeed Configuration Structure
 
-| Property | Description |
-| :--- | :--- |
-| `version` | version of the datafeed service to be used.  By default, the bot will use the datafeed v1 service. |
-| `idFilePath` | the path to the file which will be used to persist a created datafeed id in case the datafeed service v1 is used |
-| `retry` | the specific retry configuration can be used to override the global retry configuration.  If no retry configuration is defined, the global one will be used. |
+| Property     | Description                                                                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `version`    | version of the datafeed service to be used.  By default, the bot will use the datafeed v1 service.                                                           |
+| `idFilePath` | the path to the file which will be used to persist a created datafeed id in case the datafeed service v1 is used                                             |
+| `retry`      | the specific retry configuration can be used to override the global retry configuration.  If no retry configuration is defined, the global one will be used. |
 
 #### Retry Configuration Structure
 
-| Property | Description |
-| :--- | :--- |
-| `maxAttempts` | maximum number of retry attempts that a bot is able to make |
-| `multiplier` | after each attempt, the interval between two attempts will be multiplied by this factor |
-| `initialIntervalMillis` | the initial interval between two attempts |
-| `maxIntervalMillis` | the limit of interval between two attempts.  For example, if the current interval is 1000 ms, multiplier is 2.0 and the `maxIntervalMillis` is 1500 ms, then the interval for the next retry will be 1500 ms. |
+| Property                | Description                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `maxAttempts`           | maximum number of retry attempts that a bot is able to make                                                                                                                                                   |
+| `multiplier`            | after each attempt, the interval between two attempts will be multiplied by this factor                                                                                                                       |
+| `initialIntervalMillis` | the initial interval between two attempts                                                                                                                                                                     |
+| `maxIntervalMillis`     | the limit of interval between two attempts.  For example, if the current interval is 1000 ms, multiplier is 2.0 and the `maxIntervalMillis` is 1500 ms, then the interval for the next retry will be 1500 ms. |
 
 An example customized configuration file is seen below:
 
@@ -182,7 +182,7 @@ Note: You must have a corresponding service or bot account setup on your Symphon
 
 #### OBO Authentication
 
-The BDK 2.0 also supports OBO \(On-Behalf-Of\) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user. The BDK's implementation makes it easy to perform the following operations on behalf of a given user:
+The BDK 2.0 also supports OBO (On-Behalf-Of) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user. The BDK's implementation makes it easy to perform the following operations on behalf of a given user:
 
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
@@ -221,16 +221,16 @@ final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
 
 The BDK 2.0 provides an `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events. The `DatafeedService` interface provides the following methods for your bot to use:
 
-| Method | Descriptions |
-| :--- | :--- |
-| `start()` | Start the bot's datafeed |
-| `stop()` | Stop the bot's datafeed |
-| `subscribe(RealTimeEventListener)` | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes. |
-| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class. |
+| Method                               | Descriptions                                                                                               |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| `start()`                            | Start the bot's datafeed                                                                                   |
+| `stop()`                             | Stop the bot's datafeed                                                                                    |
+| `subscribe(RealTimeEventListener)`   | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes. |
+| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class.                                                            |
 
-For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`. This `RealTimeEventListener` class must implement eventType methods \(e.g. `onMessageSent()`\) along with custom business logic inside.
+For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`. This `RealTimeEventListener` class must implement eventType methods (e.g. `onMessageSent()`) along with custom business logic inside.
 
-When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType \(`MESSAGESENT`\) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK 2.0:
+When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType (`MESSAGESENT`) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK 2.0:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -250,28 +250,30 @@ When a user sends a bot a message, the bot will pick up the event from the dataf
 
 Below is a full list of methods provided by the `RealTimeEventListener` class and their corresponding eventTypes. Implement the following methods in order to listen for a given Symphony event:
 
-| Method | Event Type |
-| :--- | :--- |
-| `onMessageSent()` | MESSAGESENT |
-| `onInstantMessageCreated()` | INSTANTMESSAGECREATED |
-| `onMessageSuppressed()` | MESSAGESUPPRESSED |
-| `onRoomCreated()` | ROOMCREATED |
-| `onRoomUpdated()` | ROOMUPDATED |
-| `onRoomDeactivated()` | ROOMDEACTIVATED |
-| `onRoomReactivated()` | ROOMACTIVATED |
-| `onUserRequestedToJoinRoom()` | USERREQUESTEDTOJOINROOM |
-| `onUserJoinedRoom()` | USERJOINEDROOM |
-| `onUserLeftRoom()` | USERLEFTROOM |
-| `onRoomMemberPromotedToOwner()` | ROOMMEMBERPROMOTEDTOOWNER |
+| Method                           | Event Type                 |
+| -------------------------------- | -------------------------- |
+| `onMessageSent()`                | MESSAGESENT                |
+| `onInstantMessageCreated()`      | INSTANTMESSAGECREATED      |
+| `onMessageSuppressed()`          | MESSAGESUPPRESSED          |
+| `onRoomCreated()`                | ROOMCREATED                |
+| `onRoomUpdated()`                | ROOMUPDATED                |
+| `onRoomDeactivated()`            | ROOMDEACTIVATED            |
+| `onRoomReactivated()`            | ROOMACTIVATED              |
+| `onUserRequestedToJoinRoom()`    | USERREQUESTEDTOJOINROOM    |
+| `onUserJoinedRoom()`             | USERJOINEDROOM             |
+| `onUserLeftRoom()`               | USERLEFTROOM               |
+| `onRoomMemberPromotedToOwner()`  | ROOMMEMBERPROMOTEDTOOWNER  |
 | `onRoomMemberDemotedFromOwner()` | ROOMMEMBERDEMOTEDFROMOWNER |
-| `onConnectionRequested()` | CONNECTIONREQUESTED |
-| `onConnectionAccepted()` | CONNECTIONACCEPTED |
-| `onSymphonyElementsAction()` | SYMPHONYELEMENTSACTION |
-| `onSharedPost()` | SHAREDPOST |
+| `onConnectionRequested()`        | CONNECTIONREQUESTED        |
+| `onConnectionAccepted()`         | CONNECTIONACCEPTED         |
+| `onSymphonyElementsAction()`     | SYMPHONYELEMENTSACTION     |
+| `onSharedPost()`                 | SHAREDPOST                 |
 
 For more information on the Symphony datafeed continue here:
 
-{% page-ref page="../../../building-bots-on-symphony/datafeed/" %}
+{% content-ref url="../../../building-bots-on-symphony/datafeed/" %}
+[datafeed](../../../building-bots-on-symphony/datafeed/)
+{% endcontent-ref %}
 
 ### Orchestrating Workflows with the BDK 2.0
 
@@ -279,7 +281,7 @@ A Symphony workflow can be thought of as a sequence of operations or a repeatabl
 
 By providing an intuitive Activities API, the BDK 2.0 makes it simple to define a set of discrete operations or activities for different actors in your system to execute. Ultimately, these activities constitute the building blocks for a powerful Symphony workflow automation.
 
-Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  The BDK 2.0 provides a powerful Workflow API \(coming soon\) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony workflow.
+Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  The BDK 2.0 provides a powerful Workflow API (coming soon) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony workflow.
 
 ### Activities API
 
@@ -301,13 +303,13 @@ public static void main(String[] args) throws Exception {
 There are two different types of activities supported by the BDK:
 
 * **Command Activity**: an activity triggered when a message is sent in an IM, MIM, or Chatroom.
-* **Form Activity**: an activity triggered when a user replies to an Elements form message.  
+* **Form Activity**: an activity triggered when a user replies to an Elements form message. &#x20;
 
 #### Command Activities
 
 A command-based activity is triggered when a message is sent in an IM, MIM, or Chatroom. Using the Activities API allows developers to register commands in the following formats:
 
-1. `@bdk2-bot /buy` \(Slash command with a bot @mention\)
+1. `@bdk2-bot /buy` (Slash command with a bot @mention)
 
 {% tabs %}
 {% tab title="@bdk-bot /buy" %}
@@ -324,7 +326,7 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 {% endtab %}
 {% endtabs %}
 
-1. `/buy 1000 goog` \(Slash command without a bot @mention\)
+1. `/buy 1000 goog` (Slash command without a bot @mention)
 
 {% tabs %}
 {% tab title="/buy" %}
@@ -342,10 +344,10 @@ final SymphonyBdk bdk = new SymphonyBdk(loadFromSymphonyDir("config.yaml"));
 {% endtab %}
 {% endtabs %}
 
-1. Listen for the word `'hello'` \(Not a Slash command  - Listen for a specific word\)
+1. Listen for the word `'hello'` (Not a Slash command  - Listen for a specific word)
 
 {% tabs %}
-{% tab title="\'hello\'" %}
+{% tab title="'hello'" %}
 ```java
 public class BotApplication {
 
@@ -471,36 +473,36 @@ public void onMessageSent(V4Initiator initiator, V4MessageSent event)
 
 Use the `V4Initiator` class methods to access the the user data in context:
 
-| Method | User Attribute |
-| :--- | :--- |
-| `initiator.getUser().getUserId()` | User ID |
-| `initiator.getUser().getFirstName()` | First Name |
-| `initiator.getUser().getLastName()` | Last Name |
-| `initiator.getUser().getDisplayName()` | Display Name |
-| `initiator.getUser().getEmail()` | Email |
-| `initiator.getUser().getUsername()` | Username |
+| Method                                 | User Attribute |
+| -------------------------------------- | -------------- |
+| `initiator.getUser().getUserId()`      | User ID        |
+| `initiator.getUser().getFirstName()`   | First Name     |
+| `initiator.getUser().getLastName()`    | Last Name      |
+| `initiator.getUser().getDisplayName()` | Display Name   |
+| `initiator.getUser().getEmail()`       | Email          |
+| `initiator.getUser().getUsername()`    | Username       |
 
 Use the `V4MessageSent` class methods to access message data in context:
 
-| Method | Attribute |
-| :--- | :--- |
-| `event.getMessage().getMessageId()` | Message ID |
-| `event.getMessage().getTimestamp()` | Message Timestamp |
-| `event.getMessage().getMessage()` | Message Text |
-| `event.getMessage().getSharedMessage()` | Shared Message |
-| `event.getMessage().getData()` | Message Data |
-| `event.getMessage().getAttachments()` | Message Attachments |
+| Method                                  | Attribute           |
+| --------------------------------------- | ------------------- |
+| `event.getMessage().getMessageId()`     | Message ID          |
+| `event.getMessage().getTimestamp()`     | Message Timestamp   |
+| `event.getMessage().getMessage()`       | Message Text        |
+| `event.getMessage().getSharedMessage()` | Shared Message      |
+| `event.getMessage().getData()`          | Message Data        |
+| `event.getMessage().getAttachments()`   | Message Attachments |
 
 Use the `V4MessageSent` class methods to access stream data in context:
 
-| Method | Attribute |
-| :--- | :--- |
-| `event.getMessage().getStream().getStreamId()` | Stream ID |
-| `event.getMessage().getStream().getStreamType()` | Stream Type |
-| `event.getMessage().getStream().getRoomName()` | Room Name |
-| `event.getMessage().getStream().getMembers()` | Room Members |
-| `event.getMessage().getStream().getExternal()` | External |
-| `event.getMessage().getStream().getCrossPod()` | Cross Pod |
+| Method                                           | Attribute    |
+| ------------------------------------------------ | ------------ |
+| `event.getMessage().getStream().getStreamId()`   | Stream ID    |
+| `event.getMessage().getStream().getStreamType()` | Stream Type  |
+| `event.getMessage().getStream().getRoomName()`   | Room Name    |
+| `event.getMessage().getStream().getMembers()`    | Room Members |
+| `event.getMessage().getStream().getExternal()`   | External     |
+| `event.getMessage().getStream().getCrossPod()`   | Cross Pod    |
 
 #### Managing Context through Activities API
 
@@ -515,12 +517,12 @@ The Activities API also makes it easy to access relevant user, message, and stre
 
 FormActivity classes have access to relevant user, form, and stream data through the `FormReplyContext` class. This class is instantiated with instances of the `V4Initiator` and `V4SymphonyElementsAction` class. The `V4SymphonyElementsAction` class provides the following methods to access form data in context:
 
-| Method | Attribute |
-| :--- | :--- |
-| `context.getSourceEvent().getStream()` | Elements Stream ID |
-| `context.getSourceEvent().getFormMessageId()` | Elements Message ID |
-| `context.getSourceEvent().getFormId()` | Elements Form ID |
-| `context.getSourceEvent().getFormValues()` | Elements Form Values |
+| Method                                        | Attribute            |
+| --------------------------------------------- | -------------------- |
+| `context.getSourceEvent().getStream()`        | Elements Stream ID   |
+| `context.getSourceEvent().getFormMessageId()` | Elements Message ID  |
+| `context.getSourceEvent().getFormId()`        | Elements Form ID     |
+| `context.getSourceEvent().getFormValues()`    | Elements Form Values |
 
 ```java
 @Override
@@ -708,4 +710,3 @@ public class GifFormActivity extends FormReplyActivity<FormReplyContext> {
   }
 }
 ```
-

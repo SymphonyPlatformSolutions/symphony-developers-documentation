@@ -15,7 +15,7 @@ The following methods are available on the `applications-nav` service:
 * rename
 * focus
 
-## add\(\)
+## add()
 
 Add a new navigation item to the Applications section of the left-hand sidebar:
 
@@ -23,11 +23,11 @@ Add a new navigation item to the Applications section of the left-hand sidebar:
 function add(id, title, serviceName)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | A unique id for this navigation item \(must be unique across all navigation items of a given application\) |
-| **Either** `title` **or** `{title, icon}` | String or Object | **Either** the title of the left navigation item as a string **or** an object with the keys title and icon where the value of title is a string and the value of icon is the url of a 32x16 pixel sprite sheet \(Only the first 16x16 pixels will be used. The same sprite sheet can be used when displaying a module.\) |
-| serviceName | String | The name of a local service implemented by your application that will be invoked when a user action is performed relating to the application navigation |
+| Parameter                                 | Type             | Description                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                                        | String           | A unique id for this navigation item (must be unique across all navigation items of a given application)                                                                                                                                                                                                               |
+| **Either** `title` **or** `{title, icon}` | String or Object | **Either** the title of the left navigation item as a string **or** an object with the keys title and icon where the value of title is a string and the value of icon is the url of a 32x16 pixel sprite sheet (Only the first 16x16 pixels will be used. The same sprite sheet can be used when displaying a module.) |
+| serviceName                               | String           | The name of a local service implemented by your application that will be invoked when a user action is performed relating to the application navigation                                                                                                                                                                |
 
 {% hint style="info" %}
 Note: You must implement the `select` method on your application service in order to handle clicks on the created left navigation item.
@@ -49,7 +49,7 @@ helloControllerService.implement({
 });
 ```
 
-## remove\(\)
+## remove()
 
 Remove an existing application navigation item:
 
@@ -57,32 +57,32 @@ Remove an existing application navigation item:
 function remove(id)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the navigation item that should be removed |
+| Parameter | Type   | Description                                          |
+| --------- | ------ | ---------------------------------------------------- |
+| id        | String | The id of the navigation item that should be removed |
 
 ```javascript
 navService.remove('hello-nav');
 ```
 
-## count\(\)
+## count()
 
-Set the badge \(notification\) count on an application navigation item:
+Set the badge (notification) count on an application navigation item:
 
 ```javascript
 function count(id, count)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| id | String | The id of the navigation item that should have its count updated |
-| count | Integer | The new badge count number. Specifying 0 will hide the badge count. |
+| Parameter | Type    | Description                                                         |
+| --------- | ------- | ------------------------------------------------------------------- |
+| id        | String  | The id of the navigation item that should have its count updated    |
+| count     | Integer | The new badge count number. Specifying 0 will hide the badge count. |
 
 ```javascript
 navService.count("hello-nav", count);
 ```
 
-## rename\(\)
+## rename()
 
 Change the title of an existing application navigation item.
 
@@ -92,16 +92,16 @@ Note that this only changes the title of a specific navigation item -- not to al
 function rename(id, title)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| `id` | String | The id of the navigation item that should be renamed |
-| **Either** `title` **or** `{title, icon}` | String or Object | **Either** the title of the left navigation item as a string **or** an object with the keys title and icon where the value of title is a string and the value of icon is the url of a 32x16 pixel sprite sheet \(Only the first 16x16 pixels will be used. The same sprite sheet can be used when displaying a module.\) |
+| Parameter                                 | Type             | Description                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                      | String           | The id of the navigation item that should be renamed                                                                                                                                                                                                                                                                   |
+| **Either** `title` **or** `{title, icon}` | String or Object | **Either** the title of the left navigation item as a string **or** an object with the keys title and icon where the value of title is a string and the value of icon is the url of a 32x16 pixel sprite sheet (Only the first 16x16 pixels will be used. The same sprite sheet can be used when displaying a module.) |
 
 ```javascript
 navService.rename('hello-nav', 'New Left Nav Title');
 ```
 
-## focus\(\)
+## focus()
 
 Focus an existing application navigation item:
 
@@ -109,11 +109,10 @@ Focus an existing application navigation item:
 function focus(id)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| `id` | String | The id of the application navigation item to focus |
+| Parameter | Type   | Description                                        |
+| --------- | ------ | -------------------------------------------------- |
+| `id`      | String | The id of the application navigation item to focus |
 
 ```javascript
 navService.focus("hello-nav");
 ```
-

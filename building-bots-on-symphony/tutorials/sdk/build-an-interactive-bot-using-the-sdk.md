@@ -8,7 +8,9 @@ description: Building an Interactive Bot using the Symphony Generator + Python S
 
 ### Complete the SDK Bot Configuration guide:
 
-{% page-ref page="../../configuration/configure-your-bot-for-sdks.md" %}
+{% content-ref url="../../configuration/configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](../../configuration/configure-your-bot-for-sdks.md)
+{% endcontent-ref %}
 
 ## 1.  Install Dependencies
 
@@ -27,7 +29,7 @@ Install SDK and its child dependencies:
 
 ## 2. Dive into the code
 
-Let's take a look at the main\(\) function inside our python/main.py file:
+Let's take a look at the main() function inside our python/main.py file:
 
 Running this file accomplishes four things:
 
@@ -113,7 +115,7 @@ if __name__ == "__main__":
 As shown on lines 52-53, any event that occurs inside an IM or chatroom with the Bot will be passed as JSON objects to the event listeners. The generated IMListenerImpl class is as follows:
 
 {% tabs %}
-{% tab title="python/listeners/im\_listener\_impl.py" %}
+{% tab title="python/listeners/im_listener_impl.py" %}
 ```python
 import logging
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
@@ -144,10 +146,10 @@ class IMListenerImpl(IMListener):
 
 Any events that happen within your bot's scope will be read and captured by the bot's datafeed. Any events that happen inside of an IM with the bot will be parsed and directed to its IM Listener. Depending on the type of event, the corresponding IM Listener function will be called. So if for example, you send a message to your bot 1-1, that event will be captured and as a result the `on_im_message()` will be executed.
 
-In this generated example, when an IM is sent to your Bot, it will capture the event, and reply to the user by calling the following SDK function, which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference\#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
+In this generated example, when an IM is sent to your Bot, it will capture the event, and reply to the user by calling the following SDK function, which corresponds to the 'Create Message' endpoint on the Symphony REST API: [https://developers.symphony.com/restapi/reference#create-message-v4](https://developers.symphony.com/restapi/reference#create-message-v4)
 
 {% tabs %}
-{% tab title="python/listeners/im\_listener\_impl.py" %}
+{% tab title="python/listeners/im_listener_impl.py" %}
 ```python
 self.bot_client.get_message_client().send_msg()
 ```
@@ -159,7 +161,7 @@ self.bot_client.get_message_client().send_msg()
 Since we are building an Interactive Bot, instead of sending only text, our bot will also send Symphony Elements. An interactive bot can send Symphony elements by calling the method used above since Symphony Elements are just messageML. Let's construct a form in order to capture user name, country, and type of bot being built.
 
 {% hint style="info" %}
-Note: In order to for a Symphony Element to be considered valid, it must contain opening and closing &lt;form&gt; tags and also a &lt;button&gt; with type="action"
+Note: In order to for a Symphony Element to be considered valid, it must contain opening and closing \<form> tags and also a \<button> with type="action"
 {% endhint %}
 
 ```markup
@@ -280,7 +282,7 @@ Navigate to Symphony, create an IM with your bot, and type any message to see th
 When you fill out the form and click submit, the datafeed handles the event and dispatches it to your `ElementsListenerImpl` class:
 
 {% tabs %}
-{% tab title="listeners/elements\_listener\_impl.py" %}
+{% tab title="listeners/elements_listener_impl.py" %}
 ```python
 import logging
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
@@ -342,3 +344,6 @@ As you can see, the datafeed captures metadata about the form, the stream in whi
 
 **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

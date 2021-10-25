@@ -6,7 +6,7 @@ Symphony Android Messaging Framework is an Android library module. Developer can
 
 ## Customizable Areas
 
-You can customize the following areas by providing your customized implementation.  
+You can customize the following areas by providing your customized implementation.\
 Storage
 
 * Network Communication
@@ -36,7 +36,7 @@ dependencies {
 
 You'll then need to include the Symphony LoginActivity in your application's list of activities.
 
-If you are not planning on customizing the framework, you can set the `package` to `com.symphony.android.messaging` and the application should run without modifications.  
+If you are not planning on customizing the framework, you can set the `package` to `com.symphony.android.messaging` and the application should run without modifications.\
 The `@style/Theme.Symphony` is also important to set to get the UI to display as intended:
 
 {% tabs %}
@@ -75,4 +75,3 @@ The `@style/Theme.Symphony` is also important to set to get the UI to display as
 ## Customizing
 
 Customizing the functionality of the Android app is done through the [CoreComponentFactory](classes/corecomponentfactory.md).
-

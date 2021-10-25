@@ -4,7 +4,7 @@ This guide describes how to modify and reset application entitlements for a spec
 
 ## Step 1 - Get a list of current user application entitlements.
 
-First, you will need to call the public [User Apps](https://developers.symphony.com/restapi/docs/user-apps) API to have a list of application entitlements for the user.  
+First, you will need to call the public [User Apps](https://developers.symphony.com/restapi/docs/user-apps) API to have a list of application entitlements for the user.\
 This step is important to guarantee that you have all the needed data.
 
 {% tabs %}
@@ -34,7 +34,7 @@ With the list of app entitlements returned by the [User Apps](https://developers
 
 ## Scenario 1: Updating app entitlements
 
-In this scenario, you are able to update the user app entitlements without having to include new ones.  
+In this scenario, you are able to update the user app entitlements without having to include new ones.\
 Note that you have to pass all the app entitlements returned by the [User Apps](https://developers.symphony.com/restapi/reference-link/user-apps) API call, otherwise, the ones you do not pass will be reset to the default configuration you have set for your pod.
 
 {% tabs %}
@@ -61,9 +61,9 @@ Note that you have to pass all the app entitlements returned by the [User Apps](
 {% endtab %}
 {% endtabs %}
 
-## Scenario 2: Keeping \(or updating\) app entitlements + sending new ones
+## Scenario 2: Keeping (or updating) app entitlements + sending new ones
 
-In this scenario, you are able to keep \(or update\) the user app entitlements returned and send new ones to be included for that user.  
+In this scenario, you are able to keep (or update) the user app entitlements returned and send new ones to be included for that user.\
 Note that you have to pass all the app entitlements returned by the [User Apps](https://developers.symphony.com/restapi/reference-link/user-apps) API call, otherwise, the ones you do not pass will be reset to the default configuration you have set for your pod.
 
 {% tabs %}
@@ -99,7 +99,7 @@ Note that you have to pass all the app entitlements returned by the [User Apps](
 
 ## Scenario 3: Resetting some apps entitlements + sending new ones.
 
-In this scenario, you are able to keep some of the user x app entitlements and reset other ones. Also, a new app entitlement will be included.  
+In this scenario, you are able to keep some of the user x app entitlements and reset other ones. Also, a new app entitlement will be included.\
 Note that only the apps you did not include on the [API](https://developers.symphony.com/restapi/reference-link/user-apps) call will be reset to the default configuration you have set for your pod.
 
 {% tabs %}
@@ -130,16 +130,15 @@ Note that only the apps you did not include on the [API](https://developers.symp
 
 ## Scenario 4: Resetting all the app entitlements for a user
 
-In this scenario, you are able to reset all the custom user app entitlements to the default configuration you have set for your pod.  
+In this scenario, you are able to reset all the custom user app entitlements to the default configuration you have set for your pod.\
 Note that you need to call the [API](https://developers.symphony.com/restapi/reference-link/user-apps) sending an empty object.
 
 {% tabs %}
 {% tab title="Update User Apps API - body requst" %}
-```text
+```
 //All the Apps you already have will be reset to the default configuration you have set for your pod.
 
 []
 ```
 {% endtab %}
 {% endtabs %}
-

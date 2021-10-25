@@ -27,11 +27,11 @@ navService.add(`${APP_ID}-nav`, navSettings, `${APP_ID}:controller`);
 
 The `add()` method takes in the following parameters:
 
-| Parameter | Description |
-| :--- | :--- |
-| `id` | A unique id for this navigation item \(must be unique across all navigation items of a given application\) |
+| Parameter              | Description                                                                                                                                                                                                    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                   | A unique id for this navigation item (must be unique across all navigation items of a given application)                                                                                                       |
 | `{title, icon}` Object | **Either** the title of the left navigation item as a string **or** an object with the keys title and icon where the value of title is a string and the value of icon is the url of a 32x16 pixel sprite sheet |
-| `serviceName` | The name of a local service implemented by your application that will be invoked when a user action is performed relating to the application navigation |
+| `serviceName`          | The name of a local service implemented by your application that will be invoked when a user action is performed relating to the application navigation                                                        |
 
 Next, you must implement the `select()` method on your application service in order to handle clicks on your application and subsequently the `focus()` method in order to have your application appear selected in the left-hand navigation:
 
@@ -69,55 +69,13 @@ modulesService.show(
 
 The `show()` method takes in the following parameters:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameter</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>id</code>
-      </td>
-      <td style="text-align:left">A unique id for this module (must be unique across all modules of a given
-        application)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>{title, icon}</code> Object</td>
-      <td style="text-align:left"><b>Either</b> the title of the module as a string
-        <br /><b>or</b> an object with the keys <code>title</code> and <code>icon</code> where
-        the value of <code>title</code> is a string and the value of <code>icon</code> is
-        the url of a 32x16 pixel sprite sheet</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>serviceName</code>
-      </td>
-      <td style="text-align:left">The name of a local service implemented by your application that will
-        be invoked when a user action is performed relating to this module</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>iframe</code>
-      </td>
-      <td style="text-align:left">The URL for the content of the module (must be an HTTPS URL)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>options</code>
-      </td>
-      <td style="text-align:left">
-        <p>An object, which can contain:</p>
-        <ul>
-          <li><code>canFloat</code>: if set to true, a menu item will be added to the
-            More menu (found under the (&#x2026;) on the module frame) that, when clicked,
-            will pop the module out into its own browser window</li>
-          <li><code>parentModuleId</code>: if set to the ID of a module opened by an
-            application, the specified module will not be closed when this module is
-            shown</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter              | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                   | A unique id for this module (must be unique across all modules of a given application)                                                                                                                                                                                                                                                                                                                                  |
+| `{title, icon}` Object | <p><strong>Either</strong> the title of the module as a string<br><strong>or</strong> an object with the keys <code>title</code> and <code>icon</code> where the value of <code>title</code> is a string and the value of <code>icon</code> is the url of a 32x16 pixel sprite sheet</p>                                                                                                                                |
+| `serviceName`          | The name of a local service implemented by your application that will be invoked when a user action is performed relating to this module                                                                                                                                                                                                                                                                                |
+| `iframe`               | The URL for the content of the module (must be an HTTPS URL)                                                                                                                                                                                                                                                                                                                                                            |
+| `options`              | <p>An object, which can contain:</p><ul><li><code>canFloat</code>: if set to true, a menu item will be added to the More menu (found under the (…) on the module frame) that, when clicked, will pop the module out into its own browser window</li><li><code>parentModuleId</code>: if set to the ID of a module opened by an application, the specified module will not be closed when this module is shown</li></ul> |
 
 As shown above, the iframe of the module being rendered points to an `app.html` file. Inside this file is where you can include your app's custom javascript. A sample implementation of the `app.htm`l file provided by the BDK 1.0 is shown below:
 
@@ -148,7 +106,7 @@ See app.js for how the user's theme (light or dark) and font size (large, normal
 
 Now that we know how to bring our app view into focus, let's take a look at the library of react components provided by the UI Toolkit. To access a live version of this library, leverage the `symphony-bdk-cli` tool:
 
-```text
+```
 $ symphony-bdk-cli --toolkit
 ```
 
@@ -248,9 +206,12 @@ const LocationRouter = () => route();
 
 Whatever is returned by the `route()` function provided by the BDK 1.0 will be rendered as the application view. For more information about how to pass props from your backend to your frontend in order to bring relevant data into your application view, please refer to the following tutorial:
 
-{% page-ref page="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
+{% content-ref url="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
+[building-an-extension-app-with-hashtags-+-usdcashtags.md](../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
+{% endcontent-ref %}
 
 Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app. Continue to the following tutorial where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK 1.0 and react:
 
-{% page-ref page="../tutorials/building-an-extension-app-with-ui-toolkit.md" %}
-
+{% content-ref url="../tutorials/building-an-extension-app-with-ui-toolkit.md" %}
+[building-an-extension-app-with-ui-toolkit.md](../tutorials/building-an-extension-app-with-ui-toolkit.md)
+{% endcontent-ref %}

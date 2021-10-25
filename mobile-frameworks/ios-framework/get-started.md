@@ -24,12 +24,12 @@ The first call that `BBAppDelegate` is expecting is from the application:didFini
 
 Getting the Symphony application up and running can be as simple as:
 
-* Create a [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md)\`\`
-* Configure the [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md) \(optional\)
-* Pass the [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md) to the [`BBAppDelegate`](classes/bbappdelegate.md)\`\`
-* Pass messages from your `UIApplicationDelegate` to [`BBAppDelegate`](classes/bbappdelegate.md)\`\`
+* Create a [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md)``
+* Configure the [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md) (optional)
+* Pass the [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md) to the [`BBAppDelegate`](classes/bbappdelegate.md)``
+* Pass messages from your `UIApplicationDelegate` to [`BBAppDelegate`](classes/bbappdelegate.md)``
 
-After you've setup the `BBAppDelegate` and called `application:didFinishLaunchingWithOptions`: \(as a part of your app delegate processing this same call\), your app delegate should continue to forward the `UIApplicationDelegate` calls to the shared instance of the `BBAppDelegate`.
+After you've setup the `BBAppDelegate` and called `application:didFinishLaunchingWithOptions`: (as a part of your app delegate processing this same call), your app delegate should continue to forward the `UIApplicationDelegate` calls to the shared instance of the `BBAppDelegate`.
 
 {% tabs %}
 {% tab title="Bare Minimum Configuration" %}
@@ -44,7 +44,7 @@ After you've setup the `BBAppDelegate` and called `application:didFinishLaunchin
 {% endtab %}
 {% endtabs %}
 
-In the demo application, the `UIApplicationDelegate` class to the `UIApplication` \(FDAppDelegate\) does all of the interaction with the `BBAppDelegate`. The reason for this is that `BBAppDelegate` needs to process many of the calls that come into the UIApplicationDelegate. You are expected to pass along these calls and their parameters to the `BBAppDelegate`:
+In the demo application, the `UIApplicationDelegate` class to the `UIApplication` (FDAppDelegate) does all of the interaction with the `BBAppDelegate`. The reason for this is that `BBAppDelegate` needs to process many of the calls that come into the UIApplicationDelegate. You are expected to pass along these calls and their parameters to the `BBAppDelegate`:
 
 {% tabs %}
 {% tab title="UIApplicationDelegate pass through" %}
@@ -142,4 +142,3 @@ The framework uses NSURLConnection and NSURLSession objects for all networking. 
 ## Handling Attachments and Links
 
 The framework provides a way for you to intercept clicks on web links and attached files in chats and posts. With the functionality of the [`BBURLManager`](classes/bburlmanager.md) & its delegate, [`BBURLManagerDelegate`](classes/bburlmanagerdelegate.md), you'll be notified of any clicks on URLs and attachments and open them up in an external app of your choosing, or block the opening altogether. This functionality comes after the framework has evaluated the `allowWebView` property of [`BBApplicationLaunchParameters`](classes/bbapplicationlaunchparameters.md). If `allowWebView` is set to NO, your [`BBURLManagerDelegate`](classes/bburlmanagerdelegate.md) will not be called at all.
-

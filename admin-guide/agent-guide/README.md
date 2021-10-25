@@ -8,7 +8,7 @@ Application developers and development managers who plan to develop REST API-bas
 
 ### REST API Architecture
 
-[Representational State Transfer \(REST\)](https://en.wikipedia.org/wiki/Representational_state_transfer) APIs are widely used as a way to provide easy access to resources for developers regardless of the programming language used in development. Developers can use Symphony's REST APIs to create tools and applications for sending and receiving messages, user administration, and chat management.
+[Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational\_state\_transfer) APIs are widely used as a way to provide easy access to resources for developers regardless of the programming language used in development. Developers can use Symphony's REST APIs to create tools and applications for sending and receiving messages, user administration, and chat management.
 
 REST API endpoints are implemented on several physical interfaces:
 
@@ -16,5 +16,4 @@ REST API endpoints are implemented on several physical interfaces:
 * The **Key Manager** holds encryption key material for Symphony users.
 * The **Agent** provides encryption and decryption services for applications calling the Agent API.
 
-For security reasons, both the Key Manager and the Agent are typically deployed onsite at the customer's location; however, in some cases \(for example, in testing environments\) they may be deployed in the cloud.
-
+For security reasons, both the Key Manager and the Agent are typically deployed onsite at the customer's location; however, in some cases (for example, in testing environments) they may be deployed in the cloud.

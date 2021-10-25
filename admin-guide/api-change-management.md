@@ -2,7 +2,7 @@
 
 The API change management policy for endpoints is as follows:
 
-The version of the API Agent that you are using controls the API capabilities and behavior \(i.e. what endpoints are available, what parameters are accepted in requests, what fields are returned in responses, etc.\). You can check your deployed version of the API Agent by calling the [Health Check](https://developers.symphony.com/restapi/v20.12/reference#health-check-extended-v3) endpoint.
+The version of the API Agent that you are using controls the API capabilities and behavior (i.e. what endpoints are available, what parameters are accepted in requests, what fields are returned in responses, etc.). You can check your deployed version of the API Agent by calling the [Health Check](https://developers.symphony.com/restapi/v20.12/reference#health-check-extended-v3) endpoint.
 
 **Backwards Compatibility**
 
@@ -20,6 +20,4 @@ You should ensure your code is robust and can handle such changes from us. All f
 * We will ignore unrecognized query string arguments and unrecognized HTTP headers.
 * We will reject requests containing unrecognized fields in request body.
 
-Most changes to API endpoints will be versioned in the way described above. However, if we discover that endpoints expose customers to security vulnerabilities, we will publish new endpoints immediately and expedite deprecation insecure endpoints.  
-
-
+Most changes to API endpoints will be versioned in the way described above. However, if we discover that endpoints expose customers to security vulnerabilities, we will publish new endpoints immediately and expedite deprecation insecure endpoints.\

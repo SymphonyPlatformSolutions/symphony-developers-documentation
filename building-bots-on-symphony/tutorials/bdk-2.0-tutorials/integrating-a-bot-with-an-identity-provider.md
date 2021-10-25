@@ -12,13 +12,15 @@ By default, Symphony provides secure authentication and authorization for all us
 
 This sequence diagram describes the flow of requests between the various components.
 
-![](../../../.gitbook/assets/sso-workflow-7-%20%281%29%20%281%29.svg)
+![](<../../../.gitbook/assets/sso-workflow-7- (1) (1).svg>)
 
-## Create Authorization Server <a id="create-authorization-server"></a>
+## Create Authorization Server <a href="create-authorization-server" id="create-authorization-server"></a>
 
 We will be using the BDK 2.0 for this example, so generate a scaffold project using the Bot Generator by following these instructions. We will also be using the Spring Boot integration so ensure that is selected at the framework question in the generator.
 
-{% page-ref page="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
+{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
+[configure-your-bot-for-bdk-2.0.md](../../configuration/configure-your-bot-for-bdk-2.0.md)
+{% endcontent-ref %}
 
 Once you have your project, we will first add web capability by changing `spring-boot-starter` to `spring-boot-starter-web`, then adding `com.auth0:java-jwt` for minting tokens.
 
@@ -136,7 +138,7 @@ public RSAPublicKey readPublicKey(String filePath) throws Exception {
 }
 ```
 
-Then we'll add a method to mint a JWT token. The contents of the token are arbitrary, but the recipient needs to understand the structure. We will be setting the user's email as the audience and the grant \(or permission scope\) to the subject.
+Then we'll add a method to mint a JWT token. The contents of the token are arbitrary, but the recipient needs to understand the structure. We will be setting the user's email as the audience and the grant (or permission scope) to the subject.
 
 ```java
 private String generateJwt(String username, String subject) throws Exception {
@@ -190,7 +192,7 @@ public String getToken(@RequestBody MessageIdentityRequest request) throws Excep
 }
 ```
 
-## Create Resource Server <a id="create-resource-server"></a>
+## Create Resource Server <a href="create-resource-server" id="create-resource-server"></a>
 
 The resource server will be a standard Spring Boot web server, enabled with Spring Security and will have no knowledge of Symphony. Create an empty maven project and add these dependencies:
 
@@ -489,10 +491,9 @@ public class BalanceCommandHandler {
 
 Launch your project now and go to your Symphony pod, search for your bot and issue a `/balance` command. If your current user account is authorized by both the Authorization and Resource Servers, you will see an account balance message appear like on the left pane below. If not, you will observe the message on the right pane instead.
 
-![](../../../.gitbook/assets/success%20%281%29.png)
+![](<../../../.gitbook/assets/success (1).png>)
 
 ### Source Code
 
-The complete project source code for this tutorial can be found at the following repository.  
+The complete project source code for this tutorial can be found at the following repository.\
 [https://github.com/SymphonyPlatformSolutions/symphony-sso-example](https://github.com/SymphonyPlatformSolutions/symphony-sso-example)
-

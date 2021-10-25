@@ -1,11 +1,13 @@
-# Structured Objects
+# Custom Entities
+
+## Definition
 
 Structured Objects are rich, inline, interactive components of Symphony messages. Objects allow you to build innovative workflows that go beyond working with normal text or attached files.
 
 * Unlike normal message text, these objects are structured and do not need to be parsed to have business logic.
 * Unlike attachments, end-users can view and interact with objects directly from their Symphony client, without having to change context.
-* Structured Objects can be "injected" into Symphony by sending messages using Symphony's REST API. 
-* Structured Objects can be rendered richly using [Symphony's Extension API](../../building-extension-applications-on-symphony/overview-of-extension-api/).
+* Structured Objects can be "injected" into Symphony by sending messages using Symphony's REST API.&#x20;
+* Structured Objects can be rendered richly using [Symphony's Extension API](../../../../building-extension-applications-on-symphony/overview-of-extension-api/).
 
 ## Prerequisites
 
@@ -23,12 +25,12 @@ To build renderer applications for displaying your structured object:
 
 Structured Objects are placed into Symphony messages and have two components:
 
-* Object Presentation, in [MessageML v2](overview-of-messageml/message-format-messageml.md) format.
+* Object Presentation, in [MessageML v2](broken-reference) format.
 * Object Data, a JSON object.
 
 Any message in Symphony can contain zero or more Structured Objects.
 
-* A message will always contain message presentation, in [MessageML v2](overview-of-messageml/message-format-messageml.md) format, with the optional object presentation of the Structured Objects it may contain.
+* A message will always contain message presentation, in [MessageML v2](broken-reference) format, with the optional object presentation of the Structured Objects it may contain.
 * If the message contains any structured objects, it will contain JSON data with all object data of the structured objects it may contain.
 
 You can create an object by invoking the [Create Message](https://rest-api.symphony.com/docs/create-message-v4) endpoint. You need to include:
@@ -36,7 +38,7 @@ You can create an object by invoking the [Create Message](https://rest-api.symph
 * The `message` parameter, which contains the message presentation, with the object presentation for each Structured Object.
 * The `data` parameter, which contains JSON data with the object presentation for each structured object.
 
-These parameters also support using [Apache FreeMarker templates](http://freemarker.org/) with Structured Objects.
+These parameters also support using [Apache FreeMarker templates](http://freemarker.org) with Structured Objects.
 
 ## Message and Object Presentation
 
@@ -63,7 +65,7 @@ The `data-entity-id` tag refers to a specific object in the JSON data, which nee
 * The data `type`.
 * The data `version` of that `type`. Both are needed to build renderer applications which can render this `type` of that `version`.
 
-```text
+```
 {
     "object001":
     {
@@ -105,20 +107,23 @@ You can read objects using any of the endpoints designed to read messages, for e
 {% hint style="info" %}
 Note:
 
-As described in [Message Format - MessageML v2](overview-of-messageml/message-format-messageml.md), messages with [Structured Objects](structured-objects.md) can be created using the shorthand tags or the full tags. When they are read, the message presentation always contain the full tags, which are a subset of HTML tags.
+As described in [Message Format - MessageML v2](broken-reference), messages with [Structured Objects](structured-objects.md) can be created using the shorthand tags or the full tags. When they are read, the message presentation always contain the full tags, which are a subset of HTML tags.
 {% endhint %}
 
 ## Renderer Applications
 
-Renderer Applications leverage the Extension API to dynamically replace the presentation of a structured object.  
+Renderer Applications leverage the Extension API to dynamically replace the presentation of a structured object.\
 To create a renderer application:
 
-* Create an [Extension application](../../building-extension-applications-on-symphony/building-extension-applications-on-symphony.md)
-* Your application needs to use the [entity service](../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/), which will allow you to:
-  * Register your application as being able to render a specific type, using the [`registerRenderer` function](../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/#registerrenderer).
-  * Render the object itself, by implementing the [`render` function](../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/#render).
+* Create an [Extension application](../../../../building-extension-applications-on-symphony/building-extension-applications-on-symphony.md)
+* Your application needs to use the [entity service](../../../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/), which will allow you to:
+  * Register your application as being able to render a specific type, using the [`registerRenderer` function](../../../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/#registerrenderer).
+  * Render the object itself, by implementing the [`render` function](../../../../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/entity-service/#render).
+
+## Go further...
 
 To learn more about building Extension Applications that leverage structured objects, continue here:
 
-{% page-ref page="../../building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md" %}
-
+{% content-ref url="../../../../building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md" %}
+[extension-applications-+-structured-objects.md](../../../../building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects.md)
+{% endcontent-ref %}

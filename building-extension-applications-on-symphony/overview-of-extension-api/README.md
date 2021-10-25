@@ -7,7 +7,7 @@ Symphony extension applications are standalone web applications that are embedde
 The **Client Extension API** is a JavaScript library that consists of services containing methods that allow developers to build apps that extend and interact with Symphony's user interface. Using these services, developers can:
 
 * Add modules, or windows, containing your app content to the Symphony client
-* Add entry points for your app, such as navigation items in Symphony's left sidebar or links on \#hashtag and $cashtag hovercards
+* Add entry points for your app, such as navigation items in Symphony's left sidebar or links on #hashtag and $cashtag hovercards
 * Add interactive buttons to chat and user profile module headers
 * Enable users to share content from your app into Symphony chats
 * Register custom renderers to richly display messages containing structured objects
@@ -15,7 +15,7 @@ The **Client Extension API** is a JavaScript library that consists of services c
 Some of Symphony’s services will require you to implement your own services with methods to handle events. For example:
 
 * Handling a user click on your app’s left sidebar menu item by opening your default app module
-* Handling a user click on your app’s \#hashtag or $cashtag hovercard link by opening an app module with a contextual search
+* Handling a user click on your app’s #hashtag or $cashtag hovercard link by opening an app module with a contextual search
 
 {% hint style="info" %}
 Many of these event handlers are provided out of the box by the BDK 1.0's App Template. To learn more about the out-of-the-box implementations provided by the BDK 1.0 continue to the [Planning Your App](../planning-your-app/) or [Tutorials](./) sections.
@@ -49,5 +49,6 @@ Local services are services are specific to either your controller or one of you
 
 To learn more about the services and capabilities provided by the Extension API continue here:
 
-{% page-ref page="extension-api-services/" %}
-
+{% content-ref url="extension-api-services/" %}
+[extension-api-services](extension-api-services/)
+{% endcontent-ref %}
