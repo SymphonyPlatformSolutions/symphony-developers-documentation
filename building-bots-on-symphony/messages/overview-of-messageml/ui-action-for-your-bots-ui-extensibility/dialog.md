@@ -67,6 +67,8 @@ The following examples show the Dialog functionality being used as follows:
   * After having started to fill-in the form, if the user closes the dialog and opens it back, the values will still be displayed to him at their last status, if he does not refresh the page.
   * Also, you will notice that, when submitting the form that is in the dialog, the dialog will automatically close after a certain delay. If the user opens back the dialog without refreshing the page, then the values are stored as well as the submitted state.
 
+![](../../../../.gitbook/assets/dialog.gif)
+
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
@@ -136,6 +138,6 @@ Ut dignissim varius libero ac volutpat. Sed hendrerit nec libero ut ullamcorper.
 
 
 
-| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | Not supported      | 21.10              | Not working - entire message is not rendered                 | 20.12.2                                       |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms) | Client 1.5 release |
+| ------------------------ | --------------------------------------------- | ------------------ | ------------------------------------------------------------ | ------------------ |
+| Initial release          | 20.12.2                                       | 21.10              | Not working - entire message is not rendered                 | Not supported      |
