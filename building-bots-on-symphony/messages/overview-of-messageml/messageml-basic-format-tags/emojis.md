@@ -1,6 +1,26 @@
 # Emojis
 
-Emojis can be used within messages either by using **`:code:`** within Symphony for end users or using the MessageML short form tag **`<emoji shortcode="code" />`** in the message payload for bots.&#x20;
+Emojis can be used within messages either by using **`:code:`** within Symphony for end users or using the MessageML short form tag **`<emoji shortcode="code" />`** in the message payload for bots.
+
+## Examples
+
+Here after you can find an example of a message sent by a bot and containing emojis as well as the structure of the messageML sent:
+
+{% tabs %}
+{% tab title="Message containing emojis" %}
+![](../../../../.gitbook/assets/mml\_emojis.png)
+{% endtab %}
+
+{% tab title="messageML structure" %}
+```markup
+<messageML>
+    Here are examples of using emojis: <emoji shortcode="flag_fr" /><emoji shortcode="flag_us" />
+</messageML>
+```
+{% endtab %}
+{% endtabs %}
+
+## Annex: list of emoji codes
 
 The following table shows the codes corresponding to their emoji symbol:
 

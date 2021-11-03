@@ -120,6 +120,12 @@ word-wrap
 
 The following shows an example of using styles for an HTML table:
 
+{% tabs %}
+{% tab title="table using style attributes" %}
+![](../../../../.gitbook/assets/mml\_style\_attributes.png)
+{% endtab %}
+
+{% tab title="messageML structure" %}
 ```markup
 <table style="border-collapse:collapse;border:2px solid black;table-layout:auto;width:100%;background-color:#f2f2f2;box-shadow: 5px 5px">
     <thead>
@@ -131,6 +137,8 @@ The following shows an example of using styles for an HTML table:
     </thead>
 </table>
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Go further...
 

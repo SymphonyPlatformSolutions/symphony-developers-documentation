@@ -6,11 +6,11 @@ MessageML supports the following tags for grouping information within a message:
 
 | Tag                                            | Description                                                                                                                                                                                                                                                                                          | Optional attributes                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels.                                                                                                                                                                                                                                                                              | • `class`                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `<p>paragraph</p>`                             | Paragraph formatting.                                                                                                                                                                                                                                                                                | • `class`                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `<hr />`                                       | Horizontal rule.                                                                                                                                                                                                                                                                                     | None.                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `<ul>` `<li>list item</li>` `</ul>`            | <p>Unordered or bullet list.<br><em>Cannot be empty, must contain at least one child <code>&#x3C;li></code> item.</em></p>                                                                                                                                                                           | • `class`                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `<ol>` `<li>list item</li>` `</ol>`            | <p>Numbered list. <br><em>Cannot be empty, must contain at least one child <code>&#x3C;li></code> item.</em></p>                                                                                                                                                                                     | • `class`                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` | Heading text. 6 levels.                                                                                                                                                                                                                                                                              | • `class`                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `<div>paragraph</div>`                         | <p>Block of text.<br>• This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<br><em></em>• This tag is used to create <a href="../entities/structured-objects.md">Structured objects</a>.<br>• This tag is also the root of any message read through the API.</p> | <p>• <code>class</code>: <a href="../../../../developer-tools/developer-tools/ui-style-guide/colors.md">color options</a><em></em><br><em></em>• <code>data-entity-id</code> <br>• <code>data-icon-src</code><br>• <code>data-accent-color</code> <br>• See below for list of translated PresentationML attributes.</p>                                                                                                              |
 | `<card>` (see example below)                   | <p>Inserts a card. It contains two different sections:<br>• the <code>&#x3C;header></code> (always visible)<br>• the <code>&#x3C;body></code> (hidden)</p>                                                                                                                                           | <p>• <code>iconSrc</code>: image will be resized to 28 pixels by 28 pixels, use spacious mode. (.jpg, .png and .gif) <br>• <code>accent</code>: use <a href="../../../../developer-tools/developer-tools/ui-style-guide/colors.md">background color values</a> to select the accent color of the card.</p>                                                                                                                           |
 | `<expandable-card>` (see example below)        | Inserts a card with new styles and multiple levels of display within the card                                                                                                                                                                                                                        | <p>• <code>state</code> (mandatory) in <code>&#x3C;expandable-card></code> can take 3 values:<br>- "collapsed": only header is visible<br>- "cropped": card expanded but the body is cropped<br>- "expanded": card fully expanded<br><br>• <code>variant</code> (optional) in <code>&#x3C;body></code>: defines the style of the card. It can be either "default" for the default blue style, or "error" for the red error style</p> |
@@ -21,23 +21,46 @@ Here after you can find an example of a message sent by a bot and containing the
 
 {% tabs %}
 {% tab title="Message containing content grouping tags" %}
-
+![](../../../../.gitbook/assets/mml\_content\_grouping.gif)
 {% endtab %}
 
 {% tab title="messageML structure" %}
 ```markup
 <messageML>
-    <card iconSrc="url" accent="tempo-bg-color--blue">
-        <header>Card Header. Always visible.</header>
-        <body>Card Body. User must click to view it.</body>
-    </card>
-    <expandable-card state="collapsed">
-        <header>Card Header. Always visible.</header>
-        <body variant="error">
-        Card Body. User must click to view it (when the card is sent collapsed/cropped).
-        [it may contain a title, a paragraph, other elements for e.g. data bar and action bar]
-        </body>
-    </expandable-card>
+    <h1>Heading texts</h1>
+        <h1>This is a h1 heading text</h1>
+        <h2>This is a h2 heading text</h2>
+        <h3>This is a h3 heading text</h3>
+        <h4>This is a h4 heading text</h4>
+        <h5>This is a h5 heading text</h5>
+        <h6>This is a h6 heading text</h6><br/>
+    <h1>Paragraphs</h1>
+        <p>This is a paragraph.</p>
+        <div style="color:red;">
+            <p>This is a paragraph enclosed in a div that allows its text to be red.</p>
+        </div><br/>
+    <h1>Horizontal Rule</h1>
+        Below you can see an horizontal rule<hr /><br/>
+    <h1>Lists</h1>
+        This is an unordered/bullet list:
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+        This is a numbered list:
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol><br/>
+    <h1>Cards</h1>
+        <card accent="tempo-bg-color--blue">
+            <header>This is the header of a card</header>
+            <body>This is the body of a card</body>
+        </card>
+        <expandable-card state="expanded">
+            <header>This is the header of an expanded expandabled-card</header>
+            <body variant="error">This is an error variant of the body of an expanded expandable-card</body>
+        </expandable-card> 
 </messageML>
 ```
 {% endtab %}
@@ -46,7 +69,7 @@ Here after you can find an example of a message sent by a bot and containing the
 _Please note that you can use content grouping tags mixed with other messageML tags such as Interactive Elements Forms. See the following example including forms in expandable-cards. _
 
 {% tabs %}
-{% tab title="Users interacting with expandable-cards" %}
+{% tab title="Users interacting with forms and expandable-cards" %}
 ![](../../../../.gitbook/assets/expandable-cards-20.9.gif)
 {% endtab %}
 

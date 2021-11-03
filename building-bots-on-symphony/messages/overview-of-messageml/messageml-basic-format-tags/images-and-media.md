@@ -40,3 +40,22 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 
 This feature is intended to be used for small images, such as custom emoji. Our recommendation is that the total size of base64 encoded embedded images do not exceed 25KB per message.
 {% endhint %}
+
+## Examples
+
+Here after you can find an example of a message sent by a bot and containing an inline image as well as the structure of the messageML sent:
+
+{% tabs %}
+{% tab title="Message containing content grouping tags" %}
+![](../../../../.gitbook/assets/mml\_image.png)
+{% endtab %}
+
+{% tab title="messageML structure" %}
+```markup
+<messageML>
+    <h1>Images</h1>
+    <p>This is an image: <img src="https://play-lh.googleusercontent.com/-lTkJjeUtCj3Mf4FLLNKnCyQC0Amur3wxeKxkwbDZl0hjO60H1_VodAuBDKJmYWOvlfG=s180-rw" /></p>
+</messageML>
+```
+{% endtab %}
+{% endtabs %}

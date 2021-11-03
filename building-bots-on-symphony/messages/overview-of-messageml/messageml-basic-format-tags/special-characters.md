@@ -18,3 +18,30 @@ The Apache Freemarker uses the HTML output format by default.  In some cases, sp
 
 ## Examples
 
+Here after you can find an example of a message sent by a bot and containing these special characters as well as the structure of the messageML sent:
+
+{% tabs %}
+{% tab title="Message containing special characters" %}
+![](../../../../.gitbook/assets/mml\_special\_characters.png)
+{% endtab %}
+
+{% tab title="messageML structure" %}
+```markup
+<messageML>
+    These are special characters:
+    <ul>
+        <li>&lt;;</li>
+        <li>&#38;;</li>
+        <li>$ or &#36;;</li>
+        <li># or &#35;;</li>
+        <li>> or &gt;;</li>
+        <li>" or &quot;;</li>
+        <li>' or &#39;;</li>
+        <li>* or &#42;;</li>
+        <li>% or &#37;.</li>
+    </ul>
+</messageML>
+```
+{% endtab %}
+{% endtabs %}
+
