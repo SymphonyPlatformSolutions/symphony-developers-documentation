@@ -25,9 +25,9 @@ Here after you can find an example of a message sent by a bot and containing the
 ```markup
 <messageML>
     <h1>Mentions</h1>
-    <p>A user can be mentioned via its user ID (<mention uid="349026222355596"/>) or via email (<mention email="chaystbot1develop2@symphony.com" />).</p>
+    <p>A user can be mentioned via its user ID (<mention uid="349026222355596"/>) or via email (<mention email="bot@symphony.com" />).<br/>Here is an example of a non-existing user display with strict attribute to false: <mention email="false_email@symphony.com" strict="false"/>.</p>
     <h1>Hash/Cash tags</h1>
-    <p><hash tag="finance"/> is a hashtag and <cash tag="appl"/> is a cashtag.</p>
+    <p><hash tag="symphony"/> is a hashtag and <cash tag="appl"/> is a cashtag.</p>
 </messageML>
 ```
 {% endtab %}
