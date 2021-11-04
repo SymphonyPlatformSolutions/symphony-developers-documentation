@@ -17,7 +17,7 @@ Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 spec
 
 * `<title>` - mandatory: specifies the title of the dialog and is always displayed at the top of it in a fixed and non scrollable position.
 * `<body>` - mandatory: specifies the content of the dialog that is displayed in the middle of it and can be scrollable when the content is too big to be contained in its height.
-* `<title>` - optional: specifies the footer of the dialog and is always displayed at the bottom of it in a fixed and non scrollable position.
+* `<footer>` - optional: specifies the footer of the dialog and is always displayed at the bottom of it in a fixed and non scrollable position.
 
 ## Attributes for the \<ui-action> tag
 
@@ -48,9 +48,15 @@ Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 spec
 * The dialog feature is supported in **popped-out mode**. The dialog will open in the popped-out window.
 * The dialog functionality supports [**Interactive Elements Forms**](../symphony-elements-1/) in the following way:
   * Dialogs can be contained inside forms. However, if contained in a form, the dialog cannot contain any interactive Element (such as button, text-area, etc.)
-  * Dialogs can contain one or several forms. You can include the `<form>` tag in any of the 3 children attributes (title, body, footer). Also, please know that you can wrap the entire content of the dialog with the `<form>` tag as you can see in the examples below. _This last use case is very useful when you want your submit button not to be hidden and always appear in the footer of the dialog whereas the rest of the form content is contained in the scrollable body area._
+  * Dialogs can contain a form. The `<form>` tag should wrap the entire content of the dialog, including the `<title>` ,`<body>` and `<footer>` tags, as you can see in the examples below. _This use case is very useful when you want your submit button not to be hidden and always appear in the footer of the dialog whereas the rest of the form content is contained in the scrollable body area._
   * Please also note that users can close the dialog thanks to the cross (x) displayed at the top-right corner of it, as well as with a new type of [button](../symphony-elements-1/buttons.md) that has been created for that purpose: \<button type="cancel">. You can also specify the class attribute of the button which is by default set to "tertiary" for this new button.
 * A dialog cannot be embedded in another dialog.
+
+{% hint style="success" %}
+#### Best Practice for using dialogs
+
+Please limit yourself to using only up to 1 form when inclosed in the dialog.
+{% endhint %}
 
 ## Examples
 
@@ -66,6 +72,8 @@ The following examples show the Dialog functionality being used as follows:
   * Please note the user can interact with the form that is embedded in the dialog.
   * After having started to fill-in the form, if the user closes the dialog and opens it back, the values will still be displayed to him at their last status, if he does not refresh the page.
   * Also, you will notice that, when submitting the form that is in the dialog, the dialog will automatically close after a certain delay. If the user opens back the dialog without refreshing the page, then the values are stored as well as the submitted state.
+
+_Please note that this example is quite complex, therefore two simpler examples have been specified with their messageML only to show you how to declare a dialog in a form and how to enclose a form in a dialog. Please use the tabs to reach these two examples._
 
 ![](../../../../.gitbook/assets/dialog.gif)
 
@@ -129,6 +137,58 @@ Ut dignissim varius libero ac volutpat. Sed hendrerit nec libero ut ullamcorper.
   <ui-action action="open-dialog" target-id="dialog_containing_form">
     <button class="secondary">Open the dialog containing the form</button>
   </ui-action>
+</messageML>
+```
+{% endtab %}
+
+{% tab title="Simple messageML for a form in a dialog" %}
+```html
+<messageML>
+    <ui-action trigger="click" action="open-dialog" target-id="dialogId">
+        <button>Open the Dialog</button>
+    </ui-action>
+    <dialog id="dialogId">
+        <form id="formId">
+            <title>My Form in a Dialog</title>
+                <body>
+                    <text-field name="input" />
+                </body>
+                <footer>
+                    <button type="action" name="send-form">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="cancel" name="cancel-form">Close</button>
+            </footer>
+        </form>
+    </dialog>
+</messageML>
+```
+{% endtab %}
+
+{% tab title="Simple messageML for a dialog in a form" %}
+```html
+<messageML>
+    <form id="formId">
+        <text-field name="input" />
+        <ui-action trigger="click" action="open-dialog" target-id="dialogId">
+            <button>Open the Dialog</button>
+        </ui-action>
+        <dialog id="dialogId" width="small">
+            <title>A Dialog</title>
+            <body>
+                <expandable-card state="expanded">
+                    <header>Dialog can include any other messageML component except Interactive Elements Forms</header>
+                    <body>This does not contain any interactive element</body>
+                </expandable-card>
+            </body>
+            <footer>
+                Some text in the footer
+                <button type="cancel" name="cancel-form">Close</button>
+            </footer>
+        </dialog>
+        <h3>Actions</h3>
+        <button name="send-answers" type="action">Submit</button>
+        <button type="reset">Reset Data</button>
+    </form>
 </messageML>
 ```
 {% endtab %}
