@@ -150,13 +150,13 @@ Ut dignissim varius libero ac volutpat. Sed hendrerit nec libero ut ullamcorper.
     <dialog id="dialogId">
         <form id="formId">
             <title>My Form in a Dialog</title>
-                <body>
-                    <text-field name="input" />
-                </body>
-                <footer>
-                    <button type="action" name="send-form">Submit</button>
-                    <button type="reset">Reset</button>
-                    <button type="cancel" name="cancel-form">Close</button>
+            <body>
+                <text-field name="input" />
+            </body>
+            <footer>
+                <button type="action" name="send-form">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="cancel" name="cancel-form">Close</button>
             </footer>
         </form>
     </dialog>
