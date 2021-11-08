@@ -1,13 +1,13 @@
 # Dialog
 
-Do you want Symphony users to focus on some important information you send to them? Or do you want them to interact with very long forms or to read long pieces of information without polluting the chat with long messages? With the Dialog action, Symphony users can trigger a pop-up containing messageML formatted information or even interactive forms.
+Do you want to grab the attention of chat users to some important information in a message? Or do you want them to interact with very long forms or to read long pieces of information without polluting the chat with long messages? With the Dialog action, Symphony users can trigger a pop-up containing messageML formatted information or even interactive forms.
 
 ## MessageML tag
 
-The Dialog is represented by the association of:
+The Dialog element is structured in two sections:
 
 * the `<ui-action>` tag, associated with the **`action='open-dialog'` **attribute as you can see in the examples at the bottom of the page. This tag must wrap a [button](../symphony-elements-1/buttons.md), through which the Symphony user will be able to trigger the action specified, in this case the pop-up Dialog functionality;
-* and the `<dialog>` tag that will contain the information hidden in the dialog and that will pop up when the user will trigger the action by clicking on the UI component wrapped by the ui-action tag.
+* and the `<dialog>` tag that will contain the content of the dialog that will pop up when the user will trigger the action by clicking on the button.
 
 _Please note that some attributes are general to the ui-action tag and can therefore be used in different contexts. However, some attributes are really specific to the Dialog functionality of the ui-action and can be used only in the context of action='open-dialog'._
 
@@ -16,8 +16,8 @@ _Please note that some attributes are general to the ui-action tag and can there
 Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 specific children tags:
 
 * `<title>` - mandatory: specifies the title of the dialog and is always displayed at the top of it in a fixed and non scrollable position.
-* `<body>` - mandatory: specifies the content of the dialog that is displayed in the middle of it and can be scrollable when the content is too big to be contained in its height.
-* `<footer>` - optional: specifies the footer of the dialog and is always displayed at the bottom of it in a fixed and non scrollable position.
+* `<body>` - mandatory: specifies the content of the dialog that is displayed in the middle of it and can be scrollable when the content is too big to be contained in the view height.
+* `<footer>` - optional: specifies the footer of the dialog and is always displayed at the bottom in a fixed and non scrollable position.
 
 ## Attributes for the \<ui-action> tag
 
@@ -25,7 +25,7 @@ Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 spec
 
 | Attribute       | Type   | Required? | Description                                                                                                                                                                                                                                                                                                                      |
 | --------------- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`action`**    | String | Yes       | <p><em>General to <code>ui-action </code>tag</em></p><p>Identifies the action.<br><em>For the Dialog functionality, it should be <code>action='open-dialog'</code></em></p>                                                                                                                                                      |
+| **`action`**    | String | Yes       | <p><em>General to <code>ui-action </code>tag</em></p><p>Identifies the action.<br><em>For the Dialog functionality, it must be set to <code>action='open-dialog'</code></em></p>                                                                                                                                                 |
 | **`trigger`**   | String | No        | <p><em>General to <code>ui-action</code> tag</em></p><p>Specifies the way the action will be triggered by the Symphony user.<br></p><p><em>NB: It is not a mandatory attribute and the default value will be 'click' for the tags where it is not specified. Currently, only <code>trigger='click' </code>is supported.</em></p> |
 | **`target-id`** | String | Yes       | <p><em>Specific to the <code>open-dialog</code> action</em></p><p>Id of the dialog that must be opened when user will trigger this ui-action.</p><p>See <em><code>id</code></em> in the &#x3C;dialog> tag.</p>                                                                                                                   |
 
@@ -33,10 +33,10 @@ Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 spec
 
 
 
-| Attribute   | Type   | Required?                         | Description                                                                                                                        |
-| ----------- | ------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **`id`**    | String | Yes                               | Id of the dialog that will triggered thanks to the ui-action it is associated to. See _`target-id` attribute in \<ui-action> tag._ |
-| **`width`** | String | <p>No</p><p>Default to medium</p> | <p>Specifies the width of the dialog.<br></p><p><em>NB: values can be: small, medium, large, or full-width.</em></p>               |
+| Attribute   | Type   | Required?                         | Description                                                                                                                           |
+| ----------- | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **`id`**    | String | Yes                               | Id of the dialog that will be triggered thanks to the ui-action it is associated to. See _`target-id` attribute in \<ui-action> tag._ |
+| **`width`** | String | <p>No</p><p>Default to medium</p> | <p>Specifies the width of the dialog.<br></p><p><em>NB: values can be: small, medium, large, or full-width.</em></p>                  |
 
 
 
@@ -48,7 +48,7 @@ Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 spec
 * The dialog feature is supported in **popped-out mode**. The dialog will open in the popped-out window.
 * The dialog functionality supports [**Interactive Elements Forms**](../symphony-elements-1/) in the following way:
   * Dialogs can be contained inside forms. However, if contained in a form, the dialog cannot contain any interactive Element (such as button, text-area, etc.)
-  * Dialogs can contain a form. The `<form>` tag should wrap the entire content of the dialog, including the `<title>` ,`<body>` and `<footer>` tags, as you can see in the examples below. _This use case is very useful when you want your submit button not to be hidden and always appear in the footer of the dialog whereas the rest of the form content is contained in the scrollable body area._
+  * Dialogs can contain a form. The `<form>` tag should wrap the entire content of the dialog, including the `<title>` ,`<body>` and `<footer>` tags, as you can see in the examples below. _This is useful when you want the submit button not to be hidden and always appear in the footer of the dialog whereas the rest of the form content is contained in the scrollable body area._
   * Please also note that users can close the dialog thanks to the cross (x) displayed at the top-right corner of it, as well as with a new type of [button](../symphony-elements-1/buttons.md) that has been created for that purpose: \<button type="cancel">. You can also specify the class attribute of the button which is by default set to "tertiary" for this new button.
 * A dialog cannot be embedded in another dialog.
 
@@ -69,9 +69,8 @@ The following examples show the Dialog functionality being used as follows:
   * Please note as well that the `width` attribute has not been defined and is therefore set to "medium".
   * Please note the scrolling behaviour of the body whereas both title and footer are placed in a fixed position.
 * The second dialog shows how to **embed a form in a dialog**.
-  * Please note the user can interact with the form that is embedded in the dialog.
-  * After having started to fill-in the form, if the user closes the dialog and opens it back, the values will still be displayed to him at their last status, if he does not refresh the page.
-  * Also, you will notice that, when submitting the form that is in the dialog, the dialog will automatically close after a certain delay. If the user opens back the dialog without refreshing the page, then the values are stored as well as the submitted state.
+  * After having started to fill-in the form, if the user closes the dialog and opens it back, the values of the fields will not reset to their original values, as long as the user does not refresh the page.
+  * Also, when submitting a form that is in a dialog, the dialog will automatically close after a certain delay. If the user opens back the dialog without refreshing the page, then the values of the form and its state are persisted.
 
 _Please note that this example is quite complex, therefore two simpler examples have been specified with their messageML only to show you how to declare a dialog in a form and how to enclose a form in a dialog. Please use the tabs to reach these two examples._
 
