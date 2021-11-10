@@ -116,29 +116,7 @@ word-spacing
 word-wrap
 ```
 
-## Examples
 
-The following shows an example of using styles for an HTML table:
-
-{% tabs %}
-{% tab title="table using style attributes" %}
-![](../../../../.gitbook/assets/mml\_style\_attributes.png)
-{% endtab %}
-
-{% tab title="messageML structure" %}
-```markup
-<table style="border-collapse:collapse;border:2px solid black;table-layout:auto;width:100%;background-color:#f2f2f2;box-shadow: 5px 5px">
-    <thead>
-        <tr style="background-color:#4D94FF;color:#ffffff;font-size:1rem" class="tempo-text-color-white tempo-bg-color-black\">
-            <td style='text-shadow: 2px 2px black;border:1px solid blue;border-bottom: double blue;width:15%;text-align:center'>
-                SUBJECT
-            </td>
-        </tr>
-    </thead>
-</table>
-```
-{% endtab %}
-{% endtabs %}
 
 ## Go further...
 
