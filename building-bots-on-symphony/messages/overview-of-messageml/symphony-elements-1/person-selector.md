@@ -27,7 +27,7 @@ When a user types the person's name, a drop-down will be displayed with the resu
 The following examples show person selectors being used as follows:
 
 * The first person-selector (_placeholder_) shows how a **placeholder text** ("My Placeholder") is displayed in the UI. Please note the placeholder text is not sent in the payload if no option from the dropdown menu has been selected by the enduser.
-* The first person-selector (_placeholder_) shows how the bot can introduce a **default value** in the person selector. It shows as well how a Symphony user can interact with the clear all functionality.
+* The second person-selector (_placeholder_) shows how the bot can introduce a **default value** in the person selector. It shows as well how a Symphony user can interact with the clear all functionality.
 * The third person-selector (_noreq_) shows how a user can interact with a **non-required** field. Even if nobody is selected by the user, it does not prevent the enduser from submitting the form.
 * The fourth person-selector (_req_) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case nobody from the person selector is selected by the user; an error is displayed under the field in case the user submits the form with this empty field. An auto-filtering behaviour allows the user to see less options as he digits some input. Also, it shows how Symphony users can remove some of the selected users with the cross associated to that specific user.
 * The fifth person-selector (_label_) shows how a **label text** ("My Label") is displayed.
