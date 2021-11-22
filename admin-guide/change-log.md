@@ -31,5 +31,5 @@ The Swagger files are available here after:
 {% hint style="info" %}
 ### Agent x SBE compatibilities
 
-Please note that there are rules of compatibility between Agent and SBE versions. You can find detailed compatibility matrix [here](../agent-guide/sbe-x-agent-compatibility-matrix.md).
+Please note that there are rules of compatibility between Agent and SBE versions. You can find detailed compatibility matrix [here](agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}

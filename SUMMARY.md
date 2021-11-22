@@ -193,7 +193,7 @@
 
 ## Admin Guides <a href="admin-guide" id="admin-guide"></a>
 
-* [Change Logs](admin-guide/change-log/README.md)
+* [Change Logs](admin-guide/change-log.md)
   * [Agent](admin-guide/change-log/agent/README.md)
     * [Agent - 20.13](admin-guide/change-log/agent/agent-20.13.md)
     * [Agent - 20.12](admin-guide/change-log/agent/agent-20.12.md)

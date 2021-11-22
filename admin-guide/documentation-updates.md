@@ -2,7 +2,7 @@
 
 Our documentation is continually updated with new topics, and corrections or clarifications made to existing content. Check back every now and then, to see what is new!
 
-Also, visit the [Change Log](change-log/) to know more about the major Symphony updates.
+Also, visit the [Change Log](change-log.md) to know more about the major Symphony updates.
 
 {% hint style="info" %}
 Since November 2021, the developer portal is not divided in release versions any more and it contains latest information on a single environment. The change logs are gathered as subpages of each impacted product so that developers still have access to its history and know which features are introduced in their new version of any Symphony product impacting the developer journey.
@@ -54,7 +54,7 @@ No tutorial pages, overviews, nor guides have been added to the Symphony Platfor
 
 #### **API References**
 
-The following list shows the endpoints that have been updated or added to the [API Reference](https://rest-api.symphony.com/v20.10/reference) documentation to include the changes according to the [Change Log](change-log/):
+The following list shows the endpoints that have been updated or added to the [API Reference](https://rest-api.symphony.com/v20.10/reference) documentation to include the changes according to the [Change Log](change-log.md):
 
 * Updated:&#x20;
   * [Suppress Message](https://developers.symphony.com/restapi/v20.12/reference#suppress-message) endpoint
@@ -165,7 +165,7 @@ This section contains the main changes that occurred in the v20.5 version of the
 The following list shows the pages that have been updated:
 
 * Line breaks ('\n') are now allowed in the [Text Area](../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/text-area.md) Element.
-* The [Change Log](change-log/) page has been moved from the REST API Guide to the Developer Guide.
+* The [Change Log](change-log.md) page has been moved from the REST API Guide to the Developer Guide.
 * The Documentation Updates page has been moved from the REST API Guide to the Developer Guide.
 * The [RSA Bot Authentication Workflow](../building-bots-on-symphony/authentication/rsa-authentication.md) page has been moved from the REST API Guide to the Developer Guide.
 * The [Bot Authentication Workflow](../building-bots-on-symphony/authentication/certificate-authentication.md) page has been moved from the REST API Guide to the Developer Guide.

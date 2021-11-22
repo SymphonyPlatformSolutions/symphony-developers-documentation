@@ -45,6 +45,12 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 * Fixed bug due to excessive token storing duration in cache, causing occasional 401s when trying to read datafeed v2 once expired
 
+### Agent 20.12.4
+
+* Fixed bug where payload was missing when message is sent on mobile with @ mention when Datafeed v2 is configured on the pod.
+* Fixed memory leak bug.
+* Updated dependencies to address potential security vulnerabilities.
+
 ## Agent API changes
 
 ### **New APIs**

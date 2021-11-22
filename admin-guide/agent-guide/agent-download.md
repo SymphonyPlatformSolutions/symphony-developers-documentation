@@ -6,6 +6,6 @@ You can download the following versions of the Agent:
 
 {% hint style="info" %}
 For more information regarding the Agent installation, refer to [Agent Installation](agent-2.x-and-above-installation.md).\
-Visit [Change Log](../change-log/) to know more about Agent changes, new features and other updates.\
+Visit [Change Log](../change-log.md) to know more about Agent changes, new features and other updates.\
 For a list of Agent x SBE Compatibilities, visit [SBE x Agent Compatibilities](sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
