@@ -1,8 +1,21 @@
 # Messages
 
-## Overview of the Message Workflow
+## Message API endpoints
 
-In the Symphony message workflow, messages are represented in the following markup language forms:
+Bots in Symphony can use the following API endpoints to **create**, **update** and **suppress** messages in Symphony chats:
+
+* Message **creation** via the Create Message v4 [endpoint](https://developers.symphony.com/restapi/reference#create-message-v4)
+* Message **creation in multiple conversations** using the Blast Message [endpoint](https://developers.symphony.com/restapi/reference#blast-message)
+* Message **update** via the Update Message [endpoint](https://developers.symphony.com/restapi/reference#update-message-v4). _Note this functionality is only supported on Client 2.0, as in other clients the updates will appear as new messages instead of replacing the actual message. Also, note the rules and limitations explained in the endpoint specifications documented _[_here_](https://developers.symphony.com/restapi/v20.13/reference#update-message-v4)_._
+* Message **suppression** via the Suppress Message [endpoint](https://developers.symphony.com/restapi/reference#suppress-message)
+
+Please see below a quick animation showing a simple lifecycle of a bot message in Symphony with a message created by the bot, updated three times, and then finally suppressed.
+
+![](<../../.gitbook/assets/Message Lifecycle.gif>)
+
+## Overview of the Message Flow
+
+In the Symphony message flow, messages are represented in the following markup language forms:
 
 * **MessageML**: A tag-based language that is a subset of XHTML. MessageML allows templating in [Apache Freemarker](https://freemarker.apache.org/index.html).
 * **PresentationML**: MessageML translated into the equivalent XHTML tags so it can be rendered and processed by any HTML client.
@@ -12,11 +25,11 @@ In the Symphony message workflow, messages are represented in the following mark
 Note: MessageML is just a subset of PresentationML that makes it easier to construct messages from your bot. The API can ingest either MessageML or PresentationML. However, the API will only deliver messages as PresentationML to a bot.
 {% endhint %}
 
-## PresentationML Live Renderer Tool:
+## PresentationML Live Renderer Tool
 
 Symphony created the [Presentation ML Live Renderer Tool](https://renderer-tool.app.symphony.com) that you can use to see your MessageML rendered in PresentationML or markdown (mobile) without coding.
 
-## Diagram of Symphony Message Workflow:
+## Diagram of Symphony Message Flow:
 
 ![](../../.gitbook/assets/message-workflow-3x.svg)
 
