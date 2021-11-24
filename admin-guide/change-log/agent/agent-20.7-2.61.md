@@ -38,16 +38,6 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 * Removed the stack trace logging if log level is not set to "debug"
 * Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
 
-## Agent API changes
-
-### **New APIs**
-
-No Agent API was released in Symphony version 20.7.
-
-### **Updated APIs**
-
-No Agent API was updated in Symphony version 20.7.
-
 ## **Deprecation Notice**
 
 ### **APIs**

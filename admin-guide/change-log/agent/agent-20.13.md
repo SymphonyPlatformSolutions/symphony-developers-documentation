@@ -33,16 +33,6 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 * Fixed bug where OBO calls are failing repeatedly
 
-## Agent API changes
-
-### **New APIs**
-
-No Agent API endpoint was created in Symphony version 20.13.
-
-### **Updated APIs**
-
-No Agent API endpoint was updated in Symphony version 20.13
-
 ## **Deprecation Notice**
 
 ### **APIs**

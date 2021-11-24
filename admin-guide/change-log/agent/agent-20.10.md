@@ -18,13 +18,16 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 20.10.0
 
-* The Agent will return a direct error when trying to send a message larger than the max message length. Please keep in mind that other errors related to message size limits such as the number of Search tokens to be indexed will continue to be returned indirectly through the datafeed.
-* Elements Checkboxes and Radio buttons: The limit of number of Elements in a form has been increased to 50. Please note that this limit has been set as a safeguard to avoid reaching the limit of the message total number of characters.
-* Agent compatibility with OpenJDK 1.8 262 has been verified&#x20;
-* Fixed security vulnerabilities in the Agent
-* Removed logging of Agent properties at startup
-* Removed the stack trace logging if log level is not set to "debug"
-* Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
+* General changes:
+  * The Agent will return a direct error when trying to send a message larger than the max message length. Please keep in mind that other errors related to message size limits such as the number of Search tokens to be indexed will continue to be returned indirectly through the datafeed.
+  * Elements Checkboxes and Radio buttons: The limit of number of Elements in a form has been increased to 50. Please note that this limit has been set as a safeguard to avoid reaching the limit of the message total number of characters.
+  * Agent compatibility with OpenJDK 1.8 262 has been verified&#x20;
+  * Fixed security vulnerabilities in the Agent
+  * Removed logging of Agent properties at startup
+  * Removed the stack trace logging if log level is not set to "debug"
+  * Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
+* APIs updates:
+  * The behavior of some API endpoints has been changed to ignore unexpected parameters. Please keep in mind that unexpected parameters are not officially supported and may result in an error in a future version.
 
 ### Agent 20.10.1
 
@@ -38,16 +41,6 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 ### Agent 20.10.3
 
 * Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers
-
-## Agent API changes
-
-### **New APIs**
-
-No Agent API endpoint was created in Symphony version 20.10.
-
-### **Updated APIs**
-
-The behavior of some API endpoints has been changed to ignore unexpected parameters. Please keep in mind that unexpected parameters are not officially supported and may result in an error in a future version.
 
 ## **Deprecation Notice**
 

@@ -42,16 +42,6 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 * Increased the size of Ephemeral Diffie-Hellman Keys to 2048 by default
 * Fixed security vulnerabilities in the Agent
 
-## Agent API changes
-
-### **New APIs**
-
-No Agent API was released in Symphony version 20.6.
-
-### **Updated APIs**
-
-No Agent API was updated in Symphony version 20.6.
-
 ## **Deprecation Notice**
 
 ### **APIs**

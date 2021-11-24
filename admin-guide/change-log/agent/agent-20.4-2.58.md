@@ -23,22 +23,12 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
   * Fixed an issue with users blocked by IB policies. Now, a subscription error is shown when an API caller subscribes to a visible signal created by an IB blocked user.
   * The messageML has been improved so that linebreaks are accepted in Text Area Elements.
 * Agent APIs updates
-  *
+  * [Import Message](https://developers.symphony.com/restapi/reference#import-message-v4): fixed an issue when importing a message that contains DLP violations was not returning the diagnostic message.
+  * Fixed inconsistencies with the returned response body of DLP APIs.
 
 ### Agent 2.58.1
 
 * A fix was added to the Agent Health Check (v2 and v3) in order to ignore Datafeed v2 status.
-
-## Agent API changes
-
-### **New APIs**
-
-No Agent API endpoint was created in Symphony version 20.4.
-
-### **Updated APIs**
-
-* [Import Message](https://developers.symphony.com/restapi/reference#import-message-v4): fixed an issue when importing a message that contains DLP violations was not returning the diagnostic message.
-* Fixed inconsistencies with the returned response body of DLP APIs.
 
 ## **Deprecation Notice**
 

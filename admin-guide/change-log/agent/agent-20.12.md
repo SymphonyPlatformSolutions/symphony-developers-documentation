@@ -18,11 +18,20 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 20.12.0
 
-* Introduction of 3 new Elements: [Date Picker](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/date-picker.md), [Time Picker](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/time-picker.md), and [Timezone Picker](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/timezone-picker.md). _Please go to the description of these new Elements to see their availability on the Client side, as some of them are not or only partially available in the 20.12 version of the Client 1.5, but already released in compatible versions of Client 2.0._
-* Agent now supports new 429 Retry later replies from downstream services (such as Symphony Back-End) as follows: for backward-compatibility purposes, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded. _Please start updating your bots to support 429 errors as we will introduce them in the future._
-* Improved performance when creating message with multiple files attached.
-* MessageML: Fix to support the usage of base64 image in background-image style.
-* Updated dependencies to address potential security vulnerabilities.
+* General changes:
+  * Introduction of 3 new Elements: [Date Picker](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/date-picker.md), [Time Picker](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/time-picker.md), and [Timezone Picker](../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/timezone-picker.md). _Please go to the description of these new Elements to see their availability on the Client side, as some of them are not or only partially available in the 20.12 version of the Client 1.5, but already released in compatible versions of Client 2.0._
+  * Agent now supports new 429 Retry later replies from downstream services (such as Symphony Back-End) as follows: for backward-compatibility purposes, if a 429 is received by the agent, it is mapped to a 400 and the "Retry-After" header is forwarded. _Please start updating your bots to support 429 errors as we will introduce them in the future._
+  * Improved performance when creating message with multiple files attached.
+  * MessageML: Fix to support the usage of base64 image in background-image style.
+  * Updated dependencies to address potential security vulnerabilities.
+* APIs updates:
+  * [POST](https://developers.symphony.com/restapi/v20.12/reference#message-search-post) and [GET Message Search](https://developers.symphony.com/restapi/v20.12/reference#message-search-get) endpoints were updated to return 400 error instead of 500 when call requested to search by invalid StreamId.
+  * [Create Message v4](https://developers.symphony.com/restapi/v20.12/reference#create-message-v4) endpoint was updated to return 400 error instead of 500 when creating a message into a deleted room.
+  * [Import Message](https://developers.symphony.com/restapi/v20.12/reference#import-message-v4) endpoint was updated to return a more explicit message when trying to import a message into a deleted conversation.
+  * Agent was updated to return a 400 error as well as an explicit message when the backend identifies that the message size limit has been exceeded at ingestion.
+  * In order to be consistent with other endpoints, [Attachment](https://developers.symphony.com/restapi/v20.12/reference#attachment) 404 errors are mapped by the agent to 400.
+  * [Read Datafeed v5](https://developers.symphony.com/restapi/v20.12/reference#read-datafeed-v5) response now contains empty events array for changing presence status instead of an events array containing the 'null' value.
+  * Fixed the issue of still getting wall post messages via the [Get Message v1](https://developers.symphony.com/restapi/v20.12/reference#get-message-v1) endpoint, although "Allow user to read wall posts" entitlement was set to No
 
 ### Agent 20.12.1
 
@@ -50,22 +59,6 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 * Fixed bug where payload was missing when message is sent on mobile with @ mention when Datafeed v2 is configured on the pod.
 * Fixed memory leak bug.
 * Updated dependencies to address potential security vulnerabilities.
-
-## Agent API changes
-
-### **New APIs**
-
-No Agent API endpoint was created in Symphony version 20.12.
-
-### **Updated APIs**
-
-* [POST](https://developers.symphony.com/restapi/v20.12/reference#message-search-post) and [GET Message Search](https://developers.symphony.com/restapi/v20.12/reference#message-search-get) endpoints were updated to return 400 error instead of 500 when call requested to search by invalid StreamId.
-* [Create Message v4](https://developers.symphony.com/restapi/v20.12/reference#create-message-v4) endpoint was updated to return 400 error instead of 500 when creating a message into a deleted room.
-* [Import Message](https://developers.symphony.com/restapi/v20.12/reference#import-message-v4) endpoint was updated to return a more explicit message when trying to import a message into a deleted conversation.
-* Agent was updated to return a 400 error as well as an explicit message when the backend identifies that the message size limit has been exceeded at ingestion.
-* In order to be consistent with other endpoints, [Attachment](https://developers.symphony.com/restapi/v20.12/reference#attachment) 404 errors are mapped by the agent to 400.
-* [Read Datafeed v5](https://developers.symphony.com/restapi/v20.12/reference#read-datafeed-v5) response now contains empty events array for changing presence status instead of an events array containing the 'null' value.
-* Fixed the issue of still getting wall post messages via the [Get Message v1](https://developers.symphony.com/restapi/v20.12/reference#get-message-v1) endpoint, although "Allow user to read wall posts" entitlement was set to No
 
 ## **Deprecation Notice**
 

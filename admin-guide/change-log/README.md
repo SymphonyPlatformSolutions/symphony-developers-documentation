@@ -22,11 +22,11 @@ _Be aware that these change logs might not contain all updates from the product.
 The Swagger files are available here after:
 
 * [20.12](https://github.com/symphonyoss/symphony-api-spec/tree/20.12)
-* [20.4.1 ](https://github.com/symphonyoss/symphony-api-spec/tree/20.4.1)(1.58)
-* 20.5 (1.59)
-* [20.6](https://github.com/symphonyoss/symphony-api-spec/tree/20.6) (1.60)
-* [20.7](https://github.com/symphonyoss/symphony-api-spec/tree/20.7) (1.61)
 * [20.9](https://github.com/symphonyoss/symphony-api-spec/tree/20.9) (1.62)
+* [20.7](https://github.com/symphonyoss/symphony-api-spec/tree/20.7) (1.61)
+* [20.6](https://github.com/symphonyoss/symphony-api-spec/tree/20.6) (1.60)
+* [20.5](https://github.com/finos/symphony-api-spec/tree/20.5.1) (1.59)
+* [20.4.1 ](https://github.com/symphonyoss/symphony-api-spec/tree/20.4.1)(1.58)
 
 {% hint style="info" %}
 ### Agent x SBE compatibilities
