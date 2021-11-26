@@ -1,8 +1,8 @@
 ---
 description: >-
   Please find in the subpages below the list of changes related to each version
-  of Client 2.0 extensibility.
+  of the pod APIs.
 ---
 
-# Client 2.0 extensibility updates
+# SBE API endpoints (pod)
 

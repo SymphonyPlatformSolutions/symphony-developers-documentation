@@ -1,2 +1,0 @@
-# SBE endpoints (pod)
-

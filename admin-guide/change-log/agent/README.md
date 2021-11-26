@@ -1,7 +1,11 @@
+---
+description: >-
+  Please find in the subpages below the list of changes related to each version
+  of the agent.
+---
+
 # Agent
 
-You can find the change logs related to each agent release in the attached subpages.
-
 {% hint style="info" %}
-Agent can be downloaded [here](../../agent-guide/agent-download.md).
+Latest Agent version can be downloaded [here](../../agent-guide/agent-download.md).
 {% endhint %}

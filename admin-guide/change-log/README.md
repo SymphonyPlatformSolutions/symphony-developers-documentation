@@ -7,17 +7,13 @@ description: >-
 
 # Change Logs
 
-Please find in the subpages the change logs referring to:
+The change logs are organised in three sub sections:
 
-* the Agent;
-* the SBE (pod);
-* the Client 2.0.
+* Agent change logs;
+* SBE (pod) API change logs;
+* Client 2.0 extensibility change logs, focused only on changes that impact the developer journey. Please refer to the 2.0 official release notes for general purpose change logs.
 
-Each product change log is divided in subpages containing the different released versions updates impacting the developers journey.
-
-_Be aware that these change logs might not contain all updates from the product. For example, features impacting only users from Client 2.0 will not be contained in these pages; you may want to refer to 2.0 official release notes for this purpose._
-
-## Swagger
+## API Swagger files
 
 The Swagger files are available here after:
 
