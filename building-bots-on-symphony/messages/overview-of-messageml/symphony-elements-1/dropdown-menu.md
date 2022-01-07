@@ -1,25 +1,28 @@
 # Dropdown Menu
 
-A dropdown menu **is a static list** of items that appears whenever a piece of text or a button is clicked. This is a graphical approach presented to users from which they can choose a value from the list presented.
+A dropdown menu **is a static list** of items that appears whenever a piece of text or a button is clicked. This is a graphical approach presented to users from which they can choose one or several values from the list presented.
 
 A dropdown menu is also known as a pull-down menu, pull-down list, dropdown list or dropdown box.
 
 The dropdown menu is represented by the `<select>` tag which provides a menu of `<options>`.\
 Each `<option>` element should have a `value` attribute containing the data value to submit to the server when that option is selected; You can also include a `selected` attribute on an `<option>` element to make it selected by default when the page first loads.
 
-![](../../../../.gitbook/assets/af42ada-dropdown.jpg)
+![](<../../../../.gitbook/assets/dropdown 2.0.png>)
 
 ## Attributes
 
-| Attribute          | Type                                              | Required?                                                | Description                                                                                                                                                                                 |
-| ------------------ | ------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`             | String                                            | Yes                                                      | Required attribute of the `<select>` tag. It identifies the dropdown menu.                                                                                                                  |
-| `required`         | Boolean                                           | No                                                       | Optional attribute of the `<select>` tag. it is a Boolean attribute indicating that an option with a non-empty string value must be selected.                                               |
-| `value`            | String                                            | Yes                                                      | Required attribute of the `<option>` tag. It contains the data value to submit to the server when that option is selected.                                                                  |
-| `selected`         | Boolean                                           | Optional                                                 | You can include a selected attribute on an `<option>` element to make it selected by default when the page first loads. Accepted values: `true` and `false`.                                |
-| `data-placeholder` | String                                            | Optional                                                 | Text displayed in the dropdown menu before an option is selected. It can be a short hint or a title for the dropdown menu.                                                                  |
-| `title`            | It accepts a simple text and `\n` for line breaks | No                                                       | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters. Available from Symphony v20.8 and above. |
-| `label`            | String                                            | Not required but it is recommended if `title` is defined | Definition of the label that will be displayed on top of the Masked Text Field Element. Available from Symphony v20.8 and above.                                                            |
+| Attribute          | Type                                                          | Required?                                                                             | Description                                                                                                                                                                                                                                         |
+| ------------------ | ------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`             | String                                                        | Yes                                                                                   | Required attribute of the `<select>` tag. It identifies the dropdown menu.                                                                                                                                                                          |
+| `required`         | Boolean                                                       | No                                                                                    | Optional attribute of the `<select>` tag. it is a Boolean attribute indicating that an option with a non-empty string value must be selected.                                                                                                       |
+| `value`            | String                                                        | Yes                                                                                   | Required attribute of the `<option>` tag. It contains the data value to submit to the server when that option is selected.                                                                                                                          |
+| `selected`         | Boolean                                                       | Optional                                                                              | You can include a selected attribute on an `<option>` element to make it selected by default when the page first loads. Accepted values: `true` and `false`.                                                                                        |
+| `data-placeholder` | String                                                        | Optional                                                                              | Text displayed in the dropdown menu before an option is selected. It can be a short hint or a title for the dropdown menu.                                                                                                                          |
+| `title`            | It accepts a simple text and `\n` for line breaks             | Optional                                                                              | The description that will be displayed when clicking the tooltip icon located on top of the Masked Text Field Element. Max length: 256 characters.                                                                                                  |
+| `label`            | String                                                        | Not required but it is recommended if `title` is defined                              | Definition of the label that will be displayed on top of the Masked Text Field Element.                                                                                                                                                             |
+| `multiple`         | <p>String<br>Boolean</p>                                      | <p>Optional<br>Default is false</p>                                                   | Allows users to select multiple values and the developer to send dropdown with multiple preselected options.                                                                                                                                        |
+| `min`              | <p>String<br>Integer ≥ 2 and ≤ <code>max</code> attribute</p> | <p>Optional<br>Can be used only if <code>multiple</code> attribute is set to true</p> | <p>Minimum number of options to be selected by the Symphony user.<br><br><em>NB: If undefined, no minimum option needs to be selected. Please use <code>required</code> attribute if you want to set min to 1.</em></p>                             |
+| `max`              | <p>String<br>Integer ≥ 2</p>                                  | <p>Optional<br>Can be used only if <code>multiple</code> attribute is set to true</p> | <p>Maximum number of options to be selected by the Symphony user.<br><br><em>NB: If undefined, user will be able to select as many options as wished. Please use <code>multiple</code> attribute set to false if you want to set max to 1.</em></p> |
 
 ## Rules and Limitations
 
@@ -28,6 +31,7 @@ The `<select>` tag:
 * The `<select>` tag stands for our dropdown parent tag, which has `<options>` as its children; one for each select.
 * Select tags only accept `<option>` tags as children. The `<select>` tag must contain at least one `<option>` tag.
 * The only valid attributes of the `<select>` tag are `name` and `required`.
+* Note that, by default, Symphony users will only be able to select one option from the dropdown menu. However, using the attribute multiple set to true together with min and max attributes, users will be able to select several options from the dropdown. Please see below the examples to know how to use these attributes.
 
 The `<option>` tag:
 
@@ -53,13 +57,13 @@ The following examples show dropdown menus being used as follows:
 * The fourth dropdown (_req_) shows the behaviour of the unique **required** field of the form, which cannot be submitted in case no option from the dropdown menu is selected by the user; an error is displayed under the field in case the user submits the form with this empty field.
 * The fifth dropdown (_label_) shows how a **label text** ("My Label") is displayed.
 * The sixth dropdown (_tooltip_) shows how a **title text** ("My Tooltip/n With a second line") is inserted in the UI under the (i) icon, and how the text entered in the title parameter is displayed when the enduser clicks on the icon.
+* The seventh dropdown (multiple) shows how to combine **multiple** attribute with **min/max** rules to guide users selecting between 3 and 5 options.
 
-![](../../../../.gitbook/assets/dropdown-menus-20.9.gif)
+![](../../../../.gitbook/assets/elements\_dropdown.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}
 ```markup
-
 <messageML>
   <form id="form_id">
     <h2>dropdown menus</h2>
@@ -69,6 +73,7 @@ The following examples show dropdown menus being used as follows:
       <select name="req" required="true" data-placeholder="Required"><option value="opt1">First</option><option value="opt2">Second</option><option value="opt3">Third</option></select>
       <select name="label" label="My Label" data-placeholder="With Label"><option value="opt1">Unselected option 1</option><option value="opt2">Unselected option 2</option><option value="opt3">Unselected option 3</option></select>
       <select name="tooltip" title="My Tooltip\n With a second line" data-placeholder="With Tooltip"><option value="opt1">Unselected option 1</option><option value="opt2">Unselected option 2</option><option value="opt3">Unselected option 3</option></select>
+      <select name="multiple" label="With multiple select options - between 3 and 5" multiple="true" min="3" max="5"><option value="opt1" selected="true">Preselected option 1</option><option value="opt2" selected="true">Preselected option 2</option><option value="opt3" selected="true">Preselected option 3</option><option value="opt4">Unselected option 4</option><option value="opt5">Unselected option 5</option><option value="opt6">Unselected option 6</option></select>
       <button name="dropdown">Submit</button>
   </form>
 </messageML>
@@ -110,7 +115,8 @@ The following examples show dropdown menus being used as follows:
                     "noreq": "",
                     "req": "opt2",
                     "label": "",
-                    "tooltip": ""
+                    "tooltip": "",
+                    "multiple": ["opt1", "opt2", "opt3", "opt5", "opt6"]
                 }
             }
         }
@@ -122,8 +128,9 @@ The following examples show dropdown menus being used as follows:
 
 ## Versions and Compatibility
 
-| Main features introduced | Client release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | -------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 1.55           | Not working                                                  | 2.55.9                                        |
-| Label                    | 20.9           | Label displayed and form can still be submitted              | 20.6                                          |
-| Tooltip (title)          | 20.9           | Tooltip not displayed but form can still be submitted        | 20.7                                          |
+| Main features introduced               | Client release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
+| -------------------------------------- | -------------- | ------------------------------------------------------------ | --------------------------------------------- |
+| Initial release                        | 1.55           | Not working                                                  | 2.55.9                                        |
+| Label                                  | 20.9           | Label displayed and form can still be submitted              | 20.6                                          |
+| Tooltip (title)                        | 20.9           | Tooltip not displayed but form can still be submitted        | 20.7                                          |
+| Multiple (with min and max) attributes | 21.12          | -                                                            | 20.14                                         |
