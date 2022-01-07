@@ -208,7 +208,7 @@ The following list shows the endpoints that have been updated or added to the [A
 
 * [Users Lookup v3](https://developers.symphony.com/restapi/v20.3/reference-link/users-lookup-v3): the `accountType` field has been added to the response sample.
 * [Search Users](https://developers.symphony.com/restapi/v20.3/reference-link/search-users): the `accountType` field has been added to the response sample.
-* [Create Room v3](https://developers.symphony.com/restapi/v20.3/reference-link/create-room-v3): The following note has been added: _"`viewHistory`, `discoverable` and `membersCanInvite` attributes cannot be _false_ if `public=true`._
+* [Create Room v3](https://developers.symphony.com/restapi/v20.3/reference-link/create-room-v3): The following note has been added: _"`viewHistory`, `discoverable` and `membersCanInvite` attributes cannot be_ false _if `public=true`._
 * [Message Search - POST](https://developers.symphony.com/restapi/v20.3/reference-link/message-search-post): Added a note stating that search terms cannot contain the following reserved characters: colon :, parentheses ( ), and whitespaces.
 * [Message Search - GET](https://developers.symphony.com/restapi/v20.3/reference-link/message-search-get): The following information has been added to the `text` argument: _Multi-word search is allowed. Syntax: text:"Hello world"_.
 * [Health Check v3](https://developers.symphony.com/restapi/v20.3/reference-link/health-check-v3) and [Health Check Extended v3](https://developers.symphony.com/restapi/v20.3/reference-link/health-check-extended-v3): New endpoints.

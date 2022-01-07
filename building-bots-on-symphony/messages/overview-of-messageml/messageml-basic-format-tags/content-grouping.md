@@ -66,7 +66,7 @@ Here after you can find an example of a message sent by a bot and containing the
 {% endtab %}
 {% endtabs %}
 
-_Please note that you can use content grouping tags mixed with other messageML tags such as Interactive Elements Forms. See the following example including forms in expandable-cards. _
+_Please note that you can use content grouping tags mixed with other messageML tags such as Interactive Elements Forms. See the following example including forms in expandable-cards._&#x20;
 
 {% tabs %}
 {% tab title="Users interacting with forms and expandable-cards" %}

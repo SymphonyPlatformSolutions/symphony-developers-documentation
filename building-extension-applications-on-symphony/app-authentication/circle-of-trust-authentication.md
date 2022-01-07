@@ -163,7 +163,7 @@ X-API-KEY: <apiKey>
 **Note:**
 
 * The `sessionAuthUrl` returned for a given pod is what should be used for the authentication calls.
-* `baseUrl`: If the field is not there, you can obtain it from **`podUrl` **by removing _**/pod**_.
+* `baseUrl`: If the field is not there, you can obtain it from **`podUrl` ** by removing _**/pod**_.
 * `loginUrl`: If the field is not there, you can obtain it by adding _**/login**_ to `baseUrl` (or obtain it from `podUrl` by replacing _**/pod**_ for _**/login**_).
 
 ### JSON Web Tokens

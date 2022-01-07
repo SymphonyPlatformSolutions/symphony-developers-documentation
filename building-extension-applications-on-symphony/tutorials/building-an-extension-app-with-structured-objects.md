@@ -253,7 +253,7 @@ public void handle(BotCommand command, SymphonyMessage response) {
 {% endtab %}
 {% endtabs %}
 
-We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method. **The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client. **A default template can be as simple as the following `help-template.hbs` :
+We pass a default handlebars template, our newly created structured object, and our entity `type` to the `setEnrichedTemplateFile()` method. **The sample template we pass will not be used as long as a renderer that matches the entity type is registered on the client.** A default template can be as simple as the following `help-template.hbs` :
 
 {% tabs %}
 {% tab title="templates/help-template.hbs" %}

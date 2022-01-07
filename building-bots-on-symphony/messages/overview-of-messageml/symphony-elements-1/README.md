@@ -121,7 +121,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 1. **A Bot sends a message with Symphony Elements in a form**
 2. **The message/from is visible to users.  Users interact with the elements**
 3. **Once submitted, the data is submitted to the bot**
-4. **Bots can access the data, by reading the datafeed. **
+4. **Bots can access the data, by reading the datafeed.**&#x20;
 
 ## **Form** specification
 
@@ -131,9 +131,10 @@ Forms are represented by the **\<form>** tag, as you can see in the examples abo
 
 ### Attributes
 
-| **Attribute** | **Type** | **Required?** | **Description**      |
-| ------------- | -------- | ------------- | -------------------- |
-| `id`          | String   | Yes           | Identifies the form. |
+| **Attribute**  | **Type** | **Required?** | **Description**                                                                          |
+| -------------- | -------- | ------------- | ---------------------------------------------------------------------------------------- |
+| `id`           | String   | Yes           | Identifies the form.                                                                     |
+| `multi-submit` | String   | No            | Specifies that the form can be submitted several times by the user ad the w to reset it. |
 
 ### Rules and Limitations
 
@@ -141,8 +142,53 @@ Forms are represented by the **\<form>** tag, as you can see in the examples abo
 * To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons.md).
 * All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload.  That way the bot manager can know which button triggered the submission of that form.
 * If there is more than one element in the form having the same `name` attribute, the value is converted to an array. Every index of the array is related to a specific element value. The index order is not guaranteed, so the developer needs to iterate through this array and collect the values.
-* When a form is submitted, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, you can fill out the form again and submit it as a new form.
-* When designing forms, it is important to consider the message size limit. For more information refer to [MessageML - Message size limits.](broken-reference)
+* When a form is submitted and `multi-submit` attribute is not specified, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, the user can fill out the form again and submit it as a new form.
+* The attribute `multi-submit` allows the us to submit the form several times even without needing to refresh the page. It can take 2 different string values:
+  * `reset` which resets the form to the default value when enabling it again for the user,
+  * `no-reset` which keeps the values that were submitted by the user when enabling it again for the user.
+* When designing forms, it is important to consider the message size limit. For more information refer to[ Message size limits.](../../#message-size-limits)
+
+### Examples
+
+The following example shows three forms being used as follows:
+
+* The first form (_default_) shows how Symphony users interact with a form, and how the Elements are disabled once the form is submitted.
+* The second form (_multi-submit-reset_) shows how to create a form that can be **submitted several times** and which **resets** all its Elements to their default value once the user submits it. You note the Elements are first disabled while loading, then the button shows the user the form has been submitted, before the form is enabled back to its default value for the user to submit it again.
+* The third form (_multi-submit-no-reset_) shows how to create a form that can be **submitted several times** and which **keeps** last submitted values once the user submits it. You note the Elements are first disabled while loading, then the button shows the user the form has been submitted, before the form is enabled back to its last submitted value for the user to submit it again.
+
+![](../../../../.gitbook/assets/elements\_form.gif)
+
+{% tabs %}
+{% tab title="MessageML" %}
+```markup
+<messageML>
+  <form id="default">
+    <text-field name="test"> This form becomes disabled once submitted</text-field>
+    <button name="default">Submit</button>
+  </form>
+  <hr/>
+  <form id="multi-submit-reset" multi-submit="reset">
+    <text-field name="test" label="Resets values to default"> This form can be submitted more than once</text-field>
+    <button name="multi-submit-reset">Submit</button>
+  </form>
+  <hr/>
+  <form id="multi-submit-no-reset" multi-submit="no-reset">
+    <text-field name="test" label="Keeps last submitted values"> This form  can be submitted more than once</text-field>
+    <button name="multi-submit-no-reset">Submit</button>
+  </form>
+</messageML>
+```
+{% endtab %}
+{% endtabs %}
+
+### Versions and Compatibility
+
+
+
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | Backward client-compatibility behavior (e.g. external rooms) |
+| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | ------------------------------------------------------------ |
+| Initial release          | 2.55.9                                        |                    | _1.55_               | Not working                                                  |
+| Multi-submit attribute   | 20.13                                         | 21.8               | -                    | -                                                            |
 
 
 

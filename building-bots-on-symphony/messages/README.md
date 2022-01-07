@@ -6,7 +6,7 @@ Bots in Symphony can use the following API endpoints to **create**, **update** a
 
 * Message **creation** via the Create Message v4 [endpoint](https://developers.symphony.com/restapi/reference#create-message-v4)
 * Message **creation in multiple conversations** using the Blast Message [endpoint](https://developers.symphony.com/restapi/reference#blast-message)
-* Message **update** via the Update Message [endpoint](https://developers.symphony.com/restapi/reference#update-message-v4). _Note this functionality is only supported on Client 2.0, as in other clients the updates will appear as new messages instead of replacing the actual message. Also, note the rules and limitations explained in the endpoint specifications documented _[_here_](https://developers.symphony.com/restapi/v20.13/reference#update-message-v4)_._
+* Message **update** via the Update Message [endpoint](https://developers.symphony.com/restapi/reference#update-message-v4). _Note this functionality is only supported on Client 2.0, as in other clients the updates will appear as new messages instead of replacing the actual message. Also, note the rules and limitations explained in the endpoint specifications documented_ [_here_](https://developers.symphony.com/restapi/v20.13/reference#update-message-v4)_._
 * Message **suppression** via the Suppress Message [endpoint](https://developers.symphony.com/restapi/reference#suppress-message)
 
 Please see below a quick animation showing a simple lifecycle of a bot message in Symphony with a message created by the bot, updated three times, and then finally suppressed.
@@ -35,10 +35,10 @@ Symphony created the [Presentation ML Live Renderer Tool](https://renderer-tool.
 
 The above diagram shows the following:
 
-1. **Your bot uses the **[**Agent API**](../overview-of-rest-api/agent-api.md)** to send messages in MessageML.**
-2. **The Agent API encrypts the messages, and converts them to PresentationML where they are stored in Symphony's data store.   **
-3. **The **[**Symphony Datafeed**](../datafeed/)** delivers messages to end users or to the Desktop Application as PresentationML.**
-4. **When Bot's retrieve messages via the API, the messages are delivered as PresentationML.   **
+1. **Your bot uses the** [**Agent API**](../overview-of-rest-api/agent-api.md) **to send messages in MessageML.**
+2. **The Agent API encrypts the messages, and converts them to PresentationML where they are stored in Symphony's data store.**  &#x20;
+3. **The** [**Symphony Datafeed**](../datafeed/) **delivers messages to end users or to the Desktop Application as PresentationML.**
+4. **When Bot's retrieve messages via the API, the messages are delivered as PresentationML.**  &#x20;
 
 ## Message Identifiers:
 

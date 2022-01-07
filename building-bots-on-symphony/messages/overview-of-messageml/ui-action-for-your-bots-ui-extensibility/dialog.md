@@ -6,7 +6,7 @@ Do you want to grab the attention of chat users to some important information in
 
 The Dialog element is structured in two sections:
 
-* the `<ui-action>` tag, associated with the **`action='open-dialog'` **attribute as you can see in the examples at the bottom of the page. This tag must wrap a [button](../symphony-elements-1/buttons.md), through which the Symphony user will be able to trigger the action specified, in this case the pop-up Dialog functionality;
+* the `<ui-action>` tag, associated with the **`action='open-dialog'` ** attribute as you can see in the examples at the bottom of the page. This tag must wrap a [button](../symphony-elements-1/buttons.md), through which the Symphony user will be able to trigger the action specified, in this case the pop-up Dialog functionality;
 * and the `<dialog>` tag that will contain the content of the dialog that will pop up when the user will trigger the action by clicking on the button.
 
 _Please note that some attributes are general to the ui-action tag and can therefore be used in different contexts. However, some attributes are really specific to the Dialog functionality of the ui-action and can be used only in the context of action='open-dialog'._
@@ -25,8 +25,8 @@ Dialogs are divided into 3 areas and the `<dialog>` tag therefore accepts 3 spec
 
 | Attribute       | Type   | Required? | Description                                                                                                                                                                                                                                                                                                                      |
 | --------------- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`action`**    | String | Yes       | <p><em>General to <code>ui-action </code>tag</em></p><p>Identifies the action.<br><em>For the Dialog functionality, it must be set to <code>action='open-dialog'</code></em></p>                                                                                                                                                 |
-| **`trigger`**   | String | No        | <p><em>General to <code>ui-action</code> tag</em></p><p>Specifies the way the action will be triggered by the Symphony user.<br></p><p><em>NB: It is not a mandatory attribute and the default value will be 'click' for the tags where it is not specified. Currently, only <code>trigger='click' </code>is supported.</em></p> |
+| **`action`**    | String | Yes       | <p><em>General to <code>ui-action</code> tag</em></p><p>Identifies the action.<br><em>For the Dialog functionality, it must be set to <code>action='open-dialog'</code></em></p>                                                                                                                                                 |
+| **`trigger`**   | String | No        | <p><em>General to <code>ui-action</code> tag</em></p><p>Specifies the way the action will be triggered by the Symphony user.<br></p><p><em>NB: It is not a mandatory attribute and the default value will be 'click' for the tags where it is not specified. Currently, only <code>trigger='click'</code> is supported.</em></p> |
 | **`target-id`** | String | Yes       | <p><em>Specific to the <code>open-dialog</code> action</em></p><p>Id of the dialog that must be opened when user will trigger this ui-action.</p><p>See <em><code>id</code></em> in the &#x3C;dialog> tag.</p>                                                                                                                   |
 
 ## Attributes for the \<dialog> tag
@@ -193,7 +193,7 @@ Ut dignissim varius libero ac volutpat. Sed hendrerit nec libero ut ullamcorper.
 {% endtab %}
 {% endtabs %}
 
-## Versions and Compatibility <a href="versions-and-compatibility" id="versions-and-compatibility"></a>
+## Versions and Compatibility <a href="#versions-and-compatibility" id="versions-and-compatibility"></a>
 
 
 
