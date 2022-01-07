@@ -154,6 +154,6 @@ The following examples show the date picker being used as follows:
 
 ## Versions and Compatibility
 
-| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms)       | Agent needed to parse message sent by the bot |
-| ------------------------ | ------------------ | ------------------ | ------------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 20.12              | 20.12              | Not working: date-picker is not displayed but the form can be sent | 20.12                                         |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_       |
+| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | -------------------------------------------------------------------- |
+| Initial release          | 20.12                                         | 20.12              | _20.12_              | _Not working: date-picker is not displayed but the form can be sent_ |

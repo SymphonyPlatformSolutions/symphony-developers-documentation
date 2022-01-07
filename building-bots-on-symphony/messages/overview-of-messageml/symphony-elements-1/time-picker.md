@@ -146,9 +146,8 @@ The following examples show the time picker being used as follows:
 {% endtab %}
 {% endtabs %}
 
-## Versions and Compatibility <a href="versions-and-compatibility" id="versions-and-compatibility"></a>
+## Versions and Compatibility <a href="#versions-and-compatibility" id="versions-and-compatibility"></a>
 
-| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 20.13              | 20.14              | Not working                                                  | 20.12                                         |
-
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | -------------------------------------------------------------- |
+| Initial release          | 20.12                                         | 20.14              | _20.13_              | _Not working_                                                  |

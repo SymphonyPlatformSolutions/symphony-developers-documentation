@@ -21,7 +21,7 @@ Text input fields are the most common elements in a form. Symphony provides two 
 
 ## Using Input Validation
 
-With Symphony v20.6, bot developers can use Regex to validate `text fields` and `text areas` using the `pattern` and` pattern-error-message` attributes.\
+With Symphony v20.6, bot developers can use Regex to validate `text fields` and `text areas` using the `pattern` and `pattern-error-message` attributes.\
 For more information and examples, refer to [Regular Expressions - Regex](regular-expressions-regex.md).
 
 ## Rules and Limitations
@@ -122,9 +122,9 @@ Please note that several text-fields are aligned next to another. Note also that
 
 ## Versions and Compatibility
 
-| Main features introduced | Client release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | -------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 1.55           | Not working                                                  | 2.55.9                                        |
-| Regex                    | 20.6           | Regex validation not enforced but field can be submitted     | 20.6                                          |
-| Label                    | 20.9           | Label displayed and form can still be submitted              | 20.7                                          |
-| Tooltip (title)          | 20.9           | Tooltip not displayed but form can still be submitted        | 20.7                                          |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release  | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------- | -------------------- | -------------------------------------------------------------- |
+| Initial release          | 2.55.9                                        | Since first version | _1.55_               | _Not working_                                                  |
+| Regex                    | 20.6                                          | Since first version | _20.6_               | _Regex validation not enforced but field can be submitted_     |
+| Label                    | 20.7                                          | Since first version | _20.9_               | _Label displayed and form can still be submitted_              |
+| Tooltip (title)          | 20.7                                          | Since first version | _20.9_               | _Tooltip not displayed but form can still be submitted_        |

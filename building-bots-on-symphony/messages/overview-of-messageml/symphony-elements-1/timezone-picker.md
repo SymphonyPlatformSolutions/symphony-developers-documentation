@@ -141,10 +141,10 @@ The following examples show the timezone picker being used as follows:
 
 ## Versions and Compatibility
 
-| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms) | Agent minimal version |
-| ------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ | --------------------- |
-| Beta version             | 20.12              |                    | Not supported                                                | 20.12                 |
-| Initial release          | 20.13              | 20.14              | Not supported (except for 20.12 in client 1.5)               | 20.12                 |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | -------------------------------------------------------------- |
+| Beta version             | 20.12                                         |                    | _20.12_              | _Not supported_                                                |
+| Initial release          | 20.12                                         | 20.14              | _20.13_              | _Not supported (except for 20.12 client 1.5)_                  |
 
 ## Annex: list of timezone values
 

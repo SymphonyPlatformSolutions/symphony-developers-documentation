@@ -185,10 +185,10 @@ The following example shows three forms being used as follows:
 
 
 
-| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | Backward client-compatibility behavior (e.g. external rooms) |
-| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | ------------------------------------------------------------ |
-| Initial release          | 2.55.9                                        |                    | _1.55_               | Not working                                                  |
-| Multi-submit attribute   | 20.13                                         | 21.8               | -                    | -                                                            |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release  | _Client 1.5 release_ | Backward client-compatibility behavior (e.g. external rooms) |
+| ------------------------ | --------------------------------------------- | ------------------- | -------------------- | ------------------------------------------------------------ |
+| Initial release          | 2.55.9                                        | Since first version | _1.55_               | Not working                                                  |
+| Multi-submit attribute   | 20.13                                         | 21.8                | -                    | -                                                            |
 
 
 

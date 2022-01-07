@@ -70,6 +70,6 @@ The following examples show the OpenChat functionality being used as follows:
 
 ## Versions and Compatibility <a href="#versions-and-compatibility" id="versions-and-compatibility"></a>
 
-| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 20.13              | 21.7               | Not working                                                  | 20.12.2                                       |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | -------------------------------------------------------------- |
+| Initial release          | 20.12.2                                       | 21.7               | _20.13_              | _Not working_                                                  |

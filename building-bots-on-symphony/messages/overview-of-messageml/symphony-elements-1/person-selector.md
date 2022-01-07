@@ -4,7 +4,7 @@ The Person Selector is an element used for finding and selecting people. Person 
 
 When a user types the person's name, a drop-down will be displayed with the results found for the data the user entered. The following example shows how three people with the same name (Vincent) have been found.
 
-![](../../../../.gitbook/assets/84f1915-person.jpg)
+![](../../../../.gitbook/assets/elements\_person-selector\_2.0.png)
 
 ## Attributes
 
@@ -110,9 +110,9 @@ The result returned by the datafeed for the selected users is an array of user I
 
 ## Versions and Compatibility
 
-| Main features introduced | Client 1.5 release | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms)                     | Agent needed to parse message sent by the bot |
-| ------------------------ | ------------------ | ------------------ | -------------------------------------------------------------------------------- | --------------------------------------------- |
-| Initial release          | 1.55               |                    | Not working                                                                      | 2.55.9                                        |
-| Label                    | 20.9               | 20.9               | Label displayed and form can still be submitted                                  | 20.7                                          |
-| Tooltip (title)          | 20.9               | 20.9               | Tooltip not displayed but form can still be submitted                            | 20.7                                          |
-| Value                    | Not Available      | 21.7               | For client 1.5, it displays the person-selector as if there was no default value | 20.12                                         |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release  | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_                     |
+| ------------------------ | --------------------------------------------- | ------------------- | -------------------- | ---------------------------------------------------------------------------------- |
+| Initial release          | 2.55.9                                        | Since first version | _1.55_               | _Not working_                                                                      |
+| Label                    | 20.7                                          | Since first version | _20.9_               | _Label displayed and form can still be submitted_                                  |
+| Tooltip (title)          | 20.7                                          | Since first version | _20.9_               | _Tooltip not displayed but form can still be submitted_                            |
+| Value                    | 20.12                                         | 21.7                | _Not supported_      | _For client 1.5, it displays the person-selector as if there was no default value_ |

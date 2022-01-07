@@ -6,7 +6,7 @@ Frequently, a set of radio buttons represents a single question which the user c
 
 Note: If you want the user to be able to select more than one option, use the [Checkbox](checkbox.md) element.
 
-![](../../../../.gitbook/assets/97fab2f-radio-button.jpg)
+![](../../../../.gitbook/assets/elements\_radio\_2.0.png)
 
 ## Attributes
 
@@ -86,6 +86,6 @@ The following example shows radio buttons being used. It shows how developers ca
 
 ## Versions and Compatibility
 
-| Main features introduced | Client release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | -------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 1.55           | Not working                                                  | 2.55.9                                        |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release  | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------- | -------------------- | -------------------------------------------------------------- |
+| Initial release          | 2.55.9                                        | Since first version | _1.55_               | _Not working_                                                  |

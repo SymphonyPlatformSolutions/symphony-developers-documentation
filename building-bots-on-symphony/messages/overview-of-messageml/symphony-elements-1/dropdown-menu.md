@@ -128,9 +128,9 @@ The following examples show dropdown menus being used as follows:
 
 ## Versions and Compatibility
 
-| Main features introduced               | Client release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| -------------------------------------- | -------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release                        | 1.55           | Not working                                                  | 2.55.9                                        |
-| Label                                  | 20.9           | Label displayed and form can still be submitted              | 20.6                                          |
-| Tooltip (title)                        | 20.9           | Tooltip not displayed but form can still be submitted        | 20.7                                          |
-| Multiple (with min and max) attributes | 21.12          | -                                                            | 20.14                                         |
+| Main features introduced               | Agent needed to parse message sent by the bot | Client 2.0 release  | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| -------------------------------------- | --------------------------------------------- | ------------------- | -------------------- | -------------------------------------------------------------- |
+| Initial release                        | 2.55.9                                        | Since first version | _1.55_               | _Not working_                                                  |
+| Label                                  | 20.6                                          | Since first version | _20.9_               | _Label displayed and form can still be submitted_              |
+| Tooltip (title)                        | 20.7                                          | Since first version | _20.9_               | _Tooltip not displayed but form can still be submitted_        |
+| Multiple (with min and max) attributes | 20.14                                         | 21.12               | _Not supported_      | _-_                                                            |

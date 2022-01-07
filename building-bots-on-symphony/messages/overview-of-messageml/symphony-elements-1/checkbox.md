@@ -10,7 +10,7 @@ Checkboxes are used to let a user select one or more options from a limited numb
 Note: If you want the user to only be able to pick a single option, use the [Radio Button](radio-button.md) or the [Dropdown Menu](dropdown-menu.md) element.
 {% endhint %}
 
-![](../../../../.gitbook/assets/956dd82-check-box.jpg)
+![](../../../../.gitbook/assets/elements\_checkboxes\_2.0.png)
 
 ## Attributes
 
@@ -89,6 +89,6 @@ The following example shows checkboxes being used. It shows how developers can u
 
 ## Versions and Compatibility
 
-| Main features introduced | Client release | Backward client-compatibility behavior (e.g. external rooms) | Agent needed to parse message sent by the bot |
-| ------------------------ | -------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| Initial release          | 1.55           | Not working                                                  | 2.55.9                                        |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release  | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------- | -------------------- | -------------------------------------------------------------- |
+| Initial release          | 2.55.9                                        | Since first version | _1.55_               | _Not working_                                                  |

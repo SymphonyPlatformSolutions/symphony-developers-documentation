@@ -195,8 +195,6 @@ Ut dignissim varius libero ac volutpat. Sed hendrerit nec libero ut ullamcorper.
 
 ## Versions and Compatibility <a href="#versions-and-compatibility" id="versions-and-compatibility"></a>
 
-
-
-| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | Backward client-compatibility behavior (e.g. external rooms) | Client 1.5 release |
-| ------------------------ | --------------------------------------------- | ------------------ | ------------------------------------------------------------ | ------------------ |
-| Initial release          | 20.12.2                                       | 21.10              | Not working - entire message is not rendered                 | Not supported      |
+| Main features introduced | Agent needed to parse message sent by the bot | Client 2.0 release | _Client 1.5 release_ | _Backward client-compatibility behavior (e.g. external rooms)_ |
+| ------------------------ | --------------------------------------------- | ------------------ | -------------------- | -------------------------------------------------------------- |
+| Initial release          | 20.12.2                                       | 21.10              | _Not working_        | _Not working - entire message is not rendered_                 |
