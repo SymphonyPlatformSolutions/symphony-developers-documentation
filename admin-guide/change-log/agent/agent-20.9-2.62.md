@@ -18,8 +18,8 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 2.62.7
 
-* Fixed Log4J critical security vulnerability
-* Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers
+* Fixed Log4J critical security vulnerability (log4j v2.17).
+* Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers.
 
 ### Agent 2.62.4
 

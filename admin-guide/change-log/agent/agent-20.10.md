@@ -16,6 +16,24 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ## Agent Changes
 
+### Agent 20.10.8
+
+* Fixed Log4J critical security vulnerability (log4j v2.17).
+* Fixed file descriptor leak.
+
+### Agent 20.10.3
+
+* Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers
+
+### Agent 20.10.2
+
+* Fixed connection pool shortage issue related to an unreleased connection in the Healthcheck
+* Updated dependencies to address potential security vulnerabilities
+
+### Agent 20.10.1
+
+* Fixed some vulnerable dependencies
+
 ### Agent 20.10.0
 
 * General changes:
@@ -29,18 +47,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 * APIs updates:
   * The behavior of some API endpoints has been changed to ignore unexpected parameters. Please keep in mind that unexpected parameters are not officially supported and may result in an error in a future version.
 
-### Agent 20.10.1
 
-* Fixed some vulnerable dependencies
-
-### Agent 20.10.2
-
-* Fixed connection pool shortage issue related to an unreleased connection in the Healthcheck
-* Updated dependencies to address potential security vulnerabilities
-
-### Agent 20.10.3
-
-* Fixed bug where some of the Agent logs were sent to the standard error stream instead of the configured loggers
 
 ## **Deprecation Notice**
 
