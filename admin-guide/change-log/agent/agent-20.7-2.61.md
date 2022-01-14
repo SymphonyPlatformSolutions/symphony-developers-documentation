@@ -9,7 +9,7 @@ description: >-
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](agent-20.7-2.61.md#agent-download).
+To download the Agent, click [here](https://docs.developers.symphony.com/admin-guide/agent-guide/agent-download).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
