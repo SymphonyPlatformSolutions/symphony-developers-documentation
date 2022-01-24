@@ -17,7 +17,7 @@ Also, please note that **messages in MessageML markup are enclosed in a `<messag
 
 MessageML has full unicode support and messages should be sent using UTF-8 character encoding.
 
-When [creating](https://rest-api.symphony.com/docs/create-message-v4) or [retrieving](https://rest-api.symphony.com/docs/messages-v4) messages using the API, MessageML shorthand tags are translated into equivalent XHTML tags and returned in [PresentationML](../overview-of-presentationml.md).
+When [creating](https://developers.symphony.com/restapi/reference#create-message-v4) or [retrieving](https://developers.symphony.com/restapi/reference#messages-v4) messages using the API, MessageML shorthand tags are translated into equivalent XHTML tags and returned in [PresentationML](../overview-of-presentationml.md).
 
 {% hint style="info" %}
 Note: MessageML is just a subset of PresentationML that makes it easier to construct messages from your bot. The API can ingest either MessageML or PresentationML. However, the API will only deliver messages as PresentationML to a bot.

@@ -9,16 +9,16 @@ While similar to PresentationML, ExtensionML consists of a template and correspo
 {% hint style="danger" %}
 ### Symphony Elements
 
-Note: ExtensionML does not support Symphony Elements. For more information, refer to [Symphony Elements](https://docs.developers.symphony.com/v/v20.7-1.61/building-bots-on-symphony/symphony-elements).
+Note: ExtensionML does not support Symphony Elements. For more information, refer to [Symphony Elements](../../../../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/).
 {% endhint %}
 
-### Standard HTML Tags <a href="standard-html-tags" id="standard-html-tags"></a>
+### Standard HTML Tags <a href="#standard-html-tags" id="standard-html-tags"></a>
 
 A number of standard HTML tags are supported within templates: `b`, `u`, `i`, `strong`, `br`, `ul`, `ol`, `li`, `span`, `div`, `table`, `th`, `tr`, and `td`.
 
 These behave like their HTML counterparts but must be properly-formatted XML. So, for example, rather than `<br>` you must use `<br/>`.
 
-### Text Tags <a href="text-tags" id="text-tags"></a>
+### Text Tags <a href="#text-tags" id="text-tags"></a>
 
 The following tags present text in different ways. Most of these require data to specify their content, but some can also use the content between the opening and closing tags.
 
@@ -30,7 +30,7 @@ The following tags present text in different ways. Most of these require data to
 | `<color-text>` | Inserts a colored text. Supported colors: red, purple, green, darkGreen, blue, darkBlue, orange, grey, and yellow.                                                                                 | <p><code>id</code> (Optional): The key of an object with two members: <br>• text specifies the text to be used <br>• color is one of the listed colors.</p> |
 | `<pill>`       | Inserts text with a colored background and rounded corners. Supported colors: red, purple, green, darkGreen, blue, darkBlue, orange, grey, and yellow.                                             | <p><code>id</code> (Optional): The key of an object with two members: <br>• text specifies the text to be used <br>• color is one of the listed colors.</p> |
 
-### Extended HTML Tags <a href="extended-html-tags" id="extended-html-tags"></a>
+### Extended HTML Tags <a href="#extended-html-tags" id="extended-html-tags"></a>
 
 The following HTML tags are handled in a slightly modified way:
 
@@ -43,7 +43,7 @@ The following HTML tags are handled in a slightly modified way:
 | `<img>`        | Displays a 128x128 pixel image. | • `id` (Optional): The tag must include either an `id` attribute or an `src` attribute. If `id` is specified, it must be a key to a string specifying the URL of the link. If no `id` attribute is specified, the `src` attribute is used.                                                                                         |
 | `<iframe>`     | Inserts an iframe.              | <p>• <code>src</code> (Required): The URL to the iframe. <br>• <code>height</code> (Optional): If not specified, the default height of the iframe will be 50px. The maximum height is 1000px. <br>• <code>width</code> (Optional): If not specified, the default width of the iframe will be 100%. The maximum width is 300px.</p> |
 
-### Special Entity Tags <a href="special-entity-tags" id="special-entity-tags"></a>
+### Special Entity Tags <a href="#special-entity-tags" id="special-entity-tags"></a>
 
 | Tag         | Description        | Attributes                                                                                                                                                                                                                                 |
 | ----------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -51,7 +51,7 @@ The following HTML tags are handled in a slightly modified way:
 | `<hashtag>` | Inserts a hashtag. | • `id` (required): The key to a string specifying the hashtag. The string must be prefixed with '#'.                                                                                                                                       |
 | `<cashtag>` | Inserts a cashtag. | • `id` (required): The key to a string specifying the cashtag. The string must be prefixed with '$'.                                                                                                                                       |
 
-### Flow Control Tags <a href="flow-control-tags" id="flow-control-tags"></a>
+### Flow Control Tags <a href="#flow-control-tags" id="flow-control-tags"></a>
 
 The following flow control tags are used for entities that have conditional logic or data that can be iterated upon:
 

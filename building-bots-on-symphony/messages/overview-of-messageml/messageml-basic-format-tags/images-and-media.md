@@ -14,7 +14,7 @@ For the following examples, we are sending an SVG image along with the message.
 
 Note that an admin user might have to enable the sending of some specific file types. To do that, go to _AC Portal >> Company Settings >> Edit Entitlements >> File Types_.
 
-• Sending an image via the [Create Message](https://rest-api.symphony.com/v1.54/reference#create-message-v4) API using the image URL
+• Sending an image via the [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) API using the image URL
 
 ```markup
 $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \

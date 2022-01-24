@@ -50,7 +50,7 @@ Each message in Symphony has a unique message ID.
 
 ![](../../.gitbook/assets/screen-shot-2020-07-17-at-3.17.36-pm.png)
 
-* When a message is [created](https://rest-api.symphony.com/docs/create-message-v4) via the API, a `messageID` is returned in the response**.**
+* When a message is created via the API, a `messageID` is returned in the response**.**
 
 **Encoding:**
 

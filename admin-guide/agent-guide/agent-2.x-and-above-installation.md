@@ -410,7 +410,7 @@ Enter selection:  d
 
 **Option `[e]` (`Generate user certificate`)** generates certificates for authenticating service users (`/data/agent/certs/agentservice.pem` and `/data/agent/certs/ceservice.pem`). Once generated (using sub option `[h]`), the output file must be provided in the Agent config (sub options `[k]` through `[p]` in the submenu of option `[b]` (`Configure base URL`)). Certificate generation requires a signing certificate as described below using sub option `[a]`:
 
-* Sub option `[a]` (`Provide signing certificate`): specifies a signing certificate that will be used to sign the generated user certificate. Either the signing certificate or the user certificate needs to be imported to the pod using the Admin Console or [Create Company Certificate](https://developers.symphony.com/restapi/docs/create-company-certificate). If the signing certificate is imported, all users whose certificates are signed by that certificate will be able to authenticate; if only a specific user's certificate is imported, only that user will be able to authenticate:
+* Sub option `[a]` (`Provide signing certificate`): specifies a signing certificate that will be used to sign the generated user certificate. Either the signing certificate or the user certificate needs to be imported to the pod using the Admin Console or [Create Company Certificate](https://developers.symphony.com/restapi/reference#create-company-certificate). If the signing certificate is imported, all users whose certificates are signed by that certificate will be able to authenticate; if only a specific user's certificate is imported, only that user will be able to authenticate:
 
 {% tabs %}
 {% tab title="User Certificate Generation" %}
@@ -471,7 +471,7 @@ $> keytool -genkeypair -keyalg RSA -alias 1 -keystore ./atlas/symphony/global/ce
 {% endtab %}
 {% endtabs %}
 
-**Option `[f]` (`Generate RSA keypair`)** generates an RSA public/private key pair for using RSA authentication [RSA Bot Authentication](../../building-bots-on-symphony/authentication/rsa-authentication.md) Workflow. This submenu lets you choose filenames for the keys and their encoding (PCKS1 or PCKS8), and writes out the key pair. Once generated, the public keys for each user must be imported to the pod using the Admin Console or [Update User V2](https://developers.symphony.com/restapi/docs/update-user-v2). Note that RSA authentication requires you to set up each user individually; it doesn't have a concept equivalent to a "signing certificate" for all users. The private key filenames should be set in the Agent config. If both RSA and certificate authentication is configured, RSA takes precedence:Write Configuration
+**Option `[f]` (`Generate RSA keypair`)** generates an RSA public/private key pair for using RSA authentication [RSA Bot Authentication](../../building-bots-on-symphony/authentication/rsa-authentication.md) Workflow. This submenu lets you choose filenames for the keys and their encoding (PCKS1 or PCKS8), and writes out the key pair. Once generated, the public keys for each user must be imported to the pod using the Admin Console or [Update User V2](https://developers.symphony.com/restapi/reference#update-user-v2). Note that RSA authentication requires you to set up each user individually; it doesn't have a concept equivalent to a "signing certificate" for all users. The private key filenames should be set in the Agent config. If both RSA and certificate authentication is configured, RSA takes precedence:Write Configuration
 
 ```
 Enter selection:  f
