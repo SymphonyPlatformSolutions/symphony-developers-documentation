@@ -24,7 +24,7 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 -F 'message=<messageML>Sending attachment via API<img src="https://yourimg.com/test/myimage.svg"></img></messageML>'
 ```
 
-Sending an image via [Create Message](https://rest-api.symphony.com/v1.54/reference#create-message-v4) API using Data URL (base64 encoding).\
+Sending an image via [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) API using Data URL (base64 encoding).\
 Note that it is necessary to include `data:image/imageType+xml;base64` before the data string, as shown in the following example:
 
 ```markup

@@ -4,7 +4,7 @@ This guide describes how to modify and reset application entitlements for a spec
 
 ## Step 1 - Get a list of current user application entitlements.
 
-First, you will need to call the public [User Apps](https://developers.symphony.com/restapi/docs/user-apps) API to have a list of application entitlements for the user.\
+First, you will need to call the public [User Apps](https://developers.symphony.com/restapi/reference#update-user-apps) API to have a list of application entitlements for the user.\
 This step is important to guarantee that you have all the needed data.
 
 {% tabs %}

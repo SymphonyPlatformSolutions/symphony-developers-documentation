@@ -1,6 +1,6 @@
 # PresentationML
 
-Messages sent using the API are translated into equivalent XHTML tags known as _PresentationML_, that can be rendered and processed by any HTML client. For example, when you create a message using [Create Message v4](https://rest-api.symphony.com/docs/create-message-v4) , the `message` field in the response contains the message in _PresentationML_ format.
+Messages sent using the API are translated into equivalent XHTML tags known as _PresentationML_, that can be rendered and processed by any HTML client. For example, when you create a message using [Create Message v4](https://developers.symphony.com/restapi/reference#create-message-v4) , the `message` field in the response contains the message in _PresentationML_ format.
 
 Messages in PresentationML markup are enclosed in a `<div>` tag with the following attributes:
 

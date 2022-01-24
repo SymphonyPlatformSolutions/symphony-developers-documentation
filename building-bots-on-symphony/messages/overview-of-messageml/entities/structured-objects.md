@@ -102,7 +102,7 @@ This data can be used by applications in the web client to provide a rich displa
 
 ## Reading objects
 
-You can read objects using any of the endpoints designed to read messages, for example, the [Read Message](https://rest-api.symphony.com/docs/messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
+You can read objects using any of the endpoints designed to read messages, for example, the [Read Message](https://developers.symphony.com/restapi/reference#messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
 
 {% hint style="info" %}
 Note:
