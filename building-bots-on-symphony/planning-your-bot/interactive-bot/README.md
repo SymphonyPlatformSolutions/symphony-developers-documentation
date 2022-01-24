@@ -128,7 +128,7 @@ You can learn more about parsing events and introducing custom business logic [h
 
 ## Next Steps:
 
-Continue on to our [Getting Started with Interactive Bots](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/tree/ca6abde30e0bc0a2309a885f28efb96df7e470ed/building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Interactive Bot:
+Continue on to our [Getting Started with Interactive Bots](https://docs.developers.symphony.com/building-bots-on-symphony/planning-your-bot/interactive-bot/getting-started) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Interactive Bot:
 
 {% content-ref url="getting-started.md" %}
 [getting-started.md](getting-started.md)
