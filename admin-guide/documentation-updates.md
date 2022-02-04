@@ -14,7 +14,20 @@ In this page, you will find the main updates/announcements of the developers por
 
 ## Documentation Updates
 
-### November 2021
+### 2022
+
+#### January 2022
+
+* New design of the REST API reference. From now on,
+  * APIs are grouped as subsections of various different topics like Messages, Streams, Datafeed, etc.
+  * Each API reference will be presented on a single and separated page from the other APIs,
+  * You will be able to dynamically generate code in real time and in your preferred language thanks to the **parameters presented at the bottom** of each API reference page,
+  * _Please note that some links you have saved might be broken, due to the apis being referenced as pages instead of sections from the restapi doc (i.e.:_ [_https://developers.symphony.com/restapi/reference#messages-v4_](https://developers.symphony.com/restapi/reference#messages-v4) _becomes_ [_https://developers.symphony.com/restapi/reference/messages-v4_](https://developers.symphony.com/restapi/reference/messages-v4)_)._
+  * _Please note that this new design is mainly supported on 20.13 and later versions._
+
+### 2021
+
+#### November 2021
 
 * Rework of the [Messages](../building-bots-on-symphony/messages/) documentation for it to be clearer for developers. It is now divided in MessageML and PresentationML; MessageML contains the following sections: MessageML Basics, Interactive Elements Forms, Extensibility UI Actions, and Entities; each of these subsections contains the corresponding specifications and examples helping our developer community to construct messages.
 * The developer portal has been updated to a single environment: it is not divided in release versions any more and the change logs are now divided by products.
