@@ -203,6 +203,7 @@
     * [Agent - 20.5 (2.59)](admin-guide/change-log/agent/agent-20.5-2.59.md)
     * [Agent - 20.4 (2.58)](admin-guide/change-log/agent/agent-20.4-2.58.md)
   * [SBE API endpoints (pod)](admin-guide/change-log/sbe-api-endpoints-pod/README.md)
+    * [SBE - 20.13](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.13.md)
     * [SBE - 20.12](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.12.md)
     * [SBE - 20.10](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.10.md)
     * [SBE - 20.9 (1.62)](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.9-1.62.md)
