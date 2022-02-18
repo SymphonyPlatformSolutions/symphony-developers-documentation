@@ -9,12 +9,21 @@ description: >-
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://docs.developers.symphony.com/admin-guide/agent-guide/agent-download).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.12.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 20.12.12
+
+* Fixed service users not able to send a message to a specific chat room (cached content key not refreshed).&#x20;
+
+### Agent 20.12.11
+
+* Fixed file descriptor leak.
+* Upgrade Spring Boot version (security vulnerability patch)
 
 ### Agent 20.12.10
 
