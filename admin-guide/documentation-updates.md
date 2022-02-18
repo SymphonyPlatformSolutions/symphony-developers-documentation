@@ -16,6 +16,10 @@ In this page, you will find the main updates/announcements of the developers por
 
 ### 2022
 
+#### February 2022
+
+* Extension Apps: removed documentation of addMenuItem() method in [modules](../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/modules-service.md) service after deprecation of client 1.5, as this method is not anymore supported in the client 2.0.
+
 #### January 2022
 
 * New design of the REST API reference. From now on,

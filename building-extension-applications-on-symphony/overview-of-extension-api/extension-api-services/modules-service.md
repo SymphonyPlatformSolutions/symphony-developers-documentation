@@ -13,7 +13,6 @@ The following methods are available on the `modules` service:
 * [hide](modules-service.md#hide)
 * [setTitle](modules-service.md#settitle)
 * [focus](modules-service.md#focus)
-* [addMenuItem](modules-service.md#addmenuitem)
 * [setHandler](modules-service.md#sethandler)
 * [openLink](modules-service.md#openlink)
 * [redirect](modules-service.md#redirect)
@@ -98,20 +97,6 @@ function focus(id)
 ```javascript
 modulesService.focus("hello");
 ```
-
-## addMenuItem()
-
-Add a menu item to the module's More (...) menu:
-
-```javascript
-function addMenuItem(moduleId, title, itemId)
-```
-
-| Parameter | Type   | Description                                               |
-| --------- | ------ | --------------------------------------------------------- |
-| moduleId  | String | The id of the module to which a menu item should be added |
-| title     | String | The title of the item being added                         |
-| itemId    | String | The id of the item being added to the menu                |
 
 ## setHandler()
 
