@@ -9,12 +9,22 @@ description: >-
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://docs.developers.symphony.com/admin-guide/agent-guide/agent-download).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.13.10.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 20.13.10
+
+* Fixed service users not able to send a message to a specific chat room (cached content key not refreshed).&#x20;
+* Fixed failure when reading from a new datafeed with a null datafeed ackId.
+
+### Agent 20.13.9
+
+* Fixed file descriptor leak.
+* Fixed service users not able to refresh tokens once they expire.
 
 ### Agent 20.13.8
 
