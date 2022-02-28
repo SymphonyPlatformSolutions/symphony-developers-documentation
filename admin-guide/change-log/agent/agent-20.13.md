@@ -18,12 +18,12 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 20.13.10
 
-* Fixed service users not able to send a message to a specific chat room (cached content key not refreshed).&#x20;
+* Fixed service users not able to send a message to a specific chat room after a KM rotation/NIST transformation (cached content key not refreshed).&#x20;
 * Fixed failure when reading from a new datafeed with a null datafeed ackId.
 
 ### Agent 20.13.9
 
-* Fixed file descriptor leak.
+* Fixed file descriptor leak when uploading DLP dictionaries.
 * Fixed service users not able to refresh tokens once they expire.
 
 ### Agent 20.13.8
