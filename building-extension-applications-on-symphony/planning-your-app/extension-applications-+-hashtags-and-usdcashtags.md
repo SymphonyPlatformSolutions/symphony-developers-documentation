@@ -65,7 +65,7 @@ uiService.registerExtension(
 helloControllerService.implement({
   trigger: function(uiClass, id, payload, data) {
     if (uiClass == "hashtag") {
-      console.log('Hashtag button was clicked on ' + data.datetime + '.');
+      console.log('Hashtag button was registered on ' + data.datetime + '.');
     }
   }
   })
