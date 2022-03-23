@@ -1,4 +1,6 @@
-# Chat Module
+# Embedded Chat Module (legacy)
+
+_<mark style="color:red;">**This page describes the legacy "embedded chat module" (ECM) product. If you want to integrate Symphony within your application, please consult the page for "Embedded Collaboration Platform"**</mark> _&#x20;
 
 ## Description
 

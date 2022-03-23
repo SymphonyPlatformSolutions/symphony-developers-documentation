@@ -20,7 +20,7 @@ Here after you can find an example of a message sent by a bot and containing the
 
 {% tabs %}
 {% tab title="Message containing formatting and semantics tags" %}
-![](../../../../.gitbook/assets/mml\_formatting\_20.14.png)
+![](../../../../.gitbook/assets/mml\_formatting.png)
 {% endtab %}
 
 {% tab title="messageML structure" %}
