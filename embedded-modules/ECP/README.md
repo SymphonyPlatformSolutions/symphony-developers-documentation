@@ -8,9 +8,13 @@ The chat module can be embedded into websites or any tool that supports webview.
 
 The ECP SDK allows extensive customization, as well as APIs to create rooms and register for notifications.
 
+{% hint style="info" %}
 _**The Embedded Collaboration Platform (ECP) replaces the previous**_[ _**Embedded Chat Module**_](ECM.md)_**, which is now deprecated.**_
+{% endhint %}
 
-ECP is not yet deployed to all pods, and will be deployed on-demand for organisations using ECM. To know if your pod has been upgraded to ECP, open `{podUrl}/embed/version.json` and check the `builtOn` date is in 2022
+{% hint style="warning" %}
+ECP is not yet deployed to all pods, and will be deployed on-demand for organisations using ECM. To know if your pod has been upgraded to ECP, open `https://{podUrl}/embed/version.json` and check the `builtOn` date is in 2022
+{% endhint %}
 
 ## Supported browser versions
 
