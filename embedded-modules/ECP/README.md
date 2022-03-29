@@ -26,7 +26,7 @@ ECP is not yet deployed to all pods, and will be deployed on-demand for organisa
 There are three options to implement the Symphony Embedded Chat Module:
 
 * [Explicit rendering](./#explicit-rendering)
-* [Automatic rendering](./#undefined)
+* [Automatic rendering](./#automatic-rendering)
 * [Direct iFrame rendering](./#direct-iframe-rendering)
 
 _**Unless you have specific constraints, you should use SDK Explicit rendering.**_
