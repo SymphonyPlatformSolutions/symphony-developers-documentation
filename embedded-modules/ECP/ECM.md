@@ -1,6 +1,11 @@
 # Embedded Chat Module (legacy)
 
-_<mark style="color:red;">**This page describes the legacy "embedded chat module" (ECM) product. If you want to integrate Symphony within your application, please consult the page for "Embedded Collaboration Platform"**</mark> _&#x20;
+{% hint style="warning" %}
+_<mark style="color:red;">**This page describes the legacy "embedded chat module" (ECM) product.**</mark>_&#x20;
+
+_**Legacy ECM will no longer be available after Oct 31, 2022. It should not be used for new deployments, please use**_ [_**Embedded Collaboration Platform (ECP)**_](./) _**instead.**_ \
+_**If you are using the legacy ECM, please plan your migration to ECP.**_
+{% endhint %}
 
 ## Description
 
