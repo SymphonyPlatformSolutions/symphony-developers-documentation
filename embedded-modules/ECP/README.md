@@ -297,6 +297,7 @@ export interface EcpSettings {
   showEditor: boolean; // enable editor. default true
   showInfo: boolean; // show room information in the header. default true
   showMembers: boolean; // show list of members. default true
+  canAddPeople: boolean; // allow add members to rooms if owner. default false
   showProfilePopover: boolean; // show popover profile cards. default true
   showSuppressMessage: boolean; // allow user to suppress messages. default true
   showBookmarkMessage: boolean; // allow user to bookmark message. default true
