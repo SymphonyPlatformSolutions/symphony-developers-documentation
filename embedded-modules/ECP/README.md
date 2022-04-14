@@ -66,7 +66,7 @@ The `render` function creates and adds the ECP iframe to the container with the 
 
 #### Returns
 
-A Promise that resolves when the chat is ready. See the promise definition [below](./#undefined)
+A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type)
 
 #### Example
 
@@ -98,7 +98,7 @@ If a selector is provided, the SDK will either create a new iframe and add the c
 
 #### Returns
 
-A Promise that resolves when the chat is ready. See the promise definition [below](./#undefined)
+A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type)
 
 #### Example
 
@@ -136,7 +136,7 @@ If a direct message or group chat with the user(s) already exists, it will open 
 
 #### Returns
 
-A Promise that resolves when the chat is ready. See the promise definition [below](./#undefined)
+A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type)
 
 #### Example
 
