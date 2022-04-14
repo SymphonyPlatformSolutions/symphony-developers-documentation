@@ -59,26 +59,26 @@ The `render` function creates and adds the ECP iframe to the container with the 
 
 #### Parameters
 
-| Parameter          | Type                                            | Description                                             | Default Value |
-| ------------------ | ----------------------------------------------- | ------------------------------------------------------- | ------------- |
-| containerClassName | string                                          | Class of the container  into which ECP will be injected | symphony-ecm  |
-| configuration      | Record\<string, string \| boolean \| undefined> | [Configuration](./#configuration-parameters)            | {}            |
+| Parameter          | Type                                            | Description                                             | Default Value                                                                            |
+| ------------------ | ----------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| containerClassName | string                                          | Class of the container  into which ECP will be injected | <p>symphony-ecm<br></p><p><em>(name kept for backwards compatibility with ECM)</em> </p> |
+| configuration      | Record\<string, string \| boolean \| undefined> | [Configuration](./#configuration-parameters)            | {}                                                                                       |
 
 #### Returns
 
-A Promise that resolves when the chat is ready.
+A Promise that resolves when the chat is ready. See the promise definition [below](./#undefined)
 
 #### Example
 
 ```html
-<div class="symphony-ecm">
+<div class="ecp-chat">
 /!-- ECP iframe will go here --/
 </div> 
 ```
 
 ```javascript
 // script
-window.symphony.render('symphony-ecm', {mode: 'dark', condensed: true})
+window.symphony.render('ecp-chat', {mode: 'dark', condensed: true})
 ```
 
 ### Open chat with StreamID
@@ -96,6 +96,10 @@ If a selector is provided, the SDK will either create a new iframe and add the c
 | streamID          | string              | Stream Id of the conversation                            |
 | containerSelector | string \| undefined | Selector of the container to add the new ECP iframe into |
 
+#### Returns
+
+A Promise that resolves when the chat is ready. See the promise definition [below](./#undefined)
+
 #### Example
 
 Open a different chat in the main iframe:
@@ -111,6 +115,7 @@ Open a chat in a specific container:
 ```
 
 ```javascript
+// You can also refer to a div by ID, with #
 window.symphony.openStream('someStreamId', '#ecp-chat');
 ```
 
@@ -129,6 +134,10 @@ If a direct message or group chat with the user(s) already exists, it will open 
 | Users             | Array\<string>      | Array of users. Users can be represented by their userId or email address. |
 | containerSelector | string \| undefined | Selector of the container in which to add the new ECP iframe               |
 
+#### Returns
+
+A Promise that resolves when the chat is ready. See the promise definition [below](./#undefined)
+
 #### Example
 
 Open a direct message in the main iframe:
@@ -146,6 +155,26 @@ Open a group chat in a specific container:
 ```javascript
 window.symphony.startRoom(['someUserId', 'another.user@youremailhere.com'], '#ecp-chat');
 ```
+
+### Chat Action Return Type
+
+All the functions defined above will return a promise that will resolve once the chat is open / updated. The Promise value has the following interface:
+
+#### Success
+
+| Parameter | Type                   | Description           |
+| --------- | ---------------------- | --------------------- |
+| streamId  | string                 | Stream ID of the chat |
+| _name_    | _string \| undefined_  | _Title of the chat_   |
+| userIds   | string\[] \| undefined | List of user IDs      |
+
+_\*Items in italics are only returned when **allowApiContent** is enabled on the pod's Client Configuration - this will allow the ECP API to return sensitive information (such as user names, room names, message content)._
+
+#### Error
+
+| Parameter | Type   | Description              |
+| --------- | ------ | ------------------------ |
+| error     | string | Description of the error |
 
 ### Update settings
 
