@@ -4,6 +4,26 @@ description: Overview of Symphony Datafeed
 
 # Datafeed
 
+## Datafeed v1 deprecation notice
+
+{% hint style="warning" %}
+The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**. Please read below for more information on this transition.
+{% endhint %}
+
+The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**.
+
+This will have an impact on you if some of your automations or bots are still using the Datafeed v1 APIs. Please consider upgrading them to use the new[ Datafeed v2 APIs](https://developers.symphony.com/restapi/reference/create-datafeed-v5).
+
+To facilitate this transition, a new feature called the **bridge** has been introduced in the Agent service so consumers of the deprecated Datafeed v1 APIs will transparently use the Datafeed v2 service.
+
+* This bridge is available starting with Agent 20.15 (May 2022) and can be enabled through the following configuration flag `agent.df1ToDf2Bridge.enabled`.&#x20;
+* In a subsequent Agent release, this bridge will be enabled by default, but could still be disabled through configuration (October 2022).&#x20;
+* Then in a subsequent Agent release, the bridge will be always enabled (January 2023).
+
+We encourage you to validate the bridge with your existing bots, or to migrate your bots to use the new Datafeed 2 APIs, which is the **preferred option**. If you use the BDK 2.0 in [Java](https://symphony-bdk-java.finos.org) or [Python](https://symphony-bdk-python.finos.org), the migration between Datafeed 1 APIs and Datafeed 2 APIs is a simple configuration change. We advise you to take this opportunity to migrate your bots to the **BDK 2.0** if you haven’t done so, the Developer Relations team can guide you through it.
+
+Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
+
 ## Overview of Datafeed
 
 The Symphony datafeed provides a stream of real-time messages and events for all conversations that a bot is a member of. Any event that occurs within a bot's scope will be captured and delivered to the bot by the datafeed. The datafeed forms the basis of all interactive and conversational bot workflows as it allows bots to directly respond to Symphony messages and events.
