@@ -19,7 +19,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 ### Agent 20.14.2
 
 * Message Update:
-  * Feature: It is now possible to choose whether to update a message **silently** _(no notification for the user, no unread status)_, or instead to send the update as **unread** _(i.e. for the user to be explicitly notified as for important updates)_. In that later case, the update will then trigger all surrounding notification instruments such as for a brand new message _(unread chat status, notification, activity feed, etc.)._ Please refer to [Update Message](https://developers.symphony.com/restapi/v20.14/reference/update-message-v4) for more information.
+  * It is now possible to choose whether to update a message **silently** _(no notification for the user, no unread status)_, or instead to send the update as **unread,** particularly useful for **important** updates. In that later case, the user will view this update just as he would have viewed a new message _(unread chat status, notification, mention, activity feed, etc.)._ Please refer to [Update Message](https://developers.symphony.com/restapi/v20.14/reference/update-message-v4) for more information.
   * Dependencies: Please note that this feature has dependencies on both **SBE 20.14** and a future **Client 2.0 release** (not communicated yet): this means that the feature is not necessarily available to you as soon as you install this agent version.
   * Following these changes, the Message Update API will be in General Availability (GA).
 * Import message: It now possible to attach files when importing a message. See [Import Message](https://developers.symphony.com/restapi/v20.14/reference/import-message-v4) for more information.
