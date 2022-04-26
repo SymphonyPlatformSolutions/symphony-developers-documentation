@@ -195,6 +195,7 @@
 
 * [Change Logs](admin-guide/change-log/README.md)
   * [Agent](admin-guide/change-log/agent/README.md)
+    * [Agent - 20.14](admin-guide/change-log/agent/agent-20.14.md)
     * [Agent - 20.13](admin-guide/change-log/agent/agent-20.13.md)
     * [Agent - 20.12](admin-guide/change-log/agent/agent-20.12.md)
     * [Agent - 20.10](admin-guide/change-log/agent/agent-20.10.md)

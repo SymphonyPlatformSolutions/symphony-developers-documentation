@@ -2,6 +2,7 @@
 
 You can download the following versions of the Agent:
 
+* Agent 20.14.2 - officially supported Agent for Symphony SBE version 20.14: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.14.2.zip)
 * Agent 20.13.11 - officially supported Agent for Symphony SBE version 20.13: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.13.11.zip)
 * Agent 20.12.12 - officially supported Agent for Symphony SBE version 20.12: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.12.12.zip)
 * Agent 20.10.8 - officially supported Agent for Symphony SBE version 20.10: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.10.8.zip)
