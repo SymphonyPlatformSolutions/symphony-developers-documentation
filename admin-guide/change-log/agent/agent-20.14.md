@@ -26,7 +26,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 * DLP: Improved scan of messages sent through the Agent to better support PresentationML / MessageML features.
 * MessageML: Add support of the `language` attribute to the `<code>` tag, to adapt to each language specific display rules & syntax highlighting. See [Code](https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml/messageml-basic-format-tags/text-level-formatting-and-semantics#tags) for more information.
 * Elements: Add support for the selection of multiples items in the `Dropdown Menu` element. See [Dropdown Menu](https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/dropdown-menu#attributes) for more information.
-* Spring boot has been updated to version 2.6.4.
+* Spring boot has been updated to version 2.6.6.
 
 
 
