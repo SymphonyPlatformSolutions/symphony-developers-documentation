@@ -1,10 +1,10 @@
 # Overview of Pod API
 
-## Symphony Pod APIs ![](../../.gitbook/assets/symphony-pod.png)
+## Symphony Pod APIs <img src="../../.gitbook/assets/symphony-pod.png" alt="" data-size="line">
 
 The Symphony Pod API is used to build tools in order to manage and administer Symphony for your organization. The following guide includes API collections that exist on the Pod:
 
-## Session Authenticate API ![](../../.gitbook/assets/symphony-api.png)
+## Session Authenticate API <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 In order to access Pod API endpoints, bots must be authenticated with the Pod. To do so, a Bot must call the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
 
@@ -14,7 +14,7 @@ If successful, the Pod API returns a Session Token which is valid for up to two 
 [authentication](../authentication/)
 {% endcontent-ref %}
 
-## User APIs ![](../../.gitbook/assets/symphony-api.png)
+## User APIs <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 The User APIs query and manage users on the Pod. These APIs can be used to do the following:
 
@@ -29,7 +29,7 @@ The User APIs query and manage users on the Pod. These APIs can be used to do th
 
 The full list of Users API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#search-users](https://developers.symphony.com/restapi/reference#search-users)
 
-## Stream APIs ![](../../.gitbook/assets/symphony-api.png)
+## Stream APIs <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 The Stream APIs create and manage IMs, MIMs and chat rooms. These APIs can be used to do the following:
 
@@ -44,7 +44,7 @@ The Stream APIs create and manage IMs, MIMs and chat rooms. These APIs can be us
 
 The full list of Streams API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#create-im-or-mim](https://developers.symphony.com/restapi/reference#create-im-or-mim)
 
-## Connection APIs ![](../../.gitbook/assets/symphony-api.png)
+## Connection APIs <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 The Connection APIs manage user connections. These APIs can be used to do the following:
 
@@ -57,7 +57,7 @@ The Connection APIs manage user connections. These APIs can be used to do the fo
 
 The full list of Connections API endpoints and their corresponding reference guide can be found here: [https://developers.symphony.com/restapi/reference#get-connection](https://developers.symphony.com/restapi/reference#get-connection)
 
-## Presence APIs ![](../../.gitbook/assets/symphony-api.png)
+## Presence APIs <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 The Presence APIs manage presence status for users. These APIs can be used to do the following:
 

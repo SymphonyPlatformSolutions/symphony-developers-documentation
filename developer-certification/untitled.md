@@ -12,7 +12,7 @@ Check out our training center here:
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-## Developer Certification ![](<../.gitbook/assets/certified-developer (1) (2) (2) (2) (1).png>)&#x20;
+## Developer Certification <img src="../.gitbook/assets/certified-developer (1) (2) (2) (2) (1).png" alt="" data-size="line">&#x20;
 
 ### **Module 1: Symphony Development Fundamentals**
 
@@ -30,7 +30,7 @@ Certification involves taking Module 1 and Module 2 of the certification trainin
 * Knowledge of the Symphony platform is not required, but exercises will require developers to access a Symphony environment.
 * Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment.&#x20;
 
-## Java Bot Developer Certification ![](../.gitbook/assets/bot.png)&#x20;
+## Java Bot Developer Certification <img src="../.gitbook/assets/bot.png" alt="" data-size="line">&#x20;
 
 ### Module 1: Symphony Development Fundamentals
 

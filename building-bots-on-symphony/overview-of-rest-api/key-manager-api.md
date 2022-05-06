@@ -1,10 +1,10 @@
 # Overview of Key Manager API
 
-## Symphony Key Manager APIs ![](../../.gitbook/assets/symphony-api.png)
+## Symphony Key Manager APIs <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 The Symphony Key Manager API's sole purpose is to authenticate a bot or API caller with the Key Manager.
 
-## Key Manager Authenticate API ![](../../.gitbook/assets/symphony-api.png)
+## Key Manager Authenticate API <img src="../../.gitbook/assets/symphony-api.png" alt="" data-size="line">
 
 In order to access Agent API endpoints, bots must be authenticated with the Pod and the Key Manager. To authenticate with the Key Manager, a bot must call the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate).
 

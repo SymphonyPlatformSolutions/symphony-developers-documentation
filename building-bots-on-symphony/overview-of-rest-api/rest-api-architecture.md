@@ -6,7 +6,7 @@ description: Overview of Symphony REST API Architecture
 
 Symphony's REST API is spread out over three main components: the **Symphony Pod**, **API Agent** and **Key Manager**. Let's take a closer look at these components below.
 
-## Symphony Pod ![](../../.gitbook/assets/symphony-pod.png)&#x20;
+## Symphony Pod <img src="../../.gitbook/assets/symphony-pod.png" alt="" data-size="line">&#x20;
 
 The Symphony Pod is a dedicated Symphony instance for each customer environment. It is a cloud-hosted component that handles all core operations necessary to provide the Symphony service to you. Since Symphony provides end-to-end encrypted messaging, all messages passed from user to user are fully encrypted at the time of sending, such that no Pod ever has access to the unencrypted contents of any message.
 

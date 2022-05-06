@@ -22,7 +22,7 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 Checkout the latest release of the Bot Developer Kit, [BDK 2.0](developer-tools/developer-tools/bdk-2.0/). BDK 2.0 is a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Get started building with BDK 2.0 today!
 {% endhint %}
 
-## Building Bots on Symphony ![](.gitbook/assets/bot-large.png)
+## Building Bots on Symphony <img src=".gitbook/assets/bot-large.png" alt="" data-size="line">
 
 Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
@@ -34,7 +34,7 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 [building-bots-on-symphony.md](building-bots-on-symphony/building-bots-on-symphony.md)
 {% endcontent-ref %}
 
-## Building Extension Applications on Symphony ![](.gitbook/assets/extension-app-large.png)
+## Building Extension Applications on Symphony <img src=".gitbook/assets/extension-app-large.png" alt="" data-size="line">
 
 Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
@@ -42,7 +42,7 @@ Bring customized and extensible workflows into Symphony through Extension Apps. 
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-## Become a Certified Developer ![](<.gitbook/assets/certified-developer (1) (2) (2) (2).png>)&#x20;
+## Become a Certified Developer <img src=".gitbook/assets/certified-developer (1) (2) (2) (2).png" alt="" data-size="line">&#x20;
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
@@ -50,7 +50,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 [untitled.md](developer-certification/untitled.md)
 {% endcontent-ref %}
 
-## Symphony REST API ![](.gitbook/assets/symphony-api-large.png)
+## Symphony REST API <img src=".gitbook/assets/symphony-api-large.png" alt="" data-size="line">
 
 In depth documentation and reference guide for the Symphony REST API:
 
@@ -58,7 +58,7 @@ In depth documentation and reference guide for the Symphony REST API:
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-## Symphony Extension API ![](.gitbook/assets/extension-app-large.png)
+## Symphony Extension API <img src=".gitbook/assets/extension-app-large.png" alt="" data-size="line">
 
 In depth documentation and reference guide for the Symphony Extension API:
 
@@ -66,7 +66,7 @@ In depth documentation and reference guide for the Symphony Extension API:
 [overview-of-extension-api](building-extension-applications-on-symphony/overview-of-extension-api/)
 {% endcontent-ref %}
 
-## Developer Tools ![](.gitbook/assets/developer-tools.png)&#x20;
+## Developer Tools <img src=".gitbook/assets/developer-tools.png" alt="" data-size="line">&#x20;
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
@@ -74,7 +74,7 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-## Embedded Modules ![](.gitbook/assets/embedded-modules.png)&#x20;
+## Embedded Modules <img src=".gitbook/assets/embedded-modules.png" alt="" data-size="line">&#x20;
 
 Securely embed stand-alone Symphony chat modules inside other websites and applications:
 
