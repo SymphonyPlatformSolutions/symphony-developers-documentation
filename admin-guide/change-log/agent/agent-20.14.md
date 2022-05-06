@@ -9,12 +9,16 @@ description: >-
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.14.2.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.14.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 20.14.3
+
+* A parentMessageId field is now exposed in the payloads returned by the Agent when retrieving information of a message consecutive of either a reply or a forward; it can be used as a link to the original message.
 
 ### Agent 20.14.2
 
