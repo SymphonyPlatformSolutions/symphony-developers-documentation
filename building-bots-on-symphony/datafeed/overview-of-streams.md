@@ -22,24 +22,6 @@ To obtain the URLSafe Base64 Conversation ID:
 For example, the URLSafe Base64 encoding of`lX1hwfmQ+AK/k/a/BB0y2n///q2+0KfbdA==` converts to `lX1hwfmQ-AK_k_a_BB0y2n___q2-0KfbdA`.
 {% endhint %}
 
-{% hint style="info" %}
-> * Replace forward slashes `/` with underscores `_`
-> * Replace pluses `+` with minuses `-`
-> * Ignore any trailing equal signs `=`
->
-> For example, the URLSafe Base64 encoding of `lX1hwfmQ+AK/k/a/BB0y2n///q2+0KfbdA==` converts to `lX1hwfmQ-AK_k_a_BB0y2n___q2-0KfbdA`.
-{% endhint %}
-
-> #### 📘URLSafe Base64 conversion
->
-> To obtain the URLSafe Base64 Conversation ID:
->
-> * Replace forward slashes `/` with underscores `_`
-> * Replace pluses `+` with minuses `-`
-> * Ignore any trailing equal signs `=`
->
-> For example, the URLSafe Base64 encoding of `lX1hwfmQ+AK/k/a/BB0y2n///q2+0KfbdA==` converts to `lX1hwfmQ-AK_k_a_BB0y2n___q2-0KfbdA`.
-
 The following list shows the existing endpoints:
 
 [Create IM or MIM](https://developers.symphony.com/restapi/reference-link/create-im-or-mim)\

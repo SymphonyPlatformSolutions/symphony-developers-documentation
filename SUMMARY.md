@@ -133,7 +133,7 @@
       * [UI Toolkit](developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md)
   * [Symphony Bot Generator](developer-tools/developer-tools/symphony-bot-generator.md)
   * [Postman](developer-tools/developer-tools/postman.md)
-  * [Live Renderer Tool](https://renderer-tool.app.symphony.com)
+  * [Live Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
     * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
     * [Form Elements](developer-tools/developer-tools/ui-style-guide/forms.md)
@@ -148,8 +148,8 @@
 
 ## Symphony REST API
 
-* [Symphony REST API](https://rest-api.symphony.com)
-* [Symphony Connect REST API](https://federation.readme.io)
+* [Symphony REST API](https://rest-api.symphony.com/)
+* [Symphony Connect REST API](https://federation.readme.io/)
 
 ## Mobile Frameworks
 
