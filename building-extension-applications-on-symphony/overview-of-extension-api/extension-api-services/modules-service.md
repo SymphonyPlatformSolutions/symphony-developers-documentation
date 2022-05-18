@@ -98,38 +98,6 @@ function focus(id)
 modulesService.focus("hello");
 ```
 
-## setHandler()
-
-You must specify your own application service for handling clicks on the menu item using `setHandler`.
-
-You must implement the `menuSelect` method on your application service in order to handle clicks on the created menu item:
-
-```javascript
-function setHandler(moduleId, serviceName)
-```
-
-| Parameter | Type   | Description                                                                                                                                                      |
-| --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| moduleId  | String | The id of the module for which menu selection is being handled                                                                                                   |
-| title     | String | The name of your application service that will be called when a module menu item has been selected (This service must previously have been registered remotely.) |
-
-```javascript
-// The application service that will be used to handle menu item clicks
-var helloAppService = SYMPHONY.services.register("hello:app");
-
-modulesService.addMenuItem("hello", "About Hello World App", "hello-menu-item");
-modulesService.setHandler("hello", "hello:app");
-
-// Implement the menuSelect method on your application service
-helloAppService.implement({
-  menuSelect: function(itemId) {
-    if (itemId == "hello-menu-item") {
-      console.log("hello-menu-item was selected");
-    }
-  }
-});
-```
-
 ## openLink()
 
 Opens a link from your application in a new tab in the user's default browser. This method should be used to open links, rather than `<a href="..." target="_blank">...</a>`.
