@@ -276,6 +276,10 @@ symphony.listen({
 });
 ```
 
+### Extension Application Whitelist
+
+By default, ECP will not load any extension applications (as there is no extension app view). However it can be useful to load extensions that perform custom entity rendering and/or add buttons to the chat header. This is possible using the **allowedApps** [parameter](./#configuration-parameters), passing a comma separated list of App IDs. If the app is already installed and activated for the user in question, adding it to the whitelist in this manner will allow it to load in ECP.
+
 ## Automatic rendering
 
 In automatic mode, the SDK will create the iframe for you, so you just need to add the ECP script tag and create a div with the `symphony-ecm` class, so that the script can find it and add the iframe in it.
@@ -334,6 +338,7 @@ export interface EcpSettings {
   showTitle: boolean; // show room title in the header. default true
   showEmoji: boolean; // enable emojis in the editor. default true
   symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below ECP chats. default true
+  allowedApps: string; // Comma separated list of App IDs to whitelist
 }
 ```
 
