@@ -320,7 +320,7 @@ These are client-side parameters, which will not override the configuration of t
 
 ```typescript
 export interface EcpSettings {
-  condensed: boolean | undefined; // condensed mode. default false
+  condensed: boolean | undefined; // condensed mode. default true
   ecpLoginPopup: boolean; // perform login within a popup, for SSO systems that refuse iframe integration. default false
   mode: 'light' | 'dark' | undefined; // ui colour scheme. default light
   showAttach: boolean; // enable attachments. default true
@@ -334,7 +334,7 @@ export interface EcpSettings {
   showProfilePopover: boolean; // show popover profile cards. default true
   showSuppressMessage: boolean; // allow user to suppress messages. default true
   showBookmarkMessage: boolean; // allow user to bookmark message. default true
-  showSystemMessages: boolean; // show system/maestro messages (e.g. a user joined room). default true
+  showSystemMessages: boolean; // show system/maestro messages (e.g. a user joined room). default false
   showTitle: boolean; // show room title in the header. default true
   showEmoji: boolean; // enable emojis in the editor. default true
   symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below ECP chats. default true
