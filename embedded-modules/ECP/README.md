@@ -320,7 +320,8 @@ These are client-side parameters, which will not override the configuration of t
 
 ```typescript
 export interface EcpSettings {
-  condensed: boolean | undefined; // condensed mode. default true
+  condensed: boolean; // condensed mode. default true
+  condensedMessageBelowName: boolean; // if in condensed mode, display message below or next to name. default true (below)
   ecpLoginPopup: boolean; // perform login within a popup, for SSO systems that refuse iframe integration. default false
   mode: 'light' | 'dark' | undefined; // ui colour scheme. default light
   showAttach: boolean; // enable attachments. default true
@@ -331,7 +332,6 @@ export interface EcpSettings {
   showInfo: boolean; // show room information in the header. default true
   showMembers: boolean; // show list of members. default true
   canAddPeople: boolean; // allow add members to rooms if owner. default false
-  showCopyMessage: boolean; // allow copying message link. default false
   showProfilePopover: boolean; // show popover profile cards. default true
   showSuppressMessage: boolean; // allow user to suppress messages. default true
   showBookmarkMessage: boolean; // allow user to bookmark message. default true
