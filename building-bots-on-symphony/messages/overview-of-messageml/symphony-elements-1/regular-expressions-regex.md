@@ -14,7 +14,7 @@ The regular expression pattern is validated on the front end by the Client. It i
 
 ## Regular expression Denial of Service - ReDoS
 
-Regular expressions can cause performance issues in the Client if the validation of the regular expression is very complex. Poorly designed regular expressions can even cause denial of service (ReDoS). Please verify that your regular expressions are safe. This can be done using services such as [https://devina.io/redos-checker](https://devina.io/redos-checker).
+Regular expressions can cause performance issues in the Client if the validation of the regular expression is very complex. Poorly designed regular expressions can even cause denial of service (ReDoS). Please verify that your regular expressions are safe, using the following service: [https://redos-checker.surge.sh/](https://redos-checker.surge.sh/).
 
 {% hint style="info" %}
 To prevent performance issues on the Client, a validation mechanism checks regular expressions to ensure they are safe. If the regular expression is unsafe, it is automatically disabled**. In that situation, the user input will not be validated.**
