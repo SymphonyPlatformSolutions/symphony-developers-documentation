@@ -93,7 +93,7 @@ See app.js for how the user's theme (light or dark) and font size (large, normal
 -->
 <body>
     <!-- Include Symphony's Client Extension API javascript -->
-    <script type="text/javascript" src="https://www.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
     <!-- React DOM root ID -->
     <div id="root"></div>
     <!-- Include the app view javascript. This file is generated when running the npm webpack commands.  -->

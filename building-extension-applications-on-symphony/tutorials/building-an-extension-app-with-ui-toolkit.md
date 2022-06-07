@@ -31,7 +31,7 @@ In order to use the services provided by the Client Extension API, your app must
 </head>
 <body>
     <!-- Include the Symphony Client Extensions API javascript -->
-    <script type="text/javascript" src="https://www.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
     <!-- Include the app controller javascript. This file is generated when running the npm webpack commands. -->
     <script type="text/javascript" src="controller.bundle.js" charset="utf-8"></script>
 </body>

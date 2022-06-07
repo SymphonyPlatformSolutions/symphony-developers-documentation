@@ -1,6 +1,6 @@
 # Building an Extension App with #hashtags & $cashtags
 
-In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker (Symphony $cashtag). We will also demonstrate how to use the UI Toolkit provided by the BDK 1.0 (Bot Developer Kit) in order to render a stock chart for that given stock symbol or ticker by leveraging a [free stock API called AlphaVantage](https://www.alphavantage.co).
+In this step by step tutorial, we will build an extension app that adds buttons to the hovercard that appears when an end user clicks on a stock ticker (Symphony $cashtag). We will also demonstrate how to use the UI Toolkit provided by the BDK 1.0 (Bot Developer Kit) in order to render a stock chart for that given stock symbol or ticker by leveraging a [free stock API called AlphaVantage](https://www.alphavantage.co/).
 
 ## Prerequisites:
 
@@ -31,7 +31,7 @@ In order to use the Client Extension API services, your app must include the `sy
 </head>
 <body>
     <!-- Include the Symphony Client Extensions API javascript -->
-    <script type="text/javascript" src="https://www.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
     <!-- Include the app controller javascript. This file is generated when running the npm webpack commands. -->
     <script type="text/javascript" src="controller.bundle.js" charset="utf-8"></script>
 </body>
@@ -181,7 +181,7 @@ Open your Symphony Client (in our case develop2) and make sure your app is insta
 
 ### Grabbing the Ticker Symbol:
 
-The next step in building this extension app is to add our own custom business logic, specifically the business logic that captures the stock ticker in context when the $cashtag hovercard is brought into view. To do so update the provided implementation of the `trigger() `method to the following:
+The next step in building this extension app is to add our own custom business logic, specifically the business logic that captures the stock ticker in context when the $cashtag hovercard is brought into view. To do so update the provided implementation of the `trigger()` method to the following:
 
 ```javascript
 trigger(uiClass, id, payload, data) {
@@ -261,7 +261,7 @@ The Symphony BDK 1.0 (Bot Developer Kit) provides a library of UI components, th
 
 ### Setting up the Backend:
 
-Since our extension app is going to render a candlestick stock chart in real time, we need to fetch and clean data from a third party API. In this tutorial, we will be using [alphavantage](https://www.alphavantage.co) as our data provider.
+Since our extension app is going to render a candlestick stock chart in real time, we need to fetch and clean data from a third party API. In this tutorial, we will be using [alphavantage](https://www.alphavantage.co/) as our data provider.
 
 Once you have received a free API Token, you can leverage the API. Specifically, we will be using data provided from the [Time Series Daily API](https://www.alphavantage.co/documentation/#daily) call.
 
