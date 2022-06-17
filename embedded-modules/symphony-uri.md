@@ -102,7 +102,7 @@ symphony://?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,a
 
 ## Launch the Symphony Desktop Client with Stream in Focus
 
-Mirrors the behavior of `symphony:` but puts the specified stream (IM, multiparty IM, or chatroom) in focus.Text
+Mirrors the behavior of `symphony:` but puts the specified stream (IM, multiparty IM, or chatroom) in focus.
 
 ```
 symphony://?streamId=STREAM_ID&streamType=STREAM_TYPE
@@ -123,7 +123,7 @@ symphony://?streamId=STREAM_ID&streamType=STREAM_TYPE
 
 ## Launch the Symphony Desktop Client with Profile in Focus
 
-Mirrors the behavior of `symphony:` but puts the specified user's profile in focus.Text
+Mirrors the behavior of `symphony:` but puts the specified user's profile in focus.
 
 ```
 symphony://?userId=USER_ID
