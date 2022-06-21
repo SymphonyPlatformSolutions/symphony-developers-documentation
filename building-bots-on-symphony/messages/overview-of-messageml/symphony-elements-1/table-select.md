@@ -1,6 +1,6 @@
 # Table Select
 
-The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](buttons.md) Element.
+The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](buttons.md) Element.
 
 The following image shows three different tables. The first table shows the use of checkboxes to select rows, positioned to the right side of the table. The second example also shows checkboxes, but they are positioned to the left side. The last table shows buttons positioned to the right.
 
@@ -8,7 +8,7 @@ The following image shows three different tables. The first table shows the use 
 
 ## Building a Table Select with Apache FreeMarker
 
-The following example shows how to create a Table Select structure using the [FreeMarker](https://freemarker.apache.org) template and a JSON file.
+The following example shows how to create a Table Select structure using the [FreeMarker](https://freemarker.apache.org/) template and a JSON file.
 
 In the JSON data, you can configure the `type` of the Element that will be added to the Table Select and its `position`:
 
@@ -19,7 +19,7 @@ In the JSON data, you can configure the `type` of the Element that will be added
 
 In this example, the table `type` is set as `button` and the `position` is set as `left`.
 
-Note that the [FreeMarker](https://freemarker.apache.org) template is being used to create the messageML that is rendering the Table.
+Note that the [FreeMarker](https://freemarker.apache.org/) template is being used to create the messageML that is rendering the Table.
 
 ![](../../../../.gitbook/assets/4e6284f-table-20.9.gif)
 
@@ -235,4 +235,4 @@ Note that the [FreeMarker](https://freemarker.apache.org) template is being used
 * If the table `type` is equal to "checkbox", then checkboxes will be added to the rows of the table.&#x20;
 * A checkbox can also be added in the header. Please note, clicking the checkbox in the header will not check all rows' checkboxes.
 * If the table `type` is equal to "button", then buttons will be added to select a specific row of the table.
-* When creating a MessageML using a [Freemarker](https://freemarker.apache.org) template, you must send a JSON file with it.
+* When creating a MessageML using a [Freemarker](https://freemarker.apache.org/) template, you must send a JSON file with it.

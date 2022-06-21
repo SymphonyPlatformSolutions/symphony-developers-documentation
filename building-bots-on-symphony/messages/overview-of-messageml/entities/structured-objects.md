@@ -38,7 +38,7 @@ You can create an object by invoking the [Create Message](https://rest-api.symph
 * The `message` parameter, which contains the message presentation, with the object presentation for each Structured Object.
 * The `data` parameter, which contains JSON data with the object presentation for each structured object.
 
-These parameters also support using [Apache FreeMarker templates](http://freemarker.org) with Structured Objects.
+These parameters also support using [Apache FreeMarker templates](http://freemarker.org/) with Structured Objects.
 
 ## Message and Object Presentation
 
