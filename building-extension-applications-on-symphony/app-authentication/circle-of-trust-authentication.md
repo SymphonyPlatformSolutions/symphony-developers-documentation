@@ -168,7 +168,7 @@ X-API-KEY: <apiKey>
 
 ### JSON Web Tokens
 
-You should familiarize yourself with [JSON Web Tokens](https://jwt.io/) (JWT) which are the format used for passing user identity information from Symphony to your app.
+You should familiarize yourself with [JSON Web Tokens](https://jwt.io) (JWT) which are the format used for passing user identity information from Symphony to your app.
 
 Your app will need to implement verification of the JWT shared by Symphony.
 
@@ -257,7 +257,7 @@ User identity information can be obtained through the `getJwt()` method on the `
 
 ## getJwt()
 
-Returns identity information for the user in context in the form of a [JSON web token](https://jwt.io/) (JWT). The JWT has been signed by the private key of the pod and can be verified using the pod's public key.
+Returns identity information for the user in context in the form of a [JSON web token](https://jwt.io) (JWT). The JWT has been signed by the private key of the pod and can be verified using the pod's public key.
 
 Note that this method will only return user identity information if Steps 1-15 of the application authentication sequence have been completed (i.e. Symphony frontend trusts app frontend). If not completed, then the JWT will only contain userReferenceId, an anonymous identifier for the user.
 

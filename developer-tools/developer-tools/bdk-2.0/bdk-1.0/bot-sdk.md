@@ -932,7 +932,7 @@ Such features consist of the following HTTP endpoints that you can use to pull h
 
 * **/monitor/info**: simple endpoint that returns HTTP 200 OK when application is up
 * **/monitor/health**: provides health details. By default, only Symphony-related health details are exposed
-* **/monitor/prometheus**: health and metrics details to be consumed by [Prometheus](https://prometheus.io/)
+* **/monitor/prometheus**: health and metrics details to be consumed by [Prometheus](https://prometheus.io)
 
 ### Extending health details
 

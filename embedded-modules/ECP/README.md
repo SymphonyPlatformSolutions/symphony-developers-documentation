@@ -276,9 +276,15 @@ symphony.listen({
 });
 ```
 
-### Extension Application Whitelist
+### Extension Application Support
 
-By default, ECP will not load any extension applications (as there is no extension app view). However it can be useful to load extensions that perform custom entity rendering and/or add buttons to the chat header. This is possible using the **allowedApps** [parameter](./#configuration-parameters), passing a comma separated list of App IDs. If the app is already installed and activated for the user in question, adding it to the whitelist in this manner will allow it to load in ECP.
+Extension Apps on Symphony provide an easy and secure way to customize the Symphony experience.
+
+Extension applications allow you to extend various parts of the Symphony UI by adding buttons to direct chats, group chats and chatrooms . They also allow you to display rich interactive content in a message through [structured objects](https://docs.developers.symphony.com/building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects). \
+\
+By default, ECP will not load any extension applications. ECP can be configured to load extension apps that perform custom entity rendering and/or add buttons to the chat header by using the **allowedApps** [parameter](./#configuration-parameters), passing a comma separated list of App IDs. [App ID](https://docs.developers.symphony.com/building-extension-applications-on-symphony/app-configuration/configure-your-app-for-bdk-development) is the identifier you provide for your app when configuring the app on your pod. If the app is already installed and activated for the user in question, adding it to the whitelist in this manner will allow it to load in ECP.
+
+To know more about Symphony extension apps and how to build extension apps, see [Building extension apps on Symphony. ](https://docs.developers.symphony.com/building-extension-applications-on-symphony/building-extension-applications-on-symphony)
 
 ## Automatic rendering
 

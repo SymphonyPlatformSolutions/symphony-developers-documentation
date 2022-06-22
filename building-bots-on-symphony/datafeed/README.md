@@ -20,7 +20,7 @@ To facilitate this transition, a new feature called the **bridge** has been intr
 * In a subsequent Agent release, this bridge will be enabled by default, but could still be disabled through configuration (October 2022).&#x20;
 * Then in a subsequent Agent release, the bridge will be always enabled (January 2023).
 
-We encourage you to validate the bridge with your existing bots, or to migrate your bots to use the new Datafeed 2 APIs, which is the **preferred option**. If you use the BDK 2.0 in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between Datafeed 1 APIs and Datafeed 2 APIs is a simple configuration change. We advise you to take this opportunity to migrate your bots to the **BDK 2.0** if you haven’t done so, the Developer Relations team can guide you through it.
+We encourage you to validate the bridge with your existing bots, or to migrate your bots to use the new Datafeed 2 APIs, which is the **preferred option**. If you use the BDK 2.0 in [Java](https://symphony-bdk-java.finos.org) or [Python](https://symphony-bdk-python.finos.org), the migration between Datafeed 1 APIs and Datafeed 2 APIs is a simple configuration change. We advise you to take this opportunity to migrate your bots to the **BDK 2.0** if you haven’t done so, the Developer Relations team can guide you through it.
 
 Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
 

@@ -5,7 +5,7 @@
 ### Building your Project using the Symphony Bot Generator
 
 {% hint style="info" %}
-This section requires `npm` ([Node Package Manager](https://www.npmjs.com/)) to be installed on your local machine as a prerequisite.
+This section requires `npm` ([Node Package Manager](https://www.npmjs.com)) to be installed on your local machine as a prerequisite.
 {% endhint %}
 
 For all Symphony BDK applications, you should start with the [Symphony Bot Generator](../../developer-tools/developer-tools/symphony-bot-generator.md). The Symphony Generator offers a fast way to bootstrap your Symphony BDK project in several languages, including Java:
@@ -66,7 +66,7 @@ This section will help you to understand how to create your bot application from
 
 #### Maven-based project
 
-If you want to use [Maven](https://maven.apache.org/) as build system, you have to configure your root `pom.xml` as such:
+If you want to use [Maven](https://maven.apache.org) as build system, you have to configure your root `pom.xml` as such:
 
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
@@ -125,7 +125,7 @@ If you want to use [Maven](https://maven.apache.org/) as build system, you have 
 
 #### Gradle-based project
 
-If you want to use [Gradle](https://gradle.org/) as build system, you have to configure your root `build.gradle` as such:
+If you want to use [Gradle](https://gradle.org) as build system, you have to configure your root `build.gradle` as such:
 
 ```javascript
 plugins {

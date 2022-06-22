@@ -73,17 +73,17 @@ shareButton.addEventListener("click", function(){
 
 The following table shows the article content:
 
-| Field       | Required                                    | Format                                                  | Description                                                      |
-| ----------- | ------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| `title`     | Yes                                         | String                                                  | The headline of the article                                      |
-| `subTitle`  | No                                          | String                                                  | The subtitle of the article                                      |
-| `blurb`     | No                                          | String                                                  | A summary of the article to display                              |
-| `date`      | No                                          | [Unix Epoch Timestamp](https://www.epochconverter.com/) | Date of publication                                              |
-| `publisher` | No                                          | String                                                  | Name of the publisher                                            |
-| `author`    | No                                          | String                                                  | Name of the author                                               |
-| `thumbnail` | No                                          | URL (could be a data url)                               | Image to be displayed - 106px-106px                              |
-| `id`        | Must provide either `id` or `href`, or both | String                                                  | An identifier used by the application to deeplink to the article |
-| `href`      | Must provide either `id` or `href`, or both | URL                                                     | URL to the article (opened in a new browser window)              |
+| Field       | Required                                    | Format                                                 | Description                                                      |
+| ----------- | ------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------- |
+| `title`     | Yes                                         | String                                                 | The headline of the article                                      |
+| `subTitle`  | No                                          | String                                                 | The subtitle of the article                                      |
+| `blurb`     | No                                          | String                                                 | A summary of the article to display                              |
+| `date`      | No                                          | [Unix Epoch Timestamp](https://www.epochconverter.com) | Date of publication                                              |
+| `publisher` | No                                          | String                                                 | Name of the publisher                                            |
+| `author`    | No                                          | String                                                 | Name of the author                                               |
+| `thumbnail` | No                                          | URL (could be a data url)                              | Image to be displayed - 106px-106px                              |
+| `id`        | Must provide either `id` or `href`, or both | String                                                 | An identifier used by the application to deeplink to the article |
+| `href`      | Must provide either `id` or `href`, or both | URL                                                    | URL to the article (opened in a new browser window)              |
 
 The following table shows the share options:
 
