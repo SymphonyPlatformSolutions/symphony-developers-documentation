@@ -142,6 +142,7 @@
 ## Embedded Modules
 
 * [Embedded Collaboration Platform](embedded-modules/ECP/README.md)
+  * [ECP Partner Platform Integration](embedded-modules/ECP/ecp-partner-platform-integration.md)
   * [Embedded Chat Module (legacy)](embedded-modules/ECP/ECM.md)
 * [Symphony URI](embedded-modules/symphony-uri.md)
 * [Symphony URI for Mobile](embedded-modules/symphony-uri-for-mobile.md)

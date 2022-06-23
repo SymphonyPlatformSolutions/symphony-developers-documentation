@@ -2,7 +2,7 @@
 
 ## Description
 
-The Symphony Embedded Collaboration Platform allows you to embed stand-alone Symphony chat modules inside other applications.
+The [Symphony Embedded Collaboration Platform](https://symphony.com/solutions/embedded-collaboration-platform/) allows you to embed stand-alone Symphony chat modules inside other applications.
 
 The chat module can be embedded into websites or any tool that supports webview.
 
@@ -12,8 +12,10 @@ The ECP SDK allows extensive customization, as well as APIs to create rooms and 
 _**The Embedded Collaboration Platform (ECP) replaces the previous**_[ _**Embedded Chat Module**_](ECM.md)_**, which is now deprecated.**_
 {% endhint %}
 
-{% hint style="warning" %}
-ECP is not yet deployed to all pods, and will be deployed on-demand for organisations using ECM. To know if your pod has been upgraded to ECP, open `https://{podUrl}/embed/version.json` and check the `builtOn` date is in 2022
+{% hint style="info" %}
+Embedded Collaboration Platform allows you to embed Symphony within your application to provide full collaboration capabilities to your users. Your users can collaborate with half a million people across thousands of institutions on the Symphony network without leaving your platform. This allows you to add Symphony's secure and compliant chat capabilities to your application, unlocking instant external connectivity and workflow efficiency. &#x20;
+
+_**See the**_ [_**partner platform integration**_](ecp-partner-platform-integration.md) _**for more details**_
 {% endhint %}
 
 ## Supported browser versions
