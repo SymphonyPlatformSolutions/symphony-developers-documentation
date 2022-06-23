@@ -30,6 +30,12 @@ This service returns a json payload representing an array of pods on which the u
 
 
 
-## Enabling Single Sign On for users (only applicable for partners who can act as Identity Providers)
+## Enabling Single Sign On for users
 
-<mark style="background-color:green;">Olivier/Yannick passing userEmail as part of the ECP initiation etc..</mark>&#x20;
+In order to send the user to the correct SSO system for their organisation, there is an additional parameter available in the [configuration parameters](./#configuration-parameters) . You should pass this to the SDK when instantiating the session.
+
+```typescript
+userEmail: string; // Email of the user
+```
+
+<mark style="background-color:green;"></mark>
