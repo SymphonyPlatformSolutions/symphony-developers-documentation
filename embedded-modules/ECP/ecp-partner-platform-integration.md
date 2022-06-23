@@ -16,15 +16,19 @@ See [Channel Connect](https://app.gitbook.com/o/-MB5vuhMZDPnMHgoaIX-/s/4uJeX0uvi
 
 In Symphony, each user belong to one pod, which is an instance of a Symphony system allocated to a company. Each Symphony pod has its own domain name, and each user can only log on the pod that user is defined. ECP has to be instantiated from the pod the user is defined on.
 
-In order to know on which pod is a user defined from the user email address, the following service can be called:&#x20;
+In order to know on which pod is a user defined from the user email address, the following service can be called from any pod:&#x20;
 
-`curl --location --request POST 'https://{podUrl}.symphony.com/webcontroller/v2/podLoginInformation' --data-raw '{ "emailAddress": "useremail@domain.com" }'`
+`curl --location --request POST 'https://{pod}/webcontroller/v2/podLoginInformation' --data-raw '{ "emailAddress": "useremail@domain.com" }'`
+
+For partners who don't own their own pod, this service is available from `cp2.symphony.com` for Production, and `cp2-test.symphony.com` for Test.
+
+Example:
+
+`curl --location --request POST 'https://cp2-test.symphony.com/webcontroller/v2/podLoginInformation' --data-raw '{ "emailAddress": "useremail@domain.com" }'`
 
 This service returns a json payload representing an array of pods on which the user is defined, and the pod domain is available under the `tenantDomain` field.
 
-This service is available from SBE 20.14+.&#x20;
 
-For partners who don't own their own pod, this service is available from  `https://cp2.symphony.com` for Production, and `https://cp2-test.symphony.com` for Test.
 
 ## Enabling Single Sign On for users (only applicable for partners who can act as Identity Providers)
 
