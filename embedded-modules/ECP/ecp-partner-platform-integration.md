@@ -8,7 +8,7 @@ Using Symphony ECP, you can allow your application users who are already part of
 
 If a user of your application is not already part of Symphony, you can create accounts for them in Symphony, thereby enabling them to use Symphony from your application to collaborate. Moreover you can also enable them to single sign on (SSO) to Symphony if your application can act as an identity provider using the Open ID connect (OIDC) or SAML protocols. As expected, all the chats will be logged and made available for content export to their respective companies for the new users you bring to Symphony.&#x20;
 
-See [Channel Connect](https://app.gitbook.com/o/-MB5vuhMZDPnMHgoaIX-/s/4uJeX0uviD4DcU2ZVSdt/) for more information about creating accounts for your users who need a new Symphony account.&#x20;
+See [Channel Connect](../../symphony-rest-api/symphony-channel-connect-rest-api.md) for more information about creating accounts for your users who need a new Symphony account.&#x20;
 
 
 
