@@ -8,7 +8,7 @@ This page describes the APIs available for the partners to look up, add and mana
 
 Before they can use these endpoints, partners must register with Symphony. After registration, the partner will receive credentials to authenticate to these APIs.
 
-To register with Symphony to create new users and to embed Symphony within your application, please [contact us](https://symphony.com/solutions/embedded-collaboration-platform/).
+To register as a Symphony partner to create new users and to embed Symphony within your application, please [contact us](https://symphony.com/solutions/embedded-collaboration-platform/).
 
 ## Domains
 
