@@ -207,7 +207,7 @@ The following list shows the pages that have been updated:
 
 * [Symphony Elements - Buttons](../building-bots-on-symphony/messages/overview-of-messageml/symphony-elements-1/buttons.md): the description of the `type` attribute has changed. Now, it says that the reset button resets the form-data to its initial values.
 * [Suppress Message](https://developers.symphony.com/restapi/v20.4/reference-link/suppress-message): Added suppressed message examples.
-* [PresentationML Live Renderer Too](https://renderer-tool.app.symphony.com)l: corrections performed on the rendering of cards and in the live preview.
+* [PresentationML Live Renderer Too](https://renderer-tool.app.symphony.com/)l: corrections performed on the rendering of cards and in the live preview.
 
 ### Changes introduced in 20.3 (1.57)
 

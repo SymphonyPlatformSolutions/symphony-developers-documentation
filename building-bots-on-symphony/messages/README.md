@@ -27,7 +27,7 @@ Note: MessageML is just a subset of PresentationML that makes it easier to const
 
 ## PresentationML Live Renderer Tool
 
-Symphony created the [Presentation ML Live Renderer Tool](https://renderer-tool.app.symphony.com) that you can use to see your MessageML rendered in PresentationML or markdown (mobile) without coding.
+Symphony created the [Presentation ML Live Renderer Tool](https://renderer-tool.app.symphony.com/) that you can use to see your MessageML rendered in PresentationML or markdown (mobile) without coding.
 
 ## Diagram of Symphony Message Flow:
 

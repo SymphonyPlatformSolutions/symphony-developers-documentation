@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-* [OpenJDK 8](https://openjdk.java.net).
+* [OpenJDK 8](https://openjdk.java.net/).
 
 {% hint style="info" %}
 Note: Make sure that you have installed the OpenJDK 8 update 282 or later, otherwise, the [Java JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) will also be needed.
@@ -729,7 +729,7 @@ The following list shows the available actuator endpoints for the Agent applicat
 {% hint style="info" %}
 Note:&#x20;
 
-Paths above are relative to the management URL[: https://agent-server.symphony.com:10443](https://agent-server.symphony.com:10443)
+Paths above are relative to the management URL[: https://agent-server.symphony.com:10443](https://agent-server.symphony.com:10443/)
 {% endhint %}
 
 ## Logging
