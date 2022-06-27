@@ -288,6 +288,65 @@ By default, ECP will not load any extension applications. ECP can be configured 
 
 To know more about Symphony extension apps and how to build extension apps, see [Building extension apps on Symphony. ](https://docs.developers.symphony.com/building-extension-applications-on-symphony/building-extension-applications-on-symphony)
 
+### Theming
+
+ECP comes with out of the box support for Symphony's two colour themes: Light and Dark. But it is also possible to pass a custom theme, in order to align with the design system of the parent page.
+
+An example demonstrating the use of colour palette overrides can be found [here](./#example-integrations)
+
+The "shades" are completely optional - by default they will be interpolated from the main colours
+
+```typescript
+export interface IThemeColors {
+  // Application colors: 7 main colors
+  primary: string;
+  secondary: string;
+  accent: string;
+  success: string;
+  error: string;
+  background: string;
+  surface: string;
+  // Text colors
+  textPrimary: string;
+  textSecondary: string;
+  textAccent: string;
+  textSuccess: string;
+  textError: string;
+  text: string;
+  // Optional shades
+  textShades?: ITextShades;
+  textSurfaceShades?: ITextShades;
+  primaryShades?: IColorShades;
+  secondaryShades?: IColorShades;
+  accentShades?: IColorShades;
+  successShades?: IColorShades;
+  errorShades?: IColorShades;
+}
+
+export interface ITextShades {
+  '10': string;
+  '20': string;
+  '30': string;
+  '40': string;
+  '50': string;
+  '60': string;
+  '70': string;
+  '80': string;
+  '90': string;
+}
+
+export interface IColorShades {
+  '10': string;
+  '20': string;
+  '30': string;
+  '40': string;
+  '60': string;
+  '70': string;
+  '80': string;
+  '90': string;
+}
+```
+
 ## Automatic rendering
 
 In automatic mode, the SDK will create the iframe for you, so you just need to add the ECP script tag and create a div with the `symphony-ecm` class, so that the script can find it and add the iframe in it.
@@ -327,27 +386,33 @@ _**This integration method is very limited, and should only be used for situatio
 These are client-side parameters, which will not override the configuration of the pod. For example, if the pod does not allow attachments, setting `showAttach` to true will not do anything.&#x20;
 
 ```typescript
-export interface EcpSettings {
+{
+  // app parameters
+  streamId: string; // stream ID of an existing room to open
+  userIds: string; // IM/Group Chat: Comma separated user ids or emails (or both)
+  allowedApps: string; // Comma separated list of App IDs to whitelist
+  theme: IThemeColors; // Colour Palette overrides
+  // configurable app settings
+  canAddPeople: boolean; // allow add members to rooms if owner. default false
   condensed: boolean; // condensed mode. default true
   condensedMessageBelowName: boolean; // if in condensed mode, display message below or next to name. default true (below)
   ecpLoginPopup: boolean; // perform login within a popup, for SSO systems that refuse iframe integration. default false
-  mode: 'light' | 'dark' | undefined; // ui colour scheme. default light
+  mode: 'light' | 'dark' | undefined; // built-in colour palettes. default light
   showAttach: boolean; // enable attachments. default true
+  showBookmarkMessage: boolean; // allow user to bookmark message. default true
   showChatSearch: boolean; // enable search feature. default true
   showCompose: boolean; // enable compose mode editor. default true
   showDisableInput: boolean; // enable user to disable editor. default true
   showEditor: boolean; // enable editor. default true
   showInfo: boolean; // show room information in the header. default true
   showMembers: boolean; // show list of members. default true
-  canAddPeople: boolean; // allow add members to rooms if owner. default false
   showProfilePopover: boolean; // show popover profile cards. default true
   showSuppressMessage: boolean; // allow user to suppress messages. default true
-  showBookmarkMessage: boolean; // allow user to bookmark message. default true
   showSystemMessages: boolean; // show system/maestro messages (e.g. a user joined room). default false
   showTitle: boolean; // show room title in the header. default true
   showEmoji: boolean; // enable emojis in the editor. default true
+  sound: boolean; // enable sound notifications
   symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below ECP chats. default true
-  allowedApps: string; // Comma separated list of App IDs to whitelist
 }
 ```
 
