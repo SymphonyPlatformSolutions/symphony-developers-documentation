@@ -68,7 +68,7 @@ The `render` function creates and adds the ECP iframe to the container with the 
 
 #### Returns
 
-A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type)
+A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type).
 
 #### Example
 
@@ -100,7 +100,7 @@ If a selector is provided, the SDK will either create a new iframe and add the c
 
 #### Returns
 
-A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type)
+A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type).
 
 #### Example
 
@@ -138,7 +138,7 @@ If a direct message or group chat with the user(s) already exists, it will open 
 
 #### Returns
 
-A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type)
+A Promise that resolves when the chat is ready. See the promise definition [below](./#chat-action-return-type).
 
 #### Example
 
@@ -158,7 +158,7 @@ Open a group chat in a specific container:
 window.symphony.startRoom(['someUserId', 'another.user@youremailhere.com'], '#ecp-chat');
 ```
 
-### Chat Action Return Type
+### Chat action return type
 
 All the functions defined above will return a promise that will resolve once the chat is open / updated. The Promise value has the following interface:
 
@@ -278,23 +278,23 @@ symphony.listen({
 });
 ```
 
-### Extension Application Support
+### Extension application support
 
-Extension Apps on Symphony provide an easy and secure way to customize the Symphony experience.
+Extension applications on Symphony provide an easy and secure way to customize the Symphony experience.
 
-Extension applications allow you to extend various parts of the Symphony UI by adding buttons to direct chats, group chats and chatrooms . They also allow you to display rich interactive content in a message through [structured objects](https://docs.developers.symphony.com/building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects). \
+Extension applications allow you to extend various parts of the Symphony UI by adding buttons to direct chats, group chats and chat rooms. They also allow you to display rich interactive content in a message through [structured objects](https://docs.developers.symphony.com/building-extension-applications-on-symphony/planning-your-app/extension-applications-+-structured-objects).\
 \
-By default, ECP will not load any extension applications. ECP can be configured to load extension apps that perform custom entity rendering and/or add buttons to the chat header by using the **allowedApps** [parameter](./#configuration-parameters), passing a comma separated list of App IDs. [App ID](https://docs.developers.symphony.com/building-extension-applications-on-symphony/app-configuration/configure-your-app-for-bdk-development) is the identifier you provide for your app when configuring the app on your pod. If the app is already installed and activated for the user in question, adding it to the whitelist in this manner will allow it to load in ECP.
+By default, ECP will not load any extension applications. ECP can be configured to load extension apps that perform custom entity rendering and/or add buttons to the chat header by using the **allowedApps** [parameter](./#configuration-parameters), passing a comma separated list of app IDs. [App ID](https://docs.developers.symphony.com/building-extension-applications-on-symphony/app-configuration/configure-your-app-for-bdk-development) is the identifier you provide for your app when configuring the app on your pod. If the app is already installed and activated for the user in question, adding it to the whitelist in this manner will allow it to load in ECP.
 
 To know more about Symphony extension apps and how to build extension apps, see [Building extension apps on Symphony. ](https://docs.developers.symphony.com/building-extension-applications-on-symphony/building-extension-applications-on-symphony)
 
 ### Theming
 
-ECP comes with out of the box support for Symphony's two colour themes: Light and Dark. But it is also possible to pass a custom theme, in order to align with the design system of the parent page.
+ECP comes with out of the box support for Symphony's two color themes: Light and Dark.&#x20;
 
-An example demonstrating the use of colour palette overrides can be found [here](./#example-integrations)
+It is also possible to pass a custom theme, in order to align with the design system of the parent page. An example demonstrating the use of color palette overrides can be found [here](./#example-integrations).
 
-The "shades" are completely optional - by default they will be interpolated from the main colours
+_Shades_ are completely optional - by default they will be interpolated from the main colors.
 
 ```typescript
 export interface IThemeColors {
