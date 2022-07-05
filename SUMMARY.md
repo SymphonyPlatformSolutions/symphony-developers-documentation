@@ -146,6 +146,11 @@
   * [Embedded Chat Module (legacy)](embedded-modules/ECP/ECM.md)
 * [Symphony URI](embedded-modules/symphony-uri.md)
 * [Symphony URI for Mobile](embedded-modules/symphony-uri-for-mobile.md)
+* [Desktop interoperability](embedded-modules/desktop-interoperability/README.md)
+  * [FDC3 intents](embedded-modules/desktop-interoperability/fdc3-intents/README.md)
+    * [Message format](embedded-modules/desktop-interoperability/fdc3-intents/message-format.md)
+  * [Installation guide](embedded-modules/desktop-interoperability/installation-guide.md)
+  * [Change log](embedded-modules/desktop-interoperability/change-log.md)
 
 ## Symphony REST API
 
