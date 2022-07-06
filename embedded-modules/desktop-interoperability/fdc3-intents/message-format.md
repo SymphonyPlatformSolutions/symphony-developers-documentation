@@ -16,8 +16,7 @@ export const enum TextMimeTypeEnum {
 
 export const enum EntityTypeEnum {
   'fileAttachment',
-  'fdc3Intent',
-  'symphonyEntity'
+  'fdc3Intent'
 }
 
 export interface FileAttachmentEntity {
@@ -38,11 +37,6 @@ export interface FDC3IntentEntity {
   };
 }
 
-export interface SymphonyEntity {
-  type: EntityTypeEnum.symphonyEntity;
-  data: any; // Put the Symphony Entity Structure within here
-}
-
 type Entity = FileAttachmentEntity | FDC3IntentEntity | SymphonyEntity;
 
 export interface SharedMessage {
@@ -52,10 +46,10 @@ export interface SharedMessage {
 ```
 
 ```javascript
- Example of message containing a file (image here), a FDC3 intent and a custom entity
+ Example of rich message containing a file (image here) and an fdc3 intent 
  const message: Message = {
    text: {
-     'text/markdown': 'Hello, can you see the image attached? *italics* **bold**'
+     'text/markdown': 'Hello @[Yannick Malins](id/723947329), can you see the image and chart attached? Could it affect the price of $AAPL? *italics* **bold**'
    },
    entities: {
      '0': {
@@ -88,19 +82,6 @@ export interface SharedMessage {
            style: 'candle'
          }
        }
-     },
-     '2': {
-       type: EntityTypeEnum.symphonyEntity,
-       data: {
-         type: 'org.symphonyoss.fin.security',
-         version: '1.0',
-           id:[
-             {
-               type: 'org.symphonyoss.fin.security.id.ticker',
-               value: 'aapl'
-             }
-           ]
-        }
      }
    }
 }
