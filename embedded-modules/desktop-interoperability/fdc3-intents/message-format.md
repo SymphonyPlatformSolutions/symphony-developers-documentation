@@ -4,9 +4,9 @@
 
 The StartChat intent can take an optional message property, that will contain a preset message that the user can preview and send in the chat.
 
-The message can be a single string for plain text, a rich text in markdown. It can also include entities such as mentions, cashtags, hashtags, or attachments (including images).
+The message can be a single string for plain text or a rich text in markdown. It can also include entities such as mentions, cashtags, hashtags, or attachments (including images).
 
-See below the definition of the message format, in addition to an example of a formatted message.
+See below the definition of the message structure, in addition to an example of a formatted message.
 
 ```javascript
 export const enum TextMimeTypeEnum {

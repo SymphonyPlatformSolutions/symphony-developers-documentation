@@ -9,15 +9,15 @@
 
 ### Configuration in the Admin Portal
 
-A specific extension app has to be configured on your pod, that will automatically connect to the DIP. See below the configuration of the app plugin.&#x20;
+A specific extension app has to be configured on your pod, that will automatically connect to the DIP. See below how to configure this app.&#x20;
 
 This extension app is specific to each desktop integration platform.&#x20;
 
-To do this, log into your Admin portal and create the following app.
+#### Create the custom app
 
-{% hint style="info" %}
-This configuration step will be removed in the future, at which point this app can be deactivated.
-{% endhint %}
+To do this, log into your Admin portal and create a custom app, and set the configuration as described in the table below.
+
+![](https://lh5.googleusercontent.com/kTKn5kcGMAuuuzPH-BL88jNpxRHgkEguTCbj7EgQByOgxtueu9E1dADF2zIB5zVd3BZpK5Q6ydvl2Eg3cZZjB6Rt2Pbbxsxa-90Dr9WkjVUxqxU\_XLKTqtOOAyavu6fkP0I8j9r7YgbCj82\_AA)
 
 |             | Finsemble                                                                                                                                                            | Glue42                                                                                                                                                         |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,14 +30,26 @@ This configuration step will be removed in the future, at which point this app c
 | Permissions | `Trust application`                                                                                                                                                  | `Trust application`                                                                                                                                            |
 
 {% hint style="info" %}
-Keep the Load URL and Domain as is, including the symphony\_pod\_loopback.
+Keep the Load URL and Domain as is, including the "symphony\_pod\_loopback".
 {% endhint %}
 
-Don't forget to install the app for the user, using the Admin Portal.
+#### Install the custom app for the users
+
+1. On the left hand navigation bar click ‘App Settings'.&#x20;
+2. Find the app in the applications list&#x20;
+3. To allow access to the custom app for anyone on Symphony:&#x20;
+   1. Set the app to be ‘Enabled’&#x20;
+   2. Set the app to be ‘Visible’&#x20;
+   3. Set the install to be ‘Manual’&#x20;
+4. To Restrict access to the app to a subset of users on your pod:&#x20;
+   1. Set the app to be ‘Enabled’&#x20;
+   2. Set the app to be ‘Hidden’&#x20;
+   3. Set the install to be ‘Manual’&#x20;
+   4. Edit each users apps so that they have the app installed
 
 ### Configuration of the Desktop Integration Platform
 
-The Symphony app needs to be registered in the DIP App directory so it will be able to connect to the platform. This configuration step is specific to each platform.
+Symphony needs to be registered in the DIP App directory so it will be able to connect to the platform. This configuration step is specific to each platform.
 
 #### Finsemble
 
@@ -106,7 +118,7 @@ Manually **add an app entry** into your finsemble app directory file (_/public/c
 
 #### Glue42
 
-Add a new symphony.json file into your app directory folder (Tick42\UserData\\{GLUE\_INSTANCE}\apps)
+Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{GLUE\_INSTANCE}\apps_)
 
 {% code title="symphony.json" %}
 ```json
@@ -141,7 +153,7 @@ Add a new symphony.json file into your app directory folder (Tick42\UserData\\{G
 ```
 {% endcode %}
 
-### Check it works - Troubleshoot guide
+### Check that it works - Troubleshoot guide
 
 **Verify that the connector extension app is loaded.**
 
@@ -149,13 +161,15 @@ Start the Desktop Integration Platform, then **only** start Symphony.
 
 Hover on a cashtag. The "View Instrument" link should appear. If it appears, the extension app that connects to the DIP has been successfully loaded.
 
+![When hovering on a cashtag, a View Instrument action should be available.](<../../.gitbook/assets/image (2).png>)
+
 **Verify that Symphony can send intents to desktop apps.**
 
-Be sure that you have an app that supports the ViewInstrument intent. If you don't have one, you can add the FDC3 Workbench app in your app directory, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/).. The FDC3 Workbench allows you to dynamically listen to intents and raise intents very easily.
+Be sure that you have a desktop app that supports the ViewInstrument intent first. If you don't have one, you can add the **FDC3 Workbench app** in your app directory, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/). The FDC3 Workbench allows you to dynamically listen to intents and raise intents very easily.
 
 Then, hover on a cashtag in a chat, and click "ViewInstrument". If an app is listening to ViewInstrument intents, it should receive the cashtag as a fdc3.instrument context.
 
-If this is not the case, please check that Symphony app directory entry is properly configured.
+If this is not the case, please check that the Symphony app directory entry is properly configured.
 
 **Verify that a desktop app can send intents to Symphony.**
 
