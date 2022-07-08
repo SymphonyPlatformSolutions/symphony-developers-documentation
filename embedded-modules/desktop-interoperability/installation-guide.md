@@ -13,6 +13,10 @@ A specific extension app has to be configured on your pod, that will automatical
 
 This extension app is specific to each desktop integration platform.&#x20;
 
+{% hint style="success" %}
+If you have access to the Symphony develop2 environment (either through a partnership or through the developer certification program), you can directly use the Glue42 and Finsemble apps that are installed there. Go to the App Marketplace and install the app you need.
+{% endhint %}
+
 #### Create the custom app
 
 To do this, log into your Admin portal and create a custom app, and set the configuration as described in the table below.
