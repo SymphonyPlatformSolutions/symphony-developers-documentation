@@ -18,15 +18,18 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 * [**Extension API Reference**](./#symphony-extension-api)
 * [**Embedded Modules**](./#embedded-modules)
 
-{% hint style="success" %}
-Checkout the latest release of the Bot Developer Kit, [BDK 2.0](developer-tools/developer-tools/bdk-2.0/). BDK 2.0 is a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Get started building with BDK 2.0 today!
+{% hint style="info" %}
+Looking to migrate your bot from a previous version of SDK 1.0 to BDK 2.0.  Please check out our migration guides to bring your bot up to date with our latest BDK 2.0
+
+* [Migration guide from SDK 1.0 to Symphony BDK 2.0 Java](https://symphony-bdk-java.finos.org/migration.html)
+* [Migration guide from SDK 1.0 to Symphony BDK 2.0 Python](https://symphony-bdk-python.finos.org/markdown/migration.html)
 {% endhint %}
 
 ## Building Bots on Symphony <img src=".gitbook/assets/bot-large.png" alt="" data-size="line">
 
 Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
-{% hint style="success" %}
+{% hint style="info" %}
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
 {% endhint %}
 
