@@ -33,6 +33,12 @@ Begin your development journey by taking an in depth look at Symphony Bots. Unde
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
 {% endhint %}
 
+Want to build your first bot together with the Developer Relations team? Head over to our developer training centre and register for our online courses to get started, and it's free.
+
+* Developing Bots using BDK for Java
+* Developing Bots using BDK for Python
+* Implementing Workflows with WDK
+
 {% content-ref url="building-bots-on-symphony/building-bots-on-symphony.md" %}
 [building-bots-on-symphony.md](building-bots-on-symphony/building-bots-on-symphony.md)
 {% endcontent-ref %}
