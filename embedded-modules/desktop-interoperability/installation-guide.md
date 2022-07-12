@@ -5,7 +5,7 @@
 1. A Desktop Integration Platform (DIP) is installed on your machine. The following platforms are supported:
    * Finsemble version 6.6.0+
    * Glue42 version 3.15+
-2. Minimal Symphony pod version is SBE 20.14+&#x20;
+2. Minimal Symphony pod version: SBE 20.14+&#x20;
 
 ### Configuration in the Admin Portal
 
@@ -19,19 +19,21 @@ If you have access to the Symphony develop2 environment (either through a partne
 
 #### Create the custom app
 
-To do this, log into your Admin portal and create a custom app, and set the configuration as described in the table below.
+Log in to your Admin Portal and create a custom app.
+
+Set the configuration as described in the table below:
 
 ![](https://lh5.googleusercontent.com/kTKn5kcGMAuuuzPH-BL88jNpxRHgkEguTCbj7EgQByOgxtueu9E1dADF2zIB5zVd3BZpK5Q6ydvl2Eg3cZZjB6Rt2Pbbxsxa-90Dr9WkjVUxqxU\_XLKTqtOOAyavu6fkP0I8j9r7YgbCj82\_AA)
 
-|             | Finsemble                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Glue42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name        | `Finsemble Plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `Glue42 Plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Publisher   | `Symphony`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | `Symphony`                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Description | <p><code>Extension app that connects Symphony with Finsemble desktop integration platform, using the FDC3 open standard (Financial Desktop Connectivity and Collaboration Consortium).</code></p><p><code></code></p><p><code>FDC3 aims to provide an open standard for interoperability between applications on the financial desktop. More info on https://fdc3.finos.org/</code></p><p><code></code></p><p><code>Please note that Finsemble needs to be running on your desktop.</code></p> | <p><code>Extension app that connects Symphony with Glue42 desktop integration platform, using the FDC3 open standard (Financial Desktop Connectivity and Collaboration Consortium).</code></p><p><code></code></p><p><code>FDC3 aims to provide an open standard for interoperability between applications on the financial desktop. More info on https://fdc3.finos.org/</code></p><p><code></code></p><p><code>Please note that Glue42 needs to be running on your desktop.</code></p> |
-| APP ID      | `finsemble-plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `glue42-plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Domain      | `symphony_pod_loopback.com`                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `symphony_pod_loopback.com`                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Load URL    | [`https://symphony_pod_loopback.com/client-bff/fdc3-finsemble-plugin/index.html`](https://symphony\_pod\_loopback.com/client-bff/fdc3-finsemble-plugin/index.html)``                                                                                                                                                                                                                                                                                                                           | [`https://symphony_pod_loopback.com/client-bff/fdc3-glue42-plugin/index.html`](https://symphony\_pod\_loopback.com/client-bff/fdc3-glue42-plugin/index.html)``                                                                                                                                                                                                                                                                                                                           |
-| Permissions | `Trust application`                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `Trust application`                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|             | Finsemble                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Glue42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name        | `Finsemble Plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `Glue42 Plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Publisher   | `Symphony`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `Symphony`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Description | <p><code>Extension app that connects Symphony with the Finsemble desktop integration platform, using the FDC3 open standard (Financial Desktop Connectivity and Collaboration Consortium).</code></p><p><code></code></p><p><code>FDC3 aims to provide an open standard for interoperability between applications on the financial desktop. See https://fdc3.finos.org/ for more info.</code></p><p><code></code></p><p><code>Note: Finsemble needs to be running on your desktop.</code></p> | <p><code>Extension app that connects Symphony with the Glue42 desktop integration platform, using the FDC3 open standard (Financial Desktop Connectivity and Collaboration Consortium).</code></p><p><code></code></p><p><code>FDC3 aims to provide an open standard for interoperability between applications on the financial desktop. See https://fdc3.finos.org/ for more info.</code></p><p><code></code></p><p><code>Note: Glue42 needs to be running on your desktop.</code></p> |
+| APP ID      | `finsemble-plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `glue42-plugin`                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Domain      | `symphony_pod_loopback.com`                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `symphony_pod_loopback.com`                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Load URL    | [`https://symphony_pod_loopback.com/client-bff/fdc3-finsemble-plugin/index.html`](https://symphony\_pod\_loopback.com/client-bff/fdc3-finsemble-plugin/index.html)``                                                                                                                                                                                                                                                                                                                          | [`https://symphony_pod_loopback.com/client-bff/fdc3-glue42-plugin/index.html`](https://symphony\_pod\_loopback.com/client-bff/fdc3-glue42-plugin/index.html)``                                                                                                                                                                                                                                                                                                                          |
+| Permissions | `Trust application`                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | `Trust application`                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 {% hint style="info" %}
 Keep the Load URL and Domain as is, including the "symphony\_pod\_loopback".
@@ -51,21 +53,21 @@ Glue42 Plugin Extension App bundle file
 
 #### Install the custom app for the users
 
-1. On the left hand navigation bar click ‘App Settings'.&#x20;
-2. Find the app in the applications list&#x20;
+1. Click **App Settings** on the left hand navigation bar.
+2. Find the app in the application list.
 3. To allow access to the custom app for anyone on Symphony:&#x20;
-   1. Set the app to be ‘Enabled’&#x20;
-   2. Set the app to be ‘Visible’&#x20;
-   3. Set the install to be ‘Manual’&#x20;
-4. To Restrict access to the app to a subset of users on your pod:&#x20;
-   1. Set the app to be ‘Enabled’&#x20;
-   2. Set the app to be ‘Hidden’&#x20;
-   3. Set the install to be ‘Manual’&#x20;
-   4. Edit each users apps so that they have the app installed
+   1. Set the app to be _Enabled_.&#x20;
+   2. Set the app to be _Visible_.
+   3. Set the installation to be _Manual_.
+4. To restrict access to the app to a subset of users on your pod:
+   1. Set the app to be _Enabled_.
+   2. Set the app to be _Hidden_.&#x20;
+   3. Set the installation to be _Manual_.&#x20;
+   4. Edit each user's apps, so that they have the app installed.
 
-### Configuration of the Desktop Integration Platform
+### Desktop Integration Platform configuration
 
-Symphony needs to be registered in the DIP App directory so it will be able to connect to the platform. This configuration step is specific to each platform.
+Symphony needs to be registered in the DIP App directory, so that it will be able to connect to the platform. This configuration step is specific to each platform.
 
 #### Finsemble
 
@@ -134,7 +136,7 @@ Manually **add an app entry** into your finsemble app directory file (_/public/c
 
 #### Glue42
 
-Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{GLUE\_INSTANCE}\apps_)
+Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{GLUE\_INSTANCE}\apps_):
 
 {% code title="symphony.json" %}
 ```json
@@ -169,21 +171,25 @@ Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{
 ```
 {% endcode %}
 
-### Check that it works - Troubleshoot guide
+### Troubleshooting guide
+
+To check that it works:
 
 **Verify that the connector extension app is loaded.**
 
 Start the Desktop Integration Platform, then **only** start Symphony.
 
-Hover on a cashtag. The "View Instrument" link should appear. If it appears, the extension app that connects to the DIP has been successfully loaded.
+Hover over a cashtag. The **View Instrument** link should appear. If it appears, the extension app that connects to the DIP has been successfully loaded.
 
-![When hovering on a cashtag, a View Instrument action should be available.](<../../.gitbook/assets/image (2).png>)
+![When hovering over a cashtag, a View Instrument link should be available.](<../../.gitbook/assets/image (2).png>)
 
 **Verify that Symphony can send intents to desktop apps.**
 
-Be sure that you have a desktop app that supports the ViewInstrument intent first. If you don't have one, you can add the **FDC3 Workbench app** in your app directory, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/). The FDC3 Workbench allows you to dynamically listen to intents and raise intents very easily.
+Make sure you have a desktop app that supports the _ViewInstrument_ intent first.
 
-Then, hover on a cashtag in a chat, and click "ViewInstrument". If an app is listening to ViewInstrument intents, it should receive the cashtag as a fdc3.instrument context.
+**Note:** If you don't have one, you can add the **FDC3 Workbench app**, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/), to your app directory. The FDC3 Workbench allows you to dynamically listen to intents and raise intents very easily.
+
+Then, hover over a cashtag in a chat, and click "ViewInstrument". If an app is listening to ViewInstrument intents, it should receive the cashtag as a fdc3.instrument context.
 
 If this is not the case, please check that the Symphony app directory entry is properly configured.
 
@@ -191,7 +197,7 @@ If this is not the case, please check that the Symphony app directory entry is p
 
 To verify that Symphony can receive intents, we will attempt to raise a StartChat intent.
 
-If you don't have an app that sends a StartChat intent, you can add the FDC3 Workbench app in your app directory, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/).
+**Note:** If you don't have an app that sends a StartChat intent, you can add the FDC3 Workbench app, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/), to your app directory.
 
 Send the StartChat intent using a sample context data (fdc3.chat.initSettings), such as the example provided [here](https://app.gitbook.com/o/-MB5vuhMZDPnMHgoaIX-/s/-MB51RkjSmfA\_ejydg4M-3415978100/\~/changes/BeNT7JQ1eO6nLDxYh3su/embedded-modules/desktop-interoperability/fdc3-intents#examples).
 
@@ -201,11 +207,14 @@ If Symphony displays a popup, Symphony correctly receives intents coming from de
 
 New features are shipped with each Client 2.0 releases.
 
-However, you can **experiment with new features** before they are available in the stable release by using the following fdc3 URL path:\
-&#x20;`https://{pod_url}/client-bff/fdc3/index.html`, where `pod_url` is replaced by your own pod URL.
+However, you can **experiment with new features** before they are available in the stable release, by using the following fdc3 URL path:
 
-You can either access Symphony using this URL directly in your browser, or if you prefer to use our Symphony Desktop Application (SDA), it is also possible by redirecting it to the /fdc3 URL this way:
+`https://{pod_url}/client-bff/fdc3/index.html`, where `pod_url` is replaced by your own pod's URL.
 
-1. Open the development tools (Shift + CTRL + J on Chrome with Windows/Linux)
-2. Open the Console
-3. Type `window.location.href='https://{pod_url}/client-bff/fdc3/index.html'`_,_ where `pod_url` is replaced by your own pod URL.
+You can access Symphony using this URL directly in your browser.&#x20;
+
+You can also use our Symphony Desktop Application (SDA) by redirecting it to the FDC3 URL as described below:
+
+1. Open the development tools (Shift + CTRL + J on Chrome with Windows/Linux).
+2. Open the Console.
+3. Type `window.location.href='https://{pod_url}/client-bff/fdc3/index.html'`_,_ where `pod_url` is replaced by your own pod's URL.
