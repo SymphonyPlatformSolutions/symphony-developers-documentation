@@ -29,9 +29,9 @@ Looking to migrate your bot from a previous version of SDK 1.0 to BDK 2.0.  Plea
 
 Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
-{% hint style="info" %}
-For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
-{% endhint %}
+{% content-ref url="building-bots-on-symphony/building-bots-on-symphony.md" %}
+[building-bots-on-symphony.md](building-bots-on-symphony/building-bots-on-symphony.md)
+{% endcontent-ref %}
 
 Want to build your first bot together with the Developer Relations team? Head over to our developer training centre and register for our online courses to get started, and it's free.
 
@@ -39,9 +39,9 @@ Want to build your first bot together with the Developer Relations team? Head ov
 * [Developing Bots using BDK for Python](https://learn.symphony.com/bundles/python-bot-developer)
 * [Implementing Workflows with WDK](https://learn.symphony.com/bundles/workflow-developer-certification)
 
-{% content-ref url="building-bots-on-symphony/building-bots-on-symphony.md" %}
-[building-bots-on-symphony.md](building-bots-on-symphony/building-bots-on-symphony.md)
-{% endcontent-ref %}
+{% hint style="info" %}
+For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
+{% endhint %}
 
 ## Building Extension Applications on Symphony <img src=".gitbook/assets/extension-app-large.png" alt="" data-size="line">
 
