@@ -35,9 +35,9 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 
 Want to build your first bot together with the Developer Relations team? Head over to our developer training centre and register for our online courses to get started, and it's free.
 
-* Developing Bots using BDK for Java
-* Developing Bots using BDK for Python
-* Implementing Workflows with WDK
+* [Developing Bots using BDK for Java](https://learn.symphony.com/bundles/java-bot-developer)
+* [Developing Bots using BDK for Python](https://learn.symphony.com/bundles/python-bot-developer)
+* [Implementing Workflows with WDK](https://learn.symphony.com/bundles/workflow-developer-certification)
 
 {% content-ref url="building-bots-on-symphony/building-bots-on-symphony.md" %}
 [building-bots-on-symphony.md](building-bots-on-symphony/building-bots-on-symphony.md)
