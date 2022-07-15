@@ -111,7 +111,7 @@ $ symphony-bdk-cli --toolkit
 ```
 
 {% hint style="info" %}
-Note: If you don't have the `symphony-bdk-cli` installed, continue to the [cli-tool](../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/cli-tool.md) guide.
+Note: If you don't have the `symphony-bdk-cli` installed, continue to the [cli-tool](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/cli-tool.md) guide.
 {% endhint %}
 
 This will launch a live version of the UI Toolkit library reference in your default browser. In the left hand side of the storybook view, navigate to the 'Components' section for a detailed reference of the components themselves.

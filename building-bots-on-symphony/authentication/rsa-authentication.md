@@ -2,13 +2,13 @@
 
 This pages describes the implementation of RSA Authentication. For the API reference of RSA Session Authenticate and Key Manager Authenticate, see the following API endpoints:
 
-* Session Auth: [https://developers.symphony.com/restapi/reference\#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
-* Key Manager Auth: [https://developers.symphony.com/restapi/reference\#rsa-key-manager-authenticate](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate)
+* Session Auth: [https://developers.symphony.com/restapi/reference#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
+* Key Manager Auth: [https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate)
 
 {% hint style="info" %}
 #### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
-* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)
+* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0-java.md)
 * [Configure your Bot for SDKs](../configuration/configure-your-bot-for-sdks.md)
 * [Configure your Bot for BDK](../configuration/configure-your-bot-for-bdk.md)
 {% endhint %}
@@ -19,7 +19,7 @@ The Authentication process requires the following steps:
 
 1. The user creates a public/private RSA key pair.
 2. The admin imports the public key into the pod using the **Admin Console** or public APIs.
-3. The user creates a short-lived JWT \(JSON Web Token\) and signs it with their private key.
+3. The user creates a short-lived JWT (JSON Web Token) and signs it with their private key.
 4. The bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
 
 {% hint style="warning" %}
@@ -37,7 +37,7 @@ You should keep using the same token until you receive a HTTP 401, at which you 
 
 Symphony only supports the following cipher suites:
 
-ECDHE-RSA-AES256-GCM-SHA384 \(Preferred\)
+ECDHE-RSA-AES256-GCM-SHA384 (Preferred)
 
 ECDHE-RSA-AES128-GCM-SHA256
 
@@ -52,22 +52,22 @@ DHE-RSA-AES128-GCM-SHA256
 
 The public/private key pair for signing authentication requests requires the following:
 
-* A JWT payload has to be signed with RS512 \([https://tools.ietf.org/html/rfc7518\#section-3.1](https://tools.ietf.org/html/rfc7518#section-3.1)\)"
-* A X.509 format for public keys and PKCS\#1 or PKCS\#8 for private keys
+* A JWT payload has to be signed with RS512 ([https://tools.ietf.org/html/rfc7518#section-3.1](https://tools.ietf.org/html/rfc7518#section-3.1))"
+* A X.509 format for public keys and PKCS#1 or PKCS#8 for private keys
 * PEM-encoded keys
 
 {% hint style="info" %}
 Note: This script requires the openssl package.
 {% endhint %}
 
-Generate the PKCS\#1 keys manually using the following commands:
+Generate the PKCS#1 keys manually using the following commands:
 
 ```bash
 $ openssl genrsa -out mykey.pem 4096
 $ openssl rsa -in mykey.pem -pubout -out pubkey.pem
 ```
 
-Generate the PKCS\#8 keys manually using the following commands. You can provide the Service Account's username as the Common Name \(CN\) but it is not a mandatory requirement.
+Generate the PKCS#8 keys manually using the following commands. You can provide the Service Account's username as the Common Name (CN) but it is not a mandatory requirement.
 
 ```bash
 $ openssl genrsa -out privatekey.pem 4096
@@ -99,7 +99,7 @@ If successful, you should see the following:
 To authenticate on the Pod and the Key Manager, the bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request. The JWT token must contain the following:
 
 * a _subject_ matching the username of the user to authenticate
-* an _expiration time_ of no more than 5 minutes from the current timestamp \(needed to prevent replay attacks\)
+* an _expiration time_ of no more than 5 minutes from the current timestamp (needed to prevent replay attacks)
 * a signature by a private RSA key matching a public key stored for the user in the Pod
 
 The following script generates the authentication request:
@@ -376,7 +376,7 @@ console.log(jws);
 ```
 {% endtab %}
 
-{% tab title="C\#" %}
+{% tab title="C#" %}
 ```csharp
 using Microsoft.IdentityModel.Tokens;
 using Org.BouncyCastle.Crypto;
@@ -560,20 +560,20 @@ A successful response:
 
 ## Replace/Revoke Key
 
-You can **replace** the public key _pubkeyA_ for a user with a new key, _pubkeyB_ \(for example, as part of an organization's key rotation schedule\). Note the following outcomes:
+You can **replace** the public key _pubkeyA_ for a user with a new key, _pubkeyB_ (for example, as part of an organization's key rotation schedule). Note the following outcomes:
 
 * When a key is replaced, the key _pubkeyA_ becomes the user's previous key, and the newly uploaded _pubkeyB_ becomes the current key.
 * The previous key is valid for 72 hours, but you can extend that period indefinitely in intervals of 72 hours.
 * While the previous key is valid, both keys can be used for authentication. When it expires, it can no longer be used to authenticate the user.
 * A user can have at most one previous key.
 
-Alternatively, you can **revoke** a user key \(current or previous\), for example, if the key is compromised. Note the following outcomes:
+Alternatively, you can **revoke** a user key (current or previous), for example, if the key is compromised. Note the following outcomes:
 
 * When a key is revoked, it can no longer be used for authentication.
 * If a user has a non-expired previous key and their current key is revoked, the previous key becomes the new current key.
 * When a key is revoked, the user's sessions initiated with RSA authentication are invalidated.
 
-To replace/revoke a key, navigate to the Bot's account in the admin portal &gt; RSA &gt; Replace or Revoke:
+To replace/revoke a key, navigate to the Bot's account in the admin portal > RSA > Replace or Revoke:
 
 ![](../../.gitbook/assets/screen-shot-2020-07-07-at-1.53.41-pm.png)
 
@@ -764,4 +764,3 @@ You CANNOT perform the following actions:
 
 **Note:** When performing a SAVE, the key must be different from your current key.
 {% endhint %}
-

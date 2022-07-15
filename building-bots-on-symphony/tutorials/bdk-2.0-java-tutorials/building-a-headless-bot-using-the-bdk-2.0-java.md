@@ -1,4 +1,4 @@
-# Building a Headless Bot using the BDK 2.0
+# Building a Headless Bot using the BDK 2.0 for Java
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@
 Note that for this tutorial, we've configured our bot project using the Spring Boot integration provided out of the box by the BDK 2.0.  When generating your bot using the Symphony Bot Generator, simply select 'Spring Boot' when prompted to 'Select Your Framework'.
 {% endhint %}
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
-[configure-your-bot-for-bdk-2.0.md](../../configuration/configure-your-bot-for-bdk-2.0.md)
+{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0-java.md" %}
+[configure-your-bot-for-bdk-2.0-java.md](../../configuration/configure-your-bot-for-bdk-2.0-java.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code
@@ -72,7 +72,7 @@ public class GifSlashHandler {
 }
 ```
 
-To learn more about the BDK 2.0's Spring Boot Integration continue [here](../../../developer-tools/developer-tools/bdk-2.0/#springboot-integration) or to our dedicated BDK 2.0 Developer Certification course where you will learn in depth about how to build bots using the BDK 2.0 and Spring Boot:
+To learn more about the BDK 2.0's Spring Boot Integration continue [here](../../../developer-tools/developer-tools/bdk-2.0-java/#springboot-integration) or to our dedicated BDK 2.0 Developer Certification course where you will learn in depth about how to build bots using the BDK 2.0 and Spring Boot:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

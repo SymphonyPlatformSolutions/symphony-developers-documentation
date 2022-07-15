@@ -8,8 +8,8 @@ The Symphony REST API is spread out across these components according to the typ
 ### While Bots can call the Symphony API directly, Symphony's dedicated SDKs and BDK provide language-specific API bindings that enable bot developers to easily call the API directly from code:
 
 * [SDKs](../../developer-tools/developer-tools/sdks.md)
-* [BDK](../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/)
-* [BDK 2.0](../../developer-tools/developer-tools/bdk-2.0/)
+* [BDK](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/)
+* [BDK 2.0](../../developer-tools/developer-tools/bdk-2.0-java/)
 {% endhint %}
 
 ## REST API Architecture

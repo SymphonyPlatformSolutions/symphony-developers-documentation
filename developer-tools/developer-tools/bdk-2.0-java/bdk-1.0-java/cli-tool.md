@@ -1,5 +1,14 @@
 # CLI Tool
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../)
+{% endhint %}
+
 The CLI tool allows you to generate code scaffolds for building Symphony bots and extension applications. The generated code scaffolds provide sample implementations of best practices making it easy and fast to start building bots and applications. In addition, the CLI tool allows developers to add custom command handlers and message templates, and manage project dependencies, allowing developers to bootstrap bots and applications quickly.
 
 ## Prerequisites

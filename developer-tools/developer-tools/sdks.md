@@ -4,6 +4,15 @@ description: Software Development Kits to bootstrap your Bot
 
 # SDKs
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](bdk-2.0-java/)
+{% endhint %}
+
 ## Overview
 
 Symphony SDKs help bootstrap your Bot, providing easy to use authentication handlers, centralized configuration, and convenient error handling. Additionally, our SDKs provide out of the box Datafeed and event handling architecture that make it simple for your Bot to handle different events. Lastly, our SDKs provide language-specific API bindings. Instead of calling the REST endpoint directly, simply call the corresponding SDK functions within your Bot's code.
@@ -14,12 +23,6 @@ Symphony provides SDKs in the following languages:
 * Python
 * Node.js
 * .NET
-
-{% hint style="info" %}
-Note: Symphony provides a dedicated Bot SDK for Java developers. While Java developers can choose to use the Java SDK, we recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
-
-### [BDK 2.0](bdk-2.0/)
-{% endhint %}
 
 ## Configuration
 

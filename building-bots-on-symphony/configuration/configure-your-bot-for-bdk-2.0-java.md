@@ -1,4 +1,4 @@
-# Configure your Bot for BDK 2.0
+# Configure your Bot for BDK 2.0 for Java
 
 ## 1. Generate your Bot&#x20;
 
@@ -195,6 +195,6 @@ bot:
 
 Now that you have configured your Bot project using the BDK 2.0 and Symphony Bot Generator, checkout one of our dedicated BDK 2.0 tutorials:
 
-{% content-ref url="../tutorials/bdk-2.0-tutorials/" %}
-[bdk-2.0-tutorials](../tutorials/bdk-2.0-tutorials/)
+{% content-ref url="../tutorials/bdk-2.0-java-tutorials/" %}
+[bdk-2.0-java-tutorials](../tutorials/bdk-2.0-java-tutorials/)
 {% endcontent-ref %}

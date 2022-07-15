@@ -1,11 +1,11 @@
-# Building an Interactive Bot using the BDK 2.0
+# Building an Interactive Bot using the BDK 2.0 for Java
 
 ## Prerequisites
 
 ### Complete the BDK 2.0 Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
-[configure-your-bot-for-bdk-2.0.md](../../configuration/configure-your-bot-for-bdk-2.0.md)
+{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0-java.md" %}
+[configure-your-bot-for-bdk-2.0-java.md](../../configuration/configure-your-bot-for-bdk-2.0-java.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code
@@ -89,7 +89,7 @@ bdk.activities().register(slash("/gif", false, context -> {
 bdk.activities().register(new GifFormActivity(bdk.messages()));
 ```
 
-Here we are using the Activities API to register a new slash command that listens to "/gif".  To learn more about creating your own slash commands or how to leverage the Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api). If an incoming message contains ("/gif), the bot builds a new message template which is provided out of the box for you:
+Here we are using the Activities API to register a new slash command that listens to "/gif".  To learn more about creating your own slash commands or how to leverage the Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0-java/#activities-api). If an incoming message contains ("/gif), the bot builds a new message template which is provided out of the box for you:
 
 {% tabs %}
 {% tab title="resources/templates/gif.ftl" %}
@@ -122,7 +122,7 @@ Bots need someway to capture the data submitted within this form.  Bots can easi
 bdk.activities().register(new GifFormActivity(bdk.messages()));
 ```
 
-Open up your `GifFormActivity` class.  Here you will see that `GifFormActivity` extends the `FormReplyActivity` class.  A form activity is only triggered when an end-user replies or submits an _Elements_ form.  To learn more about creating your own `FormReplyActivity` classes, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#form-activities).
+Open up your `GifFormActivity` class.  Here you will see that `GifFormActivity` extends the `FormReplyActivity` class.  A form activity is only triggered when an end-user replies or submits an _Elements_ form.  To learn more about creating your own `FormReplyActivity` classes, continue [here](../../../developer-tools/developer-tools/bdk-2.0-java/#form-activities).
 
 ```java
 public class GifFormActivity extends FormReplyActivity<FormReplyContext> {
@@ -165,7 +165,7 @@ Inside of the `GifFormActivity` class you will see an `ActivityMatcher matcher()
   }
 ```
 
-Using the `context` variable, your bot can access information about the context of the form submission including the form values and the form Id.  To learn more about using `FormReplyActivities`, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#form-activities).
+Using the `context` variable, your bot can access information about the context of the form submission including the form values and the form Id.  To learn more about using `FormReplyActivities`, continue [here](../../../developer-tools/developer-tools/bdk-2.0-java/#form-activities).
 
 Inside of the `matcher()` function, the bot is performing a validation check.  If the `formId` of the submitted form is equal to `"gif-category-form"`, then the bot calls the `onActivity()` trigger function and executes its business logic.  If there is not a match, the bot does nothing and continues to listen for incoming events.  As we see in our `gif.ftl` template above, the `formId` matches, so the following `onActivity()` trigger function executed:
 

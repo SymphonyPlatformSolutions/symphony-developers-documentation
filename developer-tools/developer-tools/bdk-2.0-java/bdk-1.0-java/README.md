@@ -2,11 +2,20 @@
 description: Bot Developer Kit
 ---
 
-# BDK 1.0
+# BDK 1.0 for Java
 
-## Bot Developer Kit \(BDK\)
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
 
-The Bot Developer Kit \(BDK\) is comprised of three development tools for advanced Symphony Bot and Extension App development
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../)
+{% endhint %}
+
+## Bot Developer Kit (BDK)
+
+The Bot Developer Kit (BDK) is comprised of three development tools for advanced Symphony Bot and Extension App development
 
 ## Bot SDK
 
@@ -14,7 +23,9 @@ The Bot SDK is a Java specific SDK that provides all of the basic support as our
 
 Continue here for an installation/usage guide:
 
-{% page-ref page="bot-sdk.md" %}
+{% content-ref url="bot-sdk.md" %}
+[bot-sdk.md](bot-sdk.md)
+{% endcontent-ref %}
 
 ## CLI Tool
 
@@ -22,7 +33,9 @@ The CLI tool allows you to generate code scaffolds for building Symphony bots an
 
 Continue here for an installation/usage guide:
 
-{% page-ref page="cli-tool.md" %}
+{% content-ref url="cli-tool.md" %}
+[cli-tool.md](cli-tool.md)
+{% endcontent-ref %}
 
 ## UI Toolkit
 
@@ -30,5 +43,6 @@ The UI Toolkit is a library of react components that helps developers build comp
 
 Continue here for an installation/usage guide:
 
-{% page-ref page="ui-toolkit.md" %}
-
+{% content-ref url="ui-toolkit.md" %}
+[ui-toolkit.md](ui-toolkit.md)
+{% endcontent-ref %}

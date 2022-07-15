@@ -1,11 +1,11 @@
-# Building a Chatbot using the BDK 2.0
+# Building a Chatbot using the BDK 2.0 for Java
 
 ## Prerequisites
 
 ### Complete the BDK 2.0 Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
-[configure-your-bot-for-bdk-2.0.md](../../configuration/configure-your-bot-for-bdk-2.0.md)
+{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0-java.md" %}
+[configure-your-bot-for-bdk-2.0-java.md](../../configuration/configure-your-bot-for-bdk-2.0-java.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code
@@ -17,7 +17,7 @@ To begin let's open up the code generated for you by the Symphony Bot Generator 
 {% hint style="info" %}
 Note:
 
-As you can see below on line 32, we are leveraging the Activities API to register a slash command ("/gif").  While this functionality is provided out of the box, we will be building a new datafeed listener to keep it simple at first.  For a more in depth look at the provided activity and Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api).  &#x20;
+As you can see below on line 32, we are leveraging the Activities API to register a slash command ("/gif").  While this functionality is provided out of the box, we will be building a new datafeed listener to keep it simple at first.  For a more in depth look at the provided activity and Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0-java/#activities-api).  &#x20;
 {% endhint %}
 
 {% tabs %}
@@ -101,7 +101,7 @@ The above snippet is listening for all incoming messages that contain "/hello". 
 
 As you can see, it's super easy to access the message, room, and user context from an incoming event. The `V4Initiator` and `V4MessageSent` classes provide convenience methods that make it easy to orchestrate workflows. For a more detailed overview of how to leverage the BDK 2.0's message, room, and user management classes, continue [here](https://docs.developers.symphony.com/developer-tools/developer-tools/bdk-2.0#user-message-and-room-management).
 
-## 2. Next Steps <a href="2-next-steps" id="2-next-steps"></a>
+## 2. Next Steps <a href="#2-next-steps" id="2-next-steps"></a>
 
 Above, we showed you a simple example of how to leverage the BDK 2.0 to build a conversational bot. To see more advanced usage of the BDK 2.0 in order to build complex financial workflows, continue on to our dedicated BDK 2.0 Certification course:
 
