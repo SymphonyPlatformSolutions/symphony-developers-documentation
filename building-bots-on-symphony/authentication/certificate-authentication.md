@@ -8,7 +8,7 @@ This pages describes the implementation of certificate-based Authentication. For
 {% hint style="info" %}
 #### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
-* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0-java.md)
+* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)
 * [Configure your Bot for SDKs](../configuration/configure-your-bot-for-sdks.md)
 * [Configure your Bot for BDK](../configuration/configure-your-bot-for-bdk.md)
 {% endhint %}

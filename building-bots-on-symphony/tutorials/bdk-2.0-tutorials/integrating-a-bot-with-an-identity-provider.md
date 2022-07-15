@@ -18,8 +18,8 @@ This sequence diagram describes the flow of requests between the various compone
 
 We will be using the BDK 2.0 for this example, so generate a scaffold project using the Bot Generator by following these instructions. We will also be using the Spring Boot integration so ensure that is selected at the framework question in the generator.
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0-java.md" %}
-[configure-your-bot-for-bdk-2.0-java.md](../../configuration/configure-your-bot-for-bdk-2.0-java.md)
+{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
+[configure-your-bot-for-bdk-2.0.md](../../configuration/configure-your-bot-for-bdk-2.0.md)
 {% endcontent-ref %}
 
 Once you have your project, we will first add web capability by changing `spring-boot-starter` to `spring-boot-starter-web`, then adding `com.auth0:java-jwt` for minting tokens.

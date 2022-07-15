@@ -8,8 +8,8 @@ BDK 2.0, the latest version of Symphony Bot Developer Kit is now available. With
 
 To learn more about the BDK 2.0, continue here:
 
-{% content-ref url="bdk-2.0-java/" %}
-[bdk-2.0-java](bdk-2.0-java/)
+{% content-ref url="bdk-2.0/" %}
+[bdk-2.0](bdk-2.0/)
 {% endcontent-ref %}
 
 ## Symphony Bot Generator
@@ -42,8 +42,8 @@ The first tool under the umbrella of the Bot Developer Kit is the Bot SDK. The B
 
 To learn more about the Bot SDK, continue here:
 
-{% content-ref url="bdk-2.0-java/bdk-1.0-java/bot-sdk.md" %}
-[bot-sdk.md](bdk-2.0-java/bdk-1.0-java/bot-sdk.md)
+{% content-ref url="bdk-2.0/bdk-1.0/bot-sdk.md" %}
+[bot-sdk.md](bdk-2.0/bdk-1.0/bot-sdk.md)
 {% endcontent-ref %}
 
 ### CLI Tool
@@ -52,8 +52,8 @@ The CLI Tool allows you to generate code scaffolds for Symphony Bots and Extensi
 
 To learn more about the CLI Tool, continue here:
 
-{% content-ref url="bdk-2.0-java/bdk-1.0-java/cli-tool.md" %}
-[cli-tool.md](bdk-2.0-java/bdk-1.0-java/cli-tool.md)
+{% content-ref url="bdk-2.0/bdk-1.0/cli-tool.md" %}
+[cli-tool.md](bdk-2.0/bdk-1.0/cli-tool.md)
 {% endcontent-ref %}
 
 ### UI Toolkit
@@ -62,8 +62,8 @@ The UI Toolkit is a library of react components that enables developers to build
 
 To learn more about the UI Toolkit, continue here:
 
-{% content-ref url="bdk-2.0-java/bdk-1.0-java/ui-toolkit.md" %}
-[ui-toolkit.md](bdk-2.0-java/bdk-1.0-java/ui-toolkit.md)
+{% content-ref url="bdk-2.0/bdk-1.0/ui-toolkit.md" %}
+[ui-toolkit.md](bdk-2.0/bdk-1.0/ui-toolkit.md)
 {% endcontent-ref %}
 
 ## Postman

@@ -239,7 +239,7 @@ Run your Bot + Extension Application and click on your custom button added to th
 ### Rendering Financial Charts using the UI Toolkit
 
 {% hint style="info" %}
-To learn more about the UI Toolkit and how to access it, continue [here](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/ui-toolkit.md).
+To learn more about the UI Toolkit and how to access it, continue [here](../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md).
 {% endhint %}
 
 The Symphony BDK 1.0 (Bot Developer Kit) provides a library of UI components, that helps you to build complex frontend applications rapidly. Specifically, the UI Toolkit provides a series of financial components and charts that make is easy to build frontend financial applications. In this tutorial, we will be using the `CandleStickChart` component provided by the UI Toolkit. The `CandleStickChart` component takes in the following data format in order to render the data:
@@ -494,6 +494,6 @@ Rerun your app backend (bot) and frontend applications. Submit another message c
 
 If you see this view, then you have successfully completed the tutorial! For a more detailed explanation of how to leverage the UI Toolkit, navigate here:
 
-{% content-ref url="../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/ui-toolkit.md" %}
-[ui-toolkit.md](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/ui-toolkit.md)
+{% content-ref url="../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md" %}
+[ui-toolkit.md](../../developer-tools/developer-tools/bdk-2.0/bdk-1.0/ui-toolkit.md)
 {% endcontent-ref %}

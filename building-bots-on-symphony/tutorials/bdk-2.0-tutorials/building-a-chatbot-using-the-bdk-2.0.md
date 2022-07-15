@@ -4,8 +4,8 @@
 
 ### Complete the BDK 2.0 Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0-java.md" %}
-[configure-your-bot-for-bdk-2.0-java.md](../../configuration/configure-your-bot-for-bdk-2.0-java.md)
+{% content-ref url="../../configuration/configure-your-bot-for-bdk-2.0.md" %}
+[configure-your-bot-for-bdk-2.0.md](../../configuration/configure-your-bot-for-bdk-2.0.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code
@@ -17,7 +17,7 @@ To begin let's open up the code generated for you by the Symphony Bot Generator 
 {% hint style="info" %}
 Note:
 
-As you can see below on line 32, we are leveraging the Activities API to register a slash command ("/gif").  While this functionality is provided out of the box, we will be building a new datafeed listener to keep it simple at first.  For a more in depth look at the provided activity and Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0-java/#activities-api).  &#x20;
+As you can see below on line 32, we are leveraging the Activities API to register a slash command ("/gif").  While this functionality is provided out of the box, we will be building a new datafeed listener to keep it simple at first.  For a more in depth look at the provided activity and Activities API, continue [here](../../../developer-tools/developer-tools/bdk-2.0/#activities-api).  &#x20;
 {% endhint %}
 
 {% tabs %}

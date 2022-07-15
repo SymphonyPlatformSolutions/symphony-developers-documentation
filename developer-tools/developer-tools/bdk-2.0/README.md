@@ -1,4 +1,4 @@
-# BDK 2.0
+# BDK 2.0 for Java
 
 ### Summary
 
