@@ -97,7 +97,7 @@ HTTP 400
 HTTP 400
 {
   "code" : "EMAIL_DOMAIN_NOT_ALLOWED"
-  "message": "Only corporate email domains are allowed."
+  "message": "Public email domains are not allowed. Only business email domains will be accepted."
 }
 ```
 
@@ -337,11 +337,8 @@ HTTP 400
 ```json
 HTTP 400
 {
-    "code": "PUBLIC_EMAIL_DOMAIN_NOT_ALLOWED",
-    "message": "Public email domains are not allowed. Only business email domains will be accepted",
-    "context": {
-        "unallowedEmailDomains": "[gmail.com]"
-    }
+  "code" : "EMAIL_DOMAIN_NOT_ALLOWED"
+  "message": "Public email domains are not allowed. Only business email domains will be accepted."
 }
 ```
 
@@ -490,8 +487,8 @@ HTTP 400
 ```json
 HTTP 400
 {
-  "code" : "PARTNER_NOT_ALLOWED_TO_ACCESS_USER"
-  "message" : "Profile not updated. Changes can only be made by the administrator that created this user profile."
+  "code" : "PROFILE_ACCESS_OR_UPDATES_NOT_AUTHORIZED"
+  "message" : "User profile can only be accessed or updated by the administrator that created it."
 }
 ```
 
@@ -663,7 +660,7 @@ HTTP 400
 HTTP 400
 {
   "code" : "EMAIL_DOMAIN_NOT_ALLOWED"
-  "message": "Only corporate email domains are allowed."
+  "message": "Public email domains are not allowed. Only business email domains will be accepted."
 ```
 
 #### If the user doesn't exist or if disabled:
