@@ -262,7 +262,7 @@ HTTP 200
             "userId": 15049565405646,
             "username": "james.smith@acme-company.com",
             "code": "USER_ADDED_TO_DIFFERENT_COMPANY_NAME",
-            "message": "The user was added to a company named :<existing company name> because they share the same email domain"
+            "message": "The user was added to a company named :<existing company name> because it shares the same email domain"
         }
     ],
     "errors": []
