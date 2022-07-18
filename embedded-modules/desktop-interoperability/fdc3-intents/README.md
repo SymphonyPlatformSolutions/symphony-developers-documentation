@@ -15,7 +15,7 @@ Symphony will listen to StartChat intents, that allow an app to initiate a chat 
 
 When a StartChat intent is received by Symphony, a modal opens where the user can review the list of recipients, as well as the content of the message, and then send the message.
 
-It is possible to attach a message context to the intent. The message may contain images, cashtags, mentions, as well as action buttons (more info [below](./#fdc3-action-buttons)), which on click will trigger a local intent with context data. The **format of the message** is presented [here](https://app.gitbook.com/o/-MB5vuhMZDPnMHgoaIX-/s/-MB51RkjSmfA\_ejydg4M-3415978100/\~/changes/BeNT7JQ1eO6nLDxYh3su/embedded-modules/desktop-interoperability/fdc3-intents/message-format).
+It is possible to attach a message context to the intent. The message may contain images, cashtags, mentions, as well as action buttons (more info [below](./#fdc3-action-buttons)), which on click will trigger a local intent with context data. The **format of the message** is presented [here](message-format.md).
 
 It is possible to preset the list of contacts, identified through their email addresses. When several contacts are listed, the message is sent to a group chat with the list of contacts.
 
