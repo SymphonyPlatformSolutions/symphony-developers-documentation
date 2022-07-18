@@ -27,7 +27,6 @@ Simple example with a predefined recipient and message:
 
 ```
 fdc3.raiseIntent('StartChat', {
-    intent: "StartChat",
     type: "fdc3.chat.initSettings",
     initMessage: "This is my message",
     members: [{
