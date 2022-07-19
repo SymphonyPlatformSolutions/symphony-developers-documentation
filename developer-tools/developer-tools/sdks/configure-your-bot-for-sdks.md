@@ -4,6 +4,15 @@ description: Bot Configuration Guide using SDKs and Symphony Generator
 
 # Configure your Bot for SDKs
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../bdk-2.0/)
+{% endhint %}
+
 This page is a language-agnostic bot configuration guide for building bots using Symphony SDKs and the Symphony Bot Generator.
 
 {% hint style="warning" %}
@@ -101,7 +110,7 @@ Agl9PvxdKEkNXJVPdUtBm7jIqQlljheYDs0825YP59H5WmaG3jywrkAS6QDP7uYvYd4skeJH
 
 Copy the entire contents of this RSA public key including the dashes on either side, and hand it to your pod admin and request for it to be saved against the respective service account you will be using.
 
-![](../../.gitbook/assets/screen-shot-2020-07-13-at-9.57.25-pm.png)
+![](../../../.gitbook/assets/screen-shot-2020-07-13-at-9.57.25-pm.png)
 
 {% hint style="info" %}
 Note: The bot username entered into the Bot Generator must match exactly the username on the service account as shown above
@@ -109,8 +118,8 @@ Note: The bot username entered into the Bot Generator must match exactly the use
 
 For a detailed guide on how to create a service account in the admin portal, check out this guide:
 
-{% content-ref url="creating-a-bot-user.md" %}
-[creating-a-bot-user.md](creating-a-bot-user.md)
+{% content-ref url="../../../building-bots-on-symphony/configuration/creating-a-bot-user.md" %}
+[creating-a-bot-user.md](../../../building-bots-on-symphony/configuration/creating-a-bot-user.md)
 {% endcontent-ref %}
 
 Open your generated bot code in your favorite IDE and navigate to the `config.json` file:
@@ -160,6 +169,6 @@ The `config.json` file has other fields that offers advanced configurations for 
 
 Now that you have generated and configured your Bot, move on to one of the SDK bot tutorials:
 
-{% content-ref url="../../developer-tools/developer-tools/sdks/sdk/" %}
-[sdk](../../developer-tools/developer-tools/sdks/sdk/)
+{% content-ref url="sdk/" %}
+[sdk](sdk/)
 {% endcontent-ref %}

@@ -8,12 +8,14 @@
 This section requires `npm` ([Node Package Manager](https://www.npmjs.com/)) to be installed on your local machine as a prerequisite.
 {% endhint %}
 
-For all Symphony BDK applications, you should start with the [Symphony Bot Generator](../../developer-tools/developer-tools/symphony-bot-generator.md). The Symphony Generator offers a fast way to bootstrap your Symphony BDK project in several languages, including Java:
+The Symphony Generator offers a fast way to bootstrap your Symphony BDK 2.0 project in several languages, including Java. &#x20;
+
+For all Symphony BDK 2.0 applications, you should start with the [Symphony Bot Generator](../../developer-tools/developer-tools/symphony-bot-generator.md).   As part of the below steps we will also be installing Yeoman which is a project scaffolding framework utility.
 
 ```
-$ npm i -g generator-symphony
+$ npm i -g @finos/generator-symphony yo
 $ mkdir botProject && cd botProject
-$ yo symphony 2.0
+$ yo @finos/symphony
 ```
 
 This will prompt you with a number of questions about your bot and Pod configuration.  Type in your bot's metadata, use arrows to scroll, and press enter to move on to the next prompt:
@@ -21,29 +23,30 @@ This will prompt you with a number of questions about your bot and Pod configura
 {% hint style="info" %}
 ### Spring Boot Integration
 
-The BDK 2.0 and Symphony Bot Generator provides an available Spring Boot Integration out of the box.  To bootstrap your bot as a Spring Boot project, select the 'Spring Boot' option when prompted to 'select your framework' when going through the generator's options.   &#x20;
+The BDK 2.0 for Java and Symphony Bot Generator provides an available Spring Boot Integration out of the box.  To bootstrap your bot as a Spring Boot project, select the 'Spring Boot' option when prompted to 'select your framework' when going through the generator's options.   &#x20;
 {% endhint %}
 
 ```
-$ yo symphony 2.0
- __   __     ___                 _                 
- \ \ / /__  / __|_  _ _ __  _ __| |_  ___ _ _ _  _ 
+$ yo @finos/symphony
+ __   __     ___                 _
+ \ \ / /__  / __|_  _ _ __  _ __| |_  ___ _ _ _  _
   \ V / _ \ \__ \ || | '  \| '_ \ ' \/ _ \ ' \ || |
    |_|\___/ |___/\_, |_|_|_| .__/_||_\___/_||_\_, |
                  |__/      |_|                |__/ 
 	https://developers.symphony.com
 
-Welcome to Symphony Generator v1.4.3
-Application files will be generated in folder: /Users/reed.feldman/bdk-documentation-bot
+Welcome to Symphony Generator v2.6.0
+Application files will be generated in folder: /Users/Development/bdk-sample-bot
 ______________________________________________________________________________________________________
 ? Enter your pod host develop2.symphony.com
-? Enter your bot username bdk-documentation-bot
-? Select your programing language Java (beta)
-? Select your build system Maven
+? Enter your bot username bdk-sample-bot
+? Select your type of application Bot Application
+? Select your programing language Java
 ? Select your framework Java (no framework)
+? Select your build system Maven
 ? Enter your project groupId com.symphony
 ? Enter your project artifactId bot-application
-? Enter your base package com.symphony.java
+? Enter your base package com.symphony.bdksamplebot
 Generating RSA keys...
 ...
 -----BEGIN RSA PUBLIC KEY-----
@@ -58,6 +61,8 @@ YD9i/FwNKtxsPja0vQXxqrmaNAHZkSbhVsRPaZZArBSnSbEWyNoE+GN26D5rWtK9ubjDzD0e
 6G4FrGZeX/oyYb1BhmgQ3WRddEzF8y0cltzuckVnPJY0jEc3THhmOPZfNjwiONlVeHOPP8qk
 aRby39IdyszVeVTbNlq727vxCJFzzUxx8VpaSlB0P3byypcCAwEAAQ==
 -----END RSA PUBLIC KEY-----
+
+Your Java project has been successfully generated !
 ```
 
 ### Building your project _from scratch_
@@ -84,9 +89,9 @@ If you want to use [Maven](https://maven.apache.org/) as build system, you have 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.symphony.platformsolutions</groupId>
+                <groupId>org.finos.symphony.bdk</groupId>
                 <artifactId>symphony-bdk-bom</artifactId>
-                <version>1.3.2.BETA</version>
+                <version>2.1.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -96,16 +101,16 @@ If you want to use [Maven](https://maven.apache.org/) as build system, you have 
     <dependencies>
         <!-- Core dependencies -->
         <dependency>
-            <groupId>com.symphony.platformsolutions</groupId>
+            <groupId>org.finos.symphony.bdk</groupId>
             <artifactId>symphony-bdk-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.symphony.platformsolutions</groupId>
+            <groupId>org.finos.symphony.bdk</groupId>
             <artifactId>symphony-bdk-http-jersey2</artifactId> <!-- or symphony-bdk-http-webclient -->
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>com.symphony.platformsolutions</groupId>
+            <groupId>org.finos.symphony.bdk</groupId>
             <artifactId>symphony-bdk-template-freemarker</artifactId>  <!-- or symphony-bdk-http-handlebars -->
             <scope>runtime</scope>
         </dependency>
@@ -142,12 +147,12 @@ repositories {
 dependencies {
 
     // import a BOM
-    implementation platform('com.symphony.platformsolutions:symphony-bdk-bom:1.3.2.BETA')
+    implementation platform('org.finos.symphony.bdk:symphony-bdk-bom:2.1.0')
 
     // define dependencies without versions
-    implementation 'com.symphony.platformsolutions:symphony-bdk-core'
-    runtimeOnly 'com.symphony.platformsolutions:symphony-bdk-http-jersey2' //  or symphony-bdk-http-webclient
-    runtimeOnly 'com.symphony.platformsolutions:symphony-bdk-template-freemarker' // or symphony-bdk-http-handlebars
+    implementation 'org.finos.symphony.bdk:symphony-bdk-core'
+    runtimeOnly 'org.finos.symphony.bdk:symphony-bdk-http-jersey2'           //  or symphony-bdk-http-webclient
+    runtimeOnly 'org.finos.symphony.bdk:symphony-bdk-template-freemarker'    // or symphony-bdk-http-handlebars
 
     // logger configuration
     implementation 'org.slf4j:slf4j-api'
@@ -175,7 +180,7 @@ Before implementing any code, you need to navigate to your `src/main/resources/c
 
 {% tabs %}
 {% tab title="src/main/resources/config.yaml" %}
-```
+```yaml
 host: develop2.symphony.com
 
 bot:
@@ -186,9 +191,9 @@ bot:
 {% endtabs %}
 
 {% hint style="info" %}
-&#x20;Depending on your Symphony environment you may need to make update and add additional values to your `config.yaml` file.
+&#x20;Depending on your Symphony environment you may need to make, update and add additional values to your `config.yaml` file.
 
-### Click [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/docs/configuration.md) for more detailed documentation about BDK configuration
+Click [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/docs/configuration.md) for more detailed documentation about BDK configuration
 {% endhint %}
 
 ## 3.  Build your Bot

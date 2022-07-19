@@ -407,8 +407,8 @@ Generating SDK bot projects is made simple with the Symphony Generator.  This is
 
 For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here:&#x20;
 
-{% content-ref url="../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
-[configure-your-bot-for-sdks.md](../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
+{% content-ref url="configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](configure-your-bot-for-sdks.md)
 {% endcontent-ref %}
 
 ## Tutorials

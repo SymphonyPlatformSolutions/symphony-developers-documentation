@@ -17,8 +17,8 @@ We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that com
 
 ### Complete the BDK Bot Configuration guide:
 
-{% content-ref url="../../../../../building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md" %}
-[configure-your-bot-for-bdk.md](../../../../../building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md)
+{% content-ref url="../configure-your-bot-for-bdk.md" %}
+[configure-your-bot-for-bdk.md](../configure-your-bot-for-bdk.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code

@@ -4,6 +4,15 @@ description: Bot Configuration guide for using the BDK and CLI Tool
 
 # Configure your Bot for BDK 1.0
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../../bdk-2.0/)
+{% endhint %}
+
 ## Configure your Bot for BDK
 
 This page is a configuration guide specific to using the Symphony BDK and the BDK CLI Tool.
@@ -93,7 +102,7 @@ Copy the entire contents of this RSA public key including the dashes on either s
 Note: The bot username and bot email address entered to the CLI tool must match exactly the Basic Information shown in the Pod above.
 {% endhint %}
 
-![](<../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm (2) (2) (2) (2).png>)
+![](<../../../../.gitbook/assets/screen-shot-2020-07-11-at-6.07.09-pm (2) (2) (2) (2).png>)
 
 Open your generated bot code in your favorite Java IDE and navigate to the `bot-config.json` file:
 
@@ -127,6 +136,6 @@ Confirm that the `sessionAuthHost`, `keyAuthHost`, and `agentHost` matches the c
 
 Now that you have generated and configured your Bot, move onto one of our BDK tutorials:
 
-{% content-ref url="../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/" %}
-[bdk](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/)
+{% content-ref url="bdk/" %}
+[bdk](bdk/)
 {% endcontent-ref %}

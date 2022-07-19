@@ -1,5 +1,9 @@
 # Truststores
 
+{% hint style="warning" %}
+You should only need to follow the below steps if your organisation uses self-signed custom certificates which are signed by an Internal Root Certificate Authority (Root CA).
+{% endhint %}
+
 ## Overview
 
 In an enterprise environment, it is very common to have an internal root certificate authority (root CA) that signs all certificates used internally for TLS termination on HTTPS sites. While this trust is federated on the operating system level for all domain-connected Windows workstations, non-Windows servers are typically not configured the same way. Even on a Windows workstation, your Java runtime might not necessarily trust the enterprise root CA certificates.
@@ -14,41 +18,37 @@ A Java truststore is a bundle of certificates used when establishing connections
 
 A bot requires connections to several servers like the key manager or API agent, as defined in your bot configuration. This configuration should also define the path to a custom truststore, which ensures that the trust relationship is maintained even as the bot's deployment location is moved, as long as the truststore file is moved together with the deployment artifacts.
 
-### Java SDK / BDK 1.0
+### BDK 2.0 for Java
 
-The Java SDK and BDK 1.0 uses the Java Key Store (JKS) format for its truststore. Your config.json should look like this:
-
-```javascript
-{
-  // ...
-  "truststorePath": "path/to/my-truststore.jks",
-  "truststorePassword": "changeit"
-}
-```
-
-### BDK 2.0
-
-The BDK 2.0 uses the JKS format, but the configuration has moved under the `ssl` section:
+The BDK 2.0 for Java uses the JKS format and the configuration is under the `ssl` section within the config.yaml:
 
 ```yaml
 ssl:
-  trustStorePath: path/to/my-truststore.jks
-  trustStorePassword: changeit
+  trustStore:
+    path: /path/to/all_symphony_certs_truststore
+    password: changeit
 ```
 
-### Python SDK
+### BDK 2.0 for Python
 
-The Python SDK uses a concatenated PKCS format. Your config.json should look like this:
+The BDK 2.0 for Python uses a concatenated PKCS format. Your config.yaml should look like this:
 
-```bash
-{
-  // ...
-  "truststorePath": "path/to/my-truststore.pem",
-  "truststorePassword": "changeit"
-}
+```yaml
+ssl:
+  trustStore:
+    path: /path/to/truststore.pem
 ```
 
-You can follow the same steps as the Java process below for Python, except instead of using `keytool` to import the certificates, simply concatenate all the certificates into a single file.
+### WDK 1.0
+
+The WDK toolkit is built on top of BDK 2.0 for Java.  As such configuring a custom truststore follows the same steps as the BDK 2.0 for Java.  Your config.yaml should look like this:
+
+```yaml
+ssl:
+  trustStore:
+    path: /path/to/all_symphony_certs_truststore
+    password: changeit
+```
 
 ## Certificate Chains
 
@@ -57,6 +57,12 @@ A typical internal certificate has has least 2 certificates in its chain - the c
 Publicly-trusted signing certificates from established certificate authorities are already in `cacerts` so you will most likely not need to import certificates for services on the public Internet. However, if the Java runtime you are using pre-dates the existence of those certificates, then you will need to add them manually.
 
 ## Building a Java Truststore
+
+{% hint style="info" %}
+You can follow the same steps as the Java process below for WDK.\
+\
+For Python you can also follow these steps except instead of using `keytool` to import the certificates, simply concatenate all the certificates into a single file.
+{% endhint %}
 
 The `keytool` command that ships with all Java runtimes is used to manage truststores. You can build a new truststore or append to an existing one using the same command as follows:
 
