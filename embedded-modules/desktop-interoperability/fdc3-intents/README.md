@@ -25,17 +25,55 @@ It is possible to preset the list of contacts, identified through their email ad
 
 Simple example with a predefined recipient and message:
 
+{% tabs %}
+{% tab title="Simple message" %}
 ```
 fdc3.raiseIntent('StartChat', {
-    type: "fdc3.chat.initSettings",
-    initMessage: "This is my message",
-    members: [{
-        id: {
-            email: "jane.doe@mail.com"
+    "type": "fdc3.chat.initSettings",
+    "message": {
+      "text": {
+        "text/markdown": "Hello!"
+      }
+    },
+    "members": {
+    "type": "fdc3.contactList",
+    "contacts": [
+      {
+        "type": "fdc3.contact",
+        "id": {
+          "email": "jane.doe@example.com"
         }
-    }]
+      }
+    ]
+  }
 });
 ```
+{% endtab %}
+
+{% tab title="Mentions and tags" %}
+```
+fdc3.raiseIntent('StartChat',{
+  "type": "fdc3.chat.initSettings",
+  "initMessage": {
+    "text": {
+      "text/markdown": "Example of a cashtag $AAPL, a hastag #fdc3  and a mention @[Jane Doe](email/jane.doe@example.com) !"
+    }
+  },
+  "members": {
+      "type": "fdc3.contactList",
+      "contacts": [
+        {
+          "type": "fdc3.contact",
+          "id": {
+              "email": "jane.doe@example.com"
+          }
+        }
+      ]
+  }
+});
+```
+{% endtab %}
+{% endtabs %}
 
 #### FDC3 Action buttons
 
