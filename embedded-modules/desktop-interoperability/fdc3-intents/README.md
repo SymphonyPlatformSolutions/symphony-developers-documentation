@@ -61,4 +61,4 @@ Symphony can trigger custom intents from in-chat FDC3 action buttons.&#x20;
 
 When such a button is clicked, Symphony raises the predefined intent with its context data to local apps.
 
-Read [here](./#view-instrument-cashtag-hovercard) how to add FDC3 action buttons in your chats.
+Read [here ](message-format.md)how to add FDC3 action buttons in your chats.
