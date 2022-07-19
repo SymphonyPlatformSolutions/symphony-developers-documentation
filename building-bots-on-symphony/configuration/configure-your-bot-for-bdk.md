@@ -127,6 +127,6 @@ Confirm that the `sessionAuthHost`, `keyAuthHost`, and `agentHost` matches the c
 
 Now that you have generated and configured your Bot, move onto one of our BDK tutorials:
 
-{% content-ref url="../tutorials/bdk/" %}
-[bdk](../tutorials/bdk/)
+{% content-ref url="../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/" %}
+[bdk](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/)
 {% endcontent-ref %}

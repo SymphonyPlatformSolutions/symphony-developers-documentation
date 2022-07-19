@@ -513,8 +513,8 @@ Receiving notifications from external systems directly into Symphony chats is an
 
 For a tutorial on how to receive notifications using the BDK, continue here:
 
-{% content-ref url="../../../../building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md" %}
-[building-a-headless-bot-using-the-bdk.md](../../../../building-bots-on-symphony/tutorials/bdk/building-a-headless-bot-using-the-bdk.md)
+{% content-ref url="../../bdk-2.0-java/bdk-1.0-java/bdk/building-a-headless-bot-using-the-bdk.md" %}
+[building-a-headless-bot-using-the-bdk.md](../../bdk-2.0-java/bdk-1.0-java/bdk/building-a-headless-bot-using-the-bdk.md)
 {% endcontent-ref %}
 
 ### Processing incoming requests

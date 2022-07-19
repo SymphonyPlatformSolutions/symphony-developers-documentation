@@ -4,12 +4,21 @@ description: Building a Chatbot using the BDK and CLI Tool
 
 # Build a Chatbot using the BDK 1.0
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../../../bdk-2.0/)
+{% endhint %}
+
 ## Prerequisites
 
 ### Complete the BDK Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk.md" %}
-[configure-your-bot-for-bdk.md](../../configuration/configure-your-bot-for-bdk.md)
+{% content-ref url="../../../../../building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md" %}
+[configure-your-bot-for-bdk.md](../../../../../building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code
@@ -91,7 +100,7 @@ So for example when a user prompts the bot with "@demobot2 /hello", the `handle(
 
 Lastly, start up your Spring Application by running your BotApplication.java and test that your chatbot works in a 1-1 IM:
 
-![](<../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm (1).png>)
+![](<../../../../../.gitbook/assets/screen-shot-2020-07-11-at-6.31.58-pm (1).png>)
 
 To learn more about how your can add your own commands and business logic, navigate to our Developer Certification where we show you how to build a real-world FX Trading Bot using the Bot SDK and CLI tool:
 

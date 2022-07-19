@@ -4,14 +4,23 @@ description: Building a Chatbot using the Symphony Generator + SDK
 
 # Build a Chatbot using the SDK
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../../bdk-2.0/)
+{% endhint %}
+
 ## Build a Chatbot using the SDK
 
 ### Prerequisites
 
 #### Complete the Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-sdks.md" %}
-[configure-your-bot-for-sdks.md](../../configuration/configure-your-bot-for-sdks.md)
+{% content-ref url="../../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](../../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
 {% endcontent-ref %}
 
 {% hint style="info" %}
@@ -144,7 +153,7 @@ static void Main(string[] args)
 {% endtab %}
 {% endtabs %}
 
-Any events that happen within 1-to-1 Instant Messages (IMs) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](../../datafeed/#real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
+Any events that happen within 1-to-1 Instant Messages (IMs) or chat rooms containing the bot are captured in real-time when the bot reads its datafeed. Each event is represented by an [event payload](../../../../building-bots-on-symphony/datafeed/#real-time-events) that the SDKs abstract into listener functions for event handling. For example, to implement an event handler for when a bot receives messages in an IM, you would implement the respective IM Listener class with the `onIMMessage` function. The generated Request/Reply project has an example implementation as follows:
 
 {% tabs %}
 {% tab title="Java" %}
@@ -319,13 +328,13 @@ dotnet run
 
 Navigate to Symphony, search for your bot's name and open a chat with it. Then try sending a message into the IM.
 
-![](<../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm (2) (2) (2) (2) (2).png>)
+![](<../../../../.gitbook/assets/screen-shot-2020-07-10-at-1.01.53-pm (2) (2) (2) (2) (2).png>)
 
 As you can see, your bot replied with the message shown in the IM Listener implementation.
 
 ### Implementing your own Functionality
 
-Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../../planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
+Let's start by creating a help menu, following the best practice shown in [Step 1 of the Chatbot workflow](../../../../building-bots-on-symphony/planning-your-bot/chatbot/getting-started-with-chatbots.md#1-kick-off-your-workflow).
 
 Modify the example IM listener code to respond only to messages containing an @mention of your bot and send a help menu when the @mention is proceeded by the `/help` text.
 
@@ -567,12 +576,12 @@ namespace RequestResponse
 {% endtabs %}
 
 {% hint style="info" %}
-Check out our [Overview of MessageML](../../messages/overview-of-messageml/) guide for more information on message formatting and styling.
+Check out our [Overview of MessageML](../../../../building-bots-on-symphony/messages/overview-of-messageml/) guide for more information on message formatting and styling.
 {% endhint %}
 
 Next, launch your bot again and test the new behaviour:
 
-![](../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
+![](../../../../.gitbook/assets/screen-shot-2020-07-22-at-4.41.10-pm.png)
 
 #### **For an in depth video tutorial visit our "Developing Bots & Apps" course as apart of our Developer Certification program:**
 

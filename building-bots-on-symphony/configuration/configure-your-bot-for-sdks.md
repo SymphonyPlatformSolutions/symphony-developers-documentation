@@ -160,6 +160,6 @@ The `config.json` file has other fields that offers advanced configurations for 
 
 Now that you have generated and configured your Bot, move on to one of the SDK bot tutorials:
 
-{% content-ref url="../tutorials/sdk/" %}
-[sdk](../tutorials/sdk/)
+{% content-ref url="../../developer-tools/developer-tools/sdks/sdk/" %}
+[sdk](../../developer-tools/developer-tools/sdks/sdk/)
 {% endcontent-ref %}

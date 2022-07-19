@@ -28,8 +28,8 @@ Symphony SDKs help bootstrap your Bot, providing easy to use authentication hand
 
 To learn more about using our SDKs continue here:
 
-{% content-ref url="sdks.md" %}
-[sdks.md](sdks.md)
+{% content-ref url="sdks/" %}
+[sdks](sdks/)
 {% endcontent-ref %}
 
 ## BDK 1.0

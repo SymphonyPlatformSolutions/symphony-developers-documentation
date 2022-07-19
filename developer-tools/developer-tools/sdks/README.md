@@ -10,7 +10,7 @@ Note: Symphony engineering has announced the End of Life (EOL) and support for o
 \
 We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
 
-* [BDK 2.0 for Java](bdk-2.0/)
+* [BDK 2.0 for Java](../bdk-2.0/)
 {% endhint %}
 
 ## Overview
@@ -291,11 +291,11 @@ Symphony SDKs come bootstrapped with a `DatafeedEventService` class that handles
 
 As a bot developer all you have to do is to implement event listener interfaces that are provided out-of-the-box by Symphony's SDKs. The `DatafeedEventService` event service does all of the heavy lifting and acts as the backbone of your bot or workflow.
 
-After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](../../building-bots-on-symphony/datafeed/#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function. For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
+After the `DatafeedEventService` creates/reads from the datafeed API, it categorizes each event based on its event type seen [above](../../../building-bots-on-symphony/datafeed/#here-is-the-full-list-of-different-real-time-datafeed-events), and dispatches the event downstream to their appropriate event handler function. For example, If a user sends a message to bot inside a **chatroom**, the event will be read by the datafeed, and dispatched to the `onRoomMessage()` function inside the `RoomListener` Interface.
 
 The following diagram shows the event handling workflow:
 
-![](<../../.gitbook/assets/copy-of-on-prem-bot-auth\_workflow-copy-3 (2) (2) (2).png>)
+![](<../../../.gitbook/assets/copy-of-on-prem-bot-auth\_workflow-copy-3 (2) (2) (2).png>)
 
 \
 Inside of `onRoomMessage()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/SDK methods:
@@ -401,22 +401,22 @@ public class MyRoomListener : RoomListener
 
 Generating SDK bot projects is made simple with the Symphony Generator.  This is a command-line utility that generates language specific code scaffolds on top of our SDKs.  To learn more about generating your bot project navigate here:
 
-{% content-ref url="symphony-bot-generator.md" %}
-[symphony-bot-generator.md](symphony-bot-generator.md)
+{% content-ref url="../symphony-bot-generator.md" %}
+[symphony-bot-generator.md](../symphony-bot-generator.md)
 {% endcontent-ref %}
 
 For a tutorial on configuring a bot using the Symphony Generator and SDKs, continue here:&#x20;
 
-{% content-ref url="../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
-[configure-your-bot-for-sdks.md](../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
+{% content-ref url="../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
 {% endcontent-ref %}
 
 ## Tutorials
 
 Check out the following SDK tutorials to learn about how to leverage the SDKs to quickly build powerful workflows and automations:
 
-{% content-ref url="../../building-bots-on-symphony/tutorials/sdk/" %}
-[sdk](../../building-bots-on-symphony/tutorials/sdk/)
+{% content-ref url="sdk/" %}
+[sdk](sdk/)
 {% endcontent-ref %}
 
 ## Reference

@@ -4,19 +4,28 @@ description: Building an Interactive Bot using BDK
 
 # Build an Interactive Bot using the BDK 1.0
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../../../bdk-2.0/)
+{% endhint %}
+
 ## Prerequisites
 
 Complete the BDK Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-bdk.md" %}
-[configure-your-bot-for-bdk.md](../../configuration/configure-your-bot-for-bdk.md)
+{% content-ref url="../../../../../building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md" %}
+[configure-your-bot-for-bdk.md](../../../../../building-bots-on-symphony/configuration/configure-your-bot-for-bdk.md)
 {% endcontent-ref %}
 
 ## 1. Dive into the Code
 
 The Bot SDK provides all of the functionality as our regular Symphony SDKs such as easy to use authentication handlers, centralized configuration, convenient error handling, and API bindings so you can call the API directly in your bot's code. In addition, the Bot SDK also provides out-of-the-box Datafeed and event handling architecture that make it simple for your bot to handle different events.
 
-The Bot SDK is also baked in with bot's best practices and provides a lot of convenient out-of-the-box code that can be used to bootstrap your bot quickly, including sending and receiving Symphony Elements. To illustrate these best practices and convenient boilerplate code, navigate to `TemplateHandler.java` inside your project directory. The different bot commands are shown in the `DESCRIPTIONS `dictionary:
+The Bot SDK is also baked in with bot's best practices and provides a lot of convenient out-of-the-box code that can be used to bootstrap your bot quickly, including sending and receiving Symphony Elements. To illustrate these best practices and convenient boilerplate code, navigate to `TemplateHandler.java` inside your project directory. The different bot commands are shown in the `DESCRIPTIONS` dictionary:
 
 {% tabs %}
 {% tab title="elements/TemplateHandler.java" %}
@@ -136,7 +145,7 @@ Afterwards the bot replies with the contents of the message. This illustrates ho
 
 Start up your Spring Application by running your BotApplication.java and test that your Interactive Bot works in a 1-1 IM by prompting and submitting a "simple" form:
 
-![](../../../.gitbook/assets/screen-shot-2020-07-17-at-12.11.25-pm.png)
+![](../../../../../.gitbook/assets/screen-shot-2020-07-17-at-12.11.25-pm.png)
 
 Feel free to play around with the other commands to see how Symphony Elements can be useful to your workflow. To learn more about how your can add your own Symphony Elements and business logic to your workflow, navigate to our Developer Certification program:
 

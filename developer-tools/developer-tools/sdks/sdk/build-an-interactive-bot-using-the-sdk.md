@@ -4,12 +4,21 @@ description: Building an Interactive Bot using the Symphony Generator + Python S
 
 # Build an Interactive Bot using the SDK
 
+{% hint style="danger" %}
+Note: Symphony engineering has announced the End of Life (EOL) and support for our Java, Python and Node.js SDKs and Java BDK 1.0 (including CLI Tool & UI Toolkit) from March 2022.  Whilst limited support is still available for the .NET SDK.
+
+\
+We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
+
+* [BDK 2.0 for Java](../../bdk-2.0/)
+{% endhint %}
+
 ## Prerequisites
 
 ### Complete the SDK Bot Configuration guide:
 
-{% content-ref url="../../configuration/configure-your-bot-for-sdks.md" %}
-[configure-your-bot-for-sdks.md](../../configuration/configure-your-bot-for-sdks.md)
+{% content-ref url="../../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md" %}
+[configure-your-bot-for-sdks.md](../../../../building-bots-on-symphony/configuration/configure-your-bot-for-sdks.md)
 {% endcontent-ref %}
 
 ## 1.  Install Dependencies
@@ -277,7 +286,7 @@ To see your Symphony Element or form rendered, run your bot:
 
 Navigate to Symphony, create an IM with your bot, and type any message to see the form rendered:
 
-![](../../../.gitbook/assets/screen-shot-2020-07-15-at-7.14.53-pm.png)
+![](../../../../.gitbook/assets/screen-shot-2020-07-15-at-7.14.53-pm.png)
 
 When you fill out the form and click submit, the datafeed handles the event and dispatches it to your `ElementsListenerImpl` class:
 
