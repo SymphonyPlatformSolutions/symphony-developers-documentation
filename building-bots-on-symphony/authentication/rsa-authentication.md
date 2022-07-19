@@ -5,12 +5,10 @@ This pages describes the implementation of RSA Authentication. For the API refer
 * Session Auth: [https://developers.symphony.com/restapi/reference#rsa-session-authenticate](https://developers.symphony.com/restapi/reference#rsa-session-authenticate)
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate](https://developers.symphony.com/restapi/reference#rsa-key-manager-authenticate)
 
-{% hint style="info" %}
-#### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
+{% hint style="success" %}
+Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
-* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)
-* [Configure your Bot for SDKs](../../developer-tools/developer-tools/sdks/configure-your-bot-for-sdks.md)
-* [Configure your Bot for BDK](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/configure-your-bot-for-bdk.md)
+* [Configure your Bot for BDK 2.0 for Java](../configuration/configure-your-bot-for-bdk-2.0.md)
 {% endhint %}
 
 ## Summary
@@ -81,6 +79,10 @@ Sign the authentication request using either `privatekey.pkcs8` or `privatekey.p
 The file `publickey.pem` is the public key. This is the key you will import into the pod in step 2.
 
 ## 2. Import Public Key into the Pod
+
+{% hint style="warning" %}
+Please note the below steps can only be performed by a Symphony Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
+{% endhint %}
 
 Navigate to the Admin Console and create a new Service Account. Copy the contents of the pubkey.pem file you just created and paste into the textbox under the Authentication section:
 
@@ -748,7 +750,7 @@ curl -H 'sessionToken: eyJhbGciOiJSUzUxMiJ9...O3iq8OEkcnvvMFKg' -d '{
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 ### Restricted Key Operations:
 
 You CANNOT perform the following actions:

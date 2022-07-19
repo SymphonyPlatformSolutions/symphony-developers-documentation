@@ -6,11 +6,9 @@ This pages describes the implementation of certificate-based Authentication. For
 * Key Manager Auth: [https://developers.symphony.com/restapi/reference#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate)
 
 {% hint style="info" %}
-#### Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
+Note: The following authentication sequence is provided out of the box by our dedicated BDK and WDK toolkits.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
-* [Configure your Bot for BDK 2.0](../configuration/configure-your-bot-for-bdk-2.0.md)
-* [Configure your Bot for SDKs](../../developer-tools/developer-tools/sdks/configure-your-bot-for-sdks.md)
-* [Configure your Bot for BDK](../../developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/configure-your-bot-for-bdk.md)
+* [Configure your Bot for BDK 2.0 for Java](../configuration/configure-your-bot-for-bdk-2.0.md)
 {% endhint %}
 
 ## Overview of Certificate-Based Authentication
@@ -68,6 +66,10 @@ The Common Name (CN) value must match the name of the Symphony Service Account y
 | Key Size         | 2048 bits                 |
 
 ## 2.  Upload your Certificate
+
+{% hint style="warning" %}
+Please note the below steps can only be performed by a Symphony Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
+{% endhint %}
 
 Once you have received your signed certificate, you will need to upload your public certificate to the Symphony Pod.
 
