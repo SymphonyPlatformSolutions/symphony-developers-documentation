@@ -99,7 +99,7 @@ export interface SharedMessage {
       }
     ]
   }
-} {
+}
 ```
 {% endtab %}
 {% endtabs %}
