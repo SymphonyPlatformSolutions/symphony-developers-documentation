@@ -117,9 +117,9 @@ Events attributes details:
 {% hint style="info" %}
 Note:
 
-* Th event `initiator` and the message `user` are the same
+* The event `initiator` and the message `user` are the same
 * Hashtags and cashtags in EntityJSON have no '#' or '$'
-* An external chatroom can contain messages with `externalRecipients` set to `false` in cases where external users hav not been added to the chatroom yet. &#x20;
+* An external chatroom can contain messages with `externalRecipients` set to `false` in cases where external users have not been added to the chatroom yet. &#x20;
 {% endhint %}
 
 ### Messages Suppressed

@@ -117,6 +117,7 @@
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
   * [SDKs](developer-tools/developer-tools/sdks/README.md)
+    * [Datafeed with SDKs](developer-tools/developer-tools/sdks/datafeed-with-sdks.md)
     * [SDK Tutorials](developer-tools/developer-tools/sdks/sdk/README.md)
       * [Build a Chatbot using the SDK](developer-tools/developer-tools/sdks/sdk/build-a-chatbot-using-sdk.md)
       * [Build an Interactive Bot using the SDK](developer-tools/developer-tools/sdks/sdk/build-an-interactive-bot-using-the-sdk.md)
