@@ -13,7 +13,7 @@ The Symphony Generator offers a fast way to bootstrap your Symphony BDK 2.0 proj
 For all Symphony BDK 2.0 applications, you should start with the [Symphony Bot Generator](../../developer-tools/developer-tools/symphony-bot-generator.md).   As part of the below steps we will also be installing Yeoman which is a project scaffolding framework utility.
 
 ```
-$ npm i -g @finos/generator-symphony yo
+$ npm i -g yo @finos/generator-symphony
 $ mkdir botProject && cd botProject
 $ yo @finos/symphony
 ```
