@@ -45,44 +45,61 @@ export interface SharedMessage {
 }
 ```
 
-```javascript
- Example of rich message containing a file (image here) and an fdc3 intent 
- const message: Message = {
-   text: {
-     'text/markdown': 'Hello @[Yannick Malins](id/723947329), can you see the image and chart attached? Could it affect the price of $AAPL? *italics* **bold**'
-   },
-   entities: {
-     '0': {
-       type: EntityTypeEnum.fileAttachment,
-       data: {
-         name: 'myImage.png',
-         dataUri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEU...'
-       }
-     },
-     '1': {
-       type: EntityTypeEnum.fdc3Intent,
-       data: {
-         title: 'Click to view Chart',
-         intent: 'ViewChart',
-         context: {
-           type: 'fdc3.chart',
-           instruments: [
-             {
-               type: 'fdc3.instrument',
-               id: {
-                 ticker: 'EURUSD'
-               }
-             }
-           ],
-           range: {
-             type: 'fdc3.dateRange',
-             starttime: '2020-09-01T08:00:00.000Z',
-             endtime: '2020-10-31T08:00:00.000Z'
-           },
-           style: 'candle'
-         }
-       }
-     }
-   }
-}
+{% tabs %}
+{% tab title="Message with an image and an action button" %}
+```json
+ {
+  "type": "fdc3.chat.initSettings",
+  "message": {
+    "text": {
+      "text/markdown": "Hello @[Jane Doe](email/jane.doe@example.com), can you see the image and chart attached? Could it affect the price of $AAPL? *italics* **bold**"
+    },
+    "entities": {
+      "0": {
+        "type": 0,
+        "data": {
+          "name": "myImage.png",
+          "dataUri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII"
+        }
+      },
+      "1": {
+        "type": "EntityTypeEnum.fdc3Intent",
+        "data": {
+          "title": "Click to view Chart",
+          "intent": "ViewChart",
+          "context": {
+            "type": "fdc3.chart",
+            "instruments": [
+              {
+                "type": "fdc3.instrument",
+                "id": {
+                  "ticker": "EURUSD"
+                }
+              }
+            ],
+            "range": {
+              "type": "fdc3.dateRange",
+              "starttime": "2020-09-01T08:00:00.000Z",
+              "endtime": "2020-10-31T08:00:00.000Z"
+            },
+            "style": "candle"
+          }
+        }
+      }
+    }
+  },
+  "members": {
+    "type": "fdc3.contactList",
+    "contacts": [
+      {
+        "type": "fdc3.contact",
+        "id": {
+          "email": "jane.doe@example.com"
+        }
+      }
+    ]
+  }
+} {
 ```
+{% endtab %}
+{% endtabs %}

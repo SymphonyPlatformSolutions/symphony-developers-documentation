@@ -54,7 +54,7 @@ fdc3.raiseIntent('StartChat', {
 ```
 fdc3.raiseIntent('StartChat',{
   "type": "fdc3.chat.initSettings",
-  "message": {
+  "initMessage": {
     "text": {
       "text/markdown": "Example of a cashtag $AAPL, a hastag #fdc3  and a mention @[Jane Doe](email/jane.doe@example.com) !"
     }
@@ -81,7 +81,7 @@ Messages sent through the StartChat intent can contain FDC3 action buttons with 
 
 The FDC3 action buttons will be displayed as inline buttons in the message. When such a button is clicked, Symphony raises the predefined intent along with its context data.&#x20;
 
-Read [here ](message-format.md)how to add FDC3 action buttons to your messages.
+Read [here](https://app.gitbook.com/o/-MB5vuhMZDPnMHgoaIX-/s/-MB51RkjSmfA\_ejydg4M-3415978100/\~/changes/BeNT7JQ1eO6nLDxYh3su/embedded-modules/desktop-interoperability/fdc3-intents/message-format) how to add FDC3 action buttons to your messages.
 
 ## **Outbound intents**
 
