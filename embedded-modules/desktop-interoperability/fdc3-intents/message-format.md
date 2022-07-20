@@ -12,6 +12,10 @@ See below few examples of messages showing how messages are structured.
 **Note**: The formal definition of the supported format will be specified in the fdc3 standard shortly. Small breaking changes may still be introduced.
 {% endhint %}
 
+{% hint style="info" %}
+**Size limit on attachments**: We recommend to limit the total size of attached files & images in a message to 1MB.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Mentions and tags" %}
 ```json
