@@ -188,6 +188,7 @@
     * [SBE - 20.5 (1.59)](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.5-1.59.md)
     * [SBE - 20.4 (1.58)](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.4-1.58.md)
   * [Client 2.0 extensibility updates](admin-guide/change-log/client-2.0-extensibility-updates/README.md)
+    * [Client 2.0 - 22.8](admin-guide/change-log/client-2.0-extensibility-updates/client-2.0-22.8.md)
     * [Client 2.0 - 20.12](admin-guide/change-log/client-2.0-extensibility-updates/client-2.0-20.12.md)
     * [Client 2.0 - 20.10](admin-guide/change-log/client-2.0-extensibility-updates/client-2.0-20.10.md)
     * [Client 2.0 - 20.9](admin-guide/change-log/client-2.0-extensibility-updates/client-2.0-20.9.md)
