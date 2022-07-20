@@ -26,12 +26,12 @@ It important that users understand exactly what your bot is capable of and what 
 
 ## Datafeed
 
-It is considered best practice that bot's only create and read from one datafeed. If your bot goes down, it should re-authenticate, create a new datafeed, and begin reading from this one.
+It is considered best practice that bot's only create and read from one datafeed. If your bot goes down, it should re-authenticate, and try to read from the previously created datafeed.  If this fails then you should create a new datafeed, and begin reading from this new datafeed.
 
 Creating and reading from multiple datafeeds concurrently can result in your bot processing duplicate messages and subsequently sending duplicate or out of order messages back to the user.
 
 {% hint style="info" %}
-All datafeed management and best practices are provided out of the box by our dedicated SDKs and BDKs (Bot Developer Kit)
+All datafeed management and best practices are provided out of the box by our dedicated BDKs (Bot Developer Kit) and WDK toolkits.
 {% endhint %}
 
 ## Message Rate
@@ -50,4 +50,4 @@ In some rare cases, bots may receive duplicate messages from Symphony. In order 
 
 Along with any request made to the [Symphony APIs](overview-of-rest-api/), bots should send header `X-Trace-Id` (random alphanumeric string of 6 characters) for logging purposes.
 
-_Please note that the Symphony BDK sets up your logger _[_MDC_](http://logback.qos.ch/manual/mdc.html)_ (Mapped Diagnostic Context) with this X-Trace-Id. This is especially useful for cross-applications debugging, assuming that the X-Trace-Id value is also present in your application logs. You can find more information about how to print the X-Trace-Id with specific technologies (like logback or log4j2) in the _[_BDK documentation_](https://github.com/finos/symphony-bdk-java/blob/main/docs/tech/production-readiness.md)_._
+_Please note that the Symphony BDK 2.0 for Java sets up your logger_ [_MDC_](http://logback.qos.ch/manual/mdc.html) _(Mapped Diagnostic Context) with this X-Trace-Id. This is especially useful for cross-applications debugging, assuming that the X-Trace-Id value is also present in your application logs. You can find more information about how to print the X-Trace-Id with specific technologies (like logback or log4j2) in the_ [_BDK 2.0 for Java documentation_](https://github.com/finos/symphony-bdk-java/blob/main/docs/tech/production-readiness.md)_._

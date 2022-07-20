@@ -28,7 +28,7 @@ This bot provides capabilities to manage room creation and population using Acti
 | License     | MIT                                                                                                                                        |
 | Source Code | [https://github.com/SymphonyPlatformSolutions/symphony-roomzilla-bot](https://github.com/SymphonyPlatformSolutions/symphony-roomzilla-bot) |
 
-### Symphony TradeBudy
+### Symphony TradeBuddy
 
 This bot tracks watchlists for multiple users and displays a table with clickable buttons to allow users to join discussion rooms.
 
