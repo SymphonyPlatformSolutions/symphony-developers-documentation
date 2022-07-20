@@ -1,44 +1,35 @@
 # Symphony Bot Generator
 
-The Symphony Bot Generator is a yeoman based CLI tool that can be used to quickly generate Symphony bot and app project scaffolds. The Symphony Bot Generator is supported across 4 different languages:
+{% hint style="info" %}
+This section requires `npm` ([Node Package Manager](https://www.npmjs.com/)) and `yo` ([Yeoman](https://yeoman.io/)) to be installed on your local machine as a prerequisite.
+{% endhint %}
 
-* Java
-* Python
-* Node.js
-* C#
+The Symphony Bot Generator is a yeoman based CLI tool that can be used to quickly generate Symphony bot and app project scaffolds. You can create example Bot applications across our developer toolkits in the below languages:
+
+* BDK 2.0 for Java
+* BDK 2.0 for Python
+* WDK 1.0
 
 ## Quick Start
 
 Install the Symphony Bot Generator:
 
 ```
-$ npm i -g generator-symphony
+$ npm i -g @finos/generator-symphony
 ```
 
 Create a new directory and go into it:
 
 ```
-$ mkdir myBot && cd myBot
+$ mkdir mybot && cd mybot
 ```
 
-Run Symphony BDK Generator and follow instructions in your terminal:
+Run Symphony Bot Generator and follow instructions in your terminal:
 
 ```
-$ yo symphony
+$ yo @finos/symphony
 ```
 
 Configure your Bot and environment accordingly:
 
-![](../../.gitbook/assets/screen-shot-2020-10-05-at-2.20.00-pm.png)
-
-## Bot Generator 2.0 (Beta)
-
-It is now possible to create BDK 2.0 projects through the Bot Generator. To do so and access the new menu simply run the following:
-
-```
-$ yo symphony 2.0
-```
-
-{% hint style="info" %}
-Note: At the moment the BDK Generator 2.0 and subsequent BDK 2.0 projects are only available in Java. Support for Python, Node.js and .NET are coming soon.
-{% endhint %}
+![](<../../.gitbook/assets/Screenshot 2022-07-20 at 2.23.14 pm.png>)

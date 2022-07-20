@@ -116,12 +116,7 @@
 ## Developer Tools
 
 * [Developer Tools](developer-tools/developer-tools/README.md)
-  * [SDKs](developer-tools/developer-tools/sdks/README.md)
-    * [Datafeed with SDKs](developer-tools/developer-tools/sdks/datafeed-with-sdks.md)
-    * [SDK Tutorials](developer-tools/developer-tools/sdks/sdk/README.md)
-      * [Build a Chatbot using the SDK](developer-tools/developer-tools/sdks/sdk/build-a-chatbot-using-sdk.md)
-      * [Build an Interactive Bot using the SDK](developer-tools/developer-tools/sdks/sdk/build-an-interactive-bot-using-the-sdk.md)
-    * [Configure your Bot for SDKs](developer-tools/developer-tools/sdks/configure-your-bot-for-sdks.md)
+  * [Symphony Bot Generator](developer-tools/developer-tools/symphony-bot-generator.md)
   * [BDK 2.0 for Java](developer-tools/developer-tools/bdk-2.0/README.md)
     * [BDK 1.0 for Java](developer-tools/developer-tools/bdk-2.0/bdk-1.0/README.md)
       * [Bot SDK](developer-tools/developer-tools/bdk-2.0/bdk-1.0/bot-sdk.md)
@@ -132,13 +127,18 @@
         * [Build an Interactive Bot using the BDK 1.0](developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/building-an-interactive-bot-using-bdk.md)
         * [Build a Headless Bot using the BDK 1.0](developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/building-a-headless-bot-using-the-bdk.md)
       * [Configure your Bot for BDK 1.0](developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/configure-your-bot-for-bdk.md)
-  * [Symphony Bot Generator](developer-tools/developer-tools/symphony-bot-generator.md)
   * [Postman](developer-tools/developer-tools/postman.md)
   * [Live Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
     * [Colors](developer-tools/developer-tools/ui-style-guide/colors.md)
     * [Form Elements](developer-tools/developer-tools/ui-style-guide/forms.md)
     * [Buttons](developer-tools/developer-tools/ui-style-guide/buttons.md)
+  * [SDKs](developer-tools/developer-tools/sdks/README.md)
+    * [SDK Tutorials](developer-tools/developer-tools/sdks/sdk/README.md)
+      * [Build a Chatbot using the SDK](developer-tools/developer-tools/sdks/sdk/build-a-chatbot-using-sdk.md)
+      * [Build an Interactive Bot using the SDK](developer-tools/developer-tools/sdks/sdk/build-an-interactive-bot-using-the-sdk.md)
+    * [Configure your Bot for SDKs](developer-tools/developer-tools/sdks/configure-your-bot-for-sdks.md)
+    * [Datafeed with SDKs](developer-tools/developer-tools/sdks/datafeed-with-sdks.md)
 
 ## Embedded Modules
 

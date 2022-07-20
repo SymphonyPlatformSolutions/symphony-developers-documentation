@@ -7,4 +7,6 @@ Note: Symphony engineering has announced the End of Life (EOL) and support for o
 We recommend you check out the latest version of the  Bot SDK (BDK 2.0) that comes with best practices, intelligent API bindings, and simplified authentication/configuration:
 
 * [BDK 2.0 for Java](../../bdk-2.0/)
+* BDK 2.0 for Python
+* WDK 1.0
 {% endhint %}
