@@ -12,7 +12,7 @@ It's time to get started. Navigate to one of the following guides to kick off yo
 
 * [**Building Bots on Symphony**](./#building-bots-on-symphony)
 * [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
-* ****[**Become a Certified Developer**](developer-certification/untitled.md)****
+* ****[**Become a Certified Developer**](developer-certification/developer-certification.md)****
 * [**Developer Tools**](./#developer-tools)
 * [**REST API Reference**](./#symphony-rest-api)
 * [**Extension API Reference**](./#symphony-extension-api)
@@ -40,7 +40,7 @@ Want to build your first bot together with the Developer Relations team? Head ov
 * [Implementing Workflows with WDK](https://learn.symphony.com/bundles/workflow-developer-certification)
 
 {% hint style="info" %}
-For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/untitled.md) 🎓
+For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/developer-certification.md) 🎓
 {% endhint %}
 
 ## Building Extension Applications on Symphony <img src=".gitbook/assets/extension-app-large.png" alt="" data-size="line">
@@ -55,8 +55,8 @@ Bring customized and extensible workflows into Symphony through Extension Apps. 
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
-{% content-ref url="developer-certification/untitled.md" %}
-[untitled.md](developer-certification/untitled.md)
+{% content-ref url="developer-certification/developer-certification.md" %}
+[developer-certification.md](developer-certification/developer-certification.md)
 {% endcontent-ref %}
 
 ## Symphony REST API <img src=".gitbook/assets/symphony-api-large.png" alt="" data-size="line">

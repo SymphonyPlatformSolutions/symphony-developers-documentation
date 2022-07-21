@@ -110,7 +110,7 @@
 
 ## Developer Certification
 
-* [Developer Certification](developer-certification/untitled.md)
+* [Developer Certification](developer-certification/developer-certification.md)
 * [Developer Training Center](https://learn.symphony.com)
 
 ## Developer Tools

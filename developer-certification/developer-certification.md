@@ -37,12 +37,12 @@ Head over to our Developer Training Center to get started on this [course](https
 ## Symphony Certified Bot Developer <img src="../.gitbook/assets/SY2 Developer Badges 040521-Java.png" alt="" data-size="line"> <img src="../.gitbook/assets/SY2 Developer Badges 040521-Python.png" alt="" data-size="line">
 
 {% hint style="warning" %}
-This course has a pre-requisite requirement of completing the Symphony Development Fundamentals course and achieving a [Symphony Certified Associate Developer](untitled.md#symphony-certified-associate-developer) status.
+This course has a pre-requisite requirement of completing the Symphony Development Fundamentals course and achieving a [Symphony Certified Associate Developer](developer-certification.md#symphony-certified-associate-developer) status.
 {% endhint %}
 
-After completing the [Symphony Development Fundamentals](untitled.md#module-symphony-development-fundamentals-v2) course you then have access to the Certified Bot Developer courses shown below.  These courses give developers experience in developing Symphony chat bots and applications using Symphony BDK tooling. &#x20;
+After completing the [Symphony Development Fundamentals](developer-certification.md#module-symphony-development-fundamentals-v2) course you then have access to the Certified Bot Developer courses shown below.  These courses give developers experience in developing Symphony chat bots and applications using Symphony BDK tooling. &#x20;
 
-We have language pathways for either Java or Python.  So please follow the respective guide below for [Java](untitled.md#module-developing-bots-using-bdk-2.0-for-java) or [Python](untitled.md#module-developing-bots-using-bdk-2.0-for-python).
+We have language pathways for either Java or Python.  So please follow the respective guide below for [Java](developer-certification.md#module-developing-bots-using-bdk-2.0-for-java) or [Python](developer-certification.md#module-developing-bots-using-bdk-2.0-for-python).
 
 ### Module: Developing Bots using BDK 2.0 for Java <img src="../.gitbook/assets/SY2 Developer Badges 040521-Java.png" alt="" data-size="line">
 
@@ -83,7 +83,7 @@ Head over to our Developer Training Center to get started on this [course](https
 ## Symphony Certified Workflow Developer <img src="../.gitbook/assets/SY2-Developer-Badges-111021-Workflow (1) (1).png" alt="" data-size="line">
 
 {% hint style="warning" %}
-This course has a pre-requisite requirement of completing the Symphony Development Fundamentals course and achieving a [Symphony Certified Associate Developer](untitled.md#symphony-certified-associate-developer) status.
+This course has a pre-requisite requirement of completing the Symphony Development Fundamentals course and achieving a [Symphony Certified Associate Developer](developer-certification.md#symphony-certified-associate-developer) status.
 {% endhint %}
 
 ### Module: Implementing Workflows with WDK
