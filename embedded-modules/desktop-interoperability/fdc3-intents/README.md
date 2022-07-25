@@ -19,9 +19,9 @@ It is possible to attach a message context to the intent. The message may contai
 
 It is possible to preset the list of contacts, identified through their email addresses. When several contacts are listed, the message is sent to a group chat with the list of contacts.
 
-![When receiving a StartChat intent, Symphony will display a modal dialog with the message content.](<../../../.gitbook/assets/image (4).png>)
+![Testing the StartChat intent, using the FDC3 Workbench.](../../../.gitbook/assets/Animation.gif)
 
-#### Examples
+#### Example
 
 Simple example with a predefined recipient and message:
 
@@ -29,25 +29,29 @@ Simple example with a predefined recipient and message:
 {% tab title="Simple message" %}
 ```
 fdc3.raiseIntent('StartChat', {
-    "type": "fdc3.chat.initSettings",
-    "message": {
-      "text": {
-        "text/markdown": "Hello!"
-      }
-    },
-    "members": {
+  "type": "fdc3.chat.initSettings",
+  "message": {
+    "text": {
+      "text/markdown": "Hello there!"
+    }
+  },
+  "members": {
     "type": "fdc3.contactList",
     "contacts": [
       {
         "type": "fdc3.contact",
         "id": {
-          "email": "jane.doe@example.com"
+          "email": "pierre.neu@symphony.com"
         }
       }
     ]
   }
 });
 ```
+{% endtab %}
+
+{% tab title="Result in Symphony" %}
+![](<../../../.gitbook/assets/image (4).png>)
 {% endtab %}
 {% endtabs %}
 
