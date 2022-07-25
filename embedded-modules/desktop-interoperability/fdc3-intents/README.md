@@ -19,7 +19,7 @@ It is possible to attach a message context to the intent. The message may contai
 
 It is possible to preset the list of contacts, identified through their email addresses. When several contacts are listed, the message is sent to a group chat with the list of contacts.
 
-![Testing the StartChat intent, using the FDC3 Workbench.](../../../.gitbook/assets/Animation.gif)
+![Testing the StartChat intent, using the FDC3 Workbench. The message sample used here comes from the Message format page.](../../../.gitbook/assets/Animation.gif)
 
 #### Example
 

@@ -78,7 +78,7 @@ Note: _Please replace Jane Doe and jane.doe@company.com with the relevant user m
 ```
 {% endtab %}
 
-{% tab title="Images" %}
+{% tab title="Image" %}
 ```json
 {
   "type": "fdc3.chat.initSettings",
