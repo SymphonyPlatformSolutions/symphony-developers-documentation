@@ -14,6 +14,10 @@ For a deeper dive into the BDK 2.0 and its offerings, continue here:
 [bdk-2.0](../../../developer-tools/developer-tools/bdk-2.0/)
 {% endcontent-ref %}
 
+{% content-ref url="../../../developer-tools/developer-tools/bdk-2.0-for-python.md" %}
+[bdk-2.0-for-python.md](../../../developer-tools/developer-tools/bdk-2.0-for-python.md)
+{% endcontent-ref %}
+
 ### Configure your Bot for BDK 2.0 Development <a href="#configure-your-bot-for-bdk-2-0-development" id="configure-your-bot-for-bdk-2-0-development"></a>
 
 Generating and configuring your bot project has never been easier. Before moving on to one of our dedicated bot tutorials, quickly generate and configure your bot using the BDK 2.0!

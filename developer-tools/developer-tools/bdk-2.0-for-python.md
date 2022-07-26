@@ -2,16 +2,17 @@
 
 ### Summary
 
-* [Description](bdk-2.0-for-python.md#description)
-* [Installation](bdk-2.0-for-python.md#installation)
-* [Configuration](bdk-2.0-for-python.md#configuration)
-* [Authentication](bdk-2.0-for-python.md#authentication)
-* [Datafeed Management](bdk-2.0-for-python.md#datafeed-management)
-* [Orchestrating Workflows](bdk-2.0-for-python.md#orchestrating-workflows-with-bdk-2.0-for-python)
-* [Managing Multiple Bots](bdk-2.0-for-python.md#managing-multiple-bots)
-* [Activities API](bdk-2.0-for-python.md#activities-api)
-* [User, Message, & Room Management](bdk-2.0-for-python.md#user-message-and-room-management)
-* [Message Templating](bdk-2.0-for-python.md#message-templating)
+* [Description](bdk-2.0/#description)
+* [Installation](bdk-2.0/#installation)
+* [Configuration](bdk-2.0/#configuration)
+* [Authentication](bdk-2.0/#authentication)
+* [Datafeed Management](bdk-2.0/#datafeed-management)
+* [Orchestrating Workflows](bdk-2.0/#orchestrating-workflows-with-the-bdk-2-0)
+* [Managing Multiple Bots](bdk-2.0/#managing-multiple-bots)
+* [Activities API](bdk-2.0/#activities-api)
+* [User, Message, & Room Management](bdk-2.0/#user-message-and-room-management)
+* [Message Templating](bdk-2.0/#message-templating)
+* [SpringBoot Integration](bdk-2.0/#springboot-integration)
 
 ### Description
 

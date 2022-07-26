@@ -12,6 +12,16 @@ To learn more about BDK 2.0 for Java, continue here:
 [bdk-2.0](bdk-2.0/)
 {% endcontent-ref %}
 
+## Bot Developer Kit 2.0 for Python
+
+BDK 2.0 for Python is our latest version of the Symphony Bot Developer Kit for Python Developers.  With an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots on Symphony has never been easier.
+
+To learn more about BDK 2.0 for Python, continue here:
+
+{% content-ref url="bdk-2.0-for-python.md" %}
+[bdk-2.0-for-python.md](bdk-2.0-for-python.md)
+{% endcontent-ref %}
+
 ## Symphony Bot Generator
 
 The easiest way to begin building Bots and Extension Applications is through the Symphony Bot Generator. A command line tool that allows you to generate code scaffolds across the language specific Bot Developer Kits (BDK).
