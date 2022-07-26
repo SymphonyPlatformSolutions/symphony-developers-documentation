@@ -5,13 +5,9 @@
 The StartChat intent can take an optional message property, that will contain a preset message that the user can preview and send in the chat.
 
 The message can include rich text, using markdown. We support **paragraphs**, **bullet points** and **links**, as well as text in **bold** and **italic**. \
-In addition, we also support entities such as **mentions**, **cashtags**, **hashtags**, or **attachments** (including **images**).
-
-We also support **FDC3 action buttons**, that can be included in a chat message and trigger an intent when clicked by a user. Action buttons can be placed at a specific location in the message by referencing them in the text section using the following format: `§button1(id/button1)` where button1 is the identifier of the entity.
+In addition, we also support entities such as **mentions**, **cashtags**, **hashtags**, **attachments** (including **images**) and **action buttons**.
 
 It is possible to add several images or action buttons in a message.&#x20;
-
-See below few examples of messages showing how they are structured.
 
 {% hint style="info" %}
 **Note**: The formal definition of the supported format will be specified in the fdc3 standard shortly. Small breaking changes may still be introduced.
@@ -20,6 +16,20 @@ See below few examples of messages showing how they are structured.
 {% hint style="info" %}
 **Size limit on attachments**: We recommend to limit the total size of attached files & images in a message to 1MB.
 {% endhint %}
+
+#### FDC3 Action buttons
+
+We also support **FDC3 action buttons**, that can be included in a chat message and trigger an intent when clicked by a user.&#x20;
+
+Action buttons can be placed at a specific location in the message by referencing them in the text section using the following format: `§[My button 1](id/button1)` where `button1` is the identifier of the entity, and `My Button 1` is the fallback text that would be displayed if the user viewing the message does not have FDC3 enabled.
+
+The behavior of an action button is then described in the `entities` section of the context data. It is possible to specify which `title` the button will have and which `intent` & `context` data will be raised when clicked.&#x20;
+
+An example of an action button is available below.
+
+#### Examples
+
+See below few examples of messages showing how they are structured.
 
 {% tabs %}
 {% tab title="Rich text" %}
