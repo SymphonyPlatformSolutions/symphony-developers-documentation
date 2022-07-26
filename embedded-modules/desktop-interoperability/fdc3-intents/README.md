@@ -51,7 +51,7 @@ fdc3.raiseIntent('StartChat', {
 {% endtab %}
 
 {% tab title="Result in Symphony" %}
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)
 {% endtab %}
 {% endtabs %}
 

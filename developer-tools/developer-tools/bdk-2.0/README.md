@@ -16,9 +16,9 @@
 
 ### Description
 
-The BDK 2.0 for Java is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how BDK 2.0 can help power your Symphony bots and integrations today!
+The BDK 2.0 for Java is the latest version of the Symphony Bot Developer Kit, a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows. Continue here to learn how BDK 2.0 for Java can help power your Symphony bots and integrations today!
 
-* The BDK 2.0 fro Java Github repo can be found here: [https://github.com/SymphonyPlatformSolutions/symphony-api-client-java](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java)
+* The BDK 2.0 for Java Github repo can be found here: [https://github.com/finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
 * The BDK 2.0 for Java Certification course can be found here: [https://learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
 
 ### Installation
@@ -95,7 +95,7 @@ By default this configuration file is generated, however you can customize this 
 
 | Property     | Description                                                                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `version`    | version of the datafeed service to be used.  By default, the bot will use the datafeed v1 service.                                                           |
+| `version`    | version of the datafeed service to be used.  By default, the bot will use the datafeed v2 service.                                                           |
 | `idFilePath` | the path to the file which will be used to persist a created datafeed id in case the datafeed service v1 is used                                             |
 | `retry`      | the specific retry configuration can be used to override the global retry configuration.  If no retry configuration is defined, the global one will be used. |
 
@@ -459,7 +459,7 @@ class HelloFormReplyActivity extends FormReplyActivity<FormReplyContext> {
 ```
 
 {% hint style="info" %}
-Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class. For more information on the implementation fo the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
+Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class.  For more information on the implementation for the `FormReplyActivity` class, continue [here](https://github.com/SymphonyPlatformSolutions/symphony-api-client-java/blob/master/symphony-bdk-core/src/main/java/com/symphony/bdk/core/activity/form/FormReplyActivity.java).
 {% endhint %}
 
 As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.

@@ -127,6 +127,7 @@
         * [Build an Interactive Bot using the BDK 1.0](developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/building-an-interactive-bot-using-bdk.md)
         * [Build a Headless Bot using the BDK 1.0](developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/bdk/building-a-headless-bot-using-the-bdk.md)
       * [Configure your Bot for BDK 1.0](developer-tools/developer-tools/bdk-2.0-java/bdk-1.0-java/configure-your-bot-for-bdk.md)
+  * [BDK 2.0 for Python](developer-tools/developer-tools/bdk-2.0-for-python.md)
   * [Postman](developer-tools/developer-tools/postman.md)
   * [Live Renderer Tool](https://renderer-tool.app.symphony.com/)
   * [UI Style Guide](developer-tools/developer-tools/ui-style-guide/README.md)
