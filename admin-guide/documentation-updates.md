@@ -16,6 +16,10 @@ In this page, you will find the main updates/announcements of the developers por
 
 ### 2022
 
+#### **July 2022**
+
+* [Create Message](https://symphony.readme.io/restapi/reference/create-message-v4) endpoint: removed a mistake in the documentation mentioning that bots were able to send a message in streams it is not part of with adhoc permissions, although it has never been supported.
+
 #### February 2022
 
 * Extension Apps: removed documentation of addMenuItem() method in [modules](../building-extension-applications-on-symphony/overview-of-extension-api/extension-api-services/modules-service.md) service after deprecation of client 1.5, as this method is not anymore supported in the client 2.0.
