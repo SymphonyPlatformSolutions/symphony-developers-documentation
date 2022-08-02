@@ -11,7 +11,7 @@ description: >-
 {% hint style="info" %}
 To download the Agent, click [here](https://docs.developers.symphony.com/admin-guide/agent-guide/agent-download).
 
-For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
+For a list of Agent x SBE compatibilities, click [here](../../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
@@ -22,7 +22,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 * Improved the [Health Check Extended v3](https://developers.symphony.com/v20.7/restapi/reference#health-check-extended-v3) API endpoint to return the authType field, showing if the Agent authentication is configured to use RSA or Certificate.
 * [Message Create v4](https://developers.symphony.com/restapi/v20.7/reference#create-message-v4): Fixed issue when sending a message that mentions an external user by his/her email.
 * Properly return a 451 error code when a message sent is blocked by DLP (Data Loss Prevention) instead of returning a 400 error code.
-* More secured way to provide Authentication credentials for the Agent: RSA private key for the agentservice user and ceservice user can be passed through VM parameters. For more information, refer to [Agent 2.X and above Installation](../../agent-guide/agent-2.x-and-above-installation.md).
+* More secured way to provide Authentication credentials for the Agent: RSA private key for the agentservice user and ceservice user can be passed through VM parameters. For more information, refer to [Agent 2.X and above Installation](../../../agent-guide/agent-2.x-and-above-installation.md).
 
 ### Agent 2.61.1
 
