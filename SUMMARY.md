@@ -26,6 +26,7 @@
   * [REST API Reference](https://developers.symphony.com/restapi/reference)
 * [Configuration](building-bots-on-symphony/configuration/README.md)
   * [Configure your Bot for BDK 2.0 for Java](building-bots-on-symphony/configuration/configure-your-bot-for-bdk-2.0.md)
+  * [Configure your Bot for BDK 2.0 for Python](building-bots-on-symphony/configuration/configure-your-bot-for-bdk-2.0-for-python.md)
   * [Creating a Bot User](building-bots-on-symphony/configuration/creating-a-bot-user.md)
   * [Bot Permissions](building-bots-on-symphony/configuration/bot-permissions.md)
   * [Truststores](building-bots-on-symphony/configuration/truststores.md)
