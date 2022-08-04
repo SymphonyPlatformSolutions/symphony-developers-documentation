@@ -176,7 +176,7 @@ This will have an impact on you if some of your automations or bots are still us
 
 To facilitate this transition, a new feature called the **bridge** has been introduced in the Agent service so consumers of the deprecated Datafeed v1 APIs will transparently use the Datafeed v2 service.
 
-* This bridge is available starting with Agent 20.15 (May 2022) and can be enabled through the following configuration flag `agent.df1ToDf2Bridge.enabled`.&#x20;
+* This bridge is available starting with Agent 22.6 (June 2022) and can be enabled through the following configuration flag `agent.df1ToDf2Bridge.enabled`.&#x20;
 * In a subsequent Agent release, this bridge will be enabled by default, but could still be disabled through configuration (October 2022).&#x20;
 * Then in a subsequent Agent release, the bridge will be always enabled (January 2023).
 
