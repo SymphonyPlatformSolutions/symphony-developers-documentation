@@ -37,5 +37,5 @@ Please refer to the [main page](./) for more information (release cadence, new L
   _Please note that a breaking change will be introduced in the 22.7 version of the Agent: indeed the_ `filters` _parameter will be removed and replaced by another one,_ `eventType`_, which will allow to restrict the payload to the only_ [_Real Time Events_](../../../building-bots-on-symphony/datafeed/real-time-events.md) _requested._
 * Consequently to the deprecation notice of the Datafeed v1 APIs on [Agent 20.14](agent-20.14.md#deprecation-notice) change log, a bridge has been introduced to facilitate the transition period from Datafeed v1 APIs to Datafeed v2 service. More information are available for the [deprecation timeline and the introduction of the bridge](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed) as well as the [benefits of Datafeed v2](https://developers.symphony.com/restapi/v20.14/reference/datafeed).
 * Fixed a bug with Blast Message API returning unexpected 500 error message.
-* Spring boot has been updated to version 2.7.0
+* Spring boot has been updated to version 2.6.8
 
