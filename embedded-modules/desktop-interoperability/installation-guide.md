@@ -3,7 +3,7 @@
 ### Prerequisites
 
 1. A Desktop Integration Platform (DIP) is installed on your machine. The following platforms are supported:
-   * Finsemble version 6.6.0+
+   * Finsemble version 6.6.0 (recommended: 7.3.0+)
    * Glue42 version 3.15+
 2. Minimal Symphony pod version: SBE 20.14+&#x20;
 
@@ -75,63 +75,49 @@ Manually **add an app entry** into your finsemble app directory file (_/public/c
 
 ```json
 "symphony": {
-			"appId": "symphony",
-			"name": "symphony",
-			"description": "Symphony",
-			"manifest": {
-				"component": {
-					"singleton": true
-				},
-				"window": {
-					"windowType": "assimilation",
-					"path": "C:/some/path/on/disk/mynativeapp.exe"
-				},
-				"foreign": {
-					"components": {
-						"App Launcher": {
-							"launchableByUser": false
-						},
-						"Toolbar": {
-							"iconURL": "https://assets.finsemble.com/components/fdc3-workbench/fdc3-icon-256.png"
-						},
-						"Window Manager": {
-							"FSBLHeader": false,
-							"persistWindowState": false
-						}
-					}
-				},
-				"interop": {}
-			},
-			"version": "1.0.0",
-			"tooltip": "FDC3 Test App",
-			"images": [
-				{
-					"url": "https://assets.finsemble.com/components/fdc3-workbench/fdc3-icon-256.png",
-					"tooltip": "FDC3 logo"
-				}
-			],
-			"tags": [
-				"fdc3",
-				"interop",
-				"interoperabilty",
-				"developer tool"
-			],
-			"publisher": "Symphony",
-			"icons": [
-				{
-					"url": "https://assets.finsemble.com/components/fdc3-workbench/fdc3-icon-256.png"
-				}
-			],
-			"intents": [
-				{
-					"name": "StartChat",
-					"displayName": "Start Chat",
-					"contexts": [
-						"fdc3.chat.initSettings"
-					]
-				}
-			]
-		},
+            "appId": "symphony",
+            "name": "symphony",
+            "manifest": {
+                "foreign": {
+                    "components": {
+                        "App Launcher": {
+                            "launchableByUser": false
+                        },
+                        "Window Manager": {
+                            "FSBLHeader": {
+                                "hideClose": false,
+                                "hideMaximize": false,
+                                "hideMinimize": false
+                            }
+                        }
+                    }
+                },
+                "component": {
+                    "singleton": true,
+                    "spawnOnStartup": false,
+                    "preload": []
+                },
+                "interop": {
+                    "selectConnect": [],
+                    "autoConnect": true
+                }
+            },
+            "manifestType": "finsemble",
+            "version": "1",
+            "description": "",
+            "intents": [
+                {
+                    "name": "StartChat",
+                    "displayName": "Start Chat",
+                    "contexts": [
+                        "fdc3.chat.initSettings"
+                    ]
+                }
+            ],
+            "icons": [
+                {"src": "https://symphony.com/wp-content/uploads/2021/10/logo-symphony-icon.jpeg", "sizes": "200x200"}
+            ]
+        }
 ```
 
 #### Glue42
@@ -199,7 +185,7 @@ To verify that Symphony can receive intents, we will attempt to raise a StartCha
 
 **Note:** If you don't have an app that sends a StartChat intent, you can add the FDC3 Workbench app, a developer tool available on [Finos](https://fdc3.finos.org/toolbox/fdc3-workbench/), to your app directory.
 
-Send the StartChat intent using a sample context data (fdc3.chat.initSettings), such as the example provided [here](https://app.gitbook.com/o/-MB5vuhMZDPnMHgoaIX-/s/-MB51RkjSmfA\_ejydg4M-3415978100/\~/changes/BeNT7JQ1eO6nLDxYh3su/embedded-modules/desktop-interoperability/fdc3-intents#examples).
+Send the StartChat intent using a sample context data (fdc3.chat.initSettings), such as the example provided [here](fdc3-intents/message-format.md).
 
 If Symphony displays a popup, Symphony correctly receives intents coming from desktop apps.
 
