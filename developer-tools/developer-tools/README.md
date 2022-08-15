@@ -22,6 +22,16 @@ To learn more about BDK 2.0 for Python, continue here:
 [bdk-2.0-for-python.md](bdk-2.0-for-python.md)
 {% endcontent-ref %}
 
+## Workflow Developer Kit 1.0
+
+The Workflow Developer Kit - WDK 1.0 is our low-code developer toolkit which developers can use to build bots on Symphony.  It's a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows.&#x20;
+
+To learn more about WDK 1.0, continue here:
+
+{% content-ref url="wdk-1.0.md" %}
+[wdk-1.0.md](wdk-1.0.md)
+{% endcontent-ref %}
+
 ## Symphony Bot Generator
 
 The easiest way to begin building Bots and Extension Applications is through the Symphony Bot Generator. A command line tool that allows you to generate code scaffolds across the language specific Bot Developer Kits (BDK).
