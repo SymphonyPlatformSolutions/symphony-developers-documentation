@@ -12,7 +12,13 @@
 
 ### Description
 
-The Workflow Developer Kit - WDK 1.0 is our low-code developer toolkit which developers can use to build bots on Symphony.  It's a library of tools and intelligent API bindings that provides an ultra simplified configuration and authentication setup, intuitive message and room management, customizable message templating, and a new activities API that makes it easy to facilitate bot workflows.  To accelerate the development of bots, the WDK, built on top of the BDK takes it one step further by enabling developers to create applications without writing code.&#x20;
+The Workflow Developer Kit - WDK 1.0 is our low-code developer toolkit which developers can use to build workflow based bots on Symphony.  To accelerate the development of bots, the WDK, built on top of the BDK takes it one step further by enabling developers to create applications without writing code.&#x20;
+
+#### SWADL&#x20;
+
+The Symphony Workflow Automation Definition Language or SWADL for short is the format used to write workflows.  Workflows are written in a declarative manner, giving access to most of the Symphony APIs to react on events and perform actions as common as sending messages to users. &#x20;
+
+Workflows are then executed by a generic bot that runs a workflow execution engine.  As a workflow developer, you simply write workflows in SWADL files and provide them to the bot for execution.
 
 Continue here to learn how WDK 1.0 can help power your Symphony bots and integrations today!
 
@@ -74,7 +80,6 @@ Symphony backend URL and credentials are configured as any bot.  The BDK configu
 {% tabs %}
 {% tab title="wdk-bot/application.yaml" %}
 ```yaml
-host: develop2.symphony.com
 # For more information, please refer to deployment documentation: https://github.com/finos/symphony-wdk/blob/master/docs/deployment.md
 bdk:
   host: develop2.symphony.com
@@ -245,12 +250,6 @@ The generated workflow project includes a sample workflow which is placed in the
 #### Workflows
 
 A Symphony workflow can be thought of as a sequence of operations or a repeatable pattern of activities that are organized together in order to transform data, provide a service, or process information. Each of these operations or activities may be completed by a single user, shared between a bot and a user, or shared between multiple actors including bots, users, and even third party systems.
-
-#### SWADL&#x20;
-
-The Symphony Workflow Automation Definition Language or SWADL for short is the format used to write workflows.  Workflows are written in a declarative manner, giving access to most of the Symphony APIs to react on events and perform actions as common as sending messages to users. &#x20;
-
-Workflows are then executed by a generic bot that runs a workflow execution engine.  As a workflow developer, you simply write workflows in SWADL files and provide them to the bot for execution.
 
 The generated workflow bot comes with a sample workflow which is shown below:
 
