@@ -97,6 +97,7 @@ By default this configuration file is generated, however you can customize this 
 
 | Property  | Description                                                                                                       |
 | --------- | ----------------------------------------------------------------------------------------------------------------- |
+| `bdk`     | BDK Class config entry point                                                                                      |
 | `host`    | component URL                                                                                                     |
 | `port`    | component port available                                                                                          |
 | `context` | component  context                                                                                                |
@@ -122,6 +123,12 @@ By default this configuration file is generated, however you can customize this 
 | `multiplier`            | after each attempt, the interval between two attempts will be multiplied by this factor                                                                                                                       |
 | `initialIntervalMillis` | the initial interval between two attempts                                                                                                                                                                     |
 | `maxIntervalMillis`     | the limit of interval between two attempts.  For example, if the current interval is 1000 ms, multiplier is 2.0 and the `maxIntervalMillis` is 1500 ms, then the interval for the next retry will be 1500 ms. |
+
+#### Workflow Developer Kit Configuration Structure
+
+| Property    | Description                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------- |
+| `workflows` | the path to the folder containing your workflows where `folder` can be an absolute or relative path |
 
 An example customized configuration file is seen below:
 
@@ -179,6 +186,9 @@ bdk:
     initialIntervalMillis: 2000
     multiplier: 1.5
     maxIntervalMillis: 10000
+
+workflows:
+  folder: /Users/wdk/my-folder-for-workflows
 ```
 {% endtab %}
 {% endtabs %}
@@ -197,12 +207,10 @@ WDK 1.0 also supports OBO (On-Behalf-Of) pattern of authentication, allowing an 
 
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
-* Get the presence state of other connected users
 * Initiate IMs and MIMs with other users
 * Send messages and attachments
-* Set the context user's own presence
 
-To leverage an OBO based workflow, simply include the `app` credentials to be used for authenticating your OBO Session within your `application.yaml`.  Once authenticated your workflow bot can perform any of the OBO workflows listed above:
+To leverage an OBO based workflow, simply include the `app` credentials to be used for authenticating your OBO Session within your `application.yaml`.
 
 {% tabs %}
 {% tab title="wdk-bot/application.yaml" %}
@@ -223,6 +231,28 @@ bdk:
 ```
 {% endtab %}
 {% endtabs %}
+
+Your activity that will be performing OBO actions will also need to include the `obo:`_`username`_ or `obo:`_`user-id`_ that the actions will be performed as.
+
+{% tabs %}
+{% tab title="wdk-bot/workflows/create-room-obo.swadl.yaml" %}
+```yaml
+id: create-room-obo-workflow
+activities:
+- create-room:
+      id: createRoomObo
+      room-name: OBO created room
+      room-description: Example of a room created with obo
+      user-ids:
+        - 734583310035744
+        - 625588317732700
+      obo:
+        username: username@symphony.com
+```
+{% endtab %}
+{% endtabs %}
+
+Once authenticated your workflow bot can perform any of the OBO workflows listed above.
 
 ### Running your bot
 
@@ -256,18 +286,19 @@ The generated workflow bot comes with a sample workflow which is shown below:
 {% tabs %}
 {% tab title="wdk-bot/workflows/ping.swadl.yaml" %}
 ```yaml
+id: ping-pong-workflow
 activities:
   - send-message:
       id: pingPong
-        on:
-          message-received:
-            content: /ping
+      on:
+        message-received:
+          content: /ping
       content: "Pong"
 ```
 {% endtab %}
 {% endtabs %}
 
-Now in any conversations the workflow bot is part of, if the message `/ping` is sent, the bot will reply with `Pong`. Each received `ping` message creates a workflow instance and executes the `pingPong` activity.
+Now in any conversations the workflow bot is part of, if the message `/ping` is sent, the bot will reply with `Pong`. Each received `/ping` message creates a workflow instance and executes the `pingPong` activity.
 
 You can find more example workflows [here](https://github.com/finos/symphony-wdk/tree/master/docs/examples), and our [Symphony WDK Gallery](https://github.com/finos/symphony-wdk-gallery).&#x20;
 
@@ -305,7 +336,7 @@ activities:
 {% endtab %}
 {% endtabs %}
 
-In the example above, `sendHello` is executed first when a _/hello_ message is sent, then `sendBye`.
+In the example above, `sendHello` is executed first when a `/hello` message is sent, then `sendBye`.
 
 Intermediate events can be defined too, for instance for a workflow when the user has to provide multiple inputs to move through the activities or if the workflow sent a form and is waiting for a reply.
 
@@ -330,6 +361,6 @@ activities:
 {% endtab %}
 {% endtabs %}
 
-In the example above, `sendHello` is executed first when a _/hello_ message is sent, then the workflow waits for another message (_/bye_) to execute `sendBye`.
+In the example above, `sendHello` is executed first when a `/hello` message is sent, then the workflow waits for another message (`/bye`) to execute `sendBye`.
 
 Most of the events a workflow will react on are datafeed events such as message received, user joined room, connection requested.  The workflow bot is listening for any datafeed events its service account can receive and then dispatch them to the appropriate workflows.  Other Event types can be found [here](https://github.com/finos/symphony-wdk/blob/master/docs/concepts.md#events).
