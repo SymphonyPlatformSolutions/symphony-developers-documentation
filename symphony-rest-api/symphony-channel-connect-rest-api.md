@@ -661,6 +661,7 @@ HTTP 400
 {
   "code" : "EMAIL_DOMAIN_NOT_ALLOWED"
   "message": "Public email domains are not allowed. Only business email domains will be accepted."
+}
 ```
 
 #### If the user doesn't exist or if disabled:
