@@ -282,7 +282,7 @@ symphony.listen({
 
 _\*Items in italics are only returned when **allowApiContent** is enabled on the pod's Client Configuration - this will allow the ECP API to return sensitive information (such as user names, room names, message content)._
 
-```javascript
+```typescript
 symphony.listen({
   type: 'MessageNotifications',
   params: {
@@ -292,6 +292,21 @@ symphony.listen({
     console.log('Stream id: ' + notification.streamId);
     console.log('Sender id: ' + notification.fromWhomId);
     console.log('Mentioned me: ' + notification.isMention);
+  },
+});
+```
+
+#### Activity notifications
+
+As any user activity within ECP happens within an iframe, the parent page can't know if the user is still active or not. This can be a problem when implementing an automatic inactivity logout on the parent page, for example. To solve this, you can subscribe to "activity notifications" from ECP, and plug this into your general activity status.
+
+There are no `SubscriptionParameters` or `NotificationObject` for this notification feed
+
+```typescript
+symphony.listen({
+  type: 'ActivityNotifications',
+  callback: () => {
+    console.log('last active time: ' + Date.now());
   },
 });
 ```
