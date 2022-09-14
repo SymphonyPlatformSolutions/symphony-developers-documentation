@@ -161,6 +161,8 @@
 * [Symphony REST API](https://rest-api.symphony.com/)
 * [Symphony Connect REST API](https://federation.readme.io/)
 * [Symphony Channel Connect REST API](symphony-rest-api/symphony-channel-connect-rest-api.md)
+* [Federation](symphony-rest-api/federation/README.md)
+  * [Interactive templates](symphony-rest-api/federation/interactive-templates.md)
 
 ## Mobile Frameworks
 
