@@ -14,7 +14,7 @@ The Agent API (see [https://developers.symphony.com/restapi/reference/create-mes
 
 **JSON data** sent in a message can be interpreted in the aim to tell the Agent to display an interactive template on WhatsApp through the WhatsApp gateway.
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Example of the agent API call</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image1.png" alt=""><figcaption></figcaption></figure>
 
 ### Prerequisites <a href="#format-of-the-json-call-to-the-agent" id="format-of-the-json-call-to-the-agent"></a>
 
@@ -31,10 +31,10 @@ A WhatsApp template payload is divided into 4 parts:
 
 These 4 parts correspond to the user interface that is used to define a template in WhatsApp Manager.
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image2.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-These components can be customized using parameters.
+These components can be customised  using parameters.
 {% endhint %}
 
 #### Format to send to the Agent to display the template
@@ -72,7 +72,7 @@ The header property value is a JSON object which contains either the text value 
 
 #### Example 1: Text
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image3.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 WhatsApp Manager only supports 1 variable in the header text.
@@ -87,7 +87,7 @@ WhatsApp Manager only supports 1 variable in the header text.
 
 #### Example 2: Redirection parameter
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image4.png" alt=""><figcaption></figcaption></figure>
 
 ```json
 "header": {
@@ -110,7 +110,7 @@ In the example above:
 
 #### Example 3: Send a template with a PDF file in the header
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image5.png" alt=""><figcaption></figcaption></figure>
 
 ```json
 "header": {
@@ -141,7 +141,7 @@ The link associated to the document must be publicly accessible.
 * If both a link and an attachment are present (the link of the document in the payload, and the attachment in the request body), the link will be used.
 * If no link is present and there are multiple attachments in the request body, the first attachment in the template will be used.
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Example of agent API call</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image6.png" alt=""><figcaption></figcaption></figure>
 
 In the example above, the backend checks if the `parameters` object contains the type `DOCUMENT`, and if the `attachment` field is pointing to a file link.
 
@@ -190,7 +190,7 @@ The sub-object must have a **type** attribute which supports two possible values
 
 For example, you can have the template below:
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image7.png" alt=""><figcaption></figcaption></figure>
 
 With the following JSON data:&#x20;
 
@@ -224,11 +224,11 @@ The **JSON data** should only contain data for buttons using the **dynamic URL t
 
 #### Dynamic URL
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image8.png" alt=""><figcaption></figcaption></figure>
 
 #### Static URL
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image9.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Static URL** buttons and **QUICK\_REPLY** buttons do not require any parameter.
@@ -250,7 +250,7 @@ The **JSON data** should only contain data for buttons using the **dynamic URL t
 
 #### **Example 1: Dynamic URL in first place**
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image10.png" alt=""><figcaption></figcaption></figure>
 
 Data needs to be provided for the first dynamic URL button ("index": 0):
 
