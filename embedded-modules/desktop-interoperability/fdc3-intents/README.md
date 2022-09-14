@@ -11,9 +11,9 @@ description: >-
 
 ### Start chat
 
-Symphony will listen to StartChat intents, that allow an app to initiate a chat on Symphony, with an optional message, and an optional list of contacts.&#x20;
+Symphony will listen to _StartChat_ intents, that allow an app to initiate a chat on Symphony, with an optional message, and an optional list of contacts.&#x20;
 
-When a StartChat intent is received by Symphony, a modal opens where the user can review the list of recipients, as well as the content of the message, and then send the message.
+When a _StartChat_ intent is received by Symphony, a modal opens where the user can review the list of recipients, as well as the content of the message, and then send the message.
 
 It is possible to attach a message context to the intent. The message may contain images, cashtags, mentions, as well as action buttons (more info [below](./#fdc3-action-buttons)), which on click will trigger a local intent with context data. The **format of the message** is presented [here](message-format.md).
 
@@ -27,7 +27,7 @@ Simple example with a predefined recipient and message:
 
 {% tabs %}
 {% tab title="Simple message" %}
-```
+```javascript
 fdc3.raiseIntent('StartChat', {
   "type": "fdc3.chat.initSettings",
   "message": {
@@ -63,9 +63,92 @@ The FDC3 action buttons will be displayed as inline buttons in the message. When
 
 Read [here ](message-format.md)how to add FDC3 action buttons to your messages.
 
+#### Intent return values
+
+As part of the support of FDC3 version 2.0, the StartChat intent now returns to the calling app the ids of the chat conversations where the message has been sent. It is then possible to directly target these rooms in a further call, using the Send Chat Message intent below.
+
+### Send chat message
+
+Similar to StartChat, the _SendChatMessage_ intent allows to send a chat message directly in a specific chat conversation in Symphony, by specifying the identifier of a chat room.
+
+This is working particularly well in combination with the StartChat intent, which now returns the identifier of the chat conversations where the message has been sent.
+
+**Example of combining Start chat and Send chat message**
+
+```javascript
+// Start a chat and retrieve a reference to the chat room created
+const intentResolution = await fdc3.raiseIntent("StartChat", {
+  "type": "fdc3.chat.initSettings",
+  "message": {
+    "text": {
+      "text/markdown": "Hello there!"
+    }
+  });  
+const chatRoom = intentResolution.getResult();
+
+
+//Some time later
+let chatMessage: ChatMessage = {
+    "type": "fdc3.chat.message",
+    chatRoom,
+    "message": "Another message to send in the room"
+}
+await fdc3.raiseIntent("SendChatMessage", chatMessage, intentResolution.source);
+```
+
+### View messages
+
+Symphony now listens to ViewMessages intents, that allows FDC3 apps to display in Symphony the list of chat messages that contain a specified **cashtag** or **hashtag**.
+
+When a ViewMessages intent is received, Symphony will display a modal with the Signal View, showing all matching messages.
+
+**Examples**
+
+Display all received messages matching the cashtag $EURUSD.
+
+{% tabs %}
+{% tab title="Cashtag example" %}
+```javascript
+fdc3.raiseIntent('ViewMessages', {
+    "type": "fdc3.searchCriteria",
+    "contexts":[
+	{
+		"type": "fdc3.instrument",
+		"id": {
+			"ticker":"EURUSD"
+		}
+	}
+});
+```
+{% endtab %}
+
+{% tab title="Result in Symphony" %}
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>View all messages received that contained the specified cashtag.</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+Display all received messages containing the hashtag #SUP-15478.
+
+{% tabs %}
+{% tab title="Hashtag example" %}
+```javascript
+fdc3.raiseIntent('ViewMessages', {
+  "type": "fdc3.searchCriteria",
+  "contexts": [
+    "#SUP-15478"
+  ]
+});
+```
+{% endtab %}
+
+{% tab title="Result in Symphony" %}
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>View all messages received that contained the specified hashtag.</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
 ## **Outbound intents**
 
-### **View Instrument (cashtag hovercard)**&#x20;
+### **View instrument (cashtag hovercard)**&#x20;
 
 When hovering on cashtags, an FDC3 _ViewInstrument_ action will be displayed.&#x20;
 
@@ -77,6 +160,6 @@ On click, Symphony will raise the _ViewInstrument_ intent, with the ticker as co
 
 Symphony can trigger custom intents from in-chat FDC3 action buttons.&#x20;
 
-When such a button is clicked, Symphony raises the predefined intent with its context data to local apps.
+When such a button is clicked, Symphony raises the predefined intent with the attached context data to local apps.
 
 Read [here ](message-format.md)how to add FDC3 action buttons in your chats.
