@@ -9,12 +9,17 @@ description: >-
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.13.11.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-20.13.12.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 20.13.12
+
+* Upgrade to SpringBoot 2.6.8
+* Fixed security vulnerability
 
 ### Agent 20.13.11
 
