@@ -296,7 +296,7 @@ symphony.listen({
 });
 ```
 
-#### Activity notifications
+#### Activity notifications <a href="#activity-notifications" id="activity-notifications"></a>
 
 As any user activity within ECP happens within an iframe, the parent page can't know if the user is still active or not. This can be a problem when implementing an automatic inactivity logout on the parent page, for example. To solve this, you can subscribe to "activity notifications" from ECP, and plug this into your general activity status.
 
