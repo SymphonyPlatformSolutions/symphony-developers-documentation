@@ -6,6 +6,8 @@
 * **Support of FDC3 2.0:** With the new FDC3 2.0 standard, intents can now return values to the calling app. The StartChat intent now returns the stream ids of the chats where the message has been posted. This means that you can target directly these rooms when sending a subsequent chat message (see new Send Chat Message intent below)
 * **Send Chat Message** intent: You can now send a chat message to an existing room, using its streamid. Note: The user still needs to confirm the sending of the message.
 
+**Important**: As we add support for new intents in Symphony, please keep the Symphony app directory entry in your DIP up to date, as the desktop agent may block intents if they are not listed as supported by Symphony in the application directory.
+
 ### Early access features - Continuous delivery
 
 You can get a preview of the new features by loading the early access branch available in UAT and PROD environments.
