@@ -190,7 +190,7 @@ The sub-object must have a **type** attribute which supports two possible values
 
 For example, you can have the template below:
 
-<figure><img src="../../.gitbook/assets/image7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image11.png" alt=""><figcaption></figcaption></figure>
 
 With the following JSON data:&#x20;
 
@@ -228,8 +228,6 @@ The **JSON data** should only contain data for buttons using the **dynamic URL t
 
 #### Static URL
 
-<figure><img src="../../.gitbook/assets/image9.png" alt=""><figcaption></figcaption></figure>
-
 {% hint style="info" %}
 **Static URL** buttons and **QUICK\_REPLY** buttons do not require any parameter.
 {% endhint %}
@@ -250,7 +248,7 @@ The **JSON data** should only contain data for buttons using the **dynamic URL t
 
 #### **Example 1: Dynamic URL in first place**
 
-<figure><img src="../../.gitbook/assets/image10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image12.png" alt=""><figcaption></figcaption></figure>
 
 Data needs to be provided for the first dynamic URL button ("index": 0):
 
@@ -268,7 +266,7 @@ Data needs to be provided for the first dynamic URL button ("index": 0):
 
 Data needs to be provided for the second dynamic URL button ("index": 1)
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image13.png" alt=""><figcaption></figcaption></figure>
 
 ```json
 "buttons": [
