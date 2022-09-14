@@ -112,7 +112,21 @@ Manually **add an app entry** into your finsemble app directory file (_/public/c
                     "contexts": [
                         "fdc3.chat.initSettings"
                     ]
-                }
+                },
+                {
+		    "name": "ViewMessages",
+		    "displayName": "View Messages",
+		    "contexts": [
+		        "fdc3.searchCriteria"
+		    ]
+		},
+		{
+		    "name": "SendChatMessage",
+		    "displayName": "Send Chat Message",
+		    "contexts": [
+		        "fdc3.chat.message"
+		    ]
+		}
             ],
             "icons": [
                 {"src": "https://symphony.com/wp-content/uploads/2021/10/logo-symphony-icon.jpeg", "sizes": "200x200"}
@@ -149,7 +163,21 @@ Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{
             "name": "fdc3.StartChat",
             "displayName": "Start Chart",
             "contexts": [
-                "fdc3.instrument"
+                "fdc3.chat.initSettings"
+            ]
+        },
+        {
+            "name": "fdc3.SendChatMessage",
+            "displayName": "Send Chat Message",
+            "contexts": [
+                "fdc3.chat.message"
+            ]
+        },
+        {
+            "name": "fdc3.ViewMessages",
+            "displayName": "View Messages",
+            "contexts": [
+                "fdc3.searchCriteria"
             ]
         }
     ]
