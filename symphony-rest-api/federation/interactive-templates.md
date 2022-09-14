@@ -7,7 +7,7 @@ You can now configure, with the support of your TAM, structured objects to use i
 The current list includes:
 
 * Messages containing quick reply buttons, where clicking the button sends into the room a reply  **** that the bot is able to read in order to take further action if required.
-* Messages containing preview images that act as links to publicly accessible PDF documents, or as attachments that WhatsApp users can download on their device.
+* The link is used only on our side, we download the attachment and upload it on WhatsApp, the WhatsApp user do not see any difference if we use link or an attachment.
 * Messages including in the body hyperlinks that redirect the user to an existing WhatsApp Connect chat room (given the customer provides the room information into the JSON structured object). &#x20;
 
 The Agent API (see [https://developers.symphony.com/restapi/reference/create-message-v4](https://developers.symphony.com/restapi/reference/create-message-v4)) is used to send a message in an existing stream which accepts messageML and JSON data formats.
@@ -18,7 +18,7 @@ The Agent API (see [https://developers.symphony.com/restapi/reference/create-mes
 
 ### Prerequisites <a href="#format-of-the-json-call-to-the-agent" id="format-of-the-json-call-to-the-agent"></a>
 
-Interactive templates need to be created with type="marketing" and approved in Facebook.
+Interactive templates need to be created, then approved by Facebook.
 
 ### JSON data format used as an input of the Agent API call for interactive templates <a href="#format-of-the-json-call-to-the-agent" id="format-of-the-json-call-to-the-agent"></a>
 
