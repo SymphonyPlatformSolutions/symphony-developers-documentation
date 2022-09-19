@@ -18,6 +18,10 @@ Embedded Collaboration Platform allows you to embed Symphony within your applica
 _**See the**_ [_**partner platform integration**_](ecp-partner-platform-integration.md) _**for more details**_
 {% endhint %}
 
+{% hint style="warning" %}
+Embedded Collaboration Platform (ECP) functionality is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your ECP use case. Prior to using ECP in your Symphony environment(s), you will need to enter into an ECP-specific contract. Please reach out to sales@symphony.com to review your use case, discuss the offering, its pricing or for any further information.
+{% endhint %}
+
 ## Supported browser versions
 
 > * Edge 85+

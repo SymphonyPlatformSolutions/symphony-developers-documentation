@@ -12,6 +12,10 @@ See [Channel Connect](../../symphony-rest-api/symphony-channel-connect-rest-api.
 
 
 
+{% hint style="warning" %}
+Embedded Collaboration Platform (ECP) functionality is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your ECP use case. Prior to using ECP in your Symphony environment(s), you will need to enter into an ECP-specific contract. Please reach out to sales@symphony.com to review your use case, discuss the offering, its pricing or for any further information.
+{% endhint %}
+
 ## Finding the correct pod
 
 In Symphony, each user belong to one pod, which is an instance of a Symphony system allocated to a company. Each Symphony pod has its own domain name, and each user can only log on the pod that user is defined. ECP has to be instantiated from the pod the user is defined on.
