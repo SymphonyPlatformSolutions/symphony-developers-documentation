@@ -275,16 +275,11 @@ symphony.listen({
 
 `NotificationObject`
 
-| Parameter        | Type     | Description                                        |
-| ---------------- | -------- | -------------------------------------------------- |
-| streamId         | string   | Id of the stream                                   |
-| fromWhomId       | number   | UserId of the sender                               |
-| isMention        | boolean  | true if the user has been mentioned in the message |
-| _fromWhomName\*_ | _string_ | _Name of the sender_                               |
-| _streamName\*_   | _string_ | _Title of the chat_                                |
-| _message\*_      | _string_ | _Content of the message_                           |
-
-_\*Items in italics are only returned when **allowApiContent** is enabled on the pod's Client Configuration - this will allow the ECP API to return sensitive information (such as user names, room names, message content)._
+| Parameter  | Type    | Description                                        |
+| ---------- | ------- | -------------------------------------------------- |
+| streamId   | string  | Id of the stream                                   |
+| fromWhomId | number  | UserId of the sender                               |
+| isMention  | boolean | true if the user has been mentioned in the message |
 
 ```typescript
 symphony.listen({
