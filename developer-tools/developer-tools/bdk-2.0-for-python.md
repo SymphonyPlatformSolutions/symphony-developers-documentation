@@ -199,6 +199,12 @@ BDK 2.0 for Python also supports OBO (On-Behalf-Of) pattern of authentication, a
 * Send messages and attachments
 * Set the context user's own presence
 
+{% hint style="info" %}
+Please follow our '**Getting Started with OBO**' guide using the link [here](https://docs.developers.symphony.com/building-extension-applications-on-symphony/app-authentication/obo-authentication#getting-started).
+
+The guide will cover all of the prerequisites needed for OBO and how to enable & upload the OBO extension application, the required permissions and how to ensure the OBO authentication process will work successfully.
+{% endhint %}
+
 To leverage an OBO based workflow, simply instantiate an OBO Session in your bot project. The BDK allows you to instantiate your OBO session from a username or user ID. Once authenticated bots can perform any of the OBO workflows listed above:
 
 ```python
