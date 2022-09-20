@@ -1,4 +1,4 @@
-# WDK 1.2.0
+# WDK 1.0
 
 ### Summary
 
@@ -12,7 +12,7 @@
 
 ### Description
 
-The Workflow Developer Kit - WDK 1.2.0 is our low-code developer toolkit which developers can use to build workflow based bots on Symphony.  To accelerate the development of bots, the WDK, built on top of the BDK takes it one step further by enabling developers to create applications without writing code.&#x20;
+The Workflow Developer Kit - WDK 1.0 is our low-code developer toolkit which developers can use to build workflow based bots on Symphony.  To accelerate the development of bots, the WDK, built on top of the BDK takes it one step further by enabling developers to create applications without writing code.&#x20;
 
 #### SWADL&#x20;
 
@@ -20,14 +20,14 @@ The Symphony Workflow Automation Definition Language or SWADL for short is the f
 
 Workflows are then executed by a generic bot that runs a workflow execution engine.  As a workflow developer, you simply write workflows in SWADL files and provide them to the bot for execution.
 
-Continue here to learn how WDK 1.2.0 can help power your Symphony bots and integrations today!
+Continue here to learn how WDK 1.0 can help power your Symphony bots and integrations today!
 
-* The WDK 1.2.0 Github repo can be found here: [https://github.com/finos/symphony-wdk](https://github.com/finos/symphony-wdk)
-* The WDK 1.2.0 Certification course can be found here: [https://learn.symphony.com/bundles/workflow-developer-certification](https://learn.symphony.com/bundles/workflow-developer-certification)
+* The WDK 1.0 Github repo can be found here: [https://github.com/finos/symphony-wdk](https://github.com/finos/symphony-wdk)
+* The WDK 1.0 Certification course can be found here: [https://learn.symphony.com/bundles/workflow-developer-certification](https://learn.symphony.com/bundles/workflow-developer-certification)
 
 ### Installation
 
-The easiest way to access WDK 1.2.0 and build workflow bots on top of the WDK is through the Symphony Bot Generator.
+The easiest way to access WDK 1.0 and build workflow bots on top of the WDK is through the Symphony Bot Generator.
 
 1. **Install the Symphony Bot Generator:**
 
@@ -195,7 +195,7 @@ workflows:
 
 ### Authentication
 
-Authenticating your bot is made simple when using the WDK 1.2.0. Once you have your bot and Symphony environment properly configured, the `workflow-bot-app.jar` provides an out of the box implementation for authenticating your bot.  You just need to ensure your `application.yaml` exists in the root folder.  The WDK loads in your config and authenticates your workflow bot. Once authenticated, your bot is ready to leverage the REST APIs in order to create rich automations and workflows on Symphony.
+Authenticating your bot is made simple when using the WDK 1.0. Once you have your bot and Symphony environment properly configured, the `workflow-bot-app.jar` provides an out of the box implementation for authenticating your bot.  You just need to ensure your `application.yaml` exists in the root folder.  The WDK loads in your config and authenticates your workflow bot. Once authenticated, your bot is ready to leverage the REST APIs in order to create rich automations and workflows on Symphony.
 
 {% hint style="info" %}
 Note: You must have a corresponding service or bot account setup on your Symphony instance before authenticating. For more information navigate to the [Creating a Bot User](../../building-bots-on-symphony/configuration/creating-a-bot-user.md) guide.
@@ -203,18 +203,12 @@ Note: You must have a corresponding service or bot account setup on your Symphon
 
 #### OBO Authentication
 
-WDK 1.2.0 also supports OBO (On-Behalf-Of) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user. The WDK's implementation makes it easy to perform the following operations on behalf of a given user:
+WDK 1.0 also supports OBO (On-Behalf-Of) pattern of authentication, allowing an authenticated bot + extension application to perform operations on behalf of a given user. The WDK's implementation makes it easy to perform the following operations on behalf of a given user:
 
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
 * Initiate IMs and MIMs with other users
 * Send messages and attachments
-
-{% hint style="info" %}
-Please follow our '**Getting Started with OBO**' guide using the link [here](https://docs.developers.symphony.com/building-extension-applications-on-symphony/app-authentication/obo-authentication#getting-started).\
-\
-The guide will cover all of the prerequisites needed for OBO and how to enable & upload the OBO extension application, the required permissions and how to ensure the OBO authentication process will work successfully.
-{% endhint %}
 
 To leverage an OBO based workflow, simply include the `app` credentials to be used for authenticating your OBO Session within your `application.yaml`.
 
