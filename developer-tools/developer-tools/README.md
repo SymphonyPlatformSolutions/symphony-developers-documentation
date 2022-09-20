@@ -28,8 +28,8 @@ The Workflow Developer Kit - WDK 1.0 is our low-code developer toolkit which dev
 
 To learn more about WDK 1.0, continue here:
 
-{% content-ref url="wdk-1.2.0.md" %}
-[wdk-1.2.0.md](wdk-1.2.0.md)
+{% content-ref url="wdk-1.0.md" %}
+[wdk-1.0.md](wdk-1.0.md)
 {% endcontent-ref %}
 
 ## Symphony Bot Generator

@@ -2,13 +2,13 @@
 
 ### Summary
 
-* [Description](wdk-1.2.0.md#description)
-* [Installation](wdk-1.2.0.md#installation)
-* [Configuration](wdk-1.2.0.md#configuration)
-* [Authentication](wdk-1.2.0.md#authentication)
-* [Running your bot](wdk-1.2.0.md#running-your-bot)
-* [Orchestrating Workflows](wdk-1.2.0.md#orchestrating-workflows-with-wdk-1.0)
-* [Activities & Events](wdk-1.2.0.md#activities-and-events)
+* [Description](wdk-1.0.md#description)
+* [Installation](wdk-1.0.md#installation)
+* [Configuration](wdk-1.0.md#configuration)
+* [Authentication](wdk-1.0.md#authentication)
+* [Running your bot](wdk-1.0.md#running-your-bot)
+* [Orchestrating Workflows](wdk-1.0.md#orchestrating-workflows-with-wdk-1.0)
+* [Activities & Events](wdk-1.0.md#activities-and-events)
 
 ### Description
 
