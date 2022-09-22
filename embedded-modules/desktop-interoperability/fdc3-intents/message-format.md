@@ -38,7 +38,7 @@ See below few examples of messages showing how they are structured.
   "type": "fdc3.chat.initSettings",
   "message": {
     "text": {
-      "text/markdown": "\n\n Rich text example: \n\n Bullet points:\n - bullet 1 \n - bullet 2 \n\n Text in *italic* \n\n Text in **bold** \n\n Link: https://www.symphony.com"
+      "text/markdown": "\n\n Rich text example: \n\n Bullet points:\n - bullet 1 \n - bullet 2 \n\n Text in *italic* \n\n Text in **bold** \n\n Link: [Symphony](https://www.symphony.com)"
     }
   },
   "members": {
