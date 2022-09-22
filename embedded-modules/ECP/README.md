@@ -334,7 +334,7 @@ _Shades_ are completely optional - by default they will be interpolated from the
 
 ```typescript
 export interface IThemeColors {
-  // Application colors: 7 main colors
+  // Application colors: 8 main colors
   primary: string;
   secondary: string;
   accent: string;
@@ -342,6 +342,7 @@ export interface IThemeColors {
   error: string;
   background: string;
   surface: string;
+  mention: string;
   // Text colors
   textPrimary: string;
   textSecondary: string;
