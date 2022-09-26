@@ -24,11 +24,11 @@ In order to know on which pod is a user defined from the user email address, the
 
 `curl --location --request POST 'https://{pod}/webcontroller/v2/podLoginInformation' --data-raw '{ "emailAddress": "useremail@domain.com" }'`
 
-For partners who don't own their own pod, this service is available from `cp2.symphony.com` for Production, and `cp2-test.symphony.com` for Test.
+For partners who don't own their own pod, this service is available from `loginservice.symphony.com` for Production, and `loginservice-test.symphony.com` for Test.
 
 Example:
 
-`curl --location --request POST 'https://cp2-test.symphony.com/webcontroller/v2/podLoginInformation' --data-raw '{ "emailAddress": "useremail@domain.com" }'`
+`curl --location --request POST 'https://loginservice-test.symphony.com/webcontroller/v2/podLoginInformation' --data-raw '{ "emailAddress": "useremail@domain.com" }'`
 
 This service returns a json payload representing an array of pods on which the user is defined, and the pod domain is available under the `tenantDomain` field.
 
