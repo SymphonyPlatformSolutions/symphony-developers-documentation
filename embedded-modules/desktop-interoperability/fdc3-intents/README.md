@@ -98,9 +98,9 @@ await fdc3.raiseIntent("SendChatMessage", chatMessage, intentResolution.source);
 
 ### View messages
 
-Symphony now listens to ViewMessages intents, that allows FDC3 apps to display in Symphony the list of chat messages that contain a specified **cashtag** or **hashtag**.
+Symphony now listens to _ViewMessages_ intents, that allows FDC3 apps to display in Symphony the list of chat messages that contain a specified **cashtag** or **hashtag**.
 
-When a ViewMessages intent is received, Symphony will display a modal with the Signal View, showing all matching messages.
+When a _ViewMessages_ intent is received, Symphony will display a modal with the Signal View, showing all matching messages.
 
 **Examples**
 
@@ -150,11 +150,23 @@ fdc3.raiseIntent('ViewMessages', {
 
 ### **View instrument (cashtag hovercard)**&#x20;
 
-When hovering on cashtags, an FDC3 _ViewInstrument_ action will be displayed.&#x20;
+When hovering on cashtags, an FDC3 **View instrument** action will be displayed.&#x20;
 
 On click, Symphony will raise the _ViewInstrument_ intent, with the ticker as context data (fdc3.instrument).
 
 ![When hovering on a cashtag ($GBPUSD), an hover card will be displayed. Clicking on 'View Instrument' will raise an intent.](https://3306294353-files.gitbook.io/\~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FjdueX6WkTUFwlOWFEXjw%2Fuploads%2FeJ4XIKR1ODYCaQk8V4rq%2FScreenshot%202022-05-06%20170043.png?alt=media\&token=f2d680e1-88ce-405b-8dfc-f3836c184847)
+
+### **View contact (user & profile hovercard)**
+
+When hovering on a user mention or name in a Symphony chat, a profile hovercard is displayed, which now contains a new FDC3 **View contact** __ button.
+
+On click, Symphony will raise the _ViewContact_ intent, with the user as context data (fdc3.contact).
+
+<figure><img src="../../../.gitbook/assets/profile hovercard.png" alt=""><figcaption></figcaption></figure>
+
+The new action is also available from the profile pages.
+
+<figure><img src="../../../.gitbook/assets/user prof hovercard.png" alt=""><figcaption></figcaption></figure>
 
 ### **Custom intents**
 

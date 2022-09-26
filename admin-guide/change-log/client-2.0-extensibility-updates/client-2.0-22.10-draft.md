@@ -22,9 +22,10 @@ Early access features are automatically available in GA on the production branch
 
 **Currently available early access features:**
 
-* ViewMessages intent
+* View Messages intent
 * Send Chat Message intent
 * Support of return values for the Start Chat intent
+* View Contact intent - PROD planned for 22.11 November
 
 Learn more on desktop interop [here](../../../embedded-modules/desktop-interoperability/).
 
