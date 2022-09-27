@@ -144,7 +144,7 @@ fdc3.raiseIntent('ViewMessages', {
 
 ## **Outbound intents**
 
-### **View Instrument (cashtag hovercard)**&#x20;
+### **View instrument (cashtag hovercard)**&#x20;
 
 When hovering over $cashtags, an FDC3 _ViewInstrument_ action will be displayed.&#x20;
 
