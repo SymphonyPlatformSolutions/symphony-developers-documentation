@@ -99,7 +99,7 @@ WhatsApp Manager only supports 1 variable in the header text.
 ```
 
 {% hint style="info" %}
-Please note that the redirect variable ( \{{1\}} )in the template needs a space before and after for the redirection link to work in the message.
+Please note that the redirect variable ( \{{1\}} ) in the template needs a space before and after for the redirection link to work in the message.
 {% endhint %}
 
 
