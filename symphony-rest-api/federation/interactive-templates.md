@@ -147,7 +147,17 @@ The link associated to the document must be publicly accessible.
 * If both a link and an attachment are present (the link of the document in the payload, and the attachment in the request body), the link will be used.
 * If no link is present and there are multiple attachments in the request body, the first attachment in the template will be used.
 
-<figure><img src="../../.gitbook/assets/image6.png" alt=""><figcaption></figcaption></figure>
+```json
+{
+  "type": "send_template",
+  "payload": {
+    "template_name": "template-name-3",
+    "header": {
+      "type": "DOCUMENT"
+    }
+  }
+}
+```
 
 In the example above, the backend checks if the `parameters` object contains the type `DOCUMENT`, and if the `attachment` field is pointing to a file link.
 
