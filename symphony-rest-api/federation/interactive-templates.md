@@ -34,7 +34,7 @@ These 4 parts correspond to the user interface that is used to define a template
 <figure><img src="../../.gitbook/assets/image2.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-These components can be customised  using parameters.
+These components can be customised using parameters.
 {% endhint %}
 
 #### Format to send to the Agent to display the template
@@ -97,6 +97,12 @@ WhatsApp Manager only supports 1 variable in the header text.
                      // if the link couldn't be computed
 }
 ```
+
+{% hint style="info" %}
+Please note that the redirect variable ( \{{1\}} )in the template needs a space before and after for the redirection link to work in the message.
+{% endhint %}
+
+
 
 In the example above:
 
