@@ -25,6 +25,7 @@ Early access features are automatically available in GA on the production branch
 * View Messages intent
 * Send Chat Message intent
 * Support of return values for the Start Chat intent
+* Start Chat now allows to select rooms (manual selection by the user) - See the groupRecipients parameter.
 * View Contact intent - PROD planned for 22.11 November
 
 Refer to the [documentation on desktop interoperability](../../../embedded-modules/desktop-interoperability/) for more information.
