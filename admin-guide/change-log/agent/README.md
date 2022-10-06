@@ -7,7 +7,7 @@ description: >-
 # Agent
 
 {% hint style="info" %}
-Latest Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.6.2.zip).
+Latest Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.9.3.zip).
 {% endhint %}
 
 ## New Agent Release Cycle

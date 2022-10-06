@@ -4,12 +4,12 @@ description: >-
   service
 ---
 
-# Agent - 22.6
+# Agent - 22.6 (LTS)
 
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.6.2.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.6.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
@@ -26,6 +26,10 @@ Please refer to the [main page](./) for more information (release cadence, new L
 
 ## Agent Changes
 
+### Agent 22.6.3
+
+* Spring boot has been updated to version 2.7.2.
+
 ### Agent 22.6.2
 
 * Fixed a bug with the authentication of the ceservice.
@@ -39,5 +43,5 @@ Please refer to the [main page](./) for more information (release cadence, new L
 * Consequently to the deprecation notice of the Datafeed v1 APIs on [Agent 20.14](agent-20.14.md#deprecation-notice) change log, a bridge has been introduced to facilitate the transition period from Datafeed v1 APIs to Datafeed v2 service. More information are available for the [deprecation timeline and the introduction of the bridge](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed) as well as the [benefits of Datafeed v2](https://developers.symphony.com/restapi/v20.14/reference/datafeed).
 * Similarly to its historic capabilities on downloading messages, the ceservice is now able to download attachments even from streams it is not part of.
 * Fixed a bug with Blast Message API returning unexpected 500 error message.
-* Spring boot has been updated to version 2.6.8
+* Spring boot has been updated to version 2.6.8.
 
