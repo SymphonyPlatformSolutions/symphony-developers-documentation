@@ -1,11 +1,15 @@
 # Agent Download
 
+Agent releases available for download:
+
+* Agent 23.7.1: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.7.1.zip)
+* Agent 23.6.2: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.6.2.zip)
+* Agent 23.3.2: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.3.2.zip)
+* Agent 22.12.2: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.12.2.zip)
+* Agent 22.9.6: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.9.6.zip)
+
 {% hint style="info" %}
-### Agent 2.55.21 - officially supported Agent for Symphony versions 1.55.x
-
-[Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-2.55.21.zip)
+For more information regarding the Agent installation, refer to [Agent Installation](agent-2.x-and-above-installation.md).\
+Visit [Change Log](../change-log/) to know more about Agent changes, new features and other updates.\
+For a list of Agent x SBE Compatibilities, visit [SBE x Agent Compatibilities](sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
-
-For more information regarding the Agent installation, refer to [Agent 2.X and above Installation](agent-2.x-and-above-installation.md)  
-Visit [Change Log](../change-log.md) to know more about Agent changes, new features and other updates.
-

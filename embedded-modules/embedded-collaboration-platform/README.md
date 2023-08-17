@@ -1,0 +1,106 @@
+# Embedded Collaboration Platform
+
+<figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p><em>Example: Integration of a Symphony chat within a web app</em></p></figcaption></figure>
+
+**Embedded Collaboration Platform (ECP)** allows you to embed Symphony within your application to provide full collaboration capabilities to your users. Your users can collaborate with half a million people across thousands of institutions on the Symphony network without leaving your platform. This allows you to add Symphony's secure and compliant chat capabilities to your application, unlocking instant external connectivity and workflow efficiency.
+
+{% hint style="info" %}
+**Note:** The **Embedded Collaboration Platform (ECP)** functionality is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your ECP use case. Prior to using ECP in your Symphony environment(s), you will need to enter into an ECP-specific contract. Please reach out to [sales@symphony.com](mailto:sales@symphony.com) to review your use case, discuss the offering, its pricing or for any further information.
+{% endhint %}
+
+&#x20; _**Access**_ [_**this page**_](https://symphony.com/products/embedded-collaboration-platform/) _**to discover which workflows our ECP offering can unlock for you, or to contact Sales.**_
+
+## Features
+
+[Symphony Embedded Collaboration Platform](https://symphony.com/solutions/embedded-collaboration-platform/) (ECP) allows you to embed standalone Symphony chat modules inside your own websites or any of your solutions that support web views.
+
+ECP also supports extensive customization and exposes APIs to create rooms or register for notifications.&#x20;
+
+Some of the advanced features are only available for specific [plans](pricing-tiers.md).&#x20;
+
+Access the [Resources ](./#resources)section, which provides some examples on GitHub, watch our recorded webinar with a live coding session, and get access to a sandbox.
+
+{% hint style="info" %}
+The Embedded Collaboration Platform (ECP) replaces the previous Embedded Chat Module, which is now deprecated.
+{% endhint %}
+
+### Supported browsers
+
+The following browsers are supported:
+
+* Edge 90+
+* Chrome 90+
+
+### Focus and Collaboration modes
+
+Symphony ECP supports two modes:
+
+* **Focus**, where a single chat is displayed.
+* **Collaboration**, where the full list of chat conversations is displayed, allowing the user to switch chat conversations, create a room, search for users or rooms, view unread messages, etc.
+
+**Note**: In **Focus** mode, you can still display several chats on screen, but each one will be placed in its own module.
+
+{% tabs %}
+{% tab title="Focus mode" %}
+
+
+<figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p>ECP Focus mode: Single chat</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Collaboration mode" %}
+
+
+<figure><img src="https://lh5.googleusercontent.com/79tCYQRQvfOemch0XKGl1P60-qmRtyDA020sdgDOQu9VdaKPvRD7odh2CPyee-EljJ8zkfCgfQRuYYpyaBT_jTrQjd-6esBMatjP0orF1N5nyKnOUUwMegIKLUzfMBBZV7_gyeNVQ7KgVbjis6Db5jlFL_j4FuZNoDXHc_tQKWmiOG0sbdWDe12_NsIu" alt=""><figcaption><p><em>In Collaboration mode, users can see a simplified version of the full Symphony.</em></p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+**Recommended minimum view size:**
+
+* **Focus** mode: Width 312px , Height 348px
+* **Collaboration** mode: Width 600px , Height 600px
+
+### Configuration parameters&#x20;
+
+In addition to the **Focus** and **Collaboration** modes, it is also possible to configure other aspects of ECP. For more information, refer to the [Configuration parameters](configuration-parameters.md).
+
+### How to load ECP
+
+There are several ways to load ECP, depending on the technical constraints of your web app. For more information, refer to our [Get started](get-started.md) guide.
+
+### ECP APIs
+
+Once ECP is loaded, it offers a number of capabilities:
+
+* Quickly **open an existing chat** or create one (more information [here](open-a-chat.md)).
+* **Send a message** to an existing room or to a list of users (more information [here](broken-reference)).&#x20;
+* Keep track of the chat activity, through a **notification feed** (more information [here](notifications.md)).
+* Be informed if the **user is active or not** (more information [here](notifications.md#activity-notifications)).
+
+### Support for extension applications
+
+It is possible to load extension applications in ECP (more information [here](./#support-for-extension-applications)).
+
+## Resources
+
+#### Webinar
+
+Watch our [webinar that introduces ECP and shows a live coding session](https://symphony.com/2022/09/07/build-a-bot-session-introduction-to-symphony-ecp-embedded-collaboration-platform/).
+
+#### Examples
+
+Get started by looking at few ECP examples in this [GitHub repository](https://github.com/SymphonyPlatformSolutions/ecp-examples).\
+One of the examples, _index-webinar-demo.html_, is covered during the webinar and may be a very good starting point. The other examples assume you are familiar with the React framework.
+
+#### Sandbox
+
+You can access a sandbox version of ECP, where you can easily test the configuration parameters, the two modes (**Focus** or **Collaboration**), as well as initiate a new message. \
+\
+The sandbox is available at:\
+`https://{your_pod_url}.symphony.com/embed/sandbox.html`
+
+You can load a specific conversation by adding a `streamId` as a query parameter:\
+`https://{your_pod_url}.symphony.com/embed/sandbox.html?streamId=r2z0c14BJnF9bfsUbZRPN3///oP8vpocdA==`
+
+**Note:** You can update the configuration parameters using the settings wheel in the navigation bar. &#x20;
+
+<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption><p><em>The ECP sandbox is available for all pods and allows you to quickly test out the ECP settings.</em></p></figcaption></figure>
