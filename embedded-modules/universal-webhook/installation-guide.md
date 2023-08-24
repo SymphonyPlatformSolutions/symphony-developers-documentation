@@ -75,7 +75,12 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 *   **Description**:&#x20;
 
     ```
-    Share content and alerts from third party services in Symphony chats. The Universal webhook allows you to configure webhooks for Symphony, and provides a simple way for external apps and cloud services to share content in Symphony chats. It is often used to receive notifications and messages from the web, directly in your chats. Many popular services are compatible with this technology, such as Zapier, IFTTT, Jira, Jenkins, Datadog, Splunk, and more.Use this app for simple generic webhooks integrations. Universal Webhook 2.0 or above is a managed service operated by Symphony in the cloud, and as a result is only available to cloud customers for now. Universal Webhook 2.0 or above replaces the legacy service that was delivered through the Integration Bridge.
+    Share content and alerts from third party services in Symphony chats. 
+
+    The Universal webhook allows you to configure webhooks for Symphony, and provides a simple way for external apps and cloud services to share content in Symphony chats. It is often used to receive notifications and messages from the web, directly in your chats. 
+    Many popular services are compatible with this technology, such as Zapier, IFTTT, Jira, Jenkins, Datadog, Splunk, and more.
+     
+    Universal Webhook 2.0 is a managed service operated by Symphony in the cloud, and as a result is only available to cloud customers for now. It replaces the legacy service that was delivered through the Integration Bridge.
     ```
 * **RSA Public key (Production environments)**:
 
