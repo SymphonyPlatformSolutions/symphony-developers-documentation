@@ -171,7 +171,7 @@ window.symphony.sendMessage(m, {
 ```typescript
 const m = {
   text: {
-    ['text/markdown': 'An example with a table.\n<table><thead><tr><th>header 1</th><th>header 2</th></tr></thead><tbody><tr><td>body (1,1)</td><td>body (1,2)</td></tr><tr><td>body (2,1)</td><td>body (2,2)</td></tr></tbody></table>']
+    ['text/markdown']: 'An example with a table.\n<table><thead><tr><th>header 1</th><th>header 2</th></tr></thead><tbody><tr><td>body (1,1)</td><td>body (1,2)</td></tr><tr><td>body (2,1)</td><td>body (2,2)</td></tr></tbody></table>'
   }
 };
 
