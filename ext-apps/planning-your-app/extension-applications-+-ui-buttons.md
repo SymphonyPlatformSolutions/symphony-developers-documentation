@@ -140,6 +140,6 @@ Now that you've registered your UI extension, the next step is to add custom bus
 
 Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 (Bot Developer Kit):
 
-{% content-ref url="../tutorials/building-an-extension-app-with-ui-buttons.md" %}
-[building-an-extension-app-with-ui-buttons.md](../tutorials/building-an-extension-app-with-ui-buttons.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

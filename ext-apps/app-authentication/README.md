@@ -25,7 +25,7 @@ SYMPHONY.remote.hello()
 {% endtabs %}
 
 {% hint style="info" %}
-Note: Each extension app will contain a unique app id that is registered on the Pod. You can learn more about this along with other setup prerequisites in the [App Configuration](../app-configuration/) section.
+Note: Each extension app will contain a unique app id that is registered on the Pod. You can learn more about this along with other setup prerequisites in the [App Configuration](broken-reference) section.
 {% endhint %}
 
 ## 2.  Initiate Backend Authentication
@@ -163,6 +163,6 @@ If you wish to take this a step further, your app can take the JWT returned in t
 
 To learn how to properly configure and authenticate your extension app using the BDK, complete the following configuration tutorial:
 
-{% content-ref url="../app-configuration/configure-your-app-for-bdk-development.md" %}
-[configure-your-app-for-bdk-development.md](../app-configuration/configure-your-app-for-bdk-development.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

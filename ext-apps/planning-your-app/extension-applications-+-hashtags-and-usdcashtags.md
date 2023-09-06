@@ -98,6 +98,6 @@ Note: If the `filter()` function on this particular service returns False, the b
 
 Now that you've register your UI extension, the next step is to add custom business logic. The bulk of your business logic will exist in your `trigger()` method as it gets called each time your extension/button is clicked. Continue here to go through a step by step tutorial of how to add custom business logic to your UI Extension using the BDK 1.0 (Bot Developer Kit):
 
-{% content-ref url="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
-[building-an-extension-app-with-hashtags-+-usdcashtags.md](../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

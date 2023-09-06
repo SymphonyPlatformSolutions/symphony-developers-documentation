@@ -206,12 +206,12 @@ const LocationRouter = () => route();
 
 Whatever is returned by the `route()` function provided by the BDK 1.0 will be rendered as the application view. For more information about how to pass props from your backend to your frontend in order to bring relevant data into your application view, please refer to the following tutorial:
 
-{% content-ref url="../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md" %}
-[building-an-extension-app-with-hashtags-+-usdcashtags.md](../tutorials/building-an-extension-app-with-hashtags-+-usdcashtags.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 Now that we understand the Extension API services needed to bring your application into view, the next step is to build out a react front end that can be rendered by your app. Continue to the following tutorial where we will go through a step by step tutorial of building out an FX Watchlist app using the BDK 1.0 and react:
 
-{% content-ref url="../tutorials/building-an-extension-app-with-ui-toolkit.md" %}
-[building-an-extension-app-with-ui-toolkit.md](../tutorials/building-an-extension-app-with-ui-toolkit.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
