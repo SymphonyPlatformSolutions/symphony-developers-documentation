@@ -1,4 +1,4 @@
-# Application Manifest Bundle File Reference
+# Application Manifest Bundle
 
 Each application metadata is represented in a manifest file called `bundle.json`. You must create a manifest file for your application and submit it to Symphony.
 

@@ -15,3 +15,4 @@ Choose from one of the following guides depending on the type of extension app y
 {% content-ref url="build-an-extension-app-with-message-renderers.md" %}
 [build-an-extension-app-with-message-renderers.md](build-an-extension-app-with-message-renderers.md)
 {% endcontent-ref %}
+

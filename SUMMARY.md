@@ -73,7 +73,7 @@
   * [Extension Applications + Structured Objects](ext-apps/planning-your-app/extension-applications-+-structured-objects.md)
   * [Extension Applications + UI Toolkit](ext-apps/planning-your-app/extension-applications-+-ui-toolkit.md)
 * [Getting Started](ext-apps/getting-started/README.md)
-  * [Application Manifest Bundle](ext-apps/getting-started/application-manifest-bundle-file-reference.md)
+  * [Application Manifest Bundle](ext-apps/app-configuration/application-manifest-bundle-file-reference.md)
 * [Overview of Extension API](ext-apps/overview-of-extension-api/README.md)
   * [Initialization](ext-apps/overview-of-extension-api/initialization.md)
   * [Register and Connect](ext-apps/overview-of-extension-api/register-and-connect.md)
