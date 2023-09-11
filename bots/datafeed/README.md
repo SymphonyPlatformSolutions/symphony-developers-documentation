@@ -170,15 +170,15 @@ While you can write all of this datafeed logic yourself, our dedicated BDK toolk
 
 ## Datafeed v1 deprecation notice
 
-The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**.
+The legacy Datafeed v1 service is out of support since **April 30, 2023**.
 
-This will have an impact on you if some of your automations or bots are still using the Datafeed v1 APIs. Please consider upgrading them to use the new[ Datafeed v2 APIs](https://developers.symphony.com/restapi/reference/create-datafeed-v5).
+This has an impact on you if some of your automations or bots are still using the Datafeed v1 APIs. Please consider upgrading them to use the new[ Datafeed v2 APIs](https://developers.symphony.com/restapi/reference/create-datafeed-v5).
 
 To facilitate this transition, a new feature called the **bridge** has been introduced in the Agent service so consumers of the deprecated Datafeed v1 APIs will transparently use the Datafeed v2 service.
 
 * This bridge is available starting with Agent 22.6 (June 2022) and can be enabled through the following configuration flag `agent.df1ToDf2Bridge.enabled`.&#x20;
-* In a subsequent Agent release, this bridge will be enabled by default, but could still be disabled through configuration (October 2022).&#x20;
-* Then in a subsequent Agent release, the bridge will be always enabled (January 2023).
+* Since Agent release 23.6 (June 2023), this bridge is enabled by default, but could still be disabled through configuration.&#x20;
+* Then, starting with Agent release 23.9 (September 2023), the bridge is always enabled.
 
 We encourage you to validate the bridge with your existing bots, or to migrate your bots to use the new Datafeed 2 APIs, which is the **preferred option**. If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between Datafeed 1 APIs and Datafeed 2 APIs is now by default. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so, the Developer Relations team can guide you through it.
 
