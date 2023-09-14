@@ -8,8 +8,8 @@ Choose from one of the following guides depending on the type of extension app y
 [build-a-basic-extension-app.md](build-a-basic-extension-app.md)
 {% endcontent-ref %}
 
-{% content-ref url="build-an-extension-app-with-app-views.md" %}
-[build-an-extension-app-with-app-views.md](build-an-extension-app-with-app-views.md)
+{% content-ref url="build-an-extension-app-with-app-views/" %}
+[build-an-extension-app-with-app-views](build-an-extension-app-with-app-views/)
 {% endcontent-ref %}
 
 {% content-ref url="build-an-extension-app-with-message-renderers.md" %}
