@@ -32,7 +32,7 @@ ADK.start({ id: 'adk-example' }).then(() => {
 
 ## Option 1: Use query parameters to pass context
 
-In this option, we serialize the contents of the context payload and pass it directly into the `module.open` call as query parameters.
+In this option, we serialize the contents of the context payload and pass it directly into the `ADK.modules.open` call as query parameters.
 
 {% code title="src/index.js" lineNumbers="true" %}
 ```typescript

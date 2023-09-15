@@ -49,8 +49,8 @@ Create a file named `webpack.config.js` that will inject the ADK configuration i
 {% code title="webpack.config.js" lineNumbers="true" %}
 ```javascript
 const SymADKWebpack = require('@symphony-ui/adk-webpack');
-const package = require('./package.json');
-module.exports = SymADKWebpack({}, package.name);
+const packageJson = require('./package.json');
+module.exports = SymADKWebpack({}, packageJson.name);
 ```
 {% endcode %}
 
