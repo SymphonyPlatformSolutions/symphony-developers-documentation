@@ -14,19 +14,14 @@ Let's now add a button to the hashtag hover card and a handler to link the conte
 
 {% code title="src/index.js" lineNumbers="true" %}
 ```typescript
-import * as ADK from '@symphony-ui/adk';
+import * as ADK from "@symphony-ui/adk";
 
-ADK.start({ id: 'adk-example' }).then(() => {
-  ADK.navigation.add('ADK View A', () => {
-    ADK.modules.open('view-a', { title: 'ADK View A' });
-  });
-  
-  ADK.buttons.add('Click Me', 'hashtag', (payload) => {
-    console.log(`You clicked on ${target}`, payload);
+ADK.start({ id: "adk-example" }).then(() => {
+  ADK.buttons.add("Click Me", "hashtag", (payload) => {
+    console.log(`You clicked on a hashtag button`, payload);
     // Perform actions
   });
 });
-
 ```
 {% endcode %}
 
@@ -36,17 +31,13 @@ In this option, we serialize the contents of the context payload and pass it dir
 
 {% code title="src/index.js" lineNumbers="true" %}
 ```typescript
-import * as ADK from '@symphony-ui/adk';
+import * as ADK from "@symphony-ui/adk";
 
-ADK.start({ id: 'adk-example' }).then(() => {
-  ADK.navigation.add('ADK View A', () => {
-    ADK.modules.open('view-a', { title: 'ADK View A' });
-  });
-
-  ADK.buttons.add('Click Me', 'hashtag', (payload) => {
-    console.log(`You clicked on ${target}`, payload);
-    const params = '?context=' + encodeURIComponent(JSON.stringify(payload));
-    ADK.modules.open('view-a' + params, { title: 'ADK View A' });
+ADK.start({ id: "adk-example" }).then(() => {
+  ADK.buttons.add("Click Me", "hashtag", (payload) => {
+    console.log(`You clicked on a hashtag button`, payload);
+    const params = "?context=" + encodeURIComponent(JSON.stringify(payload));
+    ADK.modules.open("view-a" + params, { title: "ADK View A" });
   });
 });
 ```
@@ -54,18 +45,14 @@ ADK.start({ id: 'adk-example' }).then(() => {
 
 Once the view is opened, you can retrieve the query parameters and deserialize it.
 
-{% code title="src/views/view-a.js" %}
+{% code title="src/views/view-a.jsx" lineNumbers="true" %}
 ```jsx
 import * as React from 'react';
 import * as ADKReact from '@symphony-ui/adk-react';
-import { Badge, Icon } from '@symphony-ui/uitoolkit-components';
-import { useClientTheme, useUserReferenceId } from '@symphony-ui/adk-react';
 import { useEffect, useState } from 'react';
 import './view-a.css';
 
 const ViewA = () => {
-  const { name: theme, layout } = useClientTheme();
-  const userId = useUserReferenceId();
   const [ context, setContext ] = useState();
 
   useEffect(() => {
@@ -77,27 +64,12 @@ const ViewA = () => {
 
   return (
     <div className="main-view">
-      <header>
-        <h1>
-          <Icon iconName="market-place" className="header-icon" />
-          Welcome to ADK View A!
-        </h1>
-      </header>
       <main>
-        <hr className='tk-my-2' />
-        <h3>Meta Information</h3>
         { context && (
           <div>
             <strong>Context</strong>: {context.entity.name}
           </div>
         )}
-        <div>
-          <strong>Theme</strong>: current theme is <Badge variant='positive'>{theme}</Badge> and <Badge variant='positive'>{layout}</Badge>
-        </div>
-        <div>
-          <strong>User Reference Id</strong>: <Badge variant='positive'>{userId}</Badge>
-        </div>
-        <hr className='tk-my-2' />
       </main>
     </div>
   );
@@ -111,15 +83,13 @@ ADKReact.createView(<ViewA />, { id: 'adk-example' });
 
 In this option, we store the state of context on the controller, then expose a method to retrieve that state.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 {% code title="src/index.js" lineNumbers="true" %}
 ```typescript
 import * as ADK from '@symphony-ui/adk';
 
 ADK.start({ id: 'adk-example' }).then(() => {
-  ADK.navigation.add('ADK View A', () => {
-    ADK.modules.open('view-a', { title: 'ADK View A' });
-  });
-
   let context;
   ADK.expose({
     getContext: () => context,
@@ -133,15 +103,43 @@ ADK.start({ id: 'adk-example' }).then(() => {
 });
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+{% code title="src/index.ts" lineNumbers="true" %}
+```typescript
+import * as ADK from '@symphony-ui/adk';
+
+type ControllerApi = {
+  getContext: () => unknown,
+};
+
+ADK.start({ id: 'adk-example' }).then(() => {
+  let context;
+  ADK.expose<ControllerApi>({
+    getContext: () => context,
+  });
+
+  ADK.buttons.add('Click Me', 'hashtag', (payload) => {
+    console.log(`You clicked on a hashtag`, payload);
+    context = payload;
+    ADK.modules.open('view-a', { title: 'ADK View A' });
+  });
+});
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 Once the view is opened, you can make a call to the exposed `getContext` method via the `useRemoteExecutor` hook, which returns a promise.
 
-{% code title="src/views/view-a.js" %}
+{% tabs %}
+{% tab title="JavaScript" %}
+{% code title="src/views/view-a.jsx" lineNumbers="true" %}
 ```jsx
 import * as React from 'react';
 import * as ADKReact from '@symphony-ui/adk-react';
-import { Badge, Icon } from '@symphony-ui/uitoolkit-components';
-import { useRemoteExecutor, useClientTheme, useUserReferenceId } from '@symphony-ui/adk-react';
+import { useRemoteExecutor } from '@symphony-ui/adk-react';
 import { useEffect, useState } from 'react';
 import './view-a.css';
 
@@ -157,33 +155,58 @@ const ViewA = () => {
 
   return (
     <div className="main-view">
-      <header>
-        <h1>
-          <Icon iconName="market-place" className="header-icon" />
-          Welcome to ADK View A!
-        </h1>
-      </header>
       <main>
-        <hr className='tk-my-2' />
-        <h3>Meta Information</h3>
         { context && (
           <div>
             <strong>Context</strong>: {context.entity.name}
           </div>
-        ) }
-        <div>
-          <strong>Theme</strong>: current theme is <Badge variant='positive'>{theme}</Badge> and <Badge variant='positive'>{layout}</Badge>
-        </div>
-        <div>
-          <strong>User Reference Id</strong>: <Badge variant='positive'>{userId}</Badge>
-        </div>
-        <hr className='tk-my-2' />
+        )}
       </main>
     </div>
   );
 };
 
 ADKReact.createView(<ViewA />, { id: 'adk-example' });
-
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+{% code title="src/views/view-a.tsx" lineNumbers="true" %}
+```typescript
+import * as React from 'react';
+import * as ADKReact from '@symphony-ui/adk-react';
+import { useRemoteExecutor } from '@symphony-ui/adk-react';
+import { useEffect, useState } from 'react';
+import './view-a.css';
+
+type ControllerApi = {
+  getContext: () => Promise<unknown>,
+};
+
+const ViewA = () => {
+  const [ context, setContext ] = useState();
+  const remoteExecutor = useRemoteExecutor<ControllerApi>();
+
+  useEffect(() => {
+    remoteExecutor.getContext().then((result) => setContext(result));
+  }, []);
+
+  return (
+    <div className="main-view">
+      <main>
+        { context && (
+          <div>
+            <strong>Context</strong>: {context.entity.name}
+          </div>
+        )}
+      </main>
+    </div>
+  );
+};
+
+ADKReact.createView(<ViewA />, { id: 'adk-example' });
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
