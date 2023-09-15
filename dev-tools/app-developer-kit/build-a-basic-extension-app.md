@@ -110,7 +110,7 @@ The code `ADK.start()` initializes the ADK with an app id (`adk-example`) that m
 \
 Once the initialization is complete, we use `ADK.navigation` to add an item to the left navigation bar. This item will have the label "ADK Example" and clicking on it will pop up an alert with the content: "Navigate!"\
 \
-We then proceed to build an array of all the available target zones and loop through them, calling `ADK.buttons` to add a button into each target zone. Each button will be labelled "Button on" followed by the zone and cicking on them will log a message to the console. The message will report from which zone the button was pressed and the payload included with the event. Note that not all zones will contain a payload.
+We then proceed to build an array of all the available target zones and loop through them, calling `ADK.buttons` to add a button into each target zone. Each button will be labelled "Button on" followed by the zone and clicking on them will log a message to the console. The message will report from which zone the button was pressed and the payload included with the event. Note that not all zones will contain a payload.
 
 ## Start the App
 
