@@ -323,3 +323,7 @@ Now that you have built a view-driven Extension App, you can proceed to build ou
 {% content-ref url="add-buttons-and-handlers-to-an-extension-app.md" %}
 [add-buttons-and-handlers-to-an-extension-app.md](add-buttons-and-handlers-to-an-extension-app.md)
 {% endcontent-ref %}
+
+{% content-ref url="add-bdk-to-an-extension-app-to-get-user-identity.md" %}
+[add-bdk-to-an-extension-app-to-get-user-identity.md](add-bdk-to-an-extension-app-to-get-user-identity.md)
+{% endcontent-ref %}
