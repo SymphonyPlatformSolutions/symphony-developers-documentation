@@ -1,6 +1,6 @@
 # Application Manifest Bundle
 
-Each application metadata is represented in a manifest file called `bundle.json`. You must create a manifest file for your application and submit it to Symphony.
+Each application's metadata is represented by a manifest file called `bundle.json`. You must create a manifest file for your application and submit it to either your pod administrator for internal apps, or Symphony for apps meant for the public marketplace.
 
 To create and upload a file:
 

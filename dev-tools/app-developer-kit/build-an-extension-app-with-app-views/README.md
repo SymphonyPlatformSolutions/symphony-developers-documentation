@@ -320,6 +320,6 @@ Acknowledge the warning about being in developer mode. You should notice that a 
 
 Now that you have built a view-driven Extension App, you can proceed to build out your view and add more as required to complete your app.
 
-{% content-ref url="add-buttons-+-handlers-to-an-extension-app.md" %}
-[add-buttons-+-handlers-to-an-extension-app.md](add-buttons-+-handlers-to-an-extension-app.md)
+{% content-ref url="add-buttons-and-handlers-to-an-extension-app.md" %}
+[add-buttons-and-handlers-to-an-extension-app.md](add-buttons-and-handlers-to-an-extension-app.md)
 {% endcontent-ref %}
