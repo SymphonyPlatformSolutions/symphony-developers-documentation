@@ -219,7 +219,7 @@ ADK.start({ id: 'adk-example' }).then(() => {
 
 The code `ADK.start()` initializes the ADK with an app id (`adk-example`) that must correspond with the value provided in the `bundle.json` manifest from the previous step.\
 \
-Once the initialization is complete, we use `ADK.navigation.add()` to add an item to the left navigation bar. This item will have the label "ADK View A" and clicking on it will use `ADK.modules.open()` to open a module with the app view called `view-a`. This parameter can either be an actual navigational route (e.g. `view.html`) or a string that will correspond to a TypeScript file with the same name located in the `src/views` directory.
+Once the initialization is complete, we use `ADK.navigation.add()` to add an item to the left navigation bar. This item will have the label "ADK View A" and clicking on it will use `ADK.modules.open()` to open a module with the app view called `view-a`. This parameter can either be an actual navigational route (e.g. `view.html`) or a string that will correspond to a JavaScript or TypeScript file with the same name located in the `src/views` directory.
 
 Let's proceed to build the app view itself in a file named `view-a.jsx` (or `view-a.tsx` if you're using TypeScript) within `src/views`.
 
