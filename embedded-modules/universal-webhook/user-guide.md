@@ -266,11 +266,23 @@ Despite the webhook being of type Raw text, please continue to set the content t
 
 With a JSON webhook, the message data needs to be added to the `data` field.&#x20;
 
-Example with the corresponding JSON template.
+Example in Postman:
 
 <figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
+Example in cURL:
+
+```
+curl --location 'https://corporate.symphony.com/universal-webhook/041daxxxxxxxc4eXYZ' \
+--header 'secret: thisismysecret' \
+--form 'data="{\"mydata\":\"This is a message\"}"' \
+--form 'attachment=@"/C:/Users/pierre.neu/Downloads/image (19).png"'
+```
+
+Corresponding JSON template:
+
 ```xml
+
 <messageML>
   ${entity['mydata']}
 </messageML>
