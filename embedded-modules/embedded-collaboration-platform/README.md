@@ -91,6 +91,26 @@ Watch our [webinar that introduces ECP and shows a live coding session](https://
 Get started by looking at few ECP examples in this [GitHub repository](https://github.com/SymphonyPlatformSolutions/ecp-examples).\
 One of the examples, _index-webinar-demo.html_, is covered during the webinar and may be a very good starting point. The other examples assume you are familiar with the React framework.
 
+The [Cleverdeal examples](https://github.com/SymphonyPlatformSolutions/ecp-examples/tree/master/AppExamples/CleverDeal.React) are a set of advanced ECP integrations covering four use cases: Investment, Operations, Research and Wealth. Hopefully one of them will give you a good starting point on how to integrate ECP in your own portal.
+
+<div>
+
+<figure><img src="../../.gitbook/assets/cdi.png" alt=""><figcaption><p>Investments</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/cdo.png" alt=""><figcaption><p>Operations</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/cdr.png" alt=""><figcaption><p>Research</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/cdw.png" alt=""><figcaption><p>Wealth</p></figcaption></figure>
+
+</div>
+
 #### Sandbox
 
 You can access a sandbox version of ECP, where you can easily test the configuration parameters, the two modes (**Focus** or **Collaboration**), as well as initiate a new message. \

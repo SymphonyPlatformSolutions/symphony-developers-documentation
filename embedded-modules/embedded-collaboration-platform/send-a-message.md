@@ -91,7 +91,7 @@ In these examples, the `sendMessage` function will blast the message to two user
 ```typescript
 const m = {
   text: {
-    ['text/markdown': 'Your message in **markdown**']
+    ['text/markdown']: 'Your message in **markdown**'
   }
 };
 
@@ -108,7 +108,7 @@ window.symphony.sendMessage(m, {
 ```typescript
 const m = {
   text: {
-    ['text/markdown': '\n\n Rich text example: \n\n Bullet points:\n - bullet 1 \n - bullet 2 \n\n Text in *italic* \n\n Text in **bold** \n\n Link: [Symphony](https://www.symphony.com)']
+    ['text/markdown']: '\n\n Rich text example: \n\n Bullet points:\n - bullet 1 \n - bullet 2 \n\n Text in *italic* \n\n Text in **bold** \n\n Link: [Symphony](https://www.symphony.com)'
   }
 };
 
@@ -125,7 +125,7 @@ window.symphony.sendMessage(m, {
 ```typescript
 const m = {
   text: {
-    ['text/markdown': '**Examples of Symphony entities:** \n\n Mention: @[Jane Doe](email/jane.doe@company.com) \n\n Cashtag: $AAPL \n\n Hashtag: #ecp \n\n']
+    ['text/markdown']: '**Examples of Symphony entities:** \n\n Mention: @[Jane Doe](email/jane.doe@company.com) \n\n Cashtag: $AAPL \n\n Hashtag: #ecp \n\n'
   }
 };
 
@@ -144,7 +144,7 @@ window.symphony.sendMessage(m, {
 ```typescript
 const m = {
   text: {
-    ['text/markdown': 'Please find the #GBPUSD chart below.']
+    ['text/markdown']: 'Please find the #GBPUSD chart below.'
   },
   entities: {
     myimage: {
