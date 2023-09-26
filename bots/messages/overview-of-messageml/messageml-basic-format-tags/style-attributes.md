@@ -5,6 +5,9 @@
 Tags support the following `style` attributes where applicable:
 
 ```bash
+align-content
+align-items
+align-self
 background
 background-attachment
 background-blend-mode
@@ -57,6 +60,13 @@ counter-increment
 counter-reset
 display
 empty-cells
+flex
+flex-basis
+flex-direction
+flex-flow
+flex-grow
+flex-shrink
+flex-wrap
 font
 font-family
 font-kerning
@@ -66,7 +76,29 @@ font-stretch
 font-style
 font-variant
 font-weight
+gap
+grid
+grid-area
+grid-auto-columns
+grid-auto-flow
+grid-auto-rows
+grid-column
+grid-column-end
+grid-column-gap
+grid-column-start
+grid-gap
+grid-row
+grid-row-end
+grid-row-gap
+grid-row-start
+grid-template
+grid-template-areas
+grid-template-columns
+grid-template-rows
 height
+justify-content
+justify-items
+justify-self
 letter-spacing
 line-height
 list-style
@@ -96,6 +128,9 @@ padding-bottom
 padding-left
 padding-right
 padding-top
+place-content
+place-items
+place-self
 table-layout
 text-align
 text-align-last

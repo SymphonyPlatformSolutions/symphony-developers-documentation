@@ -1,13 +1,13 @@
 # Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.6.1.zip).
+Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.2.zip).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
 
-{% content-ref url="agent-23.7.1.md" %}
-[agent-23.7.1.md](agent-23.7.1.md)
+{% content-ref url="agent-23.9-lts.md" %}
+[agent-23.9-lts.md](agent-23.9-lts.md)
 {% endcontent-ref %}
 
 {% content-ref url="agent-23.6-lts.md" %}
@@ -20,10 +20,6 @@ Please find in the subpages below the list of changes related to each version of
 
 {% content-ref url="agent-22.12-lts.md" %}
 [agent-22.12-lts.md](agent-22.12-lts.md)
-{% endcontent-ref %}
-
-{% content-ref url="agent-22.9-lts.md" %}
-[agent-22.9-lts.md](agent-22.9-lts.md)
 {% endcontent-ref %}
 
 ## Agent Release Cycle
