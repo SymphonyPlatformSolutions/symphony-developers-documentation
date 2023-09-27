@@ -67,7 +67,7 @@
 ## Extension Apps <a href="#ext-apps" id="ext-apps"></a>
 
 * [Building Extension Apps](ext-apps/building-extension-apps.md)
-* [Planning Your App](ext-apps/planning-your-app.md)
+* [Planning Your App](ext-apps/planning-your-app/README.md)
 * [Getting Started](ext-apps/getting-started/README.md)
   * [Getting Started with ADK](ext-apps/getting-started/getting-started-with-adk.md)
   * [Application Manifest Bundle](ext-apps/app-configuration/application-manifest-bundle-file-reference.md)

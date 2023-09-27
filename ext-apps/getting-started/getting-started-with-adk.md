@@ -125,3 +125,19 @@ webpack compiled in 750 ms
 1. A browser window should launch with the URL [https://localhost:4000/controller.html](https://localhost:4000/controller.html). If it doesn't, visit that page manually. Dismiss the security warning and close the page.
 2. Visit [https://develop2.symphony.com/?bundle=https://localhost:4000/bundle.json](https://develop2.symphony.com/?bundle=https://localhost:4000/bundle.json) to inject the running app temporarily into a pod for testing
 3. Acknowledge the developer mode notice. Your app is now loaded.
+
+## Next Steps
+
+Each project type in the generator corresponds to one of the guides below. Read the respective guide for explanations of how to use ADK.
+
+{% content-ref url="../../dev-tools/app-developer-kit/build-a-basic-extension-app.md" %}
+[build-a-basic-extension-app.md](../../dev-tools/app-developer-kit/build-a-basic-extension-app.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/" %}
+[build-an-extension-app-with-app-views](../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/)
+{% endcontent-ref %}
+
+{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md" %}
+[build-an-extension-app-with-message-renderers.md](../../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md)
+{% endcontent-ref %}
