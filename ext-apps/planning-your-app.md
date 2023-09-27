@@ -20,8 +20,8 @@ The answer lies in Symphony's Extension API, which is a JavaScript library that 
 
 For a full overview of Symphony's Extension API continue here:
 
-{% content-ref url="../overview-of-extension-api/" %}
-[overview-of-extension-api](../overview-of-extension-api/)
+{% content-ref url="overview-of-extension-api/" %}
+[overview-of-extension-api](overview-of-extension-api/)
 {% endcontent-ref %}
 
 ## Next Steps
@@ -59,32 +59,28 @@ Users can interact with extension applications in a number of different ways. Sp
 
 Many extension applications built on top of Symphony need to receive conversation or user data. For example, if you wanted to build an extension app that extends the Symphony UI to add buttons to the IM, MIM, profile, or chatroom modules, it is likely that you would need access to conversation or user data. In order to do so your application will need to perform app authentication. You can learn more about performing app authentication here:
 
-{% content-ref url="../app-authentication/" %}
-[app-authentication](../app-authentication/)
+{% content-ref url="app-authentication/" %}
+[app-authentication](app-authentication/)
 {% endcontent-ref %}
 
 ### Will your application customize modules by adding buttons to IMs, MIMs, chatrooms, or user profiles?
 
 Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IMs, MIMs, chatrooms, or profile modules. In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication. You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
 
-{% content-ref url="extension-applications-+-ui-buttons.md" %}
-[extension-applications-+-ui-buttons.md](extension-applications-+-ui-buttons.md)
+{% content-ref url="../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/add-buttons-and-handlers-to-an-extension-app.md" %}
+[add-buttons-and-handlers-to-an-extension-app.md](../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/add-buttons-and-handlers-to-an-extension-app.md)
 {% endcontent-ref %}
 
 ### Will your application customize links added to the #hashtag and $cashtag hovercards?
 
-Another way extension applications can extend Symphony's UI is to override links associated with #hashtag (e.g. #symphony) and $cashtag (e.g. $GOOG) hover cards. By attaching your extension app to #hashtag or $cashtag contexts, you can show content in your app that is relevant to the context clicked by the user. You can learn more about how build extension apps that extend these #hashtag and $cashtag entities here:
-
-{% content-ref url="extension-applications-+-hashtags-and-usdcashtags.md" %}
-[extension-applications-+-hashtags-and-usdcashtags.md](extension-applications-+-hashtags-and-usdcashtags.md)
-{% endcontent-ref %}
+Another way extension applications can extend Symphony's UI is to override links associated with #hashtag (e.g. #symphony) and $cashtag (e.g. $GOOG) hover cards. By attaching your extension app to #hashtag or $cashtag contexts, you can show content in your app that is relevant to the context clicked by the user. You can learn more about how build extension apps that extend these #hashtag and $cashtag entities in the same guide above.
 
 ### Will your application perform custom rendering?
 
 Extension apps can extend Symphony's UI by acting as a custom renderer for structured objects created by the REST API. Structured objects are rich, inline, and interactive components embedded in a Symphony message. These structured objects can be rendered and injected into Symphony by creating a custom renderer as a part of an extension application. You can learn more about how to create a custom renderer in order to render structured objects here:
 
-{% content-ref url="extension-applications-+-structured-objects.md" %}
-[extension-applications-+-structured-objects.md](extension-applications-+-structured-objects.md)
+{% content-ref url="../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md" %}
+[build-an-extension-app-with-message-renderers.md](../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md)
 {% endcontent-ref %}
 
 ### Will your application contain a standalone frontend?
@@ -93,6 +89,6 @@ Some extension apps contain a dedicated frontend that will be embedded within of
 
 To learn more about leveraging the UI Toolkit to build complex frontend applications continue here:
 
-{% content-ref url="extension-applications-+-ui-toolkit.md" %}
-[extension-applications-+-ui-toolkit.md](extension-applications-+-ui-toolkit.md)
+{% content-ref url="../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/" %}
+[build-an-extension-app-with-app-views](../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/)
 {% endcontent-ref %}

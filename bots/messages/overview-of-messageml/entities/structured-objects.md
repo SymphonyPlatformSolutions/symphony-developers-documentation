@@ -124,6 +124,6 @@ To create a renderer application:
 
 To learn more about building Extension Applications that leverage structured objects, continue here:
 
-{% content-ref url="../../../../ext-apps/planning-your-app/extension-applications-+-structured-objects.md" %}
-[extension-applications-+-structured-objects.md](../../../../ext-apps/planning-your-app/extension-applications-+-structured-objects.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

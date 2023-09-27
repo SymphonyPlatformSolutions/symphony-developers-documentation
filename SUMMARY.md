@@ -67,12 +67,9 @@
 ## Extension Apps <a href="#ext-apps" id="ext-apps"></a>
 
 * [Building Extension Apps](ext-apps/building-extension-apps.md)
-* [Planning Your App](ext-apps/planning-your-app/README.md)
-  * [Extension Applications + UI Buttons](ext-apps/planning-your-app/extension-applications-+-ui-buttons.md)
-  * [Extension Applications + #hashtags and $cashtags](ext-apps/planning-your-app/extension-applications-+-hashtags-and-usdcashtags.md)
-  * [Extension Applications + Structured Objects](ext-apps/planning-your-app/extension-applications-+-structured-objects.md)
-  * [Extension Applications + UI Toolkit](ext-apps/planning-your-app/extension-applications-+-ui-toolkit.md)
+* [Planning Your App](ext-apps/planning-your-app.md)
 * [Getting Started](ext-apps/getting-started/README.md)
+  * [Getting Started with ADK](ext-apps/getting-started/getting-started-with-adk.md)
   * [Application Manifest Bundle](ext-apps/app-configuration/application-manifest-bundle-file-reference.md)
   * [Add an Extension App to a Symphony Pod](ext-apps/getting-started/add-an-extension-app-to-a-symphony-pod.md)
 * [Overview of Extension API](ext-apps/overview-of-extension-api/README.md)

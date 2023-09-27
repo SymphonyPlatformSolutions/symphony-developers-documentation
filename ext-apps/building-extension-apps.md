@@ -11,8 +11,8 @@ description: >-
 
 Symphony Extension Apps leverage the Symphony Extension API in order to create innovative workflows and automations. Depending on your desired workflow, there are many different development avenues available for you and your development team. Understanding these different development options, APIs available and Extension App capabilities is key to creating a successful app and positive user experience. Learn more about the different types of Extension Apps and APIs here:
 
-{% content-ref url="planning-your-app/" %}
-[planning-your-app](planning-your-app/)
+{% content-ref url="planning-your-app.md" %}
+[planning-your-app.md](planning-your-app.md)
 {% endcontent-ref %}
 
 ## 2.  Leverage our Tools
