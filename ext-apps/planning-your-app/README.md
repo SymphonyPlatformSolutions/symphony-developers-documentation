@@ -67,8 +67,8 @@ Many extension applications built on top of Symphony need to receive conversatio
 
 Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IMs, MIMs, chatrooms, or profile modules. In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication. You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
 
-{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/add-buttons-and-handlers-to-an-extension-app.md" %}
-[add-buttons-and-handlers-to-an-extension-app.md](../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/add-buttons-and-handlers-to-an-extension-app.md)
+{% content-ref url="../../dev-tools/adk/app-view/buttons-handlers.md" %}
+[buttons-handlers.md](../../dev-tools/adk/app-view/buttons-handlers.md)
 {% endcontent-ref %}
 
 ### Will your application customize links added to the #hashtag and $cashtag hovercards?
@@ -79,8 +79,8 @@ Another way extension applications can extend Symphony's UI is to override links
 
 Extension apps can extend Symphony's UI by acting as a custom renderer for structured objects created by the REST API. Structured objects are rich, inline, and interactive components embedded in a Symphony message. These structured objects can be rendered and injected into Symphony by creating a custom renderer as a part of an extension application. You can learn more about how to create a custom renderer in order to render structured objects here:
 
-{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md" %}
-[build-an-extension-app-with-message-renderers.md](../../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md)
+{% content-ref url="../../dev-tools/adk/message-renderer.md" %}
+[message-renderer.md](../../dev-tools/adk/message-renderer.md)
 {% endcontent-ref %}
 
 ### Will your application contain a standalone frontend?
@@ -89,6 +89,6 @@ Some extension apps contain a dedicated frontend that will be embedded within of
 
 To learn more about leveraging the UI Toolkit to build complex frontend applications continue here:
 
-{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/" %}
-[build-an-extension-app-with-app-views](../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/)
+{% content-ref url="../../dev-tools/adk/app-view/" %}
+[app-view](../../dev-tools/adk/app-view/)
 {% endcontent-ref %}

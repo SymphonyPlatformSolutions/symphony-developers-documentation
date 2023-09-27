@@ -320,10 +320,10 @@ Acknowledge the warning about being in developer mode. You should notice that a 
 
 Now that you have built a view-driven Extension App, you can proceed to build out your view and add more as required to complete your app.
 
-{% content-ref url="add-buttons-and-handlers-to-an-extension-app.md" %}
-[add-buttons-and-handlers-to-an-extension-app.md](add-buttons-and-handlers-to-an-extension-app.md)
+{% content-ref url="buttons-handlers.md" %}
+[buttons-handlers.md](buttons-handlers.md)
 {% endcontent-ref %}
 
-{% content-ref url="add-bdk-to-an-extension-app-to-get-user-identity.md" %}
-[add-bdk-to-an-extension-app-to-get-user-identity.md](add-bdk-to-an-extension-app-to-get-user-identity.md)
+{% content-ref url="circle-of-trust.md" %}
+[circle-of-trust.md](circle-of-trust.md)
 {% endcontent-ref %}

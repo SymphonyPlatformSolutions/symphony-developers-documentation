@@ -95,8 +95,8 @@ Finally, visit https://develop2.symphony.com/?bundle=https://localhost:4000/bund
 
 When you are ready to deploy your app permanently (or if you require Circle of Trust), follow the instructions on this page to setup your app.
 
-{% content-ref url="add-an-extension-app-to-a-symphony-pod.md" %}
-[add-an-extension-app-to-a-symphony-pod.md](add-an-extension-app-to-a-symphony-pod.md)
+{% content-ref url="add-app-entry.md" %}
+[add-app-entry.md](add-app-entry.md)
 {% endcontent-ref %}
 
 ## Start your App
@@ -130,14 +130,14 @@ webpack compiled in 750 ms
 
 Each project type in the generator corresponds to one of the guides below. Read the respective guide for explanations of how to use ADK.
 
-{% content-ref url="../../dev-tools/app-developer-kit/build-a-basic-extension-app.md" %}
-[build-a-basic-extension-app.md](../../dev-tools/app-developer-kit/build-a-basic-extension-app.md)
+{% content-ref url="../../dev-tools/adk/basic.md" %}
+[basic.md](../../dev-tools/adk/basic.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/" %}
-[build-an-extension-app-with-app-views](../../dev-tools/app-developer-kit/build-an-extension-app-with-app-views/)
+{% content-ref url="../../dev-tools/adk/app-view/" %}
+[app-view](../../dev-tools/adk/app-view/)
 {% endcontent-ref %}
 
-{% content-ref url="../../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md" %}
-[build-an-extension-app-with-message-renderers.md](../../dev-tools/app-developer-kit/build-an-extension-app-with-message-renderers.md)
+{% content-ref url="../../dev-tools/adk/message-renderer.md" %}
+[message-renderer.md](../../dev-tools/adk/message-renderer.md)
 {% endcontent-ref %}

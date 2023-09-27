@@ -1,4 +1,4 @@
-# Add BDK to an Extension App to get User Identity
+# Add BDK to an Extension App for Circle of Trust
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@ Complete the previous guide on building an extension app with app views
 
 Complete the first part of this guide with the assistance of your pod administrator, ensuring that your app has the **Primary User Identity** and **Trust application** permissions.
 
-{% content-ref url="../../../ext-apps/getting-started/add-an-extension-app-to-a-symphony-pod.md" %}
-[add-an-extension-app-to-a-symphony-pod.md](../../../ext-apps/getting-started/add-an-extension-app-to-a-symphony-pod.md)
+{% content-ref url="../../../ext-apps/getting-started/add-app-entry.md" %}
+[add-app-entry.md](../../../ext-apps/getting-started/add-app-entry.md)
 {% endcontent-ref %}
 
 {% hint style="info" %}

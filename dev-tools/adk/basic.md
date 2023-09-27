@@ -150,11 +150,11 @@ Acknowledge the warning about being in developer mode. You should notice that a 
 
 Now that you know how to build a basic extension app, you can continue to use the ADK in building out the rest of your app, depending on what type of app you require.
 
-{% content-ref url="build-an-extension-app-with-app-views/" %}
-[build-an-extension-app-with-app-views](build-an-extension-app-with-app-views/)
+{% content-ref url="app-view/" %}
+[app-view](app-view/)
 {% endcontent-ref %}
 
-{% content-ref url="build-an-extension-app-with-message-renderers.md" %}
-[build-an-extension-app-with-message-renderers.md](build-an-extension-app-with-message-renderers.md)
+{% content-ref url="message-renderer.md" %}
+[message-renderer.md](message-renderer.md)
 {% endcontent-ref %}
 
