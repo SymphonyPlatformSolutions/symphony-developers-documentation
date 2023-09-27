@@ -1,7 +1,7 @@
 # Symphony Generator
 
 {% hint style="info" %}
-**Prerequisite**: Install NodeJS first, either [directly](https://nodejs.org) or via [nvm](https://github.com/nvm-sh/nvm)
+**Prerequisite**: Install NodeJS first, either [directly](https://nodejs.org/en) or via [nvm](https://github.com/nvm-sh/nvm). You can also use other package managers like [bun](https://bun.sh) or [yarn](https://yarnpkg.com), which the generator will attempt to use before falling back to npm.
 {% endhint %}
 
 The Symphony Generator is a yeoman-based CLI tool that can be used to quickly generate Symphony bot, app and workflow project scaffolds. You can create example projects that use our developer toolkits:
@@ -9,27 +9,37 @@ The Symphony Generator is a yeoman-based CLI tool that can be used to quickly ge
 * BDK for Java
 * BDK for Python
 * WDK
+* ADK
 
 ## Quick Start
 
-Install the Symphony Generator:
+Install yeoman and the Symphony Generator.
 
-```
+{% tabs %}
+{% tab title="npm" %}
+```bash
 $ npm i -g yo @finos/generator-symphony
 ```
+{% endtab %}
 
-Create a new directory and go into it:
-
+{% tab title="yarn" %}
+```bash
+$ yarn global add yo @finos/generator-symphony
 ```
+{% endtab %}
+
+{% tab title="bun" %}
+```bash
+$ bun add -g yo @finos/generator-symphony
+```
+{% endtab %}
+{% endtabs %}
+
+Then, create a directory for your new project and launch the generator.
+
+```bash
 $ mkdir mybot && cd $_
-```
-
-Run Symphony Bot Generator and follow instructions in your terminal:
-
-```
 $ yo @finos/symphony
 ```
 
-Configure your Bot and environment accordingly:
-
-![](<../.gitbook/assets/Screenshot 2022-07-20 at 2.23.14 pm.png>)
+Configure your bot, workflow or app environments accordingly.
