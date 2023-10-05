@@ -213,6 +213,7 @@
     * [Client 2.0 - 20.5](admin-guide/change-log/client-2.0-extensibility-updates/client-2.0-20.5.md)
     * [Client 2.0 - 20.4](admin-guide/change-log/client-2.0-extensibility-updates/client-2.0-20.4.md)
   * [Universal Webhook](admin-guide/change-log/universal-webhook/README.md)
+    * [Univ Webhook - 2.6](admin-guide/change-log/universal-webhook/univ-webhook-2.6.md)
     * [Univ Webhook - 2.4](admin-guide/change-log/universal-webhook/univ-webhook-2.4.md)
     * [Univ Webhook - 2.2](admin-guide/change-log/universal-webhook/univ-webhook-2.2.md)
     * [Univ Webhook - 2.1](admin-guide/change-log/universal-webhook/univ-webhook-2.1.md)
