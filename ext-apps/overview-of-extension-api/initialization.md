@@ -20,7 +20,7 @@ To style your app, you must include the symphony-style.css CSS file in your appl
 
 Icons must be **square**, with a recommended size of 32x32.
 
-The following formats are supported SVG (recommended), PNG and JPG.
+The supported formats are SVG (recommended), PNG and JPG.
 
 Transparency is supported, but please take into account that your icon should work both in the light theme and the dark theme.
 
