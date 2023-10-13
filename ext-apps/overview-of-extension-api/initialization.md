@@ -16,6 +16,18 @@ To style your app, you must include the symphony-style.css CSS file in your appl
 <link rel="stylesheet" type="text/css" href="https://cdn.symphony.com/resources/api/v1.1/symphony-style.css">
 ```
 
+## Icons guidelines
+
+Icons must be **square**, with a recommended size of 32x32.
+
+The following formats are supported SVG (recommended), PNG and JPG.
+
+Transparency is supported, but please take into account that your icon should work both in the light theme and the dark theme.
+
+{% hint style="info" %}
+In the legacy Symphony Client, it was possible to use a rectangular sprite icon (32x16), where the first 16 pixels were used for the light theme and the last 16 pixels for the dark theme. This is not supported on Client 2.0.
+{% endhint %}
+
 ## SYMPHONY.remote.hello()
 
 The `SYMPHONY.remote.hello()` method should be used to initialize the connection to the Client Extension API from your application controller and views.
