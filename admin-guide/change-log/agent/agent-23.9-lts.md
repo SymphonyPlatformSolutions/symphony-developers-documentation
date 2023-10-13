@@ -3,12 +3,18 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.2.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.3.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 23.9.3
+
+* Fixed security vulnerabilities.
+* Fixed issue preventing bots from getting message replies containing tables.
+* Support calling API endpoints with a trailing /, for example `/agent/v2/HealthCheck/` instead of the usual `/agent/v2/HealthCheck`, for backward compatibility with older agent versions. This is however not recommended and does not follow the API specifications.
 
 ### Agent 23.9.2
 

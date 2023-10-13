@@ -43,8 +43,7 @@ Archive:  dist-2.54.0.zip
   inflating: resources/agent-api-public.yaml  
    creating: util/         
   inflating: util/create_cert.sh     
-  inflating: util/create_rsa.sh      
-  inflating: util/jcurl-0.9.15.jar   
+  inflating: util/create_rsa.sh 
   inflating: util/jwt-helper-0.9.2.jar  
   inflating: util/setup-2.54.0.jar 
   inflating: agent-2.54.0.jar   
@@ -56,7 +55,6 @@ The Agent distribution package contains:
 
 * **Agent Server Package:** `agent-<VERSION>.jar`.
 * **Configuration Helper Package:** `util/setup-VERSION.jar`.
-* **JCurl Replacement:** [JCurl](https://github.com/symphonyoss/JCurl) - a _curl(1)_ replacement with native support for PKCS12 certificates and JSON.
 * **Sample Configuration:** `agent.yml`. For information on the fields see [Agent Configuration Fields](agent-configuration-fields.md).
 * **Agent API Swagger Specification:** `resources/agent-api-public.yaml`.
 * **Test Certificates:** test certificates for the required service users (`resources/certs/agentservice.p12` and `resources/certs/ceservice.p12`).
@@ -71,6 +69,10 @@ The Agent distribution package contains:
 * **Test public/private key pair**: for calling the Agent API (`resources/rsa/privatekey.pem` and `resources/rsa/pubkey.pem`). Note that you must create the user first and import their public key into the pod.
 * **Sample Postman collection**: contains predefined calls for testing the Agent installation (`resources/Postman.json`).
 * **jwt-helper**: a helper tool to generate a JWT authentication token for the provided username and signed by the provided private RSA key (`util/jwt-helper.jar`). Run as `java -jar jwt-helper.jar -user <username> -key <privatekey.pem>`); the output is a short-lived (5 minutes) token which can be used in the payload of the RSA authentication requests.
+
+{% hint style="info" %}
+The **JCurl library**, a _curl_ replacement with native support for PKCS12 certificates and JSON, is no longer packaged with the Agent. If you relied on it for some of your scripts, you can still find it in the following [FINOS repository](https://github.com/finos/JCurl/releases).
+{% endhint %}
 
 ### Configure
 
