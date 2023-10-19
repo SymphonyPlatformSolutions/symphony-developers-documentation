@@ -3,12 +3,16 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.3.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.4.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 23.9.4
+
+* Fix potential retry loop issue when sending large attachments with DLP. This is the rollback of a change introduced on Agent 23.9.2, that could cause a side effect on retry mechanisms. Please engage with your Technical Account Manager if you are still encountering DLP timeout issues when sending large attachments.
 
 ### Agent 23.9.3
 
