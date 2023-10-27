@@ -3,8 +3,8 @@
 Agent releases available for download:
 
 * Agent 23.10.1: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.10.1.zip)
-* Agent 23.9.4: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.4.zip)
-* Agent 23.6.5: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.6.5.zip)
+* Agent 23.9.5: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.5.zip)
+* Agent 23.6.6: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.6.6.zip)
 * Agent 23.3.2: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.3.2.zip)
 * Agent 22.12.2: [Download](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-22.12.2.zip)
 
