@@ -25,15 +25,21 @@ There are three steps required to load a chat:
 To load ECP in explicit mode, you need to add the following script in your web page:
 
 ```html
-<script id="symphony-ecm-sdk" data-onload="onECPSdkLoaded" render="explicit" data-partner-id="{partnerId}" src="https://{your_pod_url}.symphony.com/embed/sdk.js"></script>
+<script
+  id="symphony-ecm-sdk"
+  render="explicit"
+  data-onload="onECPSdkLoaded"
+  data-partner-id="{partnerId}"
+  src="https://{your_pod_url}.symphony.com/embed/sdk.js"
+></script>
 ```
 
 Optionally, you can define what needs to be done once the SDK is loaded (data-onload parameter).
 
 ```javascript
 window.onECPSdkLoaded = () => {
- // window.symphony is available
- // Typically: call the render() method documented below.
+  // window.symphony is available
+  // Typically: call the render() method documented below.
 }
 ```
 
@@ -55,22 +61,49 @@ The `render` method creates and adds the ECP iframe to the container with the cl
 
 The `render` method returns a promise that resolves when the chat is ready. See the promise definition [here](send-a-message.md#returned-promise).
 
-Example
+Example:
 
 ```html
-<div class="ecp-chat">
-/!-- ECP iframe will be loaded here by the SDK --/
-</div> 
-```
+<!-- ECP iframe will be loaded in this div by the SDK -->
+<div class="ecp-chat"></div>
 
-```javascript
-// script
-window.symphony.render('ecp-chat', {mode: 'dark', condensed: true, streamId: 'VYfoWw6oIUv+5K80BPUjeX///oz1uTOEdA=='})
+<script>
+window.onECPSdkLoaded = () => {
+  window.symphony.render('ecp-chat', {
+    mode: 'dark',
+    condensed: true,
+    streamId: 'VYfoWw6oIUv+5K80BPUjeX///oz1uTOEdA=='
+  })
+}
+</script>
 ```
 
 **Note**: It is _not_ mandatory to pass a `streamId` to the `render` method. This is particularly useful when you want to render ECP in the background, in a hidden div. And then when ECP has been rendered, you can open the right conversation using the `openStream` method, which is very quick.
 
 **Note:** Even if the `render` method can be used to switch from one conversation to another in Focus mode, it is not advised as it re-creates the iFrame entirely, which takes time. Prefer the [`openStream` ](open-a-chat.md#open-chat-with-streamid)method when you just want to switch to another conversation.
+
+To optimize the render process based on whether the user is already authenticated and the type of authentication (SSO or password), you can use the `checkAuth` method before calling `render` with the most appropriate configuration.
+
+```javascript
+window.onECPSdkLoaded = async () => {
+  const container = 'ecp-chat'
+  const config = { mode: 'dark', condensed: true };
+  
+  const { isLoggedIn, authenticationType } = await symphony.checkAuth(null);
+  if (!isLoggedIn) {
+    if (authenticationType === 'password') {
+      // Password Login
+      await symphony.render(container, config, true);
+    } else {
+      // SSO Login - enable login popup
+      await symphony.render(container, { ...config, ecpLoginPopup: true });
+    }
+  } else {
+    // Already authenticated
+    await symphony.render(container, config);
+  }
+}
+```
 
 #### 3. Opening a chat
 
@@ -87,7 +120,11 @@ In automatic mode, ECP will create the iFrame for you, so you just need to add t
 By default, ECP will start in Focus mode, but you can choose Collaboration mode by setting the mode parameter:`data-mode="full"` on the `script` tag.
 
 ```html
-<script id="symphony-ecm-sdk" data-partner-id="{partnerId}" src="https://{your_pod_url}.symphony.com/embed/sdk.js"></script>code
+<script
+  id="symphony-ecm-sdk"
+  data-partner-id="{partnerId}"
+  src="https://{your_pod_url}.symphony.com/embed/sdk.js"
+></script>
 ```
 
 Set the `data-partner-id` with the Partner Id that was provided to you. More info on Partner Id [here](pricing-tiers.md#partner-id).
@@ -115,13 +152,17 @@ It is possible to load ECP using the iFrame rendering mode, which accepts basic 
 For the Focus mode:
 
 ```html
-<iframe src="https://{your_pod_url}.symphony.com/embed/index.html?streamId={STREAM_ID}&partnerId={partnerId}&mode=dark&condensed=true"></iframe>
+<iframe
+  src="https://{your_pod_url}.symphony.com/embed/index.html?streamId={STREAM_ID}&partnerId={partnerId}&mode=dark&condensed=true"
+></iframe>
 ```
 
 For the Collaboration mode:
 
 ```html
-<iframe src="https://{your_pod_url}.symphony.com/client-bff/index.html?embed=true&streamId={STREAM_ID}&partnerId={partnerId}&mode=dark&condensed=true"></iframe>
+<iframe
+  src="https://{your_pod_url}.symphony.com/client-bff/index.html?embed=true&streamId={STREAM_ID}&partnerId={partnerId}&mode=dark&condensed=true"
+></iframe>
 ```
 
 Set the `partnerId` with the Partner Id that was provided to you. More info on Partner Id [here](pricing-tiers.md#partner-id).
