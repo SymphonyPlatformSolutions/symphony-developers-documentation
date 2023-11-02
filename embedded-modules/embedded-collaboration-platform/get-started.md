@@ -57,7 +57,7 @@ Once the SDK is loaded, the first function you need to call to start ECP is `ren
 
 The `render` method creates and adds the ECP iframe to the container with the class given as first parameter.
 
-<table><thead><tr><th width="159">Parameter</th><th width="153">Type</th><th>Description</th></tr></thead><tbody><tr><td>containerOrClassName</td><td>string</td><td>Class of the container into which ECP will be injected (optional). <br>If not specified, the default value is "symphony-ecm".</td></tr><tr><td>configuration</td><td>Record&#x3C;string, string | boolean | undefined></td><td><a href="configuration-parameters.md">Configuration </a>(optional)</td></tr></tbody></table>
+<table><thead><tr><th width="159">Parameter</th><th width="153">Type</th><th>Description</th></tr></thead><tbody><tr><td>containerOrClassName</td><td>string</td><td>Class of the container into which ECP will be injected (optional). <br>If not specified, the default value is "symphony-ecm".</td></tr><tr><td>configuration</td><td>Record&#x3C;string, string | boolean | undefined></td><td><a href="configuration-parameters.md">Configuration </a>(optional)</td></tr><tr><td>fromLogin</td><td>boolean</td><td><p>Startup time optimisation linked to the checkAuth feature described below.</p><p>If you know the user is not logged in, you can set this parameter to true, and the user will be sent straight to the login page (instead of first loading ECP and trying to connect before redirecting to login) </p><p><br>Default false (optional)</p></td></tr></tbody></table>
 
 The `render` method returns a promise that resolves when the chat is ready. See the promise definition [here](send-a-message.md#returned-promise).
 
