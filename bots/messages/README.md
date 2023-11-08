@@ -83,7 +83,7 @@ Each message in Symphony has a unique message ID.
 
 Messages may include:
 
-* Maximum 40 entities (#hashtags, $cashtags, and mentions).
+* Maximum 80 entities (tags and mentions).&#x20;
 * Maximum 2,500 unique tokens (distinct words) in the markdown representation of the message.
 * 81,130 characters of the encrypted markdown representation of the message. This corresponds approximately to 60,000 characters before encryption. Note that there is a greater chance of reaching the token or the entity limit than the character limit.&#x20;
 * The size of a message cannot exceed 1.5Mb, including both the messageML (message property) and the entityJSON (data property)
