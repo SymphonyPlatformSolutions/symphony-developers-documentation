@@ -118,8 +118,6 @@ symphony.listen({
 
 When the user needs to communicate with users from external organisations, they require an accepted connection request. Subscribing to connection notifications will allow you to act on connection requests that have been accepted or new incoming requests from other users.
 
-You can receive notifications when there is a new incoming message.
-
 `SubscriptionParameters`
 
 <table><thead><tr><th width="142">Parameter</th><th width="212">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>status</td><td>Array&#x3C;string> | undefined</td><td>If specified, filters the notifications to only those statuses provided. Valid statuses are: <code>pending_incoming</code>, <code>accepted</code> or <code>deleted</code></td></tr></tbody></table>
