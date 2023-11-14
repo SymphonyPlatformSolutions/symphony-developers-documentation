@@ -9,6 +9,7 @@ Here is the list of possible notifications:
 * [Keep track of unread messages](notifications.md#keep-track-of-unread-messages): Be notified of the number of unread messages in each chat conversation.
 * [New messages](notifications.md#new-messages): Be notified when a new message is received.
 * [Activity of the user](notifications.md#activity-notifications): Be notified if the user is interacting with the chat or is inactive.
+* [Connection notifications](notifications.md#connection-notifications): Be notified when the user receives a new connection request or when a request has been accepted or deleted.
 
 To listen to some notifications, use the `listen` method exposed by the SDK. It takes a `SubscriptionPayload` object as parameter:
 
@@ -109,6 +110,31 @@ symphony.listen({
   type: 'ActivityNotifications',
   callback: () => {
     console.log('last active time: ' + Date.now());
+  },
+});
+```
+
+### Connection notifications
+
+When the user needs to communicate with users from external organisations, they require an accepted connection request. Subscribing to connection notifications will allow you to act on connection requests that have been accepted or new incoming requests from other users.
+
+You can receive notifications when there is a new incoming message.
+
+`SubscriptionParameters`
+
+<table><thead><tr><th width="142">Parameter</th><th width="212">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>status</td><td>Array&#x3C;string> | undefined</td><td>If specified, filters the notifications to only those statuses provided. Valid statuses are: <code>pending_incoming</code>, <code>accepted</code> or <code>deleted</code></td></tr></tbody></table>
+
+`NotificationObject`
+
+<table><thead><tr><th width="161">Parameter</th><th width="139">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>status</td><td>string</td><td><code>pending_incoming</code>, <code>accepted</code> or <code>deleted</code></td></tr><tr><td>userId</td><td>number</td><td>User ID of the external user</td></tr></tbody></table>
+
+```typescript
+// Example
+symphony.listen({
+  type: 'ConnectionNotifications',
+  status: [ 'accepted', 'pending_incoming' ],
+  callback: ({ userId, status }) => {
+    console.log(`connection to ${userId} is ${status}`);
   },
 });
 ```
