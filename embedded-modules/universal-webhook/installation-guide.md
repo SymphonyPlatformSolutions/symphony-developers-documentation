@@ -111,9 +111,9 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 
 The end result should look like this:
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 ### Create a Symphony service account for Universal Webhook
 
@@ -130,7 +130,7 @@ In Symphony, you must configure a service account using the Admin Portal (or via
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -174,13 +174,13 @@ Set your public key
 
 #### **Load the Universal Webhook app in Symphony**
 
-1. As an Admin, go the Symphony Marketplace <img src="../../.gitbook/assets/image (49).png" alt="" data-size="line"> on Symphony.
+1. As an Admin, go the Symphony Marketplace <img src="../../.gitbook/assets/image (51).png" alt="" data-size="line"> on Symphony.
 2. Enter Universal Webhook in the **Search** field to find the app you deployed in the steps above.
 3. Select **Install**, then **Open** to launch the application.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -195,7 +195,7 @@ _**If the application does not appear in the Symphony Market, check the develope
 3. Fill in the Service Account **private key** generated in the step [RSA authentication configuration](installation-guide.md#configure-the-rsa-authentication).
 4. Click on **UPDATE**.
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 * Optionally, explicitly allow unauthenticated webhooks to be created. Otherwise the only webhooks that will be processed will be the ones using a pre-configured HMAC secret or Shared secret in the header.
 * Optionally, the administrator can update the Universal Webhook picture directly from the extension application by hovering on the avatar placeholder.

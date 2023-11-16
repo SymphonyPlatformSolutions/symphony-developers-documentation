@@ -1,6 +1,6 @@
 # Desktop interoperability
 
-![](<../../.gitbook/assets/image (58).png>)
+![](<../../.gitbook/assets/image (60).png>)
 
 Symphony now interoperates with your local apps using the FDC3 standard to accelerate workflows on your desktop.
 
@@ -13,7 +13,7 @@ Symphony aims to be platform-agnostic, however, as of today, only [Finsemble ](h
 
 You can see a live demo of desktop interop in the [recording of our Innovate London 2022](https://innovate.symphony.com/videos/3447) conference. The demo starts at 13'.
 
-![Innovate London 2022](<../../.gitbook/assets/image (55).png>)
+![Innovate London 2022](<../../.gitbook/assets/image (57).png>)
 
 Learn more on [FDC3](https://fdc3.finos.org/), the open standard for the financial desktop.
 

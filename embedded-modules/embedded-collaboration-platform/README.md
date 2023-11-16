@@ -123,4 +123,4 @@ You can load a specific conversation by adding a `streamId` as a query parameter
 
 **Note:** You can update the configuration parameters using the settings wheel in the navigation bar. &#x20;
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption><p><em>The ECP sandbox is available for all pods and allows you to quickly test out the ECP settings.</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption><p><em>The ECP sandbox is available for all pods and allows you to quickly test out the ECP settings.</em></p></figcaption></figure>

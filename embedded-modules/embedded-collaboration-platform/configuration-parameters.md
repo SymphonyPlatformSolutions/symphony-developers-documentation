@@ -20,6 +20,7 @@ For example, if a user's admin has blocked file attachments in the Admin Portal,
   // CONFIGURABLE APP SETTINGS
   // Common
   canAddPeople: boolean; // allow add members to rooms if owner. default false
+  canClickExternalLinks: boolean; // allow user to click links in messages. default false
   condensed: boolean; // condensed mode. default true
   condensedMessageBelowName: boolean; // if in condensed mode, display message below or next to name. default true (below)
   ecpLoginPopup: boolean; // perform login within a popup, for SSO systems that refuse iframe integration. default false
@@ -30,6 +31,7 @@ For example, if a user's admin has blocked file attachments in the Admin Portal,
   showSystemMessages: boolean; // show system/maestro messages (e.g. a user joined room). default false
   sound: boolean; // enable sound notifications
   // Focus mode only
+  canClickInternalLinks: boolean; // allow user to click Symphony links in messages. default false
   showChatSearch: boolean; // enable search feature. default true
   showBookmarkMessage: boolean; // allow user to bookmark message. default true
   showCompose: boolean; // enable compose mode editor. default true

@@ -24,7 +24,7 @@ For example, https://mycompany.symphony.com/?admin[^1]
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -32,7 +32,7 @@ For example, https://mycompany.symphony.com/?admin[^1]
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -42,7 +42,7 @@ The bot username here has to match the username supplied by a bot configuration 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -54,7 +54,7 @@ If you are unsure how to generate an RSA key pair, use the [Symphony Generator](
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -64,7 +64,7 @@ Enable the required roles that your bot requires
 
 <div align="left" data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -72,7 +72,7 @@ Enable the required entitlements that your bot requires
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -82,6 +82,6 @@ Navigate to [Bot Permissions](../overview-of-rest-api/bot-permissions.md) for a 
 
 ### 7. Confirm Bot Creation
 
-![](<../../.gitbook/assets/image (62).png>)
+![](<../../.gitbook/assets/image (64).png>)
 
 [^1]: This is an example address. Your company's pod might be located on a custom domain, in which case simply append **/?admin** behind your pod address to access the Admin Console.

@@ -10,6 +10,7 @@ Here is the list of possible notifications:
 * [New messages](notifications.md#new-messages): Be notified when a new message is received.
 * [Activity of the user](notifications.md#activity-notifications): Be notified if the user is interacting with the chat or is inactive.
 * [Connection notifications](notifications.md#connection-notifications): Be notified when the user receives a new connection request or when a request has been accepted or deleted.
+* Symphony link notifications: Be notified when a Symphony link is clicked.
 
 To listen to some notifications, use the `listen` method exposed by the SDK. It takes a `SubscriptionPayload` object as parameter:
 
@@ -133,6 +134,30 @@ symphony.listen({
   status: [ 'accepted', 'pending_incoming' ],
   callback: ({ userId, status }) => {
     console.log(`connection to ${userId} is ${status}`);
+  },
+});
+```
+
+### Symphony link notifications
+
+Internal links are specific URIs, processed by Symphony, in order to trigger specific actions (opening a room, a user profile or a message).
+
+In full collaboration mode, the interactions through internal links is supported. In focus mode, this interactions can’t be processed (i.e. opening room through a chat link).&#x20;
+
+Subscribing to “internal link notifications” allows to execute a callback when a Symphony link is clicked. This notification is only available in focus mode when `canClickInternalLinks` is enabled.
+
+```typescript
+// Example
+symphony.listen({
+  type: 'InternalLinkNotifications',
+  callback: ({ url, selector }) => {
+    console.log(`Internal link clicked in ${selector || 'main frame'}: ${url}`);
+    
+    // example of ECP frames redirection on internal link clicked
+    const streamId = new URL(url).searchParams.get('streamId');
+    if (streamId) {
+      window.symphony.setStream(streamId, selector);
+    }
   },
 });
 ```

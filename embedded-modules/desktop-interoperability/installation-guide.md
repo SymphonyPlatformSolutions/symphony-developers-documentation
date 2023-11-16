@@ -162,7 +162,7 @@ Start the Desktop Integration Platform, then **only** start Symphony.
 
 Hover over a cashtag. The **View Instrument** link should appear. If it appears, the connector to the DIP has been successfully loaded.
 
-![When hovering over a cashtag, a View Instrument link should be available.](<../../.gitbook/assets/image (3).png>)
+![When hovering over a cashtag, a View Instrument link should be available.](<../../.gitbook/assets/image (5).png>)
 
 **Verify that Symphony can send intents to desktop apps.**
 
