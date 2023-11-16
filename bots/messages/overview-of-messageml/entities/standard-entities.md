@@ -85,11 +85,11 @@ Display in Symphony:
 
 {% tabs %}
 {% tab title="Users with a DIP" %}
-<figure><img src="../../../../.gitbook/assets/image (38).png" alt=""><figcaption><p>On click, Symphony will raise the embedded intent.</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>On click, Symphony will raise the embedded intent.</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Users without a DIP" %}
-<figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

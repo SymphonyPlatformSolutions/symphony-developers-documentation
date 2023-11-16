@@ -10,7 +10,7 @@ Here is the list of possible notifications:
 * [New messages](notifications.md#new-messages): Be notified when a new message is received.
 * [Activity of the user](notifications.md#activity-notifications): Be notified if the user is interacting with the chat or is inactive.
 * [Connection notifications](notifications.md#connection-notifications): Be notified when the user receives a new connection request or when a request has been accepted or deleted.
-* Symphony link notifications: Be notified when a Symphony link is clicked.
+* [Symphony link notifications](notifications.md#symphony-link-notifications): Be notified when a Symphony link is clicked.
 
 To listen to some notifications, use the `listen` method exposed by the SDK. It takes a `SubscriptionPayload` object as parameter:
 
@@ -140,11 +140,17 @@ symphony.listen({
 
 ### Symphony link notifications
 
-Internal links are specific URIs, processed by Symphony, in order to trigger specific actions (opening a room, a user profile or a message).
+Internal links are specific URIs, processed by Symphony, in order to trigger specific actions (opening a room, a user profile or a message, etc.).
 
-In full collaboration mode, the interactions through internal links is supported. In focus mode, this interactions can’t be processed (i.e. opening room through a chat link).&#x20;
+In full collaboration mode, the interactions through internal links are supported. In focus mode, this interactions can’t be processed (i.e. opening room through a chat link).&#x20;
 
-Subscribing to “internal link notifications” allows to execute a callback when a Symphony link is clicked. This notification is only available in focus mode when `canClickInternalLinks` is enabled.
+Subscribing to "internal link notifications" allows to execute a callback when a Symphony link is clicked.&#x20;
+
+This notification is only available in focus mode when `canClickInternalLinks` is enabled.
+
+`NotificationObject`
+
+<table><thead><tr><th width="161">Parameter</th><th width="139">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>url</td><td>string</td><td>Full URL of the internal link clicked</td></tr><tr><td>selector</td><td>string</td><td>ECP frame selector in which the link has been clicked (<code>undefined</code> for main ECP frame)</td></tr></tbody></table>
 
 ```typescript
 // Example

@@ -9,7 +9,7 @@ Universal Webhook is a service provided by a bot. You can add the bot to any Sym
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -17,7 +17,7 @@ Universal Webhook is a service provided by a bot. You can add the bot to any Sym
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -29,7 +29,7 @@ You're ready to set up your first webhook.&#x20;
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -40,7 +40,7 @@ You will need to enter some basic information:&#x20;
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -52,7 +52,7 @@ Also, note that since the version 2.4, your webhooks can contain attachments for
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -62,7 +62,7 @@ If your service sends a JSON object, you will need to provide a template for map
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -73,7 +73,7 @@ If your message is valid, the bot will send you the message in a direct chat. If
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -89,7 +89,7 @@ Symphony recommends using a security protocol to validate the data, even if you 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -99,7 +99,7 @@ If you choose 'Shared Secret,' your data will require a secret to be sent along 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -114,7 +114,7 @@ More precisely, Universal Webhook will use the HMAC SHA256 algorithm to compute 
 
 If the values don't match, then the data will be rejected.
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 1. Choose a **custom header** to use for your webhook. The custom header name needs to be <mark style="color:red;">**lower case only**</mark>. Any data sent without this header will be rejected. Let's use `"authorisation"` for our example.
 2. Enter a **secret value**. Let's use `"this is my secret"`
@@ -125,7 +125,7 @@ If the values don't match, then the data will be rejected.
 5. Send the request to the webhook URL and specify in the http headers the custom header and the computed hash as value:&#x20;
 6.
 
-    <figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Example in Postman</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Example in Postman</p></figcaption></figure>
 7. Universal Webhook will perform the same steps, compute the hash and compare it with the provided hash. If the values match, the message will be sent in the chat room.
 
 ## Integrating with your service
@@ -135,7 +135,7 @@ If the values don't match, then the data will be rejected.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -154,7 +154,7 @@ Consider this sample setup using Shared Secret validation.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -162,7 +162,7 @@ Consider this sample setup using Shared Secret validation.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -170,7 +170,7 @@ Consider this sample setup using Shared Secret validation.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -178,13 +178,13 @@ Consider this sample setup using Shared Secret validation.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -192,7 +192,7 @@ After a moment, you should see a '200 OK' success indicator in Postman.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -200,7 +200,7 @@ And in Symphony, Universal Webhook delivers your message.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -212,7 +212,7 @@ From this list, you can deactivate, edit, or delete a webhook. Webhooks must be 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -222,7 +222,7 @@ If you hover over the webhook name, an icon will appear.&#x20;
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -239,7 +239,7 @@ You are able to see all accepted and rejected requests over the last month. Filt
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -254,13 +254,13 @@ The way to attach files depends on the type of webhook used (MessageML v2, Raw t
 
 Example of a MessageML webhook with a file attached, in Postman.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 **Raw text example**
 
 Despite the webhook being of type Raw text, please continue to set the content type to `multipart/form-data`, as you can see in the following example.
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 **JSON example**
 
@@ -268,7 +268,7 @@ With a JSON webhook, the message data needs to be added to the `data` field.&#x2
 
 Example in Postman:
 
-<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
 Example in cURL:
 
@@ -294,7 +294,7 @@ Postman request sample of MessageML v2 type with an attachment and its preview:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -302,7 +302,7 @@ Display of the resulting message in a chat:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
