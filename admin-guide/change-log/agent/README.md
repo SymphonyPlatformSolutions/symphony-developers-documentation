@@ -6,6 +6,10 @@ Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
 
+{% content-ref url="agent-23.11.md" %}
+[agent-23.11.md](agent-23.11.md)
+{% endcontent-ref %}
+
 {% content-ref url="agent-23.10.md" %}
 [agent-23.10.md](agent-23.10.md)
 {% endcontent-ref %}
