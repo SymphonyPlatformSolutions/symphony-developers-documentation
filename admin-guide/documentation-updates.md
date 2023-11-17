@@ -209,7 +209,7 @@ The following list shows the endpoints that have been updated or added to the [A
 
 The following list shows the pages that have been updated:
 
-* [Symphony Elements - Buttons](../bots/messages/overview-of-messageml/symphony-elements-1/buttons.md): the description of the `type` attribute has changed. Now, it says that the reset button resets the form-data to its initial values.
+* [Symphony Elements - Buttons](../bots/messages/overview-of-messageml/symphony-elements-1/buttons/): the description of the `type` attribute has changed. Now, it says that the reset button resets the form-data to its initial values.
 * [Suppress Message](https://developers.symphony.com/restapi/v20.4/reference-link/suppress-message): Added suppressed message examples.
 * [PresentationML Live Renderer Too](https://renderer-tool.app.symphony.com/)l: corrections performed on the rendering of cards and in the live preview.
 

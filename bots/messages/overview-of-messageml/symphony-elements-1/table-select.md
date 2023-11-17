@@ -1,6 +1,6 @@
 # Table Select
 
-The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](buttons.md) Element.
+The Table Select is not an Element itself but an example of what can be achieved by using Elements with the [Apache FreeMarker](https://freemarker.apache.org/) templates. This way, it is possible to build tables which contain a special column that allows users to select one or more rows, either with the [Checkbox](checkbox.md) or the [Button](buttons/) Element.
 
 The following image shows three different tables. The first table shows the use of checkboxes to select rows, positioned to the right side of the table. The second example also shows checkboxes, but they are positioned to the left side. The last table shows buttons positioned to the right.
 
@@ -12,7 +12,7 @@ The following example shows how to create a Table Select structure using the [Fr
 
 In the JSON data, you can configure the `type` of the Element that will be added to the Table Select and its `position`:
 
-<table data-header-hidden><thead><tr><th width="136">Attribute</th><th width="88">Type</th><th width="112">Required?</th><th>Description</th></tr></thead><tbody><tr><td>Attribute</td><td>Type</td><td>Required?</td><td>Description</td></tr><tr><td><code>type</code></td><td>String</td><td>Yes</td><td>The <code>type</code>attribute determines if a table will display a special column with <a href="buttons.md">Buttons</a> or <a href="checkbox.md">Checkboxes</a> within it.  Note that a table can have only one of the two possible <code>types</code>, being <strong>button</strong> or <strong>checkbox</strong>. For more information, see the Example below.</td></tr><tr><td><code>position</code></td><td>String</td><td>Yes</td><td>This attribute indicates how the buttons and checkboxes must be aligned inside the column. Accepted values: <code>left</code> or <code>right</code>. For more information, refer to the JSON example below.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="136">Attribute</th><th width="88">Type</th><th width="112">Required?</th><th>Description</th></tr></thead><tbody><tr><td>Attribute</td><td>Type</td><td>Required?</td><td>Description</td></tr><tr><td><code>type</code></td><td>String</td><td>Yes</td><td>The <code>type</code>attribute determines if a table will display a special column with <a href="buttons/">Buttons</a> or <a href="checkbox.md">Checkboxes</a> within it.  Note that a table can have only one of the two possible <code>types</code>, being <strong>button</strong> or <strong>checkbox</strong>. For more information, see the Example below.</td></tr><tr><td><code>position</code></td><td>String</td><td>Yes</td><td>This attribute indicates how the buttons and checkboxes must be aligned inside the column. Accepted values: <code>left</code> or <code>right</code>. For more information, refer to the JSON example below.</td></tr></tbody></table>
 
 In this example, the table `type` is set as `button` and the `position` is set as `left`.
 

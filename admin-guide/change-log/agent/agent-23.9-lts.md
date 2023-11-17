@@ -3,12 +3,17 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.5.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.6.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 23.9.6
+
+* Fixed error 503 when timing out on legacy datafeed API /agent/v4/datafeed in edge cases
+* Fixed logs not reporting the correct duration of the request for datafeed endpoints
 
 ### Agent 23.9.5
 

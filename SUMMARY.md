@@ -41,7 +41,8 @@
       * [Special Characters](bots/messages/overview-of-messageml/messageml-basic-format-tags/special-characters.md)
       * [Emojis](bots/messages/overview-of-messageml/messageml-basic-format-tags/emojis.md)
     * [Interactive Elements Forms](bots/messages/overview-of-messageml/symphony-elements-1/README.md)
-      * [Buttons](bots/messages/overview-of-messageml/symphony-elements-1/buttons.md)
+      * [Buttons](bots/messages/overview-of-messageml/symphony-elements-1/buttons/README.md)
+        * [Icon set for Buttons](bots/messages/overview-of-messageml/symphony-elements-1/buttons/icon-set-for-buttons.md)
       * [Text Field](bots/messages/overview-of-messageml/symphony-elements-1/text-field.md)
       * [Masked Text Field](bots/messages/overview-of-messageml/symphony-elements-1/masked-text-field.md)
       * [Text Area](bots/messages/overview-of-messageml/symphony-elements-1/text-area.md)
@@ -160,6 +161,7 @@
 
 * [Change Logs](admin-guide/change-log/README.md)
   * [Agent](admin-guide/change-log/agent/README.md)
+    * [Agent - 23.11](admin-guide/change-log/agent/agent-23.11.md)
     * [Agent - 23.10](admin-guide/change-log/agent/agent-23.10.md)
     * [Agent - 23.9 (LTS)](admin-guide/change-log/agent/agent-23.9-lts.md)
     * [Agent - 23.6 (LTS)](admin-guide/change-log/agent/agent-23.6-lts.md)

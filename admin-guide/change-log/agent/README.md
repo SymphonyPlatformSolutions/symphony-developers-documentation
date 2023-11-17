@@ -1,7 +1,7 @@
 # Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.5.zip).
+Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.6.zip).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
@@ -30,7 +30,7 @@ Please find in the subpages below the list of changes related to each version of
 
 ### Release cycle
 
-Starting with Agent 22.6, Agent releases are not coupled with the releases of the Symphony Backend (SBE).
+Agent releases are not coupled with the releases of the Symphony Backend (SBE).
 
 The Agent is released every month, and the version number follows a year.month.patch convention.
 

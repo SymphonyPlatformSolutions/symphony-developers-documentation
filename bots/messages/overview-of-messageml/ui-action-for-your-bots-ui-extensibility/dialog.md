@@ -7,7 +7,7 @@ This can be useful to make long messages much more concise, or progressively dis
 
 The Dialog component is structured in two sections:
 
-* `<ui-action action='open-dialog'>` tag. This tag defines where and how the [button](../symphony-elements-1/buttons.md) will be displayed, and it references the dialog that will open using the `target-id` attribute;
+* `<ui-action action='open-dialog'>` tag. This tag defines where and how the [button](../symphony-elements-1/buttons/) will be displayed, and it references the dialog that will open using the `target-id` attribute;
 * `<dialog>` tag that defines the content of the dialog that will be displayed when the button is clicked.
 
 ### UI-action with open-dialog
@@ -201,7 +201,7 @@ Below are simpler examples with and without the use of forms.
 * The dialog functionality supports [**Interactive Elements Forms**](../symphony-elements-1/) in the following way:
   * Dialogs can be contained inside forms. However, if contained in a form, the dialog cannot contain any interactive Element (such as button, text-area, etc.)
   * Dialogs can contain a form. The `<form>` tag should wrap the entire content of the dialog, including the `<title>` ,`<body>` and `<footer>` tags, as you can see in the examples below. _This is useful when you want the submit button not to be hidden and always appear in the footer of the dialog whereas the rest of the form content is contained in the scrollable body area._
-  * Please also note that users can close the dialog thanks to the cross (x) displayed at the top-right corner of it, as well as with a new type of [button](../symphony-elements-1/buttons.md) that has been created for that purpose: \<button type="cancel">. You can also specify the class attribute of the button which is by default set to "tertiary" for this new button.
+  * Please also note that users can close the dialog thanks to the cross (x) displayed at the top-right corner of it, as well as with a new type of [button](../symphony-elements-1/buttons/) that has been created for that purpose: \<button type="cancel">. You can also specify the class attribute of the button which is by default set to "tertiary" for this new button.
 * A dialog cannot be embedded in another dialog.
 
 {% hint style="success" %}

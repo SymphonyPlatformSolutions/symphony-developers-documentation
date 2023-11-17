@@ -105,7 +105,6 @@ You can see below an example of how a user can interact with a form that was sen
 ## Known Limitations
 
 * Once the user has submitted the form, it becomes disabled. However, if the conversation is reloaded, the form resets and the user is able to send a new reply. If your workflow requires a single reply per user, please implement this control on the Bot side.
-* In read-only rooms, only the owners of the room are able to interact with Symphony Elements. For non-owner users, messages with Elements will be disabled.
 {% endhint %}
 
 **To begin leveraging Symphony Elements in your bot workflows continue onto our Available Elements that you can find in the subpages.**
@@ -131,16 +130,13 @@ Forms are represented by the **\<form>** tag, as you can see in the examples abo
 
 ### Attributes
 
-| **Attribute**  | **Type** | **Required?** | **Description**                                                                          |
-| -------------- | -------- | ------------- | ---------------------------------------------------------------------------------------- |
-| `id`           | String   | Yes           | Identifies the form.                                                                     |
-| `multi-submit` | String   | No            | Specifies that the form can be submitted several times by the user ad the w to reset it. |
+<table data-header-hidden><thead><tr><th width="184">Attribute</th><th width="92">Type</th><th width="110">Required?</th><th>Description</th></tr></thead><tbody><tr><td><strong>Attribute</strong></td><td><strong>Type</strong></td><td><strong>Required?</strong></td><td><strong>Description</strong></td></tr><tr><td><code>id</code></td><td>String</td><td>Yes</td><td>Identifies the form.</td></tr><tr><td><code>multi-submit</code></td><td>String</td><td>No</td><td>Specifies that the form can be submitted several times by the user ad the w to reset it.</td></tr></tbody></table>
 
 ### Rules and Limitations
 
 * The form element can be considered the "frame" of a message, containing elements that will be sent by the bot and subsequently read by the datafeed.
-* To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons.md).
-* All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload.  That way the bot manager can know which button triggered the submission of that form.
+* To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons/).
+* All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload.  That way the bot manager can know which button triggered the submission of that form. Starting with Agent 23.11, the auto-submit feature allows to submit the form with a TextField, or with a DropDown Menu.
 * If there is more than one element in the form having the same `name` attribute, the value is converted to an array. Every index of the array is related to a specific element value. The index order is not guaranteed, so the developer needs to iterate through this array and collect the values.
 * When a form is submitted and `multi-submit` attribute is not specified, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, the user can fill out the form again and submit it as a new form.
 * The attribute `multi-submit` allows the us to submit the form several times even without needing to refresh the page. It can take 2 different string values:
@@ -185,7 +181,7 @@ The following example shows three forms being used as follows:
 
 
 
-<table data-header-hidden><thead><tr><th>Main features introduced</th><th>Agent needed to parse message sent by the bot</th><th width="150">Client 2.0 release</th><th width="150">Client 1.5 release</th><th>Backward client-compatibility behavior (e.g. external rooms)</th></tr></thead><tbody><tr><td>Main features introduced</td><td>Agent needed to parse message sent by the bot</td><td>Client 2.0 release</td><td><em>Client 1.5 release</em></td><td>Backward client-compatibility behavior (e.g. external rooms)</td></tr><tr><td>Initial release</td><td>2.55.9</td><td>Since first version</td><td><em>1.55</em></td><td>Not working</td></tr><tr><td>Multi-submit attribute</td><td>20.13</td><td>21.8</td><td>-</td><td>-</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th>Main features introduced</th><th width="180">Agent needed to parse message sent by the bot</th><th width="129">Client 2.0 release</th><th width="115">Client 1.5 release</th><th>Backward client-compatibility behavior (e.g. external rooms)</th></tr></thead><tbody><tr><td>Main features introduced</td><td>Agent needed to parse message sent by the bot</td><td>Client 2.0 release</td><td><em>Client 1.5 release</em></td><td>Backward client-compatibility behavior (e.g. external rooms)</td></tr><tr><td>Initial release</td><td>2.55.9</td><td>Since first version</td><td><em>1.55</em></td><td>Not working</td></tr><tr><td>Multi-submit attribute</td><td>20.13</td><td>21.8</td><td>-</td><td>-</td></tr></tbody></table>
 
 
 
