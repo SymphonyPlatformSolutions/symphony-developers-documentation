@@ -40,7 +40,7 @@
       * [Style Attributes](bots/messages/overview-of-messageml/messageml-basic-format-tags/style-attributes.md)
       * [Special Characters](bots/messages/overview-of-messageml/messageml-basic-format-tags/special-characters.md)
       * [Emojis](bots/messages/overview-of-messageml/messageml-basic-format-tags/emojis.md)
-    * [Interactive Elements Forms](bots/messages/overview-of-messageml/symphony-elements-1/README.md)
+    * [Elements Interactive Forms](bots/messages/overview-of-messageml/symphony-elements-1/README.md)
       * [Buttons](bots/messages/overview-of-messageml/symphony-elements-1/buttons/README.md)
         * [Icon set for Buttons](bots/messages/overview-of-messageml/symphony-elements-1/buttons/icon-set-for-buttons.md)
       * [Text Field](bots/messages/overview-of-messageml/symphony-elements-1/text-field.md)
