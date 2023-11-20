@@ -130,7 +130,7 @@ Forms are represented by the **\<form>** tag, as you can see in the examples abo
 
 ### Attributes
 
-<table data-header-hidden><thead><tr><th width="184">Attribute</th><th width="92">Type</th><th width="110">Required?</th><th>Description</th></tr></thead><tbody><tr><td><strong>Attribute</strong></td><td><strong>Type</strong></td><td><strong>Required?</strong></td><td><strong>Description</strong></td></tr><tr><td><code>id</code></td><td>String</td><td>Yes</td><td>Identifies the form.</td></tr><tr><td><code>multi-submit</code></td><td>String</td><td>No</td><td>Specifies that the form can be submitted several times by the user ad the w to reset it.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="184">Attribute</th><th width="92">Type</th><th width="110">Required?</th><th>Description</th></tr></thead><tbody><tr><td><strong>Attribute</strong></td><td><strong>Type</strong></td><td><strong>Required?</strong></td><td><strong>Description</strong></td></tr><tr><td><code>id</code></td><td>String</td><td>Yes</td><td>Identifies the form.</td></tr><tr><td><code>multi-submit</code></td><td>String</td><td>No</td><td>Specifies that the form can be submitted several times by the user and the reset behavior. See the possible values and behaviors in <strong>Rules and Limitations</strong> below.</td></tr></tbody></table>
 
 ### Rules and Limitations
 
