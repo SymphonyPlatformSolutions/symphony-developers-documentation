@@ -35,7 +35,7 @@ The following example shows radio buttons being used. It shows how developers ca
       <radio name="groupId" value="value02">green</radio>
       <radio name="groupId" value="value03">blue</radio>
       <button type="reset">Reset</button>
-      <button name="radio" value="action">Submit</button>
+      <button name="radio" type="action">Submit</button>
   </form>
 </messageML>
 ```
