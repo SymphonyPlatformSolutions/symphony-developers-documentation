@@ -21,7 +21,7 @@
   * [Overview of Key Manager API](bots/overview-of-rest-api/key-manager-api.md)
   * [Overview of Agent API](bots/overview-of-rest-api/agent-api.md)
   * [Bot Permissions](bots/overview-of-rest-api/bot-permissions.md)
-  * [REST API Reference](https://developers.symphony.com/restapi/reference)
+  * [REST API Reference](https://developers.symphony.com/restapi)
 * [Authentication](bots/authentication/README.md)
   * [RSA Authentication Workflow](bots/authentication/rsa-authentication.md)
   * [Certificate Authentication Workflow](bots/authentication/certificate-authentication.md)
