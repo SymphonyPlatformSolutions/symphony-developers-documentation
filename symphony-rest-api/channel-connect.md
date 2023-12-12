@@ -1,7 +1,7 @@
 # Channel Connect
 
 {% hint style="warning" %}
-The API described in this page will soon be **deprecated**, and replaced by a **new API**.
+The API described in this page is **deprecated**, and will soon be replaced by a **new API**.
 
 If you are currently planning a development project, please contact your Symphony point of contact to get the latest information on the new API.
 {% endhint %}
