@@ -1,5 +1,11 @@
 # Channel Connect
 
+{% hint style="warning" %}
+The API described in this page will soon be **deprecated**, and replaced by a **new API**.
+
+If you are currently planning a development project, please contact your Symphony point of contact to get the latest information on the new API.
+{% endhint %}
+
 Channel Connect allows Symphony partners to enable the users of their applications to collaborate on Symphony by adding those companies and users to the Symphony network. Partners can use these APIs to check if their application users are on Symphony and create accounts for them on Symphony if required.
 
 This page describes the APIs available for the partners to look up, add and manage their users on Symphony.
