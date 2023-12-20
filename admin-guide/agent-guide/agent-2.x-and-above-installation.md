@@ -4,10 +4,11 @@
 
 ### Prerequisites
 
-* [OpenJDK 8](https://openjdk.java.net/).
+* [OpenJDK 8](https://openjdk.java.net/), for Agent versions < 23.12.1.&#x20;
+* [OpenJDK 17](https://openjdk.org/), starting with Agent 23.12.1.
 
 {% hint style="info" %}
-Note: Make sure that you have installed the OpenJDK 8 update 282 or later, otherwise, the [Java JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) will also be needed.
+Note: For Java 8 installs, make sure that you have installed the OpenJDK 8 update 282 or later, otherwise, the [Java JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) will also be needed.
 {% endhint %}
 
 ### Agent Download

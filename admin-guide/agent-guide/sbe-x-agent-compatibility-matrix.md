@@ -6,9 +6,9 @@ In the following table, we are showing the versions of the Agent compatible with
 
 To download the latest version of the Agent, refer to [Agent Download](agent-download.md).
 
-| SBE product version | Agent version                                                                     |
-| ------------------- | --------------------------------------------------------------------------------- |
-| 24.1.x              | <p>23.10</p><p>23.9 (LTS)</p><p>23.6 (LTS)</p><p>23.3 (LTS)</p><p>22.12 (LTS)</p> |
-| 20.16.x             | <p>23.10</p><p>23.9 (LTS)</p><p>23.6 (LTS)</p><p>23.3 (LTS)</p><p>22.12 (LTS)</p> |
-| 20.15.x             | <p>23.10</p><p>23.9 (LTS)</p><p>23.6 (LTS)</p><p>23.3 (LTS)</p><p>22.12 (LTS)</p> |
+| SBE product version | Agent version                                                         |
+| ------------------- | --------------------------------------------------------------------- |
+| 24.1.x              | <p>23.12 (LTS)</p><p>23.9 (LTS)</p><p>23.6 (LTS)</p><p>23.3 (LTS)</p> |
+| 20.16.x             | <p>23.12 (LTS)</p><p>23.9 (LTS)</p><p>23.6 (LTS)</p><p>23.3 (LTS)</p> |
+| 20.15.x             | <p>23.12 (LTS)</p><p>23.9 (LTS)</p><p>23.6 (LTS)</p><p>23.3 (LTS)</p> |
 
