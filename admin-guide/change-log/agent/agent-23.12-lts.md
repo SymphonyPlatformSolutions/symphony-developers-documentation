@@ -9,8 +9,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 {% endhint %}
 
 {% hint style="warning" %}
-**Important**: Java 8 is **no longer supported** starting with Agent 23.12. Only **Java 17** is supported moving forward.\
-More information below.
+**Important**: Java 8 is **no longer supported** starting with Agent 23.12. Only **Java 17** is supported moving forward. More information below.
 {% endhint %}
 
 ## More info on the end of support of Java 8
@@ -25,7 +24,7 @@ A key dependency of the Agent service is [SpringBoot](https://spring.io/projects
 
 Java 17 has been released in 2021 and benefits from **Long Term Support**.
 
-**How to stay on Java 8**
+**How to stay on Java 8?**
 
 If you need time to migrate to Java 17, you can stay on the Agent version 23.9 LTS, which will stay supported on a best effort basis until **September 2024**.
 
