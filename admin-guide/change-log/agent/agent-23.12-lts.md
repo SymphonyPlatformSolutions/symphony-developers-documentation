@@ -9,17 +9,17 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 {% endhint %}
 
 {% hint style="warning" %}
-**Important**: Java 8 is **no longer supported** starting with this Agent 23.12. Only **Java 17** is supported moving forward.\
-Read more below.
+**Important**: Java 8 is **no longer supported** starting with Agent 23.12. Only **Java 17** is supported moving forward.\
+More information below.
 {% endhint %}
 
 ## More info on the end of support of Java 8
 
-Java 8 is **no longer supported** starting with this Agent 23.12. Only **Java 17** is supported moving forward.
+Java 8 is **no longer supported** starting with Agent 23.12. Only **Java 17** is supported moving forward.
 
 **Why now?**
 
-A key dependency of the Agent is [SpringBoot](https://spring.io/projects/spring-boot). As SpringBoot v2 is no longer supported, we upgraded to SpringBoot v3, which is no longer compatible with Java 8.&#x20;
+A key dependency of the Agent service is [SpringBoot](https://spring.io/projects/spring-boot). As SpringBoot v2 is no longer supported, we upgraded to SpringBoot v3, which is no longer compatible with Java 8.&#x20;
 
 **Why Java 17?**
 
@@ -27,7 +27,7 @@ Java 17 has been released in 2021 and benefits from **Long Term Support**.
 
 **How to stay on Java 8**
 
-If you need time to migrate to Java 17, you can stay on the Agent version 23.9 LTS, which we will continue to support on a best effort basis until **September 2024**.
+If you need time to migrate to Java 17, you can stay on the Agent version 23.9 LTS, which will stay supported on a best effort basis until **September 2024**.
 
 Please note that this support will be on a **best effort basis**: As this version relies on an unsupported version of SpringBoot, we may not be in a position to fix a bug or vulnerability that will be discovered in SpringBoot v2. If the issue is not related to SpringBoot, we will fix it as per our support policy.&#x20;
 
