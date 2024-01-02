@@ -20,7 +20,7 @@ This guide will use a shared extension app entry that is available for everyone 
 
 ## User Identity
 
-In order to obtain identity information of the current user, an extension app needs to perform an authentication call and validation loop as part of the [Circle of Trust process](../../../ext-apps/app-authentication/circle-of-trust-authentication.md). This requires a backend service to call [Symphony REST APIs](https://developers.symphony.com/restapi/reference/application-rsa-authentication) so as to secure the required private key. You can choose to manually create your own REST API client and link the endpoint contracts to the ADK configuration, but this guide will demonstrate how to use BDK to ease the process.
+In order to obtain identity information of the current user, an extension app needs to perform an authentication call and validation loop as part of the [Circle of Trust process](../../../ext-apps/app-authentication/circle-of-trust-authentication.md). This requires a backend service to call [Symphony REST APIs](https://developers.symphony.com/restapi/main/application-authentication/application-rsa-authentication) so as to secure the required private key. You can choose to manually create your own REST API client and link the endpoint contracts to the ADK configuration, but this guide will demonstrate how to use BDK to ease the process.
 
 ## Create BDK Project
 
