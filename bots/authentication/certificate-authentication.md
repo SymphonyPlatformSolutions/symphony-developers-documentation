@@ -2,8 +2,8 @@
 
 This pages describes the implementation of certificate-based Authentication. For the API reference of Certificate Session Authenticate and Certificate Key Manager Authenticate, see the following API endpoints:
 
-* Session Auth: [https://developers.symphony.com/restapi/reference#session-authenticate](https://developers.symphony.com/restapi/reference#session-authenticate)
-* Key Manager Auth: [https://developers.symphony.com/restapi/reference#key-manager-authenticate](https://developers.symphony.com/restapi/reference#key-manager-authenticate)
+* Session Auth: [https://developers.symphony.com/restapi/main/bot-authentication/session-authenticate](https://developers.symphony.com/restapi/main/bot-authentication/session-authenticate)
+* Key Manager Auth: [https://developers.symphony.com/restapi/main/bot-authentication/key-manager-authenticate](https://developers.symphony.com/restapi/main/bot-authentication/key-manager-authenticate)
 
 {% hint style="info" %}
 Note: The following authentication sequence is provided out of the box by our dedicated BDK and WDK toolkits.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:

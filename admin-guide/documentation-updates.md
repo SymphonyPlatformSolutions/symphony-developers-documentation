@@ -18,7 +18,7 @@ In this page, you will find the main updates/announcements of the developers por
 
 #### **July 2022**
 
-* [Create Message](https://symphony.readme.io/restapi/reference/create-message-v4) endpoint: removed a mistake in the documentation mentioning that bots were able to send a message in streams it is not part of with adhoc permissions, although it has never been supported.
+* [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint: removed a mistake in the documentation mentioning that bots were able to send a message in streams it is not part of with adhoc permissions, although it has never been supported.
 
 #### February 2022
 
@@ -30,7 +30,7 @@ In this page, you will find the main updates/announcements of the developers por
   * APIs are grouped as subsections of various different topics like Messages, Streams, Datafeed, etc.
   * Each API reference will be presented on a single and separated page from the other APIs,
   * You will be able to dynamically generate code in real time and in your preferred language thanks to the **parameters presented at the bottom** of each API reference page,
-  * _Please note that some links you have saved might be broken, due to the apis being referenced as pages instead of sections from the restapi doc (i.e.:_ [_https://developers.symphony.com/restapi/reference#messages-v4_](https://developers.symphony.com/restapi/reference#messages-v4) _becomes_ [_https://developers.symphony.com/restapi/reference/messages-v4_](https://developers.symphony.com/restapi/reference/messages-v4)_)._
+  * _Please note that some links you have saved might be broken, due to the apis being referenced as pages instead of sections from the restapi doc (i.e.:_ [_https://developers.symphony.com/restapi/reference#messages-v4_](https://developers.symphony.com/restapi/reference#messages-v4) _becomes_ [_https://developers.symphony.com/restapi/main/messages/create-message-v4_](https://developers.symphony.com/restapi/main/messages/create-message-v4)_)._
   * _Please note that this new design is mainly supported on 20.13 and later versions._
 
 ### 2021
@@ -43,14 +43,14 @@ In this page, you will find the main updates/announcements of the developers por
 ### Historical general updates
 
 * Removed the limitation of DLP scanning formReplies on the [Overview of Symphony Elements](../bots/messages/overview-of-messageml/symphony-elements-1/)
-* Added the information that only PKCS8 format is allowed for the key of the [UserKeyRequest Object](https://developers.symphony.com/restapi/reference#userkeyrequest-object)
+* Added the information that only PKCS8 format is allowed for the key of the [UserKeyRequest Object](https://developers.symphony.com/restapi/main/user-management/userkeyrequest-object)
 * New [Agent Performance Tuning](agent-guide/agent-performance-tuning.md) guide available.
 * Added limitations on the [Overview of Symphony Elements](../bots/messages/overview-of-messageml/symphony-elements-1/):
   * The form is reset when the page is refreshed and the enduser is able to send a new reply.
   * New Elements features are generally not supported by pods running an older client version than the one where they have been introduced (i.e. for XPod use cases)
 * Added a section "Versions and Compatibility" on each [Available Element](../bots/messages/overview-of-messageml/symphony-elements-1/) documentation, which gathers the versions in which main features of the considered Element were introduced, and which outcome can be expected from it in previous Client version, for the purpose of using it in XPod use-cases for example.
 * Updated `<ul>` and `<ol>` tags documentation under [Message Format - MessageML](../bots/messages/overview-of-messageml/messageml-basic-format-tags/content-grouping.md)
-* Added a description of Datafeed 2.0 (versus its previous version Datafeed 1.0) and its support in the agent. See [Introduction to datafeed](https://developers.symphony.com/restapi/v20.9/reference#introduction-to-datafeed)
+* Added a description of Datafeed 2.0 (versus its previous version Datafeed 1.0) and its support in the agent. See [Introduction to datafeed](https://developers.symphony.com/restapi/main/datafeed)
 * [Agent 2.X and above installation](agent-guide/agent-2.x-and-above-installation.md) has been updated to fix the threaddump endpoint path
 * API Reference updates:
   * [Stream Members](https://developers.symphony.com/restapi/v20.9/reference#stream-members) - updates for example and xPod use case
