@@ -4,9 +4,9 @@
 
 MessageML supports the following tags to embed media into messages:
 
-| Tags               | Description                                                                                                                                                                                               | Attributes                                         |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](broken-reference). | <p>• <code>src</code> <br>• <code>class</code></p> |
+| Tags               | Description                                                                                                                                                                                                                                                                             | Attributes                                         |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/restapi/main/messages/create-message-v4#other-request-examples). | <p>• <code>src</code> <br>• <code>class</code></p> |
 
 ## Rules and Limitations via an example
 
@@ -14,7 +14,7 @@ For the following examples, we are sending an SVG image along with the message.
 
 Note that an admin user might have to enable the sending of some specific file types. To do that, go to _AC Portal >> Company Settings >> Edit Entitlements >> File Types_.
 
-• Sending an image via the [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) API using the image URL
+• Sending an image via the [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) API using the image URL
 
 ```markup
 $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
@@ -24,7 +24,7 @@ $ curl -X POST https://yourpod.com/agent/v4/stream/:sid/message/create \
 -F 'message=<messageML>Sending attachment via API<img src="https://yourimg.com/test/myimage.svg"></img></messageML>'
 ```
 
-Sending an image via [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) API using Data URL (base64 encoding).\
+Sending an image via [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) API using Data URL (base64 encoding).\
 Note that it is necessary to include `data:image/imageType+xml;base64` before the data string, as shown in the following example:
 
 ```markup

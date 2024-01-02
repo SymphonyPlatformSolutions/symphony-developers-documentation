@@ -2,7 +2,7 @@
 
 You must register your application controller with Symphony and connect your application views using the `SYMPHONY.application` methods. During this time, the [Services](extension-api-services/) that will be used by your application must be specified.
 
-## SYMPHONY.application.register\(\)
+## SYMPHONY.application.register()
 
 Register an application controller with the Symphony client. Additionally, subscribe the application to remote services and register local services that can be used remotely. Returns a promise that will be fulfilled when registration is complete.
 
@@ -12,15 +12,9 @@ This method must be called before the application can [register or subscribe](ex
 register : function(id, servicesWanted, servicesSent)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| `id` | String | The id of your application. For partner apps, this is an alphanumeric string chosen by the partner. For custom enterprise apps, this is generated when creating the app in the Admin Portal. |
-| `servicesWanted` | Array of Strings | A list of names of remote services that your application wants to subscribe to |
-| `servicesSent` | Array of Strings | A list of names of local services your application wants to make available remotely \(any implemented methods on this service will be made available remotely\) |
+<table data-header-hidden><thead><tr><th width="185.33333333333331">Parameter</th><th width="158">Type</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Description</td></tr><tr><td><code>id</code></td><td>String</td><td>The id of your application. For partner apps, this is an alphanumeric string chosen by the partner. For custom enterprise apps, this is generated when creating the app in the Admin Portal.</td></tr><tr><td><code>servicesWanted</code></td><td>Array of Strings</td><td>A list of names of remote services that your application wants to subscribe to</td></tr><tr><td><code>servicesSent</code></td><td>Array of Strings</td><td>A list of names of local services your application wants to make available remotely (any implemented methods on this service will be made available remotely)</td></tr></tbody></table>
 
-| Returns | Type | Description |
-| :--- | :--- | :--- |
-| `userReferenceId` | String | A unique anonymized identifier for the user in context that will perpetuate until the user uninstalls the application |
+<table data-header-hidden><thead><tr><th width="207.33333333333331">Returns</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td>Returns</td><td>Type</td><td>Description</td></tr><tr><td><code>userReferenceId</code></td><td>String</td><td>A unique anonymized identifier for the user in context that will perpetuate until the user uninstalls the application</td></tr></tbody></table>
 
 ```javascript
 // Register the "hello" application with the Symphony client
@@ -35,7 +29,7 @@ SYMPHONY.application.register(
 }));
 ```
 
-## SYMPHONY.application.connect\(\)
+## SYMPHONY.application.connect()
 
 Connect an application view to an existing application that has been registered with Symphony. Additionally, subscribe the application to remote services and register local services that can be used remotely. Returns a promise that will be fulfilled when connection is complete.
 
@@ -43,15 +37,9 @@ Connect an application view to an existing application that has been registered 
 connect : function(id, servicesWanted, servicesSent)
 ```
 
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| `id` | String | The id of your application. For partner apps, this is an alphanumeric string chosen by the partner. For custom enterprise apps, this is generated when creating the app in the Admin Portal. |
-| `servicesWanted` | Array of Strings | A list of names of remote services that your application wants to subscribe to |
-| `servicesSent` | Array of Strings | A list of names of local services your application wants to make available remotely \(any implemented methods on this service will be made available remotely\) |
+<table data-header-hidden><thead><tr><th width="211.33333333333331">Parameter</th><th width="157">Type</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Description</td></tr><tr><td><code>id</code></td><td>String</td><td>The id of your application. For partner apps, this is an alphanumeric string chosen by the partner. For custom enterprise apps, this is generated when creating the app in the Admin Portal.</td></tr><tr><td><code>servicesWanted</code></td><td>Array of Strings</td><td>A list of names of remote services that your application wants to subscribe to</td></tr><tr><td><code>servicesSent</code></td><td>Array of Strings</td><td>A list of names of local services your application wants to make available remotely (any implemented methods on this service will be made available remotely)</td></tr></tbody></table>
 
-| Returns | Type | Description |
-| :--- | :--- | :--- |
-| `userReferenceId` | String | A unique anonymized identifier for the user in context that will perpetuate until the user uninstalls the application |
+<table data-header-hidden><thead><tr><th width="213.33333333333331">Returns</th><th width="131">Type</th><th>Description</th></tr></thead><tbody><tr><td>Returns</td><td>Type</td><td>Description</td></tr><tr><td><code>userReferenceId</code></td><td>String</td><td>A unique anonymized identifier for the user in context that will perpetuate until the user uninstalls the application</td></tr></tbody></table>
 
 ```javascript
 // Connect an application view to the "hello" application
@@ -65,4 +53,3 @@ SYMPHONY.application.connect(
   var userId = response.userReferenceId;
 }));
 ```
-

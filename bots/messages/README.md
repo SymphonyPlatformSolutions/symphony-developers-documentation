@@ -4,10 +4,10 @@
 
 Bots in Symphony can use the following API endpoints to **create**, **update** and **suppress** messages in Symphony chats:
 
-* Message **creation** via the Create Message v4 [endpoint](https://developers.symphony.com/restapi/reference#create-message-v4)
-* Message **creation in multiple conversations** using the Blast Message [endpoint](https://developers.symphony.com/restapi/reference#blast-message)
-* Message **update** via the Update Message [endpoint](https://developers.symphony.com/restapi/reference#update-message-v4). _Note this functionality is not supported on Mobile. On Mobile, updates will appear as new messages instead of replacing the actual message. Also, note the rules and limitations explained in the endpoint specifications documented_ [_here_](https://developers.symphony.com/restapi/v20.13/reference#update-message-v4)_._
-* Message **suppression** via the Suppress Message [endpoint](https://developers.symphony.com/restapi/reference#suppress-message)
+* Message **creation** via the [Create Message v4](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint
+* Message **creation in multiple conversations** using the [Blast Message](https://developers.symphony.com/restapi/main/messages/blast-message) endpoint
+* Message **update** via the [Update Message](https://developers.symphony.com/restapi/main/messages/update-message-v4) endpoint. _Note this functionality is not supported on Mobile. On Mobile, updates will appear as new messages instead of replacing the actual message. Also, note the rules and limitations explained in the endpoint specifications documented_ [_here_](https://developers.symphony.com/restapi/main/messages/update-message-v4)_._
+* Message **suppression** via the [Suppress Message](https://developers.symphony.com/restapi/main/messages/suppress-message) endpoint
 
 Please see below a quick animation showing a simple lifecycle of a bot message in Symphony with a message created by the bot, updated three times, and then finally suppressed.
 

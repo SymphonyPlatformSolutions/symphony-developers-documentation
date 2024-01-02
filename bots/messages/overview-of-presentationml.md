@@ -1,6 +1,6 @@
 # PresentationML
 
-Messages sent using the API are translated into equivalent XHTML tags known as _PresentationML_, that can be rendered and processed by any HTML client. For example, when you create a message using [Create Message v4](https://developers.symphony.com/restapi/reference#create-message-v4) , the `message` field in the response contains the message in _PresentationML_ format.
+Messages sent using the API are translated into equivalent XHTML tags known as _PresentationML_, that can be rendered and processed by any HTML client. For example, when you create a message using [Create Message v4](https://developers.symphony.com/restapi/main/messages/create-message-v4) , the `message` field in the response contains the message in _PresentationML_ format.
 
 Messages in PresentationML markup are enclosed in a `<div>` tag with the following attributes:
 
@@ -11,7 +11,7 @@ Messages in PresentationML markup are enclosed in a `<div>` tag with the followi
 <div data-format=\"PresentationML\" data-version=\"2.0\"> content here... </div>
 ```
 
-Since PresentationML was included as part of the MessageML format design, you can create messages by passing the message content in MessageML or in PresentationML. Note that PresentationML uses [Structured Objects](overview-of-messageml/entities/structured-objects.md) rather than shorthand tags. Therefore, when you send a message using [Create Message v4](https://developers.symphony.com/restapi/reference#create-message-v4), the `message` parameter must contain the message content in PresentationML XHTML markup, and the `data` parameter must contain the XML markup for the [standard entities](broken-reference) referenced in the message.
+Since PresentationML was included as part of the MessageML format design, you can create messages by passing the message content in MessageML or in PresentationML. Note that PresentationML uses [Structured Objects](overview-of-messageml/entities/structured-objects.md) rather than shorthand tags. Therefore, when you send a message using [Create Message v4](https://developers.symphony.com/restapi/main/messages/create-message-v4), the `message` parameter must contain the message content in PresentationML XHTML markup, and the `data` parameter must contain the XML markup for the [standard entities](broken-reference) referenced in the message.
 
 **Shorthand tags translations:**
 

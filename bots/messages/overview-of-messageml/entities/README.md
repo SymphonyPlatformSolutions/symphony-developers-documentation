@@ -2,7 +2,7 @@
 
 Entities (also called Structured Objects) are rich, inline, interactive components for Symphony messages that allow you to embed information that is more complex than simple text.
 
-To [create a message](https://developers.symphony.com/restapi/reference#create-message-v4) containing a Structured object, construct the message content using MessageML with either a `<div>` or a `<span>` element containing the following attributes:
+To [create a message](https://developers.symphony.com/restapi/main/messages/create-message-v4) containing a Structured object, construct the message content using MessageML with either a `<div>` or a `<span>` element containing the following attributes:
 
 * `class="entity"`: specifies that the message contains a corresponding structured object.
 * `data-entity-id`: the unique ID of the corresponding structure object.

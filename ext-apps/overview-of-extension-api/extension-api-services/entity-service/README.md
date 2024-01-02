@@ -37,7 +37,7 @@ render: function(type, data) {}
 
 The render method returns an object with the following fields:
 
-<table data-header-hidden><thead><tr><th width="175.33333333333331">Parameter</th><th width="102">Type</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Description</td></tr><tr><td>template</td><td>String</td><td><p>An ExtensionML string that specifies the object's presentation.</p><p>In addition to ExtensionML tags, iframe tags are also supported.</p></td></tr><tr><td>data</td><td>Object</td><td>An object containing the data referenced by the template. Described in <a href="https://developers.symphony.com/extension/docs/entity-advanced-templating">entity advanced templating</a>.</td></tr><tr><td>entityInstanceId</td><td>String</td><td>A unique identifier used to reference a specific entity.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="175.33333333333331">Parameter</th><th width="102">Type</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Description</td></tr><tr><td>template</td><td>String</td><td><p>An ExtensionML string that specifies the object's presentation.</p><p>In addition to ExtensionML tags, iframe tags are also supported.</p></td></tr><tr><td>data</td><td>Object</td><td>An object containing the data referenced by the template. Described in <a href="entity-advanced-templating.md">entity advanced templating</a>.</td></tr><tr><td>entityInstanceId</td><td>String</td><td>A unique identifier used to reference a specific entity.</td></tr></tbody></table>
 
 ## update()
 
@@ -47,7 +47,7 @@ Effectively re-renders an entity with new template and data objects given its en
 update: function(entityInstanceId, template, data) {}
 ```
 
-<table data-header-hidden><thead><tr><th width="170.33333333333331">Parameter</th><th width="86">Type</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Description</td></tr><tr><td>entityInstanceId</td><td>String</td><td>The instance id of the entity to be updated</td></tr><tr><td>template</td><td>String</td><td>The updated <a href="https://symphony-developers.symphony.com/docs/extensionml">ExtensionML</a> string that specifies the object presentation.</td></tr><tr><td>data</td><td>Object</td><td>The data for the entity being updated</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="170.33333333333331">Parameter</th><th width="86">Type</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Description</td></tr><tr><td>entityInstanceId</td><td>String</td><td>The instance id of the entity to be updated</td></tr><tr><td>template</td><td>String</td><td>The updated <a href="message-format-extensionml.md">ExtensionML</a> string that specifies the object presentation.</td></tr><tr><td>data</td><td>Object</td><td>The data for the entity being updated</td></tr></tbody></table>
 
 ### Sample Renderer Application
 

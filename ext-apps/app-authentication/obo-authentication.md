@@ -9,7 +9,7 @@ OBO or On-Behalf-Of authentication allows an authenticated bot + extension app t
 * Send messages and attachments
 * Set the context user's own presence
 
-For a full list of OBO-Enabled endpoints, click [here](https://developers.symphony.com/restapi/reference#obo-enabled-endpoints).
+For a full list of OBO-Enabled endpoints, click [here](https://developers.symphony.com/restapi/main/apps-on-behalf-of-obo/obo-enabled-endpoints).
 
 {% hint style="info" %}
 OBO use cases differ from bot use cases in that activities are performed as if end users had initiated actions directly from within Symphony themselves.

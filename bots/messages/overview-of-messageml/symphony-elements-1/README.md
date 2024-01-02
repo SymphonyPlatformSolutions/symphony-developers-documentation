@@ -1,8 +1,8 @@
-# Interactive Elements Forms
+# Elements Interactive Forms
 
 Symphony Elements Forms enable bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more. This allows bots to interact with users in a very easy and guided way.
 
-By reusing our pre-designed standard UX component libraries, Elements provide developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony. To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/reference#create-message-v4) endpoint with your bot, using the MessageML format.
+By reusing our pre-designed standard UX component libraries, Elements provide developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony. To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint with your bot, using the MessageML format.
 
 Here after, you will find a brief introduction of how to send Elements, then an update of the message flow for Elements, and finally the form specifications.
 

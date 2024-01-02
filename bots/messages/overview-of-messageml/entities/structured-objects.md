@@ -25,15 +25,15 @@ To build renderer applications for displaying your structured object:
 
 Structured Objects are placed into Symphony messages and have two components:
 
-* Object Presentation, in [MessageML v2](broken-reference) format.
+* Object Presentation, in [MessageML v2](../) format.
 * Object Data, a JSON object.
 
 Any message in Symphony can contain zero or more Structured Objects.
 
-* A message will always contain message presentation, in [MessageML v2](broken-reference) format, with the optional object presentation of the Structured Objects it may contain.
+* A message will always contain message presentation, in MessageML v2 format, with the optional object presentation of the Structured Objects it may contain.
 * If the message contains any structured objects, it will contain JSON data with all object data of the structured objects it may contain.
 
-You can create an object by invoking the [Create Message](https://rest-api.symphony.com/docs/create-message-v4) endpoint. You need to include:
+You can create an object by invoking the [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint. You need to include:
 
 * The `message` parameter, which contains the message presentation, with the object presentation for each Structured Object.
 * The `data` parameter, which contains JSON data with the object presentation for each structured object.
@@ -102,12 +102,12 @@ This data can be used by applications in the web client to provide a rich displa
 
 ## Reading objects
 
-You can read objects using any of the endpoints designed to read messages, for example, the [Read Message](https://developers.symphony.com/restapi/reference#messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
+You can read objects using any of the endpoints designed to read messages, for example, the [Read Message](https://developers.symphony.com/restapi/main/messages/messages-v4) endpoint. This endpoint will let you read both the message presentation and object data fields.
 
 {% hint style="info" %}
 Note:
 
-As described in [Message Format - MessageML v2](broken-reference), messages with [Structured Objects](structured-objects.md) can be created using the shorthand tags or the full tags. When they are read, the message presentation always contain the full tags, which are a subset of HTML tags.
+As described in [Message Format - MessageML v2](../), messages with [Structured Objects](structured-objects.md) can be created using the shorthand tags or the full tags. When they are read, the message presentation always contain the full tags, which are a subset of HTML tags.
 {% endhint %}
 
 ## Renderer Applications

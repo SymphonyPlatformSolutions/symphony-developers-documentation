@@ -38,7 +38,7 @@ Returns a promise that will be fulfilled when the introduction is complete. If t
 hello: function()
 ```
 
-<table data-header-hidden><thead><tr><th>Returns</th><th width="249.33333333333331">Type</th><th>Description</th></tr></thead><tbody><tr><td>Returns</td><td>Type</td><td>Description</td></tr><tr><td>themeV2</td><td>Object</td><td>An object containing the user's Symphony client theme settings</td></tr><tr><td>locale</td><td>String</td><td>The language selected by the user in his settings. Possible values are "en-US" | "fr-FR" | "ja-JP".</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="130">Returns</th><th width="115.33333333333331">Type</th><th>Description</th></tr></thead><tbody><tr><td>Returns</td><td>Type</td><td>Description</td></tr><tr><td>themeV2</td><td>Object</td><td>An object containing the user's Symphony client theme settings</td></tr><tr><td>locale</td><td>String</td><td>The language selected by the user in his settings. Possible values are "en-US" | "fr-FR" | "ja-JP".</td></tr></tbody></table>
 
 ```javascript
 {

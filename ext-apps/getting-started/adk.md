@@ -59,7 +59,6 @@ If you require an extension app that requires user identity, you will also need 
   \ V / _ \ \__ \ || | '  \| '_ \ ' \/ _ \ ' \ || |
    |_|\___/ |___/\_, |_|_|_| .__/_||_\___/_||_\_, |
                  |__/      |_|                |__/
-	https://developers.symphony.com
 
 Welcome to Symphony Generator v2.9.0
 Project files will be generated in folder: /Users/user/code/my-app
