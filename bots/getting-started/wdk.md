@@ -48,7 +48,7 @@ This will prompt you with a number of questions about your bot and pod configura
   \ V / _ \ \__ \ || | '  \| '_ \ ' \/ _ \ ' \ || |
    |_|\___/ |___/\_, |_|_|_| .__/_||_\___/_||_\_, |
                  |__/      |_|                |__/
-        https://developers.symphony.com
+
 
 Welcome to Symphony Generator v2.7.1
 Application files will be generated in folder: /home/user/code/wdk-bot
@@ -89,7 +89,7 @@ Your workflow bot has been successfully generated !
   \ V / _ \ \__ \ || | '  \| '_ \ ' \/ _ \ ' \ || |
    |_|\___/ |___/\_, |_|_|_| .__/_||_\___/_||_\_, |
                  |__/      |_|                |__/
-        https://developers.symphony.com
+
 
 Welcome to Symphony Generator v2.7.1
 Application files will be generated in folder: /home/user/code/wdk-bot

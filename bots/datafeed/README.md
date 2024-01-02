@@ -16,7 +16,7 @@ The Symphony datafeed provides a stream of real-time messages and events for all
 
 ## Datafeed Architecture
 
-Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/reference#create-messagesevents-stream-v4) and [read](https://developers.symphony.com/restapi/reference#read-messagesevents-stream-v4) datafeeds.
+Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/main/datafeed/create-datafeed-v5) and [read](https://developers.symphony.com/restapi/main/datafeed/read-datafeed-v5) datafeeds.
 
 Once a bot has created a datafeed, it has access to all of the [events](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a bot's scope are encrypted by the Agent before reaching your bot. That way the bot is the only one who can access the contents of these events and messages being delivered.
 
@@ -172,7 +172,7 @@ While you can write all of this datafeed logic yourself, our dedicated BDK toolk
 
 The legacy Datafeed v1 service is out of support since **April 30, 2023**.
 
-This has an impact on you if some of your automations or bots are still using the Datafeed v1 APIs. Please consider upgrading them to use the new[ Datafeed v2 APIs](https://developers.symphony.com/restapi/reference/create-datafeed-v5).
+This has an impact on you if some of your automations or bots are still using the Datafeed v1 APIs. Please consider upgrading them to use the new[ Datafeed v2 APIs](https://developers.symphony.com/restapi/main/datafeed).
 
 To facilitate this transition, a new feature called the **bridge** has been introduced in the Agent service so consumers of the deprecated Datafeed v1 APIs will transparently use the Datafeed v2 service.
 

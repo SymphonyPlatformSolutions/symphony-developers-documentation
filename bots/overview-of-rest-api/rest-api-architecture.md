@@ -48,11 +48,11 @@ The sequence of API calls and component interaction is illustrated below:
 
 
 
-* &#x20;**1.** First, a bot must authenticate with the Pod. It does so by calling the [Session Authenticate endpoint](https://developers.symphony.com/restapi/reference#rsa-session-authenticate).
+* &#x20;**1.** First, a bot must authenticate with the Pod. It does so by calling the[ Session Authenticate](https://developers.symphony.com/restapi/main/bot-authentication/rsa-session-authenticate) endpoint.
 * **1a.** If successful, the bot will receive a valid Session Token. This Session Token must be passed along with all subsequent Symphony API requests destined for the Agent or the Pod.
-* **2**.  Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/reference#key-manager-authenticate).&#x20;
+* **2**.  Next, a bot must authenticate with the Key Manager. It does so by calling the [Key Manager Authenticate endpoint](https://developers.symphony.com/restapi/main/bot-authentication/rsa-key-manager-authenticate).&#x20;
 * **2a.** If successful, the bot will receive a valid Key Manager Token. This Key Manager Token must be passed along with all subsequent Symphony API requests destined just for the Agent.
-* **3.**  If the bot wants to send a message, the bot will call the [Create Message endpoint](https://developers.symphony.com/restapi/reference#create-message-v4) on the Agent API and pass both Session Token and Key Manager Token as a part of the request.
+* **3.**  If the bot wants to send a message, the bot will call the [Create Message endpoint](https://developers.symphony.com/restapi/main/messages/create-message-v4) on the Agent API and pass both Session Token and Key Manager Token as a part of the request.
 * **4.** At this point, the Agent Server calls the Key Manager and requests the bot's encryption keys. &#x20;
 * **5.**  Next, the Agent Server validates the bot's Key Manager Token.
 * **6.**  If successful, the Agent will encrypt the payload sent by the bot and will forward the encrypted message up to the Pod where it will be routed to the intended user or chatroom.  The message will remain encrypted until it reaches its final destination.
