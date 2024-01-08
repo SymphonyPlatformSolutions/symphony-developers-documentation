@@ -1,4 +1,4 @@
-# Building a Conversational Bot
+# Build a Conversational Bot
 
 ## Prerequisites
 
@@ -101,10 +101,10 @@ The above snippet is listening for all incoming messages that contain "/hello". 
 
 As you can see, it's super easy to access the message, room, and user context from an incoming event. The `V4Initiator` and `V4MessageSent` classes provide convenience methods that make it easy to orchestrate workflows. For a more detailed overview of how to leverage the BDK's message, room, and user management classes, continue [here](https://docs.developers.symphony.com/developer-tools/developer-tools/bdk-2.0#user-message-and-room-management).
 
-## 2. Next Steps <a href="#2-next-steps" id="2-next-steps"></a>
+## 2. Next Steps <a href="#id-2-next-steps" id="id-2-next-steps"></a>
 
 Above, we showed you a simple example of how to leverage the BDK to build a conversational bot. To see more advanced usage of the BDK in order to build complex financial workflows, continue on to our dedicated BDK Certification course:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../../developer-certification/developer-certification.md" %}
+[developer-certification.md](../../developer-certification/developer-certification.md)
 {% endcontent-ref %}

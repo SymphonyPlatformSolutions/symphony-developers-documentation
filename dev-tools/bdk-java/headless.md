@@ -1,4 +1,4 @@
-# Building a Headless Bot
+# Build a Headless Bot
 
 ## Prerequisites
 
@@ -205,6 +205,6 @@ You should see the following in your designated stream or chatroom:
 
 Above, we showed you how to leverage the BDK and the Spring Boot integration to build a headless bot.  To see more advanced usage of the BDK and Spring Boot, continue on to our dedicated BDK Developer Certification course:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../../developer-certification/developer-certification.md" %}
+[developer-certification.md](../../developer-certification/developer-certification.md)
 {% endcontent-ref %}

@@ -1,4 +1,4 @@
-# Building an Interactive Bot
+# Build an Interactive Bot
 
 ## Prerequisites
 
@@ -188,6 +188,6 @@ Run your bot and execute the following to see it in action:
 
 Above, we showed you a simple example of how to leverage the BDK and Symphony Elements to build an interactive bot. To understand more advanced usage of the BDK, continue on to our dedicated BDK Certification course:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../../developer-certification/developer-certification.md" %}
+[developer-certification.md](../../developer-certification/developer-certification.md)
 {% endcontent-ref %}

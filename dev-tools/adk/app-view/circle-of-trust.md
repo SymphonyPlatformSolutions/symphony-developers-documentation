@@ -31,7 +31,6 @@ $ yo @finos/symphony
   \ V / _ \ \__ \ || | '  \| '_ \ ' \/ _ \ ' \ || |
    |_|\___/ |___/\_, |_|_|_| .__/_||_\___/_||_\_, |
                  |__/      |_|                |__/
-        https://developers.symphony.com
 
 Welcome to Symphony Generator v2.8.0
 Project files will be generated in folder: /home/user/code/bdk-ext-app
