@@ -14,7 +14,7 @@ The extension app needs to be already installed for the user, and to have been p
 Only extension applications that add navigation links can be opened in ECP.
 {% endhint %}
 
-To learn more about extension APIs, refer to the relevant [developers documentation](https://docs.developers.symphony.com/building-extension-applications-on-symphony/overview-of-extension-api).
+To learn more about extension APIs, refer to the relevant [developers documentation](../../ext-apps/overview-of-extension-api/).
 
 #### Parameters
 

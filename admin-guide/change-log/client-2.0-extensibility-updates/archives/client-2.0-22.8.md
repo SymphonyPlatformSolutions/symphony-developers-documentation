@@ -7,6 +7,6 @@
 * Support of ViewInstrument intent (outbound)
 * Support FDC3 action buttons that can raise custom predefined intents (outbound)
 
-Learn more on desktop interop [here](../../../embedded-modules/desktop-interoperability/).
+Learn more on desktop interop [here](../../../../embedded-modules/desktop-interoperability/).
 
 ###

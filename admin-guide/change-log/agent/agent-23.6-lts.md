@@ -29,8 +29,8 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 23.6.1
 
-* Enable OBO for the [Message Update](https://developers.symphony.com/restapi/reference/update-message-v4) endpoint.
-* Enable OBO for the [Blast Message](https://developers.symphony.com/restapi/reference/blast-message) endpoint.
+* Enable OBO for the [Message Update](https://developers.symphony.com/restapi/main/messages/update-message-v4) endpoint.
+* Enable OBO for the [Blast Message](https://developers.symphony.com/restapi/main/messages/blast-message) endpoint.
 * **Enable the datafeed bridge by default**.
   * This means that if you dont have a value set in your config file for the property `df1ToDf2Bridge`, then your bots that are still using the Datafeed v1 APIs will transparently start using the Datafeed v2 service. You can still disable this behavior by setting the `df1ToDf2Bridge` parameter to false.&#x20;
   * **Important**: If you copied over your previous Agent config file, then the bridge may still be disabled because the bridge's default value was false in previously provided config files. In order to ensure that the bridge is enabled please check that the `df1ToDf2Bridge` parameter is either absent, or set to true. It is important to start testing your bots with the bridge enabled to discover issues before the bridge is enforced in a subsequent version.&#x20;

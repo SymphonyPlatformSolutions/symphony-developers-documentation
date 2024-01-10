@@ -186,7 +186,7 @@ If Symphony displays a popup, Symphony correctly receives intents coming from de
 
 ### Configuration for ECP (Embedded Collaboration Platform)
 
-Starting with version 23.2 (February 2023), you can use FDC3 APIs over [ECP](https://symphony-1.gitbook.io/embedded-collaboration-platform-private/).
+Starting with version 23.2 (February 2023), you can use FDC3 APIs over [ECP](support-for-embedded-collaboration-platform.md).
 
 To make this work, the user must have selected the FDC3 provider (such as Glue42 or Finsemble) in the **interoperability** tab of the **user settings** <img src="https://lh4.googleusercontent.com/pGUyIc49QxTNab36tneEr7VEJ3I8jz9FFxSriC265WIP_3_cwo6Y7QGlvHXES5-eEP5S8TJ4U9BOOBBAyRV0o_PGFDZ2SJRdS_DrV7yNT0Ix59egjHhoXb9egYH_lIXMdt9oMJijb5mHXGVch9qVKxc" alt="" data-size="line">. Alternatively, if you are running ECP in a container that injects the window.fdc3 object, the fdc3 object will be automatically used. In that case, it is not required to select a desktop provider in the user settings.
 

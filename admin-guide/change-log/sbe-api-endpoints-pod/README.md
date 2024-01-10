@@ -6,4 +6,4 @@ Please find in the subpages below the list of changes related to each version of
 
 [sbe-20.15.md](sbe-20.15.md "mention")
 
-[sbe-20.14.md](sbe-20.14.md "mention")
+[sbe-20.14.md](archives/sbe-20.14.md "mention")
