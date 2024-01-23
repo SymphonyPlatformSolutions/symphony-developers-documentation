@@ -138,6 +138,7 @@
   * [Open an app](embedded-modules/embedded-collaboration-platform/open-an-app.md)
   * [ECP with Channel Connect](embedded-modules/embedded-collaboration-platform/ecp-with-channel-connect.md)
   * [Pricing tiers](embedded-modules/embedded-collaboration-platform/pricing-tiers.md)
+  * [Logout](embedded-modules/embedded-collaboration-platform/logout.md)
 * [Universal Webhook](embedded-modules/universal-webhook/README.md)
   * [User guide](embedded-modules/universal-webhook/user-guide.md)
   * [Installation guide](embedded-modules/universal-webhook/installation-guide.md)

@@ -109,6 +109,22 @@ window.onECPSdkLoaded = async () => {
 
 Once the rendering is completed, you can open a conversation using the `openStream` method documented [here ](open-a-chat.md#open-chat-with-streamid)or start a new chat using the `startRoom` method documented [here](open-a-chat.md#open-chat-with-users).
 
+#### Important: Handle situations where a user interaction is needed
+
+ECP may require a user interaction before being able to display a chat. For example, the user may need to accept the End User License Agreements, the Terms Of Use, request access to the required chat, etc.
+
+If you decide to hide the ECP UI until a chat is ready to be rendered, then you may be blocked by this required interaction. To be notified that a user interaction is required (and therefore that you need to show ECP even before the `render` method returns), you need to register to `onUserInteractionRequired()` below.
+
+```typescript
+onUserInteractionRequired({
+  callback: (callbackPayload: {reason: string}) => void;
+}): Promise<void>;
+```
+
+Once the user interaction is completed, you will eventually be notified that the UI is ready to be used with the `render` promise resolving (either with the chat information or an error).&#x20;
+
+You can register your callback function as soon as the [SDK is loaded](https://app.gitbook.com/s/fAel5eAVHAZGcVMDx7ly/embedded-collaboration-platform/get-started#id-1.-loading-the-sdk-script).
+
 ### Automatic rendering
 
 {% hint style="warning" %}
