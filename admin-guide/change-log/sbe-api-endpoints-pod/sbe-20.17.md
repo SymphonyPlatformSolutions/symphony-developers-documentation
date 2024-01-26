@@ -15,6 +15,10 @@ description: DRAFT
 
 * No APIs have been updated.
 
+### Deprecated APIs
+
+* The Presence feed API endpoints are deprecated ([Create Presence Feed](https://developers.symphony.com/restapi/main/presence/create-presence-feed), [Read Presence Feed](https://developers.symphony.com/restapi/main/presence/read-presence-feed), [Delete Presence Feed](https://developers.symphony.com/restapi/main/presence/delete-presence-feed)). Other [endpoints ](https://developers.symphony.com/restapi/main/presence)are available to retrieve the presence of a user or list of users.
+
 ### Fixes
 
 * N/A
