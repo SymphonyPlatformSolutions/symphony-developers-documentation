@@ -1,6 +1,6 @@
 # OBO Authentication
 
-OBO or On-Behalf-Of authentication allows an authenticated bot + extension app to perform the following operations on behalf of a given user:
+OBO or On-Behalf-Of authentication allows an authenticated extension app to perform the following operations on behalf of a given user:
 
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
