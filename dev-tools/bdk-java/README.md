@@ -1,5 +1,9 @@
 # Bot Developer Kit for Java
 
+{% hint style="info" %}
+[BDK 3.0](https://symphony-bdk-java.finos.org/) has been released! The BDK 2.0 will stop being supported in **August 2024**. Please consider migrating to keep up with the latest features!&#x20;
+{% endhint %}
+
 ## Overview
 
 The BDK for Java is Symphony's preferred tooling for Java developers to build bots. It is a library of tools and API bindings that provides simplified configuration and authentication, intuitive message and room management, customizable message templating and an activities API that makes it easy to build bot workflows.
