@@ -9,7 +9,10 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 {% endhint %}
 
 {% hint style="warning" %}
-**Important**: Java 8 is **no longer supported** starting with Agent 23.12. Only **Java 17** is supported moving forward. More information below.
+**Important**:&#x20;
+
+* **Java 8** is **no longer supported** starting with Agent 23.12. Only **Java 17** is supported moving forward. More information below.
+* As RHEL7 is not supported on Java 17, **RHEL7 is no longer supported**. Please consider migrating to RHEL8 or RHEL9.
 {% endhint %}
 
 ## More info on the end of support of Java 8
@@ -34,7 +37,7 @@ Please note that this support will be on a **best effort basis**: As this versio
 
 ### Agent 23.12.1
 
-* Support of **RHEL 9**.
+* Support of **RHEL 9**. RHEL7 is no longer supported.
 * Support of **Java 17**. Java 8 is no longer supported.
 * Update **Spring Boot** version from 2.x to 3.x.
 
