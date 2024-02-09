@@ -831,7 +831,7 @@ The parameters presented above can be combined in any configuration, with the mo
 The following example uses all parameters presented until now, but note that the first 2, the more general ones, will be useless in this configuration because all others are being specified:
 
 ```
-xLogFiles=15 -Derror.logFileSizeLimit=800MB -Dmetrics.maxLogFiles=20 -Dmetrics.logFileSizeLimit=500KB -jar agent.jar --agent.config=<your-agent-config>.yml
+java -Dagent.maxLogFiles=15 -Derror.logFileSizeLimit=800MB -Dmetrics.maxLogFiles=20 -Dmetrics.logFileSizeLimit=500KB -jar agent.jar --agent.config=<your-agent-config>.yml
 ```
 
 The previous command will have the same effect as the command below:
