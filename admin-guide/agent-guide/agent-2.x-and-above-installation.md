@@ -849,3 +849,10 @@ Note: Keep in mind that none of the previous configurations need to be set, this
 There is no upgrade path for the Agent. The new Agent can be installed on the same Agent Server as any previous version.
 
 Make sure to shut down your agent first, and then keep your configuration and startup/stop script when you upgrade to a new version.
+
+## Troubleshooting
+
+* `agent.limits.datafeed.queueSize` – allows for an override of the datafeed message queue from the default of 250 events unread
+* Debug logging – turn on Debug level logging by adding this before the “-jar” command \
+  `java -Dloglevel=DEBUG -jar agent.jar --agent.config=agent.yml …`
+* If you encounter the following error message in the agent.log file `/tmp/libsymphony-crypto-jni-.so: failed to map segment from shared object: Operation not permitted` while running the HealthCheck: Add the following to Java flags in startup.sh before the “-jar” to resolve it:  `-Djava.io.tmpdir=/data/agent{`_`version`_`}/tmp`
