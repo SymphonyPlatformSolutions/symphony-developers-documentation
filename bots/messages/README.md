@@ -33,11 +33,9 @@ The MessageML Render bot is a productivity tool that helps developers to create 
 
 The Render bot is available [directly on Symphony](https://open.symphony.com/?startChat=71811853191652). If this link doesn't work, you can look for _MessageML Render bot_ in the directory.
 
-{% hint style="info" %}
-The Render bot is currently in **Beta**. Your feedback is welcome.
+{% hint style="warning" %}
+The Render bot replaces the **Presentation ML Live Renderer Tool** website, which is no longer available.
 {% endhint %}
-
-The Render bot will soon replace the [Presentation ML Live Renderer Tool](https://renderer-tool.app.symphony.com/) website.
 
 ## Diagram of Symphony Message Flow:
 
