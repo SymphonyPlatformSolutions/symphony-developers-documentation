@@ -34,12 +34,12 @@ The following examples show person selectors being used as follows:
 <messageML>
   <form id="form_id">
     <h2>person-selectors</h2>
-      <person-selector name="placeholder" placeholder="My Placeholder"/>
-      <person-selector name="value" label="With default values" value='[12987981109743,12987981109741]' />
+      <person-selector name="withplaceholder" placeholder="My Placeholder"/>
+      <person-selector name="withdefaultvalues" label="With default values" value='[12987981109743,12987981109741]' />
       <person-selector name="noreq" placeholder="Not required"/>
       <person-selector name="req" required="true" placeholder="Required"/>
-      <person-selector name="label" label="My Label" placeholder="With Label"/>
-      <person-selector name="tooltip" title="My Tooltip\n With a second line" placeholder="With Tooltip"/>
+      <person-selector name="withlabel" label="My Label" placeholder="With Label"/>
+      <person-selector name="withtooltip" title="My Tooltip\n With a second line" placeholder="With Tooltip"/>
       <button name="person-selector">Submit</button>
   </form>
 </messageML>
@@ -76,16 +76,16 @@ The following examples show person selectors being used as follows:
                 "formId": "form_id",
                 "formValues": {
                     "action": "person-selectors",
-                    "placeholder": [],
-                    "value": [
+                    "withplaceholder": [],
+                    "withdefaultvalues": [
                         12987981109743
                     ],
                     "noreq": [],
                     "req": [
                         7078106482890
                     ],
-                    "label": [],
-                    "tooltip": []
+                    "withlabel": [],
+                    "withtooltip": []
                 }
             }
         }
