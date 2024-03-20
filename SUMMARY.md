@@ -147,7 +147,7 @@
 
 * [Symphony REST API](https://rest-api.symphony.com/)
 * [Federation](https://symphony-1.gitbook.io/federation-rest-api/)
-* [Channel Connect](symphony-rest-api/channel-connect.md)
+* [Connect API](symphony-rest-api/connect-api.md)
 
 ## Developer Certification
 
