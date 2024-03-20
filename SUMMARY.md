@@ -136,7 +136,7 @@
   * [Notifications](embedded-modules/embedded-collaboration-platform/notifications.md)
   * [Support for extension applications](embedded-modules/embedded-collaboration-platform/support-for-extension-applications.md)
   * [Open an app](embedded-modules/embedded-collaboration-platform/open-an-app.md)
-  * [ECP with Channel Connect](embedded-modules/embedded-collaboration-platform/ecp-with-channel-connect.md)
+  * [ECP with Symphony Connect](embedded-modules/embedded-collaboration-platform/ecp-with-symphony-connect.md)
   * [Pricing tiers](embedded-modules/embedded-collaboration-platform/pricing-tiers.md)
   * [Logout](embedded-modules/embedded-collaboration-platform/logout.md)
 * [Universal Webhook](embedded-modules/universal-webhook/README.md)
@@ -147,7 +147,7 @@
 
 * [Symphony REST API](https://rest-api.symphony.com/)
 * [Federation](https://symphony-1.gitbook.io/federation-rest-api/)
-* [Connect API](symphony-rest-api/connect-api.md)
+* [Connect API](symphony-rest-api/channel-connect.md)
 
 ## Developer Certification
 

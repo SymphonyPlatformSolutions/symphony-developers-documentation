@@ -1,9 +1,3 @@
----
-description: >-
-  This page describes the APIs partners can use to add their client companies,
-  and to add or disable users on Symphony.
----
-
 # Connect API
 
 ## What is Symphony Connect?
