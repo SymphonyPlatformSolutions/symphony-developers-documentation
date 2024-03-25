@@ -214,7 +214,7 @@ In any case, as you onboard the user on your web portal you will need to identif
 Use the following http endpoint to retrieve the Symphony pod URL of a user:
 
 ```url
-https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress={userEmail}
+https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress={userEmail}&fs=advanced
 ```
 
 The http response will be formatted as below:
