@@ -238,7 +238,7 @@ curl --location --request POST 'https://[tenant].symphony.com/universal-webhook/
 --data-urlencode 'message=test'
 ```
 
-Have a look at the [User guide](user-guide.md) for more information.
+Have a look at the [User guide](user-guide/) for more information.
 
 
 

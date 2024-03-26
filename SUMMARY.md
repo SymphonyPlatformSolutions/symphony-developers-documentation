@@ -141,7 +141,8 @@
   * [Pricing tiers](embedded-modules/embedded-collaboration-platform/pricing-tiers.md)
   * [Logout](embedded-modules/embedded-collaboration-platform/logout.md)
 * [Universal Webhook](embedded-modules/universal-webhook/README.md)
-  * [User guide](embedded-modules/universal-webhook/user-guide.md)
+  * [User guide](embedded-modules/universal-webhook/user-guide/README.md)
+    * [Example with Splunk](embedded-modules/universal-webhook/user-guide/example-with-splunk.md)
   * [Installation guide](embedded-modules/universal-webhook/installation-guide.md)
 
 ## Symphony REST API

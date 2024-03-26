@@ -22,6 +22,6 @@ Universal Webhook 2.0 or above replaces the legacy service that was delivered th
 
 First, your Symphony admin needs to configure the required service user and extension app on the Symphony pod, as described in the[ Installation guide](installation-guide.md).
 
-Then, end users can configure webhooks using the extension app, as described in the [User guide](user-guide.md).
+Then, end users can configure webhooks using the extension app, as described in the [User guide](user-guide/).
 
 \
