@@ -149,6 +149,7 @@
 * [Symphony REST API](https://rest-api.symphony.com/)
 * [Federation](https://symphony-1.gitbook.io/federation-rest-api/)
 * [Connect API](symphony-rest-api/channel-connect.md)
+* [StreetLinx API](https://streetlinx.symphony.com/api)
 
 ## Developer Certification
 
