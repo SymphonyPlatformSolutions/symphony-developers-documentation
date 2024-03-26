@@ -1,6 +1,6 @@
 # Room Selector
 
-The Room Selector is an element used for finding and selecting rooms and persons. It behaves the same way as the chat selector you see when you forward a message from a chat and needs to select where the message will be forward..
+The Room Selector is an element used for finding and selecting rooms and persons. It behaves the same way as the chat selector you see when you forward a message and needs to select where the message will be forwarded.
 
 When a user starts typing in the field, a list of conversations and people will be displayed for selection. Only the chats that the user has access to will be displayed.&#x20;
 
@@ -14,12 +14,10 @@ When a user starts typing in the field, a list of conversations and people will 
 
 ## Rules and Limitations
 
-* The Person Selector element supports multi-user selection which means that you can search for more than one person using the same selector.
+* The Room Selector element supports multi selection which means that you can search for more than one chat or person.
 * The Room Selector is not yet available on Symphony Mobile. Mobile will be supported in a future release.&#x20;
 
 ## Example
-
-
 
 {% tabs %}
 {% tab title="MessageML" %}
