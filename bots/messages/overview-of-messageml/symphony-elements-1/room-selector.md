@@ -1,8 +1,8 @@
 # Room Selector
 
-The Room Selector is an element used for finding and selecting rooms and persons. It behaves the same way as the chat selector you see when you forward a message and needs to select where the message will be forwarded.
+The Room Selector is an element that allows users to find and select both rooms or persons. It behaves the same way as the chat selector you see when you forward a message and select where the message should be forwarded.
 
-When a user starts typing in the field, a list of conversations and people will be displayed for selection. Only the chats that the user has access to will be displayed.&#x20;
+When a user starts typing in the field, a list of conversations and people will be displayed for selection. Only the chats that the user has access to will be displayed.
 
 <figure><img src="../../../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
