@@ -48,13 +48,14 @@ Please note that this support will be on a **best effort basis**: As this versio
   * [DropDownMenu](../../../bots/messages/overview-of-messageml/symphony-elements-1/dropdown-menu.md#attributes) and [TextField ](../../../bots/messages/overview-of-messageml/symphony-elements-1/text-field.md#attributes)now support auto-submit: When auto submit is enabled for an element, the form gets submitted on selection of the drop down menu, or when typing the <`enter`> key in a text field. This allows a faster and more natural interaction with a form, and works very well with the capability to update a form with a new state (using the MessageUpdate endpoint). You can create cascading drop down menus for example.
   * Buttons can benefit from two [new styles](../../../bots/messages/overview-of-messageml/symphony-elements-1/buttons/#attributes): `primary-link` and `destructive-link` that are borderless and are either blue or red.
   * Buttons can now support icons from our standard icon library.
-* Elements - **Dependency on Client version 24.1, released in January 2023**. Please check Cient release notes for confirmation.
+* Elements - **Dependency on Client version 24.1, released in January 2024**.&#x20;
   * TextArea width and height can now be controlled using cols and rows attributes.
+* Elements - **Dependency on Client version 24.4, released in April 2024**.&#x20;
+  * New Room Selector Element that allows a user to select a chat room. More information in the [Room Selector documentation](../../../bots/messages/overview-of-messageml/symphony-elements-1/room-selector.md).
 * **Dependency on future Client versions which are** <mark style="color:red;">**not confirmed**</mark><mark style="color:red;">.</mark> Please check future Client release notes. Features:
   * _Elements_
     * _Support hidden attributes for text fields._
     * _Support read-only and disabled attributes on elements._
-    * _Support new room picker elements that allows to select a conversation._&#x20;
   * _Accept \<sup> and \<sub> tags_
 * Removed `jcurl` from the Agent deliverable. If you used this library in your scripts, the library is still available from the following FINOS [repository](https://github.com/finos/JCurl/releases).
 * Fixed security vulnerabilities.
