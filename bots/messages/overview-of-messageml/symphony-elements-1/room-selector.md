@@ -67,9 +67,6 @@ Resulting payload when a user submitted the form afer having selected two chats 
 {% endtab %}
 {% endtabs %}
 
+## Versions and Compatibility
+
 <table data-header-hidden><thead><tr><th width="153">Main features introduced</th><th>Agent needed to parse message sent by the bot</th><th width="150">Client 2.0 release</th><th>Mobile versions</th></tr></thead><tbody><tr><td>Main features introduced</td><td>Agent needed to parse message sent by the bot</td><td>Client 2.0 release</td><td><em>Backward client-compatibility behavior (e.g. external rooms)</em></td></tr><tr><td>Feature introduced</td><td>23.11</td><td>C2 24.4 (April 2024)</td><td>Not available yet. Room Selector is not displayed.</td></tr></tbody></table>
-
-```json
-
-
-```
