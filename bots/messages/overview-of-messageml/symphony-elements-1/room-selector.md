@@ -4,9 +4,9 @@ The Room Selector is an element that allows users to find and select both rooms 
 
 When a user starts typing in the field, a list of conversations and people will be displayed for selection. Only the chats that the user has access to will be displayed.
 
-<figure><img src="../../../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/roomselectorfakepeople (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/roomselectorfakepeople2.png" alt=""><figcaption></figcaption></figure>
 
 ## Attributes
 
