@@ -5,7 +5,7 @@
 {% hint style="info" %}
 To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.3.2.zip).
 
-For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
+For a list of Agent x SBE compatibilities, click [here](../../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
