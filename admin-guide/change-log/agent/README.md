@@ -1,7 +1,7 @@
 # Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.12.3.zip).
+Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.12.4.zip).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.

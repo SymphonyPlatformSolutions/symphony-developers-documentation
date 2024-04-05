@@ -3,7 +3,7 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.12.1.zip).
+To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.12.4.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
@@ -34,6 +34,10 @@ If you need time to migrate to Java 17, you can stay on the Agent version 23.9 L
 Please note that this support will be on a **best effort basis**: As this version relies on an unsupported version of SpringBoot, we may not be in a position to fix a bug or vulnerability that will be discovered in SpringBoot v2. If the issue is not related to SpringBoot, we will fix it as per our support policy.&#x20;
 
 ## Agent Changes
+
+### Agent 23.12.4
+
+* Fixed security vulnerabilities.
 
 ### Agent 23.12.1
 
