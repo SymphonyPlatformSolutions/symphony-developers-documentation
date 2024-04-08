@@ -35,7 +35,7 @@
       * [Text formatting and semantics](bots/messages/overview-of-messageml/messageml-basic-format-tags/text-level-formatting-and-semantics.md)
       * [Tables](bots/messages/overview-of-messageml/messageml-basic-format-tags/tables.md)
       * [Images](bots/messages/overview-of-messageml/messageml-basic-format-tags/images-and-media.md)
-      * [Specific to Symphony](bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md)
+      * [Tags and mentions](bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md)
       * [Enhanced tags notice](bots/messages/overview-of-messageml/messageml-basic-format-tags/enhanced-tags-notice.md)
       * [Style Attributes](bots/messages/overview-of-messageml/messageml-basic-format-tags/style-attributes.md)
       * [Special Characters](bots/messages/overview-of-messageml/messageml-basic-format-tags/special-characters.md)

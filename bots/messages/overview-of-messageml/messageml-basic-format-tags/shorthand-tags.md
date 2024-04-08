@@ -1,10 +1,10 @@
-# Specific to Symphony
+# Tags and mentions
 
 ## Tags
 
 MessageML supports the following tags to embed additional information into messages:
 
-<table data-header-hidden><thead><tr><th width="236">Tag</th><th width="283.3333333333333">Description</th><th>Optional attributes</th></tr></thead><tbody><tr><td>Tag</td><td>Description</td><td>Optional attributes</td></tr><tr><td><code>&#x3C;mention uid="123456789"/></code></td><td>Insert a mention for the user whose Symphony userid is <code>123456789</code>.</td><td></td></tr><tr><td><code>&#x3C;mention email="user@music.org"/></code></td><td>Insert a mention for the user whose email address is <code>user@music.org</code>.</td><td>• <code>strict</code>=<code>true</code>, the API will throw an error if no user of that email address exists. (default) <br>• <code>strict</code>=<code>false</code> . Message is accepted even if the user cannot be resolved.</td></tr><tr><td><code>&#x3C;hash tag="label"/></code></td><td>Insert "label" as a hashtag.</td><td></td></tr><tr><td><code>&#x3C;cash tag="ticker"/></code></td><td>Insert "ticker" as a cashtag. Important: when sending numeric cashtags as signals, add a <code>*</code> after the $ sign, for example, $_122450.  <code>&#x3C;messageML></code> `&#x3C;cash tag="$_122450"/> <code>`\</code></td><td>Note: Cashtags will soon be replaced by the new <a href="enhanced-tags-notice.md">enhanced tags</a>. </td></tr><tr><td><code>&#x3C;chime /></code></td><td><p>Send a chime message.</p><p><br><strong>Note</strong>: No other content (even line breaks) is permitted with a <code>&#x3C;chime/></code> tag. Please see an example of the messageML to send a chime below.</p></td><td></td></tr><tr><td><code>&#x3C;tag /></code> <br><br><strong>Note</strong>: This feature is not yet available in production. It will be released in the coming months.</td><td>Insert a financial instrument (enhanced tag) in your message, coming from our reference database.<br><br>To identify an instrument, you'll need to provide at least one identifier (e.g. an ISIN), and optionally some filters if your identifier is not specific enough.<br><br>You can also specify a <code>fallback-ticker</code> that will act as a free-text tag (workaround) if we are not able to find the instrument referenced.<br></td><td><p>Identifiers:</p><ul><li><code>fullbbgcompticker</code></li><li><code>figi</code></li><li><code>bbgcompticker</code></li><li><code>figi-ticker</code></li><li><code>us-code</code></li><li><code>isin</code></li><li><code>local-code</code></li></ul><p>Filters:</p><ul><li><code>instrument-class</code></li><li><code>bbgmarket-sector</code></li><li><code>return-main-listing</code></li><li><code>country-code</code></li><li><code>operational-mic</code></li></ul><p>Others:</p><ul><li><code>fallback-ticker</code><br></li></ul></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="236">Tag</th><th width="283.3333333333333">Description</th><th>Optional attributes</th></tr></thead><tbody><tr><td>Tag</td><td>Description</td><td>Optional attributes</td></tr><tr><td><code>&#x3C;mention uid="123456789"/></code></td><td>Insert a mention for the user whose Symphony userid is <code>123456789</code>.</td><td></td></tr><tr><td><code>&#x3C;mention email="user@music.org"/></code></td><td>Insert a mention for the user whose email address is <code>user@music.org</code>.</td><td>• <code>strict</code>=<code>true</code>, the API will throw an error if no user of that email address exists. (default) <br>• <code>strict</code>=<code>false</code> . Message is accepted even if the user cannot be resolved.</td></tr><tr><td><code>&#x3C;hash tag="label"/></code></td><td>Insert "label" as a free-text hashtag.</td><td></td></tr><tr><td><code>&#x3C;cash tag="ticker"/></code></td><td>Insert "ticker" as a free-text cashtag. Important: when sending numeric cashtags as signals, add a <code>*</code> after the $ sign, for example, $_122450.  <code>&#x3C;messageML></code> `&#x3C;cash tag="$_122450"/> <code>`\</code></td><td><strong>Note</strong>: Cashtags are deprecated. Please use the &#x3C;tag /> notation for financial instruments. </td></tr><tr><td><code>&#x3C;tag /></code> <br><br><strong>Note</strong>: This feature is not yet available in production. It will be released in the coming months.</td><td>Insert a financial instrument (enhanced tag) in your message, coming from our reference database.<br><br>To identify an instrument, you'll need to provide at least one identifier (e.g. an ISIN), and optionally some filters if your identifier is not specific enough.<br><br>You can also specify a <code>fallback-ticker</code> that will act as a free-text tag (workaround) if we are not able to find the instrument referenced.<br></td><td><p>Identifiers:</p><ul><li><code>fullbbgcompticker</code></li><li><code>figi</code></li><li><code>bbgcompticker</code></li><li><code>figi-ticker</code></li><li><code>us-code</code></li><li><code>isin</code></li><li><code>local-code</code></li></ul><p>Filters:</p><ul><li><code>instrument-class</code></li><li><code>bbgmarket-sector</code></li><li><code>return-main-listing</code></li><li><code>country-code</code></li><li><code>operational-mic</code></li></ul><p>Others:</p><ul><li><code>fallback-ticker</code><br></li></ul></td></tr><tr><td><code>&#x3C;chime /></code></td><td><p>Send a chime alert.</p><p><br><strong>Note</strong>: No other content (even line breaks) is permitted with a <code>&#x3C;chime/></code> tag. Please see an example of the messageML to send a chime below.</p></td><td></td></tr></tbody></table>
 
 ## Examples
 
@@ -23,15 +23,7 @@ Here after you can find an example of a message sent by a bot and containing the
 
 <figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-#### Chime
-
-```xml
-<messageML><chime/></messageML>
-```
-
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-#### Free-text tags
+#### Free-text Tags
 
 ```xml
 <messageML>
@@ -43,7 +35,7 @@ Here after you can find an example of a message sent by a bot and containing the
 
 <figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-#### Enhanced tag (Financial instrument)
+#### Enhanced tags (Financial instruments)
 
 Below several examples of financial instruments, using different types of identifiers and filters.&#x20;
 
@@ -138,3 +130,10 @@ When identifiers and filters are not sufficient to identify a unique match, or w
 
 <figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
+#### Chime
+
+```xml
+<messageML><chime/></messageML>
+```
+
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
