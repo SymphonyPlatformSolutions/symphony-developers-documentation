@@ -10,25 +10,131 @@ MessageML supports the following tags to embed additional information into messa
 
 Here after you can find an example of a message sent by a bot and containing these tags specific to Symphony as well as the structure of the messageML sent:
 
-{% tabs %}
-{% tab title="Message containing tags specific to Symphony" %}
-![](../../../../.gitbook/assets/mml\_symphony\_specific.png)
-{% endtab %}
+#### Mentions
 
-{% tab title="messageML structure" %}
-```markup
+```xml
 <messageML>
-    <h1>Mentions</h1>
-    <p>A user can be mentioned via its user ID (<mention uid="349026222355596"/>) or via email (<mention email="bot@symphony.com" />).<br/>Here is an example of a non-existing user display with strict attribute to false: <mention email="false_email@symphony.com" strict="false"/>.</p>
-    <h1>Hash/Cash tags</h1>
-    <p><hash tag="symphony"/> is a hashtag and <cash tag="aapl"/> is a cashtag.</p>
+  <br/><span>Mention with an email: </span>
+  <mention email="pierre.neu@symphony.com"/>
+  <br/><span>Mention with a user Id: </span>
+  <mention uid="71811853190567"/>
 </messageML>
 ```
-{% endtab %}
 
-{% tab title="chime messageML structure" %}
-```html
-<messageML><chime /></messageML>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+#### Chime
+
+```xml
+<messageML><chime/></messageML>
 ```
-{% endtab %}
-{% endtabs %}
+
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+#### Free-text tags
+
+```xml
+<messageML>
+  <br/>
+  <p>Hashtags: <hash tag="important"/><hash tag="stockmarket"/></p>
+  <p>Legacy cashtags:	<cash tag="AAPL US"/> <cash tag="TSLA US"/></p>
+</messageML>
+```
+
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+#### Enhanced tag (Financial instrument)
+
+Below several examples of financial instruments, using different types of identifiers and filters.&#x20;
+
+When identifiers and filters are not sufficient to identify a unique match, or when an instrument is not found in our reference database, an error is returned, except if a `fallback-ticker` is specified.&#x20;
+
+```xml
+<messageML>
+  <table class="pasted-table">
+    <thead>
+      <tr>
+        <th>Identifiers and filters</th>
+        <th>Tag</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FullBBGCompTicker</td>
+        <td><tag fullbbgcompticker="TSLA US Equity"/></td>
+        <td># unique if found</td>
+      </tr>
+      <tr>
+        <td>Figi</td>
+        <td><tag figi="BBG000N9P426" fallback-ticker="TSLA US"/></td>
+        <td># unique if found</td>
+      </tr>
+      <tr>
+        <td>BBG Comp ticker on Market sector</td>
+        <td><tag bbgcompticker="TSLA US" bbgmarket-sector="Equity" fallback-ticker="TSLA US"/></td>
+        <td># unique if found</td>
+      </tr>
+      <tr>
+        <td>Figi ticker</td>
+        <td><tag figi-ticker="TSLA UW" fallback-ticker="TSLA US"/></td>
+        <td># likely unique, may need filters</td>
+      </tr>
+      <tr>
+        <td>BBG Comp ticker</td>
+        <td><tag bbgcompticker="TSLA US" fallback-ticker="TSLA US"/></td>
+        <td># likely unique, may need filters</td>
+      </tr>
+      <tr>
+        <td>US Code</td>
+        <td><tag us-code="88160R101" fallback-ticker="TSLA US"/></td>
+        <td># likely NOT unique listing for stocks, need filters.</td>
+      </tr>
+      <tr>
+        <td>US Code on Main listing</td>
+        <td><tag us-code="88160R101" return-main-listing="true" fallback-ticker="TSLA US"/></td>
+        <td># ask SYM to return the instrument listed on primary exchange</td>
+      </tr>
+      <tr>
+        <td>ISIN</td>
+        <td><tag isin="US88160R1014" fallback-ticker="TSLA US"/></td>
+        <td># likely NOT unique listing for stocks, need filters.</td>
+      </tr>
+      <tr>
+        <td>ISIN on Main listing</td>
+        <td><tag isin="US88160R1014" return-main-listing="true" fallback-ticker="TSLA US"/></td>
+        <td># ask SYM to return the instrument listed on primary exchange</td>
+      </tr>
+      <tr>
+        <td>Local code</td>
+        <td><tag local-code="TSLA" fallback-ticker="TSLA US"/></td>
+        <td># likely NOT unique listing for stocks, need filters.</td>
+      </tr>
+      <tr>
+        <td>Local code with Country</td>
+        <td><tag local-code="TSLA" country-code="US" fallback-ticker="TSLA US"/></td>
+        <td># likely unique listing for US stocks</td>
+      </tr>
+      <tr>
+        <td>Local code with MIC</td>
+        <td><tag local-code="TSLA" operational-mic="XNAS" fallback-ticker="TSLA US"/></td>
+        <td># likely unique listing</td>
+      </tr>
+      <tr>
+        <td>Local code with MIC and instrument class</td>
+        <td><tag local-code="TSLA" operational-mic="XNAS" instrument-class="equity" fallback-ticker="TSLA US"/></td>
+        <td># likely unique listing</td>
+      </tr>
+      <tr>
+        <td>Fallback ticker</td>
+        <td><tag fallback-ticker="TSLA US"/></td>
+        <td>Always include a fall back to ensure the message will be accepted.</td>
+      </tr>
+    </tbody>
+  </table>
+</messageML>
+
+```
+
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
