@@ -11,41 +11,45 @@ For example, if a user's admin has blocked file attachments in the Admin Portal,
 {
   // APP PARAMETERS
   // Common
-  streamId: string; // stream ID of an existing conversation to open
+  streamId: string; // Stream ID of an existing conversation to open
   userIds: string; // IM/Group chat: Comma separated user IDs or emails (or both)
   allowedApps: string; // Comma separated list of App IDs to whitelist
   // Focus mode only  
-  theme: IThemeColors; // Colour Palette overrides
+  theme: IThemeColors; // Color palette overrides
   
   // CONFIGURABLE APP SETTINGS
   // Common
-  canAddPeople: boolean; // allow add members to rooms if owner. default false
-  canClickExternalLinks: boolean; // allow user to click links in messages. default false
-  condensed: boolean; // condensed mode. default true
-  condensedMessageBelowName: boolean; // if in condensed mode, display message below or next to name. default true (below)
-  ecpLoginPopup: boolean; // perform login within a popup, for SSO systems that refuse iframe integration. default false
-  mode: 'light' | 'dark' | undefined; // built-in colour palettes. default light
-  showAttach: boolean; // enable attachments. default true
-  showEmoji: boolean; // enable emojis in the editor. default true
-  showSuppressMessage: boolean; // allow user to suppress messages. default true
-  showSystemMessages: boolean; // show system/maestro messages (e.g. a user joined room). default false
-  sound: boolean; // enable sound notifications
+  canAddPeople: boolean; // Allow add members to rooms if owner. Default false
+  canClickExternalLinks: boolean; // Allow user to click links in messages. Links will be opened in a separate browser tab. Default false
+  condensed: boolean; // Condensed mode. Default true
+  condensedMessageBelowName: boolean; // If in condensed mode, display message below or next to name. Default true (below)
+  ecpLoginPopup: boolean; // Perform login within a popup, for SSO systems that refuse iframe integration. Default false
+  mode: 'light' | 'dark' | undefined; // Built-in colour palettes. Default light
+  showAttach: boolean; // Enable attachments. Default true
+  showEmoji: boolean; // Enable emojis in the editor. Default true
+  showSuppressMessage: boolean; // Allow user to suppress messages. Default true
+  showSystemMessages: boolean; // Show system/maestro messages (e.g. a user joined room). Default false
+  sound: boolean; // Enable sound notifications
   // Focus mode only
-  canClickInternalLinks: boolean; // allow user to click Symphony links in messages. default false
-  showChatSearch: boolean; // enable search feature. default true
-  showBookmarkMessage: boolean; // allow user to bookmark message. default true
-  showCompose: boolean; // enable compose mode editor. default true
-  showDisableInput: boolean; // enable user to disable editor. default true
-  showEditor: boolean; // enable editor. default true
-  showTitle: boolean; // show room title in the header. default true
-  showInfo: boolean; // show room information in the header. default true
-  showMembers: boolean; // show list of members. default true
-  showProfilePopover: boolean; // show popover profile cards. default true
-  symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below ECP chats. default true
+  canClickInternalLinks: boolean; // Allow user to click Symphony links in messages. Upon click the platform receives an event and decides how to manage the link (see informative note). Default false
+  showChatSearch: boolean; // Enable search feature. Default true
+  showBookmarkMessage: boolean; // Ellow user to bookmark message. Default true
+  showCompose: boolean; // Enable compose mode editor. Default true
+  showDisableInput: boolean; // Enable user to disable editor. Default true
+  showEditor: boolean; // Enable editor. default true
+  showTitle: boolean; // Show room title in the header. Default true
+  showInfo: boolean; // Show room information in the header. Default true
+  showMembers: boolean; // Show list of members. Default true
+  showProfilePopover: boolean; // Show popover profile cards. Default true
+  symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below ECP chats. Default true
   // Collaboration mode only
-  allowChatCreation: boolean; // enable user to create new chats. default false
+  allowChatCreation: boolean; // Enable user to create new chats. Default false
 }
 ```
+
+{% hint style="info" %}
+[Symphony link notifications](https://docs.developers.symphony.com/embedded-modules/embedded-collaboration-platform/notifications#symphony-link-notifications) explains how clicks on internal links are processed by Symphony.
+{% endhint %}
 
 ### How to update settings
 
