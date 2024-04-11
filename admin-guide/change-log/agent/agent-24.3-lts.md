@@ -12,3 +12,13 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 ### Agent 24.3.2
 
 * Support inserting financial instruments (enhanced tags) in MessageML. This feature is **not yet generally available** and will be released officially in the coming months. More information is available in [#tags](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md#tags "mention").
+
+### Changes introduced since last LTS version
+
+* Enriched error when timing out on sending a message.
+* Support for attachments in message update.
+* Fix a case where invalid session does not return the right HTTP 401, when cryptoV2 enabled.
+* Enriched error when timing out on sending a message.
+* Support for attachments when updating a  message.
+* Add to the real-time events the list of tenant identifiers (pods) where the event was distributed.
+* Fixed security vulnerabilities.
