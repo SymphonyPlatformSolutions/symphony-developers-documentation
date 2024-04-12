@@ -59,67 +59,67 @@ When identifiers and filters are not sufficient to identify a unique match, or w
       </tr>
       <tr>
         <td>Figi</td>
-        <td><tag figi="BBG000N9P426" fallback-ticker="TSLA US"/></td>
+        <td><tag figi="BBG000N9P426" fallback-ticker="TSLA"/></td>
         <td># unique if found</td>
       </tr>
       <tr>
         <td>BBG Comp ticker on Market sector</td>
-        <td><tag bbgcompticker="TSLA US" bbgmarket-sector="Equity" fallback-ticker="TSLA US"/></td>
+        <td><tag bbgcompticker="TSLA US" bbgmarket-sector="Equity" fallback-ticker="TSLA"/></td>
         <td># unique if found</td>
       </tr>
       <tr>
         <td>Figi ticker</td>
-        <td><tag figi-ticker="TSLA UW" fallback-ticker="TSLA US"/></td>
+        <td><tag figi-ticker="TSLA UW" fallback-ticker="TSLA"/></td>
         <td># likely unique, may need filters</td>
       </tr>
       <tr>
         <td>BBG Comp ticker</td>
-        <td><tag bbgcompticker="TSLA US" fallback-ticker="TSLA US"/></td>
+        <td><tag bbgcompticker="TSLA US" fallback-ticker="TSLA"/></td>
         <td># likely unique, may need filters</td>
       </tr>
       <tr>
         <td>US Code</td>
-        <td><tag us-code="88160R101" fallback-ticker="TSLA US"/></td>
+        <td><tag us-code="88160R101" fallback-ticker="TSLA"/></td>
         <td># likely NOT unique listing for stocks, need filters.</td>
       </tr>
       <tr>
         <td>US Code on Main listing</td>
-        <td><tag us-code="88160R101" return-main-listing="true" fallback-ticker="TSLA US"/></td>
+        <td><tag us-code="88160R101" return-main-listing="true" fallback-ticker="TSLA"/></td>
         <td># ask SYM to return the instrument listed on primary exchange</td>
       </tr>
       <tr>
         <td>ISIN</td>
-        <td><tag isin="US88160R1014" fallback-ticker="TSLA US"/></td>
+        <td><tag isin="US88160R1014" fallback-ticker="TSLA"/></td>
         <td># likely NOT unique listing for stocks, need filters.</td>
       </tr>
       <tr>
         <td>ISIN on Main listing</td>
-        <td><tag isin="US88160R1014" return-main-listing="true" fallback-ticker="TSLA US"/></td>
+        <td><tag isin="US88160R1014" return-main-listing="true" fallback-ticker="TSLA"/></td>
         <td># ask SYM to return the instrument listed on primary exchange</td>
       </tr>
       <tr>
         <td>Local code</td>
-        <td><tag local-code="TSLA" fallback-ticker="TSLA US"/></td>
+        <td><tag local-code="TSLA" fallback-ticker="TSLA"/></td>
         <td># likely NOT unique listing for stocks, need filters.</td>
       </tr>
       <tr>
         <td>Local code with Country</td>
-        <td><tag local-code="TSLA" country-code="US" fallback-ticker="TSLA US"/></td>
+        <td><tag local-code="TSLA" country-code="US" fallback-ticker="TSLA"/></td>
         <td># likely unique listing for US stocks</td>
       </tr>
       <tr>
         <td>Local code with MIC</td>
-        <td><tag local-code="TSLA" operational-mic="XNAS" fallback-ticker="TSLA US"/></td>
+        <td><tag local-code="TSLA" operational-mic="XNAS" fallback-ticker="TSLA"/></td>
         <td># likely unique listing</td>
       </tr>
       <tr>
         <td>Local code with MIC and instrument class</td>
-        <td><tag local-code="TSLA" operational-mic="XNAS" instrument-class="equity" fallback-ticker="TSLA US"/></td>
+        <td><tag local-code="TSLA" operational-mic="XNAS" instrument-class="equity" fallback-ticker="TSLA"/></td>
         <td># likely unique listing</td>
       </tr>
       <tr>
         <td>Fallback ticker</td>
-        <td><tag fallback-ticker="TSLA US"/></td>
+        <td><tag fallback-ticker="TSLA"/></td>
         <td>Always include a fall back to ensure the message will be accepted.</td>
       </tr>
     </tbody>
@@ -128,7 +128,7 @@ When identifiers and filters are not sufficient to identify a unique match, or w
 
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
 
 #### Chime
 
