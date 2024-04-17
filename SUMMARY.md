@@ -148,7 +148,7 @@
 ## Symphony REST API
 
 * [Symphony REST API](https://rest-api.symphony.com/)
-* [Federation](https://symphony-1.gitbook.io/federation-rest-api/)
+* [Federation](https://symphony-1.gitbook.io/federation-apis/)
 * [Connect API](symphony-rest-api/channel-connect.md)
 * [StreetLinx API](https://streetlinx.symphony.com/api)
 
