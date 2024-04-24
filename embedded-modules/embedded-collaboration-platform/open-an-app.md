@@ -2,10 +2,6 @@
 
 ## Open an extension app with an appId
 
-{% hint style="info" %}
-`openApp` is only available in **Focus** mode for now.
-{% endhint %}
-
 The `openApp` function exposed by the SDK allows you to open a module of an extension app in ECP.&#x20;
 
 The extension app needs to be already installed for the user, and to have been preloaded by ECP, using the `allowedApps` setting. Please refer to [Support for extension applications](support-for-extension-applications.md) for information on preloading an app.&#x20;
