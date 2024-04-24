@@ -44,7 +44,7 @@ The three components above all interact with each other in order to create Symph
 
 The sequence of API calls and component interaction is illustrated below:
 
-![](<../../.gitbook/assets/Bot Message Workflow@3x.svg>)
+![](<../../.gitbook/assets/Bot Message Workflow@3x (1).svg>)
 
 
 

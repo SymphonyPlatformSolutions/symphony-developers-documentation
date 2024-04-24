@@ -10,7 +10,7 @@ Symphony now supports universal URIs (https links starting with `open.symphony.c
 
 When a user clicks on a universal URI, a webpage opens and proposes several options relevant to the user, such as opening the link in the Symphony Desktop Application or in the mobile app, depending on the current context, but also opening in the browser (web version).
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p><em>Universal URI landing page</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p><em>Universal URI landing page</em></p></figcaption></figure>
 
 ## Launch the Symphony Desktop client
 

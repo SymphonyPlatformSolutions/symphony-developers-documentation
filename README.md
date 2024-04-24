@@ -53,7 +53,7 @@ Bring customized and extensible workflows into Symphony through Extension Apps. 
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-## Become a Certified Developer <img src=".gitbook/assets/certified-developer (1) (2) (2) (2).png" alt="" data-size="line">&#x20;
+## Become a Certified Developer <img src=".gitbook/assets/certified-developer (1) (2) (2) (2) (1).png" alt="" data-size="line">&#x20;
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 

@@ -11,9 +11,9 @@ Buttons support six different styles: `primary`, `primary-link`, `secondary`, `t
 * Destructive: use the Destructive button when an action results in the removal of an item or if it can result in a potentially serious negative consequence.
 * Primary-link, Tertiary and Destructive-link: These styles are variations respectively of the Primary, Secondary and Destructive buttons but without borders. They are low prominence options that can be used alongside a Primary or as standalone buttons with the ability to read more information.
 
-<figure><img src="../../../../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
 
 ## Attributes
 

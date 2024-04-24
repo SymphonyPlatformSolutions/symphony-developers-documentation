@@ -48,7 +48,7 @@ Your webhook is now successfully configured in Symphony.
 
 In Splunk, define an alert with a webhook action, and paste the Symphony webhook URL copied in the previous step.
 
-<figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 
 Finalise the creation of your alert in Splunk.
 

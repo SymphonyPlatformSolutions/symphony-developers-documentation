@@ -69,7 +69,7 @@
 ## Extension Apps <a href="#ext-apps" id="ext-apps"></a>
 
 * [Building Extension Apps](ext-apps/building-extension-apps.md)
-* [Planning Your App](ext-apps/planning-your-app/README.md)
+* [Planning Your App](ext-apps/planning-your-app.md)
 * [Getting Started](ext-apps/getting-started/README.md)
   * [Getting Started with ADK](ext-apps/getting-started/adk.md)
   * [Application Manifest Bundle](ext-apps/getting-started/bundle.md)
@@ -149,7 +149,7 @@
 
 * [Symphony REST API](https://rest-api.symphony.com/)
 * [Federation](https://symphony-1.gitbook.io/federation-apis/)
-* [Connect API](symphony-rest-api/channel-connect.md)
+* [Connect API](symphony-rest-api/connect-api.md)
 * [StreetLinx API](https://streetlinx.symphony.com/api)
 
 ## Developer Certification
@@ -174,14 +174,14 @@
     * [Archives](admin-guide/change-log/agent/archives/README.md)
       * [Agent - 23.11](admin-guide/change-log/agent/archives/agent-23.11.md)
       * [Agent - 23.10](admin-guide/change-log/agent/archives/agent-23.10.md)
-      * [Agent - 23.7](admin-guide/change-log/agent/agent-23.7.1.md)
+      * [Agent - 23.7](admin-guide/change-log/agent/archives/agent-23.7.md)
       * [Agent - 23.4](admin-guide/change-log/agent/archives/agent-23.4.md)
       * [Agent - 23.3 (LTS)](admin-guide/change-log/agent/archives/agent-23.3-lts.md)
       * [Agent - 23.1](admin-guide/change-log/agent/archives/agent-23.1.md)
       * [Agent - 22.12 (LTS)](admin-guide/change-log/agent/archives/agent-22.12-lts.md)
       * [Agent - 22.11](admin-guide/change-log/agent/archives/agent-22.11.md)
       * [Agent - 22.10](admin-guide/change-log/agent/archives/agent-22.10.md)
-      * [Agent - 22.9 (LTS)](admin-guide/change-log/agent/agent-22.9-lts.md)
+      * [Agent - 22.9 (LTS)](admin-guide/change-log/agent/archives/agent-22.9-lts.md)
       * [Agent - 22.8](admin-guide/change-log/agent/archives/agent-22.8.md)
       * [Agent - 22.7](admin-guide/change-log/agent/archives/agent-22.7.md)
       * [Agent - 22.6 (LTS)](admin-guide/change-log/agent/archives/agent-22.6-lts.md)
@@ -195,7 +195,7 @@
       * [Agent - 20.5 (2.59)](admin-guide/change-log/agent/archives/agent-20.5-2.59.md)
       * [Agent - 20.4 (2.58)](admin-guide/change-log/agent/archives/agent-20.4-2.58.md)
   * [SBE API endpoints (pod)](admin-guide/change-log/sbe-api-endpoints-pod/README.md)
-    * [SBE - 24.1](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.17.md)
+    * [SBE - 24.1](admin-guide/change-log/sbe-api-endpoints-pod/sbe-24.1.md)
     * [SBE - 20.16](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.16.md)
     * [SBE - 20.15](admin-guide/change-log/sbe-api-endpoints-pod/sbe-20.15.md)
     * [Archives](admin-guide/change-log/sbe-api-endpoints-pod/archives/README.md)

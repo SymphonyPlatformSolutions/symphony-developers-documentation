@@ -17,8 +17,3 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 * Add to the real-time events the list of tenant identifiers (pods) where the event was distributed.
 * Fixed security vulnerabilities.
-
-### Agent 24.1.2
-
-* Enriched error when timing out on sending a message.
-* Support for attachments when updating a  message.

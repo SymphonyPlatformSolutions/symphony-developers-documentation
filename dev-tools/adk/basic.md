@@ -142,7 +142,7 @@ https://develop2.symphony.com/?bundle=https://localhost:4000/bundle.json
 
 ## Test the App
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 
 Acknowledge the warning about being in developer mode. You should notice that a new left navigation item appears and triggers an alert when pressed.
 

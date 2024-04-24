@@ -13,6 +13,11 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 * Fix a case where invalid session does not return the right HTTP 401, when cryptoV2 enabled.
 
+### Agent 24.1.2
+
+* Enriched error when timing out on sending a message.
+* Support for attachments when updating a  message.
+
 ### Agent 24.1.1
 
 * Enriched error when timing out on sending a message.

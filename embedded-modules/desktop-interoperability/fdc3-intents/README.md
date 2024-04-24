@@ -69,7 +69,7 @@ fdc3.raiseIntent('StartChat', {
 {% endtab %}
 
 {% tab title="Result in Symphony" %}
-<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -108,7 +108,7 @@ fdc3.raiseIntent('StartChat', {
 {% endtab %}
 
 {% tab title="Result in Symphony" %}
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -230,7 +230,7 @@ fdc3.raiseIntent('ViewMessages', {
 {% endtab %}
 
 {% tab title="Result in Symphony" %}
-<figure><img src="../../../.gitbook/assets/image (64).png" alt=""><figcaption><p>View all messages received that contained the specified cashtag.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption><p>View all messages received that contained the specified cashtag.</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -249,7 +249,7 @@ fdc3.raiseIntent('ViewMessages', {
 {% endtab %}
 
 {% tab title="Result in Symphony" %}
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>View all messages received that contained the specified hashtag.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>View all messages received that contained the specified hashtag.</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -318,7 +318,7 @@ When hovering over $cashtags, an FDC3 _ViewInstrument_ action will be displayed.
 
 On click, Symphony will raise the _ViewInstrument_ intent, with the ticker as context data (fdc3.instrument).
 
-<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption><p>When hovering on the tag (e.g. AAPL US), clicking View Instrument will raise the intent.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>When hovering on the tag (e.g. AAPL US), clicking View Instrument will raise the intent.</p></figcaption></figure>
 
 Example of context data received:
 
@@ -377,7 +377,7 @@ The intent raised is CreateInteraction with a fdc3.interaction context type. The
 
 {% tabs %}
 {% tab title="Share message action" %}
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption><p><em>To display the Share message action, you need to hover on the message and then click the three dots menu.</em></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption><p><em>To display the Share message action, you need to hover on the message and then click the three dots menu.</em></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Result" %}
