@@ -19,8 +19,6 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Changes introduced since last LTS version
 
-* Enriched error when timing out on sending a message.
-* Support for attachments in message update.
 * Fix a case where invalid session does not return the right HTTP 401, when cryptoV2 enabled.
 * Enriched error when timing out on sending a message.
 * Support for attachments when updating a  message.
