@@ -21,15 +21,35 @@ Client certificate authentication in TLS is configured at the port level. Two di
 
 ## Summary
 
-1. The user generates a certificate for bot authentication.
-2. The admin uploads the certificate into the pod using the **Admin Console**.
-3. The Bot makes a call the the authentication endpoints.  Here, the server client certificate provided against the "Signing Certificate" and returns an authentication token.
+1. The Admin upload a Signing certificate or Root certificate using the **Admin portal**.
+2. The Admin provides to the developer a child client certificate derived from the Signing or Root certificate
+3. The developer authenticates the Bot using the client certificate.
 
-## 1. Generate a Certificate
+**Note**: It is also possible to directly upload a Client certificate in the Admin portal instead of a Signing or Root certificate.&#x20;
 
-Upload a copy of your Root Certificate Authorities (CA) Public "Signing Certificate" to the Pod. This would then permit authentication to all child certificates produced by this Signing Authority.
+## 1.  Upload a Signing Certificate or Root Certificate
 
-You can use the following commands to generate the service account certificate. **The certificate must use 4096 bits length**. The CA Cert must be imported on the POD via the Admin Console:
+{% hint style="warning" %}
+Please note the below steps can only be performed by a Symphony Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
+{% endhint %}
+
+{% hint style="info" %}
+The certificate should be concerted to a CER or PEM format before it is uploaded
+{% endhint %}
+
+Once you have obtained a copy of your Root Certificate Authorities (CA) Public "Signing Certificate", you can upload it using the following steps:
+
+1. Navigate to the Symphony Admin Console for your Pod (e.g. [https://mypod.symphony.com/?admin](https://mypod.symphony.com/?admin)), then log in with your credentials
+2. Once logged in click the _Manage Certificates_ button then select _Import_
+3. Drag and drop your Certificate file into the popup window:
+
+![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 4.21.52 PM.png>)
+
+1. Once you have uploaded the certificate file, click _Import._  If successful you will receive a confirmation message saying that the certificate has been uploaded successfully.
+
+## 2. Generate a Client Certificate
+
+You can use the following commands to generate the service account certificate. **The certificate must use 4096 bits length**.
 
 ```
 $ openssl genrsa -aes256 -passout pass:$PASSWORD -out admin-key.pem 4096
@@ -64,28 +84,6 @@ The Common Name (CN) value must match the name of the Symphony Service Account y
 | State / Province | London                    |
 | Country          | GB                        |
 | Key Size         | 2048 bits                 |
-
-## 2.  Upload your Certificate
-
-{% hint style="warning" %}
-Please note the below steps can only be performed by a Symphony Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
-{% endhint %}
-
-Once you have received your signed certificate, you will need to upload your public certificate to the Symphony Pod.
-
-{% hint style="info" %}
-The certificate should be concerted to a CER or PEM format before it is uploaded
-{% endhint %}
-
-If you have obtained a copy of your Root Certificate Authorities (CA) Public "Signing Certificate", you can upload it using the following steps:
-
-1. Navigate to the Symphony Admin Console for your Pod (e.g. [https://mypod.symphony.com/?admin](https://mypod.symphony.com/?admin)), then log in with your credentials
-2. Once logged in click the _Manage Certificates_ button then select _Import_
-3. Drag and drop your Certificate file into the popup window:
-
-![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 4.21.52 PM.png>)
-
-1. Once you have uploaded the certificate file, click _Import._  If successful you will receive a confirmation message saying that the certificate has been uploaded successfully.
 
 ## 3. Authenticate
 
