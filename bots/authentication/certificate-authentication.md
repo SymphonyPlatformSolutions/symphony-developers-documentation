@@ -65,7 +65,7 @@ $ openssl pkcs12 -export -out admin.p12 -aes256 -in admin-cert.pem -inkey admin-
 * CA\_PASSWORD = CA key password
 * OUTPUT\_PASSWORD = PKCS12 file password
 
-### Creating a Certificate Signing Request (CSR):
+#### Creating a Certificate Signing Request (CSR):
 
 The following table shows the information you will need to provide to your PKI team:
 
@@ -84,6 +84,12 @@ The Common Name (CN) value must match the name of the Symphony Service Account y
 | State / Province | London                    |
 | Country          | GB                        |
 | Key Size         | 2048 bits                 |
+
+#### Creation of the service user in the Admin Portal
+
+The Symphony Admin then creates a service user with a **username** that matches the **Common Name** of the certificate, as you can see in the example below:
+
+<figure><img src="../../.gitbook/assets/botdemocert.png" alt=""><figcaption></figcaption></figure>
 
 ## 3. Authenticate
 
