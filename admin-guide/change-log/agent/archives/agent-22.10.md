@@ -21,6 +21,6 @@ For a list of Agent x SBE compatibilities, click [here](../../../agent-guide/sbe
 
 ### Agent 22.10.1
 
-* [Cashtag](../../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md) restrictions were lifted: among them, note that cashtags sent by bots can now include whitespace (eg: _$123 EOL_) and be numeric-only (eg: _$123_)
+* [Cashtag](../../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags/) restrictions were lifted: among them, note that cashtags sent by bots can now include whitespace (eg: _$123 EOL_) and be numeric-only (eg: _$123_)
 * From Agent 20.9.3:
   * Support of [blast](https://developers.symphony.com/restapi/reference/blast-message) endpoint optimisation for sending attachments

@@ -30,8 +30,7 @@ Please read below to understand the changes introduced with the new enhanced tag
 ### Bots producing legacy $cashtags
 
 * Existing bots can still produce legacy $cashtags both using the **short tag notation** (`<tag cash="AAPL"/>`), and using a **Standard Entity** (`"type": "org.symphonyoss.fin.security"`)
-* Existing bots may experiment with sending messages that would contain enhanced tags now. To do so, you will need to construct the tags as Standard Entities, following the structure described [here](enhanced-tags-notice.md#structure-of-enhanced-tags). There will however be situations where these forged tags and regularly created tags will differ.
-* In the future, it will be possible to create enhanced tags more easily thanks to a short tag notation. More information to come.
+* Existing bots can easily include enhanced tags in messageML now. To do so, you will need to cuse the \<tag> and provide one or several identifiers for that instrument. The instrument will then be resolved against our reference database, and properly formatted in the message. More information is available [here](./#tags).
 
 ### Bots consuming legacy $cashtags
 

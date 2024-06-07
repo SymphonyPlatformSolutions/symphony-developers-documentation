@@ -1,8 +1,8 @@
-# Client 2.0 - 23.02 Draft
+# Client 2.0 - 23.02
 
 ### Enhanced tags
 
-* **Important**: The introduction of the new enhanced tags that will replace the existing $cashtags may have an impact on your existing bots and apps. More information available [here](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/enhanced-tags-notice.md).
+* **Important**: The introduction of the new enhanced tags that will replace the existing $cashtags may have an impact on your existing bots and apps. More information available [here](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags/enhanced-tags-notice.md).
 
 ### Desktop interop
 
