@@ -33,7 +33,7 @@ If neither the `selected` or `data-placeholder` attributes are set, the default 
 {% hint style="info" %}
 Message Size Limit:
 
-When designing forms with dropdowns within it be aware that there is a chance of reach the characters limit if too many dropdown options are included in the message. For more information about message size limits, refer to [MessageML](broken-reference).
+When designing forms with dropdown menus that include a very large number of options you may hit the characters limit of a Symphony message. For more information about message size limits, refer to [#message-size-limits](../../#message-size-limits "mention").
 {% endhint %}
 
 ## Examples
