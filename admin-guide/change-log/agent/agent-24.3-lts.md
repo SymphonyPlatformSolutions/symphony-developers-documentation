@@ -15,7 +15,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 24.3.2
 
-* Support inserting financial instruments (enhanced tags) in MessageML. This feature is **not yet generally available** and will be released officially in the coming months. More information is available in [#tags](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md#tags "mention").
+* Support inserting financial instruments (enhanced tags) in MessageML using our financial instrument resolver. Stocks, ETFs, Indices and Currency pairs are supported. More information is available in [#tags](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags.md#tags "mention").
 
 ### Changes introduced since last LTS version
 
