@@ -65,6 +65,10 @@ It is possible to either directly create the room, or show a room creation modal
 
 Note: The room name can contain spaces only if the link is opened in Google Chrome.
 
+{% hint style="warning" %}
+You can't create a chat room with **external participants**. To do this, please set the flag silent=false to spawn the room creation panel where the user can confirm the room creation, as described in the section below [Create a chat room with room creation dialog](./#create-a-chat-room-with-room-creation-dialog).
+{% endhint %}
+
 ### Create a chat room with user IDs
 
 ```
@@ -75,7 +79,7 @@ https://open.symphony.com/?startRoom=RoomName=Example&userIds=4378106230763,5478
 
 ```
 Protocol example with userEmails
-https://open.symphony.com/?startRoom=RoomName=AroomWith2people&userEmails=sample@symphony.com,acme@bank.com
+https://open.symphony.com/?startRoom=RoomName=AroomWith2people&userEmails=john@acme.com,kate@acme.com
 ```
 
 ### Create a chat room with room creation dialog
