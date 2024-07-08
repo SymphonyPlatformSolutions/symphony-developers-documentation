@@ -8,22 +8,22 @@ Symphony's **Embedded Collaboration Platform (ECP)** allows you to embed Symphon
 Reminder: ECP is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your ECP use case.&#x20;
 {% endhint %}
 
-We recommend to load ECP automatically on startup and to always keep it on. It may also be possible to configure your desktop platform so that if the user closes the ECP window, the web app gets hidden instead of closed.
+We recommend loading ECP automatically at startup and always keep it on. It may also be possible to configure your desktop platform so that if the user closes the ECP window, the web app gets hidden instead of closed.
 
 ### Configure your FDC3 platform
 
-Depending on your FDC3 platform, the following steps will slightly differ. However the configuration will roughly consist in these steps:
+Depending on your platform, the following steps will slightly differ. However the configuration will roughly consist in the following steps:
 
 * Create a new app, that you can name "Symphony".
 * The platform needs to provide the FDC3 API to Symphony using the window.fdc3 object. This option may be named `Inject FDC3` depending on your platform.
 * Configure the FDC3 version:  Symphony supports FDC3 API version 1.2 and 2.0.&#x20;
-* Configure the load URL of Symphony. This URL depends on the **ECP mode** that best suits your use case: Focus mode or Collaboration mode.&#x20;
+* Configure the `load URL` of Symphony. This URL depends on the **ECP mode** that best suits your use case: _Focus_ mode or _Collaboration_ mode.&#x20;
 
 ### ECP modes
 
 ECP supports two modes.
 
-* The **Focus** mode, with a single view displayed. The chat list is not visible. The Focus mode is very compact.
+* The **Focus** mode, that displays a single view. The chat list is not visible. The Focus mode is very compact.
 * The **Collaboration** mode, which looks like a simplified version of the Symphony desktop app. The user has access to the usual chat list, can navigate, search, and perform most actions available in the desktop app.
 
 Depending on what you want to do, one mode may be more adapted than the other.
