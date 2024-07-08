@@ -5,8 +5,8 @@
 Symphony now interoperates with your local apps using the FDC3 standard to accelerate workflows on your desktop.
 
 {% hint style="info" %}
-To interoperate with local apps using the FDC3 APIs, a desktop integration platform, such as Finsemble, Glue42 or OpenFin, needs to be running on the user machines.\
-Symphony aims to be platform-agnostic, however, as of today, only [Finsemble ](https://cosaic.io/finsemble/)and [Glue42 ](https://glue42.com/enterprise/)are supported.
+To interoperate with local apps using the FDC3 APIs, a desktop integration platform, such as Finsemble, Glue42, OpenFin or Connectifi needs to be running on the user machines.\
+Symphony aims to be platform-agnostic, but some features may not be available with all platforms.
 {% endhint %}
 
 
