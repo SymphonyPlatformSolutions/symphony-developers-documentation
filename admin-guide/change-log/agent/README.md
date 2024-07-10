@@ -1,12 +1,16 @@
 # Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-24.3.3.zip).
+Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-24.6.1.zip).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
 
 ### Compatible with Java 17 / RHEL 8 and 9
+
+{% content-ref url="agent-24.6-lts.md" %}
+[agent-24.6-lts.md](agent-24.6-lts.md)
+{% endcontent-ref %}
 
 {% content-ref url="agent-24.3-lts.md" %}
 [agent-24.3-lts.md](agent-24.3-lts.md)
@@ -20,10 +24,6 @@ Please find in the subpages below the list of changes related to each version of
 
 {% content-ref url="agent-23.9-lts.md" %}
 [agent-23.9-lts.md](agent-23.9-lts.md)
-{% endcontent-ref %}
-
-{% content-ref url="agent-23.6-lts.md" %}
-[agent-23.6-lts.md](agent-23.6-lts.md)
 {% endcontent-ref %}
 
 ## Agent Release Cycle
