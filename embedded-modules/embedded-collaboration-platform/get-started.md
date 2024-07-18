@@ -214,7 +214,7 @@ In any case, as you onboard the user on your web portal you will need to identif
 Use the following http endpoint to retrieve the Symphony pod URL of a user:
 
 ```url
-https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress={userEmail}&fs=advanced
+https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress={userEmail}&fs={userEmail}
 ```
 
 The http response will be formatted as below:
@@ -223,7 +223,9 @@ The http response will be formatted as below:
 {"podDomain":"corporate.symphony.com"}
 ```
 
-If the user email is not found, the following error will be returned instead:
+If the user email is not found, the pod with the most users sharing the same root email domain will be returned.
+
+If the company is not at all present on Symphony, the following error will be returned instead:
 
 ```json
 {"message":"No pod found for emailAddress: 'janedoe@acme.com' and companyDomain: 'acme.com'","status":"NOT_FOUND"}
@@ -231,10 +233,6 @@ If the user email is not found, the following error will be returned instead:
 
 {% hint style="info" %}
 If you have onboarded this user on your **Customer Connect** pod, the service will return an error, as users onboarded on Customer Connect pods are not listed for confidentiality reasons. In this situation, you can either persist the pod information when you onboard the user on the Customer Connect pod, or you can use the pod APIs of the Customer Connect pod to identify the user.
-{% endhint %}
-
-{% hint style="info" %}
-If you are using **Community Connect** to onboard users, please reach out to us to learn more on how you can identify the correct pod URL.
 {% endhint %}
 
 ## Health check
