@@ -13,6 +13,5 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 * Fixed security vulnerabilities
 * (future use) Introduced new 'tier' parameter for message search APIs. This property will be documented once feature becomes available.
-* New API to retrieve the DLP violations using Audi Trail 2
-  * Add support for missing enforcementPoints
+* Now supports the **DLP Violation end point** for Symphony on GCP to retrieve details on the violations in clear
 * Upgrade Jetty dependency
