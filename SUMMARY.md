@@ -167,6 +167,7 @@
 
 * [Change Logs](admin-guide/change-log/README.md)
   * [Agent](admin-guide/change-log/agent/README.md)
+    * [Agent - 24.8](admin-guide/change-log/agent/agent-24.8.md)
     * [Agent - 24.6 (LTS)](admin-guide/change-log/agent/agent-24.6-lts.md)
     * [Agent - 24.3 (LTS)](admin-guide/change-log/agent/agent-24.3-lts.md)
     * [Agent - 23.12 (LTS)](admin-guide/change-log/agent/agent-23.12-lts.md)
