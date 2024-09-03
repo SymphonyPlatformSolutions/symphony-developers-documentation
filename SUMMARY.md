@@ -160,7 +160,7 @@
 
 ## Mobile Frameworks
 
-* [Good](https://marketplace.blackberry.com/apps/519414651)
+* [Blackberry](https://marketplace.blackberry.com/apps/519414651)
 * [MobileIron](https://apps.apple.com/us/app/symphony-com-for-mobileiron/id1138896543)
 
 ## Admin Guides <a href="#admin-guide" id="admin-guide"></a>
