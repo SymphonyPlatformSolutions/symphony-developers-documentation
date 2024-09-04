@@ -208,7 +208,7 @@ There are two options for running the agent:
 ```
 {% endcode %}
 
-&#x20;       If you want to customize the default folder for output logs (./logs) uncomment and edit the following line:
+&#x20;       If you want to customize the default folder for output logs (default folder is `./logs`) uncomment and edit the following line:
 
 ```java
 #LOGS_DIRECTORY=/home/acme/logs    # Alternative location for Agent logs
