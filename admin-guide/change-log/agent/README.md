@@ -1,15 +1,15 @@
 # Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-24.6.2.zip).
+Latest LTS Agent version can be downloaded [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-24.9.3.zip).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
 
 ### Compatible with Java 17 / RHEL 8 and 9
 
-{% content-ref url="agent-24.8.md" %}
-[agent-24.8.md](agent-24.8.md)
+{% content-ref url="archives/agent-24.8.md" %}
+[agent-24.8.md](archives/agent-24.8.md)
 {% endcontent-ref %}
 
 {% content-ref url="agent-24.6-lts.md" %}
