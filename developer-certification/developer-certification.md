@@ -77,25 +77,3 @@ Becoming a Symphony Certified Bot Developer involves completing this module and 
 * Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment.&#x20;
 
 Head over to our Developer Training Center to get started on this [course](https://learn.symphony.com/bundles/python-bot-developer).
-
-## Symphony Certified Workflow Developer <img src="../.gitbook/assets/SY2-Developer-Badges-111021-Workflow (1).png" alt="" data-size="line">
-
-{% hint style="warning" %}
-This course has a pre-requisite requirement of completing the Symphony Development Fundamentals course and achieving a [Symphony Certified Associate Developer](developer-certification.md#symphony-certified-associate-developer) status.
-{% endhint %}
-
-### Module: Implementing Workflows with WDK
-
-This course showcases our latest Workflow Developer Kit (WDK) which uses a low-code development approach to building chat-bot applications. &#x20;
-
-Developers are no longer required to manually type out code but rather use declarations to create applications.  Declarations are abstracted pieces of code which developers can manipulate to give access to the Symphony APIs to react on events and perform actions as common as sending messages to users.&#x20;
-
-### How it works
-
-Becoming a Symphony Certified Workflow Developer involves completing this module and then passing the dedicated certification exam.  The course is approximately 180 mins in length followed by the certification exam which is 90 minutes.
-
-* The program is free and open to all developers.
-* Knowledge of the Symphony platform is not required, but exercises will require developers to access a Symphony environment.
-* Symphony will provide a limited, shared sandbox environment for those who do not have a company test environment.
-
-Head over to our Developer Training Center to get started on this [course](https://learn.symphony.com/bundles/workflow-developer-certification).
