@@ -136,7 +136,7 @@ symphony.listen({
 ### Activity of the user <a href="#activity-notifications" id="activity-notifications"></a>
 
 You can be notified of the user's activity.\
-As any user activity within ECP happens within an iFrame, the parent page can't know if the user is still active or not. This can be a problem, for example, when implementing an automatic inactivity logout on the parent page. To solve this, you can subscribe to "activity notifications" from ECP, and plug this into your general activity status.
+As any user activity within Embedded Mode happens within an iFrame, the parent page can't know if the user is still active or not. This can be a problem, for example, when implementing an automatic inactivity logout on the parent page. To solve this, you can subscribe to "activity notifications" from Embedded Mode, and plug this into your general activity status.
 
 There are no `SubscriptionParameters` or `NotificationObject` for this notification feed.
 
@@ -185,7 +185,7 @@ This notification is only available in focus mode when `canClickInternalLinks` i
 
 `NotificationObject`
 
-<table><thead><tr><th width="161">Parameter</th><th width="139">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>url</td><td>string</td><td>Full URL of the internal link clicked</td></tr><tr><td>selector</td><td>string</td><td>ECP frame selector in which the link has been clicked (<code>undefined</code> for main ECP frame)</td></tr></tbody></table>
+<table><thead><tr><th width="161">Parameter</th><th width="139">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>url</td><td>string</td><td>Full URL of the internal link clicked</td></tr><tr><td>selector</td><td>string</td><td>ECEmbedded Mode frame selector in which the link has been clicked (<code>undefined</code> for main Embedded Mode frame)</td></tr></tbody></table>
 
 ```typescript
 // Example
@@ -194,7 +194,7 @@ symphony.listen({
   callback: ({ url, selector }) => {
     console.log(`Internal link clicked in ${selector || 'main frame'}: ${url}`);
     
-    // example of ECP frames redirection on internal link clicked
+    // example of Embedded Mode frames redirection on internal link clicked
     const streamId = new URL(url).searchParams.get('streamId');
     if (streamId) {
       window.symphony.setStream(streamId, selector);
@@ -205,7 +205,7 @@ symphony.listen({
 
 ## Get notified of interop actions
 
-Similarly to what is available through the extension API and the desktop interoperability API, it is possible for the parent page to register extensibility buttons in ECP chats.
+Similarly to what is available through the extension API and the desktop interoperability API, it is possible for the parent page to register extensibility buttons in Embedded Mode chats.
 
 The parent page will be notified each time a button is clicked, and the notification will contain the same context data as what is documented for the [desktop interoperability API](../desktop-interoperability/fdc3-intents/).
 
@@ -229,6 +229,6 @@ Your page will be notified through the callback method each time an extensibilit
 At this time, it is not possible to register for only one type of extensibility button.
 
 {% hint style="info" %}
-**Note**: You will need a specific ECP plan in order to use the `registerInterop` API. Please reach out to us if you are interested.&#x20;
+**Note**: You will need a specific Embedded Mode plan in order to use the `registerInterop` API. Please reach out to us if you are interested.&#x20;
 {% endhint %}
 

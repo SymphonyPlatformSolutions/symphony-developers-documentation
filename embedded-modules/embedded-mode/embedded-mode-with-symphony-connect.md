@@ -1,4 +1,4 @@
-# ECP with Symphony Connect
+# Embedded Mode with Symphony Connect
 
 ## Symphony Connect offering
 
@@ -9,7 +9,7 @@ See [Connect API](https://docs.developers.symphony.com/symphony-rest-api/symphon
 ## Single Sign On support
 
 Symphony Connect users can benefit from Single Sign On if it has been configured by their admin. \
-In order to redirect Symphony Connect users to the SSO applicable to them, you need to specify the user email as a configuration parameter to the SDK when instantiating ECP.
+In order to redirect Symphony Connect users to the SSO applicable to them, you need to specify the user email as a configuration parameter to the SDK when instantiating Embedded Mode.
 
 ```typescript
 userEmail: string; // Email of the user
@@ -17,7 +17,7 @@ userEmail: string; // Email of the user
 
 Please note that this is required only for Symphony Connect users.&#x20;
 
-If a regular Symphony user logs in ECP from your portal, they will be automatically redirected to their company SSO, without relying on the `userEmail` parameter.
+If a regular Symphony user logs in Embedded Mode from your portal, they will be automatically redirected to their company SSO, without relying on the `userEmail` parameter.
 
 ## Bring your own Single Sign On
 

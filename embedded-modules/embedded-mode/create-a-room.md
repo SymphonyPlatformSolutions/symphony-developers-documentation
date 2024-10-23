@@ -12,7 +12,7 @@ If the selector parameter is not provided, or if in Collaboration mode, the dial
 
 #### Parameters
 
-<table><thead><tr><th width="131.33333333333331">Parameter</th><th width="290">Type</th><th>Description</th></tr></thead><tbody><tr><td>roomName</td><td>string</td><td>name of the room (max 50 chars)</td></tr><tr><td>userIds</td><td>string[]</td><td>array of user Ids or user emails</td></tr><tr><td>options</td><td>Partial&#x3C;ECPCreateRoomOptions></td><td>room settings (see below) and initial message</td></tr><tr><td>selector</td><td>string | undefined</td><td>Selector of the container to add the new ECP iFrame into (<strong>Focus mode only</strong>)</td></tr></tbody></table>
+<table><thead><tr><th width="131.33333333333331">Parameter</th><th width="290">Type</th><th>Description</th></tr></thead><tbody><tr><td>roomName</td><td>string</td><td>name of the room (max 50 chars)</td></tr><tr><td>userIds</td><td>string[]</td><td>array of user Ids or user emails</td></tr><tr><td>options</td><td>Partial&#x3C;ECPCreateRoomOptions></td><td>room settings (see below) and initial message</td></tr><tr><td>selector</td><td>string | undefined</td><td>Selector of the container to add the new Embedded Mode iFrame into (<strong>Focus mode only</strong>)</td></tr></tbody></table>
 
 ECPCreateRoomOptions contains the list of room settings that will be preselected, and is defined as below:&#x20;
 

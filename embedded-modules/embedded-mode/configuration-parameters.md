@@ -1,8 +1,8 @@
 # Configuration parameters
 
-You can configure many aspects of ECP, such as the look and feel, the theme or the actions that the user can perform in the chat.
+You can configure many aspects of Embedded Mode, such as the look and feel, the theme or the actions that the user can perform in the chat.
 
-## ECP settings
+## Embedded Mode settings
 
 These are client-side parameters, which will not override the configuration of the pod. \
 For example, if a user's admin has blocked file attachments in the Admin Portal, the setting `showAttach` to true will have no effect.
@@ -41,7 +41,7 @@ For example, if a user's admin has blocked file attachments in the Admin Portal,
   showInfo: boolean; // Show room information in the header. Default true
   showMembers: boolean; // Show list of members. Default true
   showProfilePopover: boolean; // Show popover profile cards. Default true
-  symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below ECP chats. Default true
+  symphonyLogo: boolean; // Display the 'Powered by SYMPHONY logo' below Embedded Mode chats. Default true
   // Collaboration mode only
   allowChatCreation: boolean; // Enable user to create new chats. Default false
 }
@@ -53,7 +53,7 @@ For example, if a user's admin has blocked file attachments in the Admin Portal,
 
 ### How to update settings
 
-There are several ways to update the ECP settings:
+There are several ways to update the Embedded Mode settings:
 
 * Through the `updateSettings` method, documented below.
 * At initialization, when rendering the chat, though the `render` method.
@@ -61,7 +61,7 @@ There are several ways to update the ECP settings:
 
 #### Update settings method
 
-The `updateSettings` method exposed by the SDK lets you update the ECP configuration parameters (listed above):
+The `updateSettings` method exposed by the SDK lets you update the Embedded Mode configuration parameters (listed above):
 
 <table><thead><tr><th width="168.4465408805031">Parameter</th><th width="194">Type</th><th>Description</th></tr></thead><tbody><tr><td>settings</td><td>Partial&#x3C;EcpSettings></td><td>Object containing the settings to update</td></tr></tbody></table>
 
@@ -77,7 +77,7 @@ window.symphony.updateSettings({
 
 ## Custom themes
 
-ECP comes with out-of-the-box support for Symphony's two color themes: Light and Dark.&#x20;
+Embedded Mode comes with out-of-the-box support for Symphony's two color themes: Light and Dark.&#x20;
 
 You can also specify a custom theme, in order to align with the design system of the parent page. An example demonstrating the use of color palette overrides can be found [here](https://github.com/SymphonyPlatformSolutions/ecp-examples/blob/master/SimpleExamples/src/index-theme.html).
 
@@ -87,7 +87,7 @@ To set a custom theme, use either the `render` method or use the `updateTheme` m
 
 #### Update theme method
 
-The `updateTheme` method exposed by the SDK lets you update the ECP theme.
+The `updateTheme` method exposed by the SDK lets you update the Embedded Mode theme.
 
 <table><thead><tr><th width="168.4465408805031">Parameter</th><th width="194">Type</th><th>Description</th></tr></thead><tbody><tr><td>theme</td><td>IThemeColors</td><td>Object containing the theme to update</td></tr></tbody></table>
 

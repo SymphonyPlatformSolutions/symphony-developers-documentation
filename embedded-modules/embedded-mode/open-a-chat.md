@@ -10,7 +10,7 @@ If the second parameter is not provided, or if in Collaboration mode, the chat w
 
 #### Parameters
 
-<table><thead><tr><th width="191">Parameter</th><th width="132.33333333333331">Type</th><th>Description</th></tr></thead><tbody><tr><td>streamId</td><td>string</td><td>Stream ID of the chat conversation</td></tr><tr><td>containerSelector</td><td>string | undefined</td><td>Selector of the container to add the new ECP iFrame into (<strong>Focus mode only</strong>)</td></tr></tbody></table>
+<table><thead><tr><th width="191">Parameter</th><th width="132.33333333333331">Type</th><th>Description</th></tr></thead><tbody><tr><td>streamId</td><td>string</td><td>Stream ID of the chat conversation</td></tr><tr><td>containerSelector</td><td>string | undefined</td><td>Selector of the container to add the new Embedded Mode iFrame into (<strong>Focus mode only</strong>)</td></tr></tbody></table>
 
 #### Returns
 
@@ -45,7 +45,7 @@ If a direct message or group chat with the user(s) already exists, it will open 
 
 #### Parameters
 
-<table><thead><tr><th width="186.4465408805031">Parameter</th><th width="149">Type</th><th>Description</th></tr></thead><tbody><tr><td>Users</td><td>Array&#x3C;string></td><td>Array of users. Users can be represented by their user ID or email address.</td></tr><tr><td>containerSelector</td><td>string | undefined</td><td>Selector of the container in which to add the new ECP iFrame (<strong>Focus mode only</strong>)</td></tr></tbody></table>
+<table><thead><tr><th width="186.4465408805031">Parameter</th><th width="149">Type</th><th>Description</th></tr></thead><tbody><tr><td>Users</td><td>Array&#x3C;string></td><td>Array of users. Users can be represented by their user ID or email address.</td></tr><tr><td>containerSelector</td><td>string | undefined</td><td>Selector of the container in which to add the new Embedded Mode iFrame (<strong>Focus mode only</strong>)</td></tr></tbody></table>
 
 #### Returns
 

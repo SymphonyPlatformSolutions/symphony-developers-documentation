@@ -55,7 +55,7 @@ https://{your_pod_url}.symphony.com/apps/client2?embed=true&partnerId={partnerId
 ```
 
 {% hint style="info" %}
-Loading ECP requires a`partnerId` to be passed along in the load URL. More info on Partner Id is available [here](../../embedded-collaboration-platform/pricing-tiers.md#partner-id).
+Loading ECP requires a`partnerId` to be passed along in the load URL. More info on Partner Id is available [here](../../embedded-mode/pricing-tiers.md#partner-id).
 {% endhint %}
 
 Once your configuration is complete, please have a look at our [troubleshooting.md](troubleshooting.md "mention") guide to validate that everything is working.
