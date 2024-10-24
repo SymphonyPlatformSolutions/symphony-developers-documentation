@@ -105,7 +105,7 @@ Depending on the type of messages returned the notification object can take vari
 
 #### Room update with unpinned message
 
-<table><thead><tr><th width="239">Parameter</th><th width="189">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>type</td><td>string</td><td>Type of message. Equals “MAESTRO” for system messages</td></tr><tr><td>streamId</td><td>string</td><td>ID of the chat conversation</td></tr><tr><td>fromWhomId</td><td>string</td><td>=”UPDATE_ROOM”</td></tr><tr><td>isMention</td><td>string</td><td>Type of room update. Equals “UNPIN_MESSAGE”</td></tr></tbody></table>
+<table><thead><tr><th width="239">Parameter</th><th width="189">Type</th><th width="344">Description</th></tr></thead><tbody><tr><td>type</td><td>string</td><td>Type of message. Equals “MAESTRO” for system messages</td></tr><tr><td>streamId</td><td>string</td><td>ID of the chat conversation</td></tr><tr><td>event</td><td>string</td><td>=”UPDATE_ROOM”</td></tr><tr><td>roomUpdate.updateType</td><td>string</td><td>Type of room update. Equals “UNPIN_MESSAGE”</td></tr></tbody></table>
 
 ```typescript
 // Example
