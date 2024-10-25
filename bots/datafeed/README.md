@@ -90,7 +90,7 @@ For a full list of the  JSON payloads corresponding to each event type, continue
 [real-time-events.md](real-time-events.md)
 {% endcontent-ref %}
 
-## Handling Events using BDK and WDK
+## Handling Events using BDK
 
 The BDK (Bot Developer Kit) comes bootstrapped with a `DatafeedEventService` class that handles all of the logic for creating/reading datafeeds via the API, has best practices for maintaining datafeeds, and also provides event handling architecture that makes it easy to orchestrate complex workflows and introduce custom business logic to your bot.
 

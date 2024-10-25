@@ -49,18 +49,6 @@ ssl:
     path: path/to/truststore.pem
 ```
 
-### WDK
-
-The WDK is built on top of BDK for Java's Spring Starter.  As such, configuring a custom truststore follows the same steps as the BDK for Java.  Your configuration should look like this:
-
-```yaml
-bdk:
-  ssl:
-    trustStore:
-      path: path/to/truststore
-      password: changeit
-```
-
 ## Certificate Chains
 
 A typical internal certificate has has least 2 certificates in its chain - the certificate itself as well as the root CA certificate that signed it. Some enterprises will have intermediate CAs to form a 3-certificate chain. When Java establishes a connection to a remote server, it requires all signing certificates in that chain to be trusted. Hence, when building a truststore, you will need to **import every signing certificate in the chain of each remote server** that is not already present in the `cacerts` bundle.
