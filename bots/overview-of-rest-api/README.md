@@ -9,7 +9,6 @@ While Bots can call the Symphony API directly, Symphony's dedicated BDK and WDK 
 
 * The [Java Bot Developer Kit](../../dev-tools/bdk-java/) (Java BDK)
 * The [Python Bot Developer Kit](../../dev-tools/bdk-python.md) (Python BDK)
-* The [Workflow Developer Kit](../../dev-tools/wdk.md) (WDK)
 {% endhint %}
 
 ## API Swagger files

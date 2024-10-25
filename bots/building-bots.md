@@ -26,8 +26,8 @@ Learn more about how you can get started with our developer tools here:
 [bdk.md](getting-started/bdk.md)
 {% endcontent-ref %}
 
-{% content-ref url="getting-started/wdk.md" %}
-[wdk.md](getting-started/wdk.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### 3.  Authentication
