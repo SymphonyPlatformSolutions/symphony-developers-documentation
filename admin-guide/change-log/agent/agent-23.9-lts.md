@@ -3,7 +3,7 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-23.9.7.zip).
+To download the Agent, click [here](https://static.symphony.com/agent/agent-23.9.7.zip).
 
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
