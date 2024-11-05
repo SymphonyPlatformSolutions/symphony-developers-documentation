@@ -17,6 +17,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 ### Agent 24.9.1
 
 * DLP enforcement API now supports the Audit Trail 2 API parameters: Customers using the DLP enforcement API for detailing enforcements natively on Expression Filters v3 (EFv3) can continue to use their existing endpoints in order to download enforcement data such as: _‘Keyword Blocked’, ‘Keyword Unavailable’, ‘Expression Warning’, ‘Expression Blocked’, ‘Expression Logged’, ‘File Blocked’, ‘File Logged’._ but will require changing the parameters used to reference AT2. The resultant payload has a different formatting to the previous output.
+  * Customers which tenant is hosted on GCP, and willing to use the DLP enforcement APIs, are required to configure their Agent with the following flag: `agent.dlp.violationSource` set to "`audit`".&#x20;
 * Upgrade to Spring 3.3.2
 * Upgrade jetty dependency
 
