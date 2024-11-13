@@ -8,8 +8,12 @@ Please find in the subpages below the list of changes related to each version of
 
 ### Compatible with Java 17 / RHEL 8 and 9
 
-{% content-ref url="archives/agent-24.8.md" %}
-[agent-24.8.md](archives/agent-24.8.md)
+{% content-ref url="agent-24.11.md" %}
+[agent-24.11.md](agent-24.11.md)
+{% endcontent-ref %}
+
+{% content-ref url="agent-24.10.md" %}
+[agent-24.10.md](agent-24.10.md)
 {% endcontent-ref %}
 
 {% content-ref url="agent-24.6-lts.md" %}
