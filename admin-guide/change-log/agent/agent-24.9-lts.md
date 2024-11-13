@@ -3,11 +3,15 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://static.symphony.com/agent/agent-24.9.3.zip).\
+To download the Agent, click [here](https://static.symphony.com/agent/agent-24.9.4.zip).\
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 24.9.4
+
+* Fixed security vulnerabilities
 
 ### Agent 24.9.3
 
