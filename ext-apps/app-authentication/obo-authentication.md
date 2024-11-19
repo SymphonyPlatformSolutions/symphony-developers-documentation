@@ -74,7 +74,7 @@ Note: Give your extension application the appropriate permissions corresponding 
 
 ## Implementing OBO Authentication
 
-The BDK 2.0 makes it super simple to create an OBO based workflow, To do so, simply, simply instantiate an OBO Session in your Bot project. The BDK 2.0 allows you to instantiate your OBO session from a username or user ID.
+The BDK makes it super simple to create an OBO based workflow, To do so, simply, simply instantiate an OBO Session in your Bot project. The BDK allows you to instantiate your OBO session from a username or user ID.
 
 ```java
 public class BotApplication {

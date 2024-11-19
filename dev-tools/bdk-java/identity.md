@@ -1,4 +1,4 @@
-# Integrating a Bot with an Identity Provider
+# Integrate a Bot with an Identity Provider
 
 ## Overview
 
@@ -16,7 +16,7 @@ This sequence diagram describes the flow of requests between the various compone
 
 ## Create Authorization Server <a href="#create-authorization-server" id="create-authorization-server"></a>
 
-We will be using the BDK 2.0 for this example, so generate a scaffold project using the Bot Generator by following these instructions. We will also be using the Spring Boot integration so ensure that is selected at the framework question in the generator.
+We will be using the BDK for this example, so generate a scaffold project using the Bot Generator by following these instructions. We will also be using the Spring Boot integration so ensure that is selected at the framework question in the generator.
 
 {% content-ref url="../../bots/getting-started/bdk.md" %}
 [bdk.md](../../bots/getting-started/bdk.md)
@@ -53,7 +53,7 @@ openssl genrsa -out sign-private.pem 2048
 openssl rsa -in sign-private.pem -outform PEM -pubout -out sign-public.pem
 ```
 
-Add the keys to your project and list their paths in your `application.yaml` file. We will also disable the BDK 2.0's datafeed since this server will initiate calls from HTTP endpoints rather than Symphony events.
+Add the keys to your project and list their paths in your `application.yaml` file. We will also disable the BDK's datafeed since this server will initiate calls from HTTP endpoints rather than Symphony events.
 
 {% code title="application.yaml" %}
 ```yaml
@@ -89,7 +89,7 @@ public class MessageIdentityRequest {
 
 ## Create Message Identity Service
 
-This service will be our main logic class, serving HTTP requests and processing validation. We will inject in the location of our keys and use the BDK 2.0's message service and user service.
+This service will be our main logic class, serving HTTP requests and processing validation. We will inject in the location of our keys and use the BDK message service and user service.
 
 {% code title="MessageeIdentityService.java" %}
 ```java

@@ -42,13 +42,13 @@ After completing the [Symphony Development Fundamentals](developer-certification
 
 We have language pathways for either Java or Python.  So please follow the respective guide below for [Java](developer-certification.md#module-developing-bots-using-bdk-2.0-for-java) or [Python](developer-certification.md#module-developing-bots-using-bdk-2.0-for-python).
 
-### Module: Developing Bots using BDK 2.0 for Java <img src="../.gitbook/assets/SY2 Developer Badges 040521-Java.png" alt="" data-size="line">
+### Module: Developing Bots using BDK for Java <img src="../.gitbook/assets/SY2 Developer Badges 040521-Java.png" alt="" data-size="line">
 
 {% hint style="info" %}
-Please follow this pathway if you're interested in learning more about our Java BDK 2.0
+Please follow this pathway if you're interested in learning more about our Java BDK
 {% endhint %}
 
-Takes a deeper dive into Symphony APIs, including hands-on examples built using our latest developer tool, the Symphony Bot Developer Kit (BDK) an in depth look into the latest Symphony developer tool, the Bot Developer Kit 2.0!
+Takes a deeper dive into Symphony APIs, including hands-on examples built using our latest developer tool, the Symphony Bot Developer Kit (BDK) an in depth look into the latest Symphony developer tool, the Bot Developer Kit!
 
 ### How it works
 
@@ -60,13 +60,13 @@ Becoming a Symphony Certified Bot Developer involves completing this module and 
 
 Head over to our Developer Training Center to get started on this [course](https://learn.symphony.com/bundles/java-bot-developer).
 
-### Module: Developing Bots using BDK 2.0 for Python <img src="../.gitbook/assets/SY2 Developer Badges 040521-Python.png" alt="" data-size="line">
+### Module: Developing Bots using BDK for Python <img src="../.gitbook/assets/SY2 Developer Badges 040521-Python.png" alt="" data-size="line">
 
 {% hint style="info" %}
-Please follow this pathway if you're interested in learning more about our Python BDK 2.0
+Please follow this pathway if you're interested in learning more about our Python BDK
 {% endhint %}
 
-Takes a deeper dive into Symphony APIs, including hands-on examples built using our latest developer tool, the Symphony Bot Developer Kit (BDK) an in depth look into the latest Symphony developer tool, the Bot Developer Kit 2.0!
+Takes a deeper dive into Symphony APIs, including hands-on examples built using our latest developer tool, the Symphony Bot Developer Kit (BDK) an in depth look into the latest Symphony developer tool, the Bot Developer Kit!
 
 ### How it works
 
