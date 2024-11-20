@@ -118,7 +118,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 ![](<../../../../.gitbook/assets/Bot Message Workflow@3x.svg>)
 
 1. **A Bot sends a message with Symphony Elements in a form**
-2. **The message/from is visible to users.  Users interact with the elements**
+2. **The message/form is visible to users.  Users interact with the elements**
 3. **Once submitted, the data is submitted to the bot**
 4. **Bots can access the data, by reading the datafeed.**&#x20;
 
