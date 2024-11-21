@@ -124,7 +124,7 @@
     * [Message format](embedded-modules/desktop-interoperability/fdc3-intents/message-format.md)
   * [Configuration guide](embedded-modules/desktop-interoperability/configuration-guide/README.md)
     * [Configure with the native connector](embedded-modules/desktop-interoperability/configuration-guide/configure-with-the-native-connector.md)
-    * [Configure with ECP](embedded-modules/desktop-interoperability/configuration-guide/configure-with-ecp.md)
+    * [Configure with Embedded Mode](embedded-modules/desktop-interoperability/configuration-guide/configure-with-embedded-mode.md)
     * [Troubleshooting](embedded-modules/desktop-interoperability/configuration-guide/troubleshooting.md)
   * [Change log](embedded-modules/desktop-interoperability/change-log.md)
 * [Embedded Mode](embedded-modules/embedded-mode/README.md)
