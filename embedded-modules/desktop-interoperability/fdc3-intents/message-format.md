@@ -25,7 +25,7 @@ The behavior of an action button is then described in the `entities` section of 
 **Note**: Chat bots can also send action buttons, learn more [here](../../../bots/messages/overview-of-messageml/entities/standard-entities.md#fdc3-action-buttons).
 {% endhint %}
 
-An example of an action button is available below.
+Two examples of action buttons are available below.
 
 #### Examples
 
