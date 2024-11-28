@@ -43,19 +43,11 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 
 1. On the Symphony Admin Portal, select the **APP MANAGEMENT** tab, then click the **Add Custom App** button.
 
-<div align="left">
-
-<figure><img src="https://lh5.googleusercontent.com/RoLAku8ZVhbDO-8U9H3YVpscQD094SCXzwHsEdsNh7raNJEeH5LhYe6FEV-H1fs2t2bYnTlvQVmQEkfJlDoHhHdoJjIYP1sI5qC6UG3rS5AbZGn0P4j5wOTUp5K0Y4MkubQDWZ5vflWwcq7sd3Iw6g" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://lh5.googleusercontent.com/RoLAku8ZVhbDO-8U9H3YVpscQD094SCXzwHsEdsNh7raNJEeH5LhYe6FEV-H1fs2t2bYnTlvQVmQEkfJlDoHhHdoJjIYP1sI5qC6UG3rS5AbZGn0P4j5wOTUp5K0Y4MkubQDWZ5vflWwcq7sd3Iw6g" alt=""><figcaption></figcaption></figure></div>
 
 2. Click the **Import Application Bundle File** button.
 
-<div align="left">
-
-<figure><img src="https://lh4.googleusercontent.com/m5SMBLCQFHfxAGpV6QxZC4OIinxJ76qish3fKFZBkpgv2gW_LYqsWlJ7Ms_DryXoqqwho6unkdUHZFev7w65loq96g8DrY-WasKWSRrSBD_jcsfbeOFYKhttLv00CVR2Pj44p-xM_ps_qsbNW3X7MA" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://lh4.googleusercontent.com/m5SMBLCQFHfxAGpV6QxZC4OIinxJ76qish3fKFZBkpgv2gW_LYqsWlJ7Ms_DryXoqqwho6unkdUHZFev7w65loq96g8DrY-WasKWSRrSBD_jcsfbeOFYKhttLv00CVR2Pj44p-xM_ps_qsbNW3X7MA" alt=""><figcaption></figcaption></figure></div>
 
 3. Download the file below that corresponds to your environment, and then upload it in the Admin Portal to pre-fill all the fields:
 
@@ -71,7 +63,7 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 
 * **Name**: Universal Webhook 2.0
 * **Publisher**: Symphony
-* **Icon URL**: [https://symphony\_pod\_loopback.com/apps/universal-webhook/default/assets/app-icon-square.svg](https://symphony\_pod\_loopback.com/apps/universal-webhook/default/assets/app-icon-square.svg)
+* **Icon URL**: [https://symphony\_pod\_loopback.com/apps/universal-webhook/default/assets/app-icon-square.svg](https://symphony_pod_loopback.com/apps/universal-webhook/default/assets/app-icon-square.svg)
 *   **Description**:&#x20;
 
     ```
@@ -100,7 +92,7 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 
 * **APP ID**: universal-webhook
 * **Domain**: symphony\_pod\_loopback.com
-* **Load URL**: [https://symphony\_pod\_loopback.com/apps/universal-webhook](https://symphony\_pod\_loopback.com/apps/universal-webhook)
+* **Load URL**: [https://symphony\_pod\_loopback.com/apps/universal-webhook](https://symphony_pod_loopback.com/apps/universal-webhook)
 
 3. These two **permissions** must be granted to the application:
 
@@ -128,11 +120,7 @@ In Symphony, you must configure a service account using the Admin Portal (or via
 5. Set the entitlement **Can edit profile picture** to **Yes**.
 6. Select **Create**.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure></div>
 
 #### **Configure the RSA authentication**
 
@@ -160,15 +148,11 @@ cat webhookbot_publickey.pem
 
 The public key needs to be set in the Symphony service account via the Admin Portal (or via API).
 
-1. Copy and paste the contents of webhook_\_publickey.pem._
+1. Copy and paste the contents of webhoo&#x6B;_\_publickey.pem._
 
 Set your public key
 
-<div align="left">
-
-<figure><img src="https://lh3.googleusercontent.com/YYeQ2pG49usaf79mgQxUggqU4gmCFaIN2wVUMg0Bi6Pj12VJWfjVyN8b5t_sW6R3vW8f-9TdkUEqz0T6_TyaxlliFVBK7Y4IzbRqBXW9UumBBAZLTTBkWAh9wdYlD5TROeEyGE3LnJv8Q8sbcAIlhA" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://lh3.googleusercontent.com/YYeQ2pG49usaf79mgQxUggqU4gmCFaIN2wVUMg0Bi6Pj12VJWfjVyN8b5t_sW6R3vW8f-9TdkUEqz0T6_TyaxlliFVBK7Y4IzbRqBXW9UumBBAZLTTBkWAh9wdYlD5TROeEyGE3LnJv8Q8sbcAIlhA" alt=""><figcaption></figcaption></figure></div>
 
 ### Link the service account with the Universal Webhook service
 
@@ -178,11 +162,7 @@ Set your public key
 2. Enter Universal Webhook in the **Search** field to find the app you deployed in the steps above.
 3. Select **Install**, then **Open** to launch the application.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure></div>
 
 You will see the app landing page and the available **ADMIN** tab next to the OVERVIEW tab.
 
@@ -216,11 +196,7 @@ If the service account username and private key match what is defined on the Sym
 4. Fill in the details and click **SAVE AND ACTIVATE**.
 5. **Copy** your URL to test it.
 
-<div align="left">
-
-<figure><img src="https://lh6.googleusercontent.com/3cpiBMBMWIvq5mODdRRVuTwMfPS8fP2h-2T0-FFjZSOM6dYeLgqfntkrZk_ZaktJfROETJhDTXIX6bML9MH8PS7n2JeF1XjzP9e4G_iaTTvfQo4EekgNKBVej5NORdmXoUHyoe5leEpmxSg3t1hVIA" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://lh6.googleusercontent.com/3cpiBMBMWIvq5mODdRRVuTwMfPS8fP2h-2T0-FFjZSOM6dYeLgqfntkrZk_ZaktJfROETJhDTXIX6bML9MH8PS7n2JeF1XjzP9e4G_iaTTvfQo4EekgNKBVej5NORdmXoUHyoe5leEpmxSg3t1hVIA" alt=""><figcaption></figcaption></figure></div>
 
 If we target a messageML unauthenticated webhook, the `curl` command would be:
 

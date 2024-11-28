@@ -491,13 +491,13 @@ Enter selection:  e
 
 The following image shows how to import the certificate to the pod, using the Admin Console:
 
-![](https://files.readme.io/2ae8349-step\_1.png)
+![](https://files.readme.io/2ae8349-step_1.png)
 
 And here you can see how to configure the certificates on the App host:\
 A. Install root certs for the pod in the Trust Store of the Bot.\
 B. Install a Client Type cert in the Key Store of the BOT – obtained from internal PKI CA.
 
-![](https://files.readme.io/e0bda0b-app\_host.png)
+![](https://files.readme.io/e0bda0b-app_host.png)
 
 The following commands can be used to install the certificates on the Agent app host machine. The first command is used for adding A (from the diagram above) to the Trust Store and the second command is used for adding B to the Key Store:
 
@@ -529,7 +529,7 @@ Enter selection:  f
 
 The following image shows how to import the public keys to the pod, using the Admin Console. Note that you have to create a service account for the app:
 
-![](../../.gitbook/assets/ec931f0-service\_account.png)
+![](../../.gitbook/assets/ec931f0-service_account.png)
 
 ### Generate startup script (deprecated)
 
@@ -661,7 +661,7 @@ Note that each property in the generated config is annotated with comments descr
 
 Before encrypting, you must provide the encryption password that will be used for the encryption and then the decryption. This password can be either passed through:
 
-* As an environment variable, named AGENT\_CONFIG_\__PASSWORD
+* As an environment variable, named AGENT\_CONFI&#x47;_\__&#x50;ASSWORD
 * As a JVM parameter, named AGENT\_CONFIG\_PASSWORD
 * Or will be requested directly through the interactive setup script, if none of the above variables are set.
 

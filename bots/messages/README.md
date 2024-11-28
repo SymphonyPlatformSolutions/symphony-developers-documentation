@@ -56,13 +56,9 @@ Each message in Symphony has a unique message ID.
 
 * In the Symphony web or desktop client, click the message timestamp. The **Message Status** module overlay opens. The message ID is shown in the overlay footer:
 
-<div align="center">
+<div align="center"><img src="../../.gitbook/assets/gittbook test image.png" alt=""></div>
 
-<img src="../../.gitbook/assets/gittbook test image.png" alt="">
-
-</div>
-
-* When a message is created via the API, a `messageID` is returned in the response**.**
+* When a message is created via the API, a `messageID` is returned in the respons&#x65;**.**
 
 **Encoding:**
 

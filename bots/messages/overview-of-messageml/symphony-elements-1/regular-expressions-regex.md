@@ -17,10 +17,10 @@ The regular expression pattern is validated on the front end by the Client. It i
 Regular expressions can cause performance issues in the Client if the validation of the regular expression is very complex. Poorly designed regular expressions can even cause denial of service (ReDoS). Please verify that your regular expressions are safe, using the following service: [https://redos-checker.surge.sh/](https://redos-checker.surge.sh/).
 
 {% hint style="info" %}
-To prevent performance issues on the Client, a validation mechanism checks regular expressions to ensure they are safe. If the regular expression is unsafe, it is automatically disabled**. In that situation, the user input will not be validated.**
+To prevent performance issues on the Client, a validation mechanism checks regular expressions to ensure they are safe. If the regular expression is unsafe, it is automatically disable&#x64;**. In that situation, the user input will not be validated.**
 {% endhint %}
 
-For more information, refer to [Regular expression Denial of Service - ReDoS](https://owasp.org/www-community/attacks/Regular\_expression\_Denial\_of\_Service\_-\_ReDoS).
+For more information, refer to [Regular expression Denial of Service - ReDoS](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS).
 
 ## Validation examples
 
