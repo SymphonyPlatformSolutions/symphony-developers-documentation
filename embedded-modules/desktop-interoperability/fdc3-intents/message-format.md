@@ -10,20 +10,16 @@ In addition, we also support entities such as **mentions**, **cashtags**, **hash
 It is possible to add several images or action buttons in a message.&#x20;
 
 {% hint style="info" %}
-**Note**: The formal definition of the supported format will be specified in the fdc3 standard shortly. Small breaking changes may still be introduced.
-{% endhint %}
-
-{% hint style="info" %}
 **Size limit on attachments**: We recommend to limit the total size of attached files & images in a message to 1MB.
 {% endhint %}
 
 #### FDC3 Action buttons
 
-We also support **FDC3 action buttons**, that can be included in a chat message and trigger an intent when clicked by a user.&#x20;
+We also support **FDC3 action buttons**, that can be included in a chat message and trigger an intent or broadcast a context when clicked by a user.&#x20;
 
 Action buttons can be placed at a specific location in the message by referencing them in the text section using the following format: `§[My button 1](id/button1)` where `button1` is the identifier of the entity, and `My Button 1` is the fallback text that would be displayed if the user viewing the message does not have FDC3 enabled.
 
-The behavior of an action button is then described in the `entities` section of the context data. It is possible to specify which `title` the button will have and which `intent` & `context` data will be raised when clicked.&#x20;
+The behavior of an action button is then described in the `entities` section of the context data. It is possible to specify which `title` the button will have and which `intent` and `context`data will be raised when clicked, or even the `channel` used.
 
 {% hint style="info" %}
 **Note**: Chat bots can also send action buttons, learn more [here](../../../bots/messages/overview-of-messageml/entities/standard-entities.md#fdc3-action-buttons).
@@ -127,7 +123,7 @@ Note: _Please replace Jane Doe and jane.doe@company.com with the relevant user m
 ```
 {% endtab %}
 
-{% tab title="Action buttons" %}
+{% tab title="Intent button" %}
 ```json
 {
   "type": "fdc3.chat.initSettings",
@@ -138,40 +134,38 @@ Note: _Please replace Jane Doe and jane.doe@company.com with the relevant user m
     },
     "entities": {
       "button1": {
-        "type": "fdc3.fdc3Intent",
-        "data": {
-          "title": "Call Jane Doe",
-          "intent": "StartCall",
-          "context": {
-            "type": "fdc3.contact",
-            "id": {
-              "email": "jane.doe@company.com"
-            }
+        "type": "fdc3.action",
+        "action": "raiseIntent",
+        "title": "Call Jane Doe",
+        "intent": "StartCall",
+        "context": {
+          "type": "fdc3.contact",
+          "id": {
+            "email": "jane.doe@company.com"
           }
         }
       },
       "button2": {
-        "type": "fdc3.fdc3Intent",
-        "data": {
-          "title": "Chart EURUSD",
-          "intent": "ViewChart",
-          "context": {
-            "type": "fdc3.chart",
-            "instruments": [
-              {
-                "type": "fdc3.instrument",
-                "id": {
-                  "ticker": "EURUSD"
-                }
+        "type": "fdc3.action",
+        "action": "raiseIntent",
+        "title": "Chart EURUSD",
+        "intent": "ViewChart",
+        "context": {
+          "type": "fdc3.chart",
+          "instruments": [
+            {
+              "type": "fdc3.instrument",
+              "id": {
+                "ticker": "EURUSD"
               }
-            ],
-            "range": {
-              "type": "fdc3.dateRange",
-              "starttime": "2020-09-01T08:00:00.000Z",
-              "endtime": "2020-10-31T08:00:00.000Z"
-            },
-            "style": "candle"
-          }
+            }
+          ],
+          "range": {
+            "type": "fdc3.dateRange",
+            "starttime": "2020-09-01T08:00:00.000Z",
+            "endtime": "2020-10-31T08:00:00.000Z"
+          },
+          "style": "candle"
         }
       }
     }
@@ -192,6 +186,45 @@ Note: _Please replace Jane Doe and jane.doe@company.com with the relevant user m
         }
       }
     ]
+  }
+}
+```
+{% endtab %}
+
+{% tab title=" Broadcast button" %}
+```json
+{
+  "type": "fdc3.chat.initSettings",
+  "message": {
+    "type": "fdc3.message",
+    "text": {
+      "text/markdown": "**Example of FDC3 Action buttons:** \n\n §[button1](id/button1) §[button2](id/button2)"
+    },
+    "entities": {
+      "button1": {
+        "type": "fdc3.action",
+        "action": "broadcast",
+        "channelId": "Channel 1",
+        "title": "Broadcast AAPL on Channel 1",
+        "context": {
+          "type": "fdc3.instrument",
+          "id": {
+            "ticker": "AAPL"
+          }
+        }
+      },
+      "button2": {
+        "type": "fdc3.action",
+        "action": "broadcast",
+        "title": "Broadcast TSLA on current channel (if one exists)",
+        "context": {
+          "type": "fdc3.instrument",
+          "id": {
+            "ticker": "TSLA"
+          }
+        }
+      }
+    }
   }
 }
 ```

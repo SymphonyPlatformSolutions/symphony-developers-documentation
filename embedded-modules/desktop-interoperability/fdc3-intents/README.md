@@ -15,13 +15,15 @@ Symphony listens to _StartChat_ intents, that allow an app to initiate a chat on
 
 When a _StartChat_ intent is received by Symphony, a modal opens where the user can review the list of recipients and the content of the message, and then send the message.
 
+It is also possible to bypass the modal to directly send the message using the `silent` parameter.
+
 **Message**
 
-It is possible to attach a message context to the intent. The message may contain images, $cashtags, @mentions, as well as action buttons (more info [below](./#fdc3-action-buttons)), which on click will trigger a local intent with context data. The **format of the message** is presented [here](message-format.md).
+You can attach a message context to the intent. The message may contain images, $cashtags, @mentions, as well as action buttons (more info [below](./#fdc3-action-buttons)), which on click will trigger a local intent with context data. The **format of the message** is presented [here](message-format.md).
 
 **Recipients**
 
-It is possible to preset the list of recipients, identified through their email addresses.&#x20;
+You can preset the list of recipients, identified through their email addresses.&#x20;
 
 When several contacts are listed, the message is sent to a group chat with all the contacts in the list. This behavior can be changed with the `groupRecipients` parameter.
 
@@ -34,7 +36,7 @@ If the `groupRecipients` parameter is false, each recipient will receive a separ
 #### Example: Simple examples with predefined recipients and message:
 
 {% tabs %}
-{% tab title="StartChat with group chat" %}
+{% tab title="Group chat with modal" %}
 ```javascript
 fdc3.raiseIntent('StartChat', {
   "type": "fdc3.chat.initSettings",
@@ -74,11 +76,12 @@ fdc3.raiseIntent('StartChat', {
 {% endtabs %}
 
 {% tabs %}
-{% tab title="StartChat with blast" %}
+{% tab title="Blast with modal" %}
 ```javascript
 {
   "type": "fdc3.chat.initSettings",
   "message": {
+    "type": "fdc3.message",
     "text": {
       "text/markdown": "An individual message will be sent to each recipient"
     }
@@ -112,11 +115,50 @@ fdc3.raiseIntent('StartChat', {
 {% endtab %}
 {% endtabs %}
 
+
+
+{% tabs %}
+{% tab title="Blast no modal" %}
+```json
+{
+  "type": "fdc3.chat.initSettings",
+  "message": {
+    "type": "fdc3.message",
+    "silent": "true",
+    "text": {
+      "text/markdown": "An individual message will be sent to each recipient - No confirm modal."
+    }
+  },
+  "members": {
+    "type": "fdc3.contactList",
+    "contacts": [
+      {
+        "type": "fdc3.contact",
+        "id": {
+          "email": "pierre.neu@symphony.com"
+        }
+      },
+      {
+        "type": "fdc3.contact",
+        "id": {
+          "email": "jean-michael.legait@symphony.com"
+        }
+      }
+    ]
+  },
+  "options": {
+    "groupRecipients": false
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 #### FDC3 action buttons
 
 Messages sent through the _StartChat_ intent can contain FDC3 action buttons with predefined intents and context data.
 
-The FDC3 action buttons will be displayed as inline buttons in the message. When such a button is clicked, Symphony raises the predefined intent along with its context data.&#x20;
+The FDC3 action buttons will be displayed as inline buttons in the message. When such a button is clicked, Symphony either raises the predefined intent or broadcast the predefined context data.&#x20;
 
 Read [here ](message-format.md)how to add FDC3 action buttons to your messages.
 
@@ -134,7 +176,7 @@ Similar to _StartChat_, the _SendChatMessage_ intent allows to send a chat messa
 
 This works particularly well in combination with the _StartChat_ intent, which now returns the identifier of the chat conversations where the message has been sent.
 
-#### **Example: Combining **_**Start chat**_** and **_**Send chat message**_
+#### **Example: Combining&#x20;**_**Start chat**_**&#x20;and&#x20;**_**Send chat message**_
 
 <pre class="language-javascript"><code class="lang-javascript">// Start a chat and retrieve a reference to the chat room created
 const intentResolution = await fdc3.raiseIntent("StartChat", {
@@ -192,6 +234,7 @@ const chatMessage = {
    }
  },
  "message": {
+   "type": "fdc3.message",
    "text": {
      "text/markdown": "Hello there again!"
    }
@@ -431,8 +474,8 @@ The intent raised is CreateInteraction with a fdc3.interaction context type. The
 
 ### **Custom intents**
 
-Symphony can trigger custom intents from in-chat FDC3 action buttons.&#x20;
+Symphony can trigger custom intents and context data from in-chat FDC3 action buttons.&#x20;
 
-When clicking such a button, Symphony raises the predefined intent with the attached context data to local apps.
+When clicking such a button, Symphony raises the predefined intent or broadcasts the predefined context data to local apps.
 
 Read [here ](message-format.md)how to add FDC3 action buttons in your chats.
