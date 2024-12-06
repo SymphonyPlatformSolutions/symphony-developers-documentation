@@ -5,7 +5,7 @@ description: Overview of Symphony Datafeed
 # Datafeed
 
 {% hint style="danger" %}
-**Datafeed v1 Deprecation Notice**\
+**Deprecation Notice v4/datafeed** **(known as Datafeed v1)**\
 \
 The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**. Please read [below](./#datafeed-v1-deprecation-notice) for more information on this transition.  Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
 {% endhint %}
@@ -168,18 +168,18 @@ As you can see, the datafeed acts as the backbone of your Bot. In many cases you
 
 While you can write all of this datafeed logic yourself, our dedicated BDK toolkits provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot and add custom business logic.
 
-## Datafeed v1 deprecation notice
+## Deprecation notice agent/v4/datafeed endpoints
 
 The legacy Datafeed v1 service is out of support since **April 30, 2023**.
 
-This has an impact on you if some of your automations or bots are still using the Datafeed v1 APIs. Please consider upgrading them to use the new[ Datafeed v2 APIs](https://developers.symphony.com/restapi/main/datafeed).
+This has an impact on you if some of your automations or bots are still using the `agent/v4/datafeed` APIs. Please consider upgrading to use the new[ ](https://developers.symphony.com/restapi/main/datafeed)[/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5) APIs.
 
-To facilitate this transition, a new feature called the **bridge** has been introduced in the Agent service so consumers of the deprecated Datafeed v1 APIs will transparently use the Datafeed v2 service.
+To facilitate this transition, a new feature called the **datafeed** **bridge** has been introduced in the Agent service so consumers of the deprecated APIs keep a functioning service.
 
 * This bridge is available starting with Agent 22.6 (June 2022) and can be enabled through the following configuration flag `agent.df1ToDf2Bridge.enabled`.&#x20;
 * Since Agent release 23.6 (June 2023), this bridge is enabled by default, but could still be disabled through configuration.&#x20;
 * Then, starting with Agent release 23.9 (September 2023), the bridge is always enabled.
 
-We encourage you to validate the bridge with your existing bots, or to migrate your bots to use the new Datafeed 2 APIs, which is the **preferred option**. If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between Datafeed 1 APIs and Datafeed 2 APIs is now by default. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so, the Developer Relations team can guide you through it.
+We encourage you to migrate your bots to use the new Datafeed 2 APIs. The bridge is a **temporary solution**, which objective is to facilitate the migration. If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is automatic. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
 
 Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
