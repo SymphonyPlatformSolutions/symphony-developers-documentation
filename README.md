@@ -27,9 +27,9 @@ Looking to migrate your bot from the deprecated SDKs to the latest BDKs? Please 
 * [Migration guide from SDK to Symphony BDK for Python](https://symphony-bdk-python.finos.org/markdown/migration.html)
 {% endhint %}
 
-## Building Bots on Symphony <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
+## Building Bots on Symphony Messaging <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
 
-Begin your development journey by taking an in depth look at Symphony Bots. Understand the core concepts and all the details needed to get your Bot up and running!
+Begin your development journey by taking an in depth look at Symphony Messaging Bots. Understand the core concepts and all the details needed to get your Bot up and running!
 
 {% content-ref url="bots/building-bots.md" %}
 [building-bots.md](bots/building-bots.md)
@@ -45,9 +45,9 @@ Want to build your first bot together with the Developer Relations team? Head ov
 For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/developer-certification.md) 🎓
 {% endhint %}
 
-## Building Extension Applications on Symphony <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
+## Building Extension Applications <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
 
-Bring customized and extensible workflows into Symphony through Extension Apps. Understand how to build, deploy, and manage your Extension App!
+Bring customized and extensible workflows into Symphony Messaging through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
@@ -61,7 +61,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 [developer-certification.md](developer-certification/developer-certification.md)
 {% endcontent-ref %}
 
-## Symphony REST API <img src=".gitbook/assets/Symphony API-large.png" alt="" data-size="line">
+## Messaging REST API <img src=".gitbook/assets/Symphony API-large.png" alt="" data-size="line">
 
 In depth documentation and reference guide for the Symphony REST API:
 
@@ -69,9 +69,9 @@ In depth documentation and reference guide for the Symphony REST API:
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-## Symphony Extension API <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
+## Extension API <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
 
-In depth documentation and reference guide for the Symphony Extension API:
+In depth documentation and reference guide for the Symphony Messaging Extension API:
 
 {% content-ref url="ext-apps/overview-of-extension-api/" %}
 [overview-of-extension-api](ext-apps/overview-of-extension-api/)
@@ -87,7 +87,7 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 
 ## Embedded Modules <img src=".gitbook/assets/Embedded modules.png" alt="" data-size="line">&#x20;
 
-Securely embed stand-alone Symphony chat modules inside other websites and applications:
+Securely embed stand-alone Symphony Messaging chat modules inside other websites and applications:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

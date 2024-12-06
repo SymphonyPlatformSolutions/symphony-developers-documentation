@@ -1,7 +1,7 @@
 ---
 description: >-
-  Building Bots on Symphony is fast, easy, and secure. Take these simple steps
-  in order to create and deploy your Bot on Symphony today!
+  Building Bots on Symphony Messaging is fast, easy, and secure. Take these
+  simple steps in order to create and deploy your Bot today!
 ---
 
 # Building Bots
@@ -18,7 +18,7 @@ Symphony Bots can leverage the Symphony REST API to create innovative workflows 
 
 Symphony has built numerous tools in order to streamline Symphony Bot Development. Our rich suite of developer tools offers centralized configuration and authentication protocols, provides out of the box API bindings, convenient error handling, datafeed management, and ensures that your Bot is built using Symphony's best practices.&#x20;
 
-Using an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots on Symphony has never been easier.
+Using an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots has never been easier.
 
 Learn more about how you can get started with our developer tools here:
 
@@ -40,7 +40,7 @@ At Symphony, security is always first. In order to leverage Symphony's robust se
 
 ### 4.  Add Custom Business Logic
 
-The last step is to add custom business logic to your Bot. Begin learning about the capabilities of Symphony's REST APIs and bring your workflows and automations to life:
+The last step is to add custom business logic to your Bot. Begin learning about the capabilities of Symphony Messaging REST APIs and bring your workflows and automations to life:
 
 {% content-ref url="overview-of-rest-api/" %}
 [overview-of-rest-api](overview-of-rest-api/)

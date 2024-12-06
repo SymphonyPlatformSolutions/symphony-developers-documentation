@@ -147,10 +147,10 @@
 
 ## Symphony REST API
 
-* [Symphony REST API](https://rest-api.symphony.com/)
+* [Messaging REST API](https://rest-api.symphony.com/)
 * [Federation](https://symphony-1.gitbook.io/federation-apis/)
 * [Connect API](symphony-rest-api/connect-api.md)
-* [StreetLinx API](https://streetlinx.symphony.com/api)
+* [Enhanced Directory API](https://streetlinx.symphony.com/api)
 
 ## Developer Certification
 

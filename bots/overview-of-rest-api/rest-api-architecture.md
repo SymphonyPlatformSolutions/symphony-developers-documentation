@@ -4,9 +4,9 @@ description: Overview of Symphony REST API Architecture
 
 # REST API Architecture
 
-Symphony's REST API is spread out over three main components: the **Symphony Pod**, **API Agent** and **Key Manager**. Let's take a closer look at these components below.
+SymphonyREST API is spread out over three main components: the **Pod**, **API Agent** and **Key Manager**. Let's take a closer look at these components below.
 
-## Symphony Pod <img src="../../.gitbook/assets/Symphony Pod.png" alt="" data-size="line">&#x20;
+## Pod <img src="../../.gitbook/assets/Symphony Pod.png" alt="" data-size="line">&#x20;
 
 The Symphony Pod is a dedicated Symphony instance for each customer environment. It is a cloud-hosted component that handles all core operations necessary to provide the Symphony service to you. Since Symphony provides end-to-end encrypted messaging, all messages passed from user to user are fully encrypted at the time of sending, such that no Pod ever has access to the unencrypted contents of any message.
 
@@ -18,7 +18,7 @@ In addition, the Symphony Pod provides REST API endpoints in order for your bot 
 
 ## API Agent
 
-The API Agent is the Symphony component responsible for encrypting and decrypting content sent from and to a bot. The Agent provides REST API endpoints that allow a bot to send and receive encrypted messages, acting as the intermediary between a bot and the Symphony Pod. In order to safely encrypt and decrypt these messages, the Agent server interacts the Key Manager which provides the keys used for encrypting and decrypting messages.
+The API Agent is the component responsible for encrypting and decrypting content sent from and to a bot. The Agent provides REST API endpoints that allow a bot to send and receive encrypted messages, acting as the intermediary between a bot and the Symphony Pod. In order to safely encrypt and decrypt these messages, the Agent server interacts the Key Manager which provides the keys used for encrypting and decrypting messages.
 
 Read more about the Agent API here:
 

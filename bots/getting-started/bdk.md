@@ -1,7 +1,7 @@
 ---
 description: >-
   The Bot Developer Kit (BDK) is the preferred tooling for Java or Python
-  developers to get started building bots on Symphony
+  developers to get started building bots on Symphony Messaging
 ---
 
 # Getting Started with BDK
