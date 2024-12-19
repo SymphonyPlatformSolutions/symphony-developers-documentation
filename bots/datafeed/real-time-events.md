@@ -762,3 +762,49 @@ Generated when a connection request is accepted, either:
   }
 }
 ```
+
+### Generic System Event
+
+Generic System Event is a new category of generic real time event, that is generated in various situations, such as phone calls, events specific to federated chats, and more.
+
+The event is generic, and its structure depends on the event's subtype (`genericSystemEvent.eventSubtype`).
+
+Most generic events are related to internal processes and are not useful for Bots, so you can just ignore them. When Symphony introduces events that can be relevant to Bots, they will be documented in this page.
+
+The common structure to all Generic System Events is described below. The `parameters` section will vary depending on the subtype of the event.
+
+```json
+{
+  "id": "chiKiF",
+  "messageId": "XB1kb8IWoQJiPm7EIp-Qan___m_USNrLbw",
+  "timestamp": 1718720341300,
+  "type": "GENERICSYSTEMEVENT",
+  "initiator": {
+    "user": {
+      "userId": 12345678,
+      "displayName": "connect-bot",
+      "email": "connect-bot@symphony.com",
+      "username": "connect-bot"
+    }
+  },
+  "payload": {
+    "genericSystemEvent": {
+      "stream": {
+        "streamId": "_tiUL8zamhwqo8J0tRGRmH___nF1ABgsdA",
+        "external": true,
+        "crossPod": true
+      },
+      "eventTimestamp": 1718717111858,
+      "sourceSystem": "federation",
+      "eventSubtype": "test.event",
+      "parameters": {
+        ... (depends on subtype)
+      }
+    }
+  }
+}
+```
+
+{% hint style="info" %}
+Always rely on the `eventSubtype` to filter the events that are relevant to you, as new subtypes with a different structure may be introduced in the future.&#x20;
+{% endhint %}
