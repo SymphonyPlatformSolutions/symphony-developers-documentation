@@ -18,6 +18,7 @@ The following events are returned when reading from a real time messages and eve
 * [Room Member Demoted From Owner](real-time-events.md#room-member-demoted-from-owner)
 * [Connection Requested](real-time-events.md#connection-requested)
 * [Connection Accepted](real-time-events.md#connection-accepted)
+* [Generic System Event](real-time-events.md#generic-system-event)
 
 All events follow the structure below:
 
