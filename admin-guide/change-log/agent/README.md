@@ -16,6 +16,10 @@ Please find in the subpages below the list of changes related to each version of
 [agent-24.10.md](agent-24.10.md)
 {% endcontent-ref %}
 
+{% content-ref url="agent-24.9-lts.md" %}
+[agent-24.9-lts.md](agent-24.9-lts.md)
+{% endcontent-ref %}
+
 {% content-ref url="agent-24.6-lts.md" %}
 [agent-24.6-lts.md](agent-24.6-lts.md)
 {% endcontent-ref %}
