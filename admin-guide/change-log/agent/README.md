@@ -1,12 +1,18 @@
 # Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://static.symphony.com/agent/agent-24.9.4.zip).
+Latest LTS Agent version can be downloaded [here](https://static.symphony.com/agent/agent-24.12.1.zip).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
 
 ### Compatible with Java 17 / RHEL 8 and 9
+
+
+
+{% content-ref url="agent-24.12-lts.md" %}
+[agent-24.12-lts.md](agent-24.12-lts.md)
+{% endcontent-ref %}
 
 {% content-ref url="agent-24.11.md" %}
 [agent-24.11.md](agent-24.11.md)
@@ -28,15 +34,15 @@ Please find in the subpages below the list of changes related to each version of
 [agent-24.3-lts.md](agent-24.3-lts.md)
 {% endcontent-ref %}
 
-{% content-ref url="agent-23.12-lts.md" %}
-[agent-23.12-lts.md](agent-23.12-lts.md)
-{% endcontent-ref %}
-
 ### Compatible with Java 8 / RHEL 7 and 8
 
 {% content-ref url="agent-23.9-lts.md" %}
 [agent-23.9-lts.md](agent-23.9-lts.md)
 {% endcontent-ref %}
+
+{% hint style="info" %}
+Note: This version is not supported anymore, please migrate to Java 17 to benefit from supported Agent versions.
+{% endhint %}
 
 ## Agent Release Cycle
 

@@ -6,10 +6,10 @@ In the following table, we are showing the versions of the Agent compatible with
 
 To download the latest version of the Agent, refer to [Agent Download](agent-download.md).
 
-| SBE product version | Agent version                                                                   |
-| ------------------- | ------------------------------------------------------------------------------- |
-| 25.1.x              | <p>24.11.x<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)<br>23.12.x (LTS)</p> |
-| 24.6.x              | <p>24.11.x<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)<br>23.12.x (LTS)</p> |
-| 24.2.x              | <p>24.11.x<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)<br>23.12.x (LTS)</p> |
-| 24.1.x              | <p>24.11.x<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)<br>23.12.x (LTS)</p> |
+| SBE product version                                                        | Agent version                                                        |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 25.1.x                                                                     | <p>24.12.x (LTS)<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)</p> |
+| <p>24.6.x<br><em>This version supports the legacy AWS deployment.</em></p> | <p>24.12.x (LTS)<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)</p> |
+| 24.2.x                                                                     | <p>24.12.x (LTS)<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)</p> |
+| <p>24.1.x<br><em>This version supports the legacy AWS deployment.</em></p> | <p>24.12.x (LTS)<br>24.9.x (LTS)<br>24.6.x (LTS)<br>24.3.x (LTS)</p> |
 
