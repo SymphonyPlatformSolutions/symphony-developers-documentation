@@ -3,11 +3,16 @@
 ## Agent Download
 
 {% hint style="info" %}
-To download the Agent, click [here](https://static.symphony.com/agent/agent-24.12.1.zip).\
+To download the Agent, click [here](https://static.symphony.com/agent/agent-24.12.2.zip).\
 For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
+
+### Agent 24.12.2
+
+* SKD: Properly handle user deactivation when SKD (Simplified Key Delivery) is enabled. <mark style="color:red;">**Important**</mark>: To enable SKD, please upgrade to this Agent version.
+* Fixed security vulnerabilities.
 
 ### Agent 24.12.1
 
