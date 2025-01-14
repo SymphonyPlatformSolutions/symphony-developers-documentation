@@ -4,7 +4,7 @@
 
 {% hint style="info" %}
 To download the Agent, click [here](https://static.symphony.com/agent/agent-24.3.3.zip).\
-For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
+For a list of Agent x SBE compatibilities, click [here](../../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
@@ -15,7 +15,7 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 24.3.2
 
-* Support inserting financial instruments (enhanced tags) in MessageML using our financial instrument resolver. Stocks, ETFs, Indices and Currency pairs are supported. More information is available in [#tags](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags/#tags "mention").
+* Support inserting financial instruments (enhanced tags) in MessageML using our financial instrument resolver. Stocks, ETFs, Indices and Currency pairs are supported. More information is available in [#tags](../../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags/#tags "mention").
 
 ### Changes introduced since last LTS version
 

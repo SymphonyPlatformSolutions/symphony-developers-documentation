@@ -5,7 +5,7 @@
 {% hint style="info" %}
 To download the Agent, click [here](https://static.symphony.com/agent/agent-23.9.7.zip).
 
-For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
+For a list of Agent x SBE compatibilities, click [here](../../../agent-guide/sbe-x-agent-compatibility-matrix.md).
 {% endhint %}
 
 ## Agent Changes
@@ -35,8 +35,8 @@ For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-
 
 ### Agent 23.9.2
 
-* The Datafeed bridge is now enforced. This means that API calls made to the legacy datafeed v1 APIs will be translated to the new Datafeed v2 service. Please note that this is a workaround and that it is still advised to upgrade your bot to directly use the Datafeed v2 APIs to benefit from increased reliability. More info on the bridge [here](../../../bots/datafeed/#datafeed-v1-deprecation-notice).
-* New css properties are supported in MessageML in order to make it easier to organise the layout of your messages. All `flex` and `grid` properties are now supported, in addition to `align` and `justify` properties. The full list of supported properties is available [here](../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/style-attributes.md).
+* The Datafeed bridge is now enforced. This means that API calls made to the legacy datafeed v1 APIs will be translated to the new Datafeed v2 service. Please note that this is a workaround and that it is still advised to upgrade your bot to directly use the Datafeed v2 APIs to benefit from increased reliability. More info on the bridge [here](../../../../bots/datafeed/#datafeed-v1-deprecation-notice).
+* New css properties are supported in MessageML in order to make it easier to organise the layout of your messages. All `flex` and `grid` properties are now supported, in addition to `align` and `justify` properties. The full list of supported properties is available [here](../../../../bots/messages/overview-of-messageml/messageml-basic-format-tags/style-attributes.md).
 * Fixed issue where sending a message with a large attachment would fail because of Data Loss Prevention (DLP) scan time out.
 * Fixed Cross-Origin Resource Sharing (CORS) issue on allowed domains check.
 * URL links sent from bots are now correctly displayed on Mobile when they have a title.&#x20;

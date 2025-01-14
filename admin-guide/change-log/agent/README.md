@@ -30,14 +30,14 @@ Please find in the subpages below the list of changes related to each version of
 [agent-24.6-lts.md](agent-24.6-lts.md)
 {% endcontent-ref %}
 
-{% content-ref url="agent-24.3-lts.md" %}
-[agent-24.3-lts.md](agent-24.3-lts.md)
+{% content-ref url="archives/agent-24.3-lts.md" %}
+[agent-24.3-lts.md](archives/agent-24.3-lts.md)
 {% endcontent-ref %}
 
 ### Compatible with Java 8 / RHEL 7 and 8
 
-{% content-ref url="agent-23.9-lts.md" %}
-[agent-23.9-lts.md](agent-23.9-lts.md)
+{% content-ref url="archives/agent-23.9-lts.md" %}
+[agent-23.9-lts.md](archives/agent-23.9-lts.md)
 {% endcontent-ref %}
 
 {% hint style="info" %}
