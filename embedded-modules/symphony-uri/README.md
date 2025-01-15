@@ -118,6 +118,12 @@ The module title corresponds to the title of the navigation item registered by t
 https://open.symphony.com/?app/{publisher}/{appId}/{appName}/{moduletitle}
 ```
 
+The `appId`, `appName` & `publisher` information can be found in the **Admin Portal**, under the App Management section.&#x20;
+
+Alternatively, you can simply open the app module you want to get a link to, click on the hamburger menu in the top right corner, and select Copy app link to copy the URI to your clipboard.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 * Extension apps are not supported on Mobile.
 * If the user is not entitled to the app, the Marketplace will open with the app card in focus
