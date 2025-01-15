@@ -110,9 +110,9 @@ If an external `userId` of a user who is not entitled to external communications
 
 ## Open an extension app
 
-Open an extension app in Symphony, based on it's publisher, app id, app name, and optionally a module name.&#x20;
+Open an extension app, identified by its publisher, app id, app name, and optionally a module title.&#x20;
 
-The module name corresponds to the title of the navigation item registered by the app. It is useful when an app has registered several entries in the left navigation menu.
+The module title corresponds to the title of the navigation item registered by the app in the left navigation menu. It is useful when an app has registered several entries and you want to select one.
 
 ```
 https://open.symphony.com/?app/{publisher}/{appId}/{appName}/{moduletitle}
