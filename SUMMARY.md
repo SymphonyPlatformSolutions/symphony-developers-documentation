@@ -117,7 +117,7 @@
 
 ## Embedded Modules
 
-* [Symphony URI](embedded-modules/symphony-uri/README.md)
+* [Symphony Messaging URI](embedded-modules/symphony-uri/README.md)
   * [Symphony URI for Mobile (deprecated)](embedded-modules/symphony-uri/symphony-uri-for-mobile.md)
 * [Desktop interoperability](embedded-modules/desktop-interoperability/README.md)
   * [FDC3 intents](embedded-modules/desktop-interoperability/fdc3-intents/README.md)
