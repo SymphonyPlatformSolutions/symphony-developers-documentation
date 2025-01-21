@@ -57,15 +57,15 @@ Users can interact with extension applications in a number of different ways. Sp
 
 ### Will your application need to receive conversation or user data?
 
-Many extension applications built on top of Symphony need to receive conversation or user data. For example, if you wanted to build an extension app that extends the Symphony UI to add buttons to the IM, MIM, profile, or chatroom modules, it is likely that you would need access to conversation or user data. In order to do so your application will need to perform app authentication. You can learn more about performing app authentication here:
+Many extension applications built on top of Symphony need to receive conversation or user data. For example, if you wanted to build an extension app that extends the Symphony UI to add buttons to the IM, profile, or chatroom modules, it is likely that you would need access to conversation or user data. In order to do so your application will need to perform app authentication. You can learn more about performing app authentication here:
 
 {% content-ref url="app-authentication/" %}
 [app-authentication](app-authentication/)
 {% endcontent-ref %}
 
-### Will your application customize modules by adding buttons to IMs, MIMs, chatrooms, or user profiles?
+### Will your application customize modules by adding buttons to IMs, chatrooms, or user profiles?
 
-Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IMs, MIMs, chatrooms, or profile modules. In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication. You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
+Another common use case for extension applications is to extend various parts of the Symphony UI by adding buttons to IMs, chatrooms, or profile modules. In order to receive the conversation and user data associated with these modules, these extension apps must also perform app authentication. You can learn more about how to receive user and conversation data as well as adding buttons to Symphony modules here:
 
 {% content-ref url="../dev-tools/adk/app-view/buttons-handlers.md" %}
 [buttons-handlers.md](../dev-tools/adk/app-view/buttons-handlers.md)

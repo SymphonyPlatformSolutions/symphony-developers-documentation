@@ -1,6 +1,6 @@
 # UI Service
 
-Use the `ui` service to extend various parts of the Symphony client user interface. For example, add buttons on IM, MIM, and chatroom modules or add links to the #hashtag and $cashtag hovercards:
+Use the `ui` service to extend various parts of the Symphony client user interface. For example, add buttons on IM (1-1 chat) and chatroom modules or add links to the #hashtag and $cashtag hovercards:
 
 ```javascript
 // To use the ui service, you must subscribe to it from your application

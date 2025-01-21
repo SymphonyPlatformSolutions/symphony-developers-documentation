@@ -38,7 +38,7 @@ BDK for Python also supports OBO (On-Behalf-Of) pattern of authentication, allow
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
 * Get the presence state of other connected users
-* Initiate IMs and MIMs with other users
+* Initiate IMs with other users
 * Send messages and attachments
 * Set the context user's own presence
 
@@ -163,12 +163,12 @@ async def run():
 
 There are two different types of activities supported by the BDK:
 
-* **Command Activity**: an activity triggered when a message is sent in an IM, MIM, or Chatroom.
+* **Command Activity**: an activity triggered when a message is sent in an IM or Chatroom.
 * **Form Activity**: an activity triggered when a user replies to an Elements form message. &#x20;
 
 ### Command Activities
 
-A command-based activity is triggered when a message is sent in an IM, MIM, or Chatroom. Using the Activities API allows developers to register commands in the following formats:
+A command-based activity is triggered when a message is sent in an IM or Chatroom. Using the Activities API allows developers to register commands in the following formats:
 
 1. `@bdk-bot /buy` (Slash command with a bot @mention)
 

@@ -31,9 +31,9 @@ The full list of Users API endpoints and their corresponding reference guide can
 
 ## Stream APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 
-The Stream APIs create and manage IMs, MIMs and chat rooms. These APIs can be used to do the following:
+The Stream APIs create and manage IMs and chat rooms. These APIs can be used to do the following:
 
-* Create IM or MIM
+* Create IM
 * Create chatrooms
 * Search for rooms
 * Get room info
