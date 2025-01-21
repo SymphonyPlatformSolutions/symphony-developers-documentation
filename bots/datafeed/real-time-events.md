@@ -6,7 +6,7 @@ The following events are returned when reading from a real time messages and eve
 * [Messages Suppressed](real-time-events.md#messages-suppressed)
 * [Symphony Elements Action](real-time-events.md#symphony-elements-action)
 * [Shared Wall Post](real-time-events.md#shared-wall-posts)
-* [IM/MIM Created](real-time-events.md#im-mim-created)
+* [IM/MIM Created](real-time-events.md#im-created)
 * [Room Created](real-time-events.md#room-created)
 * [Room Updated Message](real-time-events.md#room-updated-message)
 * [Room Deactivated Message](real-time-events.md#room-deactivated-message)
@@ -30,7 +30,7 @@ All events follow the structure below:
 
 ### Message Sent
 
-Generated when a message is sent in an IM, MIM, or chatroom of which the user in context is a member, including messages sent by the user him/herself.
+Generated when a message is sent in an 1-1 chat or chatroom of which the user in context is a member, including messages sent by the user him/herself.
 
 ```javascript
 {
@@ -112,7 +112,7 @@ Events attributes details:
   * `true`: the message was sent to at least one user outside of the company.
 * `stream`: stream the message was posted into.
   * `streamId`: identifier for the stream.
-  * `streamType`: stream type can be `ROOM`, `IM`, `MIM`, or `POST`.
+  * `streamType`: stream type can be `ROOM`, `IM (1-1 chat)`, `MIM (deprecated)`, or `POST`.
 * `data`: JSON structure contained inside an escaped string, NOT an actual JSON structure.
 
 {% hint style="info" %}
@@ -273,9 +273,9 @@ Generated when either:
 }
 ```
 
-### IM/MIM Created
+### IM Created
 
-Generated when an IM or MIM is created with the user in context as a member, initiated either by the user in context or another user:
+Generated when an IM (1-1 chat) is created with the user in context as a member, initiated either by the user in context or another user:
 
 ```javascript
 {
@@ -296,12 +296,11 @@ Generated when an IM or MIM is created with the user in context as a member, ini
     "instantMessageCreated": {
       "stream": {
         "streamId": "",
-        // Stream type can be either IM or MIM.
-        "streamType": "MIM",
+        // Stream type can be either IM (1-1 chat) or MIM (Deprecated).
+        "streamType": "IM",
         "members": [
           { "userId": 0 },
-          { "userId": 1 },
-          { "userId": 2 }
+          { "userId": 1 }
         ],
         "external": false
       }
