@@ -6,7 +6,7 @@ The following events are returned when reading from a real time messages and eve
 * [Messages Suppressed](real-time-events.md#messages-suppressed)
 * [Symphony Elements Action](real-time-events.md#symphony-elements-action)
 * [Shared Wall Post](real-time-events.md#shared-wall-posts)
-* [IM/MIM Created](real-time-events.md#im-created)
+* [IM Created](real-time-events.md#im-created)
 * [Room Created](real-time-events.md#room-created)
 * [Room Updated Message](real-time-events.md#room-updated-message)
 * [Room Deactivated Message](real-time-events.md#room-deactivated-message)
