@@ -22,11 +22,11 @@ It is common for bots to contain multiple commands or sub workflows that it can 
 
 ## 2. Listen for Events
 
-A core aspect of all Interactive Bots is the ability to 'listen' to different types of commands and events and reply to them accordingly. The mechanism that enables Symphony Bots to listen to events in chatrooms, MIMs, and IMs is the **Datafeed**.
+A core aspect of all Interactive Bots is the ability to 'listen' to different types of commands and events and reply to them accordingly. The mechanism that enables Symphony Bots to listen to events in chatrooms and IMs is the **Datafeed**.
 
 The **Datafeed** is a real-time message and event stream that can be created using the REST API. The datafeed provides a secure stream of messages and events from all conversations that a bot is in.
 
-In order to 'listen' and respond to user events, bots create a single datafeed and subsequently have access to all chatroom activity including non-chat based events such as users being added/removed from chatrooms, external connection requests, and chatrooms, MIMs, IMs being created..
+In order to 'listen' and respond to user events, bots create a single datafeed and subsequently have access to all chatroom activity including non-chat based events such as users being added/removed from chatrooms, external connection requests, and chatrooms IMs being created.
 
 To learn more about the Datafeed continue here:
 

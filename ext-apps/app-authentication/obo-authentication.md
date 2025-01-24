@@ -5,7 +5,7 @@ OBO or On-Behalf-Of authentication allows an authenticated extension app to perf
 * List the streams of a given user
 * Initiate connection requests to and determine connection status with other users
 * Get the presence state of other connected users
-* Initiate IMs and MIMs with other users
+* Initiate IMs with other users
 * Send messages and attachments
 * Set the context user's own presence
 

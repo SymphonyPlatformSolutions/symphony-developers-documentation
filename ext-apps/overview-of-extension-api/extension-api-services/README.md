@@ -24,7 +24,7 @@ The Applications navigation section is found at the bottom of the left-hand side
 
 ### **UI Service**
 
-Use the `ui` service to extend various parts of the Symphony client user interface. For example, add buttons on IM, MIM, and chatroom modules or add links to the **#**&#x68;ashtag and $cashtag hovercards:
+Use the `ui` service to extend various parts of the Symphony client user interface. For example, add buttons on 1 to 1 chats and chatroom modules or add links to the **#**&#x68;ashtag and $cashtag hovercards:
 
 {% content-ref url="ui-service/" %}
 [ui-service](ui-service/)
