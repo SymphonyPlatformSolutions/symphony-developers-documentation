@@ -168,11 +168,11 @@ As you can see, the datafeed acts as the backbone of your Bot. In many cases you
 
 While you can write all of this datafeed logic yourself, our dedicated BDK toolkits provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot and add custom business logic.
 
-## Deprecation notice agent/v4/datafeed endpoints
+## Deprecation notice of Legacy Datafeed API
 
-The legacy Datafeed v1 service is out of support since **April 30, 2023**.
+The legacy agent/v4/datafeed API is out of support since **April 30, 2023**.
 
-This has an impact on you if some of your automations or bots are still using the `agent/v4/datafeed` APIs. Please consider upgrading to use the new[ ](https://developers.symphony.com/restapi/main/datafeed)[/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5) APIs.
+This has an impact on you if some of your automations or bots are still using this API. Please upgrade to the new[ ](https://developers.symphony.com/restapi/main/datafeed)[/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5) APIs.
 
 To facilitate this transition, a new feature called the **datafeed** **bridge** has been introduced in the Agent service so consumers of the deprecated APIs keep a functioning service.
 
@@ -180,6 +180,22 @@ To facilitate this transition, a new feature called the **datafeed** **bridge** 
 * Since Agent release 23.6 (June 2023), this bridge is enabled by default, but could still be disabled through configuration.&#x20;
 * Then, starting with Agent release 23.9 (September 2023), the bridge is always enabled.
 
-We encourage you to migrate your bots to use the new Datafeed 2 APIs. The bridge is a **temporary solution**, which objective is to facilitate the migration. If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is automatic. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
+We encourage you to migrate your bots to use the new [/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5). The bridge is a **temporary solution**, which objective is to facilitate the migration. If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is automatic. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
 
-Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
+#### Changes required to upgrade to v5 endpoints
+
+The v5 endpoints are different from the v4 ones, so migrating requires changes in your code.\
+If you are using our Java BDK, migrating to v5 is a simple configuration change.
+
+Otherwise, the mapping between the API endpoints is the following:
+
+* Path /agent/v4/datafeed (deprecated)
+  * Via a POST on the endpoint /agent/v4/datafeed/create, the datafeed is created and then the ID is persisted in a file, which is by default datafeed.id on the bot side
+  * The bot subscribes to this ID to retrieve datafeed events; if it cannot be retrieved by using this ID, a new datafeed is created
+  * Via a GET on the endpoint /agent/v4/datafeed/{id}/read, the list of events within the specific datafeed identified with {id} is returned
+  * Deleting a datafeed is not supported
+* Path /agent/v5/datafeeds
+  * Via a GET on the endpoint [/agent/v5/datafeeds](broken-reference), is returned the list of already created IDs for a service account
+  * Via a POST on the endpoint [/agent/v5/datafeeds](broken-reference), the datafeed is created and the ID is not persisted on the bot side _→ Even if the bot is stale, a GET on the same endpoint will retrieve the ID to which the service account is subscribed_
+  * Via a POST on the endpoint [/agent/v5/datafeeds/{id}/read](broken-reference) with a parameter ackId (empty string at the first query), the endpoint returns: the list of events, a new ackId string _→ This ackId permits acknowledgement of the last query and retrieve all events since the last one. All events received between the last payload and the new request are queued and therefore retrieved._
+  * Via a DELETE on [/agent/v5/datafeeds/{id}](broken-reference), the datafeed specified with the {id} is deleted.
