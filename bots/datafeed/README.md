@@ -7,7 +7,7 @@ description: Overview of Symphony Datafeed
 {% hint style="danger" %}
 **Deprecation Notice v4/datafeed** **(known as Datafeed v1)**\
 \
-The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**. Please read [below](./#datafeed-v1-deprecation-notice) for more information on this transition.  Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
+The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**. Please read [below](./#deprecation-notice-of-legacy-datafeed-api) for more information on this transition.  Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
 {% endhint %}
 
 ## Overview of Datafeed
