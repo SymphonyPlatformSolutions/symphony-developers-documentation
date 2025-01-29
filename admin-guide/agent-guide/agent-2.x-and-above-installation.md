@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-* [OpenJDK 8](https://openjdk.java.net/), for Agent versions < 23.12.1.&#x20;
+* [OpenJDK 8](https://openjdk.java.net/), for Agent versions < 23.12.1 (Out of support).&#x20;
 * [OpenJDK 17](https://openjdk.org/), starting with Agent 23.12.1.
 
 {% hint style="info" %}
