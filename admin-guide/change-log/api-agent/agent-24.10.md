@@ -1,13 +1,10 @@
 # Agent - 24.10
 
-## Agent Download
-
 {% hint style="info" %}
-To download the Agent, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-24.10.1.zip).\
-For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
+To download the Agent 24.10, click [here](https://storage.googleapis.com/sym-platform/developers/rest-api/agent-24.10.1.zip).
 {% endhint %}
 
-## Agent Changes
+## Change log
 
 ### Agent 24.10.1
 

@@ -1,13 +1,10 @@
 # Agent - 24.12 (LTS)
 
-## Agent Download
-
 {% hint style="info" %}
-To download the Agent, click [here](https://static.symphony.com/agent/agent-24.12.2.zip).\
-For a list of Agent x SBE compatibilities, click [here](../../agent-guide/sbe-x-agent-compatibility-matrix.md).
+To download the Agent 24.12, click [here](https://static.symphony.com/agent/agent-24.12.2.zip).
 {% endhint %}
 
-## Agent Changes
+## Change log
 
 ### Agent 24.12.2
 

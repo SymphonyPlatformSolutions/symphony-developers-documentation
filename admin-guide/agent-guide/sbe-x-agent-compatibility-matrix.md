@@ -4,7 +4,7 @@ hidden: true
 
 # Compatibility with SBE versions
 
-The **last four LTS Agent releases are always supported**. For more information on the Agent release cycle, please refer to[ Agent change log](../change-log/agent/).
+The **last four LTS Agent releases are always supported**. For more information on the Agent release cycle, please refer to[ Agent change log](../change-log/api-agent/).
 
 In the following table, we are showing the versions of the Agent compatible with the last three SBE versions.
 
