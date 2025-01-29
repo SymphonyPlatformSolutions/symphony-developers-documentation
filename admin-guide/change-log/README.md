@@ -1,16 +1,21 @@
----
-description: >-
-  Monitor changes in Symphony products that have an impact on the developer
-  journey
----
-
 # Change Logs
 
-The change logs are organized in three sub sections:
+The change logs are organized in the following categories:
 
-* [Agent service change logs](api-agent/)
-* [SBE (pod) API change logs](sbe-api-endpoints-pod/)
-* [Client 2.0 extensibility change logs](client-2.0-extensibility-updates/), focused only on changes that impact the developer journey. Please refer to the 2.0 official release notes for general purpose change logs.
-* [Universal Webhook change logs](universal-webhook/)
+{% content-ref url="api-agent/" %}
+[api-agent](api-agent/)
+{% endcontent-ref %}
+
+{% content-ref url="sbe-pod-api/" %}
+[sbe-pod-api](sbe-pod-api/)
+{% endcontent-ref %}
+
+{% content-ref url="client-2.0-apis/" %}
+[client-2.0-apis](client-2.0-apis/)
+{% endcontent-ref %}
+
+{% content-ref url="universal-webhook/" %}
+[universal-webhook](universal-webhook/)
+{% endcontent-ref %}
 
 The API Swagger files are available [here](../../bots/overview-of-rest-api/#api-swagger-files).

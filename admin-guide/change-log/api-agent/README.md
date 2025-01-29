@@ -4,7 +4,7 @@
 The API Agent versions can be downloaded [here](../../agent-guide/agent-download.md).
 {% endhint %}
 
-Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
+The change log of each recent agent versions is available in the pages below.
 
 {% content-ref url="agent-24.12-lts.md" %}
 [agent-24.12-lts.md](agent-24.12-lts.md)
