@@ -1,7 +1,7 @@
 # API Agent
 
 {% hint style="info" %}
-Latest LTS Agent version can be downloaded [here](https://static.symphony.com/agent/agent-24.12.2.zip).
+The API Agent versions can be downloaded [here](../../agent-guide/agent-download.md).
 {% endhint %}
 
 Please find in the subpages below the list of changes related to each version of the [Agent](../../agent-guide/) service.
