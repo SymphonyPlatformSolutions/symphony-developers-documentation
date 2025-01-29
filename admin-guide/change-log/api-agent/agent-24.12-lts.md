@@ -1,10 +1,14 @@
 # Agent - 24.12 (LTS)
 
 {% hint style="info" %}
-To download the Agent 24.12, click [here](https://static.symphony.com/agent/agent-24.12.2.zip).
+To download the Agent 24.12, click [here](https://static.symphony.com/agent/agent-24.12.3.zip).
 {% endhint %}
 
 ## Change log
+
+### Agent 24.12.3
+
+* Fixed issue on the legacy Datafeed APIs (/agent/v4/datafeed/\*). Note: these APIs are deprecated since May 2023 and should no longer be used.
 
 ### Agent 24.12.2
 
