@@ -19,14 +19,17 @@ We also support **FDC3 action buttons**, that can be included in a chat message 
 
 Action buttons can be placed at a specific location in the message by referencing them in the text section using the following format: `§[My button 1](id/button1)` where `button1` is the identifier of the entity, and `My Button 1` is the fallback text that would be displayed if the user viewing the message does not have FDC3 enabled.
 
-The behavior of an action button is then described in the `entities` section of the context data. It is possible to specify which `title` the button will have and which `intent` and `context`data will be raised when clicked, or even the `channel` used.
+The behavior of an action button is then described in the `entities` section of the context data. It is possible to specify which `title` the button will have and which `intent` and `context`data will be raised when clicked, or even the `channel` used. When an intent is used, it is also possible to specify a predefined app (using its `appId`) that will receive the intent, in order to bypass the platform intent resolver.
 
 {% hint style="info" %}
 **Note**: Chat bots can also send action buttons, learn more [here](../../../bots/messages/overview-of-messageml/entities/standard-entities.md#fdc3-action-buttons).
 {% endhint %}
 
 {% hint style="warning" %}
-**Channels**: With OpenFin, only standard color channels are supported for now.
+With **OpenFin, Action buttons** have the following **limitations**:&#x20;
+
+* Broadcast: Only standard color channels are supported for now.
+* Intents: It is not possible to predefine the appId that will receive the intent.&#x20;
 {% endhint %}
 
 Few examples of action buttons are available below.
@@ -147,6 +150,9 @@ Note: _Please replace Jane Doe and jane.doe@company.com with the relevant user m
           "id": {
             "email": "jane.doe@company.com"
           }
+        },
+        "app":{
+          "appId": "myCallingappId"
         }
       },
       "button2": {

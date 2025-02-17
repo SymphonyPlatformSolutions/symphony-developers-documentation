@@ -17,5 +17,5 @@ You can see a live demo of desktop interop in the [recording of our Innovate Lon
 
 Learn more on [FDC3](https://fdc3.finos.org/), the open standard for the financial desktop.
 
-_Symphony is a Finos gold member and an active maintainer of the FDC3 standard._
+_Symphony is a Finos member and an active maintainer of the FDC3 standard._
 
