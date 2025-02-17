@@ -25,7 +25,11 @@ The behavior of an action button is then described in the `entities` section of 
 **Note**: Chat bots can also send action buttons, learn more [here](../../../bots/messages/overview-of-messageml/entities/standard-entities.md#fdc3-action-buttons).
 {% endhint %}
 
-Two examples of action buttons are available below.
+{% hint style="warning" %}
+**Channels**: With OpenFin, only standard color channels are supported for now.
+{% endhint %}
+
+Few examples of action buttons are available below.
 
 #### Examples
 
@@ -230,3 +234,4 @@ Note: _Please replace Jane Doe and jane.doe@company.com with the relevant user m
 ```
 {% endtab %}
 {% endtabs %}
+
