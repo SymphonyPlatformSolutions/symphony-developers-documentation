@@ -2,11 +2,11 @@
 
 ### Prerequisites
 
-1. A Desktop Integration Platform (DIP) is installed on your machine. The following platforms are supported:
-   * Finsemble version 6.6.0 (recommended: 7.3.0+)
-   * Interop.io (Glue42) version 3.15+
-   * OpenFin: Beta only. OpenFin currently requires custom configuration in SDA, and is not configured in the user settings. Please follow the following configuration steps.  &#x20;
-2. Minimal Symphony pod version: SBE 20.14+&#x20;
+A Desktop Integration Platform (DIP) needs to be installed on your machine. The following platforms are supported:
+
+* Interop.io (Glue42) version 3.15+
+* Finsemble version 7.3.0+
+* OpenFin: Beta only. OpenFin currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
 
 ### Configure for interop.io (Glue42) and Finsemble
 
@@ -21,9 +21,9 @@
 OpenFin is available as Beta, and is only qualified for UAT environments.
 {% endhint %}
 
-Configuring OpenFin requires a **specific version of our Symphony Desktop App (SDA)**, and needs to be activated on each environment, until it is qualified for Production.&#x20;
+Configuring OpenFin requires a **specific version of our Symphony Desktop App (SDA)**, and needs to be activated on your environment, until it is qualified for Production.&#x20;
 
-Please get in touch with us to get access to the installer, and to enable OpenFin in your Pod.
+Please get in touch with us to get access to the installer, and to get OpenFin enabled on your Pod.
 
 Once you have installed the custom SDA installer, please proceed with the configuration step below.
 
@@ -39,7 +39,7 @@ Add the following properties:&#x20;
 
 ```json
 "openfin": {
-        "uuid": "Symphony",
+        "uuid": "symphony-messaging-app",
         "licenseKey": "TO_BE_REPLACED",
         "runtimeVersion": "TO_BE_REPLACED",
         "autoConnect": true,
@@ -50,10 +50,10 @@ Add the following properties:&#x20;
 
 Edit the properties:
 
-* `uuid`: The UUID will be the unique identifier of Symphony on the platform. You can use the default Symphony or change it based on your preferences.
-* `licenseKey`: Your license key to the OpenFin platform.
+* `uuid`: The UUID will be the unique identifier of Symphony on OpenFin. You can use the default value or change it based on your preferences.
+* `licenseKey`: Your license key on the OpenFin platform.
 * `runtimeVersion`: The runtime version of the OpenFin platform that Symphony should connect to.
-* `autoConnect`: Keep to `true` so that the user doesn't have to manually select OpenFin in the user settings of Symphony Messaging.
+* `autoConnect`: Keep to `true` so that the user doesn't have to manually select OpenFin in the Interoperability settings of the Symphony Messaging app.
 * `channelName`: For future use. Keep it empty.
 * `connectionTimeout`: Timeout in seconds when attempting the connection to OpenFin.&#x20;
 
@@ -103,6 +103,13 @@ Manually **add an app entry** into your finsemble app directory file (_/public/c
             "description": "",
             "intents": [
                 {
+                    "name": "ViewInstrument",
+                    "displayName": "View Instrument",
+                    "contexts": [
+                        "fdc3.instrument"
+                    ]
+                },
+                {
                     "name": "StartChat",
                     "displayName": "Start Chat",
                     "contexts": [
@@ -137,7 +144,7 @@ Manually **add an app entry** into your finsemble app directory file (_/public/c
         }
 ```
 
-#### Glue42
+#### Glue42 / Interop.io
 
 Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{GLUE\_INSTANCE}\apps_):
 
@@ -196,6 +203,74 @@ Add a new symphony.json file into your app directory folder (_Tick42\UserData\\{
 {% endcode %}
 
 #### OpenFin
+
+Add the following entry in the apps.json file.
+
+```json
+{
+	"appId": "symphony-messaging-app",
+	"name": "Symphony",
+	"title": "Symphony Messaging",
+	"description": "Symphony is the most secure and compliance-enabling markets’ infrastructure and technology platform, where solutions are built or integrated to standardize, automate and innovate financial services workflows. It is a vibrant community of over half a million financial professionals with a trusted directory and serves over 1,000 institutions.",
+	"manifest": "C:\\Users\\salah.benmoussati\\AppData\\Local\\Programs\\symphony\\Symphony\\Symphony.exe",
+	"manifestType": "external",
+	"private": true,
+	"autostart": false,
+	"instanceMode": "single",
+	"icons": [
+		{
+			"src": "https://symphony.com/wp-content/uploads/2022/12/logo-symphony-dark.svg"
+		}
+	],
+	"contactEmail": "sales@symphony.com",
+	"supportEmail": "support@symphony.com",
+	"publisher": "Symphony Communication Services, LLC",
+	"intents": [
+                {
+                    "name": "ViewInstrument",
+                    "displayName": "View Instrument",
+                    "contexts": [
+                        "fdc3.instrument"
+                    ]
+                },
+                {
+                    "name": "StartChat",
+                    "displayName": "Start Chat",
+                    "contexts": [
+                        "fdc3.chat.initSettings"
+                    ]
+                },
+                {
+		    "name": "ViewMessages",
+		    "displayName": "View Messages",
+		    "contexts": [
+		        "fdc3.searchCriteria"
+		    ]
+		},
+		{
+		    "name": "SendChatMessage",
+		    "displayName": "Send Chat Message",
+		    "contexts": [
+		        "fdc3.chat.message"
+		    ]
+		},
+		{
+		    "name": "ViewChat",
+		    "displayName": "View Chat",
+		    "contexts": [
+		        "fdc3.chat.room", "fdc3.contact", "fdc3.contactList"
+		    ]
+		}
+	],
+	"images": [],
+	"tags": []
+}
+```
+
+**Edit the following properties:**
+
+* Edit the `manifest` property to target your symphony.exe.
+* The `appId` should match the `uuid` defined in your SDA config file.
 
 Once your configuration is complete, please have a look at our [troubleshooting.md](troubleshooting.md "mention") guide to validate that everything is working.
 
