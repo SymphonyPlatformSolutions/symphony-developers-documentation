@@ -6,7 +6,7 @@ A Desktop Integration Platform (DIP) needs to be installed on your machine. The 
 
 * Interop.io (Glue42) version 3.15+
 * Finsemble version 7.3.0+
-* OpenFin: Beta only. OpenFin currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
+* OpenFin Workspace version 20.1+: _Beta only_. OpenFin currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
 
 ### Configure for interop.io (Glue42) and Finsemble
 
@@ -17,13 +17,13 @@ A Desktop Integration Platform (DIP) needs to be installed on your machine. The 
 
 ### Configure for OpenFin
 
-{% hint style="warning" %}
+{% hint style="info" %}
 OpenFin is available as Beta, and is only qualified for UAT environments.
 {% endhint %}
 
-Configuring OpenFin requires a **specific version of our Symphony Desktop App (SDA)**, and needs to be activated on your environment, until it is qualified for Production.&#x20;
+Configuring our OpenFin connector requires a **specific version of the Symphony Desktop App (SDA)**, and is only supported in environments where OpenFin has been switched on. This limitation will be waived as soon as our connector is generally available.&#x20;
 
-Please get in touch with us to get access to the installer, and to get OpenFin enabled on your Pod.
+Please get in touch with us to get access to the installer, and to get OpenFin enabled on your UAT Pod.
 
 Once you have installed the custom SDA installer, please proceed with the configuration step below.
 
@@ -43,7 +43,7 @@ Add the following properties:&#x20;
         "licenseKey": "TO_BE_REPLACED",
         "runtimeVersion": "TO_BE_REPLACED",
         "autoConnect": true,
-        "channelName": "",
+        "channelName": "TO_BE_REPLACED",
         "connectionTimeout": "10000"
     }
 ```
@@ -54,7 +54,7 @@ Edit the properties:
 * `licenseKey`: Your license key on the OpenFin platform.
 * `runtimeVersion`: The runtime version of the OpenFin platform that Symphony should connect to.
 * `autoConnect`: Keep to `true` so that the user doesn't have to manually select OpenFin in the Interoperability settings of the Symphony Messaging app.
-* `channelName`: For future use. Keep it empty.
+* `channelName`: Set the uuid of the OpenFin platform you want Symphony to connect to.
 * `connectionTimeout`: Timeout in seconds when attempting the connection to OpenFin.&#x20;
 
 Launch the Symphony Desktop App and login as normal.
