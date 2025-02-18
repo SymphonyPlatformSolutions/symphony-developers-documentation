@@ -96,6 +96,28 @@ To do that, set the `silent` flag to false (default:`true`).
 https://open.symphony.com/?startRoom=RoomName={roomName}&silent=false&userEmails={email1},{email2}
 ```
 
+## Federation
+
+Users entitled to the SMS & Voice channel of our Federation product are able to directly start a chat over SMS and place a phone call, using the URI schemes described below.
+
+### Start a SMS chat with a contact using SMS & Voice
+
+```
+// Start SMS chat with contact +441234567890
+https://open.symphony.com/#phoneNumber=+441234567890&triggerAction=SMS  
+```
+
+### Call a contact using SMS & Voice
+
+```
+// Start phone call with contact +19291234567
+https://open.symphony.com/#phoneNumber=+19291234567&triggerAction=PHONE_CALL  
+```
+
+{% hint style="info" %}
+**Error management**: for both SMS and PHONE\_CALL, if the targeted phone number has no country indicator, or does not seem valid, the phone left rail will open with the requested phone number, in order for the user to complete the intended action.
+{% endhint %}
+
 ## Display the profile of a user
 
 Display the profile of the user identified by its `userId`.
