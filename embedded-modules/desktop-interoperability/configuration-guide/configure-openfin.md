@@ -26,6 +26,8 @@ Locate the `Symphony.json` config file on your desktop, by **right clicking** yo
 
 Backup the `Symphony.config` file under a different name, then edit the original file.
 
+Quit SDA if it running. If SDA is configured to hide instead of closing, you can quit SDA but selecting the hamburger menu on the top left then selecting **Window**, then **Quit Symphony Messaging**.
+
 Add the following properties:&#x20;
 
 ```json
@@ -39,7 +41,7 @@ Add the following properties:&#x20;
     }
 ```
 
-Edit the properties above:
+**Edit** the properties below then **save** the file:
 
 * `uuid`: The UUID will be the unique identifier of Symphony on OpenFin. You can use the default value or change it based on your preferences.
 * `licenseKey`: Your license key on the OpenFin platform.
