@@ -21,7 +21,7 @@ Here after you can find an example of a message sent by a bot and containing the
 </messageML>
 ```
 
-<figure><img src="../../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Free-text Tags
 
@@ -33,7 +33,7 @@ Here after you can find an example of a message sent by a bot and containing the
 </messageML>
 ```
 
-<figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Enhanced tags (Financial instruments)
 
@@ -136,4 +136,4 @@ When identifiers and filters are not sufficient to identify a unique match, or w
 <messageML><chime/></messageML>
 ```
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

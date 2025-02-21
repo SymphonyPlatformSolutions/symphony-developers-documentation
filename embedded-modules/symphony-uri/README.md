@@ -144,7 +144,7 @@ The `appId`, `appName` & `publisher` information can be found in the **Admin Por
 
 Alternatively, you can simply open the app module you want to get a link to, click on the hamburger menu in the top right corner, and select Copy app link to copy the URI to your clipboard.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 * Extension apps are not supported on Mobile.

@@ -133,6 +133,8 @@ This will load the Symphony webapp from your UAT environment, where OpenFin has 
 
 If your OpenFin platform is running, you should see a toast notification confirming that Symphony successfully connected to OpenFin.
 
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="warning" %}
 If SDA auto update is enabled in your UAT pod, you may get prompts to install a new SDA version. Don't do it, otherwise you will need to reinstall the SDA installer that embeds OpenFin.
 {% endhint %}
