@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Once you have configured Symphony either using the [native connector](configure-with-the-native-connector.md) or using [ECP](configure-with-embedded-mode.md), please follow the steps below to ensure that FDC3 is properly enabled.
+Once you have configured Symphony either using the [native connector](configure-interop.io.md) or using [ECP](configure-with-embedded-mode.md), please follow the steps below to ensure that FDC3 is properly enabled.
 
 ### **1. Verify that the fdc3 connector is loaded.**
 
