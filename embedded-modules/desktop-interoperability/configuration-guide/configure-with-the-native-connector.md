@@ -9,7 +9,7 @@
 
 <figure><img src="https://lh3.googleusercontent.com/kKzz4aKlN45MxcgblUHe9DgG9rHZMxksNkKt4DMwMCZHkATGaNxDHz8Spbdcqdtb1eMr070tV60GRuvp85x321YxcqPy9pMv1i5whusqYf-9eaZBDdIqWg1jgQAc8DQKxxsPAHdDJ3Z5ETgf9IqJPWA" alt=""><figcaption></figcaption></figure>
 
-### Configure Glue42
+### Configure Glue42 for Symphony Messaging
 
 Symphony Messaging needs to be registered in the App directory, so that it will be able to connect to the platform.
 
