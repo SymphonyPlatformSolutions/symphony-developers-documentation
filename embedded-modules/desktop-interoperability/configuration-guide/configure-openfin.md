@@ -15,7 +15,7 @@ Some of the configuration steps below will not be required anymore once the Open
 ### Install the custom SDA version
 
 * Get in touch with us to get access to the installer, and to get OpenFin enabled on your UAT Pod.
-* Quit SDA if it running.
+* Quit SDA if it is running.
 * Launch the new installer. It will uninstall your current SDA version, then install the new version.
 
 ### Configure the connection to OpenFin
@@ -123,7 +123,7 @@ Edit the following propertie&#x73;**:**
 * Launch the Symphony Desktop App.
 * Open the developer tools (`Ctrl` + `Shift` + `i`).
 * Open the developer console.
-* type the following line (replacing your UAT pod sub domain where appropriate) then press `Enter`.
+* Type the following line (replacing your UAT pod sub domain where appropriate) then press `Enter`.
 
 ```
 location = "https://UATPODSUBDOMAIN.symphony.com"
