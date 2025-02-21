@@ -124,7 +124,7 @@
     * [Message format](embedded-modules/desktop-interoperability/fdc3-intents/message-format.md)
   * [Configuration guide](embedded-modules/desktop-interoperability/configuration-guide/README.md)
     * [Configure Finsemble](embedded-modules/desktop-interoperability/configuration-guide/configure-finsemble.md)
-    * [Configure Interop.io](embedded-modules/desktop-interoperability/configuration-guide/configure-interop.io.md)
+    * [Configure Interop.io](embedded-modules/desktop-interoperability/configuration-guide/configure-with-the-native-connector.md)
     * [Configure OpenFin](embedded-modules/desktop-interoperability/configuration-guide/configure-openfin.md)
     * [Configure with Embedded Mode](embedded-modules/desktop-interoperability/configuration-guide/configure-with-embedded-mode.md)
     * [Troubleshooting](embedded-modules/desktop-interoperability/configuration-guide/troubleshooting.md)

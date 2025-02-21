@@ -28,8 +28,10 @@ The behavior of an action button is then described in the `entities` section of 
 {% hint style="warning" %}
 With **OpenFin, Action buttons** have the following **limitations**:&#x20;
 
-* Broadcast: Only standard color channels are supported for now.
+* Broadcast is not supported.
 * Intents: It is not possible to predefine the appId that will receive the intent.&#x20;
+
+Both limitations will be waived in March 2025.
 {% endhint %}
 
 Few examples of action buttons are available below.
