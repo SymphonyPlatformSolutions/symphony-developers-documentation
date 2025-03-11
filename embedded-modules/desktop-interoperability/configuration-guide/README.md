@@ -12,7 +12,7 @@ Depending on the platform provider you use, the following options are available:
 
 Symphony directly embeds a native connector to **Interop.io** (Glue42), **Finsemble** and **OpenFin** (Beta)**.** With the native connector, you keep your Symphony standalone app as is, and Symphony will seamlessly connect to the FDC3 platform.&#x20;
 
-* [**OpenFin Workspace**](configure-openfin.md) version 20.1+: _Beta only_. OpenFin currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
+* Here Core version 20.1+: _Beta only_. Here Core currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
 * [**Interop.io (Glue42)**](configure-with-the-native-connector.md) version 3.15+
 * [**Finsemble** ](configure-finsemble.md)version 7.3.0+
 

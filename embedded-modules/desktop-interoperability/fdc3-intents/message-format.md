@@ -26,7 +26,7 @@ The behavior of an action button is then described in the `entities` section of 
 {% endhint %}
 
 {% hint style="warning" %}
-With **OpenFin, Action buttons** have the following **limitations**:&#x20;
+With **Here Core** (previously known as OpenFin)**, Action buttons** have the following **limitations**:&#x20;
 
 * Broadcast is not supported.
 * Intents: It is not possible to predefine the appId that will receive the intent.&#x20;

@@ -125,7 +125,7 @@
   * [Configuration guide](embedded-modules/desktop-interoperability/configuration-guide/README.md)
     * [Configure Finsemble](embedded-modules/desktop-interoperability/configuration-guide/configure-finsemble.md)
     * [Configure Interop.io](embedded-modules/desktop-interoperability/configuration-guide/configure-with-the-native-connector.md)
-    * [Configure OpenFin](embedded-modules/desktop-interoperability/configuration-guide/configure-openfin.md)
+    * [Configure Here Core](embedded-modules/desktop-interoperability/configuration-guide/configure-here-core.md)
     * [Configure with Embedded Mode](embedded-modules/desktop-interoperability/configuration-guide/configure-with-embedded-mode.md)
     * [Troubleshooting](embedded-modules/desktop-interoperability/configuration-guide/troubleshooting.md)
   * [Change log](embedded-modules/desktop-interoperability/change-log.md)

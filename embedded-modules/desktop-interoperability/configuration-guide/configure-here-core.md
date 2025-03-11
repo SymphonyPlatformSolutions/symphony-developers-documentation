@@ -1,24 +1,24 @@
-# Configure OpenFin
+# Configure Here Core
 
 {% hint style="info" %}
-OpenFin is available as **Beta**, and is only qualified for UAT environments. General Availability and access in Production is planned for **March 2025.**
+Here Core is available as **Beta**, and is only qualified for UAT environments. General Availability and access in Production is planned for **March 2025.**
 {% endhint %}
 
-Because the OpenFin connector is only available as Beta, it currently requires a **specific version of the Symphony Desktop App (SDA)**, and is only supported in environments where OpenFin has been switched on. The Beta connector also requires specific configuration.&#x20;
+Because the Here Core connector is only available as Beta, it currently requires a **specific version of the Symphony Desktop App (SDA)**, and is only supported in environments where Here Core has been switched on. The Beta connector also requires specific configuration.&#x20;
 
 These limitations will be waived as soon as our connector is generally available.&#x20;
 
 {% hint style="success" %}
-Some of the configuration steps below will not be required anymore once the OpenFin connector is released to production (March 2025)
+Some of the configuration steps below will not be required anymore once the Here Core connector is released to production (March 2025)
 {% endhint %}
 
 ### Install the custom SDA version
 
-* Get in touch with us to get access to the installer, and to get OpenFin enabled on your UAT Pod.
+* Get in touch with us to get access to the installer, and to get Here Core enabled on your UAT Pod.
 * Quit SDA if it is running.
 * Launch the new installer. It will uninstall your current SDA version, then install the new version.
 
-### Configure the connection to OpenFin
+### Configure the connection to Here Core
 
 Locate the `Symphony.json` config file on your desktop, by **right clicking** your Symphony desktop icon and selecting **Open file location**, then opening the **config** folde&#x72;**.**
 
@@ -43,16 +43,16 @@ Add the following properties:&#x20;
 
 **Edit** the properties below then **save** the file:
 
-* `uuid`: The UUID will be the unique identifier of Symphony on OpenFin. You can use the default value or change it based on your preferences.
-* `licenseKey`: Your license key on the OpenFin platform.
-* `runtimeVersion`: The runtime version of the OpenFin platform that Symphony should connect to.
-* `autoConnect`: Keep to `true` so that the user doesn't have to manually select OpenFin in the Interoperability settings of the Symphony Messaging app.
-* `platformUuid`: Set the uuid of the OpenFin platform you want Symphony to connect to.
-* `connectionTimeout`: Timeout in seconds when attempting the connection to OpenFin.&#x20;
+* `uuid`: The UUID will be the unique identifier of Symphony on Here Core. You can use the default value or change it based on your preferences.
+* `licenseKey`: Your license key on the Here Core platform.
+* `runtimeVersion`: The runtime version of the Here Core platform that Symphony should connect to.
+* `autoConnect`: Keep to `true` so that the user doesn't have to manually select Here Core in the Interoperability settings of the Symphony Messaging app.
+* `platformUuid`: Set the uuid of the Here Core platform you want Symphony to connect to.
+* `connectionTimeout`: Timeout in seconds when attempting the connection to Here Core.&#x20;
 
-### Configure your OpenFin platform for Symphony
+### Configure your Here Core platform for Symphony
 
-Add the following entry in the `apps.json` file, to describe the intents that Symphony supports. This way, you will be able to open Symphony directly from the OpenFin app launcher.
+Add the following entry in the `apps.json` file, to describe the intents that Symphony supports. This way, you will be able to open Symphony directly from the Here Core app launcher.
 
 ```json
 {
@@ -131,14 +131,14 @@ Edit the following propertie&#x73;**:**
 location = "https://UATPODSUBDOMAIN.symphony.com"
 ```
 
-This will load the Symphony webapp from your UAT environment, where OpenFin has been switched on. You can now close the developer console.
+This will load the Symphony webapp from your UAT environment, where Here Core has been switched on. You can now close the developer console.
 
-If your OpenFin platform is running, you should see a toast notification confirming that Symphony successfully connected to OpenFin.
+If your Here Core platform is running, you should see a toast notification confirming that Symphony successfully connected to Here Core .
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-If SDA auto update is enabled in your UAT pod, you may get prompts to install a new SDA version. Don't do it, otherwise you will need to reinstall the SDA installer that embeds OpenFin.
+If SDA auto update is enabled in your UAT pod, you may get prompts to install a new SDA version. Don't do it, otherwise you will need to reinstall the SDA installer that embeds Here Core.
 {% endhint %}
 
 If you need help, you can have a look at our [Troubleshooting guide](troubleshooting.md).

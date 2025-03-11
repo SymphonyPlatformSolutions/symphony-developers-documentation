@@ -60,6 +60,6 @@ Loading Symphony in Embedded Mode requires a`partnerId` to be passed along in th
 
 Once your configuration is complete, please have a look at our [troubleshooting.md](troubleshooting.md "mention") guide to validate that everything is working.
 
-### Get started quickly with OpenFin
+### Get started quickly with Here core
 
-If you are using the OpenFin platform, you can see an example of how to setup Symphony Embedded Mode in an OpenFin Workspace in the [following GitHub page](https://github.com/built-on-openfin/contest-starter/blob/main/workspace/symphony/challenge-2023/README.md).
+If you are using the Here Core platform, you can see an example of how to setup Symphony Embedded Mode in Here Core (previously known as OpenFin Workspace) in the [following GitHub page](https://github.com/built-on-openfin/contest-starter/blob/main/workspace/symphony/challenge-2023/README.md).
