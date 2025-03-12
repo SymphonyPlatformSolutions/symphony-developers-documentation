@@ -36,7 +36,7 @@ description: This section lists the Structured Objects available for use in mess
 
 FDC3 action buttons allow chat bots to embed buttons in messages which, on click, will raise an intent.&#x20;
 
-Action buttons are only displayed to users who have a Desktop Integration Platform (DIP) set up, such as Finsemble, Glue42 or OpenFin.
+Action buttons are only displayed to users who have a Desktop Integration Platform (DIP) set up, such as interop.io, Here Core or Connectifi.
 
 Learn more about Desktop Interop and intents [here](../../../../embedded-modules/desktop-interoperability/).&#x20;
 
