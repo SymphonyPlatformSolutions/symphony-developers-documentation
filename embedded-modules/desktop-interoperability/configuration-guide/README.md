@@ -10,9 +10,9 @@ Depending on the platform provider you use, the following options are available:
 
 #### **Native connector**&#x20;
 
-Symphony directly embeds a native connector to **Interop.io** (Glue42), **Finsemble** and **Here Core** (Beta)**.** With the native connector, you keep your Symphony standalone app as is, and Symphony will seamlessly connect to the FDC3 platform.&#x20;
+Symphony directly embeds a native connector to **Interop.io** (Glue42), **Finsemble** and **Here** (formerly OpenFin)**.** With the native connector, you keep your Symphony standalone app as is, and Symphony will seamlessly connect to the FDC3 platform.&#x20;
 
-* [**Here Core**](configure-here-core.md) version 20.1+: _Beta only_. Here Core, previously known as OpenFin Workspace, currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
+* [**Here Core**](configure-here-core.md) version 20.1+: _Beta only_. Here Core, previously known as [OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter), currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
 * [**Interop.io (Glue42)**](configure-with-the-native-connector.md) version 3.15+
 * [**Finsemble** ](configure-finsemble.md)version 7.3.0+
 
