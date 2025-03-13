@@ -60,6 +60,10 @@ Loading Symphony in Embedded Mode requires a`partnerId` to be passed along in th
 
 Once your configuration is complete, please have a look at our [troubleshooting.md](troubleshooting.md "mention") guide to validate that everything is working.
 
+{% hint style="info" %}
+Broadcasts from Action buttons are not supported in Embedded Mode.&#x20;
+{% endhint %}
+
 ### Get started quickly with Here core
 
 If you are using the Here Core platform, you can see an example of how to setup Symphony Embedded Mode in Here Core (previously known as OpenFin Workspace) in the [following GitHub page](https://github.com/built-on-openfin/contest-starter/blob/main/workspace/symphony/challenge-2023/README.md).
