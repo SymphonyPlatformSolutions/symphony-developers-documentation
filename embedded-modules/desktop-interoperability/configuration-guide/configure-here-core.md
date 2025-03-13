@@ -4,7 +4,7 @@
 Here Core is available as **Beta**, and is only qualified for UAT environments. General Availability and access in Production is planned for **March 2025.**
 {% endhint %}
 
-Because the Here Core connector is only available as Beta, it currently requires a **specific version of the Symphony Desktop App (SDA)**, and is only supported in environments where Here Core has been switched on. The Beta connector also requires specific configuration.&#x20;
+Because the connector to Here Core (formerly [OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter)) is only available as Beta, it currently requires a **specific version of the Symphony Messaging Desktop App (SDA)**, and is only supported in environments where Here Core has been switched on. The Beta connector also requires specific configuration.&#x20;
 
 These limitations will be waived as soon as our connector is generally available.&#x20;
 
@@ -50,7 +50,7 @@ Add the following properties:&#x20;
 * `platformUuid`: Set the uuid of the Here Core platform you want Symphony to connect to.
 * `connectionTimeout`: Timeout in seconds when attempting the connection to Here Core.&#x20;
 
-### Configure your Here Core platform for Symphony
+### Configure your Here platform for Symphony
 
 Add the following entry in the `apps.json` file, to describe the intents that Symphony supports. This way, you will be able to open Symphony directly from the Here Core app launcher.
 

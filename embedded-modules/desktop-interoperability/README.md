@@ -5,7 +5,7 @@
 Symphony now interoperates with your local apps using the FDC3 standard to accelerate workflows on your desktop.
 
 {% hint style="info" %}
-To interoperate with local apps using the FDC3 APIs, a desktop integration platform, such as interop.io, Here Core or Connectifi needs to be running on the user machines.\
+To interoperate with local apps using the FDC3 APIs, a desktop integration platform, such as interop.io, Here (formerly OpenFin) or Connectifi needs to be running on the user machines.\
 Symphony aims to be platform-agnostic, but some features may not be available with all platforms.
 {% endhint %}
 
