@@ -194,7 +194,7 @@ If they have an SSO setup, they will automatically be redirected to their authen
 **Note**: As Embedded Mode uses an iFrame, some SSO systems will raise a Content Security Policy error (CSP) when Embedded Mode tries to redirect the user. In that case, you can either update your SSO system to **allow framing within your pod domain**, or alternatively you can configure Embedded Mode to do the **login in a popup** using the `ecpLoginPopup` parameter.
 {% endhint %}
 
-If you are a partner and uses ChannelConnect to onboard new Symphony users, you can also set up your own SSO. More information is available [here](embedded-mode-with-symphony-connect.md).&#x20;
+If you are a partner and uses ChannelConnect to onboard new Symphony users, you can also set up your own SSO. More information is available [here](embedded-mode-with-sponsored-access.md).&#x20;
 
 ### Allow users from different pods to log in
 

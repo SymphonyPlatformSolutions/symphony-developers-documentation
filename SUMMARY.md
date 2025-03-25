@@ -139,7 +139,7 @@
   * [Notifications](embedded-modules/embedded-mode/notifications.md)
   * [Support for extension applications](embedded-modules/embedded-mode/support-for-extension-applications.md)
   * [Open an app](embedded-modules/embedded-mode/open-an-app.md)
-  * [Embedded Mode with Symphony Connect](embedded-modules/embedded-mode/embedded-mode-with-symphony-connect.md)
+  * [Embedded Mode with Sponsored Access](embedded-modules/embedded-mode/embedded-mode-with-sponsored-access.md)
   * [Pricing tiers](embedded-modules/embedded-mode/pricing-tiers.md)
   * [Logout](embedded-modules/embedded-mode/logout.md)
 * [Universal Webhook](embedded-modules/universal-webhook/README.md)
