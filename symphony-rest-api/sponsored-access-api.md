@@ -1,22 +1,22 @@
-# Connect API
+# Sponsored Access API
 
-## What is Symphony Connect?
+## What is Sponsored Access?
 
-Symphony Connect allows Symphony partners to enable the users of their applications to collaborate on Symphony, by adding those companies and users to the Symphony network.
+Symphony Sponsored Access allows Symphony partners to enable the users of their applications to collaborate on Symphony Messaging, by adding those companies and users to the Symphony network.
 
-Users can leverage the Symphony Embedded Collaboration Platform (ECP) in order to chat from within the partner application.
+Users can leverage the Symphony Messaging Embedded Mode in order to chat from within the partner application.
 
-Partners can use the Connect APIs to create accounts on Symphony for their application users, if they do not already belong to the Symphony network.
+Partners can use the Sponsored Access APIs to create accounts on Symphony Messaging for their application users, if they do not already belong to the Symphony network.
 
-If a user’s company is not yet available on Symphony, a dedicated Symphony tenant can be created for that company before onboarding its users.
+If a user’s company is not yet available on Symphony Messaging, a dedicated Symphony Messaging tenant can be created for that company before onboarding its users.
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Before they can use Connect APIs to add client companies, as well as add or disable users, partners must register with Symphony.  Following registration, partners receive credentials to authenticate to these APIs.
+Before they can use Sponsored Access APIs to add client companies, as well as add or disable users, partners must register with Symphony.  Following registration, partners receive credentials to authenticate to these APIs.
 
-If they want to offer a seamless login experience to Symphony, partners need to provide Symphony with their Identity Provider details. The recommended authentication method is SAML, although other authentication methods are also available (additional charges apply).
+If they want to offer a seamless login experience to Symphony Messaging, partners need to provide Symphony with their Identity Provider details. The recommended authentication method is SAML, although other authentication methods are also available (additional charges apply).
 
-If you would like to register as a Symphony partner, create new users and embed Symphony within your application, please [contact us](https://symphony.com/solutions/embedded-collaboration-platform/).
+If you would like to register as a Symphony partner, create new users and embed Symphony Messaging within your application, please [contact us](https://symphony.com/solutions/embedded-collaboration-platform/).
 
 ## Domains
 
@@ -51,12 +51,12 @@ You can now use the `access_token`to make authorized calls to the API. You shoul
 
 ### Create company
 
-A Connect partner can use this endpoint to sponsor a new company in Symphony.
+A Sponsored Access partner can use this endpoint to sponsor a new company in Symphony.
 
 As input, the partner must provide:
 
 * A _**name**_: The company name that will be visible in the user’s profile in the Directory and can be used during user search.
-* A _**vanityName**_: This will be used to construct the tenant **publicUrl** under which the user Symphony session will be launched. For example, if the vanity name is “coke”, the URL will be _https://coke.on.symphony.com_.
+* A _**vanityName**_: This will be used to construct the tenant **publicUrl** under which the user Symphony Messaging session will be launched. For example, if the vanity name is “coke”, the URL will be _https://coke.on.symphony.com_.
 * _**emailDomains**_: The list of email domains used by the users in that company. Only users with email addresses belonging to those domains can be added later on. To update the domain list, please contact your Symphony representative.
 
 REST call to create a company:
@@ -95,11 +95,11 @@ Response you should get:
 
 <mark style="color:green;">**Success**</mark>
 
-If successful, a dedicated Symphony tenant will be created for that company and will become accessible under the tenant _**publicUrl**_ derived from the _vanityName_ field.
+If successful, a dedicated Symphony Messaging tenant will be created for that company and will become accessible under the tenant _**publicUrl**_ derived from the _vanityName_ field.
 
-If a user leverages the Symphony channels (Web, Desktop, Mobile), they will need to log in by accessing the tenant _publicURL_ directly in the browser, desktop or mobile application.
+If a user leverages the Symphony Messaging channels (Web, Desktop, Mobile), they will need to log in by accessing the tenant _publicURL_ directly in the browser, desktop or mobile application.
 
-If a user leverages ECP, the partner needs to load ECP using that tenant _publicUrl_.
+If a user leverages Embedded Mode, the partner needs to load Embedded Mode using that tenant _publicUrl_.
 
 <mark style="color:red;">**Failure**</mark>
 
@@ -110,19 +110,19 @@ Company creation will fail in the following cases:
 * There is already a company in the Directory with the same _vanityName_.
 * If the conflicting company has been onboarded by the same partner and the list of email domains is different, an error will be thrown. In that case, the partner needs to amend the list of email domains for the company before adding users.
 
-In case of failures, to verify whether the users of that company already have a Symphony account or not, you can call the following endpoint: [https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress=\{%email%\}\&fs=advanced](https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress=\{%email%\}\&fs=advanced)
+In case of failures, to verify whether the users of that company already have a Symphony Messaging account or not, you can call the following endpoint: [https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress=\{%email%\}\&fs=advanced](https://loginservice.symphony.com/webcontroller/podLoginInformation?emailAddress=\{%email%\}\&fs=advanced)
 
 \*where \{%email%\} needs to be replaced by the user’s email address.
 
 If users do not have an account, you are encouraged to reach out to <mark style="color:blue;">onboarding@symphony.com</mark> or to your Symphony representative so they can help you onboard the users.
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies" method="post" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies" method="post" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Create users
 
-A Connect partner can use this endpoint to provision new users in Symphony under an existing sponsored company.
+A Sponsored Access partner can use this endpoint to provision new users in Symphony Messaging under an existing sponsored company.
 
 As input, the partner must provide:
 
@@ -175,13 +175,13 @@ Response you should get:
 ]
 ```
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users" method="post" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users" method="post" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Update user status
 
-A Connect partner can use this endpoint to disable or re-enable a user.
+A Sponsored Access partner can use this endpoint to disable or re-enable a user.
 
 As input, the partner must provide:
 
@@ -204,13 +204,13 @@ curl -X 'PATCH' \
 }'
 ```
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users/{userId}" method="patch" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users/{userId}" method="patch" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Search companies
 
-A Connect partner can use this endpoint to retrieve the list of companies it has sponsored.
+A Sponsored Access partner can use this endpoint to retrieve the list of companies it has sponsored.
 
 ```json
 curl -X 'GET' \
@@ -238,13 +238,13 @@ Response you should get:
 ]
 ```
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies" method="get" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies" method="get" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Retrieve company
 
-A Connect partner can use this endpoint to retrieve a sponsored company’s information.
+A Sponsored Access partner can use this endpoint to retrieve a sponsored company’s information.
 
 As input, the partner must provide:
 
@@ -274,13 +274,13 @@ Response you should get:
 }
 ```
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}" method="get" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}" method="get" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Update company
 
-A Connect partner can use this endpoint to add new email domains to an existing company.
+A Sponsored Access partner can use this endpoint to add new email domains to an existing company.
 
 ```json
 curl -X 'PATCH' \
@@ -303,13 +303,13 @@ In response you should get code HTTP 200.
 
 When there already is a company in the Directory with users who have email addresses with domains belonging to the provided list of email domains.
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}" method="patch" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}" method="patch" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Retrieve company users
 
-A Connect partner can use this endpoint to retrieve the list of users of a company it has sponsored.
+A Sponsored Access partner can use this endpoint to retrieve the list of users of a company it has sponsored.
 
 As input, the partner must provide:
 
@@ -356,13 +356,13 @@ In response, you should get the paging information (total number of users, curre
 }
 ```
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users" method="get" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users" method="get" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ### Retrieve user <a href="#get-user" id="get-user"></a>
 
-A Connect partner can use this endpoint to retrieve the detail of a single user of a company it has sponsored.
+A Sponsored Access partner can use this endpoint to retrieve the detail of a single user of a company it has sponsored.
 
 As input, the partner must provide:
 
@@ -397,6 +397,6 @@ In response you should get:
 }
 ```
 
-{% swagger src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users/{userId}" method="get" %}
+{% openapi src="../.gitbook/assets/Connect_API.yaml" path="/api/v2/companies/{companyId}/users/{userId}" method="get" %}
 [Connect_API.yaml](../.gitbook/assets/Connect_API.yaml)
-{% endswagger %}
+{% endopenapi %}

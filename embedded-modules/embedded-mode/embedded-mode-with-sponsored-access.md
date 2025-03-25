@@ -4,7 +4,7 @@
 
 Symphony Sponsored Access allows Symphony partners to enable the users of their applications to collaborate on Symphony Messaging by adding those companies and users to the Symphony network. Partners can use these APIs to check if their application users are on Symphony Messaging and create accounts for them on Symphony Messaging if required.
 
-See [Connect API](https://docs.developers.symphony.com/symphony-rest-api/symphony-channel-connect-rest-api) for more information on Sponsored Access and how to create accounts for users who need a new Symphony account.&#x20;
+See [Sponsored Access API](https://docs.developers.symphony.com/symphony-rest-api/symphony-channel-connect-rest-api) for more information on Sponsored Access and how to create accounts for users who need a new Symphony Messaging account.&#x20;
 
 ## Single Sign On support
 

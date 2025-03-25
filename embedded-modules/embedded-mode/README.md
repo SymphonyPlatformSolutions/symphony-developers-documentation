@@ -1,18 +1,18 @@
 # Embedded Mode
 
-<figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p><em>Example: Integration of a Symphony chat within a web app</em></p></figcaption></figure>
+<figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p><em>Example: Integration of a Symphony Messaging chat within a web app</em></p></figcaption></figure>
 
-**Embedded Mode** allows you to embed Symphony within your application to provide full collaboration capabilities to your users. Your users can collaborate with half a million people across thousands of institutions on the Symphony network without leaving your platform. This allows you to add Symphony's secure and compliant chat capabilities to your application, unlocking instant external connectivity and workflow efficiency.
+**Embedded Mode** allows you to embed Symphony Messaging within your application to provide full collaboration capabilities to your users. Your users can collaborate with half a million people across thousands of institutions on the Symphony network without leaving your platform. This allows you to add Symphony's secure and compliant chat capabilities to your application, unlocking instant external connectivity and workflow efficiency.
 
 {% hint style="info" %}
-**Note: Embedded Mode** is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your Embedded Mode use case. Prior to using Embedded Mode in your Symphony environment(s), you will need to enter into an Embedded Mode-specific contract. Please reach out to [sales@symphony.com](mailto:sales@symphony.com) to review your use case, discuss the offering, its pricing or for any further information.
+**Note: Embedded Mode** is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your Embedded Mode use case. Prior to using Embedded Mode in your Symphony Messaging environment(s), you will need to enter into an Embedded Mode-specific contract. Please reach out to [sales@symphony.com](mailto:sales@symphony.com) to review your use case, discuss the offering, its pricing or for any further information.
 {% endhint %}
 
 &#x20;_**Access**_ [_**this page**_](https://symphony.com/products/embedded-collaboration-platform/) _**to discover which workflows our Embedded Mode offering can unlock for you, or to contact Sales.**_
 
 ## Features
 
-[Embedded Mode](https://symphony.com/solutions/embedded-collaboration-platform/) allows you to embed standalone Symphony chat modules inside your own websites or any of your solutions that support web views.
+[Embedded Mode](https://symphony.com/solutions/embedded-collaboration-platform/) allows you to embed standalone Symphony Messaging chat modules inside your own websites or any of your solutions that support web views.
 
 It also supports extensive customization and exposes APIs to create rooms or register for notifications.&#x20;
 
@@ -33,7 +33,7 @@ The following browsers are supported:
 
 ### Focus and Collaboration modes
 
-Symphony' Embedded Mode supports two modes:
+The Symphony Messaging Embedded Mode supports two modes:
 
 * **Focus**, where a single chat is displayed.
 * **Collaboration**, where the full list of chat conversations is displayed, allowing the user to switch chat conversations, create a room, search for users or rooms, view unread messages, etc.
@@ -93,23 +93,7 @@ One of the examples, _index-webinar-demo.html_, is covered during the webinar an
 
 The [Cleverdeal examples](https://github.com/SymphonyPlatformSolutions/ecp-examples/tree/master/AppExamples/CleverDeal.React) are a set of advanced Embedded Mode integrations covering four use cases: Investment, Operations, Research and Wealth. Hopefully one of them will give you a good starting point on how to integrate Embedded Mode in your own portal.
 
-<div>
-
-<figure><img src="../../.gitbook/assets/cdi.png" alt=""><figcaption><p>Investments</p></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/cdo.png" alt=""><figcaption><p>Operations</p></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/cdr.png" alt=""><figcaption><p>Research</p></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/cdw.png" alt=""><figcaption><p>Wealth</p></figcaption></figure>
-
-</div>
+<div><figure><img src="../../.gitbook/assets/cdi.png" alt=""><figcaption><p>Investments</p></figcaption></figure> <figure><img src="../../.gitbook/assets/cdo.png" alt=""><figcaption><p>Operations</p></figcaption></figure> <figure><img src="../../.gitbook/assets/cdr.png" alt=""><figcaption><p>Research</p></figcaption></figure> <figure><img src="../../.gitbook/assets/cdw.png" alt=""><figcaption><p>Wealth</p></figcaption></figure></div>
 
 #### Sandbox
 
@@ -123,5 +107,5 @@ You can load a specific conversation by adding a `streamId` as a query parameter
 
 **Note:** You can update the configuration parameters using the settings wheel in the navigation bar. &#x20;
 
-<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption><p><em>The Embedded Mode sandbox is available for all Symphony instances and allows you to quickly test out the Embedded Mode settings.</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption><p><em>The Embedded Mode sandbox is available for all Symphony Messaging instances and allows you to quickly test out the Embedded Mode settings.</em></p></figcaption></figure>
 
