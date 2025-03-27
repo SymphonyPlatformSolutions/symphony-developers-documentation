@@ -2,7 +2,7 @@
 
 ## Overview
 
-Universal Webhook is a Symphony Managed Service (operated by Symphony in the Cloud) that allows users to receive trusted or unauthenticated incoming webhooks within Symphony rooms in various formats (Raw text, MessageML).
+Universal Webhook is a Symphony Managed Service (operated by Symphony in the Cloud) that allows users to receive trusted or unauthenticated incoming webhooks within Symphony Messaging rooms in various formats (Raw text, MessageML).
 
 {% hint style="info" %}
 Universal Webhook 2.0 or above is a **managed service** operated by Symphony in the cloud, and as a result is only available to **cloud customers** for now.
@@ -17,23 +17,23 @@ Universal Webhook 2.0 or above is a **managed service** operated by Symphony in 
 
 ### High-level admin flow
 
-The Symphony administrator first needs to set up a service account that is going to be used to post the messages into the rooms. That user might already exist; in this case the private key of that service account will be needed in order to link the service account with the Universal Webhook service.
+The Symphony Messaging administrator first needs to set up a service account that is going to be used to post the messages into the rooms. That user might already exist; in this case the private key of that service account will be needed in order to link the service account with the Universal Webhook service.
 
-Symphony administrators can access the Symphony application called Universal Webhook. All users can access the application, but only Symphony administrators can access the setup tab in order to set up the service account to be used. The Symphony admin will need to provide the service account username and private key to successfully set up the Universal Webhook service.
+Symphony Messaging administrators can access the Symphony Messaging application called Universal Webhook. All users can access the application, but only Symphony administrators can access the setup tab in order to set up the service account to be used. The Symphony Messaging admin will need to provide the service account username and private key to successfully set up the Universal Webhook service.
 
 ### High-level user flow
 
-Users can install the Universal Webhook extension application from the Symphony Market to create webhook URLs.
+Users can install the Universal Webhook extension application from the Symphony Messaging Marketplace to create webhook URLs.
 
 Once the application is installed, users can create webhook URLs in rooms they are owners of via the extension application chat header button. They can then use those URLs in their source applications to send messages to those rooms.
 
 When a payload is received from the source application on a webhook URL, the Universal Webhook checks if the authentication details are correct and tries to send the message to the room corresponding to the webhook URL via the Agent.
 
-Message authentication, delivery successes, and errors are logged in the webhook history accessible to room members (via the extension application chat header button) and the Symphony administrators via the extension application page.
+Message authentication, delivery successes, and errors are logged in the webhook history accessible to room members (via the extension application chat header button) and the Symphony Messaging administrators via the extension application page.
 
 ## Universal Webhook setup
 
-### Create a Symphony extension app
+### Create a Symphony Messaging extension app
 
 Your Symphony technical point of contact (Technical Account Manager, or Solutions Architect) is in a position to perform this step for you. If you do not have a point of contact or you wish to do this step yourself, follow the instructions below.
 
@@ -41,7 +41,7 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 
 #### **Create an extension app by importing a JSON file**
 
-1. On the Symphony Admin Portal, select the **APP MANAGEMENT** tab, then click the **Add Custom App** button.
+1. On the Symphony Messaging Admin Portal, select the **APP MANAGEMENT** tab, then click the **Add Custom App** button.
 
 <div align="left"><figure><img src="https://lh5.googleusercontent.com/RoLAku8ZVhbDO-8U9H3YVpscQD094SCXzwHsEdsNh7raNJEeH5LhYe6FEV-H1fs2t2bYnTlvQVmQEkfJlDoHhHdoJjIYP1sI5qC6UG3rS5AbZGn0P4j5wOTUp5K0Y4MkubQDWZ5vflWwcq7sd3Iw6g" alt=""><figcaption></figcaption></figure></div>
 
@@ -107,16 +107,16 @@ The end result should look like this:
 
 <figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
-### Create a Symphony service account for Universal Webhook
+### Create a Symphony Messaging service account for Universal Webhook
 
 #### **Create a service account**
 
-In Symphony, you must configure a service account using the Admin Portal (or via API).&#x20;
+In SymphonyMessaging , you must configure a service account using the Admin Portal (or via API).&#x20;
 
 1. Select the **Create an Account** tab.
 2. Select the **Service Account** tab.
 3. Fill in the mandatory **Username**, **Display Name** in the Service Account form.
-4. Set the **Role in Symphony** to **Individual**.&#x20;
+4. Set the **Role in Symphony Messaging** to **Individual**.&#x20;
 5. Set the entitlement **Can edit profile picture** to **Yes**.
 6. Select **Create**.
 
@@ -156,9 +156,9 @@ Set your public key
 
 ### Link the service account with the Universal Webhook service
 
-#### **Load the Universal Webhook app in Symphony**
+#### **Load the Universal Webhook app in Symphony** Messaging
 
-1. As an Admin, go the Symphony Marketplace <img src="../../.gitbook/assets/image (40).png" alt="" data-size="line"> on Symphony.
+1. As an Admin, go the Symphony Messaging Marketplace <img src="../../.gitbook/assets/image (40).png" alt="" data-size="line"> on Symphony Messaging.
 2. Enter Universal Webhook in the **Search** field to find the app you deployed in the steps above.
 3. Select **Install**, then **Open** to launch the application.
 
@@ -166,12 +166,12 @@ Set your public key
 
 You will see the app landing page and the available **ADMIN** tab next to the OVERVIEW tab.
 
-_**If the application does not appear in the Symphony Market, check the developer tools for errors. An incorrect URL or untrusted web server certificate are common errors.**_
+_**If the application does not appear in the Symphony Messaging Marketplace, check the developer tools for errors. An incorrect URL or untrusted web server certificate are common errors.**_
 
 #### **Set up the service account on the Universal Webhook service**
 
 1. Go to the **ADMIN** tab of the Universal Webhook extension app.
-2. Fill in the service account username as defined in the Symphony Admin Portal in the step [Service account creation](installation-guide.md#create-a-symphony-service-account-for-universal-webhook).
+2. Fill in the service account username as defined in the Symphony Messaging Admin Portal in the step [Service account creation](installation-guide.md#create-a-symphony-service-account-for-universal-webhook).
 3. Fill in the Service Account **private key** generated in the step [RSA authentication configuration](installation-guide.md#configure-the-rsa-authentication).
 4. Click on **UPDATE**.
 
@@ -180,11 +180,11 @@ _**If the application does not appear in the Symphony Market, check the develope
 * Optionally, explicitly allow unauthenticated webhooks to be created. Otherwise the only webhooks that will be processed will be the ones using a pre-configured HMAC secret or Shared secret in the header.
 * Optionally, the administrator can update the Universal Webhook picture directly from the extension application by hovering on the avatar placeholder.
 
-If the service account username and private key match what is defined on the Symphony Admin Portal (username and public key), the update will be successful and the Universal Webhook will be usable.
+If the service account username and private key match what is defined on the Symphony Messaging Admin Portal (username and public key), the update will be successful and the Universal Webhook will be usable.
 
 #### **Create and test a Webhook URL**
 
-1. Add the Universal Webhook bot to a Symphony room (or directly open a direct chat with the Universal Webhook bot).
+1. Add the Universal Webhook bot to a Symphony Messaging room (or directly open a direct chat with the Universal Webhook bot).
 2. Click the **chat header button** to create a webhook URL.
 
 <figure><img src="https://lh4.googleusercontent.com/s3Qj9_ihL50xzT7ksp0aZkAHXcfan1lhrJcATcPD_mjvQvE-imzJoZow-cMseLrg3MIdlMVGqHQnjprVYcDIWSPNcjxWh0X48bBc1b4r_TJ5wfSaexmDf-us08CEVti2a9bOjmiCq6yMg4fwIn-Uhw" alt=""><figcaption></figcaption></figure>

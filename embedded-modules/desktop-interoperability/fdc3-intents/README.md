@@ -1,8 +1,8 @@
 ---
 description: >-
-  Intents are standardized verbs that an app raises to another app to instruct
-  it to do an action. Symphony both listens to some intents coming from third
-  party apps, as well as raises intents.
+  Intents are standardized verbs an app raises to another app to instruct it to
+  do an action. Symphony Messaging both listens to some intents coming from
+  third party apps, as well as raises intents.
 ---
 
 # FDC3 intents
@@ -11,9 +11,9 @@ description: >-
 
 ### Start chat
 
-Symphony listens to _StartChat_ intents, that allow an app to initiate a chat on Symphony with an optional message, and an optional list of contacts.
+Symphony Messaging listens to _StartChat_ intents, that allow an app to initiate a chat on Symphony Messaging with an optional message, and an optional list of contacts.
 
-When a _StartChat_ intent is received by Symphony, a modal opens where the user can review the list of recipients and the content of the message, and then send the message.
+When a _StartChat_ intent is received by Symphony Messaging, a modal opens where the user can review the list of recipients and the content of the message, and then send the message.
 
 It is also possible to bypass the modal to directly send the message using the `silent` parameter.
 
@@ -70,7 +70,7 @@ fdc3.raiseIntent('StartChat', {
 ```
 {% endtab %}
 
-{% tab title="Result in Symphony" %}
+{% tab title="Result in Symphony Messaging" %}
 <figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -110,7 +110,7 @@ fdc3.raiseIntent('StartChat', {
 ```
 {% endtab %}
 
-{% tab title="Result in Symphony" %}
+{% tab title="Result in Symphony Messaging" %}
 <figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -158,7 +158,7 @@ fdc3.raiseIntent('StartChat', {
 
 Messages sent through the _StartChat_ intent can contain FDC3 action buttons with predefined intents and context data.
 
-The FDC3 action buttons will be displayed as inline buttons in the message. When such a button is clicked, Symphony either raises the predefined intent or broadcast the predefined context data.&#x20;
+The FDC3 action buttons will be displayed as inline buttons in the message. When such a button is clicked, Symphony Messaging either raises the predefined intent or broadcast the predefined context data.&#x20;
 
 Read [here ](message-format.md)how to add FDC3 action buttons to your messages.
 
@@ -172,7 +172,7 @@ As part of the support of FDC3 version 2.0, the _StartChat_ intent now returns t
 
 ### Send chat message
 
-Similar to _StartChat_, the _SendChatMessage_ intent allows to send a chat message directly in a specific chat in Symphony, by specifying the identifier of a chat room.
+Similar to _StartChat_, the _SendChatMessage_ intent allows to send a chat message directly in a specific chat in Symphony Messaging, by specifying the identifier of a chat room.
 
 This works particularly well in combination with the _StartChat_ intent, which now returns the identifier of the chat conversations where the message has been sent.
 
@@ -247,11 +247,11 @@ await fdc3.raiseIntent("SendChatMessage", chatMessage);
 
 ### View messages
 
-Symphony listens to _ViewMessages_ intents, that allow FDC3 apps to display in Symphony the list of chat messages that contain a specified **$cashtag** or **#hashtag**.
+Symphony Messaging listens to _ViewMessages_ intents, that allow FDC3 apps to display in Symphony Messaging the list of chat messages that contain a specified **$cashtag** or **#hashtag**.
 
-When a _ViewMessages_ intent is received, Symphony displays a modal with the Signal View, showing all matching messages.
+When a _ViewMessages_ intent is received, Symphony Messaging displays a modal with the Signal View, showing all matching messages.
 
-**Note**: Currently, Symphony only supports a single context. If several contexts are provided, Symphony will only take the first one into account. Several hashtags can however be specified as a single string (each hashtag separated by a space). In that situation, messages that match _at least_ one of the hashtags will be displayed.
+**Note**: Currently, Symphony Messaging only supports a single context. If several contexts are provided, Symphony Messaging will only take the first one into account. Several hashtags can however be specified as a single string (each hashtag separated by a space). In that situation, messages that match _at least_ one of the hashtags will be displayed.
 
 #### **Example 1:** Display all received messages matching the $cashtag _$EURUSD_
 
@@ -272,7 +272,7 @@ fdc3.raiseIntent('ViewMessages', {
 ```
 {% endtab %}
 
-{% tab title="Result in Symphony" %}
+{% tab title="Result in Symphony Messaging" %}
 <figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption><p>View all messages received that contained the specified cashtag.</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
@@ -298,7 +298,7 @@ fdc3.raiseIntent('ViewMessages', {
 
 ### **View chat**
 
-Symphony listens to _ViewChat_ intents, that allow FDC3 apps to display an existing chat in Symphony based on its streamId, or based on a list of contacts.
+Symphony Messaging listens to _ViewChat_ intents, that allow FDC3 apps to display an existing chat in Symphony Messaging based on its streamId, or based on a list of contacts.
 
 If you are using FDC3 over ECP Focus mode, you can also use ViewChat to remove a conversation from being displayed. To do that use the ViewChat intent with a empty context.
 
@@ -359,7 +359,7 @@ fdc3.raiseIntent('ViewChat', {
 
 When hovering over $cashtags, an FDC3 _ViewInstrument_ action will be displayed.&#x20;
 
-On click, Symphony will raise the _ViewInstrument_ intent, with the ticker as context data (fdc3.instrument).
+On click, Symphony Messaging will raise the _ViewInstrument_ intent, with the ticker as context data (fdc3.instrument).
 
 <figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>When hovering on the tag (e.g. AAPL US), clicking View Instrument will raise the intent.</p></figcaption></figure>
 
@@ -376,14 +376,14 @@ Example of context data received:
 ```
 
 {% hint style="info" %}
-As Symphony transitions from the legacy free-text cashtags to the new enhanced tags, the context data received will be also updated to provide more information (e.g. full ticker, ISIN, MIC, etc)
+As Symphony Messaging transitions from the legacy free-text cashtags to the new enhanced tags, the context data received will be also updated to provide more information (e.g. full ticker, ISIN, MIC, etc)
 {% endhint %}
 
 ### **View contact (user & profile hovercard)**
 
-When hovering on a user mention or name in a Symphony chat, a profile hovercard is displayed, which now contains a new FDC3 **View contact** button.
+When hovering on a user mention or name in a Symphony Messaging chat, a profile hovercard is displayed, which now contains a new FDC3 **View contact** button.
 
-On click, Symphony will raise the _ViewContact_ intent, with the user as context data (fdc3.contact).
+On click, Symphony Messaging will raise the _ViewContact_ intent, with the user as context data (fdc3.contact).
 
 <figure><img src="../../../.gitbook/assets/profile hovercard.png" alt=""><figcaption></figcaption></figure>
 
@@ -474,8 +474,8 @@ The intent raised is CreateInteraction with a fdc3.interaction context type. The
 
 ### **Custom intents**
 
-Symphony can trigger custom intents and context data from in-chat FDC3 action buttons.&#x20;
+Symphony Messaging can trigger custom intents and context data from in-chat FDC3 action buttons.&#x20;
 
-When clicking such a button, Symphony raises the predefined intent or broadcasts the predefined context data to local apps.
+When clicking such a button, Symphony Messaging raises the predefined intent or broadcasts the predefined context data to local apps.
 
 Read [here ](message-format.md)how to add FDC3 action buttons in your chats.

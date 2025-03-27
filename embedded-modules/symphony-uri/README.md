@@ -6,7 +6,7 @@ This works both on desktop and mobile, as well as on the web version of Symphony
 
 ## Universal URIs
 
-Symphony now supports universal URIs (https links starting with `open.symphony.com`), but still supports the previous `symphony://` URIs. See the section [Compatibility with symphony:// URIs](./#compatibility-with-symphony-uris) below for more info.
+Symphony Messaging now supports universal URIs (https links starting with `open.symphony.com`), but still supports the previous `symphony://` URIs. See the section [Compatibility with symphony:// URIs](./#compatibility-with-symphony-uris) below for more info.
 
 When a user clicks on a universal URI, a webpage opens and proposes several options relevant to the user, such as opening the link in the desktop or the mobile app, depending on the current context, but also opening in the browser (web version).
 

@@ -2,7 +2,7 @@
 
 <figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p><em>Example: Integration of a Symphony Messaging chat within a web app</em></p></figcaption></figure>
 
-**Embedded Mode** allows you to embed Symphony Messaging within your application to provide full collaboration capabilities to your users. Your users can collaborate with half a million people across thousands of institutions on the Symphony network without leaving your platform. This allows you to add Symphony's secure and compliant chat capabilities to your application, unlocking instant external connectivity and workflow efficiency.
+**Embedded Mode** allows you to embed Symphony Messaging within your application to provide full collaboration capabilities to your users. Your users can collaborate with half a million people across thousands of institutions on the Symphony network without leaving your platform. This allows you to add Symphony Messaging's secure and compliant chat capabilities to your application, unlocking instant external connectivity and workflow efficiency.
 
 {% hint style="info" %}
 **Note: Embedded Mode** is available as an add-on to the Symphony Services, and is subject to additional charges, terms, and Symphony review of your Embedded Mode use case. Prior to using Embedded Mode in your Symphony Messaging environment(s), you will need to enter into an Embedded Mode-specific contract. Please reach out to [sales@symphony.com](mailto:sales@symphony.com) to review your use case, discuss the offering, its pricing or for any further information.

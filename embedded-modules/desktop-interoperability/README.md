@@ -2,11 +2,11 @@
 
 ![](<../../.gitbook/assets/image (46).png>)
 
-Symphony now interoperates with your local apps using the FDC3 standard to accelerate workflows on your desktop.
+Symphony Messaging now interoperates with your local apps using the FDC3 standard to accelerate workflows on your desktop.
 
 {% hint style="info" %}
 To interoperate with local apps using the FDC3 APIs, a desktop integration platform, such as interop.io, Here (formerly OpenFin) or Connectifi needs to be running on the user machines.\
-Symphony aims to be platform-agnostic, but some features may not be available with all platforms.
+Symphony Messaging aims to be platform-agnostic, but some features may not be available with all platforms.
 {% endhint %}
 
 
@@ -17,5 +17,5 @@ You can see a live demo of desktop interop in the [recording of our Innovate Lon
 
 Learn more on [FDC3](https://fdc3.finos.org/), the open standard for the financial desktop.
 
-_Symphony is a Finos member and an active maintainer of the FDC3 standard._
+_Symphony Messaging is a Finos member and an active maintainer of the FDC3 standard._
 

@@ -2,24 +2,16 @@
 
 ## Accessing Universal Webhook
 
-Universal Webhook is a service provided by a bot. You can add the bot to any Symphony chat.
+Universal Webhook is a service provided by a bot. You can add the bot to any Symphony Messaging chat.
 
 1. If you don't know the name of the bot, please open the Universal Webhook app from the Marketplace.
 2. Click the **Start Chat** button to open a direct chat with the bot.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure></div>
 
 3. Click the **Header button** to launch the Universal Webhook Interface.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Setting up a new webhook
 
@@ -27,55 +19,35 @@ You're ready to set up your first webhook.&#x20;
 
 1. Get started by clicking **Add a webhook**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure></div>
 
 You will need to enter some basic information:&#x20;
 
 2. Fill in a **name** for your webhook. Anything will do - this is so you can identify the webhook later.&#x20;
-3. In the **Integrated service** field, indicate which service will be sending data to Symphony.
+3. In the **Integrated service** field, indicate which service will be sending data to Symphony Messaging.
 
-<div align="left">
+<div align="left"><figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-4. Select whether the service will send Raw Text, MessageML v2 (Symphony's markup language), or a JSON object in the **Webhook type** field.&#x20;
+4. Select whether the service will send Raw Text, MessageML v2 (Symphony Messaging's markup language), or a JSON object in the **Webhook type** field.&#x20;
 
 You can find the specifications of the MessageML v2 under the following link: [MessageML v2 Specifications](https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml).
 
 Also, note that since the version 2.4, your webhooks can contain attachments for any type you choose. This particular case is addressed at the end of this page.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure></div>
 
 ### Testing a JSON mapping
 
 If your service sends a JSON object, you will need to provide a template for mapping the JSON data to a readable format.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure></div>
 
 1. Enter your template and a sample of JSON data.
 2. Click **Test** to see how your message will render.&#x20;
 
 If your message is valid, the bot will send you the message in a direct chat. If not, an error message will advise you why your template or data is not valid.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Authentication
 
@@ -83,25 +55,17 @@ If your message is valid, the bot will send you the message in a direct chat. If
 
 &#x20;In the **Security type** field, you can choose the security protocol that validates the incoming data.
 
-If your Symphony Admin has permitted it, you will have an option for Unauthenticated Webhooks. In this case, incoming data will not be validated.
+If your Symphony Messaging Admin has permitted it, you will have an option for Unauthenticated Webhooks. In this case, incoming data will not be validated.
 
 Symphony recommends using a security protocol to validate the data, even if you are not required to do so.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure></div>
 
 ### Shared Secret authentication
 
 If you choose 'Shared Secret,' your data will require a secret to be sent along with it under a custom header.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure></div>
 
 1. Choose a **custom header** for your webhook. Any data sent without this header will be rejected.
 2. Enter a **secret value**. Universal Webhook will match this value with the value under the header you chose above to validate your webhook data.
@@ -133,76 +97,40 @@ If the values don't match, then the data will be rejected.
 1. Click **Save and activate** to create your webhook.
 2. **Copy** the provided URL and enter it where it is needed in your service's settings.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Example with Postman
 
 Consider this sample setup using Shared Secret validation.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div>
 
 1. Fill in the fields and click **Save and Activate**.
 2. **Copy** the generated URI to provide to the service that will send data to the webhook.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure></div>
 
 3. In Postman, create a new POST method and paste in the URI.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure></div>
 
 4. In the Headers, enter the Shared Secret Header and the Secret to match the values from the webhook setup.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure></div>
 
 5. In the Body, enter a raw text or MessageML v2 message to send, then click the **Send** button.
 
-<div align="left">
+<div align="left"><figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure></div>
 
 After a moment, you should see a '200 OK' success indicator in Postman.
 
-<div align="left">
+<div align="left"><figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+And in Symphony Messaging, Universal Webhook delivers your message.
 
-</div>
-
-And in Symphony, Universal Webhook delivers your message.
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure></div>
 
 ## View your webhooks
 
@@ -210,21 +138,13 @@ Now, when you open the Universal Webhook Modal, all of the webhooks for the room
 
 From this list, you can deactivate, edit, or delete a webhook. Webhooks must be activated in order to work.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure></div>
 
 If you hover over the webhook name, an icon will appear.&#x20;
 
 * Click this icon to copy the webhook URL to your clipboard.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div>
 
 * Click the webhook name to show the webhook history.
 
@@ -237,13 +157,9 @@ You are able to see all accepted and rejected requests over the last month. Filt
 * Click any item in the list of requests to expand it so you can see more information.
 * Click the item again to collapse.
 
-<div align="left">
+<div align="left"><figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-## Send attachments in Symphony
+## Send attachments in Symphony Messaging
 
 To attach files to a webhook, set the`Content-Type` header to `multipart/form-data` and add the attachments in the`attachment` field.\
 You can also include a preview of the files that will be displayed directly in the chat conversation, using the `preview` field.
@@ -292,19 +208,11 @@ Corresponding JSON template:
 
 Postman request sample of MessageML v2 type with an attachment and its preview:
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure></div>
 
 Display of the resulting message in a chat:
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure></div>
 
 ### **Limits of attachments**
 

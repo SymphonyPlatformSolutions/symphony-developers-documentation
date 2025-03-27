@@ -15,7 +15,7 @@ In the future, this configuration will be available through your  Admin Portal.&
 
 For testing purposes and in development environments, you can configure the integration manually, as described below.&#x20;
 
-Locate the `Symphony.json` config file on your desktop, by **right clicking** your Symphony desktop icon and selecting **Open file location**, then opening the **config** folde&#x72;**.**
+Locate the `Symphony.json` config file on your desktop, by **right clicking** your Symphony Messaging desktop icon and selecting **Open file location**, then opening the **config** folde&#x72;**.**
 
 <figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
@@ -38,16 +38,16 @@ Add the following properties:&#x20;
 
 **Edit** the properties below then **save** the file:
 
-* `uuid`: The UUID will be the unique identifier of Symphony on Here Core. You can use the default value or change it based on your preferences.
+* `uuid`: The UUID will be the unique identifier of Symphony Messaging on Here Core. You can use the default value or change it based on your preferences.
 * `licenseKey`: Your license key on the Here Core platform.
-* `runtimeVersion`: The runtime version of the Here Core platform that Symphony should connect to.
+* `runtimeVersion`: The runtime version of the Here Core platform that Symphony Messaging should connect to.
 * `autoConnect`: Keep to `true` so that the user doesn't have to manually select Here Core in the Interoperability settings of the Symphony Messaging app.
-* `platformUuid`: Set the uuid of the Here Core platform you want Symphony to connect to.
+* `platformUuid`: Set the uuid of the Here Core platform you want Symphony Messaging to connect to.
 * `connectionTimeout`: Timeout in seconds when attempting the connection to Here Core.&#x20;
 
-### Configure your Here platform for Symphony
+### Configure your Here platform for Symphony Messaging
 
-Add the following entry in the `apps.json` file, to describe the intents that Symphony supports. This way, you will be able to open Symphony directly from the Here Core app launcher.
+Add the following entry in the `apps.json` file, to describe the intents that Symphony supports. This way, you will be able to open Symphony Messaging directly from the Here Core app launcher.
 
 ```json
 {

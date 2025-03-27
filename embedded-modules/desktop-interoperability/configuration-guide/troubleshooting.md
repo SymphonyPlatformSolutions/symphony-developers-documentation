@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Once you have configured Symphony either using the native connector or with Embedded Mode, please follow the steps below to ensure that FDC3 is properly enabled.
+Once you have configured Symphony Messaging either using the native connector or with Embedded Mode, please follow the steps below to ensure that FDC3 is properly enabled.
 
 ### **1. Verify that the fdc3 connector is loaded.**
 
@@ -8,7 +8,7 @@ Hover over a cashtag. The **View Instrument** link should appear. If it appears,
 
 ![When hovering over a cashtag, a View Instrument link should be available.](<../../../.gitbook/assets/image (7).png>)
 
-### **2. Verify that Symphony can send intents to desktop apps.**
+### **2. Verify that Symphony** Messaging **can send intents to desktop apps.**
 
 Make sure you have a desktop app that supports the _ViewInstrument_ intent first.
 
@@ -16,11 +16,11 @@ Make sure you have a desktop app that supports the _ViewInstrument_ intent first
 
 Then, hover over a cashtag in a chat, and click "ViewInstrument". If an app is listening to ViewInstrument intents, it should receive the cashtag as a fdc3.instrument context.
 
-If this is not the case, please check that the Symphony app directory entry is properly configured.
+If this is not the case, please check that the Symphony Messaging app directory entry is properly configured.
 
-### **3. Verify that a desktop app can send intents to Symphony.**
+### **3. Verify that a desktop app can send intents to Symphony** Messagin&#x67;**.**
 
-To verify that Symphony can receive intents, we will attempt to raise a StartChat intent.
+To verify that Symphony Messaging can receive intents, we will attempt to raise a StartChat intent.
 
 **Note:** If you don't have an app that sends a StartChat intent, you can also user the FDC3 Workbench app to do that very easily.
 

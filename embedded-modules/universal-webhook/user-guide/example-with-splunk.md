@@ -1,8 +1,8 @@
 # Example with Splunk
 
-This page provides a step by step guide on how to create a webhook to receive alerts from Splunk into your Symphony chats.
+This page provides a step by step guide on how to create a webhook to receive alerts from Splunk into your Symphony Messaging chats.
 
-### **Symphony setup** <a href="#symphony-chat-room" id="symphony-chat-room"></a>
+### **Symphony** Messaging **setup** <a href="#symphony-chat-room" id="symphony-chat-room"></a>
 
 {% hint style="info" %}
 We assume here that the Admin has already configured the Universal Webhook app and bot, see the [Installation guide](../installation-guide.md) for more details.
@@ -42,11 +42,11 @@ Configure the webhook as described below. You may want to adapt the Template to 
 4. Set the Security type to `Unauthenticated`. As of today, it appears that Splunk does not support authentication for Webhooks natively. If authentication is required for your workflow, please contact Splunk support to learn more.&#x20;
 5. Click Save and Activate. You can click "Copy" to automatically save the webhook URL in your clipboard.
 
-Your webhook is now successfully configured in Symphony.
+Your webhook is now successfully configured in Symphony Messaging.
 
 ### Splunk setup
 
-In Splunk, define an alert with a webhook action, and paste the Symphony webhook URL copied in the previous step.
+In Splunk, define an alert with a webhook action, and paste the Symphony Messaging webhook URL copied in the previous step.
 
 <figure><img src="../../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 

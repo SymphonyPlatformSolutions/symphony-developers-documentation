@@ -48,7 +48,7 @@ For example, if a user's admin has blocked file attachments in the Admin Portal,
 ```
 
 {% hint style="info" %}
-[Symphony link notifications](https://docs.developers.symphony.com/embedded-modules/embedded-collaboration-platform/notifications#symphony-link-notifications) explains how clicks on internal links are processed by Symphony.
+[Symphony Messaging link notifications](notifications.md) explains how clicks on internal links are processed by Symphony Messaging.
 {% endhint %}
 
 ### How to update settings
