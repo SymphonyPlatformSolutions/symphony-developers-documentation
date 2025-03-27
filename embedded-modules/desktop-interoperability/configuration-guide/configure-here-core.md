@@ -1,24 +1,19 @@
 # Configure Here Core
 
+{% hint style="warning" %}
+This integration requires **SDA v25.3.**
+{% endhint %}
+
+### Configure the connection to Here Core (formerly[ OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter))
+
+This integration requires configuration parameters in the SDA config file (Symphony.json). \
+Deploying this configuration file to the end users machines is usually automated through the packaging of new SDA installers or through IT policies, and is handled by your IT team.&#x20;
+
 {% hint style="info" %}
-Here Core is available as **Beta**, and is only qualified for UAT environments. General Availability and access in Production is planned for **March 2025.**
+In the future, this configuration will be available through your  Admin Portal.&#x20;
 {% endhint %}
 
-Because the connector to Here Core (formerly [OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter)) is only available as Beta, it currently requires a **specific version of the Symphony Messaging Desktop App (SDA)**, and is only supported in environments where Here Core has been switched on. The Beta connector also requires specific configuration.&#x20;
-
-These limitations will be waived as soon as our connector is generally available.&#x20;
-
-{% hint style="success" %}
-Some of the configuration steps below will not be required anymore once the Here Core connector is released to production (March 2025)
-{% endhint %}
-
-### Install the custom SDA version
-
-* Get in touch with us to get access to the installer, and to get Here Core enabled on your UAT Pod.
-* Quit SDA if it is running.
-* Launch the new installer. It will uninstall your current SDA version, then install the new version.
-
-### Configure the connection to Here Core
+For testing purposes and in development environments, you can configure the integration manually, as described below.&#x20;
 
 Locate the `Symphony.json` config file on your desktop, by **right clicking** your Symphony desktop icon and selecting **Open file location**, then opening the **config** folde&#x72;**.**
 
@@ -120,25 +115,12 @@ Edit the following propertie&#x73;**:**
 * Edit the `manifest` property to target your symphony.exe.
 * The `appId` should match the `uuid` defined in your SDA config file.
 
-### Launch SDA and target your UAT pod
+### Launch SDA
 
-* Launch the Symphony Desktop App.
-* Open the developer tools (`Ctrl` + `Shift` + `i`).
-* Open the developer console.
-* Type the following line (replacing your UAT pod sub domain where appropriate) then press `Enter`.
-
-```
-location = "https://UATPODSUBDOMAIN.symphony.com"
-```
-
-This will load the Symphony webapp from your UAT environment, where Here Core has been switched on. You can now close the developer console.
+Launch the Symphony Desktop App as normal.
 
 If your Here Core platform is running, you should see a toast notification confirming that Symphony successfully connected to Here Core .
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-If SDA auto update is enabled in your UAT pod, you may get prompts to install a new SDA version. Don't do it, otherwise you will need to reinstall the SDA installer that embeds Here Core.
-{% endhint %}
 
 If you need help, you can have a look at our [Troubleshooting guide](troubleshooting.md).
