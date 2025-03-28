@@ -1,11 +1,11 @@
 # Overview of REST API
 
-The Symphony REST API acts as a secure interface between your Symphony Bot and Symphony's components. Symphony's architecture for bots comprises three components: the **Symphony Pod**, the **API Agent** and the **Key Manager**.
+The Symphony Messaging REST API acts as a secure interface between your Symphony Messaging Bot and Symphony Messaging's components. Symphony's architecture for bots comprises three components: the **Symphony Messaging Pod**, the **API Agent** and the **Key Manager**.
 
-The Symphony REST API is spread out across these components according to the type of API being called.
+The Symphony Messaging REST API is spread out across these components according to the type of API being called.
 
 {% hint style="info" %}
-While Bots can call the Symphony API directly, Symphony's dedicated BDK and WDK toolkits provide language-specific API bindings that enable bot developers to easily call the API directly from code:
+While Bots can call the Symphony Messaging API directly, Symphony Messaging's dedicated BDK and WDK toolkits provide language-specific API bindings that enable bot developers to easily call the API directly from code:
 
 * The [Java Bot Developer Kit](../../dev-tools/bdk-java/) (Java BDK)
 * The [Python Bot Developer Kit](../../dev-tools/bdk-python.md) (Python BDK)
@@ -21,7 +21,7 @@ Depending on your pod or agent version, a newly introduced endpoint may not yet 
 
 ## REST API Architecture
 
-To learn more about how bots securely interact with Symphony's three components, continue onto the REST API Architecture guide below:
+To learn more about how bots securely interact with Symphony Messaging's three components, continue onto the REST API Architecture guide below:
 
 {% content-ref url="rest-api-architecture.md" %}
 [rest-api-architecture.md](rest-api-architecture.md)
@@ -37,7 +37,7 @@ To learn more about how bots can make authentication and administrative calls su
 
 ## Key Manager API
 
-To learn more about how bots can authenticate and encrypt messages on Symphony, continue onto the Key Manager API guide below:
+To learn more about how bots can authenticate and encrypt messages on Symphony Messaging, continue onto the Key Manager API guide below:
 
 {% content-ref url="key-manager-api.md" %}
 [key-manager-api.md](key-manager-api.md)
@@ -45,7 +45,7 @@ To learn more about how bots can authenticate and encrypt messages on Symphony, 
 
 ## Agent API
 
-To learn more about how bots can send and receive encrypted messages on Symphony, continue onto the Agent API guide below:
+To learn more about how bots can send and receive encrypted messages on Symphony Messaging, continue onto the Agent API guide below:
 
 {% content-ref url="agent-api.md" %}
 [agent-api.md](agent-api.md)
@@ -53,7 +53,7 @@ To learn more about how bots can send and receive encrypted messages on Symphony
 
 ## REST API Reference
 
-For the full Symphony API reference continue here:
+For the full Symphony Messaging API reference continue here:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

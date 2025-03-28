@@ -72,7 +72,7 @@ keytool -import -file my_cert_file -alias my_cert_alias -keystore my_truststore 
 
 ### Automatic: Convenience Shell Script
 
-You may use the following convenience shell script to automatically build out a new truststore based on a list of servers. Please remember to include all possible connections that your bot requires. This may include: all Key Manager servers, all API Agent servers, the Symphony pod, any other third-party or internal endpoints that the bot will interact with.
+You may use the following convenience shell script to automatically build out a new truststore based on a list of servers. Please remember to include all possible connections that your bot requires. This may include: all Key Manager servers, all API Agent servers, the Symphony Messaging pod, any other third-party or internal endpoints that the bot will interact with.
 
 ```bash
 #!/bin/bash

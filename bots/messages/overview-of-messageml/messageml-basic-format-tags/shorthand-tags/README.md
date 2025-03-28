@@ -8,7 +8,7 @@ MessageML supports the following tags to embed additional information into messa
 
 ## Examples
 
-Here after you can find an example of a message sent by a bot and containing these tags specific to Symphony as well as the structure of the messageML sent:
+Here after you can find an example of a message sent by a bot and containing these tags specific to Symphony Messaging as well as the structure of the messageML sent:
 
 #### Mentions
 

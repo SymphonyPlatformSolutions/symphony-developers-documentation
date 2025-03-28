@@ -1,14 +1,14 @@
 # Elements Interactive Forms
 
-Symphony Elements Forms enable bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more. This allows bots to interact with users in a very easy and guided way.
+Symphony Messaging Elements Forms enable bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more. This allows bots to interact with users in a very easy and guided way.
 
-By reusing our pre-designed standard UX component libraries, Elements provide developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony. To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint with your bot, using the MessageML format.
+By reusing our pre-designed standard UX component libraries, Elements provide developers with out-of-the-box tools to easily create interactive bot messages that look and feel like they belong in Symphony Messaging. To use the Elements, you just need to call the [Create Message](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint with your bot, using the MessageML format.
 
 Here after, you will find a brief introduction of how to send Elements, then an update of the message flow for Elements, and finally the form specifications.
 
 ## Sending Elements
 
-To start using Symphony Elements, you first need to create a form element using the **`<form>` MessageML tag. The form element can be considered the "frame" of a message**, containing elements that will be sent by the bot and subsequently read by the datafeed.
+To start using Symphony Messaging Elements, you first need to create a form element using the **`<form>` MessageML tag. The form element can be considered the "frame" of a message**, containing elements that will be sent by the bot and subsequently read by the datafeed.
 
 You can see below an example of how a user can interact with a form that was sent by a bot, as well as the messageML structure of the message that was sent by the bot, and the payload that is generated and therefore delivered to the bot via the datafeed, containing the information completed and submitted by the user. Please use the tabs to navigate between these 3 documents.
 
@@ -107,7 +107,7 @@ You can see below an example of how a user can interact with a form that was sen
 * Once the user has submitted the form, it becomes disabled. However, if the conversation is reloaded, the form resets and the user is able to send a new reply. If your workflow requires a single reply per user, please implement this control on the Bot side.
 {% endhint %}
 
-**To begin leveraging Symphony Elements in your bot workflows continue onto our Available Elements that you can find in the subpages.**
+**To begin leveraging Symphony Messaging Elements in your bot workflows continue onto our Available Elements that you can find in the subpages.**
 
 ## **Message** Flow (for Forms)
 
@@ -117,7 +117,7 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 
 ![](<../../../../.gitbook/assets/Bot Message Workflow@3x.svg>)
 
-1. **A Bot sends a message with Symphony Elements in a form**
+1. **A Bot sends a message with Symphony Messaging Elements in a form**
 2. **The message/from is visible to users.  Users interact with the elements**
 3. **Once submitted, the data is submitted to the bot**
 4. **Bots can access the data, by reading the datafeed.**&#x20;
@@ -148,11 +148,11 @@ Forms are represented by the **\<form>** tag, as you can see in the examples abo
 
 The following example shows three forms being used as follows:
 
-* The first form (_default_) shows how Symphony users interact with a form, and how the Elements are disabled once the form is submitted.
+* The first form (_default_) shows how Symphony Messaging users interact with a form, and how the Elements are disabled once the form is submitted.
 * The second form (_multi-submit-reset_) shows how to create a form that can be **submitted several times** and which **resets** all its Elements to their default value once the user submits it. You note the Elements are first disabled while loading, then the button shows the user the form has been submitted, before the form is enabled back to its default value for the user to submit it again.
 * The third form (_multi-submit-no-reset_) shows how to create a form that can be **submitted several times** and which **keeps** last submitted values once the user submits it. You note the Elements are first disabled while loading, then the button shows the user the form has been submitted, before the form is enabled back to its last submitted value for the user to submit it again.
 
-![](../../../../.gitbook/assets/elements\_form.gif)
+![](../../../../.gitbook/assets/elements_form.gif)
 
 {% tabs %}
 {% tab title="MessageML" %}

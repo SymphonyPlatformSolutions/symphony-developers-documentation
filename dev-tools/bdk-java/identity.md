@@ -2,12 +2,12 @@
 
 ## Overview
 
-By default, Symphony provides secure authentication and authorization for all users. However, if you already have an identity provider that authenticates and authorizes users for resources and you want those resources served by a bot, you will need to implement this integration yourself. This tutorial seeks to demonstrate one such implementation using an OAuth-like flow.
+By default, Symphony Messaging provides secure authentication and authorization for all users. However, if you already have an identity provider that authenticates and authorizes users for resources and you want those resources served by a bot, you will need to implement this integration yourself. This tutorial seeks to demonstrate one such implementation using an OAuth-like flow.
 
 ## Components and Flow
 
 1. Chat Bot: Listens to commands from the user and contacts the other components
-2. Authorization Server: A server that integrates with the Identity Provider. This server is trusted with privileged access to Symphony REST APIs.
+2. Authorization Server: A server that integrates with the Identity Provider. This server is trusted with privileged access to Symphony Messaging REST APIs.
 3. Resource Server: A server where requested resources are served from. This server does not trust the bot to make arbitrary calls for user-owned data.
 
 This sequence diagram describes the flow of requests between the various components.
@@ -53,7 +53,7 @@ openssl genrsa -out sign-private.pem 2048
 openssl rsa -in sign-private.pem -outform PEM -pubout -out sign-public.pem
 ```
 
-Add the keys to your project and list their paths in your `application.yaml` file. We will also disable the BDK's datafeed since this server will initiate calls from HTTP endpoints rather than Symphony events.
+Add the keys to your project and list their paths in your `application.yaml` file. We will also disable the BDK's datafeed since this server will initiate calls from HTTP endpoints rather than Symphony Messaging events.
 
 {% code title="application.yaml" %}
 ```yaml

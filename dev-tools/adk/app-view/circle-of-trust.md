@@ -20,7 +20,7 @@ This guide will use a shared extension app entry that is available for everyone 
 
 ## User Identity
 
-In order to obtain identity information of the current user, an extension app needs to perform an authentication call and validation loop as part of the [Circle of Trust process](../../../ext-apps/app-authentication/circle-of-trust-authentication.md). This requires a backend service to call [Symphony REST APIs](https://developers.symphony.com/restapi/main/application-authentication/application-rsa-authentication) so as to secure the required private key. You can choose to manually create your own REST API client and link the endpoint contracts to the ADK configuration, but this guide will demonstrate how to use BDK to ease the process.
+In order to obtain identity information of the current user, an extension app needs to perform an authentication call and validation loop as part of the [Circle of Trust process](../../../ext-apps/app-authentication/circle-of-trust-authentication.md). This requires a backend service to call [Symphony Messaging REST APIs](https://rest-api.symphony.com/main/application-authentication/application-rsa-authentication) so as to secure the required private key. You can choose to manually create your own REST API client and link the endpoint contracts to the ADK configuration, but this guide will demonstrate how to use BDK to ease the process.
 
 ## Create BDK Project
 
@@ -172,9 +172,9 @@ We can now start the app using:
 npm start
 ```
 
-## Load the App in Symphony
+## Load the App in Symphony Messaging
 
-Instead of performing bundle injection as before, load Symphony normally now. Once Symphony is loaded, open the Marketplace using the left rail. Locate your App and install it. If you are using the developer sandbox, the app's name is **Localhost 4000**.
+Instead of performing bundle injection as before, load Symphony Messaging normally now. Once Symphony Messaging is loaded, open the Marketplace using the left rail. Locate your App and install it. If you are using the developer sandbox, the app's name is **Localhost 4000**.
 
 ## Test the App
 

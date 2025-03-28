@@ -2,15 +2,15 @@
 
 ## What is a Bot?
 
-A bot on Symphony Messaging can be thought of as an automated version of a human performing specific tasks in Symphony chats. Most actions that an end user is able to perform in Symphony can be performed by a bot as well.
+A bot on Symphony Messaging can be thought of as an automated version of a human performing specific tasks in Symphony Messaging chats. Most actions that an end user is able to perform in Symphony Messaging can be performed by a bot as well.
 
 Each bot has a unique identity represented by a service account that has similar features to an end-user account such as a name and avatar.
 
-Symphony Bots enable end users to benefit from innovative **workflows** and timesaving **automations** built on top of the Symphony platform.
+Symphony Messaging Bots enable end users to benefit from innovative **workflows** and time-saving **automations** built on top of the Symphony Messaging platform.
 
 ## How do Bots create workflows and automations?
 
-The answer lies in Symphony's open REST API. Once authenticated, Symphony bots can leverage the APIs that enables bots to execute administrative functions such as creating chatrooms, managing users, and facilitating cross-pod connections. In addition, our APIs allow bots to perform messaging functions such as sending and receiving messages and signals.
+The answer lies in Symphony Messaging's open REST API. Once authenticated, Symphony Messaging bots can leverage the APIs that enables bots to execute administrative functions such as creating chatrooms, managing users, and facilitating cross-pod connections. In addition, our APIs allow bots to perform messaging functions such as sending and receiving messages and signals.
 
 For a full overview of the Symphony Messaging REST APIs continue here:
 
@@ -27,7 +27,7 @@ Before you begin your Bot development journey, it is important to consider the f
 Before building your Bot, it's important that you identify the use cases that this Bot will serve. In other words, identify the ways in which this Bot will increase productivity, add meaningful color to your daily tasks, centralize information, reduce business pain points, and make working simpler for its users. To easily identify valuable use cases, ask yourself the following:
 
 * Are there any tasks in my daily workflow that are recurring and can be automated to assist me in my job?
-* Are there numerous sources of information that I check daily that can be centralized inside of Symphony?
+* Are there numerous sources of information that I check daily that can be centralized inside of Symphony Messaging?
 * Are there any tasks in my daily workflow that require manually sifting through large amounts of data?
 * Is there tedious data validation or compliance checks that I must perform when dealing with colleagues, clients, customers, or third-party vendors?
 * Do I have to manually collect and carefully collate unstructured data from colleagues, clients, customers, or third-party vendors?
@@ -41,7 +41,7 @@ The type of Bot you build will depend on who is using and interacting with it. T
 * Are the users of my bot internal or external counter-parties?
 * Will the bot be interacting with front-office or back-office employees mostly?
 * Is your bot interacting with a technical audience or business audience?
-* Will users interact with your bot via Symphony mobile or on the desktop?
+* Will users interact with your bot via the Symphony Messaging Mobile App or on the desktop?
 * What languages does your audience speak?
 * Will your bot be performing bot-to-bot communication?
 

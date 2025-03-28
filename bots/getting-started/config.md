@@ -1,6 +1,6 @@
 # Configuration
 
-The Symphony Generator creates a basic configuration file that assumes a fully cloud-hosted Symphony pod architecture. In this scenario, the pod, key manager and agent are all hosted on the same domain e.g. `develop2.symphony.com`. If your pod architecture is different and you have other connectivity requirements like a network proxy, you will need to add those options to your configuration file.
+The Symphony Messaging Generator creates a basic configuration file that assumes a fully cloud-hosted Symphony Messaging pod architecture. In this scenario, the pod, key manager and agent are all hosted on the same domain e.g. `develop2.symphony.com`. If your pod architecture is different and you have other connectivity requirements like a network proxy, you will need to add those options to your configuration file.
 
 {% hint style="info" %}
 If you are using the BDK for Java's Spring Starter, the BDK configuration is embedded within Spring's configuration file under the bdk section

@@ -1,6 +1,6 @@
 # App Developer Kit
 
-The ADK is the modern toolkit used to build extension apps for Symphony.
+The ADK is the modern toolkit used to build extension apps for Symphony Messaging.
 
 Choose from one of the following guides depending on the type of extension app you require. These guides will help you get started building your extension app project from scratch.
 

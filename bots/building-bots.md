@@ -8,7 +8,7 @@ description: >-
 
 ### 1. Plan Your Bot
 
-Symphony Bots can leverage the Symphony REST API to create innovative workflows and timesaving automations. Depending on your desired workflow, there are many different development avenues available for you and your development team. Understanding these different development options and different APIs available is key to creating a successful bot and positive user experience. Learn more about the different types of Symphony Bots and APIs here:
+Symphony Messaging Bots can leverage the Symphony Messaging REST API to create innovative workflows and timesaving automations. Depending on your desired workflow, there are many different development avenues available for you and your development team. Understanding these different development options and different APIs available is key to creating a successful bot and positive user experience. Learn more about the different types of Symphony Messaging Bots and APIs here:
 
 {% content-ref url="planning-your-bot/" %}
 [planning-your-bot](planning-your-bot/)
@@ -16,7 +16,7 @@ Symphony Bots can leverage the Symphony REST API to create innovative workflows 
 
 ### 2. Leverage our Tools
 
-Symphony has built numerous tools in order to streamline Symphony Bot Development. Our rich suite of developer tools offers centralized configuration and authentication protocols, provides out of the box API bindings, convenient error handling, datafeed management, and ensures that your Bot is built using Symphony's best practices.&#x20;
+Symphony has built numerous tools in order to streamline Symphony Messaging Bot Development. Our rich suite of developer tools offers centralized configuration and authentication protocols, provides out of the box API bindings, convenient error handling, datafeed management, and ensures that your Bot is built using Symphony's best practices.&#x20;
 
 Using an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots has never been easier.
 
@@ -32,7 +32,7 @@ Learn more about how you can get started with our developer tools here:
 
 ### 3.  Authentication
 
-At Symphony, security is always first. In order to leverage Symphony's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
+At Symphony, security is always first. In order to leverage Symphony Messaging's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
 
 {% content-ref url="authentication/" %}
 [authentication](authentication/)
@@ -48,7 +48,7 @@ The last step is to add custom business logic to your Bot. Begin learning about 
 
 ### 5.  Become a Certified Developer
 
-Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony skills, technical knowledge, and expertise. Learn more about how you can become a Certified Developer today!
+Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony Messaging skills, technical knowledge, and expertise. Learn more about how you can become a Certified Developer today!
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

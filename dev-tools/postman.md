@@ -4,7 +4,7 @@ description: Use Postman to test our APIs
 
 # Postman
 
-Using Postman to invoke Symphony APIs allows you to quickly learn about the capabilities of Symphony's API suite as well as debug or troubleshoot any issues you may face when running bots or other integrations.
+Using Postman to invoke Symphony Messaging APIs allows you to quickly learn about the capabilities of Symphony Messaging's API suite as well as debug or troubleshoot any issues you may face when running bots or other integrations.
 
 ## Prerequisites
 
@@ -19,13 +19,13 @@ Before continuing, you will need the following:
 * A generated [RSA key pair](../bots/authentication/rsa-authentication.md)
 * A service account created on your pod with the public key from above loaded
 
-## Symphony Postman Collection
+## Symphony Messaging Postman Collection
 
-Click on the button below to launch Postman with the Symphony REST APIs collection and a sample environment.
+Click on the button below to launch Postman with the Symphony Messaging REST APIs collection and a sample environment.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/symphony-devx/workspace/symphony/collection/15539217-e9bea678-8642-47da-adf7-a33c08c84b1d?ctx=documentation)
 
-If the button above does not work for you, download the following archive containing the Symphony Rest APIs collection and a sample environment configuration.
+If the button above does not work for you, download the following archive containing the Symphony Messaging Rest APIs collection and a sample environment configuration.
 
 1. [Download Collection and Environment Here](https://github.com/symphonyoss/symphony-api-spec/tree/master/postman)
 2. Launch Postman

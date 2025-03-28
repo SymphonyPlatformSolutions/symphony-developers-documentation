@@ -1,6 +1,6 @@
 # Build an Extension App with Message Renderers
 
-This guide will provide an overview on how to use the Symphony App Developer Kit (ADK) to build an extension app that handles custom message rendering. This app will look for incoming messages that match a specific type and replace their default rendering with a custom one.
+This guide will provide an overview on how to use the Symphony Messaging App Developer Kit (ADK) to build an extension app that handles custom message rendering. This app will look for incoming messages that match a specific type and replace their default rendering with a custom one.
 
 {% hint style="info" %}
 **Prerequisite**: Install NodeJS first, either [directly](https://nodejs.org) or via [nvm](https://github.com/nvm-sh/nvm)
@@ -17,7 +17,7 @@ npm init -y
 
 ## Install Dependencies
 
-Install the Symphony ADK along with the webpack bundler.
+Install the Symphony Messaging ADK along with the webpack bundler.
 
 ```bash
 npm install @symphony-ui/adk
@@ -143,12 +143,12 @@ npm start
 This starts a local development server on `https://localhost:4000`. Note that this is a TLS-enabled site because all extension apps need to be loaded from TLS-enabled sites. However, because this is a development server, the certificate is self-signed and not trusted by any browser.
 
 {% hint style="warning" %}
-Visit https://localhost:4000 in your browser to accept the security warning about the untrusted self-signed certificate. Skipping this step will cause the extension app to not load within Symphony in the next step.
+Visit https://localhost:4000 in your browser to accept the security warning about the untrusted self-signed certificate. Skipping this step will cause the extension app to not load within Symphony Messaging in the next step.
 {% endhint %}
 
-## Load the App in Symphony
+## Load the App in Symphony Messaging
 
-There are 2 ways to load an extension app into Symphony. For development purposes, we will be using the bundle injection method to temporarily load the app into the current session.
+There are 2 ways to load an extension app into Symphony Messaging . For development purposes, we will be using the bundle injection method to temporarily load the app into the current session.
 
 {% hint style="info" %}
 Beyond local development testing, you should get your pod administrator to create a corresponding app entry in the Admin Portal by uploading the `bundle.json` file.
@@ -185,16 +185,8 @@ bdk.messages().send(streamId, message);
 
 Once the message is sent, you should see that it renders as an action button. If the extension app is not installed, users will see the fallback text ("Hello") instead. You should use this text to hint to users that they should install your extension app in order to access further interactivty.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/2023-09-06_18-07-25.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/2023-09-06_18-07-25.png" alt=""><figcaption></figcaption></figure></div>
 
 Clicking on the button then lauches a dialog with the defined content.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/2023-09-06_18-10-43.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/2023-09-06_18-10-43.png" alt=""><figcaption></figcaption></figure></div>

@@ -1,8 +1,8 @@
 # Overview of Agent API
 
-## Symphony Agent APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
+## Symphony Messaging Agent APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 
-The Symphony Agent is responsible for encryption and decryption of messages and content sent to and from a bot. As a result, the Agent API is used to build applications that send and receive messages and content. The following guide includes API collections that exist on the Agent:
+The Symphony Messaging Agent is responsible for encryption and decryption of messages and content sent to and from a bot. As a result, the Agent API is used to build applications that send and receive messages and content. The following guide includes API collections that exist on the Agent:
 
 ## Message APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 
@@ -27,7 +27,7 @@ The Datafeed APIs create and manage real-time event streams from the Pod to your
 * Create Datafeed
 * Read Datafeed
 
-For more information on how Symphony Datafeeds allow your bot to create rich and interactive workflows, navigate here:
+For more information on how Symphony Messaging Datafeeds allow your bot to create rich and interactive workflows, navigate here:
 
 {% content-ref url="../datafeed/" %}
 [datafeed](../datafeed/)
@@ -49,7 +49,7 @@ The full list of Signals API endpoints and their corresponding reference guide c
 
 ## Basic APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 
-This group of APIs perform testing and obtain diagnostics regarding the health of Symphony components. These APIs can be used to do the following:
+This group of APIs perform testing and obtain diagnostics regarding the health of Symphony Messaging components. These APIs can be used to do the following:
 
 * Perform a component health check
 * Obtain Agent Info

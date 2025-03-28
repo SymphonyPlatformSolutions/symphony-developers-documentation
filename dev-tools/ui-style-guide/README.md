@@ -1,14 +1,14 @@
 # UI Style Guide
 
-This document outlines the resources and capabilities of the Symphony Platform that are available to you to shape the user interface of your application.
+This document outlines the resources and capabilities of the Symphony Messaging Platform that are available to you to shape the user interface of your application.
 
-Symphony's design library, Tempo UI, encompasses Symphony's unique theming, performance considerations, and more.
+Symphony Messaging's design library, Tempo UI, encompasses Symphony Messaging's unique theming, performance considerations, and more.
 
 For more information on how to build an extension app, refer to our section on [Extension Applications](../../ext-apps/building-extension-apps.md).
 
 ## Overview
 
-Symphony uses a standard style sheet for all external apps. Link to the compiled CSS file using the code shown below:
+Symphony Messaging uses a standard style sheet for all external apps. Link to the compiled CSS file using the code shown below:
 
 ```markup
 <link rel="stylesheet" type="text/css" href="https://cdn.symphony.com/resources/api/v2.1/styles/symphony-external-app.css" />
@@ -39,11 +39,11 @@ This example shows how you can apply the styles:
 
 This image shows the result of the above code example:
 
-![](../../.gitbook/assets/85c0431-Screen\_Shot\_2017-06-06\_at\_3.22.38\_PM.png)
+![](../../.gitbook/assets/85c0431-Screen_Shot_2017-06-06_at_3.22.38_PM.png)
 
 ## Personalization
 
-Users of Symphony can personalize their user interface by choosing between a variety of modes (day/night), contrast level, and font sizes.
+Symphony Messaging users can personalize their user interface by choosing between a variety of modes (day/night), contrast level, and font sizes.
 
 To make your application respect the user’s font, add one of the font classes to the `<html>` tag of your application:
 
@@ -59,10 +59,10 @@ To make your application respect the user’s mode, add one of the theme classes
 * dark
 * light
 
-You should leave the background color of your application as transparent to inherent all the application states from Symphony (for example, by doing this, if the user focuses your application, the background color will be changed, depending on the user's theme).
+You should leave the background color of your application as transparent to inherent all the application states from Symphony Messaging (for example, by doing this, if the user focuses your application, the background color will be changed, depending on the user's theme).
 
 The user’s preferences are returned in the Extension API theme object.
 
 ## Typography
 
-Symphony uses a modified version of font named _Lato_, which is an open source font hosted by Google. Because we have modified _Lato_ to include a specific set of glyphs for fractions commonly used by our customers, our stylesheet includes a modified version called _SymphonyLato_ that is hosted by Symphony. This font is automatically applied to your body tag when you include the stylesheet.
+Symphony Messaging uses a modified version of font named _Lato_, which is an open source font hosted by Google. Because we have modified _Lato_ to include a specific set of glyphs for fractions commonly used by our customers, our stylesheet includes a modified version called _SymphonyLato_ that is hosted by Symphony Messaging. This font is automatically applied to your body tag when you include the stylesheet.

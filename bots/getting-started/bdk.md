@@ -1,20 +1,20 @@
 ---
 description: >-
   The Bot Developer Kit (BDK) is the preferred tooling for Java or Python
-  developers to get started building bots on Symphony Messaging
+  developers to get started building bots on Symphony Messaging.
 ---
 
 # Getting Started with BDK
 
 ## Generate your Bot&#x20;
 
-The [Symphony Generator](../../dev-tools/generator.md) offers a fast way to bootstrap your Symphony BDK project in Java and Python.
+The [Symphony Messaging Generator](../../dev-tools/generator.md) offers a fast way to bootstrap your Symphony Messaging BDK project in Java and Python.
 
 {% hint style="info" %}
 **Prerequisite**: Install NodeJS first, either [directly](https://nodejs.org) or via [nvm](https://github.com/nvm-sh/nvm)
 {% endhint %}
 
-First, install yeoman and the Symphony Generator. Then, create a directory for your new bot project. Finally, launch the generator.
+First, install yeoman and the Symphony Messaging Generator. Then, create a directory for your new bot project. Finally, launch the generator.
 
 ```bash
 $ npm i -g yo @finos/generator-symphony
@@ -164,7 +164,7 @@ And run your bot with: python3 -m src
 
 ## Configuration
 
-The Symphony Generator creates a basic configuration file that works for fully cloud-hosted pods. If you have additional network requirements like a web proxy or an on-premise Key Manager and API Agent, refer to the complete configuration guide below for more details.
+The Symphony Messaging Generator creates a basic configuration file that works for fully cloud-hosted pods. If you have additional network requirements like a web proxy or an on-premise Key Manager and API Agent, refer to the complete configuration guide below for more details.
 
 {% content-ref url="config.md" %}
 [config.md](config.md)
@@ -172,7 +172,7 @@ The Symphony Generator creates a basic configuration file that works for fully c
 
 ## Create Service Account
 
-For any bot to work, it requires a service account with a matching username and public key. The Symphony Generator creates a configuration file based on the answers supplied, including the bot username and the path to the generated key pair. These can be changed by modifying the `config.yaml` file. If you do not already have a service account set up, follow the instructions on this page to continue.
+For any bot to work, it requires a service account with a matching username and public key. The Symphony Messaging Generator creates a configuration file based on the answers supplied, including the bot username and the path to the generated key pair. These can be changed by modifying the `config.yaml` file. If you do not already have a service account set up, follow the instructions on this page to continue.
 
 {% content-ref url="creating-a-bot-user.md" %}
 [creating-a-bot-user.md](creating-a-bot-user.md)

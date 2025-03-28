@@ -6,7 +6,7 @@
 
 ## Overview
 
-The BDK for Java is Symphony's preferred tooling for Java developers to build bots. It is a library of tools and API bindings that provides simplified configuration and authentication, intuitive message and room management, customizable message templating and an activities API that makes it easy to build bot workflows.
+The BDK for Java is Symphony Messaging's preferred tooling for Java developers to build bots. It is a library of tools and API bindings that provides simplified configuration and authentication, intuitive message and room management, customizable message templating and an activities API that makes it easy to build bot workflows.
 
 * The BDK for Java Github repo can be found here: [@finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
 * The BDK for Java Certification course can be found here: [learn.symphony.com/bundles/java-bot-developer](https://learn.symphony.com/bundles/java-bot-developer)
@@ -19,7 +19,7 @@ The BDK for Java is Symphony's preferred tooling for Java developers to build bo
 
 ## Authentication
 
-Once you have your bot and Symphony environment properly configured, the generated code provides an out-of-the-box implementation for authenticating your bot:
+Once you have your bot and Symphony Messaging environment properly configured, the generated code provides an out-of-the-box implementation for authenticating your bot:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -28,10 +28,10 @@ Once you have your bot and Symphony environment properly configured, the generat
 {% endtab %}
 {% endtabs %}
 
-By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot. Once authenticated, your bot is ready to leverage the REST APIs in order to create rich automations and workflows on Symphony.
+By instantiating a new `SymphonyBdk` instance with your `config.yaml` file, the BDK loads in your config and authenticates your bot. Once authenticated, your bot is ready to leverage the REST APIs in order to create rich automations and workflows on Symphony Messaging.
 
 {% hint style="info" %}
-Note: You must have a corresponding service or bot account setup on your Symphony instance before authenticating. For more information navigate to the [Creating a Bot User](../../bots/getting-started/creating-a-bot-user.md) guide.
+Note: You must have a corresponding service or bot account setup on your Symphony Messaging instance before authenticating. For more information navigate to the [Creating a Bot User](../../bots/getting-started/creating-a-bot-user.md) guide.
 {% endhint %}
 
 ### OBO Authentication
@@ -108,7 +108,7 @@ When a user sends a bot a message, the bot will pick up the event from the dataf
 {% endtab %}
 {% endtabs %}
 
-Below is a full list of methods provided by the `RealTimeEventListener` class and their corresponding eventTypes. Implement the following methods in order to listen for a given Symphony event:
+Below is a full list of methods provided by the `RealTimeEventListener` class and their corresponding eventTypes. Implement the following methods in order to listen for a given Symphony Messaging event:
 
 | Method                           | Event Type                 |
 | -------------------------------- | -------------------------- |
@@ -129,7 +129,7 @@ Below is a full list of methods provided by the `RealTimeEventListener` class an
 | `onSymphonyElementsAction()`     | SYMPHONYELEMENTSACTION     |
 | `onSharedPost()`                 | SHAREDPOST                 |
 
-For more information on the Symphony datafeed continue here:
+For more information on the Symphony Messaging datafeed continue here:
 
 {% content-ref url="../../bots/datafeed/" %}
 [datafeed](../../bots/datafeed/)
@@ -137,15 +137,15 @@ For more information on the Symphony datafeed continue here:
 
 ## Orchestrating Workflows with BDK for Java
 
-A Symphony workflow can be thought of as a sequence of operations or a repeatable pattern of activities that are organized together in order to transform data, provide a service, or process information. Each of these operations or activities may be completed by a single user, shared between a bot and a user, or shared between multiple actors including bots, users, and even third party systems.
+A Symphony Messaging workflow can be thought of as a sequence of operations or a repeatable pattern of activities that are organized together in order to transform data, provide a service, or process information. Each of these operations or activities may be completed by a single user, shared between a bot and a user, or shared between multiple actors including bots, users, and even third party systems.
 
-By providing an intuitive Activities API, the BDK makes it simple to define a set of discrete operations or activities for different actors in your system to execute. Ultimately, these activities constitute the building blocks for a powerful Symphony workflow automation.
+By providing an intuitive Activities API, the BDK makes it simple to define a set of discrete operations or activities for different actors in your system to execute. Ultimately, these activities constitute the building blocks for a powerful Symphony Messaging workflow automation.
 
-Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  The BDK provides a powerful Workflow API (coming soon) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony workflow.
+Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  The BDK provides a powerful Workflow API (coming soon) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony Messaging workflow.
 
 ## Activities API
 
-BDK for Java provides an Activities API, an interface that makes it easy to manage user-to-bot interactions or activities. Specifically, the Activities API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony events. The methods and logic provided by the Activities API allows for granular control over the entire user-to-bot interaction. This encapsulated logic is easily reused, forming the discrete building blocks of a Symphony workflow automation.
+BDK for Java provides an Activities API, an interface that makes it easy to manage user-to-bot interactions or activities. Specifically, the Activities API provides easy access to message and room context, initiator metadata, and an intuitive way to interact with the datafeed, making it easy for bots to listen and reply to different Symphony Messaging events. The methods and logic provided by the Activities API allows for granular control over the entire user-to-bot interaction. This encapsulated logic is easily reused, forming the discrete building blocks of a Symphony Messaging workflow automation.
 
 ### Registering Activities
 

@@ -96,7 +96,7 @@
 
 ## Developer Tools <a href="#dev-tools" id="dev-tools"></a>
 
-* [Symphony Generator](dev-tools/generator.md)
+* [Symphony Messaging Generator](dev-tools/generator.md)
 * [Bot Developer Kit for Java](dev-tools/bdk-java/README.md)
   * [Build a Conversational Bot](dev-tools/bdk-java/conversational.md)
   * [Build an Interactive Bot](dev-tools/bdk-java/interactive.md)

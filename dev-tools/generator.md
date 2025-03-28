@@ -1,10 +1,10 @@
-# Symphony Generator
+# Symphony Messaging Generator
 
 {% hint style="info" %}
 **Prerequisite**: Install NodeJS first, either [directly](https://nodejs.org/en) or via [nvm](https://github.com/nvm-sh/nvm). You can also use other package managers like [bun](https://bun.sh) or [yarn](https://yarnpkg.com), which the generator will attempt to use before falling back to npm.
 {% endhint %}
 
-The Symphony Generator is a yeoman-based CLI tool that can be used to quickly generate Symphony bot, app and workflow project scaffolds. You can create example projects that use our developer toolkits:
+The Symphony Generator is a yeoman-based CLI tool that can be used to quickly generate Symphony Messaging bot, app and workflow project scaffolds. You can create example projects that use our developer toolkits:
 
 * BDK for Java
 * BDK for Python
@@ -13,7 +13,7 @@ The Symphony Generator is a yeoman-based CLI tool that can be used to quickly ge
 
 ## Quick Start
 
-Install yeoman and the Symphony Generator.
+Install yeoman and the Symphony Messaging Generator.
 
 {% tabs %}
 {% tab title="npm" %}

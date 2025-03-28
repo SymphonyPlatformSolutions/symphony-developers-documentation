@@ -1,19 +1,19 @@
 ---
-description: Welcome, Symphony Developer!
+description: Welcome, Symphony Messaging Developer!
 ---
 
 # Start Your Developer Journey
 
-Here you will learn about all the ways to streamline work using integrated bots and apps. By leveraging Symphony's open APIs, developers can create innovative Bots and workflows, save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
+Here you will learn about all the ways to streamline work using integrated bots and apps. By leveraging Symphony Messaging's open APIs, developers can create innovative Bots and workflows, save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
 
-Keep reading to learn about core Symphony concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
+Keep reading to learn about core Symphony Messaging concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
 
 ## Getting Started
 
 It's time to get started. Navigate to one of the following guides to kick off your developer journey today!
 
-* [**Building Bots on Symphony**](./#building-bots-on-symphony)
-* [**Building Extension Applications on Symphony**](./#building-extension-applications-on-symphony)
+* [**Building Bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
+* [**Building Extension Applications on Symphony Messaging**](./#building-extension-applications)&#x20;
 * [**Become a Certified Developer**](developer-certification/developer-certification.md)
 * [**Developer Tools**](./#developer-tools)
 * [**REST API Reference**](./#symphony-rest-api)
@@ -63,7 +63,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 ## Messaging REST API <img src=".gitbook/assets/Symphony API-large.png" alt="" data-size="line">
 
-In depth documentation and reference guide for the Symphony REST API:
+In depth documentation and reference guide for the Symphony Messaging REST API:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

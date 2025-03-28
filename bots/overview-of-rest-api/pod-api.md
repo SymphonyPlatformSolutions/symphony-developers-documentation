@@ -1,8 +1,8 @@
 # Overview of Pod API
 
-## Symphony Pod APIs <img src="../../.gitbook/assets/Symphony Pod.png" alt="" data-size="line">
+## Symphony Messaging Pod APIs <img src="../../.gitbook/assets/Symphony Pod.png" alt="" data-size="line">
 
-The Symphony Pod API is used to build tools in order to manage and administer Symphony for your organization. The following guide includes API collections that exist on the Pod:
+The Symphony Messaging Pod API is used to build tools in order to manage and administer Symphony Messaging for your organization. The following guide includes API collections that exist on the Pod:
 
 ## Session Authenticate API <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 

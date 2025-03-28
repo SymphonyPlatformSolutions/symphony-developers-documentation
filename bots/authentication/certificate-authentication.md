@@ -13,9 +13,9 @@ Note: The following authentication sequence is provided out of the box by our de
 
 ## Overview of Certificate-Based Authentication
 
-Symphony allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate. When a bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the bot user and return a Session Token. The same process occurs when a bot authenticates on the Key Manager.
+Symphony Messaging allows you to authenticate on the Pod and Key Manager with a client certificate that is signed by a trusted root certificate. When a bot calls the Session Authenticate endpoint, the Pod examines the client certificate provided in the TLS session to identify the bot user and return a Session Token. The same process occurs when a bot authenticates on the Key Manager.
 
-All Symphony network communications take place over TLS-protected HTTP. The network uses authentication methods that require a client-authenticated TLS connection.
+All Symphony Messaging network communications take place over TLS-protected HTTP. The network uses authentication methods that require a client-authenticated TLS connection.
 
 Client certificate authentication in TLS is configured at the port level. Two distinct ports are required for client-authenticated and non-client-authenticated connections. The web and mobile endpoints listen on port 443 (the default port number for HTTPS connections). The API endpoints require a separate port, typically port 8444.
 
@@ -30,7 +30,7 @@ Client certificate authentication in TLS is configured at the port level. Two di
 ## 1.  Upload a Signing Certificate or Root Certificate
 
 {% hint style="warning" %}
-Please note the below steps can only be performed by a Symphony Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
+Please note the below steps can only be performed by a Symphony Messaging Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
 {% endhint %}
 
 {% hint style="info" %}
@@ -87,7 +87,7 @@ The Common Name (CN) value must match the name of the Symphony Service Account y
 
 #### Creation of the service user in the Admin Portal
 
-The Symphony Admin then creates a service user with a **username** that matches the **Common Name** of the certificate, as you can see in the example below:
+The Symphony Messaging Admin then creates a service user with a **username** that matches the **Common Name** of the certificate, as you can see in the example below:
 
 <figure><img src="../../.gitbook/assets/botdemocert.png" alt=""><figcaption></figcaption></figure>
 

@@ -1,7 +1,7 @@
 ---
 description: >-
-  This article gives an overview of the Symphony message workflow and shows how
-  message representations are used throughout the workflow. In its subpages are
+  This article gives an overview of the message workflow and shows how message
+  representations are used throughout the workflow. In its subpages are
   presented the specifications of messageML.
 ---
 
@@ -9,7 +9,7 @@ description: >-
 
 ## Introduction of the MessageML
 
-When calling API methods that create messages, the content of the message must be sent using _MessageML_ markup. MessageML is a tag-based language that is a subset of XHTML, with the addition of tags specific to Symphony for embedding information (e.g. a mention) into a message.
+When calling API methods that create messages, the content of the message must be sent using _MessageML_ markup. MessageML is a tag-based language that is a subset of XHTML, with the addition of tags specific to Symphony Messaging for embedding information (e.g. a mention) into a message.
 
 You can find the specifications of the MessageML language in the attached subpages. Even if they are grouped in different categories for documentation clarity purposes, please note you can do your own mix, respecting the specific rules explained at each component specification level.
 

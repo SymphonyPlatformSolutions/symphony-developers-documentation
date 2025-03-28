@@ -1,6 +1,6 @@
 # Authentication
 
-In order for bots to access the Symphony REST API and other Symphony resources, bots must first authenticate.
+In order for bots to access the Symphony Messaging REST API and other Symphony Messaging resources, bots must first authenticate.
 
 As we learned in [Overview of Pod API](../overview-of-rest-api/pod-api.md), bots must be authenticated on the Pod in order to access Pod API endpoints. To make authenticated Pod API calls, bots must pass a valid Session Token as a header of each Pod API request.
 

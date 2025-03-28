@@ -2,20 +2,20 @@
 
 ## Message API endpoints
 
-Bots in Symphony can use the following API endpoints to **create**, **update** and **suppress** messages in Symphony chats:
+Bots in Symphony Messaging can use the following API endpoints to **create**, **update** and **suppress** messages in Symphony Messaging chats:
 
 * Message **creation** via the [Create Message v4](https://developers.symphony.com/restapi/main/messages/create-message-v4) endpoint
 * Message **creation in multiple conversations** using the [Blast Message](https://developers.symphony.com/restapi/main/messages/blast-message) endpoint
 * Message **update** via the [Update Message](https://developers.symphony.com/restapi/main/messages/update-message-v4) endpoint. _Note this functionality is not supported on Mobile. On Mobile, updates will appear as new messages instead of replacing the actual message. Also, note the rules and limitations explained in the endpoint specifications documented_ [_here_](https://developers.symphony.com/restapi/main/messages/update-message-v4)_._
 * Message **suppression** via the [Suppress Message](https://developers.symphony.com/restapi/main/messages/suppress-message) endpoint
 
-Please see below a quick animation showing a simple lifecycle of a bot message in Symphony with a message created by the bot, updated three times, and then finally suppressed.
+Please see below a quick animation showing a simple lifecycle of a bot message in Symphony Messaging with a message created by the bot, updated three times, and then finally suppressed.
 
 ![](<../../.gitbook/assets/Message Lifecycle.gif>)
 
 ## Overview of the Message Flow
 
-In the Symphony message flow, messages are represented in the following markup language forms:
+In the Symphony Messaging message flow, messages are represented in the following markup language forms:
 
 * **MessageML**: A tag-based language that is a subset of XHTML. MessageML allows templating in [Apache Freemarker](https://freemarker.apache.org/index.html).
 * **PresentationML**: MessageML translated into the equivalent XHTML tags so it can be rendered and processed by any HTML client.
@@ -27,34 +27,34 @@ Note: MessageML is just a subset of PresentationML that makes it easier to const
 
 ## MessageML Render bot
 
-The MessageML Render bot is a productivity tool that helps developers to create chat messages compliant with Symphony’s message markup language. Using the Render bot, you can get an overview of our message format capabilities, and quickly iterate on the format of a message while previewing the display.
+The MessageML Render bot is a productivity tool that helps developers to create chat messages compliant with Symphony Messaging’s message markup language. Using the Render bot, you can get an overview of our message format capabilities, and quickly iterate on the format of a message while previewing the display.
 
 <figure><img src="../../.gitbook/assets/I5T9PSO0NB06QTIbSgX7fL4E0pBoGdpMZmX3k1brR3k.png" alt="" width="75"><figcaption></figcaption></figure>
 
-The Render bot is available [directly on Symphony](https://open.symphony.com/?startChat=71811853191652). If this link doesn't work, you can look for _MessageML Render bot_ in the directory.
+The Render bot is available [directly on Symphony Messaging](https://open.symphony.com/?startChat=71811853191652). If this link doesn't work, you can look for _MessageML Render bot_ in the directory.
 
 {% hint style="warning" %}
 The Render bot replaces the **Presentation ML Live Renderer Tool** website, which is no longer available.
 {% endhint %}
 
-## Diagram of Symphony Message Flow:
+## Diagram of Symphony Messaging Message Flow:
 
 ![](<../../.gitbook/assets/Message Workflow@3x.svg>)
 
 The above diagram shows the following:
 
 1. **Your bot uses the** [**Agent API**](../overview-of-rest-api/agent-api.md) **to send messages in MessageML.**
-2. **The Agent API encrypts the messages, and converts them to PresentationML where they are stored in Symphony's data store.**  &#x20;
-3. **The** [**Symphony Datafeed**](../datafeed/) **delivers messages to end users or to the Desktop Application as PresentationML.**
+2. **The Agent API encrypts the messages, and converts them to PresentationML where they are stored in Symphony Messaging 's data store.**  &#x20;
+3. **The** [**Symphony Messaging Datafeed**](../datafeed/) **delivers messages to end users or to the Desktop Application as PresentationML.**
 4. **When Bot's retrieve messages via the API, the messages are delivered as PresentationML.**  &#x20;
 
 ## Message Identifiers:
 
-Each message in Symphony has a unique message ID.
+Each message in Symphony Messaging has a unique message ID.
 
 **To find the message ID:**
 
-* In the Symphony web or desktop client, click the message timestamp. The **Message Status** module overlay opens. The message ID is shown in the overlay footer:
+* In the Symphony Messaging web or desktop client, click the message timestamp. The **Message Status** module overlay opens. The message ID is shown in the overlay footer:
 
 <div align="center"><img src="../../.gitbook/assets/gittbook test image.png" alt=""></div>
 
@@ -94,7 +94,7 @@ code=LIMIT_MESSAGE_CONTENT_MAX_TOTAL_SIZE_REACHED
 
 ## Message Delivery for External Rooms (Cross-Pod)
 
-In the Symphony architecture, messages are stored in each company data store. When messages are sent externally (for example in External rooms), the messages are copied and transferred from one company to the other using the Amazon AWS SQS service [At-least-once Delivery mechanism with Amazon AWS SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html).\
+In the Symphony Messaging architecture, messages are stored in each company data store. When messages are sent externally (for example in External rooms), the messages are copied and transferred from one company to the other using the Amazon AWS SQS service [At-least-once Delivery mechanism with Amazon AWS SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html).\
 Amazon AWS SQS service ensures high availability through redundancy, with "At-least-once delivery" guarantee. This means that on very rare occasions, a message can be received more than once.
 
 If this occurs, you might receive a second copy of that message. Therefore, Bots designed to work with External rooms (cross pod) should be **idempotent**: they should not be affected adversely when processing the same message more than once. Continue [here](../bots-best-practices.md#duplicate-messages) to learn about how your bot should handle duplicate messages.

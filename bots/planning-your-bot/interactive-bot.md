@@ -2,7 +2,7 @@
 
 Interactive Bots are a form of Chatbot where the conversational flow is driven by interactive Elements forms. Instead of listening for plain text as the only source of data, Interactive Bots can collect data or commands through structured forms.
 
-Elements allow bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more. Additionally, Elements reuse Symphony Messaging UX component libraries, enabling developers to easily create interactive bot messages that look and feel like they belong in Symphony.
+Elements allow bots to send messages that contain interactive forms with pre-designed text fields, dropdown menus, person selectors, buttons and more. Additionally, Elements reuse Symphony Messaging UX component libraries, enabling developers to easily create interactive bot messages that look and feel like they belong in Symphony Messaging.
 
 To learn more about Elements navigate here:
 
@@ -22,7 +22,7 @@ It is common for bots to contain multiple commands or sub workflows that it can 
 
 ## 2. Listen for Events
 
-A core aspect of all Interactive Bots is the ability to 'listen' to different types of commands and events and reply to them accordingly. The mechanism that enables Symphony Bots to listen to events in chatrooms and IMs is the **Datafeed**.
+A core aspect of all Interactive Bots is the ability to 'listen' to different types of commands and events and reply to them accordingly. The mechanism that enables Symphony Messaging Bots to listen to events in chatrooms and IMs is the **Datafeed**.
 
 The **Datafeed** is a real-time message and event stream that can be created using the REST API. The datafeed provides a secure stream of messages and events from all conversations that a bot is in.
 

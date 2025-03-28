@@ -1,8 +1,8 @@
 # Overview of Key Manager API
 
-## Symphony Key Manager APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
+## Symphony Messaging Key Manager APIs <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 
-The Symphony Key Manager API's sole purpose is to authenticate a bot or API caller with the Key Manager.
+The Symphony Messaging Key Manager API's sole purpose is to authenticate a bot or API caller with the Key Manager.
 
 ## Key Manager Authenticate API <img src="../../.gitbook/assets/Symphony API.png" alt="" data-size="line">
 

@@ -81,7 +81,7 @@ The file `publickey.pem` is the public key. This is the key you will import into
 ## 2. Import Public Key into the Pod
 
 {% hint style="warning" %}
-Please note the below steps can only be performed by a Symphony Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
+Please note the below steps can only be performed by a Symphony Messaging Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
 {% endhint %}
 
 Navigate to the Admin Console and create a new Service Account. Copy the contents of the pubkey.pem file you just created and paste into the textbox under the Authentication section:

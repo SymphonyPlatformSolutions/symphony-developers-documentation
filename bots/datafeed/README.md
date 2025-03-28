@@ -1,5 +1,5 @@
 ---
-description: Overview of Symphony Datafeed
+description: Overview of Symphony Messaging Datafeed
 ---
 
 # Datafeed
@@ -12,20 +12,20 @@ The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**
 
 ## Overview of Datafeed
 
-The Symphony datafeed provides a stream of real-time messages and events for all conversations that a bot is a member of. Any event that occurs within a bot's scope will be captured and delivered to the bot by the datafeed. The datafeed forms the basis of all interactive and conversational bot workflows as it allows bots to directly respond to Symphony messages and events.
+The Symphony Messaging datafeed provides a stream of real-time messages and events for all conversations that a bot is a member of. Any event that occurs within a bot's scope will be captured and delivered to the bot by the datafeed. The datafeed forms the basis of all interactive and conversational bot workflows as it allows bots to directly respond to Symphony Messaging messages and events.
 
 ## Datafeed Architecture
 
-Symphony provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/main/datafeed/create-datafeed-v5) and [read](https://developers.symphony.com/restapi/main/datafeed/read-datafeed-v5) datafeeds.
+Symphony Messaging provides a Datafeed API that allows bots to easily [create](https://developers.symphony.com/restapi/main/datafeed/create-datafeed-v5) and [read](https://developers.symphony.com/restapi/main/datafeed/read-datafeed-v5) datafeeds.
 
-Once a bot has created a datafeed, it has access to all of the [events](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Pod. Additionally, all messages and events within a bot's scope are encrypted by the Agent before reaching your bot. That way the bot is the only one who can access the contents of these events and messages being delivered.
+Once a bot has created a datafeed, it has access to all of the [events](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/real-time-events) within its scope, acting as a secure channel between a bot and all activity happening in the Symphony Messaging Pod. Additionally, all messages and events within a bot's scope are encrypted by the Agent before reaching your bot. That way the bot is the only one who can access the contents of these events and messages being delivered.
 
-The following illustrates the relationship between your bot, datafeed, and Symphony's components:
+The following illustrates the relationship between your bot, datafeed, and Symphony Messaging's components:
 
 ![](<../../.gitbook/assets/Datafeeed Architecture@3x.svg>)
 
-1. **Bot creates datafeed via Symphony’s REST API**
-2. **Agent creates secure upstream connection with the Symphony Pod**
+1. **Bot creates datafeed via Symphony Messaging’s REST API**
+2. **Agent creates secure upstream connection with the Symphony Messaging Pod**
 3. **End user sends a message to a bot in a chatroom**
 4. **Pod delivers ‘MESSAGESENT’ event to Agent**
 5. **Bot reads datafeed via REST API**
@@ -33,7 +33,7 @@ The following illustrates the relationship between your bot, datafeed, and Symph
 
 ## Real-Time Events
 
-Events are delivered to your bot via the datafeed as JSON objects. Each type of Symphony event corresponds to a different JSON payload.
+Events are delivered to your bot via the datafeed as JSON objects. Each type of Symphony Messaging event corresponds to a different JSON payload.
 
 For example, if a user sends your bot a message, an event of type `'MESSAGESENT'` will be delivered to your bot through the datafeed:
 
@@ -102,15 +102,15 @@ The following diagram shows the event handling workflow:
 
 ![](<../../.gitbook/assets/BDK Datafeed Architecture@3x.svg>)
 
-1. **Bot creates datafeed via Symphony’s REST API**
-2. **Agent creates secure upstream connection with the Symphony Pod**
+1. **Bot creates datafeed via Symphony Messaging’s REST API**
+2. **Agent creates secure upstream connection with the Symphony Messaging Pod**
 3. **End user sends a message to a bot in a chatroom**
 4. **Pod delivers ‘MESSAGESENT’ event to Agent**
 5. **Bot reads datafeed via REST API**
 6. **Agent delivers ‘MESSAGESENT’ event payload to the Bot**
 7. **Bot routes event to appropriate event listener/handler**
 
-Inside of `onMessageSent()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony API/BDK methods:
+Inside of `onMessageSent()` is where you implement your own business logic such as accessing a database, connecting to an external API, or reply back to your user by leveraging the Symphony  Messaging API/BDK methods:
 
 {% tabs %}
 {% tab title="Java" %}

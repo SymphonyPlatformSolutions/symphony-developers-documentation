@@ -1,6 +1,6 @@
 # Conversational Bot
 
-Chatbots or conversational Bots, are the most common bots in the Symphony ecosystem. These types of bots run 24/7 and wait for users to initiate conversations in order to perform certain tasks. The conversations could be simple commands or even natural language queries. The bot will determine the user’s intent based on their messages and take the appropriate action.
+Chatbots or conversational Bots, are the most common bots in the Symphony Messaging ecosystem. These types of bots run 24/7 and wait for users to initiate conversations in order to perform certain tasks. The conversations could be simple commands or even natural language queries. The bot will determine the user’s intent based on their messages and take the appropriate action.
 
 ## Chatbot Workflow
 
@@ -34,7 +34,7 @@ You can learn more about parsing events and introducing custom business logic [h
 
 ## Next Steps:
 
-Continue on to our [Building a Conversational Bot](../../dev-tools/bdk-java/conversational.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Chatbot.
+Continue on to our [Building a Conversational Bot](../../dev-tools/bdk-java/conversational.md) guide in order to learn more about our development tools and appropriate development pathway for building your first Symphony Messaging Chatbot.
 
 {% content-ref url="../../dev-tools/bdk-java/conversational.md" %}
 [conversational.md](../../dev-tools/bdk-java/conversational.md)

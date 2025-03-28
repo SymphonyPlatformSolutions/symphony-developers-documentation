@@ -1,6 +1,6 @@
 # Build an Extension App with App Views
 
-This guide will provide an overview on how to use the Symphony App Developer Kit (ADK) to build an extension app that has app views. This app will add entries into the left navigation that will each launch a separate app view. The project will use React and ADK's React and Webpack configuration for app view generation.
+This guide will provide an overview on how to use the Symphony Messaging App Developer Kit (ADK) to build an extension app that has app views. This app will add entries into the left navigation that will each launch a separate app view. The project will use React and ADK's React and Webpack configuration for app view generation.
 
 {% hint style="info" %}
 **Prerequisite**: Install NodeJS first, either [directly](https://nodejs.org) or via [nvm](https://github.com/nvm-sh/nvm)
@@ -17,7 +17,7 @@ npm init -y
 
 ## Install Dependencies
 
-Install the Symphony ADK, the ADK React and Webpack configurations, React itself, Symphony UI Toolkit for UI Components, Typescript, Webpack and the required loaders.
+Install the Symphony Messaging ADK, the ADK React and Webpack configurations, React itself, Symphony Messaging UI Toolkit for UI Components, Typescript, Webpack and the required loaders.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -262,7 +262,7 @@ ADKReact.createView(<ViewA />, { id: 'adk-example' });
 ```
 {% endcode %}
 
-The contents of this app view are entirely arbitrary. You can choose not to use Symphony's UI Toolkit and employ other component libraries of your choice. The only required line here is calling `ADKReact.createView()` at the end, passing in your component and a configuration object pointing to the same app id as before.
+The contents of this app view are entirely arbitrary. You can choose not to use Symphony Messaging's UI Toolkit and employ other component libraries of your choice. The only required line here is calling `ADKReact.createView()` at the end, passing in your component and a configuration object pointing to the same app id as before.
 
 For aesthetics, let's define some styling in `src/views/view-a.css`.
 
@@ -293,12 +293,12 @@ npm start
 This starts a local development server on `https://localhost:4000`. Note that this is a TLS-enabled site because all extension apps need to be loaded from TLS-enabled sites. However, because this is a development server, the certificate is self-signed and not trusted by any browser.
 
 {% hint style="warning" %}
-Visit https://localhost:4000 in your browser to accept the security warning about the untrusted self-signed certificate. Skipping this step will cause the extension app to not load within Symphony in the next step.
+Visit https://localhost:4000 in your browser to accept the security warning about the untrusted self-signed certificate. Skipping this step will cause the extension app to not load within Symphony Messaging in the next step.
 {% endhint %}
 
-## Load the App in Symphony
+## Load the App in Symphony Messaging
 
-There are 2 ways to load an extension app into Symphony. For development purposes, we will be using the bundle injection method to temporarily load the app into the current session.
+There are 2 ways to load an extension app into Symphony Messaging. For development purposes, we will be using the bundle injection method to temporarily load the app into the current session.
 
 {% hint style="info" %}
 Beyond local development testing, you should get your pod administrator to create a corresponding app entry in the Admin Portal by uploading the `bundle.json` file.
