@@ -217,7 +217,7 @@
       * [SBE - 20.5 (1.59)](admin-guide/change-log/sbe-pod-api/archives/sbe-20.5-1.59.md)
       * [SBE - 20.4 (1.58)](admin-guide/change-log/sbe-pod-api/archives/sbe-20.4-1.58.md)
   * [Client 2.0 APIs](admin-guide/change-log/client-2.0-apis/README.md)
-    * [Client 2.0 - 25.02](admin-guide/change-log/client-2.0-apis/client-2.0-25.02.md)
+    * [Client 2.0 - 25.03](admin-guide/change-log/client-2.0-apis/client-2.0-25.03.md)
     * [Client 2.0 - 24.12](admin-guide/change-log/client-2.0-apis/client-2.0-24.12.md)
     * [Client 2.0 - 24.05](admin-guide/change-log/client-2.0-apis/client-2.0-24.05.md)
     * [Client 2.0 - 23.02](admin-guide/change-log/client-2.0-apis/client-2.0-23.02.md)
