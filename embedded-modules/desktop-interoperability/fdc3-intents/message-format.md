@@ -25,15 +25,6 @@ The behavior of an action button is then described in the `entities` section of 
 **Note**: Chat bots can also send action buttons, learn more [here](../../../bots/messages/overview-of-messageml/entities/standard-entities.md#fdc3-action-buttons).
 {% endhint %}
 
-{% hint style="warning" %}
-With **Here Core** (previously known as OpenFin)**, Action buttons** have the following **limitations**:&#x20;
-
-* Broadcast is not supported.
-* Intents: It is not possible to predefine the appId that will receive the intent.&#x20;
-
-Both limitations will be waived in March 2025.
-{% endhint %}
-
 Few examples of action buttons are available below.
 
 #### Examples
