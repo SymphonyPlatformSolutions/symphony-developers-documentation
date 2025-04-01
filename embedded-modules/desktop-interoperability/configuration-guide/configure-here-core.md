@@ -6,14 +6,14 @@ This integration requires **SDA v25.3.**
 
 ### Configure the connection to Here Core (formerly[ OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter))
 
-To configure Here Core, some parameters need to be modified in the SDA config file (Symphony.json). \
+To configure Here Core, some parameters need to be added to the SDA config file (Symphony.json). \
 Deploying changes to this file to the machines of the end users is usually automated through the packaging of the SDA installer, or through IT policies, and is handled by your IT team.&#x20;
 
-{% hint style="info" %}
-In a future version, configuring Here Core will be available through your  Admin Portal.&#x20;
-{% endhint %}
+For testing purposes, you can configure the integration manually, as described below.&#x20;
 
-For testing purposes and in development environments, you can configure the integration manually, as described below.&#x20;
+{% hint style="success" %}
+For production deployments, simply apply the same configuration changes described below to the user machines.
+{% endhint %}
 
 Quit SDA if it is running. If SDA is configured to hide instead of closing, you can quit SDA by selecting the hamburger menu on the top left then selecting **Window**, then **Quit Symphony Messaging**.
 

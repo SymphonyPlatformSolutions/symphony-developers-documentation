@@ -12,7 +12,7 @@ Depending on the platform provider you use, the following options are available:
 
 Symphony Messaging directly embeds a native connector to **Interop.io** (Glue42), **Finsemble** and **Here** (formerly OpenFin)**.** With the native connector, you keep your Symphony Messaging standalone app as is, and Symphony Messaging will seamlessly connect to the FDC3 platform.&#x20;
 
-* [**Here Core**](configure-here-core.md) version 20.1+: _Beta only_. Here Core, previously known as [OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter), currently requires custom configuration in SDA and needs to be enabled by the Symphony team. &#x20;
+* [**Here Core**](configure-here-core.md) version 20.1+: Here Core, previously known as [OpenFin Workspace](https://github.com/built-on-openfin/workspace-starter), requires SDA 25.3+. &#x20;
 * [**Interop.io (Glue42)**](configure-with-the-native-connector.md) version 3.15+
 * [**Finsemble** ](configure-finsemble.md)version 7.3.0+
 
