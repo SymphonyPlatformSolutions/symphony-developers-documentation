@@ -118,6 +118,24 @@ https://open.symphony.com/#phoneNumber=+19291234567&triggerAction=PHONE_CALL
 **Error management**: for both SMS and PHONE\_CALL, if the targeted phone number has no country indicator, or does not seem valid, the phone left rail will open with the requested phone number, in order for the user to complete the intended action.
 {% endhint %}
 
+### Start a chat with a contact or onboard a contact
+
+{% hint style="info" %}
+Available starting with C2 25.5 (May 2025)
+{% endhint %}
+
+Depending on the contact, this URI will:
+
+* Open the existing chat if the chat with this contact already exists
+* Create and open the chat, if the contact is already onboarded but no chat exists
+* Open the contact onboarding modal, if the contact doesn't exist yet.
+
+```
+https://open.symphony.com/#triggerAction=CHAT&channel=WHATSAPP&phoneNumber=+33612345678&firstName=John&lastName=Doe&email=john.doe@symphony.com&company=Symphony
+```
+
+<table><thead><tr><th width="226">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>triggerAction</code></td><td>Enum: <code>CHAT</code><br>Mandatory</td></tr><tr><td><code>channel</code></td><td>Enum: <code>WHATSAPP</code>, <code>SMS-DIRECT</code>, <code>WECHAT</code>, <code>LINE</code>, <code>SMS</code><br>Mandatory.</td></tr><tr><td><code>phoneNumber</code></td><td>Phone number of the contact. <br>Mandatory.</td></tr><tr><td><code>firstName</code></td><td>Contact first name.<br>Optional.</td></tr><tr><td><code>lastName</code></td><td>Contact last name.<br>Optional.</td></tr><tr><td><code>email</code></td><td>Contact email.<br>Optional.</td></tr><tr><td><code>company</code></td><td>Contact company.<br>Optional.</td></tr></tbody></table>
+
 ## Display the profile of a user
 
 Display the profile of the user identified by its `userId`.
