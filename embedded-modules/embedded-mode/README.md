@@ -35,29 +35,34 @@ The following browsers are supported:
 
 The Symphony Messaging Embedded Mode supports two modes:
 
-* **Focus**, where a single chat is displayed.
+* **Focus**, where a single chat is displayed.&#x20;
+
+In Focus mode, you can still display several chats on the screen, but each one will be placed in its own module.
+
 * **Collaboration**, where the full list of chat conversations is displayed, allowing the user to switch chat conversations, create a room, search for users or rooms, view unread messages, etc.
 
-**Note**: In **Focus** mode, you can still display several chats on screen, but each one will be placed in its own module.
+When reduced to a width of less than 700px, the Collaboration mode window automatically enters Mini view for a better user experience. Some features, such as extension applications, signals and activity feed, are not available in Mini view mode.
 
 {% tabs %}
 {% tab title="Focus mode" %}
 
 
-<figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p>Embedded Mode - Focus: Single chat</p></figcaption></figure>
+<figure><img src="https://lh5.googleusercontent.com/0SyZfjpaU5g9XkS-Ev_516fKOMfpv2vi6e7whjiTqqtUyrmCHJCPBfbdcYpD08Ezw9TnjwRFwFiciCaHe0J0Eh7vIHCXGp8v5ZSJRC0NF4UbaaHQdT0T6L0IHZFmmyePvXtbrQBkOk5Z1emcJ4rjcWih534q9VFOyTZtzSG9iVI3fc3EwWW90VXgYF8k" alt=""><figcaption><p><em>Embedded Mode - Focus: Single chat</em></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Collaboration mode" %}
+<figure><img src="https://lh5.googleusercontent.com/79tCYQRQvfOemch0XKGl1P60-qmRtyDA020sdgDOQu9VdaKPvRD7odh2CPyee-EljJ8zkfCgfQRuYYpyaBT_jTrQjd-6esBMatjP0orF1N5nyKnOUUwMegIKLUzfMBBZV7_gyeNVQ7KgVbjis6Db5jlFL_j4FuZNoDXHc_tQKWmiOG0sbdWDe12_NsIu" alt=""><figcaption><p><em>In Collaboration mode, users can see a simplified version of the full Symphony Messaging app.</em></p></figcaption></figure>
+{% endtab %}
 
-
-<figure><img src="https://lh5.googleusercontent.com/79tCYQRQvfOemch0XKGl1P60-qmRtyDA020sdgDOQu9VdaKPvRD7odh2CPyee-EljJ8zkfCgfQRuYYpyaBT_jTrQjd-6esBMatjP0orF1N5nyKnOUUwMegIKLUzfMBBZV7_gyeNVQ7KgVbjis6Db5jlFL_j4FuZNoDXHc_tQKWmiOG0sbdWDe12_NsIu" alt=""><figcaption><p><em>In Collaboration mode, users can see a simplified version of the full Symphony.</em></p></figcaption></figure>
+{% tab title="Collaboration mode (Mini view)" %}
+_In Collaboration mode (Mini view), users can work in a narrow version of the Symphony Messaging desktop app._
 {% endtab %}
 {% endtabs %}
 
 **Recommended minimum view size:**
 
 * **Focus** mode: Width 312px , Height 348px
-* **Collaboration** mode: Width 600px , Height 600px
+* **Collaboration** mode: Width 350px , Height 500px
 
 ### Configuration parameters&#x20;
 
@@ -78,7 +83,7 @@ Once Embedded Mode is loaded, it offers a number of capabilities:
 
 ### Support for extension applications
 
-It is possible to load extension applications in Embedded Mode (more information [here](./#support-for-extension-applications)).
+It is possible to load extension applications in Embedded Mode (more information [here](https://docs.developers.symphony.com/embedded-modules/embedded-mode/support-for-extension-applications)).
 
 ## Resources
 
