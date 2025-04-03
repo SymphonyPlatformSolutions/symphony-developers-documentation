@@ -55,7 +55,7 @@ When reduced to a width of less than 700px, the Collaboration mode window automa
 {% endtab %}
 
 {% tab title="Collaboration mode (Mini view)" %}
-_In Collaboration mode (Mini view), users can work in a narrow version of the Symphony Messaging desktop app._
+<figure><img src="../../.gitbook/assets/mini-view.png" alt=""><figcaption><p><em>In Collaboration mode (Mini view), users can work in a narrow version of the Symphony Messaging desktop app.</em></p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
