@@ -10,12 +10,12 @@ The change log of each recent agent versions is available in the pages below.
 [agent-24.12-lts.md](agent-24.12-lts.md)
 {% endcontent-ref %}
 
-{% content-ref url="agent-24.11.md" %}
-[agent-24.11.md](agent-24.11.md)
+{% content-ref url="archives/agent-24.11.md" %}
+[agent-24.11.md](archives/agent-24.11.md)
 {% endcontent-ref %}
 
-{% content-ref url="agent-24.10.md" %}
-[agent-24.10.md](agent-24.10.md)
+{% content-ref url="archives/agent-24.10.md" %}
+[agent-24.10.md](archives/agent-24.10.md)
 {% endcontent-ref %}
 
 {% content-ref url="agent-24.9-lts.md" %}
