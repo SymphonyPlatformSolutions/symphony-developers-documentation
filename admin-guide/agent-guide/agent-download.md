@@ -2,6 +2,7 @@
 
 Agent releases available for download:
 
+* Agent 25.5.1: [Download](https://static.symphony.com/agent/agent-25.5.1.zip)
 * Agent 25.3.1 (LTS): [Download](https://static.symphony.com/agent/agent-25.3.1.zip)
 * Agent 24.12.4 (LTS): [Download](https://static.symphony.com/agent/agent-24.12.4.zip)
 * Agent 24.9.4 (LTS): [Download](https://static.symphony.com/agent/agent-24.9.4.zip)

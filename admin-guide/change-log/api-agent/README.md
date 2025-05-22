@@ -6,16 +6,16 @@ The API Agent versions can be downloaded [here](../../agent-guide/agent-download
 
 The change log of each recent agent versions is available in the pages below.
 
+{% content-ref url="agent-25.5.md" %}
+[agent-25.5.md](agent-25.5.md)
+{% endcontent-ref %}
+
+{% content-ref url="agent-25.3-lts.md" %}
+[agent-25.3-lts.md](agent-25.3-lts.md)
+{% endcontent-ref %}
+
 {% content-ref url="agent-24.12-lts.md" %}
 [agent-24.12-lts.md](agent-24.12-lts.md)
-{% endcontent-ref %}
-
-{% content-ref url="archives/agent-24.11.md" %}
-[agent-24.11.md](archives/agent-24.11.md)
-{% endcontent-ref %}
-
-{% content-ref url="archives/agent-24.10.md" %}
-[agent-24.10.md](archives/agent-24.10.md)
 {% endcontent-ref %}
 
 {% content-ref url="agent-24.9-lts.md" %}
@@ -24,10 +24,6 @@ The change log of each recent agent versions is available in the pages below.
 
 {% content-ref url="agent-24.6-lts.md" %}
 [agent-24.6-lts.md](agent-24.6-lts.md)
-{% endcontent-ref %}
-
-{% content-ref url="archives/agent-24.3-lts.md" %}
-[agent-24.3-lts.md](archives/agent-24.3-lts.md)
 {% endcontent-ref %}
 
 ## Agent Release Cycle
