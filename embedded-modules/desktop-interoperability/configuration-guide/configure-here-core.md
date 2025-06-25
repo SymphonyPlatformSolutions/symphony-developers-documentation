@@ -123,6 +123,6 @@ Launch the Symphony Desktop App as normal.
 
 If your Here Core platform is running, you should see a toast notification confirming that Symphony successfully connected to Here Core .
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you need help, you can have a look at our [Troubleshooting guide](troubleshooting.md).

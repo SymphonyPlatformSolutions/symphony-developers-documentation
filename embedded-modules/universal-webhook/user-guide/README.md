@@ -1,38 +1,42 @@
 # User guide
 
-## Accessing Universal Webhook
+## Setting up a new webhook in a chat room
 
-Universal Webhook is a service provided by a bot. You can add the bot to any Symphony Messaging chat.
+1. First, add the Universal Webhook bot into the chat room, by clicking **Add members** at the top of the chat room, then searching for **Universal Webhook**.&#x20;
 
-1. If you don't know the name of the bot, please open the Universal Webhook app from the Marketplace.
-2. Click the **Start Chat** button to open a direct chat with the bot.
+{% hint style="info" %}
+**Notes**:&#x20;
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure></div>
+* The bot may be named differently, in that case please contact your admin to have the right name.
+* The bot needs permission to send messages in the chat. If your chat is configured to prevent members from posting messages, then promote the bot as chat owner instead.
+{% endhint %}
 
-3. Click the **Header button** to launch the Universal Webhook Interface.
+2. Once the bot is in the chat, **click on the Universal Webhook button** that appeared in the header of the chat room, as visible below:&#x20;
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure></div>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-## Setting up a new webhook
+{% hint style="info" %}
+If you don't see the button in the chat header please check the following:
 
-You're ready to set up your first webhook.&#x20;
+* You need to be an **owner** of the chat to configure a webhook.&#x20;
+* You may not be entitled to the Universal webhook **app** - Check the Marketplace to see if the app is installed for you.
+* Confirm with your admin that you added the **right bot** to the chat - It may be named differently than 'Universal Webhook'
+{% endhint %}
 
-1. Get started by clicking **Add a webhook**.
+3. A modal window opens that lists the webhooks already configured for this chat. Now, select **Add a webhook**.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure></div>
 
-You will need to enter some basic information:&#x20;
-
-2. Fill in a **name** for your webhook. Anything will do - this is so you can identify the webhook later.&#x20;
-3. In the **Integrated service** field, indicate which service will be sending data to Symphony Messaging.
+4. Add a **name** for your webhook. Anything will do - this is so you can identify the webhook later.&#x20;
+5. In the **Integrated service** field, indicate which service will be sending data to Symphony Messaging.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure></div>
 
-4. Select whether the service will send Raw Text, MessageML v2 (Symphony Messaging's markup language), or a JSON object in the **Webhook type** field.&#x20;
+6. Select whether the service will send Raw Text, MessageML v2 (Symphony Messaging's markup language), or a JSON object in the **Webhook type** field.&#x20;
 
 You can find the specifications of the MessageML v2 under the following link: [MessageML v2 Specifications](https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml).
 
-Also, note that since the version 2.4, your webhooks can contain attachments for any type you choose. This particular case is addressed at the end of this page.
+Also, note that your webhooks can contain attachments for any type you choose. This particular case is addressed at the end of this page.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure></div>
 
