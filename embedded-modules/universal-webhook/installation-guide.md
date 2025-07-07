@@ -107,6 +107,17 @@ The end result should look like this:
 
 <figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
+#### Enable access to the app
+
+1. On the Symphony Messaging Admin Portal, select the **APP SETTINGS** tab.&#x20;
+2. Locate the newly configured app, and change its **Global Status** to **Enabled.**
+3. Change the **Visibility** to **Visible** and the **Installation** to **Automatic**. This allows access to the app to all users, and allows users to uninstall the app from the Marketplace if they want. Alternatively, you can also control at the user level who can open the app. If you need more information on controlling the access to the app, please check our Admin Portal guide.
+4. Save your changes by selecting Save at the bottom of the screen.
+
+{% hint style="info" %}
+Only users with access to the app will be able to configure webhooks.
+{% endhint %}
+
 ### Create a Symphony Messaging service account for Universal Webhook
 
 #### **Create a service account**
