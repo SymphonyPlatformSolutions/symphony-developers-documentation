@@ -4,6 +4,10 @@ hidden: true
 
 # Compatibility with SBE versions
 
+{% hint style="warning" %}
+This page is not maintained anymore. The compability of the Agent and SBE versions is available in Symphony Docs.
+{% endhint %}
+
 The **last four LTS Agent releases are always supported**. For more information on the Agent release cycle, please refer to[ Agent change log](../change-log/api-agent/).
 
 In the following table, we are showing the versions of the Agent compatible with the last three SBE versions.

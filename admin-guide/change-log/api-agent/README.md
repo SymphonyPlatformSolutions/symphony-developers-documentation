@@ -22,8 +22,8 @@ The change log of each recent agent versions is available in the pages below.
 [agent-24.9-lts.md](agent-24.9-lts.md)
 {% endcontent-ref %}
 
-{% content-ref url="agent-24.6-lts.md" %}
-[agent-24.6-lts.md](agent-24.6-lts.md)
+{% content-ref url="archives/agent-24.8/agent-24.6-lts.md" %}
+[agent-24.6-lts.md](archives/agent-24.8/agent-24.6-lts.md)
 {% endcontent-ref %}
 
 ## Agent Release Cycle
