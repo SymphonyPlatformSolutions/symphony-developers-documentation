@@ -94,8 +94,8 @@ code=LIMIT_MESSAGE_CONTENT_MAX_TOTAL_SIZE_REACHED
 
 ## Message Delivery for External Rooms (Cross-Pod)
 
-In the Symphony Messaging architecture, messages are stored in each company data store. When messages are sent externally (for example in External rooms), the messages are copied and transferred from one company to the other using the Amazon AWS SQS service [At-least-once Delivery mechanism with Amazon AWS SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html).\
-Amazon AWS SQS service ensures high availability through redundancy, with "At-least-once delivery" guarantee. This means that on very rare occasions, a message can be received more than once.
+In the Symphony Messaging architecture, messages are stored in each company data store. When messages are sent externally (i.e. in External rooms), the messages are copied and transferred from one company to the other using a queue service.\
+This service guarantees "At-least-once delivery" of the messages, meaning that on very rare occasions, a message can be received more than once.
 
 If this occurs, you might receive a second copy of that message. Therefore, Bots designed to work with External rooms (cross pod) should be **idempotent**: they should not be affected adversely when processing the same message more than once. Continue [here](../bots-best-practices.md#duplicate-messages) to learn about how your bot should handle duplicate messages.
 
