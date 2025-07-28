@@ -222,7 +222,7 @@ Display of the resulting message in a chat:
 
 Attachments are subject to the following limits:
 
-* Max size of 1Mb;&#x20;
+* Max size of 25Mb;&#x20;
 * It is recommended not to exceed 25 files;&#x20;
 * It is possible to use a preview with the attachment; please note that an error will be returned if the number of previews doesn't match the number of attachments if any preview is present in a webhook;&#x20;
 * You might get an error if you try to send attachments which type is not supported by your pod.
