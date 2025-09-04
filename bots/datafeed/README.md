@@ -5,9 +5,10 @@ description: Overview of Symphony Messaging Datafeed
 # Datafeed
 
 {% hint style="danger" %}
-**Deprecation Notice v4/datafeed** **(known as Datafeed v1)**\
+**Deprecation Notice v4/datafeed** **(known as Datafeed 1)**\
 \
-The legacy Datafeed v1 service will no longer be supported on **April 30, 2023**. Please read [below](./#deprecation-notice-of-legacy-datafeed-api) for more information on this transition.  Please reach out to your Technical Account Manager or to the Developer Relations team for more information.
+The legacy Datafeed 1 service is not supported since **April 30, 2023**. The datafeed bridge, introduced for service continuation, will stop working in **March 2026**. More information on the changes required is available [below](./#deprecation-notice-of-legacy-datafeed-api).  \
+Please reach out to your Technical Account Manager or to the Support team for more information.
 {% endhint %}
 
 ## Overview of Datafeed
@@ -168,19 +169,13 @@ As you can see, the datafeed acts as the backbone of your Bot. In many cases you
 
 While you can write all of this datafeed logic yourself, our dedicated BDK toolkits provide out-of-the-box datafeed support and event handling logic making it easy to bootstrap your bot and add custom business logic.
 
-## Deprecation notice of Legacy Datafeed API
+## Deprecation of Legacy Datafeed API
 
-The legacy agent/v4/datafeed API is out of support since **April 30, 2023**.
+The legacy agent/v4/datafeed API, also known as Datafeed 1, is out of support since **April 30, 2023** and is replaced by the [/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5) APIs.
 
-This has an impact on you if some of your automations or bots are still using this API. Please upgrade to the new[ ](https://developers.symphony.com/restapi/main/datafeed)[/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5) APIs.
+To facilitate this transition, a **datafeed** **bridge** has been introduced in June 2022 in the API Agent so consumers of the deprecated APIs keep a functioning service. **This bridge is however deprecated and will no longer function starting in March 2026.**
 
-To facilitate this transition, a new feature called the **datafeed** **bridge** has been introduced in the Agent service so consumers of the deprecated APIs keep a functioning service.
-
-* This bridge is available starting with Agent 22.6 (June 2022) and can be enabled through the following configuration flag `agent.df1ToDf2Bridge.enabled`.&#x20;
-* Since Agent release 23.6 (June 2023), this bridge is enabled by default, but could still be disabled through configuration.&#x20;
-* Then, starting with Agent release 23.9 (September 2023), the bridge is always enabled.
-
-We encourage you to migrate your bots to use the new [/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5). The bridge is a **temporary solution**, which objective is to facilitate the migration. If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is automatic. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
+As a result you are required to migrate your bots to the new [/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5). If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is automatic. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
 
 #### Changes required to upgrade to v5 endpoints
 
