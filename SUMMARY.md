@@ -208,6 +208,7 @@
       * [Agent - 20.5 (2.59)](admin-guide/change-log/api-agent/archives/agent-20.5-2.59.md)
       * [Agent - 20.4 (2.58)](admin-guide/change-log/api-agent/archives/agent-20.4-2.58.md)
   * [SBE (Pod API)](admin-guide/change-log/sbe-pod-api/README.md)
+    * [SBE 25.10](admin-guide/change-log/sbe-pod-api/sbe-25.10.md)
     * [SBE - 24.1](admin-guide/change-log/sbe-pod-api/sbe-24.1.md)
     * [SBE - 20.16](admin-guide/change-log/sbe-pod-api/sbe-20.16.md)
     * [SBE - 20.15](admin-guide/change-log/sbe-pod-api/sbe-20.15.md)
