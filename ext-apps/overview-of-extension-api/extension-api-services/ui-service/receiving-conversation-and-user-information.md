@@ -34,7 +34,8 @@ This is the information that you will receive if your button is pressed inside o
           lastName,       //user last name
         phone,          //user phone number
         mobile,         //user mobile phone number
-    }
+    },
+    isDeactivated       // only for IMs, when an IM has been deactivated.
 }
 ```
 {% endtab %}
