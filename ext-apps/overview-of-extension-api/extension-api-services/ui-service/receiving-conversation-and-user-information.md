@@ -20,22 +20,23 @@ This is the information that you will receive if your button is pressed inside o
 
 {% tabs %}
 {% tab title="IM, User Profile" %}
-```
+```json
 {
-   threadId,         //id of the conversation. Also known as streamId or conversationId
-   userCount,        //number of users returned
-   isCrossPod,       //if cross pod, returns true
-   user :  {         //user information
-        id,             //user identifier
-        emailAddress,   //user email
-        username,       //user name
-          displayName,    //user display name
-          firstName,      //user first name
-          lastName,       //user last name
-        phone,          //user phone number
-        mobile,         //user mobile phone number
-    },
-    isDeactivated       // only for IMs, when an IM has been deactivated.
+  threadId,         // id of the conversation. Also known as streamId or conversationId
+  userCount,        // number of users returned
+  isCrossPod,       // if cross pod, returns true
+  isDeactivated,    // if an IM has been deactivated, returned on IMs only
+  user : {          // user information
+    id,               // user identifier
+    emailAddress,     // user email
+    username,         // user name
+    displayName,      // user display name
+    firstName,        // user first name
+    lastName,         // user last name
+    phone,            // user phone number
+    mobile,           // user mobile phone number
+    isDeactivated,    // user is deactivated, returned for profile only
+  },
 }
 ```
 {% endtab %}
