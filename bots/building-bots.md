@@ -26,8 +26,8 @@ Learn more about how you can get started with our developer tools here:
 [bdk.md](getting-started/bdk.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/FGDZh7zIQvgLtB0HEfTU" %}
+[Broken link](/broken/pages/FGDZh7zIQvgLtB0HEfTU)
 {% endcontent-ref %}
 
 ### 3.  Authentication
@@ -50,6 +50,6 @@ The last step is to add custom business logic to your Bot. Begin learning about 
 
 Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony Messaging skills, technical knowledge, and expertise. Learn more about how you can become a Certified Developer today!
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-MB573wFlSNrHwbKAfpo" %}
+[Broken link](/broken/pages/-MB573wFlSNrHwbKAfpo)
 {% endcontent-ref %}

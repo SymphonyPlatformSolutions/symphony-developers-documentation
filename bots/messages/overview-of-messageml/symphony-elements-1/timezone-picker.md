@@ -12,7 +12,7 @@ You can see below the designs of the timezone picker.
 
 ![Timezone Picker designs](../../../../.gitbook/assets/timezone-picker.png)
 
-For a list of all the available elements, refer to [Elements](broken-reference).
+For a list of all the available elements, refer to [Elements](/broken/pages/-MB7-LkwUlHZG_PvE5dA).
 
 ## Attributes
 
@@ -137,7 +137,7 @@ The following examples show the timezone picker being used as follows:
 
 ## Annex: list of timezone values
 
-The possible values of the timezone-picker are restricted to the **Canonical values** of the [tz database](https://en.wikipedia.org/wiki/List\_of\_tz\_database\_time\_zones).
+The possible values of the timezone-picker are restricted to the **Canonical values** of the [tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 Please note in the examples above that the values are displayed to users according to the following rules:
 

@@ -6,7 +6,7 @@ The `logout` function exposed by the SDK allows you to log the user out of all S
 
 When called, the function will log the user out of Symphony Messaging servers, and then delete all the iFrames controlled by our SDK.&#x20;
 
-Once logged out, Symphony Messaging is back in a state as if the [first `render` method](broken-reference) had never been called so any other function provided by the SDK would not have any effect. **The `render` method needs to be called  again.**
+Once logged out, Symphony Messaging is back in a state as if the [first `render` method](/broken/spaces/fAel5eAVHAZGcVMDx7ly/pages/IjXRqsoj0pej0L7Uvc0q#id-2.-rendering-ecp) had never been called so any other function provided by the SDK would not have any effect. **The `render` method needs to be called  again.**
 
 ```typescript
 window.symphony.logout(): Promise<{error?: {type: string; message: string}}>;

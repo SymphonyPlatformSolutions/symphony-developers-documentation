@@ -32,7 +32,7 @@ If you are using a DNS based load balancer, you can load balance requests to the
 When you access the FQDN for the Agent server farm, DNS resolution gives you a physical Agent server host to which you can connect. Your application should make note of this physical Agent server host and forward all subsequent API calls to this Agent server.
 
 {% hint style="info" %}
-### Java DNS Caching 
+### Java DNS Caching<br>
 
 Oracle Java has a tendency to cache DNS resolution entries which will affect the above. When Java caches the DNS records your application/bot would continue to be sent to whichever host is stored in the DNS cache. To turn off Java DNS caching please edit the below file
 {% endhint %}

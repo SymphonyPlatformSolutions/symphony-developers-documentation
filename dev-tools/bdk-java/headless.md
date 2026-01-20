@@ -74,8 +74,8 @@ public class GifSlashHandler {
 
 To learn more about the BDK's Spring Boot Integration continue [here](./#springboot-integration) or to our dedicated BDK Developer Certification course where you will learn in depth about how to build bots using the BDK and Spring Boot:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-MB573wFlSNrHwbKAfpo" %}
+[Broken link](/broken/pages/-MB573wFlSNrHwbKAfpo)
 {% endcontent-ref %}
 
 ## 2.  Adding your own Functionality

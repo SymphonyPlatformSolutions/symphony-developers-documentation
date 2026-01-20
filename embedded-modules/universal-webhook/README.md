@@ -24,4 +24,4 @@ First, your Symphony Messaging admin needs to configure the required service use
 
 Then, end users can configure webhooks using the extension app, as described in the [User guide](user-guide/).
 
-\
+<br>

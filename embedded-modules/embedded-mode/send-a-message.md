@@ -83,8 +83,7 @@ Please find below few examples of messages that show the features we support:
 * tables
 * attachments in base64 (images, pdf...)
 
-In these examples, the `sendMessage` function will blast the message to two users and one room, and display the confirmation dialog in the `#ecp-chat` div.\
-
+In these examples, the `sendMessage` function will blast the message to two users and one room, and display the confirmation dialog in the `#ecp-chat` div.<br>
 
 {% tabs %}
 {% tab title="Simple message" %}
@@ -192,7 +191,7 @@ window.symphony.sendMessage(m, {
 
 #### Returned promise
 
-The Send chat message function returns a [**JavaScript Promise**](https://www.w3schools.com/js/js\_promise.asp) that will resolve once the message is sent. The promise has the following interface:
+The Send chat message function returns a [**JavaScript Promise**](https://www.w3schools.com/js/js_promise.asp) that will resolve once the message is sent. The promise has the following interface:
 
 &#x20; \- Success
 

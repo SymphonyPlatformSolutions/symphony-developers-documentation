@@ -44,6 +44,5 @@ Symphony proposes replacement solutions for Jira, Salesforce & Universal Webhook
 
 Customers who have installed the Integration Bridge on their premises are not impacted. However, as the Integration Bridge is no longer supported, we cannot recommend using it.
 
-\
-
+<br>
 

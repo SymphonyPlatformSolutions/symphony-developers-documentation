@@ -59,8 +59,8 @@ The sequence of API calls and component interaction is illustrated below:
 
 For an even more detailed explanation, enroll in our Developer Certification Program:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-MB573wFlSNrHwbKAfpo" %}
+[Broken link](/broken/pages/-MB573wFlSNrHwbKAfpo)
 {% endcontent-ref %}
 
 {% hint style="info" %}

@@ -77,7 +77,7 @@ There are several ways to load Embedded Mode, depending on the technical constra
 Once Embedded Mode is loaded, it offers a number of capabilities:
 
 * Quickly **open an existing chat** or create one (more information [here](open-a-chat.md)).
-* **Send a message** to an existing room or to a list of users (more information [here](broken-reference)).&#x20;
+* **Send a message** to an existing room or to a list of users (more information [here](/broken/pages/natmDtDf7B8YAsHwGMQU)).&#x20;
 * Keep track of the chat activity, through a **notification feed** (more information [here](notifications.md)).
 * Be informed if the **user is active or not** (more information [here](notifications.md#activity-notifications)).
 

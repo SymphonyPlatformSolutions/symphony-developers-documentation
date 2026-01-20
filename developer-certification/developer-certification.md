@@ -38,7 +38,7 @@ Head over to our Developer Training Center to get started on this [course](https
 This course has a pre-requisite requirement of completing the Symphony Messaging Development Fundamentals course and achieving a [Symphony Messaging Certified Associate Developer](developer-certification.md) status.
 {% endhint %}
 
-After completing the [Symphony Messaging Development Fundamentals](broken-reference) course you then have access to the Certified Bot Developer courses shown below.  These courses give developers experience in developing Symphony chat bots and applications using Symphony BDK tooling. &#x20;
+After completing the [Symphony Messaging Development Fundamentals](/broken/pages/-MB573wFlSNrHwbKAfpo) course you then have access to the Certified Bot Developer courses shown below.  These courses give developers experience in developing Symphony chat bots and applications using Symphony BDK tooling. &#x20;
 
 We have language pathways for either Java or Python.  So please follow the respective guide below for [Java](developer-certification.md#module-developing-bots-using-bdk-2.0-for-java) or [Python](developer-certification.md#module-developing-bots-using-bdk-2.0-for-python).
 

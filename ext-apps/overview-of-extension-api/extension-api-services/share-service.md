@@ -29,7 +29,7 @@ Launches the "Share on Symphony" modal from your application, allowing the user 
 function share(type, content, options)
 ```
 
-<table data-header-hidden><thead><tr><th width="123">Parameter</th><th width="98">Type</th><th width="106">Required</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Required</td><td>Description</td></tr><tr><td>type</td><td>String</td><td>Yes</td><td>The type of content that is being shared.</td></tr><tr><td>content</td><td>Object</td><td>Yes</td><td>An object that describes the content being shared. For a list of objects see <a href="broken-reference">standard entities</a>.</td></tr><tr><td>options</td><td>Object</td><td>No</td><td>An object that describes options that can be used to enhance the share service</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="123">Parameter</th><th width="98">Type</th><th width="106">Required</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Type</td><td>Required</td><td>Description</td></tr><tr><td>type</td><td>String</td><td>Yes</td><td>The type of content that is being shared.</td></tr><tr><td>content</td><td>Object</td><td>Yes</td><td>An object that describes the content being shared. For a list of objects see <a href="/broken/pages/-MD_bJMd9aYYqZww_rml#standard-entities">standard entities</a>.</td></tr><tr><td>options</td><td>Object</td><td>No</td><td>An object that describes options that can be used to enhance the share service</td></tr></tbody></table>
 
 The following JavaScript shows an example of an article being shared:
 

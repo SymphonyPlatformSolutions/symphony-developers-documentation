@@ -55,6 +55,6 @@ To learn more about how bots can send and receive encrypted messages on Symphony
 
 For the full Symphony Messaging API reference continue here:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-MMvdntu_i3qLFfvCqvN" %}
+[Broken link](/broken/pages/-MMvdntu_i3qLFfvCqvN)
 {% endcontent-ref %}

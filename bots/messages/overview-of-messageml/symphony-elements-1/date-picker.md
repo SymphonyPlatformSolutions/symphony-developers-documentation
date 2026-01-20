@@ -20,7 +20,7 @@ The main points to be highlighted are the following:
 * A disabled date is displayed in grey and stroke through
 * An highlighted date is displayed in blue
 
-For a list of all the available elements, refer to [Elements](broken-reference).
+For a list of all the available elements, refer to [Elements](/broken/pages/-MB7-LkwUlHZG_PvE5dA).
 
 ![Date Picker designs](../../../../.gitbook/assets/date-picker.png)
 

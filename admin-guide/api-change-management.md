@@ -20,4 +20,4 @@ You should ensure your code is robust and can handle such changes from us. All f
 * We will ignore unrecognized query string arguments and unrecognized HTTP headers.
 * We will reject requests containing unrecognized fields in request body.
 
-Most changes to API endpoints will be versioned in the way described above. However, if we discover that endpoints expose customers to security vulnerabilities, we will publish new endpoints immediately and expedite deprecation insecure endpoints.\
+Most changes to API endpoints will be versioned in the way described above. However, if we discover that endpoints expose customers to security vulnerabilities, we will publish new endpoints immediately and expedite deprecation insecure endpoints.<br>

@@ -190,7 +190,7 @@ Otherwise, the mapping between the API endpoints is the following:
   * Via a GET on the endpoint /agent/v4/datafeed/{id}/read, the list of events within the specific datafeed identified with {id} is returned
   * Deleting a datafeed is not supported
 * Path /agent/v5/datafeeds
-  * Via a GET on the endpoint [/agent/v5/datafeeds](broken-reference), is returned the list of already created IDs for a service account
-  * Via a POST on the endpoint [/agent/v5/datafeeds](broken-reference), the datafeed is created and the ID is not persisted on the bot side _→ Even if the bot is stale, a GET on the same endpoint will retrieve the ID to which the service account is subscribed_
-  * Via a POST on the endpoint [/agent/v5/datafeeds/{id}/read](broken-reference) with a parameter ackId (empty string at the first query), the endpoint returns: the list of events, a new ackId string _→ This ackId permits acknowledgement of the last query and retrieve all events since the last one. All events received between the last payload and the new request are queued and therefore retrieved._
-  * Via a DELETE on [/agent/v5/datafeeds/{id}](broken-reference), the datafeed specified with the {id} is deleted.
+  * Via a GET on the endpoint [/agent/v5/datafeeds](/broken/pages/Mv76y5oaRHPkoKvD87Vu), is returned the list of already created IDs for a service account
+  * Via a POST on the endpoint [/agent/v5/datafeeds](/broken/pages/iavu1XxjRHVmMJKSHYWU), the datafeed is created and the ID is not persisted on the bot side _→ Even if the bot is stale, a GET on the same endpoint will retrieve the ID to which the service account is subscribed_
+  * Via a POST on the endpoint [/agent/v5/datafeeds/{id}/read](/broken/pages/imR6nK0atp3FE5BZWVO6) with a parameter ackId (empty string at the first query), the endpoint returns: the list of events, a new ackId string _→ This ackId permits acknowledgement of the last query and retrieve all events since the last one. All events received between the last payload and the new request are queued and therefore retrieved._
+  * Via a DELETE on [/agent/v5/datafeeds/{id}](/broken/pages/JRiWX4WtjjpnvsMBCLGH), the datafeed specified with the {id} is deleted.

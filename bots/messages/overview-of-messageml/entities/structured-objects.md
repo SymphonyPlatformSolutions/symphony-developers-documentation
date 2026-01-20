@@ -124,6 +124,6 @@ To create a renderer application:
 
 To learn more about building Extension Applications that leverage structured objects, continue here:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-MJPWun3tPBu5PKKLhCB" %}
+[Broken link](/broken/pages/-MJPWun3tPBu5PKKLhCB)
 {% endcontent-ref %}

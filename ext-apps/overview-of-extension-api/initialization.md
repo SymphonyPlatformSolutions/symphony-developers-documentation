@@ -65,4 +65,4 @@ You should style your application according to the user's theme by applying the 
 });
 ```
 
-If a user changes his theme, a themeChangeV2 event is fired from the [ui service](extension-api-services/ui-service/), which will pass a `themeV2` object with the new values. You should use a service to [listen](extension-api-services/service-interface.md#listen) to this event and update the classes on the application module `<body>`.\
+If a user changes his theme, a themeChangeV2 event is fired from the [ui service](extension-api-services/ui-service/), which will pass a `themeV2` object with the new values. You should use a service to [listen](extension-api-services/service-interface.md#listen) to this event and update the classes on the application module `<body>`.<br>

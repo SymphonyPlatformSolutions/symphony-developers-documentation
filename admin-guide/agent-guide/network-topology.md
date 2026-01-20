@@ -1,7 +1,6 @@
 # Network Topology
 
-In the following sections, we demonstrate two deployment models: In-cloud and on-premise. For both models, we show figures that represent sets of processes running at a particular IP address. The numbers on the labels indicate the port numbers the API caller uses to make their connections.\
-
+In the following sections, we demonstrate two deployment models: In-cloud and on-premise. For both models, we show figures that represent sets of processes running at a particular IP address. The numbers on the labels indicate the port numbers the API caller uses to make their connections.<br>
 
 The path names (for example, `/login/pubkey/authenticate`) indicate which APIs are supported by each process.
 
@@ -21,7 +20,7 @@ For more information on our REST API continue here: [Overview of REST API](../..
 
 The standard configuration requires applications to use HTTP proxies to mediate access between the customer's network and the Symphony cloud.
 
-![](../../.gitbook/assets/0c76114-1\_-\_on-premise-deployment.png)
+![](../../.gitbook/assets/0c76114-1_-_on-premise-deployment.png)
 
 When authenticating with Certificate, some proxies can be configured to allow connections only on standard port numbers; however, these processes might not reach port 8444 on any IP address in the Symphony pod. In these cases, Symphony can make a separate proxy IP address available to route traffic destined for port 8444 on the pod through port 443 on a different hostname.
 
@@ -31,7 +30,7 @@ For RSA authentication, the port will always be `443`, therefore a proxy on the 
 
 The following figure shows the same on-premise deployment configuration as the figure above but without the use of a proxy. This configuration will be deprecated soon.
 
-![](../../.gitbook/assets/89db623-1\_-\_on-premise-deployment-legacy.png)
+![](../../.gitbook/assets/89db623-1_-_on-premise-deployment-legacy.png)
 
 ## Security Note
 
@@ -64,8 +63,8 @@ You can use this network configuration if your internal proxies do not allow app
 
 For RSA Authentication, the port will always be 443, therefore a proxy on the Symphony pod is not required.
 
-![](../../.gitbook/assets/0305bcc-2\_-\_in-cloud-deployment.png)
+![](../../.gitbook/assets/0305bcc-2_-_in-cloud-deployment.png)
 
 The following figure shows the same on-cloud deployment configuration but without the use of a proxy. This configuration will be deprecated soon.
 
-![](../../.gitbook/assets/e0ed30e-2\_-\_on-premise-deployment-legacy.png)
+![](../../.gitbook/assets/e0ed30e-2_-_on-premise-deployment-legacy.png)

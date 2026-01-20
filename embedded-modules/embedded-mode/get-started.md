@@ -123,7 +123,7 @@ onUserInteractionRequired({
 
 Once the user interaction is completed, you will eventually be notified that the UI is ready to be used with the `render` promise resolving (either with the chat information or an error).&#x20;
 
-You can register your callback function as soon as the [SDK is loaded](broken-reference).
+You can register your callback function as soon as the [SDK is loaded](/broken/spaces/fAel5eAVHAZGcVMDx7ly/pages/IjXRqsoj0pej0L7Uvc0q#id-1.-loading-the-sdk-script).
 
 ### Automatic rendering
 
