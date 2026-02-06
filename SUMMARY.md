@@ -36,6 +36,7 @@
       * [Images](bots/messages/overview-of-messageml/messageml-basic-format-tags/images-and-media.md)
       * [Tags and mentions](bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags/README.md)
         * [Enhanced tags notice](bots/messages/overview-of-messageml/messageml-basic-format-tags/shorthand-tags/enhanced-tags-notice.md)
+      * [Date and time](bots/messages/overview-of-messageml/messageml-basic-format-tags/date-and-time.md)
       * [Style Attributes](bots/messages/overview-of-messageml/messageml-basic-format-tags/style-attributes.md)
       * [Special Characters](bots/messages/overview-of-messageml/messageml-basic-format-tags/special-characters.md)
       * [Emojis](bots/messages/overview-of-messageml/messageml-basic-format-tags/emojis.md)
