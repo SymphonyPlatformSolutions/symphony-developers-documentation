@@ -151,7 +151,7 @@
 ## Symphony REST API
 
 * [Messaging REST API](https://rest-api.symphony.com/)
-* [Federation](https://symphony-1.gitbook.io/federation)
+* [Federation](https://rest-api-federation.symphony.com/)
 * [Sponsored Access API](symphony-rest-api/sponsored-access-api.md)
 * [Enhanced Directory API](https://streetlinx.symphony.com/api)
 
