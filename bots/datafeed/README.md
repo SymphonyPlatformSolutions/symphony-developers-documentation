@@ -175,14 +175,11 @@ The legacy agent/v4/datafeed API, also known as Datafeed 1, is out of support si
 
 To facilitate this transition, a **datafeed** **bridge** has been introduced in June 2022 in the API Agent so consumers of the deprecated APIs keep a functioning service. **This bridge is however deprecated and will no longer function starting in March 2026.**
 
-As a result you are required to migrate your bots to the new [/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5). If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is automatic. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
+As a result you are required to migrate your bots to the new [/agent/v5/datafeeds](https://rest-api.symphony.com/main/datafeed/create-datafeed-v5). If you use the BDK in [Java](https://symphony-bdk-java.finos.org/) or [Python](https://symphony-bdk-python.finos.org/), the migration between v4 and v5 is requires a simple configuration change. We advise you to take this opportunity to migrate your bots to the **BDK** if you haven’t done so.
 
 #### Changes required to upgrade to v5 endpoints
 
-The v5 endpoints are different from the v4 ones, so migrating requires changes in your code.\
-If you are using our Java BDK, migrating to v5 is a simple configuration change.
-
-Otherwise, the mapping between the API endpoints is the following:
+If you are not using the Symphony BDK, migrating requires changes in your code, as the endpoints are different. The mapping of the API endpoints between the two versions is the following:
 
 * Path /agent/v4/datafeed (deprecated)
   * Via a POST on the endpoint /agent/v4/datafeed/create, the datafeed is created and then the ID is persisted in a file, which is by default datafeed.id on the bot side
