@@ -28,7 +28,7 @@ Webhook secrets and sensitive data are stored encrypted. You can rotate webhook 
 
 **IP ranges**: It is not possible to restrict the IP ranges to validate the incoming webhook requests at this point.
 
-**Deployment models**: The Universal Webhook service is only supported in the Cloud.
+**Deployment models**: The Universal Webhook service is only supported in the Cloud and Dedicated cloud deployment options.
 
 #### 7. Webhook lifecycle and room changes
 
