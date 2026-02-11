@@ -147,6 +147,7 @@
   * [User guide](embedded-modules/universal-webhook/user-guide/README.md)
     * [Example with Splunk](embedded-modules/universal-webhook/user-guide/example-with-splunk.md)
   * [Installation guide](embedded-modules/universal-webhook/installation-guide.md)
+  * [FAQ](embedded-modules/universal-webhook/faq.md)
 
 ## Symphony REST API
 
