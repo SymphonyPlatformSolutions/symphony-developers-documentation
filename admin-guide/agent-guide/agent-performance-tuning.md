@@ -1,4 +1,14 @@
+---
+hidden: true
+---
+
 # Agent Performance Tuning
+
+
+
+{% hint style="warning" %}
+This page is not maintained anymore. The Agent guide is available in [Symphony Docs](https://docs.symphony.com/posts/5576418-agent-api-guide).
+{% endhint %}
 
 ### Memory and CPU recommendations
 

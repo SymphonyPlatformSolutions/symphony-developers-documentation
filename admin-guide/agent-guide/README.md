@@ -1,4 +1,12 @@
+---
+hidden: true
+---
+
 # Agent Guide
+
+{% hint style="warning" %}
+This page is not maintained anymore. The Agent guide is available in [Symphony Docs](https://docs.symphony.com/posts/5576418-agent-api-guide).
+{% endhint %}
 
 The **API Agent** is a component that is responsible for encrypting and decrypting the payloads of messages sent and received by an API caller, so that the caller does not need to implement encryption itself. The API Agent thus enables Symphony to provide a stable public API for application developers, even if the underlying Symphony private APIs undergo changes.
 

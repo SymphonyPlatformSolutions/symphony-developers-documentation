@@ -1,4 +1,12 @@
+---
+hidden: true
+---
+
 # Network Topology
+
+{% hint style="warning" %}
+This page is not maintained anymore. The Agent guide is available in [Symphony Docs](https://docs.symphony.com/posts/5576418-agent-api-guide).
+{% endhint %}
 
 In the following sections, we demonstrate two deployment models: In-cloud and on-premise. For both models, we show figures that represent sets of processes running at a particular IP address. The numbers on the labels indicate the port numbers the API caller uses to make their connections.<br>
 

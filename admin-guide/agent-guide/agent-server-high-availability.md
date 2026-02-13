@@ -1,4 +1,12 @@
+---
+hidden: true
+---
+
 # Agent Server High Availability
+
+{% hint style="warning" %}
+This page is not maintained anymore. The Agent guide is available in [Symphony Docs](https://docs.symphony.com/posts/5576418-agent-api-guide).
+{% endhint %}
 
 Below is a quick guide on the load balancer rules to apply when hosting multiple Agent servers behind a load balancer.
 

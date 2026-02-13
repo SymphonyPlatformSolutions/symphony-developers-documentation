@@ -1,4 +1,14 @@
+---
+hidden: true
+---
+
 # Agent Installation
+
+
+
+{% hint style="warning" %}
+This page is not maintained anymore. The Agent guide is available in [Symphony Docs](https://docs.symphony.com/posts/5576418-agent-api-guide).
+{% endhint %}
 
 ## Symphony API Agent
 
