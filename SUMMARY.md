@@ -165,7 +165,7 @@
 * [Blackberry](https://marketplace.blackberry.com/apps/519414651)
 * [MobileIron](https://apps.apple.com/us/app/symphony-com-for-mobileiron/id1138896543)
 
-## Admin Guides <a href="#admin-guide" id="admin-guide"></a>
+## API Agent Admin <a href="#admin-guide" id="admin-guide"></a>
 
 * [Change Logs](admin-guide/change-log/README.md)
   * [API Agent](admin-guide/change-log/api-agent/README.md)
