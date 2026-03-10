@@ -1,7 +1,7 @@
 # API Agent
 
 {% hint style="info" %}
-The API Agent versions can be downloaded [here](../../agent-guide/agent-download.md).
+The API Agent versions can be downloaded [here](../../agent-download.md).
 {% endhint %}
 
 The change log of each recent agent versions is available in the pages below.
