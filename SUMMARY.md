@@ -135,6 +135,7 @@
   * [Configuration parameters](embedded-modules/embedded-mode/configuration-parameters.md)
   * [Open a chat](embedded-modules/embedded-mode/open-a-chat.md)
   * [Send a message](embedded-modules/embedded-mode/send-a-message.md)
+  * [Blast](embedded-modules/embedded-mode/blast.md)
   * [Create a room](embedded-modules/embedded-mode/create-a-room.md)
   * [Pin a message](embedded-modules/embedded-mode/pin-a-message.md)
   * [Notifications](embedded-modules/embedded-mode/notifications.md)
