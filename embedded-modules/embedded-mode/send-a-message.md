@@ -6,7 +6,7 @@ The `sendMessage` function exposed by the SDK allows you to trigger a dialog to 
 
 Two modes are supported:
 
-* Blast mode (`mode: 'blast'`): the message will be sent separately to the list of users and/or streams.
+* Blast mode (`mode: 'blast'`): the message will be sent separately to the list of users and/or streams and/or Distribution lists.
 * Group mode (`mode: 'group'`): a direct message or group chat will be created or opened with the user(s). You cannot pass stream IDs in group mode.
 
 #### Parameters
@@ -17,7 +17,10 @@ The `sendMessage` function returns a Promise that resolves when the chat is read
 
 The `SharedMessage` interface is aligned with the FDC3 standard: a plaintext or markdown payload that can be enriched with file attachments, FDC3 intents and Symphony entities.
 
-**Note:** Similarly to the `openStream` function, if in Focus mode you can pass a `container` parameter (in the `options` object) to open the chat in a specific container.
+**Notes:**&#x20;
+
+* Similarly to the `openStream` function, if in Focus mode you can pass a `container` parameter (in the `options` object) to open the chat in a specific container.
+* The `silent` parameter in the `options` object allows you to directly send the message instead of displaying the blast module. The silent option is only available for blast.
 
 ```typescript
 // Definitions of 'SendMessageOptions' and 'SharedMessage' objects
@@ -69,6 +72,8 @@ export interface SendMessageOptions {
   mode: 'blast' | 'group';
   users?: string[];
   streamIds?: string[];
+  distributionListsIds?: string[];
+  silent?: boolean;
   container?: string;
 }
 ```
@@ -98,6 +103,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
+    distributionListsIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -115,6 +121,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
+    distributionListsIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -132,6 +139,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
+    distributionListsIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -160,6 +168,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
+    distributionListsIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -178,6 +187,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
+    distributionListsIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
