@@ -1,3 +1,8 @@
+---
+name: gitbook
+description: Authoritative reference for editing GitBook-synced documentation — custom block syntax (hints, content-refs, tabs, includes), frontmatter and layout options, `.gitbook.yaml` / `SUMMARY.md` / `.gitbook/vars.yaml` config, variables and expressions, decision tables for choosing block types, and round-trip pitfalls. Invoke whenever editing any `.md` file in this repo, or when adding/restructuring pages, configuring redirects, or working with `.gitbook/` assets and variables. Content is maintained upstream by GitBook (https://gitbook.com/docs/skill.md) and pinned in-repo as a snapshot.
+---
+
 # skill
 
 A comprehensive guide for editing GitBook documentation in external environments like Cursor, Claude Code, or other text editors. This skill provides all the formatting syntax, configuration options, and best practices needed to create and maintain GitBook content outside the GitBook web interface.

@@ -27,9 +27,9 @@ When making content changes, **edit the current path** (the one referenced from 
 
 ## GitBook markdown conventions
 
-**Before editing content, read [`skill.md`](./skill.md) at the repo root.** It is the GitBook-authored reference for all custom block syntax, frontmatter options, `SUMMARY.md` / `.gitbook.yaml` / `.gitbook/vars.yaml` config, decision tables for choosing block types, and common pitfalls. It is the source of truth for "what survives a GitBook round-trip"; treat it as required reading for any non-trivial markdown edit.
+**Before editing content, load the [`gitbook` skill](./.claude/skills/gitbook/SKILL.md).** It is the GitBook-authored reference for all custom block syntax, frontmatter options, `SUMMARY.md` / `.gitbook.yaml` / `.gitbook/vars.yaml` config, decision tables for choosing block types, and common pitfalls — the source of truth for "what survives a GitBook round-trip". Claude Code will auto-discover it from `.claude/skills/gitbook/SKILL.md`; treat it as required reading for any non-trivial markdown edit.
 
-Quick orientation (full details in `skill.md`):
+Quick orientation (full details in the `gitbook` skill):
 
 - **Frontmatter**: pages often start with a YAML block containing `description:` (used as the page's meta description and subtitle).
 - **Hints**: `{% hint style="info" %}…{% endhint %}` (also `warning`, `danger`, `success`).
@@ -39,7 +39,7 @@ Quick orientation (full details in `skill.md`):
 - **Heading anchors**: `## Heading <a href="#slug" id="slug"></a>` — preserve these when editing headings, since other pages link to them.
 - **HTML entities** like `&#x20;` show up after GitBook auto-formatting; leave them alone unless cleaning up.
 
-GitBook will preserve these on round-trip, but custom Markdown extensions or non-GitBook syntax may be stripped or reformatted on the next sync — when in doubt, consult `skill.md`.
+GitBook will preserve these on round-trip, but custom Markdown extensions or non-GitBook syntax may be stripped or reformatted on the next sync — when in doubt, consult the `gitbook` skill.
 
 ## When adding a new page
 
