@@ -95,6 +95,10 @@
   * [Circle of Trust Authentication](ext-apps/app-authentication/circle-of-trust-authentication.md)
   * [OBO Authentication](ext-apps/app-authentication/obo-authentication.md)
 
+## AI
+
+* [Symphony's MCP Server](ai/symphonys-mcp-server.md)
+
 ## Developer Tools <a href="#dev-tools" id="dev-tools"></a>
 
 * [Symphony Messaging Generator](dev-tools/generator.md)
