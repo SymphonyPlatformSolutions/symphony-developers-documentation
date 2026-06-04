@@ -12,7 +12,7 @@ If a user’s company is not yet available on Symphony Messaging, a dedicated Sy
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Before they can use Sponsored Access APIs to add client companies, as well as add or disable users, partners must register with Symphony.  Following registration, partners receive credentials to authenticate to these APIs.
+Before they can use Sponsored Access APIs to add client companies, as well as add or disable users, partners must register with Symphony. Following registration, partners receive credentials to authenticate to these APIs.
 
 If they want to offer a seamless login experience to Symphony Messaging, partners need to provide Symphony with their Identity Provider details. The recommended authentication method is SAML, although other authentication methods are also available (additional charges apply).
 
@@ -22,8 +22,8 @@ If you would like to register as a Symphony partner, create new users and embed 
 
 In order to target the different APIs described below, the user should use the correct domain, depending on their environment:
 
-* PROD: [**https://community.symphony.com/api**](https://community.symphony.com/api)
-* UAT: [**https://community.uat.symphony.com/api**](https://community.uat.symphony.com/api)
+* PROD: [**https://community.symphony.com/api**](https://community.symphony.com/api/swagger-ui/index.html)
+* UAT: [**https://community.uat.symphony.com/api**](https://community.uat.symphony.com/api/swagger-ui/index.html)
 
 ## Authentication
 
