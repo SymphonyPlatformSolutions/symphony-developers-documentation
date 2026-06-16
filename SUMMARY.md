@@ -97,7 +97,10 @@
 
 ## AI
 
-* [Symphony's MCP Server](ai/symphonys-mcp-server.md)
+* [MCP Server](ai/symphonys-mcp-server.md)
+* [AI Agent](ai/ai-agent/README.md)
+  * [AI agent studio](ai/ai-agent/ai-agent-studio.md)
+  * [Develop custom AI Agent](ai/ai-agent/develop-custom-ai-agent.md)
 
 ## Developer Tools <a href="#dev-tools" id="dev-tools"></a>
 
