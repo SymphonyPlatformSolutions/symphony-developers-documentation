@@ -12,7 +12,7 @@ By default, Symphony Messaging provides secure authentication and authorization 
 
 This sequence diagram describes the flow of requests between the various components.
 
-![](<../../.gitbook/assets/sso-workflow-7- (1) (1).svg>)
+![](<../../.gitbook/assets/sso-workflow-7- (1).svg>)
 
 ## Create Authorization Server <a href="#create-authorization-server" id="create-authorization-server"></a>
 

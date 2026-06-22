@@ -14,7 +14,7 @@ description: This section lists the Structured Objects available for use in mess
 
 #### org.symphonyoss.fin.security
 
-<table data-header-hidden><thead><tr><th width="112">Field</th><th width="102">Required</th><th width="90">Format</th><th>Description</th></tr></thead><tbody><tr><td>Field</td><td>Required</td><td>Format</td><td>Description</td></tr><tr><td>type</td><td>Yes</td><td>String</td><td>The type of object. Must be set to <code>org.symphonyoss.fin.security</code>.</td></tr><tr><td>id</td><td>Yes</td><td>Array of Objects</td><td>An array of one or more of the following objects: <em>org.symphonyoss.fin.security.id.ticker</em> org.symphonyoss.fin.security.id.isin <em>org.symphonyoss.fin.security.id.cusip</em> org.symphonyoss.fin.security.id.openfigi  More information about these objects is provided below.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="112">Field</th><th width="102">Required</th><th width="90">Format</th><th>Description</th></tr></thead><tbody><tr><td>Field</td><td>Required</td><td>Format</td><td>Description</td></tr><tr><td>type</td><td>Yes</td><td>String</td><td>The type of object. Must be set to <code>org.symphonyoss.fin.security</code>.</td></tr><tr><td>id</td><td>Yes</td><td>Array of Objects</td><td>An array of one or more of the following objects: <em>org.symphonyoss.fin.security.id.ticker</em> org.symphonyoss.fin.security.id.isin <em>org.symphonyoss.fin.security.id.cusip</em> org.symphonyoss.fin.security.id.openfigi More information about these objects is provided below.</td></tr></tbody></table>
 
 #### org.symphonyoss.fin.security.id.ticker
 
@@ -34,11 +34,11 @@ description: This section lists the Structured Objects available for use in mess
 
 ### FDC3 Action buttons
 
-FDC3 action buttons allow chat bots to embed buttons in messages which, on click, will raise an intent.&#x20;
+FDC3 action buttons allow chat bots to embed buttons in messages which, on click, will raise an intent.
 
 Action buttons are only displayed to users who have a Desktop Integration Platform (DIP) set up, such as interop.io, Here Core or Connectifi.
 
-Learn more about Desktop Interop and intents [here](../../../../embedded-modules/desktop-interoperability/).&#x20;
+Learn more about Desktop Interop and intents [here](../../../../embedded-modules/desktop-interoperability/).
 
 MessageML (`message` property)
 
@@ -85,7 +85,7 @@ Display in Symphony:
 
 {% tabs %}
 {% tab title="Users with a DIP" %}
-<figure><img src="../../../../.gitbook/assets/image (27).png" alt=""><figcaption><p>On click, Symphony will raise the embedded intent.</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>On click, Symphony will raise the embedded intent.</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Users without a DIP" %}
@@ -93,15 +93,13 @@ Display in Symphony:
 {% endtab %}
 {% endtabs %}
 
-
-
 ### Image
 
 <table data-header-hidden><thead><tr><th width="112">Field</th><th width="102">Required</th><th width="98">Format</th><th>Description</th></tr></thead><tbody><tr><td>Field</td><td>Required</td><td>Format</td><td>Description</td></tr><tr><td>type</td><td>Yes</td><td>String</td><td>The type of entity. Must be set to <code>com.symphony.media.image</code>.</td></tr><tr><td>version</td><td>Yes</td><td>String</td><td>The version.</td></tr><tr><td>format</td><td>Yes</td><td>String</td><td>The data format. Must be set to <code>image</code>.</td></tr><tr><td>url</td><td>Yes</td><td>String</td><td>The URL of the image.</td></tr></tbody></table>
 
 ### Taxonomy (mention)
 
-<table data-header-hidden><thead><tr><th width="112">Field</th><th width="97">Required</th><th width="104">Format</th><th>Description</th></tr></thead><tbody><tr><td>Field</td><td>Required</td><td>Format</td><td>Description</td></tr><tr><td>type</td><td>Yes</td><td>String</td><td>The type of object. Must be set to <code>com.symphony.user.mention</code>.</td></tr><tr><td>version</td><td>Yes</td><td>String</td><td>The object's version.</td></tr><tr><td>id</td><td>Yes</td><td>Array of objects</td><td>An array of one or more of the following objects: <br>• com.symphony.user.userId<br>More information about these objects is provided below.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="112">Field</th><th width="97">Required</th><th width="104">Format</th><th>Description</th></tr></thead><tbody><tr><td>Field</td><td>Required</td><td>Format</td><td>Description</td></tr><tr><td>type</td><td>Yes</td><td>String</td><td>The type of object. Must be set to <code>com.symphony.user.mention</code>.</td></tr><tr><td>version</td><td>Yes</td><td>String</td><td>The object's version.</td></tr><tr><td>id</td><td>Yes</td><td>Array of objects</td><td>An array of one or more of the following objects:<br>• com.symphony.user.userId<br>More information about these objects is provided below.</td></tr></tbody></table>
 
 #### com.symphony.user.userId
 
@@ -118,4 +116,3 @@ Continue here to learn more about structured objects:
 {% content-ref url="structured-objects.md" %}
 [structured-objects.md](structured-objects.md)
 {% endcontent-ref %}
-

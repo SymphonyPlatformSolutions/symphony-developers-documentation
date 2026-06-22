@@ -142,7 +142,7 @@ https://develop2.symphony.com/?bundle=https://localhost:4000/bundle.json
 
 ## Test the App
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 Acknowledge the warning about being in developer mode. You should notice that a new left navigation item appears and triggers an alert when pressed.
 
@@ -157,4 +157,3 @@ Now that you know how to build a basic extension app, you can continue to use th
 {% content-ref url="message-renderer.md" %}
 [message-renderer.md](message-renderer.md)
 {% endcontent-ref %}
-

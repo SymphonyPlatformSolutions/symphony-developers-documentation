@@ -37,8 +37,6 @@ Message authentication, delivery successes, and errors are logged in the webhook
 
 Your Symphony technical point of contact (Technical Account Manager, or Solutions Architect) is in a position to perform this step for you. If you do not have a point of contact or you wish to do this step yourself, follow the instructions below.
 
-
-
 #### **Create an extension app by importing a JSON file**
 
 1. On the Symphony Messaging Admin Portal, select the **APP MANAGEMENT** tab, then click the **Add Custom App** button.
@@ -64,7 +62,7 @@ Your Symphony technical point of contact (Technical Account Manager, or Solution
 * **Name**: Universal Webhook 2.0
 * **Publisher**: Symphony
 * **Icon URL**: [https://symphony\_pod\_loopback.com/apps/universal-webhook/default/assets/app-icon-square.svg](https://symphony_pod_loopback.com/apps/universal-webhook/default/assets/app-icon-square.svg)
-*   **Description**:&#x20;
+*   **Description**:
 
     ```
     Share content and alerts from third party services in Symphony chats. 
@@ -109,7 +107,7 @@ The end result should look like this:
 
 #### Enable access to the app
 
-1. On the Symphony Messaging Admin Portal, select the **APP SETTINGS** tab.&#x20;
+1. On the Symphony Messaging Admin Portal, select the **APP SETTINGS** tab.
 2. Locate the newly configured app, and change its **Global Status** to **Enabled.**
 3. Change the **Visibility** to **Visible** and the **Installation** to **Automatic**. This allows access to the app to all users, and allows users to uninstall the app from the Marketplace if they want. Alternatively, you can also control at the user level who can open the app. If you need more information on controlling the access to the app, please check our Admin Portal guide.
 4. Save your changes by selecting Save at the bottom of the screen.
@@ -122,20 +120,20 @@ Only users with access to the app will be able to configure webhooks.
 
 #### **Create a service account**
 
-In SymphonyMessaging , you must configure a service account using the Admin Portal (or via API).&#x20;
+In SymphonyMessaging , you must configure a service account using the Admin Portal (or via API).
 
 1. Select the **Create an Account** tab.
 2. Select the **Service Account** tab.
 3. Fill in the mandatory **Username**, **Display Name** in the Service Account form.
-4. Set the **Role in Symphony Messaging** to **Individual**.&#x20;
+4. Set the **Role in Symphony Messaging** to **Individual**.
 5. Set the entitlement **Can edit profile picture** to **Yes**.
 6. Select **Create**.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure></div>
 
 #### **Configure the RSA authentication**
 
-RSA is an asymmetric cryptographic system that leverages a public and private key allowing any user with the public key to generate a message that will be decrypted with the private key.&#x20;
+RSA is an asymmetric cryptographic system that leverages a public and private key allowing any user with the public key to generate a message that will be decrypted with the private key.
 
 In order to use RSA for authentication, you must generate a key pair using OpenSSL.
 
@@ -226,8 +224,6 @@ curl --location --request POST 'https://[tenant].symphony.com/universal-webhook/
 ```
 
 Have a look at the [User guide](user-guide/) for more information.
-
-
 
 ### How to uninstall
 

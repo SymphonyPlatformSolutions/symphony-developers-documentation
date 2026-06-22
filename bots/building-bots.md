@@ -16,7 +16,7 @@ Symphony Messaging Bots can leverage the Symphony Messaging REST API to create i
 
 ### 2. Leverage our Tools
 
-Symphony has built numerous tools in order to streamline Symphony Messaging Bot Development. Our rich suite of developer tools offers centralized configuration and authentication protocols, provides out of the box API bindings, convenient error handling, datafeed management, and ensures that your Bot is built using Symphony's best practices.&#x20;
+Symphony has built numerous tools in order to streamline Symphony Messaging Bot Development. Our rich suite of developer tools offers centralized configuration and authentication protocols, provides out of the box API bindings, convenient error handling, datafeed management, and ensures that your Bot is built using Symphony's best practices.
 
 Using an ultra simplified configuration and authentication set up, an intuitive message and room control mechanism, new APIs for message templating and workflow activities, developing bots has never been easier.
 
@@ -30,7 +30,7 @@ Learn more about how you can get started with our developer tools here:
 [Broken link](/broken/pages/FGDZh7zIQvgLtB0HEfTU)
 {% endcontent-ref %}
 
-### 3.  Authentication
+### 3. Authentication
 
 At Symphony, security is always first. In order to leverage Symphony Messaging's robust set of open APIs, your Bot must first authenticate itself. You can learn more about how to authenticate and the different types of authentication here:
 
@@ -38,7 +38,7 @@ At Symphony, security is always first. In order to leverage Symphony Messaging's
 [authentication](authentication/)
 {% endcontent-ref %}
 
-### 4.  Add Custom Business Logic
+### 4. Add Custom Business Logic
 
 The last step is to add custom business logic to your Bot. Begin learning about the capabilities of Symphony Messaging REST APIs and bring your workflows and automations to life:
 
@@ -46,10 +46,10 @@ The last step is to add custom business logic to your Bot. Begin learning about 
 [overview-of-rest-api](overview-of-rest-api/)
 {% endcontent-ref %}
 
-### 5.  Become a Certified Developer
+### 5. Become a Certified Developer
 
 Want to take your Bot building to the next level? Symphony offers a free course and certification program for Developers wishing to improve their Symphony Messaging skills, technical knowledge, and expertise. Learn more about how you can become a Certified Developer today!
 
-{% content-ref url="/broken/pages/-MB573wFlSNrHwbKAfpo" %}
-[Broken link](/broken/pages/-MB573wFlSNrHwbKAfpo)
+{% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/developer-certification" %}
+[Developer Certification](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/developer-certification)
 {% endcontent-ref %}

@@ -47,8 +47,8 @@ Please refer to the [main page](../) for more information (release cadence, new 
 
 * A parentMessageId field is now exposed in the payloads returned by the Agent when retrieving information of a message consecutive to either a reply or a forward; it can be used as a link to the original message.
 * Datahose API has been released as a _Beta version for now_ and until further notice. It allows any bot that is authorized by the right entitlements to retrieve all events happening on the pod, including the ones that happen in rooms it is not part of. For more information, follow the link to the [Datahose - Read Events](https://developers.symphony.com/restapi/reference/datahose-read-events) endpoint introduced in our REST API documentation.\
-  &#xNAN;_&#x50;lease note that a breaking change will be introduced in the 22.7 version of the Agent: indeed the_ `filters` _parameter will be removed and replaced by another one,_ `eventTypes`_, which will allow to restrict the payload to the only_ [_Real Time Events_](../../../../bots/datafeed/real-time-events.md) _requested._\
-  _Note there is also a dependency on a specific Datafeed v2 version that should be soon deployed to production - more information will be available soon._
+  \&#xNAN;_Please note that a breaking change will be introduced in the 22.7 version of the Agent: indeed the_ `filters` _parameter will be removed and replaced by another one,_ `eventTypes`_, which will allow to restrict the payload to the only_ [_Real Time Events_](../../../../bots/datafeed/real-time-events.md) _requested._\
+  &#xNAN;_&#x4E;ote there is also a dependency on a specific Datafeed v2 version that should be soon deployed to production - more information will be available soon._
 * Consequently to the deprecation notice of the Datafeed v1 APIs on [Agent 20.14](agent-20.14.md#deprecation-notice) change log, a bridge has been introduced to facilitate the transition period from Datafeed v1 APIs to Datafeed v2 service. More information are available for the [deprecation timeline and the introduction of the bridge](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed) as well as the [benefits of Datafeed v2](https://developers.symphony.com/restapi/v20.14/reference/datafeed).
 * Similarly to its historic capabilities on downloading messages, the ceservice is now able to download attachments even from streams it is not part of.
 * Fixed a bug with Blast Message API returning unexpected 500 error message.
@@ -58,8 +58,3 @@ Please refer to the [main page](../) for more information (release cadence, new 
 **Important**: The logging configuration file (log4j2.xml) is now externalised and shipped within the agent zip deliverable. Inside the provided start.sh (preferred) and startup.sh (deprecated), a Java option has been added to target provided log4j2.xml : `-Dlogging.config=$LOGGING_CONFIG`. This enables you to customise the log4j2.xml content and location as needed.\
 If you are using a custom start script instead of the provided ones, please make sure the new log4j2.xml file is present in the agent folder, **and add -Dlogging.config=log4j2.xml to the Java command line in your script**, for the logs to be generated at the location specified in `-Dlogs.directory`, according to the rules defined in log4j2.xml.
 {% endhint %}
-
-
-
-
-

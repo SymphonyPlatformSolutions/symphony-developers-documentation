@@ -72,7 +72,7 @@ Use the Disabled button style to show that an action is currently unavailable. Y
 
 Use this style for situations where a user can choose one of two actions: cancel and complete.
 
-![](<../../.gitbook/assets/abc3381-cancel_action_and_button (1) (1) (1).png>)
+![](../../.gitbook/assets/abc3381-Cancel_action_and_button.png)
 
 ## Compact
 

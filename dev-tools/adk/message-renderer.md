@@ -162,11 +162,11 @@ https://develop2.symphony.com/?bundle=https://localhost:4000/bundle.json
 
 ## Test the App
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 Acknowledge the warning about being in developer mode.
 
-We now need to send a test message that corresponds with the registered message type  `adk.entity.quote`. You can either do this in [Postman](../postman.md) or create a simple [BDK project](../../bots/getting-started/bdk.md). Assuming a Java BDK project was used, this is the sample code required to send a message with the custom message type:
+We now need to send a test message that corresponds with the registered message type `adk.entity.quote`. You can either do this in [Postman](../postman.md) or create a simple [BDK project](../../bots/getting-started/bdk.md). Assuming a Java BDK project was used, this is the sample code required to send a message with the custom message type:
 
 {% code lineNumbers="true" %}
 ```java

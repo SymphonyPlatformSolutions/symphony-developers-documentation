@@ -13,7 +13,7 @@ Keep reading to learn about core Symphony Messaging concepts in order to ensure 
 It's time to get started. Navigate to one of the following guides to kick off your developer journey today!
 
 * [**Building Bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
-* [**Building Extension Applications on Symphony Messaging**](./#building-extension-applications)&#x20;
+* [**Building Extension Applications on Symphony Messaging**](./#building-extension-applications)
 * [**Become a Certified Developer**](developer-certification/developer-certification.md)
 * [**Developer Tools**](./#developer-tools)
 * [**REST API Reference**](./#symphony-rest-api)
@@ -49,11 +49,11 @@ For even more in depth look at how to Build Bots and Apps, check out our new Dev
 
 Bring customized and extensible workflows into Symphony Messaging through Extension Apps. Understand how to build, deploy, and manage your Extension App!
 
-{% content-ref url="/broken/pages/-MB56vAT56QIpiJW1ngT" %}
-[Broken link](/broken/pages/-MB56vAT56QIpiJW1ngT)
+{% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/ext-apps" %}
+[Extension Apps](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/ext-apps)
 {% endcontent-ref %}
 
-## Become a Certified Developer <img src=".gitbook/assets/certified-developer (1) (2) (2) (2) (1).png" alt="" data-size="line">&#x20;
+## Become a Certified Developer <img src=".gitbook/assets/certified-developer (1).png" alt="" data-size="line">
 
 Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
 
@@ -65,8 +65,8 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 In depth documentation and reference guide for the Symphony Messaging REST API:
 
-{% content-ref url="/broken/pages/-MMvdntu_i3qLFfvCqvN" %}
-[Broken link](/broken/pages/-MMvdntu_i3qLFfvCqvN)
+{% content-ref url="https://developers.symphony.com/restapi" %}
+[REST API Reference](https://developers.symphony.com/restapi)
 {% endcontent-ref %}
 
 ## Extension API <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
@@ -77,18 +77,18 @@ In depth documentation and reference guide for the Symphony Messaging Extension 
 [overview-of-extension-api](ext-apps/overview-of-extension-api/)
 {% endcontent-ref %}
 
-## Developer Tools <img src=".gitbook/assets/Developer tools.png" alt="" data-size="line">&#x20;
+## Developer Tools <img src=".gitbook/assets/Developer tools.png" alt="" data-size="line">
 
 Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
 
-{% content-ref url="/broken/pages/-MC8UitWNNh6csCQG10X" %}
-[Broken link](/broken/pages/-MC8UitWNNh6csCQG10X)
+{% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/dev-tools" %}
+[Developer Tools](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/dev-tools)
 {% endcontent-ref %}
 
-## Embedded Modules <img src=".gitbook/assets/Embedded modules.png" alt="" data-size="line">&#x20;
+## Embedded Modules <img src=".gitbook/assets/Embedded modules.png" alt="" data-size="line">
 
 Securely embed stand-alone Symphony Messaging chat modules inside other websites and applications:
 
-{% content-ref url="/broken/pages/-MB57DVgLU0XSCNn3eSc" %}
-[Broken link](/broken/pages/-MB57DVgLU0XSCNn3eSc)
+{% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/embedded-modules" %}
+[Embedded Modules](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/embedded-modules)
 {% endcontent-ref %}

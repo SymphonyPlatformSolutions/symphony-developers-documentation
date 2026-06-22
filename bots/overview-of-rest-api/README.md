@@ -13,7 +13,7 @@ While Bots can call the Symphony Messaging API directly, Symphony Messaging's de
 
 ## API Swagger files
 
-The API Swagger files are available [here](https://github.com/finos/symphony-api-spec#symphony-api-spec).&#x20;
+The API Swagger files are available [here](https://github.com/finos/symphony-api-spec#symphony-api-spec).
 
 There is one sub-folder per API collection, and each API collection is split in two swagger files: one for the supported endpoints and a second one listing only the deprecated endpoints (e.g. `/pod/pod-api-public-deprecated.yaml`).
 
@@ -55,6 +55,6 @@ To learn more about how bots can send and receive encrypted messages on Symphony
 
 For the full Symphony Messaging API reference continue here:
 
-{% content-ref url="/broken/pages/-MMvdntu_i3qLFfvCqvN" %}
-[Broken link](/broken/pages/-MMvdntu_i3qLFfvCqvN)
+{% content-ref url="https://developers.symphony.com/restapi" %}
+[REST API Reference](https://developers.symphony.com/restapi)
 {% endcontent-ref %}
