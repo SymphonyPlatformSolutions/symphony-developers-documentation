@@ -17,10 +17,15 @@ The `sendMessage` function returns a Promise that resolves when the chat is read
 
 The `SharedMessage` interface is aligned with the FDC3 standard: a plaintext or markdown payload that can be enriched with file attachments, FDC3 intents and Symphony entities.
 
-**Notes:**&#x20;
+**Notes:**
 
 * Similarly to the `openStream` function, if in Focus mode you can pass a `container` parameter (in the `options` object) to open the chat in a specific container.
-* The `silent` parameter in the `options` object allows you to directly send the message instead of displaying the blast module. The silent option is only available for blast.
+* The `displayMode` parameter (only available for `mode: blast`) in the `options` object allows you to configure how you send the message:
+  * `'confirmation_dialog'` (default value) opens a confirmation modal before sending the message.
+  * `'open_module'` opens the Blast module to send a blast message. &#x20;
+  * `'none'` directly sends silently the message without user confirmation.&#x20;
+
+
 
 ```typescript
 // Definitions of 'SendMessageOptions' and 'SharedMessage' objects
@@ -72,8 +77,8 @@ export interface SendMessageOptions {
   mode: 'blast' | 'group';
   users?: string[];
   streamIds?: string[];
-  distributionListsIds?: string[];
-  silent?: boolean;
+  distributionListIds?: string[];
+  displayMode?: 'confirmation_dialog'|'open_module'|'none';
   container?: string;
 }
 ```
@@ -103,7 +108,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
-    distributionListsIds: ['mylistId'],
+    distributionListIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -121,7 +126,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
-    distributionListsIds: ['mylistId'],
+    distributionListIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -139,7 +144,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
-    distributionListsIds: ['mylistId'],
+    distributionListIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -168,7 +173,7 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
-    distributionListsIds: ['mylistId'],
+    distributionListIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
@@ -187,13 +192,13 @@ window.symphony.sendMessage(m, {
     mode: 'blast',
     users: ['someUserId', 'another.user@youremailhere.com'],
     streamIds: ['someRoomId'],
-    distributionListsIds: ['mylistId'],
+    distributionListIds: ['mylistId'],
     container: '#ecp-chat'
   })
 ```
 {% endcode %}
 
-**Note:** The table must be placed at the end of the message. Also, it is not possible to include complex entities such as mentions or hashtags, or any markdown format in the table cells.&#x20;
+**Note:** The table must be placed at the end of the message. Also, it is not possible to include complex entities such as mentions or hashtags, or any markdown format in the table cells.
 {% endtab %}
 {% endtabs %}
 
@@ -203,10 +208,10 @@ window.symphony.sendMessage(m, {
 
 The Send chat message function returns a [**JavaScript Promise**](https://www.w3schools.com/js/js_promise.asp) that will resolve once the message is sent. The promise has the following interface:
 
-&#x20; \- Success
+\- Success
 
 <table><thead><tr><th width="175.4465408805031">Parameter</th><th width="194">Type</th><th>Description</th></tr></thead><tbody><tr><td>streamId</td><td>string [] | undefined</td><td>Stream ID of the chats where the message was sent.</td></tr><tr><td>userIds</td><td>string[] | undefined</td><td>List of user IDs</td></tr><tr><td>messages</td><td>object[] | undefined</td><td>Array of <code>{messageId, streamId}</code> representing the sent messages</td></tr></tbody></table>
 
-&#x20; \- Error
+\- Error
 
-<table><thead><tr><th width="196">Parameter</th><th width="113">Type</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>string</td><td>Type of error: <br><code>ERROR</code> for generic errors</td></tr><tr><td>message</td><td>string</td><td>Description of the error</td></tr><tr><td>data</td><td>Object | undefined</td><td>Additional data on the error, if any.</td></tr></tbody></table>
+<table><thead><tr><th width="196">Parameter</th><th width="113">Type</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>string</td><td>Type of error:<br><code>ERROR</code> for generic errors</td></tr><tr><td>message</td><td>string</td><td>Description of the error</td></tr><tr><td>data</td><td>Object | undefined</td><td>Additional data on the error, if any.</td></tr></tbody></table>
