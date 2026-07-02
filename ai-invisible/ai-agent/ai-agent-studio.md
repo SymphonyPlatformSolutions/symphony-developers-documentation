@@ -1,53 +1,49 @@
 # AI agent studio
 
-This page describes how to create your first agent using the AI agent studio. To be begin with, the following pre-requisites must have been completed:
+This page describes how to create your first agent using the AI agent studio. Before you begin, the following prerequisites must be completed:
 
-1. Symphony enabled AI Agent studio for your tenant
-2. Your admin installed the AI Agent studio for your user
+1. Symphony has enabled AI Agent Studio for your tenant.
+2. Your admin has installed AI Agent Studio for your user.
 
 ## Create a new AI agent
 
-You can start the creation of your own AI agent simply by clicking the Create agent button.
+You can start creating your own AI agent simply by clicking the **Create agent** button.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 15.14.35.png" alt=""><figcaption></figcaption></figure>
 
 ## Essential information
 
-Essential information allows to configure the AI agent's identity in Symphony. In particular:
+Essential information configures the AI agent's identity in Symphony. In particular:
 
-* **Name**: How it appears in Symphony's directory
-* **Ownership:** Which users are entitled to modify this agent
-* **Visibility:** If it appears or not in Symphony's market place, so that users can install the agent autonomously.
+* **Name:** How the agent appears in Symphony's directory.
+* **Ownership:** Which users are entitled to modify this agent.
+* **Visibility:** Whether the agent appears in Symphony's marketplace, so that users can install it autonomously.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 09.19.32.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## AI models
 
-**Models:** allows to configure which model is being used behind the scene by the AI agent. Off the shelf Symphony is providing access to Google Gemini's supported model.
-
-**Creativity level:** Controls the level of randomness that will be used by the AI agent in his answes.
-
-**Thinking:** Allow th AI agent to reason and output his reasonning in his answer
+* **Models:** Configures which model runs behind the scenes. Off the shelf, Symphony provides access to Google Gemini's supported models.
+* **Creativity level:** Controls the level of randomness in the AI agent's answers (maps to the underlying model's temperature/top-p settings).
+* **Thinking:** Allows the AI agent to reason step by step and include that reasoning in its answer.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 09.21.20.png" alt="" width="375"><figcaption></figcaption></figure>
 
-_Coming soon: Connect AI Agents from Symphony's agent studio with your own AI provider, or self-hosted models._
+**Coming soon:** Connect AI agents from Agent Studio to your own AI provider or self-hosted models.
 
 ## System instructions
 
-System instructions are here to guide the AI agent's on how to answer and provide up-to-date and contextual information that are always true when an AI agent is interacting with a user.
+System instructions guide how the AI agent answers, and provide up-to-date, contextual information that always holds true when an agent is interacting with a user.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 09.28.24.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Some variables are supported in the system instructions that allows to provide the best personalization capabilities so that the AI Agent knows with who the user is talking and what was the context of the user query:
+The following variables are supported in system instructions, giving the agent personalization context about who it's talking to and where the request came from:
 
-* User Id, Display Name, Email, First Name and Last Name are resolved with the user information from the user discussing with an agent on an AI Agent stream.
-* Room Id, Room Name are resolved with the room information from where the user request came from
-* Context Room Ids is replaced with the room Ids that are passed by the user as context to the query.&#x20;
+<table><thead><tr><th width="171.51953125">Variable</th><th>Syntax</th><th>Resolves to</th></tr></thead><tbody><tr><td>User display name</td><td><code>#{ #tools.v1.vars.userDisplayName() }</code></td><td>Display name of the user talking to the agent</td></tr><tr><td>User email</td><td><code>#{ #tools.v1.vars.userEmail() }</code></td><td>Email of the user talking to the agent</td></tr><tr><td>User ID</td><td><code>#{ #tools.v1.vars.userId() }</code></td><td>Symphony user ID of the user talking to the agent</td></tr><tr><td>First name / Last name</td><td><code>#{ #tools.v1.vars.userFirstName() }</code> / <code>#{ #tools.v1.vars.userLastName() }</code></td><td>First/last name of the user</td></tr><tr><td>Room ID</td><td><code>#{ #tools.v1.vars.roomId() }</code></td><td>ID of the room the request came from</td></tr><tr><td>Room name</td><td><code>#{ #tools.v1.vars.roomName() }</code></td><td>Name of the room the request came from</td></tr><tr><td>Context room IDs</td><td><code>#{ #tools.v1.vars.contextRoomIds() }</code></td><td>Room IDs the user passed as context to the query</td></tr><tr><td>Current timestamp</td><td><code>#{ #tools.v1.vars.currentTimestamp() }</code></td><td>Timestamp of the request</td></tr></tbody></table>
 
 ### Example&#x20;
 
-Here an example of system prompt for a given AI agent.
+Here's an example system prompt for an AI agent:
 
 {% code overflow="wrap" %}
 ```md
@@ -87,7 +83,7 @@ Context room Ids : #{ #tools.v1.vars.contextRoomIds() }
 
 ## Permissions
 
-Permissions allows to control which actions the AI agent will be able to handle on-behalf-of the user. You can refer to [API Endpoints for Apps](https://app.gitbook.com/s/909t04Fk8FiEI7fBcmlw/main/apps-on-behalf-of-obo/obo-enabled-endpoints "mention")  to list all existing permissions.
+Permissions control which actions the AI agent can take on behalf of the user. See  [API Endpoints for Apps](https://app.gitbook.com/s/909t04Fk8FiEI7fBcmlw/main/apps-on-behalf-of-obo/obo-enabled-endpoints "mention")  for the full list of available permissions.
 
 {% hint style="info" %}
 To allow an AI agent to work with a user's specific chat context it must be granted with at least with the following permissions:
@@ -100,11 +96,11 @@ To allow an AI agent to work with a user's specific chat context it must be gran
 
 ## Symphony tools
 
-Agent Studio supports out of the box different tools that allows to augment your AI agents with more sophisticated capabilities.
+Agent Studio supports several tools out of the box that augment your AI agents with more sophisticated capabilities.
 
 ### TradingView
 
-Allows an AI agent to natively send tradingView graph as inline message in Symphony. It can look for valid Trading View ticker based on the user query and return the appropriate graph. The following types of graphs are supported:
+Lets an AI agent natively send a TradingView graph as an inline message in Symphony. The agent looks for a valid TradingView ticker based on the user's query and returns the appropriate graph. Supported graph types:
 
 1. [Advanced Real-Time Chart Widget](https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/)
 2. [Symbol Overview Widget](https://www.tradingview.com/widget-docs/widgets/charts/symbol-overview/)
@@ -117,7 +113,7 @@ Allows an AI agent to natively send tradingView graph as inline message in Symph
 
 ### Charting
 
-Symphony charting tool allows the AI agent to send a chart in a Symphony room. The following chart are supported:
+The Symphony charting tool lets the AI agent send charts directly in a Symphony room. Supported chart types:
 
 * Bar chart
 * Line chart
@@ -125,37 +121,37 @@ Symphony charting tool allows the AI agent to send a chart in a Symphony room. T
 * Pie chart
 * Bubble chart
 
-This tool is very convenient to render financial data in combination with any custom data sources that can be integrated via custom MCP servers.
+This tool is especially useful for rendering financial data in combination with custom data sources integrated via custom MCP servers.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 17.11.13.png" alt=""><figcaption></figcaption></figure>
 
 ### Webfetch & Websearch
 
-Webfetch and websearch are standards tools allowing the AI agent to fetch information from the web.
+Standard tools that let the AI agent fetch information from the web.
 
 ### Messaging (coming soon)&#x20;
 
-Symphony messaging tools allows the AI agent to leverage [mcp-server.md](../mcp-server.md "mention") to retrieve any Symphony's specific information, sends messages or create rooms.&#x20;
+Lets the AI agent use the  [mcp-server.md](../mcp-server.md "mention")  to retrieve Symphony-specific information, send messages, or create rooms.
 
 {% hint style="info" %}
-All actions done via this tool, will be done by the AI agent on-behalf of the user inheriting from the permissions that are set for the AI agent.
+All actions performed via this tool are done by the AI agent on behalf of the user, inheriting the permissions set for the agent.
 {% endhint %}
 
 ## MCP servers
 
-Additional MCP servers can be added to AI Studio and configured for use by a given agent. Currently, AI Studio only supports remote MCP servers authenticated via non-personal API key tokens.
+You can add and configure additional MCP servers for use by a given agent. AI Studio currently supports **remote MCP servers authenticated via non-personal API key tokens only** (OAuth and personal-token authentication are not yet supported).
 
 ### Add a non personal MCP server
 
-First a tenant administrator granted with the **Connector manager** role will need to create a new connection in Symphony admin portal.
+First, a tenant administrator with the **Connector manager** role must create a new connection in the Symphony admin portal.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.30.36.png" alt=""><figcaption></figcaption></figure>
 
-A new connector must be created that will contain all infomration required to connect to a remote MCP server via API key.
+Create a new connector containing everything needed to connect to the remote MCP server via API key:
 
-* **Type:** Must be set to MCP server, sub-type can be set as custom.
-* **Readers (by role):** Set it to AI agent if you want any AI agent able to use this MCP server
-* **Readers (by user):** Set it to some specific AI agents if you want only a subset of AI agents to be able to use this MCP server.
+* **Type:** Must be set to MCP server; sub-type can be set to custom.
+* **Readers (by role):** Set to "AI agent" if any AI agent should be able to use this MCP server.
+* **Readers (by user):** Set to specific AI agents if only a subset of agents should have access.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.34.05.png" alt=""><figcaption></figcaption></figure>
 
@@ -163,21 +159,21 @@ Some key value properties can be added to customize the connector behaviour.
 
 <table><thead><tr><th width="98.4384765625">Key</th><th width="332.56640625">Description</th><th width="412.45703125">Value example</th></tr></thead><tbody><tr><td>icon</td><td>Icon used for the MCP server.</td><td><a href="https://www.svgrepo.com/show/261931/radar.svg">https://www.svgrepo.com/show/261931/radar.svg</a></td></tr></tbody></table>
 
-Then, MCP servers can be enabled per AI agent on the studio via the MCP server pannel.
+Once created, MCP servers can be enabled per AI agent on the studio via the MCP server panel.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.44.07.png" alt=""><figcaption></figcaption></figure>
 
 ## Predefined prompts
 
-Predefined prompts allows AI agent designer to easily create repeatable workflows that can be easily discovered and triggered by the AI agent user. Predefined prompts support variables so that users can pass a set of inputs to the prompt. Symphony's variables can be also used in predefined prompts.
+Predefined prompts let agent designers create repeatable workflows that users can easily discover and trigger. Predefined prompts support variables, so users can pass inputs to the prompt; Symphony's system variables (see the table above) can also be used inside predefined prompts.
 
-Predefined prompt can be combined with Symphony's chat context. When a given chat context is passed to the AI agent and a predefined prompt, both are resolved and sent to the AI model.
+Predefined prompts can be combined with Symphony's chat context: when both a chat context and a predefined prompt are passed to the agent, both are resolved and sent to the AI model together.
 
-This predefined prompt are accessible by the user directly mentionning the AI agent in the AI agent room:
+Users access predefined prompts by mentioning the AI agent directly in the AI agent room:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.09.png" alt="" width="375"><figcaption></figcaption></figure>
 
-When the prompt template expect some variables, a Symphony form will be automatically sent back to the user before starting the processing.
+When a prompt template expects variables, Symphony automatically sends the user a form to fill in before processing starts.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.50.png" alt="" width="280"><figcaption></figcaption></figure>
 
@@ -185,15 +181,15 @@ When the prompt template expect some variables, a Symphony form will be automati
 
 ### Example
 
-In this example an AI agent will be created that is able to ask two numbers that must be sumed.
+This example creates an AI agent that adds two numbers.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-02 at 17.15.29.png" alt=""><figcaption></figcaption></figure>
 
-To achieve this, the following prompt template can be defined:
+Prompt template definition:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-02 at 17.17.44.png" alt="" width="375"><figcaption></figcaption></figure>
 
-and a predefined prompt instrumented with the previous variables. For example:
+Predefined prompt using the variables above:
 
 {% code overflow="wrap" %}
 ```
