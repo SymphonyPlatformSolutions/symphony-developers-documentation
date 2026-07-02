@@ -4,7 +4,7 @@ description: >-
   Claude, ChatGPT, and other MCP-compatible AI agents.
 ---
 
-# Symphony's MCP Server
+# MCP Server
 
 Symphony's MCP server connects Symphony Messaging to MCP-compatible AI clients.
 
@@ -46,11 +46,11 @@ Contact Symphony's support team at [sales@symphony.com](mailto:sales@symphony.co
 
 Once the service is enabled, you can connect it to any MCP-compatible AI client.
 
-This includes Claude, ChatGPT, Mistral, and other AI agents that support MCP.
+This includes Claude, ChatGPT, Mistral, and other AI agents that support MCP protocol.
 
 ### Connect with Symphony's MCP
 
-Symphony is a remote MCP server. You do not need to deploy anything to start using it. The MCP server is exposed through a URL like `https://xxx.symphony.com/mcp-server/mcp`. You only need to connect your MCP client, complete the authorization flow, and start prompting.
+Symphony is a remote MCP server. You do not need to deploy anything to start using it. The MCP server is exposed through your tenant specific URL like `https://xxx.symphony.com/mcp-server/mcp`. You only need to connect your MCP client, complete the authorization flow, and start prompting.
 
 A dedicated setup guide for each MCP client is coming soon. For your first setup, contact Symphony's support team if you need help.
 
