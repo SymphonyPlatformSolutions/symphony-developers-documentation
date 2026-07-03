@@ -10,7 +10,7 @@ description: >-
 
 AI agents are specialized service accounts that bring LLM-powered reasoning into Symphony. They can answer questions, use Symphony chat context, and take actions on behalf of a user within the platform's security model.
 
-AI agents work in regular rooms and in a dedicated private channel called the **AI Agent stream**.
+AI agents are accessible in a dedicated private channel called the **AI Agent stream**.
 
 ### Types of AI agents
 
