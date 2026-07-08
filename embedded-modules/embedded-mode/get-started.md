@@ -5,7 +5,7 @@
 Embedded Mode can be loaded in three different ways:
 
 * [Explicit rendering](get-started.md#explicit-rendering) (recommended)
-* [Automatic rendering](get-started.md#automatic-rendering)&#x20;
+* [Automatic rendering](get-started.md#automatic-rendering)
 * [Direct iFrame rendering](get-started.md#direct-iframe-rendering)
 
 _Unless you have specific technical constraints, you should use **explicit rendering**._
@@ -17,8 +17,8 @@ With explicit rendering, Embedded Mode will expose an API to the parent page, gi
 There are three steps required to load a chat:
 
 1. **Loading the Embedded Mode SDK script**. You can be notified that the script has finished loading through a callback.
-2. **Rendering Embedded Mode**, using the `render`  method. This step takes approximately 4s, and can be done in the background, typically in a hidden div. You can be notified that Embedded Mode is ready through the promise returned by the `render`  method. Optionally, you can specify a `streamId` as a parameter, in which case the conversation will be opened as soon as Embedded Mode is ready.
-3. **Opening a chat**, using the `openStream` method. This is quick and can be done once the render method has completed. If you want to switch from one chat to the other, or to display additional chat containers in the webpage, you use the `openStream` method and you don't need to use `render` again.&#x20;
+2. **Rendering Embedded Mode**, using the `render` method. This step takes approximately 4s, and can be done in the background, typically in a hidden div. You can be notified that Embedded Mode is ready through the promise returned by the `render` method. Optionally, you can specify a `streamId` as a parameter, in which case the conversation will be opened as soon as Embedded Mode is ready.
+3. **Opening a chat**, using the `openStream` method. This is quick and can be done once the render method has completed. If you want to switch from one chat to the other, or to display additional chat containers in the webpage, you use the `openStream` method and you don't need to use `render` again.
 
 #### 1. Loading the SDK script
 
@@ -53,11 +53,11 @@ Set the `data-partner-id` with the Partner Id that was provided to you. More inf
 
 #### 2. Rendering Embedded Mode
 
-Once the SDK is loaded, the first function you need to call to start Embedded Mode is `render`.&#x20;
+Once the SDK is loaded, the first function you need to call to start Embedded Mode is `render`.
 
 The `render` method creates and adds the Embedded Mode iframe to the container with the class given as first parameter.
 
-<table><thead><tr><th width="159">Parameter</th><th width="153">Type</th><th>Description</th></tr></thead><tbody><tr><td>containerOrClassName</td><td>string</td><td>Class of the container into which Embedded Mode will be injected (optional). <br>If not specified, the default value is "symphony-ecm".</td></tr><tr><td>configuration</td><td>Record&#x3C;string, string | boolean | undefined></td><td><a href="configuration-parameters.md">Configuration </a>(optional)</td></tr><tr><td>fromLogin</td><td>boolean</td><td><p>Startup time optimisation linked to the checkAuth feature described below.</p><p>If you know the user is not logged in, you can set this parameter to true, and the user will be sent straight to the login page (instead of first loading Embedded Mode and trying to connect before redirecting to login) <br><em>Cannot be used in conjunction with popupLogin</em></p><p><br>Default false (optional)</p></td></tr></tbody></table>
+<table><thead><tr><th width="159">Parameter</th><th width="153">Type</th><th>Description</th></tr></thead><tbody><tr><td>containerOrClassName</td><td>string</td><td>Class of the container into which Embedded Mode will be injected (optional).<br>If not specified, the default value is "symphony-ecm".</td></tr><tr><td>configuration</td><td>Record&#x3C;string, string | boolean | undefined></td><td><a href="configuration-parameters.md">Configuration </a>(optional)</td></tr><tr><td>fromLogin</td><td>boolean</td><td><p>Startup time optimisation linked to the checkAuth feature described below.</p><p>If you know the user is not logged in, you can set this parameter to true, and the user will be sent straight to the login page (instead of first loading Embedded Mode and trying to connect before redirecting to login)<br><em>Cannot be used in conjunction with popupLogin</em></p><p><br>Default false (optional)</p></td></tr></tbody></table>
 
 The `render` method returns a promise that resolves when the chat is ready. See the promise definition [here](send-a-message.md#returned-promise).
 
@@ -121,9 +121,9 @@ onUserInteractionRequired({
 }): Promise<void>;
 ```
 
-Once the user interaction is completed, you will eventually be notified that the UI is ready to be used with the `render` promise resolving (either with the chat information or an error).&#x20;
+Once the user interaction is completed, you will eventually be notified that the UI is ready to be used with the `render` promise resolving (either with the chat information or an error).
 
-You can register your callback function as soon as the [SDK is loaded](/broken/spaces/fAel5eAVHAZGcVMDx7ly/pages/IjXRqsoj0pej0L7Uvc0q#id-1.-loading-the-sdk-script).
+You can register your callback function as soon as the [SDK is loaded](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/blob/master/broken/spaces/fAel5eAVHAZGcVMDx7ly/pages/IjXRqsoj0pej0L7Uvc0q/README.md#id-1.-loading-the-sdk-script).
 
 ### Automatic rendering
 
@@ -187,18 +187,18 @@ Set the `partnerId` with the Partner Id that was provided to you. More info on P
 
 ### SSO specificities
 
-End users log in to Embedded Mode using their usual Symphony credentials. \
+End users log in to Embedded Mode using their usual Symphony credentials.\
 If they have an SSO setup, they will automatically be redirected to their authentication page, just like what would happen in the Symphony Desktop Application.
 
 {% hint style="info" %}
 **Note**: As Embedded Mode uses an iFrame, some SSO systems will raise a Content Security Policy error (CSP) when Embedded Mode tries to redirect the user. In that case, you can either update your SSO system to **allow framing within your pod domain**, or alternatively you can configure Embedded Mode to do the **login in a popup** using the `ecpLoginPopup` parameter.
 {% endhint %}
 
-If you are a partner and uses ChannelConnect to onboard new Symphony users, you can also set up your own SSO. More information is available [here](embedded-mode-with-sponsored-access.md).&#x20;
+If you are a partner and uses ChannelConnect to onboard new Symphony users, you can also set up your own SSO. More information is available [here](embedded-mode-with-sponsored-access.md).
 
 ### Allow users from different pods to log in
 
-End users can only log in the Symphony pod where their credentials are defined. \
+End users can only log in the Symphony pod where their credentials are defined.\
 Meaning that depending on who are the users of your web portal, you may not always want to load Embedded Mode from a unique pod URL (e.g a single pod).
 
 If you are Company A, but you want Symphony users from Company B to be able to log in to Embedded Mode from your web portal then you need to adapt the script tag that loads Embedded Mode and set `{your_pod_url}` to the URL of Company B's pod, so Embedded Mode will be loaded from the right pod.

@@ -10,8 +10,8 @@ The change logs are organized in the following categories:
 [sbe-pod-api](sbe-pod-api/)
 {% endcontent-ref %}
 
-{% content-ref url="client-2.0-apis/" %}
-[client-2.0-apis](client-2.0-apis/)
+{% content-ref url="https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/blob/master/admin-guide/change-log/client-2.0-apis" %}
+[https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/blob/master/admin-guide/change-log/client-2.0-apis](https://github.com/SymphonyPlatformSolutions/symphony-developers-documentation/blob/master/admin-guide/change-log/client-2.0-apis)
 {% endcontent-ref %}
 
 {% content-ref url="universal-webhook/" %}
