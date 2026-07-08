@@ -1,6 +1,6 @@
 # AI agent studio
 
-This page describes how to create your first agent using the AI agent studio. Before you begin, the following prerequisites must be completed:
+This page describes how to create your first agent using the AI agent studio. Before you begin, the following prerequisites must be met:
 
 1. Symphony has enabled AI Agent Studio for your tenant.
 2. Your admin has installed AI Agent Studio for your user.
