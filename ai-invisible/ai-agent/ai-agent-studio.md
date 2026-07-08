@@ -7,7 +7,7 @@ This page describes how to create your first agent using the AI agent studio. Be
 
 ## Create a new AI agent
 
-You can start creating your own AI agent simply by clicking the **Create agent** button.
+To start creating your own AI agent, click the **Create agent** button in AI Agent Studio.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 15.14.35.png" alt=""><figcaption></figcaption></figure>
 
@@ -16,7 +16,7 @@ You can start creating your own AI agent simply by clicking the **Create agent**
 Essential information configures the AI agent's identity in Symphony. In particular:
 
 * **Name:** How the agent appears in Symphony's directory.
-* **Ownership:** Which users are entitled to modify this agent.
+* **Ownership:** The users who are entitled to modify this agent.
 * **Visibility:** Whether the agent appears in Symphony's marketplace, so that users can install it autonomously.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 09.19.32.png" alt="" width="375"><figcaption></figcaption></figure>
@@ -24,8 +24,8 @@ Essential information configures the AI agent's identity in Symphony. In particu
 ## AI models
 
 * **Models:** Configures which model runs behind the scenes. Off the shelf, Symphony provides access to Google Gemini's supported models.
-* **Creativity level:** Controls the level of randomness in the AI agent's answers (maps to the underlying model's temperature/top-p settings).
-* **Thinking:** Allows the AI agent to reason step by step and include that reasoning in its answer.
+* **Creativity level:** Controls the level of randomness in the AI agent's answers (maps to the underlying model's temperature / top-p settings).
+* **Thinking:** Allows the AI agent to reason step by step, and include that reasoning in its answer.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 09.21.20.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -39,7 +39,7 @@ System instructions guide how the AI agent answers, and provide up-to-date, cont
 
 The following variables are supported in system instructions, giving the agent personalization context about who it's talking to and where the request came from:
 
-<table><thead><tr><th width="171.51953125">Variable</th><th>Syntax</th><th>Resolves to</th></tr></thead><tbody><tr><td>User display name</td><td><code>#{ #tools.v1.vars.userDisplayName() }</code></td><td>Display name of the user talking to the agent</td></tr><tr><td>User email</td><td><code>#{ #tools.v1.vars.userEmail() }</code></td><td>Email of the user talking to the agent</td></tr><tr><td>User ID</td><td><code>#{ #tools.v1.vars.userId() }</code></td><td>Symphony user ID of the user talking to the agent</td></tr><tr><td>First name / Last name</td><td><code>#{ #tools.v1.vars.userFirstName() }</code> / <code>#{ #tools.v1.vars.userLastName() }</code></td><td>First/last name of the user</td></tr><tr><td>Room ID</td><td><code>#{ #tools.v1.vars.roomId() }</code></td><td>ID of the room the request came from</td></tr><tr><td>Room name</td><td><code>#{ #tools.v1.vars.roomName() }</code></td><td>Name of the room the request came from</td></tr><tr><td>Context room IDs</td><td><code>#{ #tools.v1.vars.contextRoomIds() }</code></td><td>Room IDs the user passed as context to the query</td></tr><tr><td>Context room IDs</td><td><code>#{ #tools.v1.vars.contextRoomIds().size() > 0 ? #tools.v1.vars.contextRoomIds()[0] : 'No Context Room' }</code></td><td>Parent chat when AI agent is opened from a side pannel</td></tr><tr><td>Current timestamp</td><td><code>#{ #tools.v1.vars.currentTimestamp() }</code></td><td>Timestamp of the request</td></tr></tbody></table>
+<table><thead><tr><th width="171.51953125">Variable</th><th>Syntax</th><th>Resolves to</th></tr></thead><tbody><tr><td>User display name</td><td><code>#{ #tools.v1.vars.userDisplayName() }</code></td><td>Display name of the user talking to the agent</td></tr><tr><td>User email</td><td><code>#{ #tools.v1.vars.userEmail() }</code></td><td>Email of the user talking to the agent</td></tr><tr><td>User ID</td><td><code>#{ #tools.v1.vars.userId() }</code></td><td>Symphony user ID of the user talking to the agent</td></tr><tr><td>First name / Last name</td><td><code>#{ #tools.v1.vars.userFirstName() }</code> / <code>#{ #tools.v1.vars.userLastName() }</code></td><td>First/last name of the user</td></tr><tr><td>Room ID</td><td><code>#{ #tools.v1.vars.roomId() }</code></td><td>ID of the room the request came from</td></tr><tr><td>Room name</td><td><code>#{ #tools.v1.vars.roomName() }</code></td><td>Name of the room the request came from</td></tr><tr><td>Context room IDs</td><td><code>#{ #tools.v1.vars.contextRoomIds() }</code></td><td>Room IDs the user passed as context to the query</td></tr><tr><td>Context room IDs</td><td><code>#{ #tools.v1.vars.contextRoomIds().size() > 0 ? #tools.v1.vars.contextRoomIds()[0] : 'No Context Room' }</code></td><td>Parent chat when AI agent is opened from a side panel</td></tr><tr><td>Current timestamp</td><td><code>#{ #tools.v1.vars.currentTimestamp() }</code></td><td>Timestamp of the request</td></tr></tbody></table>
 
 ### Example&#x20;
 
@@ -86,7 +86,7 @@ Context room Ids : #{ #tools.v1.vars.contextRoomIds() }
 Permissions control which actions the AI agent can take on behalf of the user. See  [API Endpoints for Apps](https://app.gitbook.com/s/909t04Fk8FiEI7fBcmlw/main/apps-on-behalf-of-obo/obo-enabled-endpoints "mention")  for the full list of available permissions.
 
 {% hint style="info" %}
-To allow an AI agent to work with a user's specific chat context it must be granted with at least with the following permissions:
+To allow an AI agent to work with a user's specific chat context it must be granted with at least the following permissions:
 
 * Act as user
 * Get user messages
@@ -100,7 +100,7 @@ Agent Studio supports several tools out of the box that augment your AI agents w
 
 ### TradingView
 
-Lets an AI agent natively send a TradingView graph as an inline message in Symphony. The agent looks for a valid TradingView ticker based on the user's query and returns the appropriate graph. Supported graph types:
+Lets an AI agent natively send a TradingView graph as an inline message in Symphony Messaging. The agent looks for a valid TradingView ticker based on the user's query and returns the appropriate graph. Supported graph types:
 
 1. [Advanced Real-Time Chart Widget](https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/)
 2. [Symbol Overview Widget](https://www.tradingview.com/widget-docs/widgets/charts/symbol-overview/)
@@ -113,7 +113,7 @@ Lets an AI agent natively send a TradingView graph as an inline message in Symph
 
 ### Charting
 
-The Symphony charting tool lets the AI agent send charts directly in a Symphony room. Supported chart types:
+The Symphony charting tool lets the AI agent send charts directly in a Symphony Messaging chat room. Supported chart types:
 
 * Bar chart
 * Line chart
@@ -131,7 +131,7 @@ Standard tools that let the AI agent fetch information from the web.
 
 ### Messaging (coming soon)&#x20;
 
-Lets the AI agent use the  [mcp-server.md](../mcp-server.md "mention")  to retrieve Symphony-specific information, send messages, or create rooms.
+Lets the AI agent use the  [mcp-server.md](../mcp-server.md "mention")  to retrieve Symphony-specific information, send messages, or create chat rooms.
 
 {% hint style="info" %}
 All actions performed via this tool are done by the AI agent on behalf of the user, inheriting the permissions set for the agent.
@@ -143,7 +143,7 @@ You can add and configure additional MCP servers for use by a given agent. AI St
 
 ### Add a non personal MCP server
 
-First, a tenant administrator with the **Connector manager** role must create a new connection in the Symphony admin portal.
+First, a tenant administrator with the **Connector manager** role must create a new connection in the Symphony Messaging Admin Portal.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.30.36.png" alt=""><figcaption></figcaption></figure>
 
@@ -155,7 +155,7 @@ Create a new connector containing everything needed to connect to the remote MCP
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.34.05.png" alt=""><figcaption></figcaption></figure>
 
-Some key value properties can be added to customize the connector behaviour.
+Some key value properties can be added to customize the connector behavior.
 
 <table><thead><tr><th width="98.4384765625">Key</th><th width="332.56640625">Description</th><th width="412.45703125">Value example</th></tr></thead><tbody><tr><td>icon</td><td>Icon used for the MCP server.</td><td><a href="https://www.svgrepo.com/show/261931/radar.svg">https://www.svgrepo.com/show/261931/radar.svg</a></td></tr></tbody></table>
 
@@ -167,13 +167,13 @@ Once created, MCP servers can be enabled per AI agent on the studio via the MCP 
 
 Predefined prompts let agent designers create repeatable workflows that users can easily discover and trigger. Predefined prompts support variables, so users can pass inputs to the prompt; Symphony's system variables (see the table above) can also be used inside predefined prompts.
 
-Predefined prompts can be combined with Symphony's chat context: when both a chat context and a predefined prompt are passed to the agent, both are resolved and sent to the AI model together.
+Predefined prompts can be combined with the Symphony Messaging chat context: when both a chat context and a predefined prompt are passed to the agent, both are resolved and sent to the AI model together.
 
 Users access predefined prompts by mentioning the AI agent directly in the AI agent room:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.09.png" alt="" width="375"><figcaption></figcaption></figure>
 
-When a prompt template expects variables, Symphony automatically sends the user a form to fill in before processing starts.
+When a prompt template expects variables, Symphony Messaging automatically sends the user a form to fill in before processing starts.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.50.png" alt="" width="280"><figcaption></figcaption></figure>
 
