@@ -131,7 +131,7 @@ Standard tools that let the AI agent fetch information from the web.
 
 ### Messaging (coming soon)&#x20;
 
-Lets the AI agent use the  [mcp-server.md](../mcp-server.md "mention")  to retrieve Symphony-specific information, send messages, or create chat rooms.
+Lets the AI agent use Symphony's MCP server to retrieve Symphony-specific information, send messages, or create chat rooms.
 
 {% hint style="info" %}
 All actions performed via this tool are done by the AI agent on behalf of the user, inheriting the permissions set for the agent.
@@ -200,7 +200,3 @@ Input: A = 3, B = 7
 Output: 3 + 7 = 10
 ```
 {% endcode %}
-
-
-
-xa

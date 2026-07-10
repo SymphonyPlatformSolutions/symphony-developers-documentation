@@ -4,7 +4,7 @@ description: >-
   access, and tool use into Symphony's secure messaging environment
 ---
 
-# AI Agent
+# AI agent
 
 ## AI agents
 
@@ -12,12 +12,12 @@ AI agents are specialized service accounts that bring LLM-powered reasoning into
 
 AI agents are accessible in a dedicated private channel called the **AI Agent stream**.
 
-### Types of AI agents
+### Which AI agents can be found in Symphony?
 
-Symphony supports several AI agent models:
+Several kind of AI agents can be found in Symphony:
 
 * **Built-in agent** — Symphony's built-in assistant for messaging tasks such as summaries and catch-ups.
-* **Custom agents** — Agents tailored to your users, tools, and workflows. You can create them in [AI agent studio](ai-agent-studio.md) or build them with [Symphony APIs](develop-custom-ai-agents.md).
+* **Custom agents** — Agents tailored to your users, tools, and workflows. You can create them in [AI agent studio](ai-agent-studio.md) or build them with Symphony APIs.
 * **Community agents** — Agents published by Symphony partners or the wider Symphony ecosystem.
 
 ### How AI agents differ from bots
@@ -124,4 +124,4 @@ Contact [sales@symphony.com](mailto:sales@symphony.com) to enable it in your env
 Choose the path that fits your team:
 
 * [AI agent studio](ai-agent-studio.md) — the fastest no-code path to create, configure, and manage agents.
-* [Develop custom AI Agent](develop-custom-ai-agents.md) — an API-first path for teams building custom agent logic and integrations.
+* Develop custom AI Agent _(coming soon)_ — an API-first path for teams building custom agent logic and integrations.

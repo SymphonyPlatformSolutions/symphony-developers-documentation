@@ -95,11 +95,14 @@
   * [Circle of Trust Authentication](ext-apps/app-authentication/circle-of-trust-authentication.md)
   * [OBO Authentication](ext-apps/app-authentication/obo-authentication.md)
 
+## AI
+
+* [AI agent](ai/ai-agent/README.md)
+  * [AI agent studio](ai/ai-agent/ai-agent-studio.md)
+
 ## AI invisible
 
-* [AI agent](ai-invisible/ai-agent/README.md)
-  * [AI agent studio](ai-invisible/ai-agent/ai-agent-studio.md)
-  * [Develop custom AI Agents](ai-invisible/ai-agent/develop-custom-ai-agents.md)
+* [Develop custom AI Agents](ai-invisible/develop-custom-ai-agents.md)
 * [MCP Server](ai-invisible/mcp-server.md)
 
 ## Developer Tools <a href="#dev-tools" id="dev-tools"></a>
