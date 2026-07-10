@@ -98,7 +98,6 @@ Securely embed stand-alone Symphony Messaging chat modules inside other websites
 
 Specialized service accounts that bring LLM-powered reasoning, contextual data access, and tool use into Symphony's secure messaging environment:
 
-{% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/ai" %}
-[AI](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/ai)
+{% content-ref url="ai/ai-agent/" %}
+[ai-agent](ai/ai-agent/)
 {% endcontent-ref %}
-
