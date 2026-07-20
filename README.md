@@ -1,54 +1,64 @@
 ---
-description: Welcome, Symphony Messaging Developer!
+description: >-
+  Build, innovate, and automate your workflows on the Symphony Messaging
+  platform.
 ---
 
-# Start Your Developer Journey
+# Start your developer journey
 
-Here you will learn about all the ways to streamline work using integrated bots and apps. By leveraging Symphony Messaging's open APIs, developers can create innovative Bots and workflows, save time with strategic automations, and customize their Symphony experience by building third-party Extension Apps.
+Streamline your workflows by leveraging the Symphony Messaging open APIs to build innovative bots and AI agents, save time through smart automation, and develop custom extension apps.
 
-Keep reading to learn about core Symphony Messaging concepts in order to ensure a smooth development journey from your first line of code to putting your application in production.
+Dive into our core concepts to guide your development journey from initial code to production deployment.
 
-## Getting Started
+## Get started
 
-It's time to get started. Navigate to one of the following guides to kick off your developer journey today!
+Select one of the sections below to launch your developer experience.
 
-* [**Building Bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
-* [**Building Extension Applications on Symphony Messaging**](./#building-extension-applications)
+* [**Build bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
+* [**Build extension applications on Symphony Messaging**](./#building-extension-applications)
+* [**Build AI agents**](./#ai-agents)
 * [**Become a Certified Developer**](developer-certification/developer-certification.md)
 * [**Developer Tools**](./#developer-tools)
-* [**REST API Reference**](./#symphony-rest-api)
-* [**Extension API Reference**](./#symphony-extension-api)
+* [**REST API reference**](./#symphony-rest-api)
+* [**Extension API reference**](./#symphony-extension-api)
 * [**Embedded Modules**](./#embedded-modules)
-* [**AI Agents**](./#ai-agents)
 
 {% hint style="info" %}
-Looking to migrate your bot from the deprecated SDKs to the latest BDKs? Please check out our migration guides to bring your bot up to date with our latest tooling.
+Looking to migrate your bot from the deprecated SDKs to the latest BDKs? Check out our migration guides to bring your bot up to date with our latest tooling.
 
 * [Migration guide from SDK to Symphony BDK for Java](https://symphony-bdk-java.finos.org/migration.html)
 * [Migration guide from SDK to Symphony BDK for Python](https://symphony-bdk-python.finos.org/markdown/migration.html)
 {% endhint %}
 
-## Building Bots on Symphony Messaging <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
+## Build bots on Symphony Messaging <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
 
-Begin your development journey by taking an in depth look at Symphony Messaging Bots. Understand the core concepts and all the details needed to get your Bot up and running!
+Get started by exploring Symphony Messaging bots. Learn the essentials to build and launch your own bot.
 
 {% content-ref url="bots/building-bots.md" %}
 [building-bots.md](bots/building-bots.md)
 {% endcontent-ref %}
 
-Want to build your first bot together with the Developer Relations team? Head over to our developer training centre and register for our online courses to get started, and it's free.
+Interested in building your first bot with our Developer Relations team? Check out our free online courses in the developer training center to get started.
 
 * [Developing Bots using BDK for Java](https://learn.symphony.com/bundles/java-bot-developer)
 * [Developing Bots using BDK for Python](https://learn.symphony.com/bundles/python-bot-developer)
 * [Implementing Workflows with WDK](https://learn.symphony.com/bundles/workflow-developer-certification)
 
 {% hint style="info" %}
-For even more in depth look at how to Build Bots and Apps, check out our new Developer Certification program: [Developer Certification](developer-certification/developer-certification.md) 🎓
+For an even more in-depth look at how to build bots and apps, check out our new [Developer Certification](developer-certification/developer-certification.md) 🎓 program.
 {% endhint %}
 
-## Building Extension Applications <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
+## Build AI agents <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
 
-Bring customized and extensible workflows into Symphony Messaging through Extension Apps. Understand how to build, deploy, and manage your Extension App!
+AI agents are specialized service accounts that bring LLM-powered reasoning, contextual data access, and tool use into Symphony's secure messaging environment.
+
+{% content-ref url="ai/ai-agent/" %}
+[ai-agent](ai/ai-agent/)
+{% endcontent-ref %}
+
+## Build extension applications <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
+
+Bring customized and extensible workflows into Symphony Messaging through extension apps. Understand how to build, deploy, and manage your extension app.
 
 {% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/ext-apps" %}
 [Extension Apps](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/ext-apps)
@@ -56,7 +66,7 @@ Bring customized and extensible workflows into Symphony Messaging through Extens
 
 ## Become a Certified Developer <img src=".gitbook/assets/certified-developer (1).png" alt="" data-size="line">
 
-Enroll in our brand new Developer Certification program and obtain sandbox access for free! Register and enroll today!
+Join our Developer Certification program and get free sandbox access. Register today!
 
 {% content-ref url="developer-certification/developer-certification.md" %}
 [developer-certification.md](developer-certification/developer-certification.md)
@@ -64,7 +74,7 @@ Enroll in our brand new Developer Certification program and obtain sandbox acces
 
 ## Messaging REST API <img src=".gitbook/assets/Symphony API-large.png" alt="" data-size="line">
 
-In depth documentation and reference guide for the Symphony Messaging REST API:
+Symphony Messaging REST API in-depth documentation and reference guide:
 
 {% content-ref url="https://developers.symphony.com/restapi" %}
 [REST API Reference](https://developers.symphony.com/restapi)
@@ -72,7 +82,7 @@ In depth documentation and reference guide for the Symphony Messaging REST API:
 
 ## Extension API <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
 
-In depth documentation and reference guide for the Symphony Messaging Extension API:
+Symphony Messaging Extension API in-depth documentation and reference guide:
 
 {% content-ref url="ext-apps/overview-of-extension-api/" %}
 [overview-of-extension-api](ext-apps/overview-of-extension-api/)
@@ -80,7 +90,7 @@ In depth documentation and reference guide for the Symphony Messaging Extension 
 
 ## Developer Tools <img src=".gitbook/assets/Developer tools.png" alt="" data-size="line">
 
-Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to streamline your development process!
+Streamline your development process with our Dedicated SDKs, Bot Developer Kit, Bot Generators and more.
 
 {% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/dev-tools" %}
 [Developer Tools](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/dev-tools)
@@ -88,16 +98,8 @@ Check out our dedicated SDKs, Bot Developer Kit, Bot Generators and more to stre
 
 ## Embedded Modules <img src=".gitbook/assets/Embedded modules.png" alt="" data-size="line">
 
-Securely embed stand-alone Symphony Messaging chat modules inside other websites and applications:
+Securely embed standalone Symphony Messaging chat modules inside other websites and applications:
 
 {% content-ref url="https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/embedded-modules" %}
 [Embedded Modules](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/embedded-modules)
-{% endcontent-ref %}
-
-## AI Agents
-
-Specialized service accounts that bring LLM-powered reasoning, contextual data access, and tool use into Symphony's secure messaging environment:
-
-{% content-ref url="ai/ai-agent/" %}
-[ai-agent](ai/ai-agent/)
 {% endcontent-ref %}

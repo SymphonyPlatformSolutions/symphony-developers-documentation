@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Start Your Developer Journey](README.md)
+* [Start your developer journey](README.md)
 
 ## Bots
 
