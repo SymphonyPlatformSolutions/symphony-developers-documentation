@@ -15,13 +15,13 @@ Dive into our core concepts to guide your development journey from initial code 
 Select one of the sections below to launch your developer experience.
 
 * [**Build bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
-* [**Build AI agents**](./#ai-agents)
+* [**Build AI agents on Symphony Messaging**](./#ai-agents)
 * [**Build extension applications on Symphony Messaging**](./#building-extension-applications)
 * [**Become a Certified Developer**](developer-certification/developer-certification.md)
-* [**Developer Tools**](./#developer-tools)
+* [**Developer tools**](./#developer-tools)
 * [**REST API reference**](./#symphony-rest-api)
 * [**Extension API reference**](./#symphony-extension-api)
-* [**Embedded Modules**](./#embedded-modules)
+* [**Embedded modules**](./#embedded-modules)
 
 {% hint style="info" %}
 Looking to migrate your bot from the deprecated SDKs to the latest BDKs? Check out our migration guides to bring your bot up to date with our latest tooling.
@@ -48,7 +48,7 @@ Interested in building your first bot with our Developer Relations team? Check o
 For an even more in-depth look at how to build bots and apps, check out our new [Developer Certification](developer-certification/developer-certification.md) 🎓 program.
 {% endhint %}
 
-## Build AI agents <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
+## Build AI agents on Symphony Messaging <img src=".gitbook/assets/Bot-large.png" alt="" data-size="line">
 
 AI agents are specialized service accounts that bring LLM-powered reasoning, contextual data access, and tool use into Symphony's secure messaging environment.
 
@@ -86,7 +86,7 @@ Symphony Messaging Extension API in-depth documentation and reference guide:
 [overview-of-extension-api](ext-apps/overview-of-extension-api/)
 {% endcontent-ref %}
 
-## Developer Tools <img src=".gitbook/assets/Developer tools.png" alt="" data-size="line">
+## Developer tools <img src=".gitbook/assets/Developer tools.png" alt="" data-size="line">
 
 Streamline your development process with our Dedicated SDKs, Bot Developer Kit, Bot Generators and more.
 
@@ -94,7 +94,7 @@ Streamline your development process with our Dedicated SDKs, Bot Developer Kit, 
 [Developer Tools](https://app.gitbook.com/s/-MB51RkjSmfA_ejydg4M-3415978100/dev-tools)
 {% endcontent-ref %}
 
-## Embedded Modules <img src=".gitbook/assets/Embedded modules.png" alt="" data-size="line">
+## Embedded modules <img src=".gitbook/assets/Embedded modules.png" alt="" data-size="line">
 
 Securely embed standalone Symphony Messaging chat modules inside other websites and applications:
 
