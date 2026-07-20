@@ -15,8 +15,8 @@ Dive into our core concepts to guide your development journey from initial code 
 Select one of the sections below to launch your developer experience.
 
 * [**Build bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
-* [**Build extension applications on Symphony Messaging**](./#building-extension-applications)
 * [**Build AI agents**](./#ai-agents)
+* [**Build extension applications on Symphony Messaging**](./#building-extension-applications)
 * [**Become a Certified Developer**](developer-certification/developer-certification.md)
 * [**Developer Tools**](./#developer-tools)
 * [**REST API reference**](./#symphony-rest-api)
