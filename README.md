@@ -76,8 +76,8 @@ Join our Developer Certification program and get free sandbox access. Register t
 
 Symphony Messaging REST API in-depth documentation and reference guide:
 
-{% content-ref url="https://developers.symphony.com/restapi" %}
-[REST API Reference](https://developers.symphony.com/restapi)
+{% content-ref url="https://rest-api.symphony.com/" %}
+[Messaging REST API](https://rest-api.symphony.com/)
 {% endcontent-ref %}
 
 ## Extension API <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">
