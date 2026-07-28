@@ -21,7 +21,7 @@ The `SharedMessage` interface is aligned with the FDC3 standard: a plaintext or 
 
 * Similarly to the `openStream` function, if in Focus mode you can pass a `container` parameter (in the `options` object) to open the chat in a specific container.
 * The `displayMode` parameter (only available for `mode: blast`) in the `options` object allows you to configure how you send the message:
-  * `'confirmation_dialog'` (default value) opens a confirmation modal before sending the message.
+  * `'confirmation_dialog'` (default value) opens a confirmation modal before sending the message. Currently, this mode does not manage groups (distribution lists) and only accepts users and chats.
   * `'open_module'` opens the Blast module to send a blast message. &#x20;
   * `'none'` directly sends silently the message without user confirmation.&#x20;
 
