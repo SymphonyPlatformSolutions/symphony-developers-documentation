@@ -6,7 +6,7 @@ This pages describes the implementation of RSA Authentication. For the API refer
 * Key Manager Auth: [https://developers.symphony.com/restapi/main/bot-authentication/rsa-key-manager-authenticate](https://developers.symphony.com/restapi/main/bot-authentication/rsa-key-manager-authenticate)
 
 {% hint style="success" %}
-Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK.  To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
+Note: The following authentication sequence is provided out of the box by our dedicated SDKs and BDK. To learn more about authenticating using the SDKs or BDK proceed to one of following configuration guides:
 
 * [Configure your Bot for BDK 2.0 for Java](../getting-started/bdk.md)
 {% endhint %}
@@ -16,9 +16,9 @@ Note: The following authentication sequence is provided out of the box by our de
 The Authentication process requires the following steps:
 
 1. The user creates a public/private RSA key pair.
-2. The admin imports the public key into the pod using the **Admin Console** or public APIs.
+2. The admin imports the public key into the **Authentication** field of the Service Account via the **Admin Portal**, or using public APIs.
 3. The user creates a short-lived JWT (JSON Web Token) and signs it with their private key.
-4. The bot makes a call the the authentication endpoints.  Here, the server checks the signature of the JWT against the public key and returns an authentication token.
+4. The bot makes a call the the authentication endpoints. Here, the server checks the signature of the JWT against the public key and returns an authentication token.
 
 {% hint style="warning" %}
 ### Session Token Management
@@ -44,9 +44,7 @@ DHE-RSA-AES256-GCM-SHA384
 DHE-RSA-AES128-GCM-SHA256
 {% endhint %}
 
-
-
-## 1.  Create an RSA Key Pair
+## 1. Create an RSA Key Pair
 
 The public/private key pair for signing authentication requests requires the following:
 
@@ -78,35 +76,32 @@ Sign the authentication request using either `privatekey.pkcs8` or `privatekey.p
 
 The file `publickey.pem` is the public key. This is the key you will import into the pod in step 2.
 
-## 2. Import Public Key into the Pod
+## 2. Import the Public Key into the Authentication field of the Service Account via the Admin Portal
 
 {% hint style="warning" %}
-Please note the below steps can only be performed by a Symphony Messaging Pod Administrator as they will have the necessary administrator privileges to access the Administration Portal.
+The steps below can only be performed by a Symphony Messaging instance Administrator, who has the necessary administrator privileges to access the Symphony Messaging Admin Portal.
 {% endhint %}
 
-Navigate to the Admin Console and create a new Service Account. Copy the contents of the pubkey.pem file you just created and paste into the textbox under the Authentication section:
-
-![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 1.28.22 PM.png>)
-
-Add your bot's basic information:
+1. In the Symphony Messaging Admin Portal, select the section **Create an account**, and go to the **Service Account** tab.
+2. Copy the content of the pubkey.pem file you just created, and paste it into the textbox under the **Authentication** section.
+3. Add the basic information for your bot.
+4. Select **Create**.
 
 ![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 1.29.20 PM.png>)
 
-If successful, you should see the following:
+If successful, you should get a creation confirmation message:
 
 ![](<../../.gitbook/assets/Screen Shot 2020-07-07 at 1.29.59 PM.png>)
 
 ## 3. Generate a signed JWT Token
 
-To authenticate on the Pod and the Key Manager, the bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request. The JWT token must contain the following:
+To authenticate on the Symphony Messaging instance and the Key Manager, the bot must call the authentication endpoints, passing a short-lived JWT token in the body of the request. The JWT token must contain the following:
 
 * a _subject_ matching the username of the user to authenticate
 * an _expiration time_ of no more than 5 minutes from the current timestamp (needed to prevent replay attacks)
 * a signature by a private RSA key matching a public key stored for the user in the Pod
 
 The following script generates the authentication request:
-
-
 
 {% tabs %}
 {% tab title="Java" %}
