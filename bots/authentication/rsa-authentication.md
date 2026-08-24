@@ -74,7 +74,7 @@ $ openssl x509 -pubkey -noout -in publickey.cer > publickey.pem
 
 Sign the authentication request using either `privatekey.pkcs8` or `privatekey.pem`, depending on the support available in the JWT library.
 
-The file `publickey.pem` is the public key. This is the key you will import into the Authentication field in the Admin Portal at [step 2](rsa-authentication.md#id-2.-import-the-public-key-into-the-authentication-field-of-the-service-account-via-the-admin-portal).
+The file `publickey.pem` is the public key. This is the key you will import into the **Authentication** field in the Admin Portal at [step 2](rsa-authentication.md#id-2.-import-the-public-key-into-the-authentication-field-of-the-service-account-via-the-admin-portal).
 
 ## 2. Import the Public Key into the Authentication field of the Service Account via the Admin Portal
 
