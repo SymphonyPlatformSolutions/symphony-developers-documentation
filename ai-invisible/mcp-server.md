@@ -1,7 +1,7 @@
 ---
 description: >-
   Automate Symphony tasks, notify teammates, and use Symphony chat as context in
-  Claude, ChatGPT, and other MCP-compatible AI agents.
+  Claude, Gemini or any other MCP client.
 ---
 
 # MCP Server
@@ -10,7 +10,7 @@ Symphony's MCP server connects Symphony Messaging to MCP-compatible AI clients.
 
 It lets you automate tasks and notify teammates directly from an AI assistant.
 
-It also lets you use Symphony conversations as context for prompts in Claude, ChatGPT, Mistral, and other MCP-compatible AI agents.
+It also lets you use Symphony conversations as context for prompts in Claude, Gemini or any other MCP client.
 
 It gives AI clients a standard way to discover tools, inspect inputs, and run actions in Symphony. This reduces custom integration work and makes tool-driven workflows easier to build, test, and govern.
 
