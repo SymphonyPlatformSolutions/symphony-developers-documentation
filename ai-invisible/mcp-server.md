@@ -1,58 +1,56 @@
 ---
 description: >-
-  Automate Symphony tasks, notify teammates, and use Symphony chat as context in
-  Claude, Gemini or any other MCP client.
+  Automate Symphony Messaging tasks, notify teammates, and use Symphony
+  Messaging chat as context in Claude, Gemini or any other MCP client.
 ---
 
 # MCP Server
 
+### Overview and capabilities
+
 Symphony's MCP server connects Symphony Messaging to MCP-compatible AI clients.
 
-It lets you automate tasks and notify teammates directly from an AI assistant.
+You can automate tasks and notify teammates directly from an AI assistant or use Symphony Messaging conversations as context for prompts in Claude, Gemini or any other MCP client.
 
-It also lets you use Symphony conversations as context for prompts in Claude, Gemini or any other MCP client.
+It gives AI clients a standard way to discover tools, inspect inputs, and run actions in Symphony Messaging, reducing custom integration work and making tool-driven workflows easier to build, test, and govern.
 
-It gives AI clients a standard way to discover tools, inspect inputs, and run actions in Symphony. This reduces custom integration work and makes tool-driven workflows easier to build, test, and govern.
+### Security, premissions and data governance
 
-### Why use Symphony's MCP server
+Symphony's MCP server is built on Symphony applications and on-behalf-of (OBO) permissions.
 
-Symphony's MCP server is built on Symphony applications and on-behalf-of permissions.
+It follows the same security model as authenticated apps in Symphony Messaging. For context, see [Planning Your App](../ext-apps/planning-your-app.md), [App Authentication](../ext-apps/app-authentication/), and [OBO Authentication](../ext-apps/app-authentication/obo-authentication.md).
 
-It follows the same security model as authenticated apps in Symphony. For background, see [Planning Your App](../ext-apps/planning-your-app.md), [App Authentication](../ext-apps/app-authentication/), and [OBO Authentication](../ext-apps/app-authentication/obo-authentication.md).
+Each user gets a dedicated OBO session when they use the server.
 
-Each user gets a dedicated on-behalf-of session when they use the server.
+This gives organizations strong control and traceability:
 
-This gives you strong control and traceability:
+* Users never access more data than they can already access in Symphony Messaging.
+* Room membership, history sharing, and information barriers are enforced by default.
+* Actions such as room creation or message sending are recorded in audit trail and content export as actions performed by the MCP server on behalf of the user.
 
-* users never access more data than they can already access in Symphony
-* room membership, history sharing, and information barriers are enforced by default
-* actions such as room creation or message sending are recorded in audit trail and content export as actions performed by the MCP server on behalf of the user
+This ensures the assistant remains aligned with existing permission boundaries within Symphony Messaging, and provides Admins with an extra control layer through application permissions.
 
-This keeps the assistant aligned with Symphony's existing permission boundaries.
+Admins can use app permissions as an overlay to restrict which MCP actions are available. For example, they can allow read-only workflows and block authoring actions such as sending messages or creating rooms.
 
-Admins also get an extra control layer through application permissions.
-
-They can use app permissions as an overlay to restrict which MCP actions are available. For example, they can allow read-only workflows and block authoring actions such as sending messages or creating rooms.
-
-### Installation
+### Service activation
 
 Symphony's MCP server must be enabled before you can use it.
 
 {% hint style="warning" %}
 Symphony's MCP server is an add-on to Symphony Services. It is subject to additional charges.
 
-Contact Symphony's support team at [sales@symphony.com](mailto:sales@symphony.com) to enable the service in your environment before you start using it.
+Contact the [Symphony team](https://symphony.com/contact/) to enable the service in your environment before you can start using it.
 {% endhint %}
 
-Once the service is enabled, you can connect it to any MCP-compatible AI client.
-
-This includes Claude, ChatGPT, Mistral, and other AI agents that support MCP protocol.
+Once the service is enabled, you can connect MCP server to any MCP-compatible AI client, including Claude, ChatGPT, Mistral, and other AI agents that support MCP protocol.
 
 ### Connect with Symphony's MCP
 
-Symphony is a remote MCP server. You do not need to deploy anything to start using it. The MCP server is exposed through your tenant specific URL like `https://xxx.symphony.com/mcp-server/mcp`. You only need to connect your MCP client, complete the authorization flow, and start prompting.
+Symphony's MCP server is a remote server that you can start using immediately with zero deployment required. Connect your MCP client, complete the authorization flow, and start prompting.
 
-A dedicated setup guide for each MCP client is coming soon. For your first setup, contact Symphony's support team if you need help.
+The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/mcp`_.&#x20;
+
+A dedicated setup guide will soon be available for each MCP client. Don't hesitate to contact the Symphony's support team at _support@symphony.com_ if you need help for your first setup.
 
 ### Tool reference
 
@@ -62,13 +60,13 @@ Adds a new member to an existing room.
 
 #### `create_im`
 
-Creates a new instant message conversation with a user.
+Creates a new 1:1 chat with a user.
 
-If an IM already exists between the caller and that user, the tool returns the existing conversation.
+If a 1:1 chat already exists between the caller and the user, the tool returns the existing conversation.
 
 #### `create_room_with_user`
 
-Creates a new Symphony room and adds a user to it.
+Creates a new room and adds the user to it.
 
 #### `download_attachment`
 
