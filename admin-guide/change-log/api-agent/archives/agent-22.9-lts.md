@@ -42,7 +42,7 @@ For a list of Agent x SBE compatibilities, click [here](../../../agent-guide/sbe
   * Spring boot has been updated to version 2.7.0.
   * [Datahose - Read Events](https://developers.symphony.com/restapi/reference/datahose-read-events) now supports `eventTypes`, which will allow to restrict the payload to the only [Real Time Events](../../../../bots/datafeed/real-time-events.md) requested.\
     \&#xNAN;_Please note that this is a breaking change from the version that was released with the 22.6 Agent: indeed the_ `filters` _parameter is no longer supported._\
-    &#xNAN;_&#x4E;ote also that Datahose still remains as beta._
+    _&#x4E;ote also that Datahose still remains as beta._
   * The agent does not store the authentication token in clear in cache anymore.
   * Fixed some logging security vulnerability.
 

@@ -1,7 +1,7 @@
 # Bot Developer Kit for Java
 
 {% hint style="info" %}
-[BDK 3.0](https://symphony-bdk-java.finos.org/) has been released! The BDK 2.0 will stop being supported in **August 2024**. Please consider migrating to keep up with the latest features!&#x20;
+[BDK 3.0](https://symphony-bdk-java.finos.org/) has been released! The BDK 2.0 will stop being supported in **August 2024**. Please consider migrating to keep up with the latest features!
 {% endhint %}
 
 ## Overview
@@ -81,16 +81,16 @@ final SymphonyBdk bot2 = new SymphonyBdk(loadFromClasspath("/config_2.yaml"));
 
 The BDK also provides a `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events. The `DatafeedService` interface provides the following methods for your bot to use:
 
-| Method                               | Descriptions                                                                                               |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `start()`                            | Start the bot's datafeed                                                                                   |
-| `stop()`                             | Stop the bot's datafeed                                                                                    |
-| `subscribe(RealTimeEventListener)`   | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes. |
-| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class.                                                            |
+| Method                               | Descriptions                                                                                              |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `start()`                            | Start the bot's datafeed                                                                                  |
+| `stop()`                             | Stop the bot's datafeed                                                                                   |
+| `subscribe(RealTimeEventListener)`   | Subscribe a custom event listener class. Inside this class is where the bulk of your business logic goes. |
+| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class.                                                           |
 
 For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`. This `RealTimeEventListener` class must implement eventType methods (e.g. `onMessageSent()`) along with custom business logic inside.
 
-When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType (`MESSAGESENT`) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK:
+When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType (`MESSAGESENT`) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed. An example implementation is provided out of the box by the BDK:
 
 {% tabs %}
 {% tab title="BotApplication.java" %}
@@ -141,7 +141,7 @@ A Symphony Messaging workflow can be thought of as a sequence of operations or a
 
 By providing an intuitive Activities API, the BDK makes it simple to define a set of discrete operations or activities for different actors in your system to execute. Ultimately, these activities constitute the building blocks for a powerful Symphony Messaging workflow automation.
 
-Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way.  The BDK provides a powerful Workflow API (coming soon) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony Messaging workflow.
+Once you have defined a discrete set of activities for different actors in your system to execute, the next step is to organize them together in an intelligent way. The BDK provides a powerful Workflow API (coming soon) that makes it easy to organize a sequence of activities together, and subsequently orchestrate a Symphony Messaging workflow.
 
 ## Activities API
 
@@ -163,7 +163,7 @@ public static void main(String[] args) throws Exception {
 There are two different types of activities supported by the BDK:
 
 * **Command Activity**: an activity triggered when a message is sent in an IM or Chatroom.
-* **Form Activity**: an activity triggered when a user replies to an Elements form message. &#x20;
+* **Form Activity**: an activity triggered when a user replies to an Elements form message.
 
 ### Command Activities
 
@@ -198,10 +198,10 @@ bdk.activities().register(slash("/buy {quantity} {$ticker}", false, context -> {
 {% endtab %}
 {% endtabs %}
 
-* Listen for the word `hello` (Not a Slash command  - just listen for messages containing a specific word)
+* Listen for the word `hello` (Not a Slash command - just listen for messages containing a specific word)
 
 {% tabs %}
-{% tab title="'hello'" %}
+{% tab title="" %}
 ```java
 bdk.activities().register(new CommandActivity<>() {
   protected ActivityMatcher<CommandContext> matcher() throws EventException {
@@ -260,7 +260,7 @@ bdk.activities().register(new FormReplyActivity<>() {
 ```
 
 {% hint style="info" %}
-Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class.  For more information on the implementation for the `FormReplyActivity` class, continue [here](https://symphony-bdk-java.finos.org/activity-api.html#how-to-create-a-form-activity).
+Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher()`, `onActivity()` and `info()` methods provided by the `AbstractActivity` class. For more information on the implementation for the `FormReplyActivity` class, continue [here](https://symphony-bdk-java.finos.org/activity-api.html#how-to-create-a-form-activity).
 {% endhint %}
 
 As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.

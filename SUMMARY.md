@@ -99,11 +99,11 @@
 
 * [AI agent](ai/ai-agent/README.md)
   * [AI agent studio](ai/ai-agent/ai-agent-studio.md)
+* [MCP Server](ai/mcp-server.md)
 
 ## AI invisible
 
 * [Develop custom AI Agents](ai-invisible/develop-custom-ai-agents.md)
-* [MCP Server](ai-invisible/mcp-server.md)
 
 ## Developer Tools <a href="#dev-tools" id="dev-tools"></a>
 

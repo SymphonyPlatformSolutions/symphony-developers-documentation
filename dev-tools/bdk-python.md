@@ -81,16 +81,16 @@ async with SymphonyBdk(config_a) as bdk_a, SymphonyBdk(config_b) as bdk_b:
 
 The BDK also provides a `DatafeedService` interface that makes it easier than ever for bots to manage real-time messages and events. The `DatafeedService` interface provides the following methods for your bot to use:
 
-| Method                               | Descriptions                                                                                               |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `start()`                            | Start the bot's datafeed                                                                                   |
-| `stop()`                             | Stop the bot's datafeed                                                                                    |
-| `subscribe(RealTimeEventListener)`   | Subscribe a custom event listener class.  Inside this class is where the bulk of your business logic goes. |
-| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class.                                                            |
+| Method                               | Descriptions                                                                                              |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `start()`                            | Start the bot's datafeed                                                                                  |
+| `stop()`                             | Stop the bot's datafeed                                                                                   |
+| `subscribe(RealTimeEventListener)`   | Subscribe a custom event listener class. Inside this class is where the bulk of your business logic goes. |
+| `unsubscribe(RealTimeEventListener)` | Unsubscribe from a custom event listener class.                                                           |
 
 For bots to listen to incoming events and messages, bots must subscribe to a custom `RealTimeEventListener`. This `RealTimeEventListener` class must implement eventType methods (e.g. `onMessageSent()`) along with custom business logic inside.
 
-When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType (`MESSAGESENT`) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed.  An example implementation is provided out of the box by the BDK:
+When a user sends a bot a message, the bot will pick up the event from the datafeed and check to see if an implemented eventType method matches the eventType (`MESSAGESENT`) of the inbound event. If there is a corresponding eventType method registered, the bot will execute the business logic inside of this eventType method. Otherwise the bot will not perform an action and will continue to listen for inbound events from the datafeed. An example implementation is provided out of the box by the BDK:
 
 {% tabs %}
 {% tab title="__main.py__" %}
@@ -164,7 +164,7 @@ async def run():
 There are two different types of activities supported by the BDK:
 
 * **Command Activity**: an activity triggered when a message is sent in an IM or Chatroom.
-* **Form Activity**: an activity triggered when a user replies to an Elements form message. &#x20;
+* **Form Activity**: an activity triggered when a user replies to an Elements form message.
 
 ### Command Activities
 
@@ -215,10 +215,10 @@ async def run():
 {% endtab %}
 {% endtabs %}
 
-1. Listen for the word `'hello'` (Not a Slash command  - Listen for a specific word)
+1. Listen for the word `'hello'` (Not a Slash command - Listen for a specific word)
 
 {% tabs %}
-{% tab title="'hello'" %}
+{% tab title="" %}
 ```python
 async def run():
   async with SymphonyBdk(BdkConfigLoader.load_from_symphony_dir("config.yaml")) as bdk:
@@ -297,7 +297,7 @@ except KeyboardInterrupt:
 ```
 
 {% hint style="info" %}
-Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher() and on_activity()` methods provided by the `AbstractActivity` class.  For more information on the implementation for the `FormReplyActivity` class, continue [here](https://github.com/finos/symphony-bdk-python/blob/main/symphony/bdk/core/activity/form.py).
+Note: If you wish to create your own `FormReplyActivity` class, you must implement the methods `matcher() and on_activity()` methods provided by the `AbstractActivity` class. For more information on the implementation for the `FormReplyActivity` class, continue [here](https://github.com/finos/symphony-bdk-python/blob/main/symphony/bdk/core/activity/form.py).
 {% endhint %}
 
 As shown above, the Activities API makes it simple to manage incoming commands, elements form submissions, and access message context making it easy to manage bot-user interactions and create custom workflows.
@@ -386,7 +386,7 @@ Hello <b>{{ name }}</b>!
 {% endtab %}
 {% endtabs %}
 
-Using templating you can also create Element Forms.  Below is an example of a price enquiry form template:
+Using templating you can also create Element Forms. Below is an example of a price enquiry form template:
 
 ```markup
 <form id="price">
