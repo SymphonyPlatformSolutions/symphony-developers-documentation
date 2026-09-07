@@ -42,13 +42,15 @@ Symphony's MCP server is an add-on to Symphony Services. It is subject to additi
 Contact the [Symphony team](https://symphony.com/contact/) to enable the service in your environment before you can start using it.
 {% endhint %}
 
-Once the service is enabled, you can connect MCP server to any MCP-compatible AI client, including Claude, ChatGPT, Mistral, and other AI agents that support MCP protocol.
+Once the service is enabled, you can connect Symphony's MCP server to any MCP-compatible AI client, including Claude, ChatGPT, Mistral, and other AI agents that support MCP protocol.&#x20;
 
 ### Connect with Symphony's MCP
 
 Symphony's MCP server is a remote server that you can start using immediately with zero deployment required. Connect your MCP client, complete the authorization flow, and start prompting.
 
-The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/mcp`_.&#x20;
+The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/mcpapp/mcp`_.&#x20;
+
+Symphony's MCP Server implements secure authorization using OAuth 2.1.
 
 A dedicated setup guide will soon be available for each MCP client. Don't hesitate to contact the Symphony's support team at _support@symphony.com_ if you need help for your first setup.
 
@@ -65,9 +67,9 @@ The presence status that was set is returned.
 
 #### `create_chat`
 
-Creates a chat between you (client) and another user.\
-A chat is also called IM or Instant Message. It's different from a room, it's unique and immutable.\
-The newly created chat is returned if it did not exist, or the existing chat is returned if it already existed before.
+Creates a direct chat between you and another Symphony Messaging user.\
+A direct chat or direct message is different from a chat room, it's unique and immutable.\
+The newly created direct chat is only returned if it was never created before, otherwise, the existing chat is returned.
 
 #### `create_room_with_user`
 
@@ -99,19 +101,18 @@ By default, it retrieves one day of history. The maximum period is seven days.
 
 #### `list_room_members`
 
-Retrieves the list of members for a specific Symphony conversation.\
-Provides details for each member, including their join date and whether they are an owner.
+Retrieves the list of members for a specific Symphony Messaging chat.\
+Provides details for each member, including their join date and whether they are a chat room owner.
 
 #### `lookup_user`
 
-Search users by emails OR symphony user ids (exclusive).\
-Search lists may contain up to 100 elements.
+Searches users by emails OR Symphony Messaging user IDs (exclusive).
 
 #### `remove_message`
 
-Remove a given message, identified by its identifier, from the conversation it belongs to.
+Removes a given message, identified by its identifier, from the conversation it belongs to.
 
-remove\_user\_from\_room
+#### `remove_user_from_room`
 
 If requesting user is allowed, removes a user from a given Symphony room.
 
@@ -126,7 +127,7 @@ Unlike a keyword search, the query is interpreted by meaning rather than matched
 
 #### `search_financial_instruments`
 
-Search for financial instruments matching the supplied query (e.g. a ticker).
+Searches for financial instruments matching the supplied query (e.g. a ticker).
 
 #### `search_user`
 
@@ -136,7 +137,7 @@ Use this tool when you need to find people, bots, or distribution lists.
 
 #### `see_user_presence`
 
-See the presence status of a given user identified by their Symphony identifier.\
+Shows the presence status of a given user identified by their Symphony Messaging identifier.\
 If the user belongs to an external organisation then it must be specified, otherwise a user of my organisation is assumed.
 
 #### `send_message`
@@ -147,12 +148,12 @@ If the message is sent successfully, the response includes message metadata such
 
 #### `update_message`
 
-Update a given message, identified by its identifier, in the conversation it belongs to, identified by its identifier.\
+Updates a given message, identified by its identifier, in the conversation it belongs to, identified by its identifier.\
 The existing message is fully replaced by the new message. The new version of the message is returned.
 
 #### `update_room`
 
-Change the attributes of a given room, including its name, the pinned message and all attributes available for the room creation tool, except changing public/private.\
+Changes the attributes of a given room, including its name, the pinned message and all attributes available for the room creation tool, except changing public/private.\
 Returns the details of the updated room.
 
 #### `who_am_i`
