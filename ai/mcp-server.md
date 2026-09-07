@@ -58,11 +58,16 @@ A dedicated setup guide will soon be available for each MCP client. Don't hesita
 
 Adds a new member to an existing room.
 
-#### `create_im`
+#### `change_my_presence`
 
-Creates a new 1:1 chat with a user.
+Change my presence status: available, busy, be right back, in a meeting, out of office.\
+The presence status that was set is returned.
 
-If a 1:1 chat already exists between the caller and the user, the tool returns the existing conversation.
+#### `create_chat`
+
+Creates a chat between you (client) and another user.\
+A chat is also called IM or Instant Message. It's different from a room, it's unique and immutable.\
+The newly created chat is returned if it did not exist, or the existing chat is returned if it already existed before.
 
 #### `create_room_with_user`
 
@@ -73,6 +78,10 @@ Creates a new room and adds the user to it.
 Downloads an attachment from a conversation.
 
 It returns the file content as base64.
+
+#### `get_financial_instrument_details`
+
+Get details of a specific financial instrument identified by its identifier.
 
 #### `list_allowed_file_types`
 
@@ -88,9 +97,36 @@ Returns messages and message metadata for a conversation.
 
 By default, it retrieves one day of history. The maximum period is seven days.
 
+#### `list_room_members`
+
+Retrieves the list of members for a specific Symphony conversation.\
+Provides details for each member, including their join date and whether they are an owner.
+
+#### `lookup_user`
+
+Search users by emails OR symphony user ids (exclusive).\
+Search lists may contain up to 100 elements.
+
+#### `remove_message`
+
+Remove a given message, identified by its identifier, from the conversation it belongs to.
+
+remove\_user\_from\_room
+
+If requesting user is allowed, removes a user from a given Symphony room.
+
 #### `room_search`
 
 Searches for rooms that match a query or topic.
+
+#### `search_messages_by_meaning`
+
+Searches for messages using a natural-language semantic query.\
+Unlike a keyword search, the query is interpreted by meaning rather than matched literally.
+
+#### `search_financial_instruments`
+
+Search for financial instruments matching the supplied query (e.g. a ticker).
 
 #### `search_user`
 
@@ -98,11 +134,26 @@ Searches the Symphony directory for users.
 
 Use this tool when you need to find people, bots, or distribution lists.
 
+#### `see_user_presence`
+
+See the presence status of a given user identified by their Symphony identifier.\
+If the user belongs to an external organisation then it must be specified, otherwise a user of my organisation is assumed.
+
 #### `send_message`
 
 Sends a message to a conversation identified by its stream.
 
 If the message is sent successfully, the response includes message metadata such as its identifier and timestamp.
+
+#### `update_message`
+
+Update a given message, identified by its identifier, in the conversation it belongs to, identified by its identifier.\
+The existing message is fully replaced by the new message. The new version of the message is returned.
+
+#### `update_room`
+
+Change the attributes of a given room, including its name, the pinned message and all attributes available for the room creation tool, except changing public/private.\
+Returns the details of the updated room.
 
 #### `who_am_i`
 
