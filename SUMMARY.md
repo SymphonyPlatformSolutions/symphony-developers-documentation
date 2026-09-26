@@ -180,7 +180,8 @@
 
 * [Change Logs](admin-guide/change-log/README.md)
   * [API Agent](admin-guide/change-log/api-agent/README.md)
-    * [Agent - 26.3 (LTS)](admin-guide/change-log/api-agent/agent-26.3-lts.md)
+    * [Agent - 26.6 (LTS)](admin-guide/change-log/api-agent/agent-26.3-lts.md)
+    * [Agent - 26.3 (LTS)](admin-guide/change-log/api-agent/agent-26.3-lts-1.md)
     * [Agent - 26.2](admin-guide/change-log/api-agent/agent-26.2.md)
     * [Agent - 26.1](admin-guide/change-log/api-agent/agent-26.1.md)
     * [Agent - 25.12 (LTS)](admin-guide/change-log/api-agent/agent-25.12-lts.md)
