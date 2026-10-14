@@ -7,9 +7,23 @@ This page describes how to create your first agent using the AI agent studio. Be
 
 ## Create a new AI agent
 
-To start creating your own AI agent, click the **Create agent** button in AI Agent Studio.
+To start creating your own AI agent:
+
+1. In the Symphony Messaging web or desktop app, go to **APPS** and select **AI Studio**.
+
+<div align="left"><img src="../../.gitbook/assets/unknown.png" alt="" height="58" width="257"></div>
+
+2. Select the **+ Create agent** button.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 15.14.35.png" alt=""><figcaption></figcaption></figure>
+
+3. Configure the relevant fields in the **Create New AI Agent** pop-up.
+
+<div align="left"><img src="../../.gitbook/assets/unknown (1).png" alt="" height="582" width="533"></div>
+
+{% hint style="info" %}
+By default, each Symphony Messaging user can create one agent. If this limit needs to be changed, please contact your Account Manager or Technical Account Manager (TAM) for further discussion or clarification. For now, any configuration change applies to the entire SDU.
+{% endhint %}
 
 ## Essential information
 
