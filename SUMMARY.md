@@ -98,7 +98,7 @@
 ## AI
 
 * [AI agent](ai/ai-agent/README.md)
-  * [AI agent studio](ai/ai-agent/ai-agent-studio.md)
+  * [AI Agent Studio](ai/ai-agent/ai-agent-studio.md)
 * [MCP Server](ai/mcp-server.md)
 
 ## AI invisible

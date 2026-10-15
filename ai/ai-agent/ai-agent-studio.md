@@ -1,6 +1,6 @@
-# AI agent studio
+# AI Agent Studio
 
-This page describes how to create your first agent using the AI agent studio. Before you begin, the following prerequisites must be met:
+This page describes how to create your first agent using AI Agent Studio. Before you begin, the following prerequisites must be met:
 
 1. Symphony has enabled AI Agent Studio for your tenant.
 2. Your admin has installed AI Agent Studio for your user.
@@ -11,15 +11,15 @@ To start creating your own AI agent:
 
 1. In the Symphony Messaging web or desktop app, go to **APPS** and select **AI Studio**.
 
-<div align="left"><img src="../../.gitbook/assets/unknown.png" alt="" height="58" width="257"></div>
+<div align="center"><img src="../../.gitbook/assets/unknown.png" alt="" width="227"></div>
 
 2. Select the **+ Create agent** button.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 15.14.35.png" alt=""><figcaption></figcaption></figure>
+<div align="center"><figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure></div>
 
 3. Configure the relevant fields in the **Create New AI Agent** pop-up.
 
-<div align="left"><img src="../../.gitbook/assets/unknown (1).png" alt="" height="582" width="533"></div>
+<div align="center"><img src="../../.gitbook/assets/unknown (1).png" alt="" width="375"></div>
 
 {% hint style="info" %}
 By default, each Symphony Messaging user can create one agent. If this limit needs to be changed, please contact your Account Manager or Technical Account Manager (TAM) for further discussion or clarification. For now, any configuration change applies to the entire SDU.
@@ -27,11 +27,11 @@ By default, each Symphony Messaging user can create one agent. If this limit nee
 
 ## Essential information
 
-Essential information configures the AI agent's identity in Symphony. In particular:
+Essential information configures the AI agent's identity in Symphony Messaging. In particular:
 
 * **Name:** How the agent appears in Symphony's directory.
 * **Ownership:** The users who are entitled to modify this agent.
-* **Visibility:** Whether the agent appears in Symphony's marketplace, so that users can install it autonomously.
+* **Visibility:** Whether the agent appears in Symphony's Marketplace, so that users can install it autonomously.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 09.19.32.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -97,15 +97,15 @@ Context room Ids : #{ #tools.v1.vars.contextRoomIds() }
 
 ## Permissions
 
-Permissions control which actions the AI agent can take on behalf of the user. See  [API Endpoints for Apps](https://app.gitbook.com/s/909t04Fk8FiEI7fBcmlw/main/apps-on-behalf-of-obo/obo-enabled-endpoints "mention")  for the full list of available permissions.
+Permissions control which actions the AI agent can take on behalf of the user. See  [API Endpoints for Apps](https://app.gitbook.com/s/909t04Fk8FiEI7fBcmlw/main/apps-on-behalf-of-obo/obo-enabled-endpoints "mention") for the full list of available permissions.
 
 {% hint style="info" %}
 To allow an AI agent to work with a user's specific chat context it must be granted with at least the following permissions:
 
 * Act as user
 * Get user messages
-* Get Basic User Info
-* Get Extended User Info&#x20;
+* Get basic user info
+* Get extended user Info&#x20;
 {% endhint %}
 
 ## Symphony tools
@@ -127,7 +127,7 @@ Lets an AI agent natively send a TradingView graph as an inline message in Symph
 
 ### Charting
 
-The Symphony charting tool lets the AI agent send charts directly in a Symphony Messaging chat room. Supported chart types:
+The Symphony Messaging charting tool lets the AI agent send charts directly in a Symphony Messaging chat room. Supported chart types:
 
 * Bar chart
 * Line chart
@@ -163,8 +163,8 @@ First, a tenant administrator with the **Connector manager** role must create a 
 
 Create a new connector containing everything needed to connect to the remote MCP server via API key:
 
-* **Type:** Must be set to MCP server; sub-type can be set to custom.
-* **Readers (by role):** Set to "AI agent" if any AI agent should be able to use this MCP server.
+* **Type:** Must be set to MCP server; the sub-type can be set to custom.
+* **Readers (by role):** Set to "AI Agent" if any AI agent should be able to use this MCP server.
 * **Readers (by user):** Set to specific AI agents if only a subset of agents should have access.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.34.05.png" alt=""><figcaption></figcaption></figure>
