@@ -15,8 +15,18 @@ Here is an example of a message containing emojis:
 ```
 {% endtab %}
 
-{% tab title="Display in Symphony" %}
+{% tab title="Display in desktop app" %}
 ![](../../../../.gitbook/assets/mml_emojis.png)
+{% endtab %}
+
+{% tab title="Display in  mobile app" %}
+<figure><img src="../../../../.gitbook/assets/emojis.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
+{% endhint %}
+
+
 {% endtab %}
 {% endtabs %}
 

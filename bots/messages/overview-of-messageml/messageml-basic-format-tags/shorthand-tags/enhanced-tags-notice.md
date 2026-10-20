@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction to the enhanced tags
 
-Symphony users can now tag financial instruments using the Enhanced Tag feature.&#x20;
+Symphony Messaging users can now tag financial instruments using the Enhanced Tag feature.
 
 <figure><img src="https://lh4.googleusercontent.com/XJN5fiRvqurM65XJM7s7pG7SgwJbjLs5la9zlyX3bR2R-isKC3fko-_IBqDNMqSCsXsPKTlpdtA96uDa_l1xXlt5DpYMkcfeIr5zALq_H9PwdejeCR7i6ZW-bQzasYGtMwYuYAJPxCsa0auMZWW6vMPzbn8g988WLJxSYwFrdpXNUpc5pO1b2cfFDd3kMA" alt=""><figcaption><p>Instrument lookup type-ahead by ticker, name, ISIN, etc.</p></figcaption></figure>
 
@@ -41,7 +41,7 @@ Please read below to understand the changes introduced with the new enhanced tag
 ### Signals
 
 * Existing signals will continue to work with the new enhanced tags. Messages containing the new tags will still match with the existing signals, meaning a signal matching "`cash: AAPL`" will match messages containing both "AAPL" and "AAPL US" for example.
-* For now, it is not yet possible to create signals based on the newly introduced properties of the enhanced tags, but this will change in the coming months. For example, it is not yet possible to create a signal that will match only on "TSLA US", but if you create a signal that matches on "TSLA", it will match messages containing "TSLA US" as well.&#x20;
+* For now, it is not yet possible to create signals based on the newly introduced properties of the enhanced tags, but this will change in the coming months. For example, it is not yet possible to create a signal that will match only on "TSLA US", but if you create a signal that matches on "TSLA", it will match messages containing "TSLA US" as well.
 * The Signal API has not changed. In the coming months the API may change to adapt to the new tags and in that case this change will be introduced following a notice period provided that there is an impact on the API contract.
 
 ### Extension apps

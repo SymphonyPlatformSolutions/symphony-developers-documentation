@@ -1,5 +1,7 @@
 # Text formatting and semantics
 
+{% tabs %}
+{% tab title="Desktop" %}
 ## Tags
 
 MessageML supports the following tags for formatting content within a message:
@@ -40,10 +42,58 @@ Here after you can find an example of a message sent by a bot and containing the
 
 ## Versions and Compatibility
 
-
-
 | Main features introduced                             | Agent needed to parse message sent by the bot | Client 2.0 release      | Backward client-compatibility behavior (e.g. external rooms) | Client 1.5 release      |
 | ---------------------------------------------------- | --------------------------------------------- | ----------------------- | ------------------------------------------------------------ | ----------------------- |
 | Initial release                                      | Since the first version                       | Since the first version | -                                                            | Since the first version |
 | Closing \<b> and \<i> without line breaks\*          | Since the first version                       | Since the first version | -                                                            | 1.53                    |
 | Support of the language attribute on \<code> blocks. | Agent 20.14                                   | Since the first version | -                                                            |                         |
+{% endtab %}
+
+{% tab title="Mobile" %}
+## Tags
+
+MessageML supports the following tags for formatting content within a message:
+
+{% hint style="warning" %}
+Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
+{% endhint %}
+
+## Sending Elements
+
+| Tag                                                                                          | Description                                                                                                                                                                                                                                                                                                                                        | Optional attributes                                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<br/>`                                                                                      | Insert a line break.                                                                                                                                                                                                                                                                                                                               | None.                                                                                                                                                                                                                                                             |
+| <p><code>&#x3C;a href="url"></code><br><code>Link Text</code><br><code>&#x3C;/a></code></p>  | Insert a hyperlink that will be displayed in the message.                                                                                                                                                                                                                                                                                          | <p>• <code>href</code>: the URL of the link<br>• <code>class</code>: <a href="../../../../dev-tools/ui-style-guide/colors.md">color options</a>.</p>                                                                                                              |
+| `<b>text</b>`                                                                                | <p>Bold formatting.<br><br><strong>Note</strong>: when receiving a message from an Agent that contains whitespace between the last character in a bolded section and the closing <code>&#x3C;/b></code> tag, the bold section will be returned in Markdown (i.e. surrounded by double '*' characters) instead of XHTML tags.</p>                   | • `class`: [color options](../../../../dev-tools/ui-style-guide/colors.md).                                                                                                                                                                                       |
+| `<i>text</i>`                                                                                | <p>Italics formatting.<br><br><strong>Note</strong>: when receiving a message from an Agent that contains whitespace between the last character in an italics-formatted section and the closing <code>&#x3C;/i></code> tag, the italics section will be returned in Markdown (i.e. surrounded by single '*' characters) instead of XHTML tags.</p> | • `class`: [color options](../../../../dev-tools/ui-style-guide/colors.md).                                                                                                                                                                                       |
+| <p><code>&#x3C;pre></code><br><code>preformatted text</code><br><code>&#x3C;/pre></code></p> | Preformatted text.                                                                                                                                                                                                                                                                                                                                 | <p>• <code>class</code>: <a href="../../../../dev-tools/ui-style-guide/colors.md">color options</a>.<br>• Non-HTML MessageML <a href="/broken/pages/-MD_bJMd9aYYqZww_rml#shorthand-tags">shorthand tags</a> are not supported inside <code>&#x3C;pre></code>.</p> |
+| `<span>text</span>`                                                                          | <p>Limited formatting.<br>• This tag can be used to specify visual styles, by adding a <code>class</code> attribute.<br>• This tag is used to create <a href="../entities/structured-objects.md">Structured objects</a>.</p>                                                                                                                       | <p>• <code>class</code>: <a href="../../../../dev-tools/ui-style-guide/colors.md">color options</a>.<br>• <code>data-entity-id</code><br>• See below for list of translated PresentationML attributes.</p>                                                        |
+| `<code>code sample</code>`                                                                   | Format the text as a block of code.                                                                                                                                                                                                                                                                                                                | None                                                                                                                                                                                                                                                              |
+
+## Examples
+
+Here after you can find an example of a message sent by a bot and containing these formatting and semantics tags as well as the structure of the messageML sent:
+
+{% tabs %}
+{% tab title="Message containing formatting and semantics tags" %}
+
+{% endtab %}
+
+{% tab title="messageML structure" %}
+<pre class="language-markup"><code class="lang-markup"><strong>&#x3C;messageML>
+</strong>    &#x3C;h1>Formatting and semantics&#x3C;/h1>
+    &#x3C;p>This is a &#x3C;a href="https://docs.developers.symphony.com/">Link&#x3C;/a> to our developer documentation.&#x3C;/p>
+    &#x3C;p>Part 1 of the paragraph separated from part 2 with a line break.&#x3C;br/>Part 2 of the paragraph.&#x3C;/p>
+    &#x3C;p>This text can be either &#x3C;b>bold&#x3C;/b> or &#x3C;i>italic&#x3C;/i> or &#x3C;span style="color:red;">red&#x3C;/span>, or even combine &#x3C;b>&#x3C;i style="color:red;">several&#x3C;/i>&#x3C;/b> formatting tags.&#x3C;/p>
+    &#x3C;pre>This is a preformatted text.&#x3C;/pre>
+    &#x3C;code language="html">&#x26;lt;h1&#x26;gt;Code sample&#x26;lt;/h1&#x26;gt;
+&#x26;lt;p&#x26;gt;This is some html&#x26;lt;/p&#x26;gt;&#x3C;/code>
+&#x3C;/messageML>
+</code></pre>
+
+<figure><img src="../../../../.gitbook/assets/formatting_semantics.png" alt="" width="407"><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+{% endtab %}
+{% endtabs %}
+

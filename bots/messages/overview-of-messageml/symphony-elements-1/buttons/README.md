@@ -1,5 +1,9 @@
 # Buttons
 
+
+
+{% tabs %}
+{% tab title="Desktop" %}
 Buttons are the Symphony elements responsible for submitting a form to the bot. As a result, all Symphony form elements are required to have at least one button where \`type=`action`\`. When an end-user clicks this button, the form and the value of each of the elements inside will be submitted to the bot via the datafeed and presented as a JSON payload.
 
 In addition, some forms can contain reset buttons. These buttons are used to reset a form back to its original state.
@@ -91,3 +95,12 @@ The following example shows the use of the **Reset** and the **Submit** button w
 ## Versions
 
 <table><thead><tr><th width="268">Main features introduced</th><th width="120">Agent needed to parse message sent by the bot</th><th width="97">Client 2.0 release</th><th width="111">Mobile</th></tr></thead><tbody><tr><td>Initial release</td><td>2.55.9</td><td>Since first version</td><td>Since first version</td></tr><tr><td>Reset features behaviour is to show back the initial value of the form</td><td>2.55.9</td><td>Since first version</td><td>Since first version</td></tr><tr><td>New styles:<br>• New designs for the buttons<br>• Styles <code>primary destructive</code> and <code>secondary destructive</code> are deprecated<br>• Styles <code>tertiary</code> and <code>destructive</code> are introduced</td><td>20.6</td><td>Since first version</td><td>Since first version</td></tr><tr><td>New styles: <code>primary-link</code> and <code>destructive-link</code><br>Support for icons.</td><td>23.11</td><td>23.12</td><td>Supported</td></tr><tr><td>formnovalidate</td><td>25.6</td><td>25.9</td><td><strong>Not supported yet.</strong></td></tr></tbody></table>
+
+
+{% endtab %}
+
+{% tab title="Mobile" %}
+MessageML messages in the Symphony Messaging Mobile App only support the display of buttons. Tapping a button will display the WebView inside the app's user interface.
+{% endtab %}
+{% endtabs %}
+

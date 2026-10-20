@@ -4,6 +4,8 @@
 
 Tags support the following `style` attributes where applicable:
 
+{% tabs %}
+{% tab title="Desktop" %}
 ```bash
 align-content
 align-items
@@ -152,6 +154,36 @@ word-wrap
 ```
 
 
+{% endtab %}
+
+{% tab title="Mobile" %}
+```bash
+background-color
+border
+border-bottom
+border-left
+border-right
+border-top
+border-color
+border-radius
+color
+display:none
+font-size
+font-weight
+font-style
+margin
+margin-bottom
+margin-left
+margin-right
+margin-top
+padding
+padding-bottom
+padding-left
+padding-right
+padding-top
+```
+{% endtab %}
+{% endtabs %}
 
 ## Go further...
 
@@ -160,4 +192,3 @@ To learn more about Symphony's built in styles, continue here:
 {% content-ref url="../../../../dev-tools/ui-style-guide/" %}
 [ui-style-guide](../../../../dev-tools/ui-style-guide/)
 {% endcontent-ref %}
-

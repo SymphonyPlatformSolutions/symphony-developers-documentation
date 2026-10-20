@@ -6,6 +6,12 @@ By reusing our pre-designed standard UX component libraries, Elements provide de
 
 Here after, you will find a brief introduction of how to send Elements, then an update of the message flow for Elements, and finally the form specifications.
 
+{% hint style="warning" %}
+Supported on Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
+{% endhint %}
+
+## Sending Elements
+
 ## Sending Elements
 
 To start using Symphony Messaging Elements, you first need to create a form element using the **`<form>` MessageML tag. The form element can be considered the "frame" of a message**, containing elements that will be sent by the bot and subsequently read by the datafeed.
@@ -118,9 +124,9 @@ Here is that flow in colorful diagram form, for you to know more about each stag
 ![](<../../../../.gitbook/assets/Bot Message Workflow@3x.svg>)
 
 1. **A Bot sends a message with Symphony Messaging Elements in a form**
-2. **The message/from is visible to users.  Users interact with the elements**
+2. **The message/from is visible to users. Users interact with the elements**
 3. **Once submitted, the data is submitted to the bot**
-4. **Bots can access the data, by reading the datafeed.**&#x20;
+4. **Bots can access the data, by reading the datafeed.**
 
 ## **Form** specification
 
@@ -136,7 +142,7 @@ Forms are represented by the **\<form>** tag, as you can see in the examples abo
 
 * The form element can be considered the "frame" of a message, containing elements that will be sent by the bot and subsequently read by the datafeed.
 * To be considered valid, the form tag must contain at least one action type "Button" as a child. For more information, refer to [Buttons](buttons/).
-* All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload.  That way the bot manager can know which button triggered the submission of that form. Starting with Agent 23.11, the auto-submit feature allows to submit the form with a TextField, or with a DropDown Menu.
+* All of the data within a form element will be sent to a bot via the datafeed when a user clicks one of the action buttons in that form. The `name` attribute of the button will be the value of the `action` field within the datafeed payload. That way the bot manager can know which button triggered the submission of that form. Starting with Agent 23.11, the auto-submit feature allows to submit the form with a TextField, or with a DropDown Menu.
 * If there is more than one element in the form having the same `name` attribute, the value is converted to an array. Every index of the array is related to a specific element value. The index order is not guaranteed, so the developer needs to iterate through this array and collect the values.
 * When a form is submitted and `multi-submit` attribute is not specified, all the elements within it will be disabled, not being possible to edit or resend the same form. However, if the page is refreshed, the user can fill out the form again and submit it as a new form.
 * The attribute `multi-submit` allows the us to submit the form several times even without needing to refresh the page. It can take 2 different string values:
@@ -179,9 +185,4 @@ The following example shows three forms being used as follows:
 
 ### Versions and Compatibility
 
-
-
 <table data-header-hidden><thead><tr><th>Main features introduced</th><th width="180">Agent needed to parse message sent by the bot</th><th width="129">Client 2.0 release</th><th width="115">Client 1.5 release</th><th>Backward client-compatibility behavior (e.g. external rooms)</th></tr></thead><tbody><tr><td>Main features introduced</td><td>Agent needed to parse message sent by the bot</td><td>Client 2.0 release</td><td><em>Client 1.5 release</em></td><td>Backward client-compatibility behavior (e.g. external rooms)</td></tr><tr><td>Initial release</td><td>2.55.9</td><td>Since first version</td><td><em>1.55</em></td><td>Not working</td></tr><tr><td>Multi-submit attribute</td><td>20.13</td><td>21.8</td><td>-</td><td>-</td></tr></tbody></table>
-
-
-
