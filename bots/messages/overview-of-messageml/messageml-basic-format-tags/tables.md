@@ -68,8 +68,6 @@ MessageML supports the following tags to arrange information within a message us
 Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
 {% endhint %}
 
-## Sending Elements
-
 | Tags                                                | Description                      | Optional attributes                                     |
 | --------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
 | `<table>` `<tr>` `<td>text</td>` `</tr>` `</table>` | Render "text" in a table format. | <p>• <code>rowspan</code><br>• <code>colspan</code></p> |

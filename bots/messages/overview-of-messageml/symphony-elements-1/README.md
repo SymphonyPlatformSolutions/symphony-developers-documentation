@@ -12,8 +12,6 @@ Supported on Supported on Android starting with the release of the Symphony Mess
 
 ## Sending Elements
 
-## Sending Elements
-
 To start using Symphony Messaging Elements, you first need to create a form element using the **`<form>` MessageML tag. The form element can be considered the "frame" of a message**, containing elements that will be sent by the bot and subsequently read by the datafeed.
 
 You can see below an example of how a user can interact with a form that was sent by a bot, as well as the messageML structure of the message that was sent by the bot, and the payload that is generated and therefore delivered to the bot via the datafeed, containing the information completed and submitted by the user. Please use the tabs to navigate between these 3 documents.

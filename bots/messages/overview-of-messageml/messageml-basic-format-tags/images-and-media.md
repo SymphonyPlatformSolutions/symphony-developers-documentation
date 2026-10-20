@@ -12,8 +12,6 @@ MessageML supports the following tags to embed media into messages:
 Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
 {% endhint %}
 
-## Sending Elements
-
 ## Rules and Limitations via an example
 
 For the following examples, we are sending an SVG image along with the message.
