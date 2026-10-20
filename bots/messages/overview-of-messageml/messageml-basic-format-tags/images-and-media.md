@@ -4,9 +4,15 @@
 
 MessageML supports the following tags to embed media into messages:
 
-| Tags               | Description                                                                                                                                                                                                                                                                             | Attributes                                         |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/restapi/main/messages/create-message-v4#other-request-examples). | <p>• <code>src</code> <br>• <code>class</code></p> |
+| Tags               | Description                                                                                                                                                                                                                                                                             | Attributes                                        |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| `<img src="url"/>` | Image. Images have a max height of 256px; otherwise, the default size is the size of the image. For more information on how to send images through API call, refer to [Sending images](https://developers.symphony.com/restapi/main/messages/create-message-v4#other-request-examples). | <p>• <code>src</code><br>• <code>class</code></p> |
+
+{% hint style="warning" %}
+Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
+{% endhint %}
+
+## Sending Elements
 
 ## Rules and Limitations via an example
 
@@ -47,7 +53,7 @@ Here after you can find an example of a message sent by a bot and containing an 
 
 {% tabs %}
 {% tab title="Message containing content grouping tags" %}
-![](../../../../.gitbook/assets/mml\_image.png)
+![](../../../../.gitbook/assets/mml_image.png)
 {% endtab %}
 
 {% tab title="messageML structure" %}

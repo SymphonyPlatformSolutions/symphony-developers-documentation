@@ -182,6 +182,10 @@ padding-left
 padding-right
 padding-top
 ```
+
+{% hint style="warning" %}
+Supported on Android starting with the release of the Symphony Messsaging Mobile App v26.10. Support for iOS will be available in a later version.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
