@@ -48,7 +48,7 @@ Once the service is enabled, you can connect Symphony's MCP server to any MCP-co
 
 Symphony's MCP server is a remote server that you can start using immediately with zero deployment required. Connect your MCP client, complete the authorization flow, and start prompting.
 
-The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/mcpapp/mcp`_.&#x20;
+The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/{appId}/mcp`_. where appId corresponds to the Symphony app used by the MCP server
 
 Symphony's MCP Server implements secure authorization using OAuth 2.1.
 
