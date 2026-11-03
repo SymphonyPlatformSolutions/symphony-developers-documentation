@@ -1,0 +1,39 @@
+# API Agent
+
+{% hint style="info" %}
+The API Agent versions can be downloaded [here](../../agent-download.md).
+{% endhint %}
+
+The change log of each recent agent versions is available in the pages below.
+
+{% content-ref url="agent-26.3-lts-1.md" %}
+[agent-26.3-lts-1.md](agent-26.3-lts-1.md)
+{% endcontent-ref %}
+
+{% content-ref url="agent-26.2.md" %}
+[agent-26.2.md](agent-26.2.md)
+{% endcontent-ref %}
+
+{% content-ref url="agent-26.1.md" %}
+[agent-26.1.md](agent-26.1.md)
+{% endcontent-ref %}
+
+{% content-ref url="agent-25.12-lts.md" %}
+[agent-25.12-lts.md](agent-25.12-lts.md)
+{% endcontent-ref %}
+
+## Agent Release Cycle
+
+#### Release cycle
+
+The Agent is released monthly, and the version number follows a year.month.patch convention. Occasionally, a release may be skipped.
+
+#### Long Term Support (LTS) versions
+
+The releases of March, June, September and December are Long Term Support versions (e.g. releases named yy.3, yy.6, yy.9, and yy.12) and the last 3 LTS releases are supported.
+
+The other versions don't benefit from our Long Term Support and are out of support as soon as a new LTS version is released.
+
+#### Compatibility with SBE versions
+
+The **last three LTS versions are supported** and are always compatible with the production supported SBE versions.

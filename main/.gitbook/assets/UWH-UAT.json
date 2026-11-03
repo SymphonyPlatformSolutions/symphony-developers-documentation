@@ -1,0 +1,18 @@
+{
+    "appGroupId": "universal-webhook",
+    "name": "Universal Webhook 2.0",
+    "description": "Use this app for simple generic webhooks integrations. Once configured it will post messages received through the webhook into Symphony. It can be configured to post in a 1:1 chat with you or in a chat room with other Symphony users.",
+    "publisher": "Symphony",
+    "loadUrl": "https://[TENANT_DOMAIN]/client-bff/universal-webhook/index.html",
+    "iconUrl": "https://[TENANT_DOMAIN]/client-bff/static/universal-webhook/universal-webhook-2.7.0/assets/app-icon-16px.svg",
+    "domain": "[TENANT_DOMAIN]",
+    "permissions": [
+        "GET_EXTENDED_USER_INFO",
+        "ACT_AS_USER"
+    ],
+    "notification": {
+        "url": "",
+        "apiKey": null
+    },
+    "rsaKey": "-----BEGIN PUBLIC KEY-----MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwUkX6NzMYnE1gahhgFwk1jUffd0TclcqVN0AfRuGINiRpD2FA4s4ZfVtV9kRMLzz6uiiF+0r2TYNaM5XDbqzR+imf5PzJ2sIaoxVumSKZ1oHvnu865QwVMzMfJO4xQgybjqqruyztIs1hGMoaSTjOdlED6EuEq7XcP//ssGtG8+sDretkXqeTY3mtrcRFbK/praEoZpqnde3jjoTAYf2T8hwct4IU1FAyuP/WCK24bQMXrxurMe/3Y+5nYI5dzTH9IQ3bqXLTEXQIKB34tjVq782xdl4CKO9XjY+MY4qGMqJWeIvWsLc1QNJIccASbBg8fLdsG055btNcCQTs35g7NEvJIQ5kAPLGEo8DdjXJhjuXo8kcWovXB4B1vUws5jnBUZUW9s8d3J6zyXZHHRs9nZf9YlSwxlKCYTCxybkVvYE0PUxiSXqydprjE4TQR8HzSQlgsNNz/s1fV93Kppp2wvhOWJfbxQz55c4AHDC+04Jt8YRjZQjDwHFwp9FxiaWJ3JdPsXWgdQ1J7oSHx6coCeTARNE0JBKz4hvX5FMxe/4kg7T+NPOIIafE3IV8wRqkt3miSOiCwrf5weORi/5gK7hnRvJo+FxZSXfQLxnGos0NhHyMz/wTJTg04P+rvcU2rUlexSwo6sRRwbfpmLpzoC6MGlS2BUryeNm4GaRTxsCAwEAAQ==-----END PUBLIC KEY-----"
+}

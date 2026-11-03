@@ -1,0 +1,1829 @@
+openapi: 3.0.1
+info:
+  title: Community Connect API
+  description: ''
+  #termsOfService: http://swagger.io/terms/
+  #contact:
+  #  email: apiteam@swagger.io
+  #license:
+  #  name: Apache 2.0
+  #  url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+tags:
+  - name: onboardingAccount
+    description: userAccount endpoints
+  - name: clientReferring
+    description: Endpoints managing the ComCo referred clients
+  - name: userReferring
+    description: Endpoints managing the referred user for Comco clients
+  - name: internal
+    description: Internal endpoints that are not supposed to be public
+  - name: channelco
+    description: Public API for channelco
+
+paths:
+  /v1/onboarding/account:
+    get:
+      tags:
+        - onboardingAccount
+      security:
+        - ApiKeyAuth: []
+      summary: Get data for an account
+      operationId: getAccountByToken
+      parameters:
+        - name: token
+          in: query
+          schema:
+            type: string
+          required: true
+          description: hard to guess token to identify the user account
+          example: a3055b90-0b47-4283-a622-b43c672a9942
+      responses:
+        404:
+          description: Token did not matched anything
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Data already submitted for this token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlreadySubmittedUserError'
+        401:
+          description: Token expired
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: "we matched an account using the token, only 'email' and 'companyName' will have a value"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAccountOnboarding'
+              example:
+                email: foo@example.fr
+                companyName: Symphony
+  /v1/onboarding/tenant:
+    get:
+      tags:
+        - channelco
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Get user's pod and availability for onboarding
+      operationId: getUserOnboardingAvailability
+      parameters:
+        - name: email
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The user email
+          example: user@companyDomain.com
+      responses:
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOnboardingAvaibilityResponse'
+              example: "Company is already on Symphony but user needs access"
+    post:
+      tags:
+        - onboardingAccount
+      security:
+        - ApiKeyAuth: []
+      summary: Submit data for a user account
+      operationId: submitAccountDataForToken
+      parameters:
+        - name: token
+          in: query
+          schema:
+            type: string
+          required: true
+          description: hard to guess token to identify the user account
+          example: a3055b90-0b47-4283-a622-b43c672a9942
+      requestBody:
+        description: The payload to submit to onboard a new user
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserAccountOnboarding'
+      responses:
+        404:
+          description: Token did not matched anything
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        201:
+          description: "Everything went fine"
+
+
+  /v1/client:
+    get:
+      tags:
+        - clientReferring
+      security:
+        - JwtAuth: []
+      summary: Get client list for a refering company
+      operationId: getClientsByReferingCompany
+      parameters:
+        - name: searchPattern
+          in: query
+          schema:
+            type: string
+          required: false
+          description: specify if client name contains the search pattern
+          example: Company A
+        - name: sortingField
+          in: query
+          schema:
+            type: string
+            enum:
+              - companyName
+              - createdDate
+            default: createdDate
+          required: false
+          description: sort the result basing on a field, by default the created date would be used if not being specified
+          example: clientName
+        - name: sortingDirection
+          in: query
+          schema:
+            type: string
+            enum:
+              - ASC
+              - DESC
+            default: ASC
+          required: false
+          description: ASC or DESC sorting (based on client name)
+          example: ASC
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: specify the maximum number of items from the result
+          example: 20
+        - name: pageNumber
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: specify the page number among all available pages range
+          example: 3
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: List of referred clients retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClientResponse'
+    post:
+      tags:
+        - clientReferring
+      security:
+        - JwtAuth: []
+      summary: Refer a new client
+      operationId: referClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewReferredClientPayload'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: An client referral is succesfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+
+  /v1/client/{clientId}:
+    parameters:
+      - name: clientId
+        in: path
+        schema:
+          type: string
+        required: true
+        description: client id
+        example: 507f191e810c19729de860ea
+    get:
+      tags:
+        - clientReferring
+      security:
+        - JwtAuth: []
+      summary: Get a referred client
+      operationId: getReferredClient
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: Client not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: List of users for specified client returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+
+    put:
+      tags:
+        - clientReferring
+      security:
+        - JwtAuth: []
+      summary: Add new users email to existing referred client
+      operationId: addUsersToReferredClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+              example:
+                - user1@example.com
+                - user2@example.com
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: Client not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: Referred client is successfully updated with new added user emails
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+
+  /v1/client/{clientId}/{referredUserId}:
+    parameters:
+      - name: clientId
+        in: path
+        schema:
+          type: string
+        required: true
+        description: client id
+        example: 507f191e810c19729de860ea
+      - name: referredUserId
+        in: path
+        schema:
+          type: string
+        required: true
+        description: referred user id (internal)
+        example: 5099803df3f4948bd2f98391
+    put:
+      tags:
+        - userReferring
+      security:
+        - JwtAuth: []
+      summary: Update an user email of existing referred client if its referring status is ERROR
+      operationId: updateReferredClientUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUserEmailQuery'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: Either client or user email not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Invalid user email domain update
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidUserEmailDomainError'
+        200:
+          description: An client referral is succesfully updated with new email
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+    delete:
+      tags:
+        - userReferring
+      security:
+        - JwtAuth: []
+      summary: Delete an invited user of existing referred client if its referring status is ERROR
+      operationId: deleteReferredClientErrorUser
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: Either client or user email not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Could not delete the invited email
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: An client referral is succesfully updated with a removed user invitation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+
+  /v1/company:
+    get:
+      tags:
+        - clientReferring
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Get existing companies
+      operationId: getAllCompanies
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: A List of the existing companies
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExistingCompaniesArray'
+
+  /v1/internal/approver:
+    get:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Retrieve the list of sale approvers. People allowed to accept/decline referral requests
+      operationId: getApproversList
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: The list of approvers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApproverArray'
+  /v1/internal/approver/{symphonyUserId}:
+    post:
+      parameters:
+        - name: symphonyUserId
+          in: path
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: symphony user id
+          example: 123456789
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Adds symphony user to the list of approvers
+      operationId: addSalesApprover
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the updated list of approvers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApproverArray'
+    delete:
+      parameters:
+        - name: symphonyUserId
+          in: path
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: symphony user id
+          example: 123456789
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Removes symphony user from the list of approvers
+      operationId: removeSalesApprover
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the updated list of approvers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApproverArray'
+
+  /v1/internal/referral/import:
+    post:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: import referrals
+      operationId: importReferrals
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/ReferralToImport'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: List of successfully imported referrals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ReferredClient'
+  /v1/internal/referral/{tenantId}/{clientId}:
+    patch:
+      parameters:
+        - name: tenantId
+          in: path
+          schema:
+            type: integer
+          required: true
+          description: tenant id
+          example: 1045
+        - name: clientId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: client id
+          example: 507f191e810c19729de860ea
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: admin update referred client
+      operationId: internalUpdateReferredClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateReferredClientRequest'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: Referred company not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: successfully updated referral
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+
+  /v1/internal/referral/{tenantId}:
+    get:
+      parameters:
+        - name: tenantId
+          in: path
+          schema:
+            type: integer
+          required: true
+          description: tenant id
+          example: 1045
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: admin list referred clients for tenant
+      operationId: internalListReferredClientsForTenant
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: List of referrals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ReferredClient'
+
+  /v1/internal/tenant:
+    get:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Retrieve the list of registered tenants
+      operationId: getAllTenants
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the updated list of approvers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenantArray'
+    post:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: Add a registered tenant
+      operationId: addTenant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tenant'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the created tenant
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tenant'
+  /v1/internal/tenant/{externalPodId}:
+    get:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: get a registered tenant
+      operationId: get a tenant
+      parameters:
+        - name: externalPodId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: symphony tenant id
+          example: "219"
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the updated list of approvers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tenant'
+    delete:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: delete a registered tenant
+      operationId: delete a tenant
+      parameters:
+        - name: externalPodId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: symphony tenant id
+          example: "219"
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        204:
+          description: The resource was deleted successfully.
+  /v1/internal/config:
+    get:
+      tags:
+        - internal
+      security:
+        - ApiKeyAuth: [ ]
+      summary: get configuration
+      operationId: getConfig
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the config
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Config'
+    put:
+      tags:
+        - internal
+      security:
+        - JwtAuth: [ ]
+      summary: change configuration
+      operationId: updateConfig
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Config'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        201:
+          description: "Everything went fine"
+    delete:
+      tags:
+        - internal
+      security:
+        - JwtAuth: [ ]
+      summary: delete a configuration
+      operationId: deleteConfig
+      parameters:
+        - name: configKey
+          in: query
+          schema:
+            type: string
+          required: true
+          description: configuration key
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        201:
+          description: "Everything went fine"
+
+
+  /v1/internal/channelco/partner:
+    get:
+      tags:
+        - internal
+        - channelco
+      security:
+        - ApiKeyAuth: [ ]
+      summary: get channelco partner configuration
+      operationId: getPartnerConfig
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: the channelco partner configuration
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChannelCoPartner'
+    put:
+      tags:
+        - internal
+        - channelco
+      security:
+        - JwtAuth: [ ]
+      summary: change channelco partner configuration
+      operationId: updatePartnerConfig
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChannelCoPartner'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        201:
+          description: "Everything went fine"
+
+  /v1/channelco/user:
+    get:
+      tags:
+        - channelco
+      security:
+        - JwtAuth: [ ]
+      summary: Search channelco user
+      operationId: searchUser
+      parameters:
+        - name: email
+          in: query
+          schema:
+            type: string
+          required: true
+          description: user's email
+          example: user@comcocompany.com
+      responses:
+        200:
+          description: body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChannelCoUserAndCompany'
+        404:
+          description: The user do not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+    post:
+      tags:
+        - channelco
+      security:
+        - JwtAuth: []
+      summary: Create channelco user
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChannelCoUsersListRequest'
+      responses:
+        201:
+          description: body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChannelCoUsersListResponse'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+  /v1/channelco/company/{companyId}/user/{userId}:
+    get:
+      tags:
+        - channelco
+      security:
+        - JwtAuth: [ ]
+      summary: Get channelco user by companyId and userId
+      operationId: getUser
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: symphony user id
+          example: 123456789
+        - name: companyId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: company Id of the user
+          example: "10"
+      responses:
+        200:
+          description: body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChannelCoUserAndCompany'
+        404:
+          description: The user do not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+    put:
+      tags:
+        - channelco
+      security:
+        - JwtAuth: [ ]
+      summary: Update channelco user
+      operationId: updateUser
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: symphony user id
+          example: 123456789
+        - name: companyId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: company Id of the user
+          example: "10"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateChannelCoUserRequest'
+      responses:
+        200:
+          description: body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateChannelCoUserResponse'
+        404:
+          description: The user do not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+    delete:
+      tags:
+        - channelco
+      security:
+        - JwtAuth: [ ]
+      summary: Disable channelco user
+      operationId: disableUser
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: symphony user id
+          example: 123456789
+        - name: companyId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: company Id of the user
+          example: "10"
+      responses:
+        204:
+          description: The user was disabled successfully.
+        404:
+          description: The user do not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+
+  /v1/channelco/company/{companyId}/user/{userId}/roles/add:
+    post:
+      tags:
+        - channelco
+      security:
+        - JwtAuth: []
+      summary: Adds a role to a channelco user's account
+      operationId: addRole
+      parameters:
+        - name: userId
+          in: path
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: symphony user id
+          example: 123456789
+        - name: companyId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: company Id of the user
+          example: "10"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Role'
+      responses:
+        200:
+          description: body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiInfo'
+        400:
+          description: Something was wrong about the request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: The user do not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+
+  /v1/admin/referral/{tenantId}/{clientId}:
+    patch:
+      parameters:
+        - name: tenantId
+          in: path
+          schema:
+            type: integer
+          required: true
+          description: tenant id
+          example: 1045
+        - name: clientId
+          in: path
+          schema:
+            type: string
+          required: true
+          description: client id
+          example: 507f191e810c19729de860ea
+      tags:
+        - admin
+      security:
+        - CommonJwtAuth: []
+      summary: admin update referred client
+      operationId: adminUpdateReferredClient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateReferredClientRequest'
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        404:
+          description: Referred company not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: successfully updated referral
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferredClient'
+  /v1/admin/referral/{tenantId}:
+    get:
+      parameters:
+        - name: tenantId
+          in: path
+          schema:
+            type: integer
+          required: true
+          description: tenant id
+          example: 1045
+      tags:
+        - admin
+      security:
+        - CommonJwtAuth: [ ]
+      summary: admin list referred clients for tenant
+      operationId: adminListReferredClientsForTenant
+      responses:
+        401:
+          description: Unauthorized request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiError'
+        200:
+          description: List of referrals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ReferredClient'
+
+components:
+  schemas:
+    ApiError:
+      type: object
+      properties:
+        code:
+          type: string
+          description: error code
+        message:
+          type: string
+          description: Human readable details about the error
+        details:
+          description: Full details about error, usefull for 400
+          type: object
+    ApiInfo:
+      type: object
+      properties:
+        code:
+          type: string
+          description: info code
+        message:
+          type: string
+          description: Human readable details about the information the api is returning
+        details:
+          description: Full details about info
+          type: object
+    Config:
+      type: object
+      properties:
+        id:
+          type: string
+          description: config key
+        value:
+          type: string
+          description: config value
+      required:
+        - id
+    ChannelCoPartner:
+      type: object
+      properties:
+        id:
+          type: string
+          description: partner id
+        name:
+          type: string
+          description: partner name
+        appName:
+          type: string
+          description: app name (visible in user invitation email)
+        supportSso:
+          type: boolean
+          description: support sso or not
+        ssoUrl:
+          type: string
+          description: if support sso enabled, the sso url
+        ssoType:
+          type: string
+          enum: [SAML, OAUTH]
+        defaultEmailLanguage:
+          type: string
+          description: Invitation email language used. It will work only if the template for the specified language is configured, if no custom language are configured, leave it empty
+        idp:
+          type: string
+          description: identity provider for partner
+      required:
+        - id
+        - name
+        - idp
+    AlreadySubmittedUserError:
+      allOf:
+        - $ref: '#/components/schemas/ApiError'
+        - type: object
+          properties:
+            podUrl:
+              type: string
+              description: if user already submitted data and got his account created
+              example: https://pod.symphony.com
+    InvalidUserEmailDomainError:
+      allOf:
+        - $ref: '#/components/schemas/ApiError'
+        - type: object
+          properties:
+            domainEmail:
+              type: string
+              description: valid user email domain of the company
+              example: example.com
+    UserAccountOnboarding:
+      type: object
+      description: payload to onboard a user account
+      properties:
+        email:
+          type: string
+          format: email
+          example: foo@example.com
+        companyName:
+          type: string
+          example: Symphony
+        firstName:
+          type: string
+          example: Paul
+          maxLength: 64
+        lastName:
+          type: string
+          example: Smith
+          maxLength: 64
+        phoneNumber:
+          type: string
+          example: +33612345678
+        department:
+          type: string
+          example: Product Engineering
+          maxLength: 256
+        title:
+          type: string
+          example: Engineering manager
+          maxLength: 256
+        region:
+          type: string
+          description: One of EMEA, NA, APAC, LATAM
+          example: APAC
+          maxLength: 256
+      required:
+        - email
+        - companyName
+        - firstName
+        - lastName
+        - department
+        - title
+    UserOnboardingAvaibilityResponse:
+      allOf:
+        - $ref: '#/components/schemas/ApiInfo'
+        - type: object
+          properties:
+            podUrl:
+              type: string
+              example: ces4-dev.symphony.com
+    NewReferredClientPayload:
+      type: object
+      description: New referred client payload
+      properties:
+        companyName:
+          type: string
+          example: Symphony
+        corporateWebsite:
+          type: string
+          example: www.example.com
+        companySize:
+          $ref: '#/components/schemas/CompanySize'
+        industry:
+          type: string
+          example: Insurance
+        userEmails:
+          type: array
+          items:
+            type: string
+            example: "user@example.com"
+        companyId:
+          description: "In case company already exists you need to provide its id here, you can get it by using the GET /v1/company endpoint"
+          type: string
+          example: "21653"
+
+      required:
+        - companyName
+        - corporateWebsite
+        - userEmails
+    ReferredClientResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReferredClient'
+        totalReferredClients:
+          type: integer
+          format: int64
+          description: Total referred clients
+          example: 5000
+        totalUsersJoined:
+          type: integer
+          format: int64
+          description: Total joined referred users
+          example: 4000
+        pagination:
+          $ref: '#/components/schemas/ClientPagination'
+        quota:
+          type: integer
+          format: int32
+          example: 1200
+          description: Total quota for a customer,it depends from customer tier (5000 for tier 1, 3000 for tier 2 and 1200 for tier 3), default value is 1200
+    ListReferredClientItem:
+      type: object
+      description: Client referred by a company
+      properties:
+        clientId:
+          type: string
+          example: 507f191e810c19729de860ea
+        companyName:
+          type: string
+          example: Symphony
+        referredUsersCount:
+          type: integer
+          example: 10
+        joinedUsersCount:
+          type: integer
+          example: 5
+        status:
+          $ref: '#/components/schemas/CompanyReferringStatus'
+      required:
+        - clientId
+        - companyName
+        - referredUsersCount
+        - joinedUsersCount
+        - status
+    ReferredClient:
+      type: object
+      description: Client referred by a company
+      properties:
+        clientId:
+          type: string
+          example: 507f191e810c19729de860ea
+        companyName:
+          type: string
+          example: Symphony
+        corporateWebsite:
+          type: string
+          example: www.example.com
+        emailDomains:
+          type: array
+          items:
+            type: string
+          description: list of email domains allowed for the users
+        companySize:
+          $ref: '#/components/schemas/CompanySize'
+        industry:
+          type: string
+          example: Insurance
+        referredUsers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReferredClientUser'
+        status:
+          $ref: '#/components/schemas/CompanyReferringStatus'
+        createdDate:
+          description: Date/time creation date in ISO-8601 format (YYYY-MM-DDThh:mm:ss.sZ)
+          type: string
+          format: 'date-time'
+        maxAllowedUsers:
+          type: integer
+          format: int32
+          description: The referrer company user limit set by configuration in the connect service microservice, default value is 10
+          example: 10
+      required:
+        - clientId
+        - companyName
+        - status
+    ReferredClientUser:
+      type: object
+      description: User detail of referred client
+      properties:
+        referredUserId:
+          type: string
+          description: referred user id (internal)
+          example: 5099803df3f4948bd2f98391
+        email:
+          type: string
+          example: email@example.com
+        symUserId:
+          type: integer
+          format: int64
+        displayName:
+          type: string
+          example: John Smith
+        status:
+          $ref: '#/components/schemas/ReferringStatus'
+        referrerSymUserId:
+          type: integer
+          format: int64
+        referrerDisplayName:
+          type: string
+          example: John Doe
+      required:
+        - email
+        - status
+    UpdateUserEmailQuery:
+      type: object
+      description: User detail of referred client
+      properties:
+        email:
+          type: string
+          example: new_email@example.com
+    CompanyReferringStatus:
+      type: string
+      enum:
+        - PENDING
+        - REJECTED
+        - APPROVED_FOR_SSU
+        - APPROVED_FOR_COMCO
+    ReferringStatus:
+      type: string
+      enum:
+        - PENDING
+        - JOINED
+        - DISABLED
+        - ERROR
+        - REJECTED
+    CompanySize:
+      type: string
+      enum:
+        - SMALL
+        - MEDIUM
+        - LARGE
+    ClientPagination:
+      type: object
+      description: Pagination object
+      properties:
+        totalElements:
+          type: integer
+          format: int64
+          example: 50
+        totalPages:
+          type: integer
+          example: 50
+        currentPage:
+          type: integer
+          example: 2
+      required:
+        - totalElements
+        - totalPages
+        - currentPage
+    ExistingCompaniesArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/ExistingCompany'
+    ExistingCompany:
+      type: object
+      properties:
+        companyId:
+          type: string
+          description: unique identifier for the company
+          example: "987654321"
+        companyName:
+          type: string
+          description: the name of the company
+          example: "Symphony Communication"
+        emailDomains:
+          type: array
+          items:
+            type: string
+          description: list of email domains allowed for the users
+        maxAllowedUsers:
+          type: integer
+          format: int32
+          description: This limit default value (20) is set in Profile Manager database COMPANY group type object, using the field maxMembersAllowed
+          example: 20
+        remainingAllowedMembersCount:
+          type: integer
+          format: int32
+          description: Remaining count of users that can be onboarded in the COMPANY group. 'null' means unbounded
+          example: 20
+    ApproverArray:
+      type: array
+      items:
+        type: integer
+        format: int64
+    TenantArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tenant'
+    Tenant:
+      type: object
+      description: Data for a registered Tenant
+      properties:
+        firm:
+          type: string
+          example: ACME
+        externalPodId:
+          type: string
+          example: "219"
+        podHostname:
+          type: string
+          example: "ces4-dev.symphony.com"
+        tier:
+          type: string
+          enum: [T1, T2, T3]
+        defaultEmailLanguage:
+          type: string
+          example: "FR"
+      required:
+        - externalPodId
+        - podHostname
+    ReferralToImport:
+      type: object
+      properties:
+        tenantId:
+          type: integer
+        companyName:
+          type: string
+        referringCompanyName:
+          type: string
+        status:
+          $ref: '#/components/schemas/CompanyReferringStatus'
+          default: APPROVED_FOR_COMCO
+        usersToImport:
+          type: array
+          items:
+            type: object
+            description: User detail of referred client
+            properties:
+              userId:
+                type: integer
+                format: int64
+              emailAddress:
+                type: string
+                example: email@example.com
+              accountType:
+                type: string
+                enum:
+                  - NORMAL
+                  - SYSTEM
+              active:
+                type: boolean
+    UpdateReferredClientRequest:
+      type: object
+      properties:
+        maxUsersOverride:
+          type: integer
+    ChannelCoUserRequest:
+      type: object
+      description: payload to onboard a channelco user account
+      properties:
+        email:
+          type: string
+          format: email
+          example: foo@example.com
+        firstName:
+          type: string
+          example: Paul
+          maxLength: 64
+        lastName:
+          type: string
+          example: Smith
+          maxLength: 64
+        displayName:
+          type: string
+          example: Paul Smith
+          maxLength: 128
+          description: if omitted, it will be generated with the pattern <firstName lastName>
+        phoneNumber:
+          type: string
+          example: +33612345678
+        department:
+          type: string
+          example: Product Engineering
+          maxLength: 256
+        title:
+          type: string
+          example: Engineering manager
+          maxLength: 256
+        location:
+          type: string
+          description: country
+      required:
+        - email
+        - firstName
+        - lastName
+    ChannelCoUsersListRequest:
+      type: object
+      description: payload to onboard channelco users
+      properties:
+        companyName:
+          type: string
+          description: This field is mandatory only if a company with same domain (taken from email) does not exist yet
+          example: Symphony
+          maxLength: 64
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChannelCoUserRequest'
+      required:
+        - companyName
+        - users
+    UpdateChannelCoUserRequest:
+      type: object
+      description: payload to update a channelco user account
+      properties:
+        email:
+          type: string
+          format: email
+          example: foo@example.com
+        firstName:
+          type: string
+          example: Paul
+          maxLength: 64
+        lastName:
+          type: string
+          example: Smith
+          maxLength: 64
+        displayName:
+          type: string
+          example: Paul Smith
+        phoneNumber:
+          type: string
+          example: +33612345678
+        department:
+          type: string
+          example: Product Engineering
+          maxLength: 256
+        title:
+          type: string
+          example: Engineering manager
+          maxLength: 256
+        location:
+          type: string
+          description: country
+    ChannelCoUser:
+      allOf:
+        - $ref: '#/components/schemas/ChannelCoUserRequest'
+        - type: object
+          properties:
+            userId:
+              type: integer
+              format: int64
+              description: Member's user id
+            username:
+              type: string
+              description: Member's username generated by API. If there is no naming conflict it is <firstName.lastName> (in lower case)
+    ChannelCoUserAndCompany:
+      allOf:
+        - $ref: '#/components/schemas/ChannelCoUser'
+        - type: object
+          properties:
+            companyId:
+              type: string
+              description: company Id of the user
+              example: "10"
+            companyName:
+              type: string
+              description: company name of the user
+              example: Symphony
+              maxLength: 64
+    ChannelCoUserResponse:
+      allOf:
+        - $ref: '#/components/schemas/ChannelCoUserRequest'
+        - type: object
+          properties:
+            userId:
+              type: integer
+              format: int64
+              description: Member's user id
+            username:
+              type: string
+              description: Member's username generated by API. It is expected to be the same as email
+            code:
+              type: string
+              description: info code
+              example:
+                newCompany:
+                  value: USER_ADDED_NEW_COMPANY
+                  description: new company created and user added into it
+                existingCompany:
+                  value: USER_ADDED_EXISTING_COMPANY
+                  description: company already exists, user added into it
+                mismatchCompany:
+                  value: USER_ADDED_MISMATCH_COMPANY
+                  description: company already exists (lookup by domain name), but the name is different. User is added in the existing one
+            message:
+              type: string
+              description: Human readable details about the information the api is returning
+    ChannelCoUserErrorResponse:
+      allOf:
+        - $ref: '#/components/schemas/ChannelCoUserRequest'
+        - type: object
+          properties:
+            code:
+              type: string
+              description: error code
+              example:
+                alreadyExisting:
+                  value: USER_ALREADY_EXISTING_ON_THE_POD
+                  description: user already existing belong a pod (error message will provide detail about pod url)
+                existingCompany:
+                  value: COMPANY_ALREADY_EXISTS_USER_NEED_ACCESS
+                  description: company already exists and the user need access (error message will provide detail about pod url)
+                existingComCoCompany:
+                  value: COMCO_COMPANY_ALREADY_EXISTS_USER_NEED_ACCESS
+                  description: comco company already exists and the user need access
+                mismatchCompany:
+                  value: UNEXPECTED_ERROR
+            message:
+              type: string
+              description: Human readable details about the information the api is returning
+    ChannelCoUsersListResponse:
+      type: object
+      properties:
+        companyId:
+          type: string
+          description: company Id of the users
+          example: "10"
+        companyName:
+          type: string
+          description: company name of the users
+          example: Symphony
+          maxLength: 64
+        success:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChannelCoUserResponse'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChannelCoUserErrorResponse'
+    UpdateChannelCoUserResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ChannelCoUser'
+    Role:
+      type: object
+      properties:
+        id:
+          type: string
+          description: role Id
+          example: COMPLIANCE_OFFICER
+      required:
+        - id
+  securitySchemes:
+    JwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: ExtApp JWT
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: token
+    CommonJwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Common JWT
+security:
+  - JwtAuth: []
+  - ApiKeyAuth: []

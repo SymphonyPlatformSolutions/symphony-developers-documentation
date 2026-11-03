@@ -1,0 +1,17 @@
+{
+    "appGroupId": "finsemble-plugin",
+    "name": "Finsemble Plugin",
+    "description": "Extension app that connects Symphony with Finsemble desktop integration platform, using the FDC3 open standard (Financial Desktop Connectivity and Collaboration Consortium).\n\nFDC3 aims to provide an open standard for interoperability between applications on the financial desktop. More info on https://fdc3.finos.org/\n\nPlease note that Finsemble needs to be running on your desktop.",
+    "publisher": "Symphony",
+    "loadUrl": "https://symphony_pod_loopback.com/client-bff/fdc3-finsemble-plugin/index.html",
+    "iconUrl": "https://contactimport.bizops-bots.symphony.direct/SYM-App-icon.png",
+    "domain": "symphony_pod_loopback.com",
+    "permissions": [
+        "TRUST_APP"
+    ],
+    "notification": {
+        "url": "",
+        "apiKey": ""
+    },
+    "rsaKey": null
+}
