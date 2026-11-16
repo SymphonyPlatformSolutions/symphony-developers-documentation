@@ -103,8 +103,8 @@
     * [Connect your MCP server](ai/ai-agents/ai-agent-studio/connect-your-mcp-server/README.md)
       * [MCP server configuration examples](ai/ai-agents/ai-agent-studio/connect-your-mcp-server/mcp-server-configuration-examples.md)
     * [Connect your AI provider](ai/ai-agents/ai-agent-studio/connect-your-ai-provider.md)
-  * [MCP Server](ai/ai-agents/mcp-server/README.md)
-    * [Messaging Tools](ai/ai-agents/mcp-server/messaging-tools.md)
+* [MCP Server](ai/mcp-server/README.md)
+  * [Messaging Tools](ai/mcp-server/messaging-tools.md)
 
 ## AI invisible
 

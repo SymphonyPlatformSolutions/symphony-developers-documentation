@@ -18,7 +18,7 @@ It gives AI clients a standard way to discover tools, inspect inputs, and run ac
 
 Symphony's MCP server is built on Symphony applications and on-behalf-of (OBO) permissions.
 
-It follows the same security model as authenticated apps in Symphony Messaging. For context, see [Planning Your App](../../../ext-apps/planning-your-app.md), [App Authentication](../../../ext-apps/app-authentication/), and [OBO Authentication](../../../ext-apps/app-authentication/obo-authentication.md).
+It follows the same security model as authenticated apps in Symphony Messaging. For context, see [Planning Your App](../../ext-apps/planning-your-app.md), [App Authentication](../../ext-apps/app-authentication/), and [OBO Authentication](../../ext-apps/app-authentication/obo-authentication.md).
 
 Each user gets a dedicated OBO session when they use the server.
 
