@@ -95,16 +95,16 @@
   * [Circle of Trust Authentication](ext-apps/app-authentication/circle-of-trust-authentication.md)
   * [OBO Authentication](ext-apps/app-authentication/obo-authentication.md)
 
-## AI
+## AI Studio
 
-* [What's New in AI](ai/whats-new-in-ai.md)
-* [AI Agents](ai/ai-agents/README.md)
-  * [AI Agent Studio](ai/ai-agents/ai-agent-studio/README.md)
-    * [Connect your MCP server](ai/ai-agents/ai-agent-studio/connect-your-mcp-server/README.md)
-      * [MCP server configuration examples](ai/ai-agents/ai-agent-studio/connect-your-mcp-server/mcp-server-configuration-examples.md)
-    * [Connect your AI provider](ai/ai-agents/ai-agent-studio/connect-your-ai-provider.md)
-* [MCP Server](ai/mcp-server/README.md)
-  * [Messaging Tools](ai/mcp-server/messaging-tools.md)
+* [What's New in AI](ai-studio/whats-new-in-ai.md)
+* [AI Agents](ai-studio/ai-agents/README.md)
+  * [AI Agent Studio](ai-studio/ai-agents/ai-agent-studio/README.md)
+    * [Connect your MCP server](ai-studio/ai-agents/ai-agent-studio/connect-your-mcp-server/README.md)
+      * [MCP server configuration examples](ai-studio/ai-agents/ai-agent-studio/connect-your-mcp-server/mcp-server-configuration-examples.md)
+    * [Connect your AI provider](ai-studio/ai-agents/ai-agent-studio/connect-your-ai-provider.md)
+* [MCP Server](ai-studio/mcp-server/README.md)
+  * [Messaging Tools](ai-studio/mcp-server/messaging-tools.md)
 
 ## AI invisible
 
