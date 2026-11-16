@@ -4,7 +4,7 @@ description: >-
   including semantic search, MCP Server enhancements, and new AI Studio
   features.
 cover:
-  light: ../.gitbook/assets/ai-october-banner (1).png
+  light: ../.gitbook/assets/AI header WN.png
   dark: ../.gitbook/assets/ai-studio-october-banner.png
 coverY: 0
 layout:
