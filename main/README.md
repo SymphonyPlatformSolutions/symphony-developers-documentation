@@ -52,8 +52,8 @@ For an even more in-depth look at how to build bots and apps, check out our new 
 
 AI agents are specialized service accounts that bring LLM-powered reasoning, contextual data access, and tool use into Symphony's secure messaging environment.
 
-{% content-ref url="ai/ai-agent/" %}
-[ai-agent](ai/ai-agent/)
+{% content-ref url="ai/ai-agents/" %}
+[ai-agents](ai/ai-agents/)
 {% endcontent-ref %}
 
 ## Build extension applications <img src=".gitbook/assets/Extension app-large.png" alt="" data-size="line">

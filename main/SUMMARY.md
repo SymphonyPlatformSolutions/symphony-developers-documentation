@@ -97,13 +97,18 @@
 
 ## AI
 
-* [AI agent](ai/ai-agent/README.md)
-  * [AI Agent Studio](ai/ai-agent/ai-agent-studio.md)
+* [AI agents](ai/ai-agents/README.md)
+  * [AI Agent Studio](ai/ai-agents/ai-agent-studio.md)
 * [MCP Server](ai/mcp-server.md)
 
 ## AI invisible
 
+* [What's New in AI](ai-invisible/whats-new-in-ai.md)
 * [Develop custom AI Agents](ai-invisible/develop-custom-ai-agents.md)
+* [MCP Server Connectors (API Key & OAuth)](ai-invisible/mcp-server-connectors-api-key-and-oauth/README.md)
+  * [Provider-specific configuration](ai-invisible/mcp-server-connectors-api-key-and-oauth/provider-specific-configuration.md)
+* [Symphony Messaging Tools](ai-invisible/symphony-messaging-tools.md)
+* [Configure an external LLM](ai-invisible/configure-an-external-llm.md)
 
 ## Developer Tools <a href="#dev-tools" id="dev-tools"></a>
 

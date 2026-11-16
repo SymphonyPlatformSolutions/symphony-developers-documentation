@@ -10,7 +10,7 @@ description: >-
 
 Symphony's MCP server connects Symphony Messaging to MCP-compatible AI clients.
 
-You can automate tasks and notify teammates directly from an AI assistant or use Symphony Messaging conversations as context for prompts in Claude, Gemini or any other MCP client.
+You can automate tasks and notify teammates directly from an AI assistant, or use Symphony Messaging conversations as context for prompts in any MCP-compatible AI assistant.
 
 It gives AI clients a standard way to discover tools, inspect inputs, and run actions in Symphony Messaging, reducing custom integration work and making tool-driven workflows easier to build, test, and govern.
 
@@ -48,7 +48,7 @@ Once the service is enabled, you can connect Symphony's MCP server to any MCP-co
 
 Symphony's MCP server is a remote server that you can start using immediately with zero deployment required. Connect your MCP client, complete the authorization flow, and start prompting.
 
-The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/{appId}/mcp`_. where appId corresponds to the Symphony app used by the MCP server
+The MCP server is exposed through your tenant-specific URL, for example _`https://xxx.symphony.com/mcp-server/{appId}/mcp`_ , where `appId` corresponds to the Symphony Messaging app used by the MCP server.
 
 Symphony's MCP Server implements secure authorization using OAuth 2.1.
 
