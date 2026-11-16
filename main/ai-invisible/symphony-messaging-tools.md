@@ -26,11 +26,11 @@ Read a conversation's history, search messages by meaning across everything you 
 
 <summary>list_messages</summary>
 
-**What it does:** Reads messages from one conversation (1:1 chat, group chat or room) in a time range. Returns message content, sender, timestamp and message ID.
+**What it does:** Reads messages from one conversation (direct message, group chat or room) in a time range. Returns the message content, sender, timestamp and message ID.
 
 **Parameters**
 
-* `conversationIdentifier` (required): the conversation's stream ID.
+* `conversationIdentifier` (required): conversation stream ID.
 * `since` (optional): start date, YYYY-MM-DD. At least 1 day ago and before `until`.
 * `until` (optional): end date, YYYY-MM-DD. After `since`; can only be used with `since`.
 * `limit` (optional): maximum number of messages, up to 500.
@@ -38,8 +38,8 @@ Read a conversation's history, search messages by meaning across everything you 
 
 **Limits and notes**
 
-* Max 500 messages per call. If 500 come back, more may exist in the same window.
-* Max 7 days per call. Split longer ranges into consecutive calls.
+* Maximum 500 messages per call. If 500 come back, more may exist in the same window.
+* Maximum 7 days per call. Split longer ranges into consecutive calls.
 * With no dates, it returns the last 24 hours.
 * Use `skip` when messages at the boundary share the same timestamp.
 * Public rooms can be read without joining; private rooms require membership.
@@ -270,9 +270,9 @@ Check which file types are allowed, list the files shared in a conversation, and
 
 </details>
 
-### 4. Rooms and chats <a href="#id-4-rooms-and-chats" id="id-4-rooms-and-chats"></a>
+### 4. Chats <a href="#id-4-rooms-and-chats" id="id-4-rooms-and-chats"></a>
 
-Open direct chats, create rooms, and manage their members, settings and pinned message. A direct chat has exactly two people and cannot be changed; use a room for anything larger.
+Open direct messages, create chats, and manage their members, settings and pinned message. A direct message is a chat between exactly two people, and cannot be changed; use group chats for more than two members, or chat rooms for a larger number of members and if new members need to be added.
 
 <details>
 
@@ -440,7 +440,7 @@ Open direct chats, create rooms, and manage their members, settings and pinned m
 
 ### 5. People and presence <a href="#id-5-people-and-presence" id="id-5-people-and-presence"></a>
 
-Find people, bots and distribution lists, look them up by email or ID, see your own profile, and read or set availability. These tools also return the user IDs that other tools need.
+Find people, bots and user groups, look them up by email or ID, see your own profile, and read or set availability. These tools also return the user IDs that other tools need.
 
 <details>
 
