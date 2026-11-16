@@ -13,15 +13,15 @@ To start creating your own AI agent, click the **+ Create agent** button in AI A
 
 1. In the Symphony Messaging web or desktop app, go to **APPS** and select **AI Studio**.
 
-<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
 
 2. Select the **+ Create agent** button.
 
-<div align="center"><figure><img src="../../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure></div>
 
 3. Configure the relevant fields in the **Create New AI Agent** pop-up.
 
-<figure><img src="../../../.gitbook/assets/image (107).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (107).png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 By default, each Symphony Messaging user can create one agent. If this limit needs to be changed, please contact your Account Manager or Technical Account Manager (TAM) for further discussion or clarification. For now, any configuration change applies to the entire SDU.
@@ -35,7 +35,7 @@ The **General information** tab is where you configure the AI agent's identity i
 * **Ownership:** The users who are entitled to modify this agent.
 * **Visibility:** Whether the agent appears in Symphony's Marketplace, so that users can install it autonomously.
 
-<figure><img src="../../../.gitbook/assets/image (106).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (106).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### AI models
 
@@ -43,7 +43,7 @@ The **General information** tab is where you configure the AI agent's identity i
 * **Creativity level:** Control the level of randomness in the AI agent's answers (maps to the underlying model's temperature / top-p settings).
 * **Thinking:** Allow the AI agent to reason step by step, and include that reasoning in its answer.
 
-<figure><img src="../../../.gitbook/assets/{8E024FCA-FD4E-472F-9EA5-FE54983872CA}.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/{8E024FCA-FD4E-472F-9EA5-FE54983872CA}.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Coming soon:** Connect AI agents from Agent Studio to your own AI provider or self-hosted models.
 
@@ -51,7 +51,7 @@ The **General information** tab is where you configure the AI agent's identity i
 
 System behavior guides how the AI agent answers, and provides up-to-date, contextual information that always holds true when an agent is interacting with a user.
 
-<figure><img src="../../../.gitbook/assets/{D8BA61F9-489C-4005-BE09-5D79FE099CED}.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/{D8BA61F9-489C-4005-BE09-5D79FE099CED}.png" alt="" width="375"><figcaption></figcaption></figure>
 
 The following variables are supported in system instructions, giving the agent personalization context about who it's talking to and where the request came from:
 
@@ -99,7 +99,7 @@ Context room Ids : #{ #tools.v1.vars.contextRoomIds() }
 
 Permissions control which actions the AI agent can take on behalf of the user. See  [API Endpoints for Apps](https://app.gitbook.com/s/909t04Fk8FiEI7fBcmlw/main/apps-on-behalf-of-obo/obo-enabled-endpoints "mention") for the full list of available permissions.
 
-<figure><img src="../../../.gitbook/assets/{EB3F65F8-20A3-42A5-9D72-1B8CBA24E845}.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/{EB3F65F8-20A3-42A5-9D72-1B8CBA24E845}.png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 To allow an AI agent to work with a user's specific chat context it must be granted with at least the following permissions:
@@ -114,7 +114,7 @@ To allow an AI agent to work with a user's specific chat context it must be gran
 
 Agent Studio supports several tools out of the box that provide your AI agents with more complex capabilities.
 
-<figure><img src="../../../.gitbook/assets/{EBB33B17-8512-4B62-8845-0E953F3E2C84}.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/{EBB33B17-8512-4B62-8845-0E953F3E2C84}.png" alt="" width="375"><figcaption></figcaption></figure>
 
 <details>
 
@@ -275,7 +275,7 @@ Lets an AI agent natively send a TradingView graph as an inline message in Symph
 5. [Market Summary Widget](https://www.tradingview.com/widget-docs/widgets/watchlists/market-summary/?options=%257B%2522symbolSectors%2522%253A%255B%257B%2522sectionName%2522%253A%2522Stocks%2522%252C%2522symbols%2522%253A%255B%2522NASDAQ%253AAAPL%2522%252C%2522NASDAQ%253AADBE%2522%252C%2522NASDAQ%253ANVDA%2522%252C%2522NASDAQ%253ATSLA%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Crypto%2522%252C%2522symbols%2522%253A%255B%2522BITSTAMP%253ABTCUSD%2522%252C%2522BITSTAMP%253AETHUSD%2522%252C%2522CRYPTO%253AXRPUSD%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Indices%2522%252C%2522symbols%2522%253A%255B%2522FOREXCOM%253ASPXUSD%2522%252C%2522FOREXCOM%253ANSXUSD%2522%252C%2522FOREXCOM%253ADJI%2522%252C%2522FOREXCOM%253AUKXGBP%2522%255D%257D%255D%257D)
 6. [Stock Market Widget](https://www.tradingview.com/widget-docs/widgets/watchlists/market-overview/?options=%257B%2522symbolSectors%2522%253A%255B%257B%2522sectionName%2522%253A%2522Indices%2522%252C%2522symbols%2522%253A%255B%2522FOREXCOM%253ASPXUSD%2522%252C%2522FOREXCOM%253ANSXUSD%2522%252C%2522FOREXCOM%253ADJI%2522%252C%2522FOREXCOM%253AUKXGBP%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Stocks%2522%252C%2522symbols%2522%253A%255B%2522NASDAQ%253AAAPL%2522%252C%2522NASDAQ%253AADBE%2522%252C%2522NASDAQ%253ANVDA%2522%252C%2522NASDAQ%253ATSLA%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Crypto%2522%252C%2522symbols%2522%253A%255B%2522BITSTAMP%253ABTCUSD%2522%252C%2522BITSTAMP%253AETHUSD%2522%252C%2522CRYPTO%253AXRPUSD%2522%255D%257D%255D%257D)
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-06-30 at 14.32.28.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 14.32.28.png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -295,7 +295,7 @@ The Symphony charting tool lets the AI agent send charts directly in a Symphony 
 
 This tool is especially useful for rendering financial data in combination with custom data sources integrated via custom MCP servers.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-06-30 at 17.11.13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 17.11.13.png" alt=""><figcaption></figcaption></figure>
 
 </details>
 
@@ -315,7 +315,7 @@ Standard tools that let the AI agent fetch information from the web.
 
 ### Symphony Messaging
 
-Lets the AI agent use Symphony's MCP server to retrieve Symphony-specific information, send messages, or create chat rooms. See [_Messaging Tools_](../../mcp-server/messaging-tools.md).
+Lets the AI agent use Symphony's MCP server to retrieve Symphony-specific information, send messages, or create chat rooms. See [_Messaging Tools_](../mcp-server/messaging-tools.md).
 
 {% hint style="info" %}
 All actions performed via this tool are done by the AI agent on behalf of the user, inheriting the permissions set for the agent.
@@ -327,7 +327,7 @@ All actions performed via this tool are done by the AI agent on behalf of the us
 
 This section lets you add and configure additional MCP servers for use by a given agent.
 
-<figure><img src="../../../.gitbook/assets/{3B80D4E1-1BC7-4003-8747-133BC197AD84}.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/{3B80D4E1-1BC7-4003-8747-133BC197AD84}.png" alt="" width="375"><figcaption></figcaption></figure>
 
 AI Studio currently supports **remote MCP servers authenticated via non-personal API key tokens only** (OAuth and personal-token authentication are not yet supported).
 
@@ -335,7 +335,7 @@ AI Studio currently supports **remote MCP servers authenticated via non-personal
 
 First, a tenant administrator with the **Connector manager** role must create a new connection in the Symphony Messaging Admin Portal.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-07-01 at 10.30.36.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.30.36.png" alt=""><figcaption></figcaption></figure>
 
 Create a new connector containing everything needed to connect to the remote MCP server via API key:
 
@@ -343,7 +343,7 @@ Create a new connector containing everything needed to connect to the remote MCP
 * **Readers (by role):** Set to "AI Agent" if any AI agent should be able to use this MCP server.
 * **Readers (by user):** Set to specific AI agents if only a subset of agents should have access.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-07-01 at 10.34.05.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 10.34.05.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Some key value properties can be added to customize the connector behavior.
 
@@ -351,7 +351,7 @@ Some key value properties can be added to customize the connector behavior.
 
 Once created, MCP servers can be enabled per AI agent on the studio via the MCP server panel.
 
-<figure><img src="../../../.gitbook/assets/image (109).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (109).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Predefined prompts
 
@@ -361,21 +361,21 @@ Predefined prompts can be combined with the Symphony Messaging chat context: whe
 
 Users access predefined prompts by mentioning the AI agent directly in the AI agent room:
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.09.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.09.png" alt="" width="375"><figcaption></figcaption></figure>
 
 When a prompt template expects variables, Symphony Messaging automatically sends the user a form to fill in before processing starts.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.50.png" alt="" width="280"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-07-01 at 15.52.50.png" alt="" width="280"><figcaption></figcaption></figure>
 
 
 
 #### Example: Create an AI agent that adds two numbers
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2026-07-02 at 17.15.29.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-07-02 at 17.15.29.png" alt=""><figcaption></figcaption></figure>
 
 Prompt template definition:
 
-<figure><img src="../../../.gitbook/assets/{72DD9A78-91A8-4973-8CE8-4456EFD9AC68}.png" alt="" width="346"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/{72DD9A78-91A8-4973-8CE8-4456EFD9AC68}.png" alt="" width="346"><figcaption></figcaption></figure>
 
 Predefined prompt using the variables above:
 

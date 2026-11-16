@@ -53,7 +53,7 @@ This is useful for:
 * Drafting a reply from current context.
 * Triggering workflows based on the active conversation.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-06-22 at 10.40.00.png" alt="AI agent side panel"><figcaption><p>The side panel keeps the current conversation in context while the user chats privately with the agent.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2026-06-22 at 10.40.00.png" alt="AI agent side panel"><figcaption><p>The side panel keeps the current conversation in context while the user chats privately with the agent.</p></figcaption></figure>
 
 ## Context awareness
 

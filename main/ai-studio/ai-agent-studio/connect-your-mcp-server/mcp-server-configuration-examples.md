@@ -5,7 +5,7 @@ description: >-
   Symphony Internal MCP Server
 ---
 
-# Provider-specific configuration
+# MCP server configuration examples
 
 ## Atlassian (Jira and Confluence / Rovo MCP)
 
@@ -87,8 +87,6 @@ IP allowlisting is only required if the customer's Splunk Cloud instance restric
 Symphony egress NAT IP addresses vary depending on the deployment environment, including the pod or dedicated SDU hosting the customer.
 
 If the customer's Splunk administrator requires IP allowlisting, contact Symphony Support to obtain the applicable egress NAT IP addresses for the customer's specific deployment environment.
-
-Do not use IP addresses from other Symphony environments, as they may not apply to the customer's deployment.
 
 ## Google Workspace (Drive and Gmail)
 

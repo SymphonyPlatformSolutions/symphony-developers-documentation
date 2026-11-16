@@ -98,11 +98,11 @@
 ## AI Studio
 
 * [What's New](ai-studio/whats-new.md)
-* [AI Agents](ai-studio/ai-agents/README.md)
-  * [AI Agent Studio](ai-studio/ai-agents/ai-agent-studio/README.md)
-    * [Connect your MCP server](ai-studio/ai-agents/ai-agent-studio/connect-your-mcp-server/README.md)
-      * [MCP server configuration examples](ai-studio/ai-agents/ai-agent-studio/connect-your-mcp-server/mcp-server-configuration-examples.md)
-    * [Connect your AI provider](ai-studio/ai-agents/ai-agent-studio/connect-your-ai-provider.md)
+* [AI Agents](ai-studio/ai-agents.md)
+* [AI Agent Studio](ai-studio/ai-agent-studio/README.md)
+  * [Connect your MCP server](ai-studio/ai-agent-studio/connect-your-mcp-server/README.md)
+    * [MCP server configuration examples](ai-studio/ai-agent-studio/connect-your-mcp-server/mcp-server-configuration-examples.md)
+  * [Connect your AI provider](ai-studio/ai-agent-studio/connect-your-ai-provider.md)
 * [MCP Server](ai-studio/mcp-server/README.md)
   * [Messaging Tools](ai-studio/mcp-server/messaging-tools.md)
 

@@ -66,7 +66,7 @@ The `authorization` property sets the authentication scheme, which is the word t
 * `Basic`: for a Base64-encoded `username:password` or `email:api_token` pair.
 * Custom: any other value your provider requires.
 
-<figure><img src="../../../../.gitbook/assets/image (102).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (102).png" alt="" width="563"><figcaption></figcaption></figure>
 
 <details>
 
@@ -79,7 +79,7 @@ The `authorization` property sets the authentication scheme, which is the word t
 
 For Atlassian Basic authentication, Base64-encode `email:api_token` first, then enter the result as the secret.
 
-<figure><img src="../../../../.gitbook/assets/image (112).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (112).png" alt="" width="563"><figcaption></figcaption></figure>
 
 </details>
 
@@ -112,7 +112,7 @@ Use this when the provider supports Dynamic Client Registration.
 3. Enter the MCP server **Base URL**.
 4. Add any provider-specific properties.
 
-<figure><img src="../../../../.gitbook/assets/image (111).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (111).png" alt="" width="563"><figcaption></figcaption></figure>
 
 </details>
 {% endstep %}
@@ -122,7 +122,7 @@ Use this when the provider supports Dynamic Client Registration.
 
 1. Open the agent in **AI Agent Studio**.
 
-<figure><img src="../../../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
 2. Go to **MCP Server** > **Add MCP Server**.
 3. Select the MCP Servers you want.
@@ -144,17 +144,17 @@ Confirm the connection for your type:
 
 * **API Key connectors:** Check that the connector shows as connected.
 
-<figure><img src="../../../../.gitbook/assets/image (119).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (119).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * **All OAuth connectors:** Connect in **Agent Configuration** > **Application**.
 
-<figure><img src="../../../../.gitbook/assets/image (115).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (115).png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (116).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (116).png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (117).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (117).png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (118).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (118).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * Check that the expected MCP tools are available.
 * Verify the Authorization header format for API Key connectors.
