@@ -14,13 +14,13 @@ Dive into our core concepts to guide your development journey from initial code 
 
 Select one of the sections below to launch your developer experience.
 
-* [**Build bots on Symphony Messaging**](./#building-bots-on-symphony-messaging)
-* [**Build AI agents on Symphony Messaging**](./#ai-agents)
-* [**Build extension applications on Symphony Messaging**](./#building-extension-applications)
-* [**Become a Certified Developer**](developer-certification/developer-certification.md)
+* [**Build bots on Symphony Messaging**](./#build-bots-on-symphony-messaging)
+* [**Build AI agents on Symphony Messaging**](./#build-ai-agents-on-symphony-messaging)
+* [**Build extension applications on Symphony Messaging**](./#build-extension-applications)
+* [**Become a Certified Developer**](./#become-a-certified-developer)
 * [**Developer tools**](./#developer-tools)
-* [**REST API reference**](./#symphony-rest-api)
-* [**Extension API reference**](./#symphony-extension-api)
+* [**REST API reference**](./#messaging-rest-api)
+* [**Extension API reference**](./#extension-api)
 * [**Embedded modules**](./#embedded-modules)
 
 {% hint style="info" %}
