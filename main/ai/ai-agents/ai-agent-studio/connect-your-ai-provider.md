@@ -4,7 +4,7 @@ description: >-
   AI agents.
 ---
 
-# Configure an external LLM
+# Connect your AI provider
 
 ## Overview
 
@@ -150,12 +150,12 @@ Cloud Identity uses the pod's service account, so there is no secret to enter.
 3. **Base API URL:** `https://us-central1-aiplatform.googleapis.com/v1` (filled in automatically when you select Google VertexAI)
 4. **Authentication Method:** Cloud Identity
 
-<figure><img src="../.gitbook/assets/image (123).png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (123).png" alt="" width="500"><figcaption></figcaption></figure>
 
 5. **Google Cloud Project:** your project ID
 6. **Location**: your project location
 
-<figure><img src="../.gitbook/assets/image (124).png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (124).png" alt="" width="500"><figcaption></figcaption></figure>
 
 7. Scroll down, enter a **Display Name** (for example Google Vertex AI Provider), then select **Create Provider**.
 
@@ -175,20 +175,20 @@ The name can't be changed after the provider is created. If you need to change i
 
 1. In **Provider Management**, find your **new provider**. It shows 0 models.
 
-<figure><img src="../.gitbook/assets/image (126).png" alt="" width="556"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (126).png" alt="" width="556"><figcaption></figcaption></figure>
 
 2. Select **Models**, then **Add Model.**
 
-<figure><img src="../.gitbook/assets/image (127).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (127).png" alt="" width="563"><figcaption></figcaption></figure>
 
 3. **Model ID:** gemini-3.1-pro-preview
 4. **Display Name:** Gemini 3.1 Pro Preview
 
-<figure><img src="../.gitbook/assets/image (131).png" alt="" width="549"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (131).png" alt="" width="549"><figcaption></figcaption></figure>
 
 5. Select **Add Model**. The model now shows in the list.
 
-<figure><img src="../.gitbook/assets/image (132).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (132).png" alt="" width="563"><figcaption></figcaption></figure>
 
 6. (Optional) Switch on **Extended Thinking** to let the model reason before it answers and add one level named THINKING\_LEVEL\_UNSPECIFIED / Default.
 
@@ -203,7 +203,7 @@ The name can't be changed after the provider is created. If you need to change i
 1. Create or open an agent and go to the **Model section**.
 2. Choose your **provider** and your model, then save.
 
-<figure><img src="../.gitbook/assets/image (133).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (133).png" alt="" width="563"><figcaption></figcaption></figure>
 
 </details>
 
@@ -245,17 +245,17 @@ The same steps work for any OpenAI-compatible service. Change the Base API URL a
 
 4\.     **Authentication Method:** API Key
 
-<figure><img src="../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
 
 5\.     **API Key / Secret:** Paste your key.
 
-<figure><img src="../.gitbook/assets/image (135).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (135).png" alt="" width="563"><figcaption></figcaption></figure>
 
 6\.     Under Branding & Display, enter a **Display Name.** The rest of the fields are optional.
 
 7\.     Select **Create Provider**.
 
-<figure><img src="../.gitbook/assets/image (136).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (136).png" alt="" width="563"><figcaption></figcaption></figure>
 
 </details>
 
@@ -277,11 +277,11 @@ The screenshot uses a sample ID. Make sure to use the real one.
 
 4\.     Select **Add Model**.
 
-<figure><img src="../.gitbook/assets/image (137).png" alt="" width="550"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (137).png" alt="" width="550"><figcaption></figcaption></figure>
 
 The model now shows in the list.
 
-<figure><img src="../.gitbook/assets/image (138).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (138).png" alt="" width="563"><figcaption></figcaption></figure>
 
 </details>
 
@@ -295,7 +295,7 @@ The model now shows in the list.
 
 2\.     Choose your **provider** and your **model**, then select **Create**.
 
-<figure><img src="../.gitbook/assets/image (139).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (139).png" alt="" width="563"><figcaption></figcaption></figure>
 
 </details>
 

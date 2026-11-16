@@ -2,21 +2,21 @@
 description: Capabilities, parameters and example prompts
 ---
 
-# Symphony Messaging Tools
+# Messaging Tools
 
-Use these tools to work with messages, conversations, attachments, people, presence and financial instruments in Symphony. Example prompts show one way to request an operation; replace the bracketed values with your own names, dates or identifiers. When a tool needs an ID and you give a name or email, the assistant finds the ID first with `room_search`, `search_user` or `lookup_user`.
+Use these tools to work with messages, conversations, attachments, people, presence and financial instruments in Symphony Messaging. Example prompts show one way to request an operation; replace the bracketed values with your own names, dates or identifiers. When a tool needs an ID and you give a name or email, the assistant finds the ID first with `room_search`, `search_user` or `lookup_user`.
 
 ### Start here: ask the assistant
 
-This page describes all the Symphony Messaging tools. What your assistant can actually use depends on which tools are enabled for it, and tools and limits can change.
+This page describes all the messaging tools. What your assistant can actually use depends on which tools are enabled for it, and tools and limits can change.
 
-**If your assistant already has Symphony tools,** ask it directly. Its answer reflects what it can do today.
+**If your assistant already has messaging tools,** ask it directly. Its answer reflects what it can do today.
 
 * **See its tools:** "List tools". A tool missing from the list is not enabled for your assistant yet.
 * **Learn one tool:** "For the tool \[TOOL\_NAME], give what it does, its limits and notes, and an example prompt."
 * **Check what a request will use:** "To do this: \[YOUR REQUEST], which tools would be called?"
 
-**If you are still building your agent and no tools are enabled yet,** "List tools" will not show Symphony tools. Use the sections below to decide which tools to enable, then run "List tools" again to confirm they are available.
+**If you are still building your agent and no tools are enabled yet,** "List tools" will not show Symphony  Messaging tools. Use the sections below to decide which tools to enable, then run "List tools" again to confirm they are available.
 
 ### 1. Reading and searching <a href="#id-1-reading-and-searching" id="id-1-reading-and-searching"></a>
 
