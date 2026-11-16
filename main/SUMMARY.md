@@ -97,7 +97,7 @@
 
 ## AI Studio
 
-* [What's New in AI](ai-studio/whats-new-in-ai.md)
+* [What's New](ai-studio/whats-new.md)
 * [AI Agents](ai-studio/ai-agents/README.md)
   * [AI Agent Studio](ai-studio/ai-agents/ai-agent-studio/README.md)
     * [Connect your MCP server](ai-studio/ai-agents/ai-agent-studio/connect-your-mcp-server/README.md)
