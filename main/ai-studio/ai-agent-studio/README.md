@@ -266,14 +266,15 @@ Add a short rule to your agent’s instructions saying when to ask, how much to 
 
 ### TradingView
 
-Lets an AI agent natively send a TradingView graph as an inline message in Symphony Messaging. The agent looks for a valid TradingView ticker based on the user's query and returns the appropriate graph. Supported graph types:
+Lets an AI agent natively send a TradingView graph as an inline message in Symphony Messaging. The agent looks for a valid TradingView ticker based on the user's query and returns the appropriate graph. Supported graph types ([link](https://www.tradingview.com/widget-docs/widgets/)):
 
-1. [Advanced Real-Time Chart Widget](https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/)
-2. [Symbol Overview Widget](https://www.tradingview.com/widget-docs/widgets/charts/symbol-overview/)
-3. [Mini Chart Widget](https://www.tradingview.com/widget-docs/widgets/charts/mini-chart/)
-4. [Market Overview Widget](https://www.tradingview.com/widget-docs/widgets/watchlists/market-overview/?options=%257B%2522symbolSectors%2522%253A%255B%257B%2522sectionName%2522%253A%2522Indices%2522%252C%2522symbols%2522%253A%255B%2522FOREXCOM%253ASPXUSD%2522%252C%2522FOREXCOM%253ANSXUSD%2522%252C%2522FOREXCOM%253ADJI%2522%252C%2522FOREXCOM%253AUKXGBP%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Stocks%2522%252C%2522symbols%2522%253A%255B%2522NASDAQ%253AAAPL%2522%252C%2522NASDAQ%253AADBE%2522%252C%2522NASDAQ%253ANVDA%2522%252C%2522NASDAQ%253ATSLA%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Crypto%2522%252C%2522symbols%2522%253A%255B%2522BITSTAMP%253ABTCUSD%2522%252C%2522BITSTAMP%253AETHUSD%2522%252C%2522CRYPTO%253AXRPUSD%2522%255D%257D%255D%257D)
-5. [Market Summary Widget](https://www.tradingview.com/widget-docs/widgets/watchlists/market-summary/?options=%257B%2522symbolSectors%2522%253A%255B%257B%2522sectionName%2522%253A%2522Stocks%2522%252C%2522symbols%2522%253A%255B%2522NASDAQ%253AAAPL%2522%252C%2522NASDAQ%253AADBE%2522%252C%2522NASDAQ%253ANVDA%2522%252C%2522NASDAQ%253ATSLA%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Crypto%2522%252C%2522symbols%2522%253A%255B%2522BITSTAMP%253ABTCUSD%2522%252C%2522BITSTAMP%253AETHUSD%2522%252C%2522CRYPTO%253AXRPUSD%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Indices%2522%252C%2522symbols%2522%253A%255B%2522FOREXCOM%253ASPXUSD%2522%252C%2522FOREXCOM%253ANSXUSD%2522%252C%2522FOREXCOM%253ADJI%2522%252C%2522FOREXCOM%253AUKXGBP%2522%255D%257D%255D%257D)
-6. [Stock Market Widget](https://www.tradingview.com/widget-docs/widgets/watchlists/market-overview/?options=%257B%2522symbolSectors%2522%253A%255B%257B%2522sectionName%2522%253A%2522Indices%2522%252C%2522symbols%2522%253A%255B%2522FOREXCOM%253ASPXUSD%2522%252C%2522FOREXCOM%253ANSXUSD%2522%252C%2522FOREXCOM%253ADJI%2522%252C%2522FOREXCOM%253AUKXGBP%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Stocks%2522%252C%2522symbols%2522%253A%255B%2522NASDAQ%253AAAPL%2522%252C%2522NASDAQ%253AADBE%2522%252C%2522NASDAQ%253ANVDA%2522%252C%2522NASDAQ%253ATSLA%2522%255D%257D%252C%257B%2522sectionName%2522%253A%2522Crypto%2522%252C%2522symbols%2522%253A%255B%2522BITSTAMP%253ABTCUSD%2522%252C%2522BITSTAMP%253AETHUSD%2522%252C%2522CRYPTO%253AXRPUSD%2522%255D%257D%255D%257D)
+1. Advanced Real-Time Chart Widget
+2. Symbol Overview Widget
+3. Mini Chart Widget
+4. Market Overview Widget
+5. Market Summary Widget
+6. Stock Market Widget
+7. Search Assets Widget&#x20;
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-30 at 14.32.28.png" alt=""><figcaption></figcaption></figure>
 

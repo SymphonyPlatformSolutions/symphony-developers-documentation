@@ -190,6 +190,32 @@ Post, edit and delete messages. Editing and deleting need the message ID, which 
 
 </details>
 
+<details>
+
+<summary>blast_message</summary>
+
+**What it does:** Sends one message to several conversations at once: chat rooms, group chats or direct messages. Each conversation receives the message as its own separate post.
+
+**Parameters**
+
+* `conversationIdentifiers` (required): a list of stream IDs to send to.
+* `message` (required): plain text or MessageML content, sent identically to every conversation.
+
+**Limits and notes**
+
+* Each conversation gets an independent post. Recipients do not see who else received it, and replies stay in their own conversation.
+* Needs stream IDs, not email addresses or user IDs. For rooms, `room_search` gives the stream ID. For a 1:1 chat with a person, `create_chat` gives it.
+* The number of conversations per call is limited, and many calls in quick succession may be throttled.
+* Messages to external counterparties or to conversations under information barriers may be blocked for those recipients, according to your organisation's compliance policy.
+* Supports the same formatting as `send_message`, including mentions, hashtags and cashtags.
+
+**Example prompts**
+
+* "Send this update to \[ROOM\_1], \[ROOM\_2] and \[ROOM\_3]: \[MESSAGE]."
+* "Broadcast an urgent update about \[TOPIC] to the \[ROOM\_1], \[ROOM\_2] and \[ROOM\_3] rooms."
+
+</details>
+
 ### 3. Attachments <a href="#id-3-attachments" id="id-3-attachments"></a>
 
 Check which file types are allowed, list the files shared in a conversation, and download one. List first: downloading needs the IDs that listing returns.
